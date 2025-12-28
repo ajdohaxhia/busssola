@@ -4,6 +4,7 @@ import { HeaderSafe as Header } from '@/components/layout/Header'
 import { Sidebar } from '@/components/layout/Sidebar'
 import { SOSButton } from '@/components/ui/SOSButton'
 import { AnimatedBackground } from '@/components/layout/AnimatedBackground'
+import { ThemeManager } from '@/components/layout/ThemeManager'
 
 export const metadata: Metadata = {
   title: 'Progetto Bussola - Sicurezza Digitale per Adolescenti',
@@ -24,7 +25,8 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       </head>
-      <body className="dark bg-deep-blue text-white selection:bg-cyan-400/30 selection:text-cyan-300">
+      <body className="bg-deep-blue text-white selection:bg-cyan-400/30 selection:text-cyan-300 transition-colors duration-500">
+        <ThemeManager />
         <AnimatedBackground />
         <div className="flex min-h-screen relative z-10">
           <Sidebar />
