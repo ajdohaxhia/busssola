@@ -10,6 +10,7 @@ import PhishingClassifier from '@/components/games/PhishingClassifier'
 import GroomingChatbot from '@/components/games/GroomingChatbot'
 import MalwareAnalyzer from '@/components/games/MalwareAnalyzer'
 import MoodTrackerGame from '@/components/games/MoodTrackerGame'
+import ScenarioEngine from '@/components/games/ScenarioEngine'
 
 export default function ModulePage() {
     const { moduleId } = useParams()
@@ -26,7 +27,16 @@ export default function ModulePage() {
             case 'predatori-online': return <GroomingChatbot />
             case 'privacy-tecnica': return <MalwareAnalyzer />
             case 'social-addiction': return <MoodTrackerGame />
-            case 'salute-mentale': return <MoodTrackerGame /> // Reusing for now
+            case 'salute-mentale': return <MoodTrackerGame />
+            case 'cyberbullismo':
+            case 'gdpr-dati':
+            case 'scuola-online':
+            case 'gaming-communities':
+            case 'ai-deepfake':
+            case 'finanze-crypto':
+            case 'sexting-legal':
+            case 'diritti-digitali':
+                return <ScenarioEngine moduleId={moduleData.id} />
             default: return (
                 <div className="flex flex-col items-center justify-center py-32 text-center space-y-6 bg-blue-900/10 rounded-[3rem] border-2 border-dashed border-white/5">
                     <Icon name="build" size={64} className="text-blue-500/20" />
