@@ -1,57 +1,73 @@
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { Phone, Globe, ShieldAlert } from "lucide-react";
-import Link from "next/link";
+'use client'
 
-export default function AiutoPage() {
+import { motion } from 'framer-motion'
+import { Icon } from '@/components/ui/Icon'
+
+export default function HelpPage() {
+    const faqs = [
+        { q: 'I miei dati sono al sicuro?', a: 'Sì, Progetto Bussola non ha server. Tutti i tuoi progressi sono salvati localmente nel tuo browser tramite LocalStorage. Nessuno può vederli tranne te sul tuo dispositivo.' },
+        { q: 'Cosa succede se cambio browser?', a: 'I progressi sono legati al browser. Se cambi dispositivo o elimini i dati del browser, perderai i progressi. Usa la funzione "Esporta Backup" nel Profilo per salvare i tuoi dati esternamente.' },
+        { q: 'Posso usare l\'app offline?', a: 'Sì! Essendo una PWA (Personal Web App), una volta caricata la prima volta, la maggior parte delle funzioni e delle lezioni funzionerà anche senza connessione internet.' },
+        { q: 'L\'app è gratuita?', a: 'Certamente. Progetto Bussola è un progetto educativo gratuito e open source dedicato alla sicurezza dei ragazzi online.' }
+    ]
+
     return (
-        <div className="max-w-3xl mx-auto space-y-8">
-            <h1 className="text-3xl font-bold mb-8">Risorse e Supporto</h1>
+        <div className="max-w-4xl mx-auto p-4 md:p-8 space-y-12 pb-32">
+            <h1 className="text-4xl font-black italic tracking-tighter uppercase whitespace-pre-line">Centro <span className="text-neon-pink">Emergenza</span> & Supporto</h1>
 
-            <div className="grid gap-6">
-                <Card className="border-neon-pink/50 bg-neon-pink/5">
-                    <CardHeader>
-                        <CardTitle className="flex items-center gap-2 text-neon-pink">
-                            <ShieldAlert /> Emergenza Immediata
-                        </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p className="mb-4">Se sei in pericolo immediato o qualcuno ti sta minacciando fisicamente:</p>
-                        <Button variant="destructive" className="w-full text-lg font-bold" asChild>
-                            <a href="tel:112">CHIAMA IL 112</a>
-                        </Button>
-                    </CardContent>
-                </Card>
-
-                <Card>
-                    <CardHeader>
-                        <CardTitle>Supporto Psicologico & Segnalazioni</CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                        <div className="flex items-center justify-between p-4 bg-white/5 rounded-lg">
-                            <div className="flex items-center gap-3">
-                                <Phone className="text-neon-yellow" />
-                                <div>
-                                    <h3 className="font-bold">Telefono Azzurro</h3>
-                                    <p className="text-sm text-white/60">Per ascolto e supporto 24/7</p>
-                                </div>
-                            </div>
-                            <Button variant="outline" asChild><a href="tel:19696">1.96.96</a></Button>
+            {/* Emergency Section */}
+            <section className="bg-neon-pink/10 border-2 border-neon-pink/30 p-8 rounded-[2.5rem] shadow-2xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 p-8 opacity-10">
+                    <Icon name="sos" size={150} />
+                </div>
+                <div className="relative z-10 space-y-6">
+                    <h2 className="text-2xl font-black italic flex items-center gap-3">
+                        <Icon name="sos" className="text-neon-pink" /> HAI BISOGNO DI AIUTO ORA?
+                    </h2>
+                    <p className="font-medium text-gray-300 max-w-xl">
+                        Se sei vittima di ricatto, bullismo o ti trovi in una situazione di pericolo online, non aspettare. Contatta subito le autorità o i servizi di supporto.
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-dark-900/60 p-4 rounded-2xl border border-white/5">
+                            <span className="text-xs font-bold text-gray-500 uppercase block mb-1">Polizia Postale</span>
+                            <a href="https://www.commissariatodips.it" target="_blank" className="font-black text-neon-pink flex items-center gap-2 hover:underline">
+                                Segnala Online <Icon name="chevron" size={14} />
+                            </a>
                         </div>
-
-                        <div className="flex items-center justify-between p-4 bg-white/5 rounded-lg">
-                            <div className="flex items-center gap-3">
-                                <Globe className="text-neon-mint" />
-                                <div>
-                                    <h3 className="font-bold">Polizia Postale</h3>
-                                    <p className="text-sm text-white/60">Per denunciare crimini online</p>
-                                </div>
-                            </div>
-                            <Button variant="outline" asChild><a href="https://www.commissariatodips.it" target="_blank">Sito Web</a></Button>
+                        <div className="bg-dark-900/60 p-4 rounded-2xl border border-white/5">
+                            <span className="text-xs font-bold text-gray-500 uppercase block mb-1">Telefono Azzurro</span>
+                            <a href="tel:19696" className="font-black text-neon-pink flex items-center gap-2 hover:underline">
+                                Chiama 1.96.96 <Icon name="chevron" size={14} />
+                            </a>
                         </div>
-                    </CardContent>
-                </Card>
-            </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="space-y-8">
+                <h2 className="text-2xl font-black italic flex items-center gap-3">
+                    <Icon name="help" className="text-neon-yellow" /> DOMANDE FREQUENTI
+                </h2>
+                <div className="space-y-4">
+                    {faqs.map((f, i) => (
+                        <div key={i} className="bg-dark-800 p-6 rounded-3xl border border-white/5 hover:border-white/10 transition">
+                            <h3 className="font-black text-lg mb-2 flex items-center gap-3">
+                                <span className="text-neon-yellow">Q.</span> {f.q}
+                            </h3>
+                            <p className="text-gray-400 font-medium leading-relaxed">
+                                {f.a}
+                            </p>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            {/* Credits */}
+            <footer className="pt-12 text-center space-y-4 opacity-50">
+                <div className="text-[10px] font-black tracking-widest uppercase">Progetto Bussola v2.0 • 2025</div>
+                <div className="text-[8px] font-mono">Realizzato per la sicurezza digitale consapevole degli adolescenti.</div>
+            </footer>
         </div>
-    );
+    )
 }

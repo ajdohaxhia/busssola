@@ -1,120 +1,183 @@
-import { create } from 'zustand';
-import { persist, createJSONStorage } from 'zustand/middleware';
-import { v4 as uuidv4 } from 'uuid';
-import { GameState, Tier, ModuleProgress } from '../types';
+import { create } from 'zustand'
+import { persist, createJSONStorage } from 'zustand/middleware'
 
-const INITIAL_STATE = {
+interface ModuleProgress {
+    completed: boolean
+    accuracy: number
+    completions: number
+    xp: number
+    lastPlayed: string | null
+    lessonsViewed: string[]
+    gamesCompleted: string[]
+}
+
+interface GameState {
+    userId: string
+    createdAt: string
+    totalXP: number
+    tier: 'ingenuo' | 'consapevole' | 'informato' | 'esperto' | 'guardian'
+    modules: Record<string, ModuleProgress>
+    achievements: string[]
+    theme: 'dark' | 'light'
+
+    // Actions
+    addXP: (amount: number) => void
+    completeModule: (moduleId: string, accuracy: number, xp: number) => void
+    completeLesson: (moduleId: string, lessonId: string) => void
+    completeGame: (moduleId: string, gameId: string, xp: number, accuracy: number) => void
+    unlockAchievement: (badgeId: string) => void
+    setTheme: (theme: 'dark' | 'light') => void
+    resetProgress: () => void
+    exportProgress: () => string
+    importProgress: (json: string) => void
+}
+
+const initialState = {
+    userId: typeof window !== 'undefined' ? localStorage.getItem('userId') || crypto.randomUUID() : crypto.randomUUID(),
+    createdAt: new Date().toISOString(),
     totalXP: 0,
-    tier: 'ingenuo' as Tier,
+    tier: 'ingenuo' as const,
     modules: {},
     achievements: [],
-    settings: { theme: 'dark' as const },
-};
+    theme: 'dark' as const,
+}
 
 export const useGameStore = create<GameState>()(
     persist(
         (set, get) => ({
-            id: '', // Will be set on hydration if empty
-            createdAt: new Date().toISOString(),
-            ...INITIAL_STATE,
+            ...initialState,
 
-            addXP: (amount) => set((state) => {
-                const newXP = state.totalXP + amount;
-                // Calculate new tier
-                let newTier: Tier = state.tier;
-                const modulesCompleted = Object.values(state.modules).filter(m => m.completed).length;
+            addXP: (amount) =>
+                set((state) => {
+                    const newXP = state.totalXP + amount
+                    const tier = calculateTier(newXP)
+                    return { totalXP: newXP, tier }
+                }),
 
-                if (modulesCompleted >= 12) newTier = 'guardian';
-                else if (modulesCompleted >= 8) newTier = 'esperto';
-                else if (modulesCompleted >= 4) newTier = 'informato';
-                else if (modulesCompleted >= 2) newTier = 'consapevole';
-
-                return { totalXP: newXP, tier: newTier };
-            }),
-
-            completeModule: (moduleId, accuracy, xp) => set((state) => {
-                const currentModule = state.modules[moduleId] || {
-                    completed: false, accuracy: 0, completions: 0, xp: 0,
-                    lastPlayed: null, lessonsViewed: [], gamesCompleted: []
-                };
-
-                return {
-                    modules: {
-                        ...state.modules,
-                        [moduleId]: {
-                            ...currentModule,
-                            completed: true,
-                            accuracy: Math.max(currentModule.accuracy, accuracy),
-                            completions: currentModule.completions + 1,
-                            xp: currentModule.xp + xp,
-                            lastPlayed: new Date().toISOString(),
-                        }
+            completeModule: (moduleId, accuracy, xp) =>
+                set((state) => {
+                    const currentMod = state.modules[moduleId] || {
+                        completed: false,
+                        accuracy: 0,
+                        completions: 0,
+                        xp: 0,
+                        lastPlayed: null,
+                        lessonsViewed: [],
+                        gamesCompleted: [],
                     }
-                };
-            }),
-
-            markLessonViewed: (moduleId, lessonId) => set((state) => {
-                const currentModule = state.modules[moduleId] || {
-                    completed: false, accuracy: 0, completions: 0, xp: 0,
-                    lastPlayed: null, lessonsViewed: [], gamesCompleted: []
-                };
-
-                if (currentModule.lessonsViewed.includes(lessonId)) return {};
-
-                return {
-                    modules: {
-                        ...state.modules,
-                        [moduleId]: {
-                            ...currentModule,
-                            lessonsViewed: [...currentModule.lessonsViewed, lessonId]
-                        }
+                    const newXP = state.totalXP + xp
+                    return {
+                        modules: {
+                            ...state.modules,
+                            [moduleId]: {
+                                ...currentMod,
+                                completed: true,
+                                accuracy: Math.max(currentMod.accuracy, accuracy),
+                                completions: currentMod.completions + 1,
+                                xp: currentMod.xp + xp,
+                                lastPlayed: new Date().toISOString(),
+                            },
+                        },
+                        totalXP: newXP,
+                        tier: calculateTier(newXP)
                     }
-                };
-            }),
+                }),
 
-            completeGame: (moduleId, gameId, xp, accuracy) => set((state) => {
-                const currentModule = state.modules[moduleId] || {
-                    completed: false, accuracy: 0, completions: 0, xp: 0,
-                    lastPlayed: null, lessonsViewed: [], gamesCompleted: []
-                };
-
-                const isReplay = currentModule.gamesCompleted.includes(gameId);
-                // Only award full XP first time? Or always? Let's say always for engagement but maybe reduced?
-                // For now simple addition.
-
-                return {
-                    totalXP: state.totalXP + xp,
-                    modules: {
-                        ...state.modules,
-                        [moduleId]: {
-                            ...currentModule,
-                            gamesCompleted: isReplay ? currentModule.gamesCompleted : [...currentModule.gamesCompleted, gameId],
-                            lastPlayed: new Date().toISOString()
-                        }
+            completeLesson: (moduleId, lessonId) =>
+                set((state) => {
+                    const currentMod = state.modules[moduleId] || {
+                        completed: false,
+                        accuracy: 0,
+                        completions: 0,
+                        xp: 0,
+                        lastPlayed: null,
+                        lessonsViewed: [],
+                        gamesCompleted: [],
                     }
-                };
-            }),
+                    if (currentMod.lessonsViewed.includes(lessonId)) return state
 
-            unlockAchievement: (achievement) => set((state) => {
-                if (state.achievements.some(a => a.id === achievement.id)) return {};
-                return {
-                    achievements: [...state.achievements, { ...achievement, unlockedAt: new Date().toISOString() }]
-                };
-            }),
+                    return {
+                        modules: {
+                            ...state.modules,
+                            [moduleId]: {
+                                ...currentMod,
+                                lessonsViewed: [...currentMod.lessonsViewed, lessonId],
+                            },
+                        },
+                        totalXP: state.totalXP + 10,
+                        tier: calculateTier(state.totalXP + 10)
+                    }
+                }),
 
-            resetProgress: () => set({ ...INITIAL_STATE, id: uuidv4(), createdAt: new Date().toISOString() }),
+            completeGame: (moduleId, gameId, xp, accuracy) =>
+                set((state) => {
+                    const currentMod = state.modules[moduleId] || {
+                        completed: false,
+                        accuracy: 0,
+                        completions: 0,
+                        xp: 0,
+                        lastPlayed: null,
+                        lessonsViewed: [],
+                        gamesCompleted: [],
+                    }
+                    const newXP = state.totalXP + xp
+                    return {
+                        modules: {
+                            ...state.modules,
+                            [moduleId]: {
+                                ...currentMod,
+                                gamesCompleted: [...new Set([...currentMod.gamesCompleted, gameId])],
+                                xp: currentMod.xp + xp,
+                                accuracy: Math.max(currentMod.accuracy, accuracy),
+                            },
+                        },
+                        totalXP: newXP,
+                        tier: calculateTier(newXP)
+                    }
+                }),
 
-            setTheme: (theme) => set((state) => ({ settings: { ...state.settings, theme } })),
+            unlockAchievement: (badgeId) =>
+                set((state) => {
+                    if (state.achievements.includes(badgeId)) return state
+                    const newXP = state.totalXP + 200
+                    return {
+                        achievements: [...state.achievements, badgeId],
+                        totalXP: newXP,
+                        tier: calculateTier(newXP)
+                    }
+                }),
 
+            setTheme: (theme) => set({ theme }),
+
+            resetProgress: () =>
+                set({
+                    ...initialState,
+                    userId: crypto.randomUUID(),
+                }),
+
+            exportProgress: () =>
+                JSON.stringify(get()),
+
+            importProgress: (json: string) => {
+                try {
+                    const imported = JSON.parse(json)
+                    set(imported)
+                } catch {
+                    console.error('Invalid progress file')
+                }
+            },
         }),
         {
-            name: 'bussola-storage',
+            name: 'bussola-progress',
             storage: createJSONStorage(() => localStorage),
-            onRehydrateStorage: () => (state) => {
-                if (state && !state.id) {
-                    state.id = uuidv4();
-                }
-            }
         }
     )
-);
+)
+
+function calculateTier(xp: number): GameState['tier'] {
+    if (xp < 500) return 'ingenuo'
+    if (xp < 1500) return 'consapevole'
+    if (xp < 3500) return 'informato'
+    if (xp < 7000) return 'esperto'
+    return 'guardian'
+}

@@ -1,41 +1,76 @@
 import {
-    ShieldCheck, Lock, EyeOff, Search, User, Trophy, Settings,
-    LogOut, Home, AlertTriangle, ShieldAlert, Smartphone, Gamepad2,
-    Cpu, Coins, Ghost, MessageSquare, HeartPulse, CheckCircle2, UserX,
-    FileText, GraduationCap, Bot, Bitcoin, Camera, Globe
-} from "lucide-react";
+    Shield,
+    Lock,
+    AlertTriangle,
+    MessageCircle,
+    Smartphone,
+    ClipboardCheck,
+    GraduationCap,
+    Gamepad2,
+    Bot,
+    Coins,
+    Gavel,
+    Flag,
+    HeartPulse,
+    LayoutDashboard,
+    User,
+    HelpCircle,
+    Menu,
+    X,
+    Sun,
+    Moon,
+    ChevronRight,
+    Search,
+    CheckCircle2,
+    XCircle,
+    Zap,
+    Hammer,
+    Route,
+    Activity,
+    Award,
+    LogOut,
+    Brain,
+    History,
+    LifeBuoy
+} from 'lucide-react'
 
 export const ICON_MAP: Record<string, any> = {
-    ShieldCheck,
-    Lock,
-    EyeOff,
-    Search,
-    User,
-    Trophy,
-    Settings,
-    LogOut,
-    Home,
-    AlertTriangle,
-    ShieldAlert,
-    Smartphone,
-    Gamepad2,
-    Cpu,
-    Coins,
-    Ghost,
-    MessageSquare,
-    HeartPulse,
-    CheckCircle2,
-    UserX,
-    FileText,
-    GraduationCap,
-    Bot,
-    Bitcoin,
-    Camera,
-    Globe
-};
+    'predatori-online': Shield,
+    'privacy-tecnica': Lock,
+    'phishing-malware': AlertTriangle,
+    'cyberbullismo': MessageCircle,
+    'social-addiction': Smartphone,
+    'gdpr-dati': ClipboardCheck,
+    'scuola-online': GraduationCap,
+    'gaming-communities': Gamepad2,
+    'ai-deepfake': Bot,
+    'finanze-crypto': Coins,
+    'sexting-legal': Gavel,
+    'diritti-digitali': Flag,
+    'salute-mentale': HeartPulse,
+    'dashboard': LayoutDashboard,
+    'profile': User,
+    'help': HelpCircle,
+    'menu': Menu,
+    'close': X,
+    'sun': Sun,
+    'moon': Moon,
+    'chevron': ChevronRight,
+    'search': Search,
+    'check': CheckCircle2,
+    'error': XCircle,
+    'zap': Zap,
+    'build': Hammer,
+    'trace': Route,
+    'activity': Activity,
+    'award': Award,
+    'logout': LogOut,
+    'brain': Brain,
+    'history': History,
+    'sos': LifeBuoy
+}
 
-export const Icon = ({ name, className }: { name: string, className?: string }) => {
-    const LucideIcon = ICON_MAP[name];
-    if (!LucideIcon) return null;
-    return <LucideIcon className={className} />;
-};
+export function Icon({ name, className, size = 24 }: { name: string, className?: string, size?: number }) {
+    const LucideIcon = ICON_MAP[name] || HelpCircle
+    return <LucideIcon className={className} size={size} />
+}

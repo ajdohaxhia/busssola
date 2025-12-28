@@ -1,47 +1,46 @@
-"use client";
+'use client'
 
-import { useGameStore } from "@/store/useGameStore";
-import { Badge } from "../ui/Badge";
-import { TIERS } from "@/lib/constants";
-
-export function Header() {
-    const { totalXP, tier } = useGameStore();
-    const currentTier = TIERS[tier];
-
-    return (
-        <header className="sticky top-0 z-30 flex h-16 items-center gap-4 border-b border-white/10 bg-dark-900/80 px-6 backdrop-blur-md">
-            <div className="flex-1" /> {/* Spacer */}
-
-            <div className="flex items-center gap-4">
-                <div className="flex flex-col items-end">
-                    <span className="text-xs text-white/50 font-mono">LIVELLO</span>
-                    <span className={cn("text-sm font-bold", currentTier.color)}>{currentTier.label}</span>
-                </div>
-
-                <Badge variant="outline" className="px-3 py-1 bg-white/5 border-white/10">
-                    <span className="text-neon-yellow font-mono font-bold mr-1">{totalXP}</span> XP
-                </Badge>
-            </div>
-        </header>
-    );
-}
-
-// Helper to avoid hydration mismatch we might need a client wrapper or useEffect, 
-// but for now simple store access. Since we use persist, it might flash 0.
-// A more robust solution involves a useMounted hook.
-import { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
+import { useGameStore } from '@/store/useGameStore'
+import { motion } from 'framer-motion'
+import { Icon } from '@/components/ui/Icon'
 
 export function HeaderSafe() {
-    const [mounted, setMounted] = useState(false);
-    useEffect(() => setMounted(true), []);
+    const { totalXP, tier, theme, setTheme } = useGameStore()
 
-    if (!mounted) return (
-        <header className="sticky top-0 z-30 flex h-16 items-center gap-4 border-b border-white/10 bg-dark-900/80 px-6 backdrop-blur-md">
-            <div className="flex-1" />
-            <div className="h-8 w-24 bg-white/5 rounded animate-pulse" />
+    const tierLabels: Record<string, string> = {
+        ingenuo: 'Iniziato',
+        consapevole: 'Consapevole',
+        informato: 'Informato',
+        esperto: 'Esperto',
+        guardian: 'Digital Guardian',
+    }
+
+    return (
+        <header className="fixed top-0 left-0 right-0 z-30 h-16 bg-dark-900/80 backdrop-blur-md border-b border-white/5 md:left-64 flex items-center justify-between px-6">
+            <div className="flex items-center gap-4">
+                {/* Tier Badge */}
+                <div className="hidden sm:flex items-center gap-2 bg-dark-800 border border-white/10 px-3 py-1.5 rounded-full">
+                    <div className="w-2 h-2 rounded-full bg-neon-yellow shadow-neon animate-pulse" />
+                    <span className="text-[10px] uppercase font-bold tracking-wider text-gray-400">Rango:</span>
+                    <span className="text-xs font-black text-neon-yellow uppercase">{tierLabels[tier]}</span>
+                </div>
+            </div>
+
+            <div className="flex items-center gap-6">
+                {/* XP Counter */}
+                <div className="flex items-center gap-2">
+                    <span className="text-xl font-black text-white">{totalXP}</span>
+                    <span className="text-[10px] font-bold text-neon-yellow px-1.5 py-0.5 bg-neon-yellow/10 rounded border border-neon-yellow/20">XP</span>
+                </div>
+
+                {/* Theme Toggle */}
+                <button
+                    onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                    className="p-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition"
+                >
+                    <Icon name={theme === 'dark' ? 'sun' : 'moon'} size={20} />
+                </button>
+            </div>
         </header>
-    );
-
-    return <Header />;
+    )
 }
