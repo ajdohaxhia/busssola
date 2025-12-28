@@ -7,10 +7,7 @@ const withPWA = require('next-pwa')({
 })
 
 const nextConfig: NextConfig = {
-  experimental: {
-    // @ts-ignore - Turbopack config is required to silence Webpack/Turbopack conflict in Next.js 15/16
-    turbopack: {},
-  },
+  /* config options here */
 };
 
 export default withPWA(nextConfig);
