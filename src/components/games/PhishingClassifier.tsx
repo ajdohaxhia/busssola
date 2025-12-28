@@ -72,19 +72,23 @@ export default function PhishingClassifier() {
     if (completed) {
         return (
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="text-center p-8 bg-dark-800 rounded-2xl border border-neon-yellow/20"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="text-center p-12 bg-blue-900/20 backdrop-blur-2xl rounded-[3rem] border border-cyan-400/20 shadow-glass"
             >
-                <ShieldCheck size={64} className="mx-auto text-neon-mint mb-4" />
-                <h2 className="text-3xl font-bold mb-4">Addestramento Completato!</h2>
-                <p className="text-xl mb-6">Punteggio: <span className="text-neon-yellow font-black">{score}/{questions.length}</span></p>
-                <div className="bg-neon-yellow/10 p-4 rounded-xl mb-8">
-                    <p className="text-neon-yellow font-bold">+ {score * 25} XP Guadagnati</p>
+                <div className="w-20 h-20 bg-accent-gradient rounded-full flex items-center justify-center mx-auto mb-6 shadow-blue-glow">
+                    <ShieldCheck size={40} className="text-white" />
                 </div>
+                <h2 className="text-4xl font-black italic tracking-tighter mb-4 text-white">ADDESTRAMENTO COMPLETATO!</h2>
+                <p className="text-xl mb-8 text-blue-200/60 font-medium">Punteggio: <span className="text-cyan-400 font-black">{score}/{questions.length}</span></p>
+
+                <div className="bg-white/5 border border-white/10 p-6 rounded-[2rem] mb-10">
+                    <p className="text-cyan-400 font-black uppercase tracking-widest text-sm">+ {score * 25} XP GUADAGNATI</p>
+                </div>
+
                 <button
                     onClick={() => window.location.reload()}
-                    className="px-8 py-3 bg-neon-yellow text-black font-bold rounded-lg hover:scale-105 transition shadow-neon"
+                    className="px-10 py-4 bg-white text-blue-900 font-black italic uppercase tracking-tighter rounded-2xl hover:scale-105 transition shadow-lg"
                 >
                     Riprova o Continua
                 </button>
@@ -95,15 +99,15 @@ export default function PhishingClassifier() {
     const question = questions[currentQuestion]
 
     return (
-        <div className="max-w-2xl mx-auto">
-            <div className="mb-8">
-                <div className="flex justify-between items-end text-sm mb-2">
-                    <span className="text-gray-400 font-mono">Missione: Smaschera lo Scam</span>
-                    <span className="text-neon-yellow font-bold">Domanda {currentQuestion + 1}/{questions.length}</span>
+        <div className="max-w-2xl mx-auto space-y-8">
+            <div>
+                <div className="flex justify-between items-end text-[10px] mb-3">
+                    <span className="text-blue-400/40 uppercase font-black tracking-widest">Missione: Smaschera lo Scam</span>
+                    <span className="text-cyan-400 font-black">DOMANDA {currentQuestion + 1}/{questions.length}</span>
                 </div>
-                <div className="w-full bg-dark-700 rounded-full h-2 overflow-hidden">
+                <div className="w-full bg-blue-900/40 rounded-full h-1.5 overflow-hidden border border-white/5 shadow-inner">
                     <motion.div
-                        className="bg-neon-yellow h-full"
+                        className="bg-accent-gradient h-full shadow-blue-glow"
                         initial={{ width: 0 }}
                         animate={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
                     />
@@ -116,31 +120,31 @@ export default function PhishingClassifier() {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}
-                    className="bg-dark-800 p-8 rounded-3xl border border-white/5 shadow-2xl relative overflow-hidden"
+                    className="p-10 rounded-[3rem] bg-blue-900/20 backdrop-blur-2xl border border-white/10 shadow-glass relative overflow-hidden group"
                 >
-                    <div className="absolute top-0 right-0 p-4 opacity-10">
-                        <AlertTriangle size={80} />
+                    <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <AlertTriangle size={120} />
                     </div>
 
-                    <p className="text-xl md:text-2xl leading-relaxed mb-8 relative z-10 font-medium">
+                    <p className="text-2xl md:text-3xl font-black tracking-tight italic leading-tight mb-12 relative z-10 text-white">
                         "{question.text}"
                     </p>
 
                     {!showExplanation ? (
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <button
                                 onClick={() => handleAnswer(true)}
-                                className="group relative px-6 py-4 bg-neon-pink/10 border-2 border-neon-pink/30 rounded-xl font-bold text-neon-pink hover:bg-neon-pink hover:text-white transition-all overflow-hidden"
+                                className="group relative px-6 py-5 bg-red-600 border border-red-500/50 rounded-2xl font-black text-white hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-red-600/20 uppercase italic tracking-tighter"
                             >
-                                <span className="relative z-10 flex items-center justify-center gap-2 italic">
+                                <span className="flex items-center justify-center gap-2">
                                     <AlertTriangle size={20} /> PHISHING
                                 </span>
                             </button>
                             <button
                                 onClick={() => handleAnswer(false)}
-                                className="group relative px-6 py-4 bg-neon-mint/10 border-2 border-neon-mint/30 rounded-xl font-bold text-neon-mint hover:bg-neon-mint hover:text-dark-900 transition-all overflow-hidden"
+                                className="group relative px-6 py-5 bg-blue-600 border border-blue-500/50 rounded-2xl font-black text-white hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-blue-600/20 uppercase italic tracking-tighter"
                             >
-                                <span className="relative z-10 flex items-center justify-center gap-2 italic">
+                                <span className="flex items-center justify-center gap-2">
                                     <ShieldCheck size={20} /> LEGITTIMO
                                 </span>
                             </button>
@@ -149,27 +153,30 @@ export default function PhishingClassifier() {
                         <motion.div
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className={`p-6 rounded-2xl ${lastAnswerCorrect ? 'bg-neon-mint/10 border border-neon-mint/30' : 'bg-neon-pink/10 border border-neon-pink/30'}`}
+                            className={`p-8 rounded-[2rem] border overflow-hidden relative ${lastAnswerCorrect ? 'border-cyan-400/30' : 'border-red-400/30'}`}
                         >
-                            <div className="flex items-center gap-3 mb-3">
-                                {lastAnswerCorrect ? (
-                                    <CheckCircle2 className="text-neon-mint" />
-                                ) : (
-                                    <XCircle className="text-neon-pink" />
-                                )}
-                                <span className="font-bold text-lg">
-                                    {lastAnswerCorrect ? 'Corretto!' : 'Ups! Sbagliato.'}
-                                </span>
+                            <div className={`absolute inset-0 opacity-10 ${lastAnswerCorrect ? 'bg-cyan-400' : 'bg-red-400'}`} />
+                            <div className="relative z-10">
+                                <div className="flex items-center gap-3 mb-4">
+                                    {lastAnswerCorrect ? (
+                                        <CheckCircle2 className="text-cyan-400" size={28} />
+                                    ) : (
+                                        <XCircle className="text-red-400" size={28} />
+                                    )}
+                                    <span className={`text-xl font-black italic tracking-tighter uppercase ${lastAnswerCorrect ? 'text-cyan-400' : 'text-red-400'}`}>
+                                        {lastAnswerCorrect ? 'Analisi Corretta!' : 'Sistema Compromesso!'}
+                                    </span>
+                                </div>
+                                <p className="text-blue-100/60 font-medium mb-8 leading-relaxed italic">
+                                    {question.explanation}
+                                </p>
+                                <button
+                                    onClick={nextQuestion}
+                                    className="w-full py-4 bg-white text-blue-900 font-black italic uppercase italic tracking-tighter rounded-2xl hover:scale-[1.02] transition shadow-lg"
+                                >
+                                    Prossimo Target
+                                </button>
                             </div>
-                            <p className="text-gray-300 mb-6 italic leading-relaxed">
-                                {question.explanation}
-                            </p>
-                            <button
-                                onClick={nextQuestion}
-                                className="w-full py-3 bg-white text-dark-900 font-bold rounded-lg hover:bg-gray-200 transition"
-                            >
-                                Prossima Domanda
-                            </button>
                         </motion.div>
                     )}
                 </motion.div>

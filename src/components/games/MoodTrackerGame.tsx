@@ -31,20 +31,22 @@ export default function MoodTrackerGame() {
 
     if (completed) {
         return (
-            <div className="text-center p-8 bg-dark-800 rounded-3xl border border-neon-mint/20">
-                <Brain size={64} className="mx-auto text-neon-mint mb-4" />
-                <h2 className="text-3xl font-bold mb-4">Settimana Conclusa</h2>
-                <p className="text-lg text-gray-400 mb-8">
+            <div className="text-center p-12 bg-blue-900/20 backdrop-blur-2xl rounded-[3rem] border border-white/10 shadow-glass">
+                <div className="w-20 h-20 bg-accent-gradient rounded-full flex items-center justify-center mx-auto mb-6 shadow-blue-glow">
+                    <Brain size={40} className="text-white" />
+                </div>
+                <h2 className="text-4xl font-black italic tracking-tighter mb-4 text-white uppercase">Settimana Conclusa</h2>
+                <p className="text-xl mb-8 text-blue-200/60 font-medium">
                     {mentalEnergy > 70
                         ? "Ottimo equilibrio! Sei un Mindful Warrior."
                         : "Attenzione: l'uso eccessivo ha ridotto la tua energia mentale."}
                 </p>
-                <div className="bg-neon-mint/10 p-4 rounded-xl mb-8">
-                    <p className="text-neon-mint font-bold">XP Guadagnati: {mentalEnergy > 50 ? 100 : 50}</p>
+                <div className="bg-white/5 border border-white/10 p-6 rounded-[2rem] mb-10">
+                    <p className="text-cyan-400 font-black uppercase tracking-widest text-sm">+ {mentalEnergy > 50 ? 100 : 50} XP GUADAGNATI</p>
                 </div>
                 <button
                     onClick={() => window.location.reload()}
-                    className="w-full py-4 bg-neon-mint text-dark-900 font-bold rounded-xl"
+                    className="px-10 py-4 bg-white text-blue-900 font-black italic uppercase tracking-tighter rounded-2xl hover:scale-105 transition shadow-lg"
                 >
                     Ricomincia Sfida
                 </button>
@@ -53,66 +55,68 @@ export default function MoodTrackerGame() {
     }
 
     return (
-        <div className="max-w-md mx-auto space-y-8">
-            <div className="text-center">
-                <h2 className="text-2xl font-bold flex items-center justify-center gap-2 italic">
-                    <Battery className="text-neon-mint" /> GIORNO {day} / 7
+        <div className="max-w-md mx-auto space-y-12">
+            <div className="text-center space-y-2">
+                <h2 className="text-3xl font-black italic tracking-tighter flex items-center justify-center gap-3 uppercase">
+                    <Battery className="text-cyan-400 drop-shadow-blue" /> DAY {day} <span className="text-blue-400/20">/ 7</span>
                 </h2>
-                <p className="text-sm text-gray-500 uppercase tracking-widest mt-2">Bilancia la tua vita digitale</p>
+                <p className="text-[10px] text-blue-400/40 uppercase font-black tracking-[0.3em]">Cyber Wellbeing Simulator</p>
             </div>
 
             {/* Bars */}
-            <div className="space-y-6">
-                <div>
-                    <div className="flex justify-between text-sm mb-2">
-                        <span className="flex items-center gap-2"><Smartphone size={16} /> Screen Time</span>
-                        <span className="font-mono">{screenTime}h / 8h</span>
+            <div className="space-y-10">
+                <div className="relative group">
+                    <div className="flex justify-between items-end text-[10px] mb-3 uppercase font-black tracking-widest text-blue-400/60">
+                        <span className="flex items-center gap-2 italic"><Smartphone size={14} className="text-blue-500" /> Screen Time</span>
+                        <span className="font-mono text-white group-hover:text-red-400 transition-colors">{screenTime}h / 8h</span>
                     </div>
-                    <div className="w-full bg-dark-700 rounded-full h-4">
+                    <div className="w-full bg-blue-900/40 rounded-full h-3 p-0.5 border border-white/5 shadow-inner">
                         <motion.div
-                            className="bg-neon-pink h-full rounded-full"
+                            className="bg-red-500 h-full rounded-full shadow-lg shadow-red-500/20"
                             animate={{ width: `${(screenTime / 8) * 100}%` }}
                         />
                     </div>
                 </div>
 
-                <div>
-                    <div className="flex justify-between text-sm mb-2">
-                        <span className="flex items-center gap-2"><Heart size={16} /> Energia Mentale</span>
-                        <span className="font-mono">{mentalEnergy}%</span>
+                <div className="relative group">
+                    <div className="flex justify-between items-end text-[10px] mb-3 uppercase font-black tracking-widest text-blue-400/60">
+                        <span className="flex items-center gap-2 italic"><Heart size={14} className="text-pink-500" /> Mental Capacity</span>
+                        <span className="font-mono text-white group-hover:text-cyan-400 transition-colors">{mentalEnergy}%</span>
                     </div>
-                    <div className="w-full bg-dark-700 rounded-full h-4">
+                    <div className="w-full bg-blue-900/40 rounded-full h-3 p-0.5 border border-white/5 shadow-inner">
                         <motion.div
-                            className="bg-neon-mint h-full rounded-full"
-                            animate={{ width: `${mentalEnergy}%` }}
-                            style={{ backgroundColor: mentalEnergy < 30 ? '#ff0066' : '#00ff88' }}
+                            className="h-full rounded-full shadow-lg shadow-cyan-500/20"
+                            animate={{ width: `${mentalEnergy}%`, backgroundColor: mentalEnergy < 30 ? '#ef4444' : '#22d3ee' }}
                         />
                     </div>
                 </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-6 relative">
+                <div className="absolute inset-x-0 -top-10 h-px bg-gradient-to-r from-transparent via-white/5 to-transparent" />
+
                 <button
                     onClick={() => handleAction('screen')}
                     disabled={screenTime >= 8}
-                    className="p-6 bg-dark-800 hover:bg-neon-pink/20 border border-white/5 rounded-2xl transition disabled:opacity-20"
+                    className="p-8 bg-blue-900/20 hover:bg-red-500/10 border border-white/5 rounded-3xl transition-all duration-300 disabled:opacity-10 group shadow-glass hover:border-red-500/30"
                 >
-                    <Smartphone size={32} className="mx-auto mb-2 text-neon-pink" />
-                    <span className="font-bold block">Social/Game</span>
-                    <span className="text-[10px] text-gray-500">+2h Schermo, -25% Enegia</span>
+                    <Smartphone size={40} className="mx-auto mb-4 text-blue-400 group-hover:text-red-400 transition-colors" />
+                    <span className="font-black block text-sm uppercase italic tracking-tighter text-white">Consuma</span>
+                    <span className="text-[8px] text-blue-400/20 font-bold uppercase tracking-widest mt-2 block">+2h Flow, -25% ENG</span>
                 </button>
+
                 <button
                     onClick={() => handleAction('rest')}
-                    className="p-6 bg-dark-800 hover:bg-neon-mint/20 border border-white/5 rounded-2xl transition"
+                    className="p-8 bg-blue-900/20 hover:bg-blue-400/10 border border-white/5 rounded-3xl transition-all duration-300 group shadow-glass hover:border-blue-400/30"
                 >
-                    <Brain size={32} className="mx-auto mb-2 text-neon-mint" />
-                    <span className="font-bold block">Digital Detox</span>
-                    <span className="text-[10px] text-gray-500">-1h Schermo, +20% Energia</span>
+                    <Brain size={40} className="mx-auto mb-4 text-blue-400 group-hover:text-cyan-400 transition-colors" />
+                    <span className="font-black block text-sm uppercase italic tracking-tighter text-white">Ripristina</span>
+                    <span className="text-[8px] text-blue-400/20 font-bold uppercase tracking-widest mt-2 block">-1h Flow, +20% ENG</span>
                 </button>
             </div>
 
-            <p className="text-center text-xs text-gray-500 italic">
-                Scegli come passare il tempo oggi. Se l'energia arriva a 0, il burn-out è assicurato.
+            <p className="text-center text-[10px] text-blue-400/20 font-medium italic leading-relaxed px-8">
+                Gestisci la tua connessione. Se la capacità mentale arriva a zero, il burnout digitale bloccherà il tuo percorso.
             </p>
         </div>
     )

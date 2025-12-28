@@ -16,27 +16,27 @@ export function HeaderSafe() {
     }
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-30 h-16 bg-dark-900/80 backdrop-blur-md border-b border-white/5 md:left-64 flex items-center justify-between px-6">
+        <header className="fixed top-0 left-0 right-0 z-30 h-16 bg-deep-blue/40 backdrop-blur-xl border-b border-white/5 md:left-64 flex items-center justify-between px-6 shadow-glass">
             <div className="flex items-center gap-4">
                 {/* Tier Badge */}
-                <div className="hidden sm:flex items-center gap-2 bg-dark-800 border border-white/10 px-3 py-1.5 rounded-full">
-                    <div className="w-2 h-2 rounded-full bg-neon-yellow shadow-neon animate-pulse" />
-                    <span className="text-[10px] uppercase font-bold tracking-wider text-gray-400">Rango:</span>
-                    <span className="text-xs font-black text-neon-yellow uppercase">{tierLabels[tier]}</span>
+                <div className="hidden sm:flex items-center gap-2 bg-blue-900/40 border border-white/10 px-3 py-1.5 rounded-full shadow-blue-glow">
+                    <div className="w-2 h-2 rounded-full bg-cyan-400 shadow-blue-glow animate-pulse" />
+                    <span className="text-[10px] uppercase font-bold tracking-wider text-cyan-300/60">Rango:</span>
+                    <span className="text-xs font-black text-white uppercase">{tierLabels[tier]}</span>
                 </div>
             </div>
 
             <div className="flex items-center gap-6">
                 {/* XP Counter */}
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-1.5 rounded-2xl shadow-inner">
                     <span className="text-xl font-black text-white">{totalXP}</span>
-                    <span className="text-[10px] font-bold text-neon-yellow px-1.5 py-0.5 bg-neon-yellow/10 rounded border border-neon-yellow/20">XP</span>
+                    <span className="text-[10px] font-bold text-cyan-400 uppercase tracking-widest">XP</span>
                 </div>
 
                 {/* Theme Toggle */}
                 <button
                     onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                    className="p-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition"
+                    className="p-2 text-cyan-400/60 hover:text-white hover:bg-white/5 rounded-lg transition"
                 >
                     <Icon name={theme === 'dark' ? 'sun' : 'moon'} size={20} />
                 </button>

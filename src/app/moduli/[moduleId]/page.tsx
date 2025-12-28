@@ -18,7 +18,7 @@ export default function ModulePage() {
 
     const module = MODULES_DATA.find(m => m.id === moduleId)
 
-    if (!module) return <div>Modulo non trovato.</div>
+    if (!module) return <div className="p-20 text-center text-blue-200/40 uppercase font-black italic tracking-tighter">Modulo non trovato.</div>
 
     const renderGame = () => {
         switch (module.id) {
@@ -27,35 +27,47 @@ export default function ModulePage() {
             case 'privacy-tecnica': return <MalwareAnalyzer />
             case 'social-addiction': return <MoodTrackerGame />
             case 'salute-mentale': return <MoodTrackerGame /> // Reusing for now
-            default: return <div className="text-center py-20 text-gray-500 border-2 border-dashed border-white/5 rounded-3xl">Il gioco per questo modulo sarà disponibile a breve nell'aggiornamento v2.1</div>
+            default: return (
+                <div className="flex flex-col items-center justify-center py-32 text-center space-y-6 bg-blue-900/10 rounded-[3rem] border-2 border-dashed border-white/5">
+                    <Icon name="build" size={64} className="text-blue-500/20" />
+                    <div className="space-y-2">
+                        <h3 className="text-xl font-bold text-blue-200/60 uppercase tracking-widest">Modulo in Sviluppo</h3>
+                        <p className="text-sm text-blue-300/30 max-w-xs mx-auto font-medium">L'attività interattiva per questo modulo sarà disponibile nel prossimo aggiornamento del database.</p>
+                    </div>
+                </div>
+            )
         }
     }
 
     return (
-        <div className="max-w-4xl mx-auto p-4 md:p-8 space-y-8 pb-32">
+        <div className="max-w-5xl mx-auto p-4 md:p-12 space-y-12 pb-32">
             {/* Header */}
-            <section className="flex flex-col md:flex-row gap-8 items-start md:items-center">
-                <div className="text-6xl bg-dark-800 p-6 rounded-3xl shadow-xl border border-white/5">{module.icon}</div>
-                <div>
-                    <div className="flex gap-2 items-center mb-2">
-                        <span className="text-[10px] font-bold text-neon-yellow uppercase tracking-widest px-2 py-1 bg-neon-yellow/10 rounded">Modulo</span>
-                        <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">{module.difficulty}</span>
+            <section className="flex flex-col md:flex-row gap-10 items-start md:items-center">
+                <div className="text-7xl bg-blue-900/40 backdrop-blur-2xl p-8 rounded-[2.5rem] shadow-glass border border-white/10 relative group">
+                    <div className="absolute inset-0 bg-cyan-400/5 rounded-[2.5rem] group-hover:bg-cyan-400/10 transition-colors" />
+                    <span className="relative z-10 drop-shadow-blue">{module.icon}</span>
+                </div>
+                <div className="space-y-3">
+                    <div className="flex gap-3 items-center">
+                        <span className="text-[10px] font-black text-cyan-400 uppercase tracking-[0.2em] px-3 py-1 bg-cyan-400/10 rounded-full border border-cyan-400/20 shadow-blue-glow">Modulo Didattico</span>
+                        <span className="text-[10px] font-bold text-blue-400/40 uppercase tracking-widest">{module.difficulty}</span>
                     </div>
-                    <h1 className="text-4xl md:text-5xl font-black tracking-tighter italic uppercase">{module.title}</h1>
+                    <h1 className="text-4xl md:text-6xl font-black tracking-tighter italic uppercase italic leading-none">{module.title}</h1>
+                    <p className="text-blue-200/40 font-medium max-w-xl leading-relaxed">{module.description}</p>
                 </div>
             </section>
 
-            {/* Tabs */}
-            <div className="flex gap-2 p-1.5 bg-dark-800 rounded-2xl w-fit border border-white/5">
+            {/* Navigation Tabs */}
+            <div className="flex gap-2 p-2 bg-blue-900/30 backdrop-blur-xl rounded-[2rem] w-fit border border-white/10 shadow-glass">
                 <button
                     onClick={() => setActiveTab('lessons')}
-                    className={`px-6 py-2 rounded-xl font-bold transition ${activeTab === 'lessons' ? 'bg-white text-dark-900' : 'text-gray-400 hover:text-white'}`}
+                    className={`px-8 py-3 rounded-[1.5rem] font-black transition-all duration-300 tracking-tighter uppercase italic text-sm ${activeTab === 'lessons' ? 'bg-white text-blue-900 shadow-lg' : 'text-blue-200/40 hover:text-white'}`}
                 >
                     Lezioni
                 </button>
                 <button
                     onClick={() => setActiveTab('game')}
-                    className={`px-6 py-2 rounded-xl font-bold transition ${activeTab === 'game' ? 'bg-neon-yellow text-dark-900 shadow-neon' : 'text-gray-400 hover:text-white'}`}
+                    className={`px-8 py-3 rounded-[1.5rem] font-black transition-all duration-300 tracking-tighter uppercase italic text-sm ${activeTab === 'game' ? 'bg-accent-gradient text-white shadow-blue-glow' : 'text-blue-200/40 hover:text-white'}`}
                 >
                     Sfida Game
                 </button>
@@ -65,35 +77,35 @@ export default function ModulePage() {
                 {activeTab === 'lessons' ? (
                     <motion.div
                         key="lessons"
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.95 }}
-                        className="space-y-12"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -30 }}
+                        className="grid grid-cols-1 gap-12"
                     >
                         {module.lessons.map((lesson, idx) => (
                             <div
                                 key={lesson.id}
-                                className="bg-dark-800 p-8 rounded-[2.5rem] border border-white/5 shadow-2xl space-y-8"
+                                className="group bg-blue-900/20 backdrop-blur-2xl p-10 rounded-[3rem] border border-white/5 hover:border-cyan-400/20 shadow-glass transition-all duration-500 space-y-10"
                                 onMouseEnter={() => completeLesson(module.id, lesson.id)}
                             >
-                                <div className="flex items-center gap-4">
-                                    <div className="w-10 h-10 rounded-full bg-neon-yellow/10 border border-neon-yellow/20 flex items-center justify-center font-black text-neon-yellow">{idx + 1}</div>
-                                    <h2 className="text-2xl font-black italic">{lesson.title}</h2>
+                                <div className="flex items-center gap-6">
+                                    <div className="w-14 h-14 rounded-[1.5rem] bg-accent-gradient flex items-center justify-center font-black text-white text-xl shadow-blue-glow group-hover:scale-110 transition-transform">{idx + 1}</div>
+                                    <h2 className="text-3xl font-black italic tracking-tight">{lesson.title}</h2>
                                 </div>
 
-                                <div className="prose prose-invert max-w-none text-gray-300 leading-relaxed font-medium">
-                                    {/* Real production content renders here */}
-                                    <div dangerouslySetInnerHTML={{ __html: lesson.content.replace(/\n/g, '<br/>') }} />
+                                <div className="prose prose-invert max-w-none text-blue-100/70 text-lg leading-relaxed font-medium">
+                                    <div className="space-y-6" dangerouslySetInnerHTML={{ __html: lesson.content.replace(/\n\n/g, '<br/><br/>').replace(/\n/g, '<br/>') }} />
                                 </div>
 
-                                <div className="bg-dark-900/50 p-6 rounded-3xl border border-white/5">
-                                    <h3 className="text-sm font-black text-neon-yellow uppercase tracking-widest mb-4 flex items-center gap-2">
-                                        <Icon name="zap" size={16} /> Consigli Pratici
+                                <div className="bg-deep-blue/40 p-8 rounded-[2rem] border border-white/5 shadow-inner">
+                                    <h3 className="text-[10px] font-black text-cyan-400 uppercase tracking-[0.3em] mb-6 flex items-center gap-3">
+                                        <Icon name="zap" size={14} /> Guide alla Sicurezza
                                     </h3>
-                                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         {lesson.tips.map((tip, tIdx) => (
-                                            <li key={tIdx} className="flex gap-3 text-sm text-gray-400 font-medium bg-dark-800 p-3 rounded-xl border border-white/5 hover:border-white/20 transition">
-                                                <span className="text-neon-yellow">•</span> {tip}
+                                            <li key={tIdx} className="flex gap-4 text-sm text-blue-100/40 font-medium bg-blue-900/20 p-4 rounded-2xl border border-white/5 hover:border-cyan-400/20 transition-all duration-300">
+                                                <span className="text-cyan-400 flex-shrink-0">•</span>
+                                                <span>{tip}</span>
                                             </li>
                                         ))}
                                     </ul>
@@ -107,8 +119,13 @@ export default function ModulePage() {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.95 }}
+                        className="pb-20"
                     >
-                        {renderGame()}
+                        <div className="bg-blue-900/20 backdrop-blur-2xl p-2 rounded-[3.5rem] border border-white/10 shadow-glass overflow-hidden">
+                            <div className="bg-deep-blue/60 rounded-[3rem] p-1 shadow-inner">
+                                {renderGame()}
+                            </div>
+                        </div>
                     </motion.div>
                 )}
             </AnimatePresence>

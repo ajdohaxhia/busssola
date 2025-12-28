@@ -1,7 +1,7 @@
 'use client'
 
 import { useGameStore } from '@/store/useGameStore'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { Icon } from '@/components/ui/Icon'
 import { useState } from 'react'
 
@@ -16,7 +16,7 @@ export default function ProfilePage() {
         const url = URL.createObjectURL(blob)
         const a = document.createElement('a')
         a.href = url
-        a.download = `bussola-progress-${new Date().toISOString().split('T')[0]}.json`
+        a.download = `bussola-backup-${new Date().toISOString().split('T')[0]}.json`
         a.click()
     }
 
@@ -27,83 +27,87 @@ export default function ProfilePage() {
     }
 
     return (
-        <div className="max-w-4xl mx-auto p-4 md:p-8 space-y-8 pb-32">
-            <h1 className="text-4xl font-black italic tracking-tighter uppercase">Profilo <span className="text-neon-yellow">Utente</span></h1>
+        <div className="max-w-5xl mx-auto p-4 md:p-12 space-y-12 pb-32">
+            <h1 className="text-5xl font-black italic tracking-tighter uppercase italic leading-none">Profilo <span className="blue-glow text-white">Utente</span></h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {/* Main Stats */}
-                <div className="md:col-span-2 bg-dark-800 p-8 rounded-[2.5rem] border border-white/5 space-y-8 shadow-2xl">
-                    <div className="flex items-center gap-6">
-                        <div className="w-24 h-24 bg-neon-yellow rounded-3xl flex items-center justify-center text-dark-900 shadow-neon">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {/* Main Stats Card */}
+                <div className="md:col-span-2 bg-blue-900/20 backdrop-blur-2xl p-10 rounded-[3rem] border border-white/5 space-y-10 shadow-glass">
+                    <div className="flex items-center gap-8">
+                        <div className="w-24 h-24 bg-accent-gradient rounded-[2rem] flex items-center justify-center text-white shadow-blue-glow">
                             <Icon name="profile" size={48} />
                         </div>
-                        <div>
-                            <div className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">ID Sicuro</div>
-                            <div className="text-sm font-mono text-white truncate max-w-[200px]">{userId}</div>
-                            <div className="mt-2 inline-flex items-center gap-2 bg-neon-yellow/10 border border-neon-yellow/20 px-3 py-1 rounded-full">
-                                <span className="text-[10px] font-black text-neon-yellow uppercase">{tier}</span>
+                        <div className="space-y-2">
+                            <div className="text-[10px] font-black text-cyan-400 uppercase tracking-[0.2em]">ID Guardiano</div>
+                            <div className="text-lg font-mono text-white/60 truncate max-w-[250px]">{userId}</div>
+                            <div className="inline-flex items-center gap-2 bg-cyan-400/10 border border-cyan-400/20 px-4 py-1.5 rounded-full">
+                                <span className="text-[10px] font-black text-cyan-400 uppercase tracking-widest leading-none">{tier}</span>
                             </div>
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-4">
-                        <div className="bg-dark-900/50 p-6 rounded-2xl border border-white/5">
-                            <span className="text-xs text-gray-500 block mb-1 uppercase font-bold">Punti Esperienza</span>
-                            <span className="text-3xl font-black text-white">{totalXP} <span className="text-neon-yellow text-sm">XP</span></span>
+                    <div className="grid grid-cols-2 gap-6">
+                        <div className="bg-deep-blue/40 p-8 rounded-[2rem] border border-white/5 shadow-inner">
+                            <span className="text-[10px] text-blue-400/40 block mb-2 uppercase font-black tracking-widest">Esperienza Totale</span>
+                            <span className="text-4xl font-black text-white italic tracking-tighter">{totalXP} <span className="text-cyan-400 text-sm">XP</span></span>
                         </div>
-                        <div className="bg-dark-900/50 p-6 rounded-2xl border border-white/5">
-                            <span className="text-xs text-gray-500 block mb-1 uppercase font-bold">Traguardi</span>
-                            <span className="text-3xl font-black text-white">{achievements.length}</span>
+                        <div className="bg-deep-blue/40 p-8 rounded-[2rem] border border-white/5 shadow-inner">
+                            <span className="text-[10px] text-blue-400/40 block mb-2 uppercase font-black tracking-widest">Badge Ottenuti</span>
+                            <span className="text-4xl font-black text-white italic tracking-tighter">{achievements.length}</span>
                         </div>
                     </div>
                 </div>
 
-                {/* Data Management */}
-                <div className="bg-dark-800 p-8 rounded-[2.5rem] border border-white/5 space-y-4 shadow-2xl flex flex-col">
-                    <h3 className="text-sm font-black uppercase tracking-widest text-gray-500 mb-2">I Tuoi Dati</h3>
-                    <p className="text-xs text-gray-400 mb-4 font-medium italic">Tutti i progressi sono salvati solo sul tuo browser. Usa le funzioni qui sotto per spostarli o cancellarli.</p>
+                {/* Data Security Actions */}
+                <div className="bg-blue-900/40 backdrop-blur-xl p-10 rounded-[3rem] border border-white/10 space-y-6 shadow-glass flex flex-col relative overflow-hidden group">
+                    <div className="absolute inset-0 bg-cyan-400/5 group-hover:bg-cyan-400/10 transition-colors" />
+                    <h3 className="relative z-10 text-[10px] font-black uppercase tracking-[0.2em] text-cyan-400">Sovranità Dati</h3>
+                    <p className="relative z-10 text-xs text-blue-200/40 font-medium leading-relaxed italic">I tuoi progressi sono memorizzati esclusivamente in locale. Crea un backup per non perderli.</p>
 
                     <button
                         onClick={handleExport}
-                        className="w-full py-3 bg-white text-dark-900 font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-gray-200 transition"
+                        className="relative z-10 w-full py-4 bg-white text-blue-900 font-black italic uppercase tracking-tighter rounded-2xl flex items-center justify-center gap-2 hover:scale-[1.02] transition shadow-lg"
                     >
-                        <Icon name="history" size={18} /> Esporta Backup
+                        <Icon name="history" size={18} /> Backup JSON
                     </button>
 
                     <button
                         onClick={() => setShowImport(true)}
-                        className="w-full py-3 bg-dark-700 text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-dark-600 transition"
+                        className="relative z-10 w-full py-4 bg-blue-600/20 text-white font-black italic uppercase tracking-tighter border border-white/10 rounded-2xl flex items-center justify-center gap-2 hover:bg-blue-600/30 transition"
                     >
-                        <Icon name="zap" size={18} /> Importa Dati
+                        <Icon name="brain" size={18} /> Importa
                     </button>
 
                     <button
-                        onClick={() => { if (confirm('Sei sicuro? Questo cancellerà TUTTI i tuoi progressi.')) resetProgress() }}
-                        className="w-full py-3 mt-auto text-neon-pink font-bold border border-neon-pink/20 rounded-xl hover:bg-neon-pink/10 transition"
+                        onClick={() => { if (confirm('⚠️ ATTENZIONE: Questo cancellerà DEFINITIVAMENTE tutti i tuoi progressi. Continuare?')) resetProgress() }}
+                        className="relative z-10 w-full py-4 mt-auto text-red-500 font-black italic uppercase tracking-tighter border border-red-500/20 rounded-2xl hover:bg-red-500/10 transition"
                     >
                         <Icon name="logout" size={18} className="inline mr-2" /> Reset Totale
                     </button>
                 </div>
             </div>
 
-            {/* Achievement Section */}
-            <section className="bg-dark-800 p-8 rounded-[2.5rem] border border-white/5 shadow-2xl">
-                <h2 className="text-xl font-black italic mb-6 flex items-center gap-3">
-                    <Icon name="award" size={24} className="text-neon-yellow" /> I TUOI TROFEI
+            {/* Legacy Achievements */}
+            <section className="bg-blue-900/20 backdrop-blur-2xl p-10 rounded-[3rem] border border-white/5 shadow-glass">
+                <h2 className="text-2xl font-black italic mb-8 flex items-center gap-4 tracking-tighter uppercase whitespace-pre">
+                    <Icon name="award" size={28} className="text-cyan-400 drop-shadow-blue" /> I TUOI <span className="text-cyan-400">TROFEI</span>
                 </h2>
 
                 {achievements.length > 0 ? (
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
                         {achievements.map(a => (
-                            <div key={a} className="p-4 bg-dark-900/50 rounded-2xl border border-neon-yellow/20 flex flex-col items-center gap-2">
-                                <Icon name="award" className="text-neon-yellow" />
-                                <span className="text-[10px] font-black uppercase text-center">{a}</span>
+                            <div key={a} className="p-6 bg-deep-blue/40 rounded-[2rem] border border-cyan-400/10 flex flex-col items-center gap-3 hover:border-cyan-400/40 transition-colors group">
+                                <div className="w-12 h-12 rounded-full bg-cyan-400/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <Icon name="award" className="text-cyan-400" />
+                                </div>
+                                <span className="text-[10px] font-black uppercase tracking-widest text-center text-blue-200/60">{a}</span>
                             </div>
                         ))}
                     </div>
                 ) : (
-                    <div className="py-12 text-center text-gray-500 border-2 border-dashed border-white/5 rounded-3xl">
-                        Completa i moduli per sbloccare traguardi leggendari.
+                    <div className="py-20 text-center space-y-4 border-2 border-dashed border-white/5 rounded-[2.5rem]">
+                        <Icon name="award" size={48} className="mx-auto text-blue-500/10" />
+                        <p className="text-sm text-blue-400/20 font-black uppercase tracking-widest italic">Nessun trofeo sbloccato</p>
                     </div>
                 )}
             </section>
@@ -112,18 +116,18 @@ export default function ProfilePage() {
             <AnimatePresence>
                 {showImport && (
                     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} onClick={() => setShowImport(false)} className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
-                        <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="relative bg-dark-800 p-8 rounded-3xl border border-white/5 w-full max-w-lg shadow-2xl">
-                            <h2 className="text-2xl font-black mb-4 italic">IMPORTA PROGRESSO</h2>
+                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} onClick={() => setShowImport(false)} className="absolute inset-0 bg-deep-blue/90 backdrop-blur-xl" />
+                        <motion.div initial={{ scale: 0.9, opacity: 0, y: 20 }} animate={{ scale: 1, opacity: 1, y: 0 }} className="relative bg-blue-900 border border-white/10 p-10 rounded-[3rem] w-full max-w-xl shadow-glass">
+                            <h2 className="text-3xl font-black mb-6 italic tracking-tighter uppercase">RIPRISTINA <span className="text-cyan-400">PROGRESSI</span></h2>
                             <textarea
-                                className="w-full h-48 bg-dark-900 border border-white/10 rounded-2xl p-4 font-mono text-xs text-gray-400 focus:border-neon-yellow outline-none mb-6"
+                                className="w-full h-56 bg-deep-blue/60 border border-white/10 rounded-[2rem] p-6 font-mono text-xs text-blue-200/40 focus:border-cyan-400/40 outline-none mb-8 shadow-inner resize-none"
                                 placeholder="Incolla qui il codice JSON del tuo backup..."
                                 value={importText}
                                 onChange={(e) => setImportText(e.target.value)}
                             />
                             <div className="flex gap-4">
-                                <button onClick={handleImport} className="flex-1 py-3 bg-neon-yellow text-dark-900 font-bold rounded-xl shadow-neon">Applica</button>
-                                <button onClick={() => setShowImport(false)} className="flex-1 py-3 bg-dark-700 text-white font-bold rounded-xl">Annulla</button>
+                                <button onClick={handleImport} className="flex-1 py-4 bg-accent-gradient text-white font-black italic uppercase italic tracking-tighter rounded-2xl shadow-blue-glow">Verifica & Carica</button>
+                                <button onClick={() => setShowImport(false)} className="flex-1 py-4 bg-white/5 text-white font-black italic uppercase tracking-tighter rounded-2xl hover:bg-white/10 transition">Annulla</button>
                             </div>
                         </motion.div>
                     </div>

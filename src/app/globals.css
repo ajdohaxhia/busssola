@@ -1,29 +1,47 @@
 @import "tailwindcss";
 
 @theme {
-  --color-neon-yellow: #ccff00;
-  --color-neon-mint: #00ff88;
-  --color-neon-orange: #ff6b35;
-  --color-neon-pink: #ff0066;
-  --color-neon-violet: #8a2be2;
-  
+  --color-deep-blue: #0f1a35;
+  --color-blue-900: #1a2f5a;
+  --color-blue-800: #2d4a8a;
+  --color-blue-700: #3d5fa8;
+  --color-blue-600: #4d7ac4;
+  --color-blue-500: #5e8dd8;
+  --color-cyan-400: #4db8e8;
+  --color-cyan-300: #6dd9ff;
+
   --color-dark-900: #0a0a0a;
   --color-dark-800: #1a1a1a;
   --color-dark-700: #2a2a2a;
-  
+
   --font-mono: var(--font-jetbrains-mono);
   --font-sans: var(--font-inter);
 }
 
 /* Custom Utilities */
 .glass-panel {
-  @apply bg-dark-800/80 backdrop-blur-md border border-white/10;
+  @apply bg-blue-900/40 backdrop-blur-xl border border-white/10 shadow-glass;
 }
 
-.neon-text {
-  text-shadow: 0 0 10px currentColor;
+.blue-glow {
+  text-shadow: 0 0 20px rgba(77, 184, 232, 0.5);
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, #fff 0%, #4db8e8 50%, #fff 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 5s linear infinite;
 }
 
 body {
-  @apply bg-dark-900 text-white font-sans antialiased;
+  @apply bg-deep-blue text-white font-sans antialiased overflow-x-hidden;
+  background: linear-gradient(135deg, #0f1a35 0%, #1a2f5a 50%, #0f1a35 100%);
+}
+
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
 }

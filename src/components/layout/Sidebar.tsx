@@ -22,7 +22,7 @@ export function Sidebar() {
             {/* Mobile Toggle */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="fixed top-4 left-4 z-50 p-2 bg-dark-800 border border-white/10 rounded-lg md:hidden"
+                className="fixed top-4 left-4 z-50 p-2 bg-blue-900/40 backdrop-blur-xl border border-white/10 rounded-lg md:hidden shadow-blue-glow"
             >
                 <Icon name={isOpen ? 'close' : 'menu'} size={20} />
             </button>
@@ -31,15 +31,15 @@ export function Sidebar() {
             <motion.aside
                 initial={false}
                 animate={{ x: isOpen ? 0 : -300 }}
-                className={`fixed inset-y-0 left-0 z-40 w-64 bg-dark-900 border-r border-white/5 flex flex-col md:translate-x-0 transition-transform duration-300 ease-in-out`}
+                className={`fixed inset-y-0 left-0 z-40 w-64 bg-deep-blue/40 backdrop-blur-2xl border-r border-white/5 flex flex-col md:translate-x-0 transition-transform duration-300 ease-in-out shadow-glass`}
             >
                 {/* Logo */}
                 <div className="p-6 border-b border-white/5">
                     <Link href="/" className="flex items-center gap-3 group">
-                        <div className="w-10 h-10 bg-neon-yellow rounded-xl flex items-center justify-center text-dark-900 shadow-neon group-hover:scale-110 transition">
+                        <div className="w-10 h-10 bg-accent-gradient rounded-xl flex items-center justify-center text-white shadow-blue-glow group-hover:scale-110 transition">
                             <Icon name="zap" size={24} />
                         </div>
-                        <span className="text-xl font-black tracking-tighter text-white">BUSSOLA <span className="text-neon-yellow text-xs align-top">v2.0</span></span>
+                        <span className="text-xl font-black tracking-tighter text-white">BUSSOLA <span className="text-cyan-400 text-xs align-top">v2.0</span></span>
                     </Link>
                 </div>
 
@@ -52,8 +52,8 @@ export function Sidebar() {
                                 key={item.path}
                                 href={item.path}
                                 className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${pathname === item.path
-                                        ? 'bg-neon-yellow/10 text-neon-yellow font-bold'
-                                        : 'text-gray-400 hover:bg-white/5 hover:text-white'
+                                    ? 'bg-blue-600/20 text-cyan-300 font-bold border border-cyan-400/20'
+                                    : 'text-gray-400 hover:bg-white/5 hover:text-white'
                                     }`}
                             >
                                 <Icon name={item.icon} size={20} />
@@ -64,15 +64,15 @@ export function Sidebar() {
 
                     {/* Modules List */}
                     <div>
-                        <h3 className="px-4 text-[10px] uppercase tracking-widest text-gray-500 font-bold mb-4">Percorso Formativo</h3>
+                        <h3 className="px-4 text-[10px] uppercase tracking-widest text-cyan-400/50 font-bold mb-4">Percorso Formativo</h3>
                         <nav className="space-y-1">
                             {MODULES_DATA.map((mod) => (
                                 <Link
                                     key={mod.id}
                                     href={`/moduli/${mod.id}`}
                                     className={`flex items-center gap-3 px-4 py-2 text-sm rounded-lg transition-all ${pathname.includes(mod.id)
-                                            ? 'bg-white/10 text-white font-medium'
-                                            : 'text-gray-500 hover:text-gray-300'
+                                        ? 'bg-white/10 text-white font-medium'
+                                        : 'text-gray-500 hover:text-gray-300'
                                         }`}
                                 >
                                     <span className="text-lg opacity-80">{mod.icon}</span>
@@ -84,8 +84,8 @@ export function Sidebar() {
                 </div>
 
                 {/* Footer */}
-                <div className="p-4 bg-dark-800/50 text-[10px] text-gray-600 text-center font-mono">
-                    PWA EDITION • 2025
+                <div className="p-4 bg-blue-900/20 text-[10px] text-blue-400/40 text-center font-mono uppercase tracking-widest">
+                    Blue Gradient Edition
                 </div>
             </motion.aside>
 
@@ -93,7 +93,7 @@ export function Sidebar() {
             {isOpen && (
                 <div
                     onClick={() => setIsOpen(false)}
-                    className="fixed inset-0 bg-black/60 backdrop-blur-sm z-30 md:hidden"
+                    className="fixed inset-0 bg-deep-blue/60 backdrop-blur-sm z-30 md:hidden"
                 />
             )}
         </>

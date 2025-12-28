@@ -3,6 +3,7 @@ import './globals.css'
 import { HeaderSafe as Header } from '@/components/layout/Header'
 import { Sidebar } from '@/components/layout/Sidebar'
 import { SOSButton } from '@/components/ui/SOSButton'
+import { AnimatedBackground } from '@/components/layout/AnimatedBackground'
 
 export const metadata: Metadata = {
   title: 'Progetto Bussola - Sicurezza Digitale per Adolescenti',
@@ -18,17 +19,18 @@ export default function RootLayout({
   return (
     <html lang="it" suppressHydrationWarning>
       <head>
-        <meta name="theme-color" content="#0a0a0a" />
+        <meta name="theme-color" content="#0f1a35" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       </head>
-      <body className="dark bg-dark-900 text-white">
-        <div className="flex min-h-screen">
+      <body className="dark bg-deep-blue text-white selection:bg-cyan-400/30 selection:text-cyan-300">
+        <AnimatedBackground />
+        <div className="flex min-h-screen relative z-10">
           <Sidebar />
-          <main className="flex-1">
+          <main className="flex-1 flex flex-col">
             <Header />
-            <div className="ml-0 md:ml-64 pt-16 md:pt-0">
+            <div className="ml-0 md:ml-64 pt-16 flex-1">
               {children}
             </div>
           </main>

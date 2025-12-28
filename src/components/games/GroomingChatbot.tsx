@@ -81,7 +81,6 @@ export default function GroomingChatbot() {
 
         if (choice.isSafe) setScore(prev => prev + 1)
 
-        // Show feedback as a system message? No, just move forward for now
         if (currentStep < steps.length - 1) {
             setCurrentStep(prev => prev + 1)
             triggerPredator(steps[currentStep + 1].predatorText)
@@ -95,40 +94,47 @@ export default function GroomingChatbot() {
 
     if (completed) {
         return (
-            <div className="text-center p-8 bg-dark-800 rounded-3xl border border-neon-violet/20">
-                <ShieldCheck size={64} className="mx-auto text-neon-mint mb-4" />
-                <h2 className="text-3xl font-bold mb-4">Chat Terminata</h2>
-                <p className="text-lg text-gray-400 mb-6">Hai gestito la conversazione con sicurezza.</p>
-                <div className="bg-neon-violet/10 p-4 rounded-xl mb-8">
-                    <p className="text-neon-violet font-bold">XP Guadagnati: {score * 50}</p>
+            <div className="text-center p-12 bg-blue-900/20 backdrop-blur-2xl rounded-[3rem] border border-white/10 shadow-glass">
+                <div className="w-20 h-20 bg-accent-gradient rounded-full flex items-center justify-center mx-auto mb-6 shadow-blue-glow">
+                    <ShieldCheck size={40} className="text-white" />
+                </div>
+                <h2 className="text-4xl font-black italic tracking-tighter mb-4 text-white uppercase">Chat Terminata</h2>
+                <p className="text-xl text-blue-200/60 mb-8 font-medium">Hai dimostrato una buona capacità critica.</p>
+                <div className="bg-white/5 border border-white/10 p-6 rounded-[2rem] mb-10">
+                    <p className="text-cyan-400 font-black uppercase tracking-widest text-sm">+ {score * 50} XP GUADAGNATI</p>
                 </div>
                 <button
                     onClick={() => window.location.reload()}
-                    className="px-8 py-3 bg-neon-violet text-white font-bold rounded-lg hover:scale-105 transition"
+                    className="px-10 py-4 bg-white text-blue-900 font-black italic uppercase tracking-tighter rounded-2xl hover:scale-105 transition shadow-lg"
                 >
-                    Torna ai Moduli
+                    Torna al Percorso
                 </button>
             </div>
         )
     }
 
     return (
-        <div className="flex flex-col h-[600px] bg-dark-900 rounded-3xl border border-white/5 overflow-hidden shadow-2xl">
+        <div className="flex flex-col h-[650px] bg-deep-blue/40 backdrop-blur-2xl rounded-[3rem] border border-white/10 overflow-hidden shadow-glass relative">
             {/* Chat Header */}
-            <div className="bg-dark-800 p-4 border-b border-white/10 flex items-center gap-3">
-                <div className="w-10 h-10 bg-neon-pink/20 rounded-full flex items-center justify-center text-neon-pink">
-                    <User size={20} />
-                </div>
-                <div>
-                    <div className="font-bold">Sconosciuto (Marco_17)</div>
-                    <div className="text-xs text-neon-mint flex items-center gap-1">
-                        <span className="w-2 h-2 bg-neon-mint rounded-full animate-pulse" /> Online
+            <div className="bg-blue-900/40 p-6 border-b border-white/5 flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-red-600/20 border border-red-500/30 rounded-full flex items-center justify-center text-red-400 shadow-lg shadow-red-600/10">
+                        <User size={24} />
                     </div>
+                    <div>
+                        <div className="font-black italic text-white tracking-tight uppercase">Sconosciuto (Marco_17)</div>
+                        <div className="text-[10px] text-cyan-400 font-black uppercase tracking-widest flex items-center gap-2">
+                            <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse shadow-blue-glow" /> Online
+                        </div>
+                    </div>
+                </div>
+                <div className="bg-white/5 p-2 rounded-xl text-blue-400/20">
+                    <Bot size={20} />
                 </div>
             </div>
 
             {/* Messages Area */}
-            <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 space-y-4 bg-[url('/grid.svg')] bg-repeat">
+            <div ref={scrollRef} className="flex-1 overflow-y-auto p-6 space-y-6 scrollbar-hide">
                 {messages.map(m => (
                     <motion.div
                         key={m.id}
@@ -136,9 +142,9 @@ export default function GroomingChatbot() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         className={`flex ${m.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                     >
-                        <div className={`max-w-[80%] p-4 rounded-2xl ${m.sender === 'user'
-                                ? 'bg-neon-violet text-white rounded-tr-none'
-                                : 'bg-dark-800 text-gray-100 border border-white/5 rounded-tl-none'
+                        <div className={`max-w-[75%] p-5 rounded-[1.8rem] font-medium leading-relaxed ${m.sender === 'user'
+                            ? 'bg-accent-gradient text-white rounded-tr-none shadow-lg'
+                            : 'bg-white/5 text-blue-100/70 border border-white/5 rounded-tl-none backdrop-blur-md'
                             }`}>
                             {m.text}
                         </div>
@@ -147,40 +153,41 @@ export default function GroomingChatbot() {
 
                 {isTyping && (
                     <div className="flex justify-start">
-                        <div className="bg-dark-800 p-4 rounded-2xl rounded-tl-none border border-white/5 flex gap-1">
-                            <span className="w-1.5 h-1.5 bg-gray-500 rounded-full animate-bounce" />
-                            <span className="w-1.5 h-1.5 bg-gray-500 rounded-full animate-bounce [animation-delay:0.2s]" />
-                            <span className="w-1.5 h-1.5 bg-gray-500 rounded-full animate-bounce [animation-delay:0.4s]" />
+                        <div className="bg-blue-900/40 p-5 rounded-[1.8rem] rounded-tl-none border border-white/10 flex gap-1.5 backdrop-blur-sm">
+                            <span className="w-1.5 h-1.5 bg-cyan-400/40 rounded-full animate-bounce" />
+                            <span className="w-1.5 h-1.5 bg-cyan-400/40 rounded-full animate-bounce [animation-delay:0.2s]" />
+                            <span className="w-1.5 h-1.5 bg-cyan-400/40 rounded-full animate-bounce [animation-delay:0.4s]" />
                         </div>
                     </div>
                 )}
             </div>
 
             {/* Input Area (Choices) */}
-            <div className="p-4 bg-dark-800 border-t border-white/10">
-                <div className="grid grid-cols-1 gap-2">
+            <div className="p-6 bg-blue-900/60 border-t border-white/10 backdrop-blur-xl">
+                <div className="grid grid-cols-1 gap-3">
                     <AnimatePresence mode="wait">
-                        {!isTyping && steps[currentStep] && (
+                        {!isTyping && steps[currentStep] ? (
                             <motion.div
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                className="space-y-2"
+                                className="space-y-3"
                             >
                                 {steps[currentStep].choices.map(c => (
                                     <button
                                         key={c.id}
                                         onClick={() => handleChoice(c)}
-                                        className="w-full text-left p-4 bg-dark-700 hover:bg-neon-violet/20 border border-white/5 rounded-xl text-sm transition-colors text-gray-200"
+                                        className="w-full text-left p-5 bg-white/5 border border-white/5 rounded-2xl text-sm font-bold text-blue-100/60 hover:bg-white/10 hover:text-white hover:border-cyan-400/30 transition-all duration-300 shadow-inner group flex items-center justify-between"
                                     >
-                                        {c.text}
+                                        <span className="italic">{c.text}</span>
+                                        <Icon name="chevron" size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </button>
                                 ))}
                             </motion.div>
-                        ) || (
-                                <div className="h-[100px] flex items-center justify-center text-gray-500 italic text-sm">
-                                    Aspettando la risposta...
-                                </div>
-                            )}
+                        ) : (
+                            <div className="h-[100px] flex items-center justify-center text-blue-400/20 italic text-sm font-black uppercase tracking-widest animate-pulse">
+                                In attesa di dati...
+                            </div>
+                        )}
                     </AnimatePresence>
                 </div>
             </div>
