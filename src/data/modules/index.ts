@@ -12,6 +12,9 @@ import { SEXTING_MODULE } from './sexting-legal'
 import { DIRITTI_DIGITALI_MODULE } from './diritti-digitali'
 import { SALUTE_MENTALE_MODULE } from './salute-mentale'
 import { RELAZIONI_ONLINE_MODULE } from './relazioni-online'
+import { DISINFORMAZIONE_MODULE } from './disinformazione'
+import { ECOMMERCE_MODULE } from './ecommerce-shopping'
+import { IDENTITA_DIGITALE_MODULE } from './identita-digitale'
 
 export const MODULES_DATA = [
     PREDATORI_ONLINE_MODULE,
@@ -28,6 +31,9 @@ export const MODULES_DATA = [
     DIRITTI_DIGITALI_MODULE,
     SALUTE_MENTALE_MODULE,
     RELAZIONI_ONLINE_MODULE,
+    DISINFORMAZIONE_MODULE,
+    ECOMMERCE_MODULE,
+    IDENTITA_DIGITALE_MODULE,
 ]
 
 
