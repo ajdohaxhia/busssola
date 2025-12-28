@@ -1,7 +1,7 @@
 {
-    "name": "Progetto Bussola V3.0",
+    "name": "Bussola",
     "short_name": "Bussola",
-    "description": "La guida definitiva alla sicurezza digitale per la Gen Z.",
+    "description": "Naviga nel mare digitale in sicurezza",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#050b14",

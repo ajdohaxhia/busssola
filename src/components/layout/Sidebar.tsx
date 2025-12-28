@@ -26,7 +26,7 @@ export function Sidebar() {
                         <Shield className="w-6 h-6 text-neon-cyan animate-pulse" />
                     </div>
                     <span className="text-2xl font-display font-extrabold tracking-tighter">
-                        Bussola <span className="text-neon-pink animate-flicker">v3</span>
+                        Bussola
                     </span>
                 </div>
 

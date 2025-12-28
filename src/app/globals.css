@@ -323,121 +323,95 @@ html {
 }
 
 /* Scale down large headings on mobile */
+/* ========== Mobile Enhancements & Fixes ========== */
+
+/* Safe Area Insets for iOS */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .safe-bottom {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 1.5rem);
+  }
+
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
+/* Hard reset for horizontal scroll on mobile */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Mobile Typography Scaling */
 @media (max-width: 640px) {
   h1 {
-    font-size: clamp(1.75rem, 8vw, 3rem) !important;
+    font-size: 2.25rem !important;
+    /* 36px max for H1 on mobile */
     line-height: 1.1 !important;
+    letter-spacing: -0.02em !important;
+    word-break: break-word;
+    /* Prevent overflow of long words */
   }
 
   h2 {
-    font-size: clamp(1.25rem, 6vw, 2rem) !important;
+    font-size: 1.75rem !important;
+    /* 28px */
   }
 
   h3 {
-    font-size: clamp(1rem, 4vw, 1.5rem) !important;
+    font-size: 1.25rem !important;
+    /* 20px */
   }
 
-  /* Fix oversized cards on mobile */
+  p,
+  li {
+    font-size: 1rem !important;
+    /* 16px base text */
+    line-height: 1.6 !important;
+  }
+
+  /* Compact Bento Grid */
+  .bento-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    /* 20px gap */
+  }
+
+  /* Optimizing Card Padding */
   .glass-card {
-    padding: 1rem !important;
+    padding: 1.25rem !important;
+    /* 20px padding */
     border-radius: 1.25rem !important;
   }
 
-  /* Fix oversized rounded corners on mobile */
-  [class*="rounded-[2rem]"],
-  [class*="rounded-[2.5rem]"],
-  [class*="rounded-[3rem]"] {
-    border-radius: 1.25rem !important;
-  }
-
-  /* Fix large padding on mobile */
+  /* Reset special paddings */
+  [class*="p-8"],
   [class*="p-10"],
   [class*="p-12"] {
-    padding: 1rem !important;
+    padding: 1.25rem !important;
   }
 
-  [class*="py-10"],
-  [class*="py-12"] {
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
-  }
-
-  [class*="px-10"],
+  [class*="px-8"],
   [class*="px-12"] {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
   }
 
-  /* Fix oversized gaps on mobile */
-  [class*="gap-10"],
-  [class*="gap-12"] {
-    gap: 1.5rem !important;
+  /* Buttons should span full width often on mobile or handle wrapping */
+  .flex-wrap {
+    flex-wrap: wrap;
   }
 
-  /* Fix oversized text */
-  [class*="text-5xl"],
-  [class*="text-6xl"],
-  [class*="text-7xl"] {
-    font-size: 2rem !important;
-  }
-
-  [class*="text-4xl"] {
-    font-size: 1.5rem !important;
-  }
-
-  [class*="text-3xl"] {
-    font-size: 1.25rem !important;
-  }
-
-  /* Fix icon sizing */
-  .w-14.h-14 {
-    width: 3rem !important;
-    height: 3rem !important;
-  }
-
-  .w-12.h-12 {
-    width: 2.5rem !important;
-    height: 2.5rem !important;
-  }
-
-  /* Fix button sizing */
-  [class*="px-10"] {
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
-  }
-
-  [class*="py-5"] {
-    padding-top: 0.75rem !important;
-    padding-bottom: 0.75rem !important;
-  }
-
-  /* Compact spacing for bento grid */
-  .bento-grid {
-    gap: 1rem;
-  }
-
-  /* Fix oversized margins */
-  [class*="mb-8"],
-  [class*="mb-10"],
-  [class*="mb-12"] {
-    margin-bottom: 1.5rem !important;
-  }
-
-  [class*="mt-8"],
-  [class*="mt-10"],
-  [class*="mt-12"] {
+  /* Adjust spacing Y */
+  .space-y-8> :not([hidden])~ :not([hidden]) {
     margin-top: 1.5rem !important;
   }
 
-  /* Fix space-y on mobile */
-  [class*="space-y-10"],
-  [class*="space-y-12"] {
-    --tw-space-y-reverse: 0;
-  }
-
-  [class*="space-y-10"]> :not([hidden])~ :not([hidden]),
-  [class*="space-y-12"]> :not([hidden])~ :not([hidden]) {
-    margin-top: 1.5rem !important;
+  /* Fix absolute positioned elements that might overflow */
+  .absolute {
+    max-width: 100%;
   }
 }
 

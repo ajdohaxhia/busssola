@@ -23,7 +23,7 @@ const firaCode = Fira_Code({
 })
 
 export const metadata: Metadata = {
-  title: 'Bussola v3 | Digital Safety for Gen Z',
+  title: 'Bussola | Digital Safety for Gen Z',
   description: 'La bussola definitiva per navigare nel mare digitale in sicurezza.',
   manifest: '/manifest.json',
   appleWebApp: {

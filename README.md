@@ -1,4 +1,4 @@
-# 🧭 Progetto Bussola V4.0 "Snap-Fast"
+# 🧭 Bussola
 
 **Piattaforma di educazione digitale sicura per adolescenti italiani (13-18 anni)**
 
