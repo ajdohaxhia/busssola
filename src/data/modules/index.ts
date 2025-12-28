@@ -11,6 +11,7 @@ import { FINANZE_MODULE } from './finanze-crypto'
 import { SEXTING_MODULE } from './sexting-legal'
 import { DIRITTI_DIGITALI_MODULE } from './diritti-digitali'
 import { SALUTE_MENTALE_MODULE } from './salute-mentale'
+import { RELAZIONI_ONLINE_MODULE } from './relazioni-online'
 
 export const MODULES_DATA = [
     PREDATORI_ONLINE_MODULE,
@@ -26,6 +27,7 @@ export const MODULES_DATA = [
     SEXTING_MODULE,
     DIRITTI_DIGITALI_MODULE,
     SALUTE_MENTALE_MODULE,
+    RELAZIONI_ONLINE_MODULE,
 ]
 
 
