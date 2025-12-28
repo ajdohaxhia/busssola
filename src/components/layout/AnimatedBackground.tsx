@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export function AnimatedBackground() {
     return (
-        <div className="fixed inset-0 -z-50 overflow-hidden bg-deep-blue">
+        <div className="fixed inset-0 -z-50 overflow-hidden bg-dark-900">
             {/* Primary Gradient Orb */}
             <motion.div
                 animate={{

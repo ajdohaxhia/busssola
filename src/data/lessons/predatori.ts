@@ -3,228 +3,81 @@ import { Lesson } from '../modules'
 export const PREDATORI_LESSONS: Lesson[] = [
     {
         id: '1-grooming-definizione',
-        title: 'Grooming: La Definizione Legale',
-        content: `# Grooming: Cosa dice la Legge
-Il termine "grooming" deriva dall'inglese "to groom" (curare, preparare). In ambito legale, si riferisce all'adescamento di minori online. Non è solo un comportamento fastidioso; in Italia è un reato penale (Art. 609-undecies c.p.).
+        title: 'Grooming: Anatomia di un Reato Penale',
+        content: `# Grooming: Cosa dice la Legge e la Psicologia
+Il termine "grooming" deriva dall'inglese "to groom" (curare, preparare). In ambito legale italiano, si riferisce all'Art. 609-undecies c.p. (Adescamento di minorenni). Non è un semplice comportamento inopportuno; è un crimine penale punito con la reclusione da uno a tre anni.
 
-## L'intento del Predatore
-L'obiettivo non è quasi mai l'amicizia. Il predatore cerca di ottenere:
-1. Immagini o video intimi (CSAM - Child Sexual Abuse Material).
-2. Un incontro dal vivo.
-3. Controllo psicologico per alimentare il proprio ego.
+## La Psicologia del Predatore
+Il predatore non agisce d'impulso. Segue un protocollo preciso:
+1. **Targeting:** Sceglie profili che sembrano vulnerabili o che esprimono bisogno di affetto/attenzione.
+2. **Gaining Trust:** Crea un legame emotivo fortissimo, spesso spacciandosi per un coetaneo che "capisce meglio di chiunque altro".
+3. **Sexualization:** Introduce gradualmente temi sessuali per testare i confini della vittima.
 
-### Perché colpisce gli adolescenti?
-Perché gli adolescenti sono in una fase di esplorazione, cercano autonomia e spesso hanno una naturale propensione a fidarsi delle nuove connessioni digitali.`,
-        tips: ['Il grooming è un reato serio, non una tua colpa.', 'L\'intento del predatore è manipolatorio fin dal primo "ciao".']
+## L'intento reale
+L'obiettivo finale è il controllo. Una volta ottenute foto intime (CSAM), il predatore usa il ricatto (Sextortion) per costringere la vittima a mandare altro materiale o, nel peggiore dei casi, ad accettare incontri fisici.`,
+        tips: ['Il grooming è un reato serio, non una tua colpa.', 'L\'intento del predatore è manipolatorio fin dal primo "ciao".', 'Se senti che un adulto ti capisce "troppo bene", potrebbe essere targeting.']
     },
     {
-        id: '1-love-bombing',
-        title: 'Tattica 1: Love Bombing',
-        content: `# Love Bombing: L'Eccesso di Attenzioni
-Il love bombing è la fase iniziale in cui il predatore ti sommerge di complimenti, regali virtuali e attenzioni.
+        id: '1-love-bombing-mechanics',
+        title: 'Meccanismi del Love Bombing',
+        content: `# Love Bombing: La Droga della Dopamina Digitale
+Il love bombing è la fase in cui il predatore ti sommerge di attenzioni. Funziona perché sfrutta il rilascio di dopamina nel tuo cervello.
 
-## Come riconoscerlo
-- Ti dice che sei "maturo/a per la tua età".
-- Ti scrive letteralmente ogni ora, preoccupandosi di ogni tuo minimo problema.
-- Ti fa sentire l'unica persona che lo capisce davvero.
+## Come riconoscerlo tecnicamente
+- **Frequenza Anomala:** Ti invia 50-100 messaggi al giorno, preoccupandosi se non rispondi in 5 minuti.
+- **Validazione Eccessiva:** "Sei la persona più intelligente che abbia mai conosciuto", "I tuoi amici sono troppo immaturi per te".
+- **Identità Specchio:** Dice di amare esattamente le tue stesse cose (musica, giochi, hobby) per creare un'illusione di anima gemella.
 
-### Perché funziona?
-Crea un debito di gratitudine. Ti senti obbligato a rispondere o a "ricambiare" la sua gentilezza quando inizierà a fare richieste più pesanti.`,
-        tips: ['Complimenti eccessivi da uno sconosciuto = Red Flag.', 'Nessuno si innamora in 3 ore di chat.']
+## Perché è pericoloso?
+Crea un **Debito Emotivo**. Quando lui inizierà a chiederti cose "scomode", tu ti sentirai in debito per tutta la gentilezza che ti ha mostrato e avrai paura di deluderlo. Questa è l'essenza della manipolazione.`,
+        tips: ['Complimenti eccessivi da uno sconosciuto = Red Flag.', 'Nessuno si innamora in poche ore di chat: è una tecnica.', 'Diffida di chi vuole sapere ogni dettaglio della tua vita subito.']
     },
     {
-        id: '1-isolamento-emotivo',
-        title: 'Tattica 2: Isolamento Emotivo',
-        content: `# Frammentare i Legami: L'Isolamento
-Il predatore sa che se parli con i tuoi genitori o amici, loro riconosceranno il pericolo.
+        id: '1-catfish-technical-investigation',
+        title: 'Investigazione Tecnica di un Catfish',
+        content: `# Smascherare il Falso: Tool Investigativi
+Il catfishing (uso di falsa identità) può essere smascherato con un po' di investigazione digitale (OSINT).
 
-## Il linguaggio dell'isolamento
-- "I tuoi genitori sono troppo severi, non ti meritano."
-- "I tuoi amici sono infantili, solo noi due siamo sulla stessa lunghezza d'onda."
-- "Questa è la nostra piccola bolla segreta."
+## Tool di Ricerca Inversa
+1. **TinEye vs Google Images:** TinEye è spesso più preciso per trovare foto rubate da siti web meno noti.
+2. **Yandex Images:** Sorprendentemente efficace per identificare volti, poiché usa algoritmi di riconoscimento facciale superiori per le ricerche pubbliche.
 
-### L'obiettivo
-Farti credere che LUI sia l'unico filtro di verità di cui hai bisogno. Una volta isolato/a, sei più vulnerabile alle sue richieste.`,
-        tips: ['Se ti chiede di non dire nulla ai tuoi, è un predatore.', 'La segretezza è lo strumento preferito dei manipolatori.']
+## Analisi del Profilo (Audit)
+- **Data di Creazione:** Guarda il primo post. Se è di 3 giorni fa ma ha 2000 follower, sono stati comprati.
+- **Engagement Consistency:** Ha 500 Like ma zero commenti? O i commenti sono tutti bot ("Beautiful!", "Nice pic")?
+- **Username check:** Cerca lo stesso username su altri social (usa [Sherlock](https://github.com/sherlock-project/sherlock) o siti come Namechk). Se trovi un profilo con lo stesso nome ma foto diverse, hai trovato un truffatore.`,
+        tips: ['Yandex Images è il "segreto" degli investigatori per trovare fake.', 'Un profilo "perfetto" con zero amici reali è al 99% un catfish.', 'Chiedi sempre una prova video: "toccati il naso con la mano destra ora".']
     },
     {
-        id: '1-desensibilizzazione',
-        title: 'Tattica 3: Desensibilizzazione',
-        content: `# La Rana Bollita: Desensibilizzazione
-Il predatore non chiede foto intime subito. Inizia in modo molto soft.
+        id: '1-sextortion-crisis-management',
+        title: 'Gestione Crisi: Sextortion',
+        content: `# Sextortion: Fermare il Ricatto Ora
+Se qualcuno ti minaccia di diffondere tue foto intime, sei in una situazione di emergenza. Ma non sei senza potere.
 
-## I piccoli passi
-1. Parlare di ragazzi/ragazze che ti piacciono.
-2. Fare battute a sfondo sessuale "per gioco".
-3. Chiedere opinioni su foto di altri.
-4. Chiedere una foto "normale" ma un po' più audace (es. in costume).
+## Protocollo di Azione Immediata:
+1. **NON PAGARE:** Mai. Il pagamento non cancella la foto, conferma solo che hai paura e che pagherai ancora.
+2. **NON CANCELLARE LA CHAT:** Le minacce sono prove legali fondamentali. Fai screenshot forensi (includi data, ora e URL del profilo).
+3. **Usa StopNCII.org:** Questo portale permette di creare un "hash" (impronta digitale) della tua foto e inviarlo ai database di Facebook, Instagram e TikTok per bloccarne il caricamento automatico.
+4. **Denuncia alla Polizia Postale:** È l'unico modo per far sequestrare i dispositivi del ricattatore.
 
-### L'effetto rampa
-Ogni piccolo passo ti prepara a quello successivo. Prima che tu te ne accorga, la conversazione è diventata completamente sessualizzata.`,
-        tips: ['Non accettare battute spinte da sconosciuti.', 'La rampa è graduale: impara a fermarti al primo gradino.']
+## Ricorda
+Il ricattatore è un criminale, tu sei la vittima. La vergogna che provi è l'arma che lui usa contro di te. Levagli l'arma parlandone con un adulto fidato.`,
+        tips: ['StopNCII.org è lo strumento più potente al mondo contro il Revenge Porn.', 'I ricattatori smettono se vedono che non hai paura di denunciarli.', 'Non fidarti delle sue "promesse" di cancellare tutto se paghi.']
     },
     {
-        id: '1-transizione-app-private',
-        title: 'Spostarsi sul Privato',
-        content: `# Perché vogliono usare Telegram o Snapchat?
-I predatori raramente restano su Instagram o TikTok per molto tempo.
+        id: '1-legal-dossier-creation',
+        title: 'Creare un Dossier Legale Efficace',
+        content: `# Come Documentare per la Polizia Postale
+Quando vai a denunciare, più informazioni tecniche porti, più velocemente agiranno.
 
-## Motivi tecnici
-- **Snapchat:** Le foto scompaiono (ma tu puoi comunque fare screenshot o foto allo schermo!).
-- **Telegram/Discord:** Permettono chat criptate o segrete difficili da monitorare per i genitori.
-- **WhatsApp:** Sembra più "personale" e intimo.
+## Cosa includere nel Dossier:
+- **URL Completi:** Non scrivere "L'utente @Marco123", scrivi \`https://instagram.com/marco123_hack\`. Gli username cambiano, gli ID account no.
+- **Metadata delle Email:** Se ti scrive via mail, salva l'intero messaggio come file .eml per mantenere gli header degli IP.
+- **Log delle Chiamate:** Se ti chiama, fai screenshot del registro chiamate con orari precisi.
+- **Codice Univoco:** Se l'aggressore usa Telegram, cerca il suo "User ID" numerico (tramite bot come @userinfobot), che rimane lo stesso anche se cambia nome e numero.
 
-### Consiglio di Sicurezza
-Se uno sconosciuto ti chiede di spostarti su un'altra app nei primi 10 minuti di chat, BLOCCALO. È una tattica standard di isolamento.`,
-        tips: ['Mai passare a app private con chi non conosci dal vivo.', 'Le foto che "scompaiono" sono una falsa sicurezza.']
-    },
-    {
-        id: '1-sextortion-blackmail',
-        title: 'Sextortion e Ricatto',
-        content: `# Sextortion: Quando il Gioco Diventa Incubo
-La sextortion (sex + extortion) è il ricatto basato su video o foto intime che il predatore è riuscito a ottenere.
-
-## La minaccia tipica
-"Se non mi mandi altre foto o se non mi paghi, invierò questo video a tutti i tuoi follower e alla tua scuola."
-
-### Cosa DEVI sapere
-1. **NON PAGARE:** I ricattatori non smettono mai. Pagare conferma solo che sei una vittima "profittevole".
-2. **NON CANCELLARE:** Gli screenshot delle minacce sono fondamentli per la Polizia.
-3. **Parlane Subito:** È un crimine, tu sei la vittima.`,
-        tips: ['Non pagare mai un ricattatore.', 'La vergogna è il loro potere: togligliela parlandone con un adulto.']
-    },
-    {
-        id: '1-catfish-detection-1',
-        title: 'Catfish Detection: Identikit',
-        content: `# Chi c'è davvero dietro?
-Il catfishing è l'uso di una falsa identità per scopi manipolatori.
-
-## Segnali di un profilo fake
-- Foto "troppo" perfette (modelli, influencer stranieri).
-- Pochi post o post caricati tutti nello stesso giorno.
-- Account creati di recente.
-- Molti follower ma zero commenti reali o engagement falso.
-
-### Il test definitivo
-Chiedi di fare una videochiamata flash. "Ehi, fammi vedere cosa stai facendo ora". Se ha mille scuse (fotocamera rotta, connessione lenta), è un catfish.`,
-        tips: ['Le foto perfette sono spesso rubate.', 'Una videochiamata flash smaschera il 99% dei fake.']
-    },
-    {
-        id: '1-reverse-image-search',
-        title: 'Tool: Reverse Image Search',
-        content: `# Come usare TinEye e Google Images
-La ricerca inversa per immagini è il tuo miglior amico contro i catfish.
-
-## Come procedere
-1. Salva la foto profilo del sospetto.
-2. Vai su [TinEye.com](https://tineye.com) o Google Images.
-3. Carica la foto.
-
-### Cosa cercare
-Se la foto appare su un sito di modelli russo, su un catalogo di abbigliamento o sul profilo di un influencer con il nome diverso, hai la prova che è un fake.`,
-        tips: ['TinEye è più specifico di Google per le foto rubate.', 'Controlla se la stessa foto ha nomi diversi su altri social.']
-    },
-    {
-        id: '1-revenge-porn-legale',
-        title: 'Revenge Porn e Codice Rosso',
-        content: `# Revenge Porn: La Legge in Italia
-La diffusione non consensuale di materiale intimo è un reato gravissimo introdotto dal "Codice Rosso" nel 2019.
-
-## I punti chiave della legge
-- Punisce chi invia, consegna, cede ad altri, pubblica o diffonde immagini o video a contenuto sessualmente esplicito senza il consenso delle persone rappresentate.
-- Le pene vanno da 1 a 6 anni di reclusione.
-- La pena aumenta se i fatti sono commessi dal coniuge o da persona legata da relazione affettiva.
-
-### Non sei solo/a
-Molti pensano che la propria vita sia finita. Non è così. La legge è dalla tua parte e esistono modi per rimuovere il contenuto.`,
-        tips: ['Diffondere foto intime è un reato penale.', 'Non è "un gioco", è una violazione della vita altrui.']
-    },
-    {
-        id: '1-documentare-denuncia',
-        title: 'Come Documentare per Denuncia',
-        content: `# Creare un Dossier per la Polizia
-Se decidi di denunciare (e dovresti!), avere prove solide accelera il lavoro della Polizia Postale.
-
-## Cosa salvare
-1. **Username e URL del profilo:** I nomi cambiano, l'ID dell'account no.
-2. **Screenshot completi:** Devono includere data e ora.
-3. **Conversazioni intere:** Non solo i pezzi in cui ti offende, serve il contesto.
-4. **Header delle Email:** Se ti contatta via mail, l'header contiene l'IP di origine.
-
-### Archiviazione
-Salva tutto su una chiavetta USB esterna o un cloud protetto, non lasciarli solo sul telefono in caso lo perdessi o venisse resettato.`,
-        tips: ['Salva sempre gli URL dei profili, non solo gli username.', 'Gli screenshot devono avere data e ora visibili.']
-    },
-    {
-        id: '1-risorse-ncmec',
-        title: 'Risorse: NCMEC e CyberTipline',
-        content: `# Organizzazioni Internazionali di Protezione
-Oltre alla Polizia italiana, esistono infrastrutture globali per proteggere i minori.
-
-## NCMEC (National Center for Missing & Exploited Children)
-È la più grande organizzazione al mondo che gestisce la **CyberTipline**. Le piattaforme social (FB, IG, TikTok) inviano segnalazioni automatiche al NCMEC se rilevano materiale pedo-pornografico.
-
-## Cosa puoi fare tu
-Se ti accorgi che qualcuno sta diffondendo materiale di un minore, puoi fare una segnalazione anonima su [report.cybertip.org](https://report.cybertip.org). Agiscono velocemente per far rimuovere i contenuti a livello globale.`,
-        tips: ['La CyberTipline è il modo più veloce per segnalare abusi online.', 'NCMEC collabora direttamente con tutte le app che usi.']
-    },
-    {
-        id: '1-polizia-postale',
-        title: 'Contattare la Polizia Postale',
-        content: `# La Polizia Postale: Come Muoversi
-In Italia, la Polizia Postale e delle Comunicazioni è l'organo dedicato ai crimini informatici.
-
-## Come contattarli
-- **Sito Ufficiale:** [commissariatodips.it](https://www.commissariatodips.it)
-- **Denuncia Online:** Puoi avviare la procedura sul portale per velocizzare i tempi.
-- **Uffici fisici:** Presenti in ogni capoluogo di provincia.
-
-### Cosa succede dopo?
-Valutano le prove, identificano l'autore (anche se usa VPN o anonimato, hanno strumenti tecnici avanzati) e procedono con il sequestro dei dispositivi del predatore.`,
-        tips: ['Il portale della Polizia Postale è intuitivo e sicuro.', 'Non aver paura di denunciare: proteggi te e altri ragazzi.']
-    },
-    {
-        id: '1-telefono-azzurro',
-        title: 'Supporto: Telefono Azzurro 1-96-96',
-        content: `# Telefono Azzurro: Non Sei Solo
-A volte non vuoi andare subito alla Polizia, vuoi prima parlare e capire cosa sta succedendo.
-
-## I canali di aiuto
-- **Numero 1-96-96:** Gratuito e attivo 24/7.
-- **Chat Online:** Sul sito azzurro.it.
-- **WhatsApp:** Al 335.530.26.26.
-
-### Perché chiamare loro?
-Hanno psicologi ed esperti legali che sanno esattamente come gestire lo shock e la paura del momento. Ti guideranno passo dopo passo senza giudicarti.`,
-        tips: ['Il 1-96-96 è sempre attivo e gratuito.', 'A volte parlare è il primo passo per uscire dall\'incubo.']
-    },
-    {
-        id: '1-sicurezza-fisica',
-        title: 'Incontro dal Vivo: Massima Allerta',
-        content: `# Quando il Digitale vuole diventare Fisico
-L'obiettivo finale di molti predatori è l'incontro di persona. 
-
-## Regole Ferree per la Sicurezza
-1. **Mai andare da soli:** Porta sempre un genitore o un adulto fidato.
-2. **Luogo Pubblico:** Centro commerciale, piazza affollata. Mai case private o parchi isolati.
-3. **Avvisa più persone:** Mandi la posizione in tempo reale ad amici.
-4. **Al primo dubbio, vattene:** Se la persona sembra diversa dalle foto, scappa.
-
-### Il rischio reale
-Un predatore online non è mai chi dice di essere. Un incontro al buio è il pericolo più grande per la tua incolumità fisica.`,
-        tips: ['Mai incontrare uno sconosciuto da soli.', 'Se rifiuta di venire in un posto pubblico, è un predatore.']
-    },
-    {
-        id: '1-grooming-peer-to-peer',
-        title: 'Grooming tra Coetanei?',
-        content: `# Attenzione: Non sono solo "i vecchi"
-Sebbene la maggior parte dei groomer siano adulti, esiste anche una forma di pressione e manipolazione tra coetanei (peer-to-peer).
-
-## Bullismo e Sexting
-A volte la pressione per avere foto intime arriva dal "ragazzo popolare" o dalla "ragazza dei sogni" della scuola. Usano lo status sociale come arma.
-
-### Consenso e Pressione
-Anche se ha la tua età, se ti costringe o ti ricatta, sta violando la tua libertà. Le conseguenze penali valgono anche per i minori sopra i 14 anni (Tribunale per i Minorenni).`,
-        tips: ['La pressione tra coetanei è comunque una violazione.', 'Oltre i 14 anni, i ragazzi sono penalmente responsabili delle loro azioni.']
+## Conservazione
+Metti tutto su una chiavetta USB crittografata (o protetta da password) e portala fisicamente alla Polizia Postale della tua città.`,
+        tips: ['Gli screenshot da soli non bastano, servono gli URL.', 'L\'ID numerico di Telegram è l\'unico modo per non perdere traccia del predatore.', 'Conserva le prove offline in un posto sicuro.']
     }
 ]

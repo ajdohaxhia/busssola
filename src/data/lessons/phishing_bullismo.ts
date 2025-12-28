@@ -3,443 +3,129 @@ import { Lesson } from '../modules'
 export const PHISHING_LESSONS: Lesson[] = [
     {
         id: '3-phishing-intro',
-        title: 'Phishing: L\'Email del Pescatore',
-        content: `# Phishing: Abboccare all'Amo
-Il phishing è il tentativo di ingannarti per farti rivelare informazioni sensibili, fingendo di essere una fonte affidabile.
+        title: 'Phishing: L\'Email del Pescatore (Profondo)',
+        content: `# Phishing: Anatomia di un Inganno Digitale
+Il phishing non è un semplice errore tecnico, è una forma sofisticata di manipolazione psicologica nota come "Ingegneria Sociale". I truffatori studiano il comportamento umano per creare esche perfette.
 
-## Come funziona la psicologia del phishing
-I truffatori usano due leve principali: **Urgenza** e **Paura**.
-- "Il tuo account è stato sospeso!"
-- "Hai vinto un buono da 500€, scade tra 10 minuti!"
+## Il Meccanismo della "Paura e Urgenza"
+I truffatori sfruttano l'Amigdala, la parte del cervello che gestisce le reazioni di attacco o fuga. Quando leggi "CONTO BLOCCATO: AGISCI ORA", il tuo cervello entra in uno stato di allerta che inibisce il pensiero logico-razionale della corteccia prefrontale.
+- **Urgenza Artificiale:** "Hai 24 ore prima della cancellazione definitiva".
+- **Autorità Falsa:** Usano loghi e linguaggi burocratici di Poste Italiane, INPS, PayPal o Apple.
 
-### Perché lo fanno?
-Vogliono che tu agisca d'impulso senza controllare i dettagli tecnici che rivelerebbero la truffa.`,
-        tips: ['L\'urgenza è il segnale numero uno di una truffa.', 'Le aziende serie non ti mettono mai fretta eccessiva.']
+## Perché è un business miliardario
+Oggi i "Phishing-as-a-Service" permettono anche a criminali non esperti di comprare pacchetti pronti (phishing kit) con pagine clone identiche alle originali. Un solo clic può portare al furto di credenziali bancarie, identità digitale e accesso ai tuoi social.`,
+        tips: ['L\'urgenza è il segnale numero uno di una truffa.', 'Il tuo cervello sotto stress è meno attento ai dettagli: fermati e respira.', 'Le aziende serie non ti scrivono mai con un countdown.']
     },
     {
-        id: '3-mittente-reale',
-        title: 'Verificare il Mittente Reale',
-        content: `# Chi ha scritto davvero questa mail?
-Il nome che vedi nel campo "Da:" può essere falsificato facilmente.
+        id: '3-email-headers-tech',
+        title: 'Tecnica: Analizzare gli Header Email',
+        content: `# Oltre il Mittente: Gli Intestazioni (Headers)
+Se vuoi essere un vero esperto, devi imparare a leggere quello che c'è "sotto il cofano" di una mail.
 
-## Come controllare
-Clicca o passa il mouse sopra il nome del mittente per vedere l'indirizzo email reale tra parentesi.
-- Nome: **Supporto Amazon**
-- Email Reale: \`account-update-392@outlook.com\` (SOSPETTO!)
+## Visualizzare gli Header (Intestazioni)
+In Gmail, clicca sui tre puntini e seleziona "Mostra originale". In Outlook, "Visualizza dettagli messaggio".
 
-### Il dominio conta
-Le email ufficiali di Amazon arrivano da \`@amazon.it\`. Se il dominio è diverso o scritto male (es. \`@amozon.it\`), è phishing.`,
-        tips: ['Controlla sempre l\'indirizzo email reale, non solo il nome visualizzato.', 'I domini gratuiti (@gmail, @outlook) non sono usati dalle banche.']
+## Cosa cercare per smascherare un truffatore:
+1. **Return-Path:** Se l'indirizzo nel "From" è \`supporto@amazon.it\` ma il "Return-Path" è \`hacker@server-russo.com\`, la mail è falsa.
+2. **Authentication-Results:** Cerca i valori **SPF, DKIM e DMARC**.
+    - **SPF: pass** -> Il server che ha inviato la mail è autorizzato.
+    - **SPF: fail** -> È quasi certamente phishing.
+3. **Received:** Mostra tutti i server attraversati dalla mail. Se vedi indirizzi IP strani o server in paesi sospetti, diffida.`,
+        tips: ['"Mostra originale" rivela la verità tecnica dietro una mail.', 'SPF e DKIM sono la carta d\'identità digitale di una mail seria.', 'Non fidarti dei loghi, guarda le autenticazioni.']
     },
     {
-        id: '3-link-hover',
-        title: 'Il Trucco dell\'Hovering',
-        content: `# Dove porta davvero quel bottone?
-Il testo di un link può dire qualsiasi cosa, ma l'URL di destinazione è quello che conta.
+        id: '3-hover-and-punycode',
+        title: 'URL Spoofing e Attacchi Punycode',
+        content: `# Link Ingannevoli e Alfabeti Alieni
+Non basta più passare il mouse sopra un link (Hovering). Gli hacker usano tecniche visive per ingannarti.
 
-## La tecnica dell'Hover
-Prima di cliccare su un bottone o un link in un'email:
-1. Passa il mouse sopra il link senza cliccare.
-2. Guarda nell'angolo in basso a sinistra del tuo browser.
-3. Apparirà l'indirizzo reale a cui verrai mandato.
+## Attacco Punycode (Omografi)
+Un hacker può registrare un dominio come \`аррӏе.com\`. Sembra "apple.com", ma usa lettere dell'alfabeto cirillico (la 'a' russa). 
+- **Come evitarlo:** Guarda l'URL nella barra degli indirizzi dopo aver cliccato (anche se è meglio non cliccare mai). I browser moderni trasformano questi nomi in stringhe che iniziano con \`xn--\`. Se vedi \`xn--pple-43d.com\`, scappa!
 
-### Esempio
-Testo: \`clicca qui per proteggere il tuo account\`
-URL reale: \`http://bit.ly/hacked-your-data\` (PERICOLO!)`,
-        tips: ['Hover prima di cliccare: è la regola d\'oro del web.', 'Se l\'URL è oscurato da un "URL shortener" (bit.ly, t.co), diffida.']
+## Accorciatori di URL (Bitly, TinyURL)
+Vengono usati per nascondere la vera destinazione.
+- **Tool di difesa:** Usa siti come [ExpandURL.net](https://www.expandurl.net) per vedere dove porta un link corto senza doverlo aprire.`,
+        tips: ['Attenzione ai domini con lettere sospette o caratteri speciali.', 'Usa un "URL Expander" per i link accorciati.', 'L\'estensione .com non garantisce sicurezza se il nome è contraffatto.']
     },
     {
-        id: '3-virus-total-intro',
-        title: 'Tool: VirusTotal',
-        content: `# Come analizzare file sospetti
-Hai scaricato un file e hai paura che sia un virus? Non aprirlo!
+        id: '3-smishing-2fa-theft',
+        title: 'Smishing e il Furto del Codice 2FA',
+        content: `# Quando gli SMS diventano armi
+Lo Smishing (Phishing via SMS) è pericolosissimo perché spesso arriva in thread (conversazioni) che sembrano legittime.
 
-## VirusTotal.com
-È un servizio gratuito che analizza file e URL usando oltre 70 diversi antivirus contemporaneamente.
+## SMS Spoofing
+I criminali usano servizi che permettono di impostare il "Mittente Alfabetico" (es. "PosteInfo"). Il tuo telefono raggrupperà questo messaggio insieme ai veri messaggi di Poste Italiane.
 
-### Come usarlo
-1. Vai su [VirusTotal.com](https://virustotal.com).
-2. Carica il file sospetto.
-3. Se vedi più di 2-3 rilevamenti in rosso, elimina il file immediatamente senza aprirlo.`,
-        tips: ['VirusTotal è il miglior amico di chi scarica file dal web.', 'Analizza anche gli URL degli store non ufficiali.']
+## La truffa del Codice 2FA
+Ti arriva un SMS: "Accesso anomalo rilevato. Inserisci il codice che ti abbiamo inviato per bloccare l'account". In realtà, l'hacker sta cercando di entrare nel tuo account e tu gli stai dando il codice di accesso (2FA) che serve a lui per superare la barriera di sicurezza.
+**Regola d'oro:** Nessun operatore ti chiederà mai un codice ricevuto via SMS per "aiutarti".`,
+        tips: ['I messaggi della banca non contengono mai link cliccabili a pagine di login.', 'Se ricevi un codice 2FA che non hai richiesto, qualcuno ha la tua password.', 'Non rispondere mai agli SMS sospetti.']
     },
     {
-        id: '3-smishing-sms',
-        title: 'Smishing: Phishing via SMS',
-        content: `# Truffe che arrivano in tasca
-Lo "Smishing" (SMS + Phishing) è diventato estremamente comune.
+        id: '3-malware-analysis-lab',
+        title: 'Analisi Malware: Oltre l\'Antivirus',
+        content: `# Come studiare un file sospetto in sicurezza
+Se hai un file sospetto, non basta l'antivirus locale. Serve un'analisi multi-livello.
 
-## Tattiche tipiche
-- "Il tuo pacco è bloccato in dogana, paga 2€."
-- "Accesso sospetto alla tua banca, clicca qui."
-- "Sei stato selezionato per un lavoro da 500€ al giorno."
+## Sandbox Online (Any.Run / Joe Sandbox)
+Questi servizi permettono di eseguire il file in un computer virtuale isolato (Sandbox) e vedere in tempo reale cosa fa:
+- Cerca di contattare server in Russia o Cina?
+- Tenta di criptare i documenti?
+- Prova a installarsi all'avvio del PC?
 
-### Perché è efficace
-Siamo abituati a fidarci degli SMS più che delle email. Inoltre, i truffatori possono far apparire i loro messaggi nella stessa cartella della tua vera banca (SMS Spoofing).`,
-        tips: ['La dogana non ti contatta mai via SMS per pagamenti improvvisi.', 'Non cliccare mai su link in SMS che chiedono dati di accesso.']
+## Hash di un File
+Ogni file ha un'"impronta digitale" unica chiamata Hash (es. SHA-256). Se cambi anche solo un punto in un documento, l'hash cambia completamente.
+- Copia l'hash del file e cercalo su Google o VirusTotal: se è un malware noto, troverai subito decine di segnalazioni.`,
+        tips: ['La Sandbox è un laboratorio sicuro per detonare virus.', 'L\'impronta digitale di un file (Hash) non mente mai.', 'Non aprire mai file .exe, .scr o .js scaricati da siti di streaming.']
     },
     {
-        id: '3-vishing-vocal',
-        title: 'Vishing: Le Truffe Telefoniche',
-        content: `# Quando il truffatore ti chiama
-Il "Vishing" (Voice + Phishing) usa la voce per guadagnare la tua fiducia.
+        id: '4-cyberbullismo-legge-71',
+        title: 'Legge 71/2017: Il tuo Scudo Legale',
+        content: `# La Prima Legge contro il Bullismo Digitale
+L'Italia è stata pioniera con la Legge 29 maggio 2017, n. 71. È fondamentale conoscerla per sapersi difendere.
 
-## Il finto supporto tecnico
-Ti chiamano dicendo di essere di Microsoft o della tua banca. Dicono che il tuo computer ha un virus o che c'è un bonifico sospetto in corso.
+## Articolo 1: Definizione di Cyberbullismo
+Definisce il cyberbullismo come qualunque forma di pressione, aggressione, ricatto, furto d'identità commessa per via telematica, che abbia lo scopo di isolare o umiliare un minore.
 
-### Come difendersi
-1. **Riaggancia:** Non dare mai codici 2FA o accessi remoti (AnyDesk/TeamViewer).
-2. **Richiama tu:** Usa il numero ufficiale che trovi sul retro della tua carta di credito o sul sito ufficiale.`,
-        tips: ['Nessuno ti contatterà per chiederti codici 2FA via voce.', 'Microsoft e Apple non ti chiameranno mai per "virus sul PC".']
+## I tuoi 3 Grandi Poteri di Difesa:
+1. **Richiesta di Oscuramento (Art. 3):** Puoi chiedere (anche se minorenne, sopra i 14 anni) al gestore del sito la rimozione del contenuto. Se non lo fanno entro 48 ore, interviene il Garante della Privacy.
+2. **Ammonimento del Questore (Art. 7):** Fino a quando non c'è una denuncia penale, puoi chiedere al Questore di chiamare il bullo (e i suoi genitori) in commissariato per un "rimprovero ufficiale". Questo rimane nel fascicolo della persona.
+3. **Figura del Referente a Scuola:** Ogni scuola DEVE avere un professore referente per il bullismo a cui puoi rivolgerti.`,
+        tips: ['Sopra i 14 anni puoi muoverti legalmente anche senza genitori.', 'L\'ammonimento del Questore è gratuito e molto veloce.', 'La scuola è obbligata per legge ad aiutarti.']
     },
     {
-        id: '3-malware-tipologie',
-        title: 'Tipologie di Malware',
-        content: `# Non sono tutti semplici "Virus"
-Il termine Malware (Malicious Software) comprende molte minacce diverse.
+        id: '4-forensics-screenshots',
+        title: 'Forensics: Salvare prove inattaccabili',
+        content: `# Come creare prove che valgono in tribunale
+Uno screenshot normale può essere contestato come "fotomontaggio". Ecco come creare prove forensi.
 
-## I più comuni
-- **Ransomware:** Cripta i tuoi file e chiede un riscatto in Bitcoin per sbloccarli.
-- **Spyware:** Spia quello che scrivi (keylogger) o attiva la tua webcam.
-- **Adware:** Riempie il tuo computer di pubblicità invasiva.
-- **Trojan:** Si finge un gioco o un programma utile per poi installare virus.`,
-        tips: ['Il ransomware è la minaccia più distruttiva oggi.', 'Usa un buon antivirus e tieni il sistema aggiornato.']
+## Il Metodo del Video-Log
+Usa un'app di registrazione schermo (AZ Recorder su Android, Registrazione Schermo su iOS, OBS su PC).
+1. Inizia a registrare.
+2. Vai su un sito che mostra data e ora esatta (es. \`oraesatta.it\`).
+3. Torna sulla chat o sul post offensivo.
+4. Scorri lentamente tutta la conversazione per mostrare che è reale.
+5. Clicca sul profilo dell'aggressore per mostrare il suo ID univoco (URL).
+
+## Autenticazione Forense
+Esistono tool come **Kopernicana** o **TrueScreen** che certificano lo screenshot rendendolo immodificabile tramite crittografia (Timestamp). Questi hanno valore di prova legale certa.`,
+        tips: ['Un video che mostra data, ora e scorrimento è quasi impossibile da smentire.', 'Salva l\'URL del profilo dell\'aggressore, non solo il nome.', 'Non cancellare mai la conversazione originale finché non l\'hai documentata.']
     },
     {
-        id: '3-ransomware-cosa-fare',
-        title: 'Ransomware: Cosa fare?',
-        content: `# I tuoi file sono ostaggi
-Se vedi una schermata che dice "I tuoi file sono stati criptati", mantieni la calma.
+        id: '4-psicologia-bullo-vittima',
+        title: 'Psicologia: Il Meccanismo del Silenzio',
+        content: `# Perché il bullismo online fa così male?
+Il dolore psicologico del bullismo digitale è spesso superiore a quello fisico per un motivo preciso: la **Disinibizione Online**.
 
-## La regola d'oro: NON PAGARE
-1. Pagare finanzia i criminali.
-2. Molto spesso NON ti ridanno i file comunque.
-3. Confermi di essere un bersaglio disposto a pagare.
+## L'Effetto Disinibizione
+L'assenza di contatto visivo fa sì che il bullo non riceva il "feedback del dolore" dalla vittima. Questo spegne l'empatia e lo porta a compiere atti di crudeltà che non farebbe mai guardandoti negli occhi.
 
-### L'unica difesa reale
-Il **Backup Offline**. Se hai i tuoi file su un hard disk scollegato dalla rete, puoi semplicemente formattare il PC e ripristinare tutto senza pagare nulla.`,
-        tips: ['Un backup non è tale se è sempre collegato al PC.', 'Scollega l\'hard disk di backup dopo averlo usato.']
-    },
-    {
-        id: '3-scam-marketplace',
-        title: 'Truffe sui Marketplace (Vinted, Subito)',
-        content: `# Vendere in sicurezza online
-App come Vinted, Subito o eBay sono piene di truffatori.
-
-## Lo schema del pagamento esterno
-Il truffatore ti convince a uscire dall'app: "Pagami su PayPal Amici o tramite bonifico così risparmiamo le commissioni". 
-
-### Perché è una trappola
-Usando metodi esterni perdi ogni protezione dell'acquirente. Se non ti spediscono nulla, i tuoi soldi sono persi per sempre. Usa sempre il sistema di pagamento interno dell'app.`,
-        tips: ['Mai uscire dal sistema di pagamento sicuro dell\'app.', 'PayPal "Amici e Parenti" non offre NESSUNA protezione acquisti.']
-    },
-    {
-        id: '3-job-scam',
-        title: 'Job Scam: Lavori troppo belli',
-        content: `# Lavorare da casa per 200€ l'ora?
-Le truffe di lavoro colpiscono spesso i giovani in cerca di indipendenza economica.
-
-## I segnali del falso lavoro
-- Ti contattano su WhatsApp senza che tu abbia mandato il CV.
-- Il lavoro consiste nel "mettere like a video" o "recensire prodotti".
-- Ti chiedono di "investire" dei soldi per avere i primi compiti o per sbloccare lo stipendio.
-
-### Verità
-Nessuna azienda seria ti chiederà mai soldi per lavorare o ti contatterà via WhatsApp in modo anonimo.`,
-        tips: ['Se devi pagare per lavorare, è una truffa.', 'I lavori "guida facile" su TikTok sono spesso schemi Ponzi.']
-    },
-    {
-        id: '3-crypto-scam-ponzi',
-        title: 'Crypto Scam e Schemi Ponzi',
-        content: `# Il miraggio del guadagno facile
-Le criptovalute sono usate dai truffatori perché le transazioni sono irreversibili.
-
-## Lo Schema Ponzi
-Promettono guadagni del 10% al giorno. In realtà, pagano i vecchi investitori con i soldi dei nuovi, finché tutto non crolla e il proprietario scappa con i soldi (Rug Pull).
-
-### Come proteggersi
-Non investire in progetti "segnalati" da influencer su TikTok. Usa solo exchange regolati (Coinbase, Kraken, Binance) e diffida delle promesse di guadagno garantito.`,
-        tips: ['Guadagno garantito = Truffa 100%.', 'Nessuno ti regala crypto su Telegram o Discord.']
-    },
-    {
-        id: '3-tech-support-scam',
-        title: 'Tech Support Scam',
-        content: `# "Il tuo PC è infetto, chiama questo numero"
-Navigando su siti streaming o torrent, può apparire un popup a tutto schermo con un allarme sonoro.
-
-## Cosa sta succedendo
-È solo una pagina web fatta per spaventarti. Il tuo computer non ha nulla. Vogliono che chiami il numero per farti pagare un abbonamento inutile o per farti installare un virus reale.
-
-### Come uscirne
-Premi \`ALT + F4\` o chiudi il browser dal task manager. Non chiamare mai il numero e non scaricare nulla.`,
-        tips: ['I popup che parlano sono truffe.', 'Forza la chiusura del browser per liberarti del popup.']
-    },
-    {
-        id: '3-social-engineering',
-        title: 'Ingegneria Sociale: L\'Hacking Umano',
-        content: `# Hackerare le persone, non i computer
-A volte l'hacker non usa codici, usa le parole.
-
-## Esempi comuni
-- Fingere di essere un amico che ha perso il telefono e ha bisogno di un codice SMS.
-- Fingere di essere un corriere che ha bisogno del tuo indirizzo per un pacco "fantasma".
-- Chiederti il nome del tuo primo cane o della tua scuola (le risposte alle domande di sicurezza!).
-
-### Difesa
-Mantieni un sano scetticismo. Se un amico ti chiede cose strane, chiamalo a voce su un altro canale per verificare che sia davvero lui.`,
-        tips: ['Non dare mai codici ricevuti via SMS a nessuno.', 'Le tue "domande di sicurezza" sono informazioni preziose.']
-    },
-    {
-        id: '3-mule-account',
-        title: 'Money Muling: Non diventare un complice',
-        content: `# Usare il tuo conto per "pulire" soldi
-I criminali cercano ragazzi giovani disposti a ricevere bonifici sul proprio conto (Revolut, Postepay) per poi girarli ad altri.
-
-## La promessa
-"Ti tieni il 10% come commissione per il disturbo".
-
-### Il rischio legale
-Stai commettendo il reato di **riciclaggio**. Anche se non sei tu l'hacker, prestare il tuo conto per far transitare soldi rubati ti rende penalmente responsabile e può portarti in prigione.`,
-        tips: ['Mai prestare il proprio conto corrente per transazioni di altri.', 'Il riciclaggio è un reato gravissimo.']
-    },
-    {
-        id: '3-prevenzione-attiva',
-        title: 'Prevenzione Attiva e Backup',
-        content: `# La tua strategia di difesa
-Essere sicuri al 100% è impossibile, ma puoi rendere la vita difficile agli hacker.
-
-## Checklist di protezione
-1. **Aggiornamenti:** Installa subito le patch di sicurezza di Windows/Mac/Android.
-2. **Antivirus:** Windows Defender è ottimo, tienilo attivo.
-3. **Backup 3-2-1:** 3 copie dei dati, su 2 supporti diversi, 1 copia offline.
-
-### Cosa fare se pensi di aver cliccato
-Scollega internet, avvia una scansione completa dell'antivirus e cambia le password da un ALTRO dispositivo sicuro.`,
-        tips: ['L\'aggiornamento del software chiude le falle usate dagli hacker.', 'Scollega la rete se sospetti un attacco in corso.']
+## Il "Ciclo della Vergogna"
+La vittima spesso prova vergogna e pensa di meritarsi gli insulti, o ha paura di perdere l'accesso ai social se lo dice ai genitori. 
+**Verità:** Il bullo si nutre del tuo isolamento. Rompere il silenzio non significa "fare la spia", significa esercitare il proprio diritto alla sicurezza e alla salute mentale.`,
+        tips: ['Il bullismo online NON è colpa tua, mai.', 'I bulli agiscono così perché sono protetti da uno schermo, non perché sono forti.', 'Il silenzio è l\'unico complice del bullo.']
     }
 ]
 
-export const BULLISMO_LESSONS: Lesson[] = [
-    {
-        id: '4-cyber-definizione',
-        title: 'Che cos\'è il Cyberbullismo?',
-        content: `# Bullismo Online: Oltre lo Scherzo
-Il cyberbullismo è l'uso delle tecnologie digitali per intimorire, provocare o umiliare qualcuno.
-
-## Differenze dal bullismo fisico
-- **Senza Fine:** Ti segue a casa, di notte, 24/7.
-- **Vastità:** Un post umiliante può essere visto da migliaia di persone in pochi minuti.
-- **Anonimato:** Il bullo può nascondersi dietro profili fake, sentendosi "potente".
-
-### Perché è pericoloso
-L'assenza di contatto fisico fa sì che il bullo non veda la sofferenza della vittima, portandolo a spingersi molto più oltre di quanto farebbe dal vivo.`,
-        tips: ['Il cyberbullismo non è una fase della crescita, è un abuso.', 'L\'anonimato online è un\'illusione per la Polizia.']
-    },
-    {
-        id: '4-tipologie-bullismo',
-        title: 'Le varie facce del Cyberbullismo',
-        content: `# Non è solo "insultare"
-Esistono diverse forme di aggressione digitale.
-
-## Conoscere il nemico
-- **Flaming:** Battaglie verbali online con linguaggio volgare.
-- **Harassment:** Invio ripetuto di messaggi offensivi.
-- **Denigrazione:** Sparlare di qualcuno per rovinare la sua reputazione.
-- **Esclusione:** Escludere intenzionalmente qualcuno da un gruppo chat come punizione sociale.
-- **Cyberstalking:** Molestie e denigrazioni ripetute e minacciose.`,
-        tips: ['Escludere qualcuno da un gruppo è una forma di violenza.', 'L\'insulto ripetuto diventa stalking.']
-    },
-    {
-        id: '4-doxxing-pericolo',
-        title: 'Doxxing e Dossieraggio',
-        content: `# Quando i tuoi dati diventano armi
-Il Doxxing consiste nel pubblicare online informazioni private di qualcuno senza il suo consenso.
-
-## Cosa viene pubblicato
-- Indirizzo di casa.
-- Numero di telefono privato.
-- Scuola frequentata e orari.
-- Documenti medici o foto private.
-
-### Lo scopo
-Incitare altri utenti a molestare la vittima nella vita reale. Se subisci doxxing, contatta subito la Polizia: la tua incolumità fisica è a rischio.`,
-        tips: ['Mai condividere indirizzo o scuola su profili pubblici.', 'Il doxxing è l\'inizio dello stalking fisico.']
-    },
-    {
-        id: '4-outstage-trickery',
-        title: 'Outing e Trickery',
-        content: `# Tradire la fiducia
-L'Outing e il Trickery sono tecniche basate sull'inganno.
-
-## Come funzionano
-- **Outing:** Condividere segreti o informazioni intime di qualcuno (es. orientamento sessuale) che erano state confidate in privato.
-- **Trickery:** Convincere qualcuno a rivelare segreti con l'inganno per poi pubblicarli o usarli per ricattarlo.
-
-### Difesa
-Sii selettivo con chi condividi informazioni profonde online. Anche un "migliore amico" digitale potrebbe cambiare idea domani.`,
-        tips: ['Tutto ciò che scrivi può diventare pubblico in un secondo.', 'Non confidare segreti compromettenti via chat.']
-    },
-    {
-        id: '4-impersonificazione',
-        title: 'Impersonificazione (Masquerading)',
-        content: `# Rubare l'Identità per Umiliare
-Il bullo crea un profilo falso con il tuo nome e la tua foto per rovinare la tua reputazione.
-
-## Cosa fa il bullo
-- Pubblica contenuti offensivi o volgari a tuo nome.
-- Contatta i tuoi amici o insegnanti insultandoli.
-- Cerca di farti espellere dai gruppi o dalla scuola.
-
-### Cosa fare
-Segnala immediatamente il profilo alla piattaforma come "Impersonificazione". Avvisa i tuoi contatti che quello non sei tu.`,
-        tips: ['Segnala il profilo fake come "Impersonificazione" subito.', 'Avvisa amici e prof se qualcuno scrive a tuo nome.']
-    },
-    {
-        id: '4-coordinated-hate',
-        title: 'Campagne di Odio Coordinate',
-        content: `# La Forza del Branco Digitale
-A volte non è un solo bullo, ma un intero gruppo che si organizza (spesso su Discord o Telegram) per attaccare una vittima.
-
-## Come avviene
-Il "leader" indica il profilo della vittima e decine di persone iniziano a commentare con insulti, segnalare il profilo in massa per farlo chiudere o mandare minacce private contemporaneamente.
-
-### Strategia di difesa
-Metti il profilo in modalità privata e disabilita i commenti da parte di chi non segui. Togli al branco il loro palcoscenico.`,
-        tips: ['In modalità privata, il branco non ha potere.', 'Disabilita i messaggi dai non-follower.']
-    },
-    {
-        id: '4-screenshot-legali',
-        title: 'Come fare Screenshot Validi',
-        content: `# Salvare le prove correttamente
-Un semplice screenshot può essere contestato se non è fatto bene.
-
-## Cosa deve apparire
-1. **Contenuto offensivo:** Chiaramente visibile.
-2. **Data e Ora:** Fondamentali per la cronologia.
-3. **Username e URL:** Per identificare l'autore.
-4. **Contesto:** Includi i messaggi precedenti e successivi.
-
-### Tool avanzati
-Usa software come **OBS Studio** per registrare video dello scorrimento della chat (dimostra che non è un fotomontaggio) o servizi come **Archive.is** per salvare pagine web in modo permanente.`,
-        tips: ['Registra un video mentre scorri la chat offensiva.', 'Archive.is impedisce al bullo di cancellare le prove.']
-    },
-    {
-        id: '4-archive-is',
-        title: 'Archive.is: La Prova Immutabile',
-        content: `# Impedire la cancellazione delle prove
-I bulli spesso scrivono cose orribili e poi le cancellano.
-
-## Come usare Archive.is
-1. Copia l'URL del post o del profilo offensivo.
-2. Incollalo su [Archive.is](https://archive.is).
-3. Il sito scatterà una "istantanea" della pagina che rimarrà salvata nei loro server per sempre, anche se il bullo cancella il post originale.
-
-### Valore Legale
-Questa prova è molto difficile da contestare perché gestita da una terza parte neutra.`,
-        tips: ['Archivia link sospetti prima che vengano cancellati.', 'Archive.is è la memoria storica dei reati online.']
-    },
-    {
-        id: '4-polizia-postale-bullismo',
-        title: 'Denunciare il Bullismo',
-        content: `# Quando intervenire legalmente
-In Italia, la Legge 71/2017 protegge specificamente le vittime di cyberbullismo.
-
-## I tuoi diritti
-- Puoi chiedere al gestore del sito la rimozione del contenuto (deve farlo entro 48 ore).
-- Se il gestore non risponde, puoi rivolgerti al Garante della Privacy.
-- Se hai più di 14 anni, puoi sporgere denuncia autonomamente (anche se è sempre meglio coinvolgere un genitore).
-
-### Ammonimento del Questore
-Esiste una procedura veloce: il Questore può "ammonire" il bullo (se minore di 18 anni), convocandolo con i genitori in commissariato. Spesso basta questo per far finire tutto.`,
-        tips: ['La Legge 71/2017 è lo scudo dei minori.', 'L\'ammonimento del Questore è una procedura rapida ed efficace.']
-    },
-    {
-        id: '4-psicologia-vittima',
-        title: 'L\'Impatto Psicologico',
-        content: `# Non sei tu il problema
-Essere vittima di bullismo causa ansia, depressione e calo del rendimento scolastico.
-
-## Cosa NON fare
-- **Non isolarti:** Il bullo vince se resti solo.
-- **Non rispondere:** Ogni tua risposta è "cibo" per il bullo (don't feed the troll).
-- **Non vergognarti:** Sei la vittima di un comportamento criminale altrui.
-
-### Parlane
-Trova una persona di cui ti fidi. Può essere un prof, l'allenatore, un genitore o il servizio di ascolto di Telefono Azzurro. Mettere fuori le parole rompe il potere del bullo.`,
-        tips: ['Parlarne è la prima forma di difesa.', 'Il bullo si nutre della tua reazione: non dargliela.']
-    },
-    {
-        id: '4-upstander-culture',
-        title: 'Cultura dell\'Upstander',
-        content: `# Non restare a guardare
-Se vedi un compagno bullizzato, il tuo silenzio è un aiuto per il bullo.
-
-## Cosa può fare un Upstander
-1. **Non mettere like:** Non partecipare alla derisione.
-2. **Segnala in massa:** Se 10 persone segnalano un contenuto, viene rimosso più velocemente.
-3. **Supporto privato:** Scrivi alla vittima: "Ehi, ho visto cosa hanno scritto, sono dei cretini, io ci sono".
-4. **Dillo a un adulto:** Non sei una spia, stai salvando una persona da una sofferenza enorme.`,
-        tips: ['L\'indifferenza è la migliore amica del bullo.', 'Un messaggio di supporto può cambiare la giornata di una vittima.']
-    },
-    {
-        id: '4-reporting-piattaforme',
-        title: 'Segnalare sulle Piattaforme',
-        content: `# Usare i tool di Instagram, TikTok e FB
-Ogni social ha un team di moderazione. Impara a segnalare nel modo giusto.
-
-## Categorie di segnalazione
-Non scegliere "Non mi piace". Scegli:
-- **Molestie o Bullismo**
-- **Incitamento all'odio**
-- **Minacce di violenza**
-
-### Note aggiuntive
-Se la piattaforma risponde che il post "non viola le linee guida" ma tu ti senti in pericolo, non fermarti. Fai screenshot e vai alla Polizia Postale o rivolgiti al Garante della Privacy.`,
-        tips: ['Le segnalazioni in massa funzionano meglio.', 'Usa le categorie giuste per attirare l\'attenzione dei moderatori.']
-    },
-    {
-        id: '4-cyber-stalking-legge',
-        title: 'Cyberstalking e Atti Persecutori',
-        content: `# Quando il bullismo diventa stalking
-Se le molestie sono ripetute e ti causano un perdurante stato di ansia o paura, si parla di Atti Persecutori (Art. 612-bis c.p.).
-
-## Segnali di stalking
-- Ricevere decine di chiamate al giorno da numeri anonimi.
-- Qualcuno che commenta ogni tuo post su ogni social.
-- Minacce credibili alla tua sicurezza o a quella dei tuoi cari.
-
-### Conseguenze Penali
-Lo stalking è un reato grave che prevede la reclusione da un anno a sei anni e sei mesi. Non sottovalutarlo mai.`,
-        tips: ['Lo stalking è punito con il carcere.', 'Non cancellare mai le prove dei contatti ripetuti.']
-    },
-    {
-        id: '4-privacy-shield',
-        title: 'Costruire uno Scudo di Privacy',
-        content: `# Prevenire è meglio che curare
-Rendi difficile al bullo trovarti.
-
-## Checklist Privacy
-1. **Social Privati:** Solo chi accetti può seguirti.
-2. **Tag Manuali:** Nessuno può taggarti in foto senza la tua approvazione.
-3. **Nascondi lo stato online:** Non far sapere quando sei attivo o quando hai letto i messaggi.
-4. **Whitelist commenti:** Permetti i commenti solo agli amici.
-
-### Il risultato
-Se il bullo non può raggiungerti e non riceve risposta, si stancherà presto e cercherà un altro bersaglio più "facile".`,
-        tips: ['Togli al bullo il suo pubblico.', 'Account privato = meno rischi di doxxing.']
-    },
-    {
-        id: '4-risorse-psicologiche',
-        title: 'Risorse e Telefono Azzurro',
-        content: `# Hai bisogno di aiuto ora?
-Non aspettare che la situazione diventi insopportabile.
-
-## Numeri utili
-- **Telefono Azzurro:** 1-96-96 (gratuito, 24/7).
-- **Emergenza:** 112 se senti di essere in pericolo fisico imminente.
-
-### Gruppi di supporto
-Esistono associazioni come la Fondazione Carolina (dedicata a Carolina Picchio, prima vittima riconosciuta di cyberbullismo in Italia) che aiutano i ragazzi e le famiglie a gestire queste crisi.`,
-        tips: ['Carolina Picchio ci ha insegnato che "le parole fanno più male delle botte".', 'Chiedi aiuto prima che sia troppo tardi.']
-    }
-]
+export const BULLISMO_LESSONS = PHISHING_LESSONS.filter(l => l.id.startsWith('4'))

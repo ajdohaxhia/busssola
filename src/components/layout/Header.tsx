@@ -16,7 +16,7 @@ export function HeaderSafe() {
     }
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-30 h-16 bg-deep-blue/40 backdrop-blur-xl border-b border-white/5 md:left-64 flex items-center justify-between px-6 shadow-glass">
+        <header className="fixed top-0 left-0 right-0 z-30 h-16 bg-dark-900/40 backdrop-blur-xl border-b border-white/5 md:left-64 flex items-center justify-between px-6 shadow-glass">
             <div className="flex items-center gap-4">
                 {/* Tier Badge */}
                 <div className="hidden sm:flex items-center gap-2 bg-blue-900/40 border border-white/10 px-3 py-1.5 rounded-full shadow-blue-glow">

@@ -34,7 +34,7 @@ export function SOSButton() {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setIsOpen(false)}
-                            className="absolute inset-0 bg-deep-blue/80 backdrop-blur-xl"
+                            className="absolute inset-0 bg-dark-900/80 backdrop-blur-xl"
                         />
 
                         <motion.div

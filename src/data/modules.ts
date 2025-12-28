@@ -4,6 +4,7 @@ import { PHISHING_LESSONS, BULLISMO_LESSONS } from './lessons/phishing_bullismo'
 import { SOCIAL_GDPR_LESSONS } from './lessons/social_gdpr_more'
 import { EXTRA_SOCIAL_GDPR_SCHOOL_GAMING } from './lessons/extra_lessons'
 import { FINAL_MODULES_LESSONS } from './lessons/final_modules'
+import { ADVANCED_MODULES_LESSONS } from './lessons/advanced_modules_v2'
 
 export interface Lesson {
     id: string
@@ -39,11 +40,6 @@ export interface Module {
     lessons: Lesson[]
     games: Game[]
     tips: string[]
-}
-
-// Helper to split extra lessons by module
-const getExtraByModule = (moduleId: string) => {
-    return EXTRA_SOCIAL_GDPR_SCHOOL_GAMING.filter((l: Lesson) => l.id.startsWith(moduleId))
 }
 
 export const MODULES_DATA: Module[] = [
@@ -298,5 +294,138 @@ export const MODULES_DATA: Module[] = [
             }
         ],
         tips: FINAL_MODULES_LESSONS.filter((l: Lesson) => l.id.startsWith('13')).flatMap((l: Lesson) => l.tips)
+    },
+    {
+        id: 'osint-investigazione',
+        title: 'OSINT & Investigazione',
+        description: 'Raccogliere informazioni pubbliche e difendersi',
+        duration: '3 ore',
+        difficulty: 'Avanzata',
+        icon: '🔍',
+        color: 'from-emerald-900',
+        lessons: ADVANCED_MODULES_LESSONS.filter((l: Lesson) => l.id.startsWith('14')),
+        games: [
+            {
+                id: 'digital-detective',
+                title: 'Digital Detective',
+                description: 'Analizza un caso reale usando solo fonti aperte.',
+                type: 'analyzer'
+            }
+        ],
+        tips: ADVANCED_MODULES_LESSONS.filter((l: Lesson) => l.id.startsWith('14')).flatMap((l: Lesson) => l.tips)
+    },
+    {
+        id: 'dark-web',
+        title: 'Dark Web & Anonimato',
+        description: 'Verità, miti e navigazione sicura con Tor',
+        duration: '2 ore',
+        difficulty: 'Avanzata',
+        icon: '🕶️',
+        color: 'from-neutral-900',
+        lessons: ADVANCED_MODULES_LESSONS.filter((l: Lesson) => l.id.startsWith('15')),
+        games: [
+            {
+                id: 'shadow-browser',
+                title: 'Shadow Browser',
+                description: 'Configura il tuo ambiente per l\'anonimato estremo.',
+                type: 'builder'
+            }
+        ],
+        tips: ADVANCED_MODULES_LESSONS.filter((l: Lesson) => l.id.startsWith('15')).flatMap((l: Lesson) => l.tips)
+    },
+    {
+        id: 'hardware-iot',
+        title: 'Hardware & IoT',
+        description: 'Sicurezza delle Smart Home e dei dispositivi',
+        duration: '2 ore',
+        difficulty: 'Intermedia',
+        icon: '🔌',
+        color: 'from-zinc-800',
+        lessons: ADVANCED_MODULES_LESSONS.filter((l: Lesson) => l.id.startsWith('16')),
+        games: [
+            {
+                id: 'iot-guard',
+                title: 'IoT Auditor',
+                description: 'Analizza i rischi della tua rete domestica.',
+                type: 'analyzer'
+            }
+        ],
+        tips: ADVANCED_MODULES_LESSONS.filter((l: Lesson) => l.id.startsWith('16')).flatMap((l: Lesson) => l.tips)
+    },
+    {
+        id: 'algoritmi-psicologia',
+        title: 'Algoritmi & Social',
+        description: 'Come i social controllano il tuo pensiero',
+        duration: '2 ore',
+        difficulty: 'Intermedia',
+        icon: '🧠',
+        color: 'from-purple-950',
+        lessons: ADVANCED_MODULES_LESSONS.filter((l: Lesson) => l.id.startsWith('17')),
+        games: [
+            {
+                id: 'echo-breaker',
+                title: 'Echo Breaker',
+                description: 'Cerca di rompere la tua bolla algoritmica.',
+                type: 'recognizer'
+            }
+        ],
+        tips: ADVANCED_MODULES_LESSONS.filter((l: Lesson) => l.id.startsWith('17')).flatMap((l: Lesson) => l.tips)
+    },
+    {
+        id: 'eredita-digitale',
+        title: 'Eredità Digitale',
+        description: 'Gestire la propria presenza dopo la morte',
+        duration: '1.5 ore',
+        difficulty: 'Base',
+        icon: '⏳',
+        color: 'from-slate-700',
+        lessons: ADVANCED_MODULES_LESSONS.filter((l: Lesson) => l.id.startsWith('18')),
+        games: [
+            {
+                id: 'legacy-planner',
+                title: 'Legacy Planner',
+                description: 'Prepara il tuo testamento digitale in sicurezza.',
+                type: 'builder'
+            }
+        ],
+        tips: ADVANCED_MODULES_LESSONS.filter((l: Lesson) => l.id.startsWith('18')).flatMap((l: Lesson) => l.tips)
+    },
+    {
+        id: 'crittografia-avanzata',
+        title: 'Crittografia Vera',
+        description: 'Dalle basi matematiche alla protezione dati',
+        duration: '3 ore',
+        difficulty: 'Avanzata',
+        icon: '🔑',
+        color: 'from-indigo-950',
+        lessons: ADVANCED_MODULES_LESSONS.filter((l: Lesson) => l.id.startsWith('19')),
+        games: [
+            {
+                id: 'crypto-weaver',
+                title: 'Crypto Weaver',
+                description: 'Decifra messaggi e proteggi le tue chiavi.',
+                type: 'exercise'
+            }
+        ],
+        tips: ADVANCED_MODULES_LESSONS.filter((l: Lesson) => l.id.startsWith('19')).flatMap((l: Lesson) => l.tips)
+    },
+    {
+        id: 'guerra-digitale',
+        title: 'Cyber-Warfare',
+        description: 'Geopolitica, Hacktivismo e attacchi di Stato',
+        duration: '2.5 ore',
+        difficulty: 'Avanzata',
+        icon: '🌍',
+        color: 'from-red-950',
+        lessons: ADVANCED_MODULES_LESSONS.filter((l: Lesson) => l.id.startsWith('20')),
+        games: [
+            {
+                id: 'cyber-diplomat',
+                title: 'Cyber Diplomat',
+                description: 'Gestisci crisi internazionali digitali.',
+                type: 'analyzer'
+            }
+        ],
+        tips: ADVANCED_MODULES_LESSONS.filter((l: Lesson) => l.id.startsWith('20')).flatMap((l: Lesson) => l.tips)
     }
 ];

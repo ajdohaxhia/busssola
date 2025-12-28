@@ -15,7 +15,7 @@ interface GameState {
     userId: string
     createdAt: string
     totalXP: number
-    tier: 'ingenuo' | 'consapevole' | 'informato' | 'esperto' | 'guardian'
+    tier: 'ingenuo' | 'consapevole' | 'informato' | 'esperto' | 'maestro' | 'sage digitale'
     modules: Record<string, ModuleProgress>
     achievements: string[]
     theme: 'dark' | 'light'
@@ -178,6 +178,7 @@ function calculateTier(xp: number): GameState['tier'] {
     if (xp < 500) return 'ingenuo'
     if (xp < 1500) return 'consapevole'
     if (xp < 3500) return 'informato'
-    if (xp < 7000) return 'esperto'
-    return 'guardian'
+    if (xp < 6000) return 'esperto'
+    if (xp < 9000) return 'maestro'
+    return 'sage digitale'
 }

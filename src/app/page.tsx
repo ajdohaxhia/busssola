@@ -1,136 +1,232 @@
 'use client'
 
-import { useGameStore } from '@/store/useGameStore'
-import { MODULES_DATA } from '@/data/modules'
-import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Icon } from '@/components/ui/Icon'
+import { Shield, Lock, Zap, BookOpen, Trophy, Info, ArrowUpRight, Play, Eye } from 'lucide-react'
+import Link from 'next/link'
+import { useGameStore } from '@/store/useGameStore'
+import { cn } from '@/lib/utils'
 
 export default function Dashboard() {
-  const { modules, totalXP, tier } = useGameStore()
-
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  }
-
-  const item = {
-    hidden: { y: 20, opacity: 0 },
-    show: { y: 0, opacity: 1 }
-  }
+  const { totalXP, tier } = useGameStore()
 
   return (
-    <div className="p-4 md:p-8 space-y-12">
-      {/* Welcome Hero */}
-      <section className="relative p-8 md:p-16 rounded-[3rem] bg-blue-900/40 backdrop-blur-2xl border border-white/10 overflow-hidden shadow-glass group">
-        <div className="absolute top-0 right-0 p-12 opacity-10 group-hover:opacity-20 transition-opacity">
-          <Icon name="zap" size={200} className="text-cyan-400" />
-        </div>
+    <div className="space-y-12 pb-12">
+      {/* Hero Spotlight */}
+      <section className="relative overflow-hidden rounded-[2.5rem] glass-card p-8 md:p-12 group">
+        {/* Animated Background Accents */}
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-neon-cyan/10 blur-[100px] animate-pulse group-hover:bg-neon-cyan/20 transition-all duration-700" />
+        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-neon-pink/5 blur-[100px] animate-float group-hover:bg-neon-pink/10 transition-all duration-700" />
 
-        {/* Animated Glow Overlay */}
-        <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-cyan-400/10 rounded-full blur-[100px] animate-pulse-glow" />
+        {/* Modern Accent Bar */}
+        <div className="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-neon-cyan via-neon-purple to-neon-pink group-hover:w-full transition-all duration-700" />
 
-        <div className="relative z-10 max-w-2xl space-y-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 rounded-full">
-            <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
-            <span className="text-[10px] uppercase font-black tracking-widest text-cyan-300/60">Sistema di Difesa Attivo</span>
-          </div>
+        <div className="relative z-10 max-w-2xl">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-neon-cyan text-xs font-bold uppercase tracking-widest mb-8"
+          >
+            <Zap className="w-3 h-3 fill-current animate-flicker" />
+            Nuovo Modulo: AI & Deepfakes
+          </motion.div>
 
-          <h1 className="text-5xl md:text-7xl font-black italic tracking-tighter leading-tight">
-            BENVENUTO, <span className="blue-glow text-white">GUARDIANO.</span>
-          </h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ type: "spring", damping: 12 }}
+            className="text-5xl md:text-7xl font-display font-extrabold mb-6 tracking-tight leading-[1.1]"
+          >
+            Dominia il tuo <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan via-neon-purple to-neon-pink drop-shadow-sm">Futuro Digitale.</span>
+          </motion.h1>
 
-          <p className="text-xl text-blue-200/60 font-medium leading-relaxed">
-            Il tuo percorso verso la sovranità digitale continua. Accumula esperienza e scala i ranghi della cyber-consapevolezza.
-          </p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-white/60 text-lg md:text-xl mb-10 leading-relaxed font-sans"
+          >
+            La bussola definitiva per la Generazione Z. 18 moduli, 500+ lezioni,
+            zero tracciamento. Proteggi te stesso, oggi.
+          </motion.p>
 
-          <div className="flex flex-wrap gap-6 pt-4">
-            <div className="px-8 py-4 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-md">
-              <span className="text-[10px] block text-cyan-400/60 uppercase font-black tracking-widest mb-1">Rango Attuale</span>
-              <span className="text-3xl font-black text-white uppercase italic tracking-tighter">{tier}</span>
-            </div>
-            <div className="px-8 py-4 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-md">
-              <span className="text-[10px] block text-cyan-400/60 uppercase font-black tracking-widest mb-1">XP Totali</span>
-              <span className="text-3xl font-black text-white">{totalXP}</span>
-            </div>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3, type: "spring" }}
+            className="flex flex-wrap gap-5"
+          >
+            <Link href="/moduli/predatori-online" className="relative group/btn overflow-hidden px-10 py-5 bg-neon-cyan text-dark-bg rounded-2xl font-bold flex items-center gap-2 hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(0,245,255,0.3)] hover:shadow-[0_0_30px_rgba(0,245,255,0.5)]">
+              <Play className="w-5 h-5 fill-current" />
+              Inizia Ora
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover/btn:translate-x-[200%] transition-transform duration-1000" />
+            </Link>
+            <Link href="/moduli" className="px-10 py-5 bg-white/5 border border-white/10 rounded-2xl font-bold hover:bg-white/10 transition-all duration-300 backdrop-blur-md">
+              Esplora Catalogo
+            </Link>
+          </motion.div>
         </div>
       </section>
 
-      {/* Modules Bento Grid */}
-      <section className="space-y-8">
-        <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-black italic flex items-center gap-3 tracking-tighter uppercase whitespace-pre line-clamp-1">
-            <Icon name="dashboard" size={24} className="text-cyan-400" /> IL TUO <span className="text-cyan-400 underline decoration-cyan-400/30 underline-offset-8">PERCORSO</span>
-          </h2>
+      {/* Bento Grid */}
+      <div className="bento-grid gap-6">
+        {/* Progress Card (Large) */}
+        <div className="lg:col-span-8 glass-card rounded-[2.5rem] p-10 relative overflow-hidden group">
+          <div className="absolute top-0 right-0 h-1 w-0 bg-gradient-to-r from-neon-cyan to-neon-purple group-hover:w-full transition-all duration-500" />
+          <div className="absolute -right-12 -bottom-12 w-64 h-64 bg-neon-purple/5 blur-[80px] group-hover:bg-neon-purple/10 transition-all duration-500" />
+
+          <div className="flex flex-col md:flex-row gap-12 items-center justify-between relative z-10">
+            <div className="space-y-6">
+              <div>
+                <h2 className="text-3xl font-display font-bold mb-2">Il tuo Progress</h2>
+                <p className="text-white/40 max-w-sm font-sans">Sblocca il badge &apos;Maestro Digitale&apos; completando altri 1.500 XP.</p>
+              </div>
+
+              <div className="flex items-center gap-8 py-4">
+                <div className="space-y-1">
+                  <span className="text-5xl font-mono font-bold text-neon-cyan drop-shadow-[0_0_10px_rgba(0,245,255,0.3)]">{totalXP}</span>
+                  <p className="text-[10px] uppercase font-bold tracking-[0.2em] text-white/30">Punti XP</p>
+                </div>
+                <div className="w-px h-16 bg-white/10" />
+                <div className="space-y-1">
+                  <span className="text-5xl font-mono font-bold capitalize bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50">{tier}</span>
+                  <p className="text-[10px] uppercase font-bold tracking-[0.2em] text-white/30">Rango Skill</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative w-48 h-48 flex items-center justify-center">
+              <div className="absolute inset-0 bg-neon-cyan/5 rounded-full blur-2xl group-hover:bg-neon-cyan/10 transition-all" />
+              <svg className="w-full h-full transform -rotate-90">
+                <circle cx="96" cy="96" r="84" className="stroke-white/5 fill-none" strokeWidth="12" />
+                <motion.circle
+                  cx="96" cy="96" r="84"
+                  className="stroke-neon-cyan fill-none"
+                  strokeWidth="12"
+                  strokeDasharray="528"
+                  initial={{ strokeDashoffset: 528 }}
+                  animate={{ strokeDashoffset: 528 - (528 * 0.45) }} // Placeholder progress
+                  transition={{ duration: 1.5, ease: "easeOut" }}
+                  strokeLinecap="round"
+                />
+              </svg>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <Trophy className="w-12 h-12 text-neon-cyan drop-shadow-[0_0_15px_rgba(0,245,255,0.5)] animate-bounce" />
+              </div>
+            </div>
+          </div>
         </div>
 
-        <motion.div
-          variants={container}
-          initial="hidden"
-          animate="show"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {MODULES_DATA.map((mod, index) => {
-            const progress = modules[mod.id] || { completed: false, xp: 0 }
-
-            // Define Bento spans for a more interesting layout
-            const getSpanClasses = (idx: number) => {
-              if (idx === 0) return 'md:col-span-2 md:row-span-2' // Highlight first module
-              if (idx === 3) return 'md:col-span-2' // Wider card in the middle
-              if (idx === 6) return 'md:row-span-2' // Tall card
-              return 'md:col-span-1'
-            }
-
-            return (
-              <motion.div key={mod.id} variants={item} className={getSpanClasses(index)}>
-                <Link href={`/moduli/${mod.id}`} className="block h-full">
-                  <div className={`group relative h-full p-8 rounded-[2.5rem] bg-blue-900/20 backdrop-blur-xl border border-white/5 hover:border-cyan-400/30 transition-all duration-500 overflow-hidden shadow-lg hover:shadow-cyan-400/10 flex flex-col`}>
-                    {/* Progress Indicator */}
-                    {progress.completed && (
-                      <div className="absolute top-0 left-0 right-0 h-1 bg-cyan-400 shadow-blue-glow" />
-                    )}
-
-                    <div className="flex justify-between items-start mb-8">
-                      <div className="text-5xl group-hover:scale-110 transition-transform duration-500 drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]">{mod.icon}</div>
-                      {progress.completed ? (
-                        <div className="flex items-center gap-2 px-3 py-1 bg-cyan-400/10 border border-cyan-400/20 rounded-full">
-                          <Icon name="check" className="text-cyan-400" size={12} />
-                          <span className="text-[8px] font-black text-cyan-400 uppercase tracking-widest">Completato</span>
-                        </div>
-                      ) : (
-                        <div className="text-[10px] font-bold text-blue-400/30 bg-white/5 px-2 py-1 rounded-lg uppercase tracking-widest">Lvl {mod.difficulty}</div>
-                      )}
-                    </div>
-
-                    <div className="space-y-3">
-                      <h3 className="text-2xl md:text-3xl font-black group-hover:text-cyan-300 transition-colors tracking-tighter italic uppercase">{mod.title}</h3>
-                      <p className={`text-sm text-blue-200/40 font-medium leading-relaxed italic ${index === 0 ? 'max-w-md' : ''}`}>{mod.description}</p>
-                    </div>
-
-                    <div className="flex items-center justify-between mt-12">
-                      <div className="px-3 py-1 bg-blue-600/10 border border-blue-400/10 rounded-lg">
-                        <span className="text-[10px] font-black text-blue-400/60 uppercase tracking-widest italic">{mod.category || 'Security'}</span>
-                      </div>
-                      <div className="w-10 h-10 rounded-2xl bg-white/5 flex items-center justify-center group-hover:bg-cyan-400/20 transition-all duration-300 border border-white/5 group-hover:border-cyan-400/30">
-                        <Icon name="chevron" size={18} className="text-blue-500 group-hover:text-cyan-400 group-hover:translate-x-0.5 transition-all" />
-                      </div>
-                    </div>
-
-                    {/* Gradient Glow Effect */}
-                    <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-cyan-400/5 rounded-full blur-[50px] group-hover:bg-cyan-400/10 transition-colors" />
+        {/* Categories Spotlight */}
+        <div className="lg:col-span-4 lg:row-span-2 glass-card rounded-[2.5rem] p-10 relative overflow-hidden group">
+          <div className="absolute top-0 right-0 h-1 w-0 bg-neon-pink group-hover:w-full transition-all duration-500" />
+          <h3 className="text-2xl font-display font-bold mb-8">Quick Access</h3>
+          <div className="space-y-5">
+            {[
+              { icon: Eye, label: 'Anti-Grooming', color: 'bg-neon-pink' },
+              { icon: Lock, label: 'Tech Privacy', color: 'bg-neon-purple' },
+              { icon: Shield, label: 'Legal Defense', color: 'bg-neon-cyan' },
+              { icon: BrainIcon, label: 'Social Mental', color: 'bg-neon-green' }
+            ].map((cat, i) => (
+              <div key={i} className="flex items-center justify-between p-5 bg-white/5 rounded-2xl hover:bg-white/10 transition-all duration-300 cursor-pointer group/item border border-white/0 hover:border-white/5">
+                <div className="flex items-center gap-4">
+                  <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center text-dark-bg shadow-lg transition-transform group-hover/item:scale-110", cat.color)}>
+                    <cat.icon className="w-6 h-6" />
                   </div>
-                </Link>
-              </motion.div>
-            )
-          })}
-        </motion.div>
-      </section>
+                  <div>
+                    <p className="font-bold text-sm tracking-tight">{cat.label}</p>
+                    <p className="text-[10px] text-white/30 font-bold uppercase tracking-wider">Start Lesson</p>
+                  </div>
+                </div>
+                <ArrowUpRight className="w-4 h-4 text-white/20 group-hover/item:text-white group-hover/item:translate-x-1 group-hover/item:-translate-y-1 transition-all" />
+              </div>
+            ))}
+          </div>
+          <Link href="/moduli" className="block w-full text-center mt-10 text-xs font-bold uppercase tracking-[0.2em] text-neon-cyan hover:text-white transition-colors">
+            Vedi tutto &rarr;
+          </Link>
+        </div>
+
+        {/* Mini Tip Card */}
+        <div className="lg:col-span-4 glass-card rounded-[2.5rem] p-10 relative overflow-hidden group bg-neon-cyan/5">
+          <div className="absolute top-0 right-0 h-1 w-0 bg-neon-cyan group-hover:w-full transition-all duration-500" />
+          <div className="w-14 h-14 bg-neon-cyan rounded-2xl flex items-center justify-center mb-6 text-dark-bg shadow-lg shadow-neon-cyan/20 transition-transform group-hover:rotate-12">
+            <Info className="w-7 h-7" />
+          </div>
+          <h4 className="font-display font-bold text-xl mb-3">Pro Tip</h4>
+          <p className="text-white/50 text-sm leading-relaxed font-sans">
+            Sapevi che il 90% degli attacchi di grooming inizia in voice-chat durante il gaming? Mantieni i tuoi dati personali privati.
+          </p>
+        </div>
+
+        {/* Quick Help (Emergency) */}
+        <div className="lg:col-span-4 glass-card rounded-[2.5rem] p-10 relative overflow-hidden group border-neon-pink/20">
+          <div className="absolute top-0 right-0 h-1 w-0 bg-neon-pink group-hover:w-full transition-all duration-500" />
+          <div className="flex items-center justify-between mb-8">
+            <h4 className="font-display font-bold text-xl text-neon-pink animate-flicker">URGENZE (24/7)</h4>
+            <div className="w-3 h-3 rounded-full bg-neon-pink animate-ping" />
+          </div>
+          <div className="flex gap-5">
+            <div className="flex-1 p-5 rounded-3xl bg-neon-pink/10 border border-neon-pink/20 text-center transition-transform hover:scale-105">
+              <p className="text-3xl font-mono font-black text-neon-pink">112</p>
+              <p className="text-[10px] uppercase font-bold tracking-widest text-white/30 mt-1">E-POLIZIA</p>
+            </div>
+            <div className="flex-1 p-5 rounded-3xl bg-white/5 border border-white/10 text-center transition-transform hover:scale-105">
+              <p className="text-3xl font-mono font-black text-white/80">1.96.96</p>
+              <p className="text-[10px] uppercase font-bold tracking-widest text-white/30 mt-1">AZZURRO</p>
+            </div>
+          </div>
+          <Link href="/sos" className="mt-8 flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-white/40 hover:text-white transition-colors">
+            Guida d&apos;Emergenza <ArrowUpRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </div>
     </div>
+  )
+}
+
+function BrainIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .52 8.105 3.001 3.001 0 0 0 4 3 3 3 0 1 0 5.918-1 3.001 3.001 0 0 0 4-3 4 4 0 0 0 .52-8.105 4 4 0 0 0-2.527-5.77A3 3 0 1 0 12 5Z" />
+      <path d="M12 5v14" />
+      <path d="M7 14.75a2.5 2.5 0 0 1-5 0" />
+      <path d="M17 14.75a2.5 2.5 0 0 0 5 0" />
+      <path d="M7 10.25a2.5 2.5 0 0 1-5 0" />
+      <path d="M17 10.25a2.5 2.5 0 0 0 5 0" />
+      <path d="M8.5 19a2.5 2.5 0 0 1-5 0" />
+      <path d="M15.5 19a2.5 2.5 0 0 0 5 0" />
+    </svg>
+  )
+}
+
+function Brain({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .52 8.105 3.001 3.001 0 0 0 4 3 3 3 0 1 0 5.918-1 3.001 3.001 0 0 0 4-3 4 4 0 0 0 .52-8.105 4 4 0 0 0-2.527-5.77A3 3 0 1 0 12 5Z" />
+      <path d="M12 5v14" />
+      <path d="M7 14.75a2.5 2.5 0 0 1-5 0" />
+      <path d="M17 14.75a2.5 2.5 0 0 0 5 0" />
+      <path d="M7 10.25a2.5 2.5 0 0 1-5 0" />
+      <path d="M17 10.25a2.5 2.5 0 0 0 5 0" />
+      <path d="M8.5 19a2.5 2.5 0 0 1-5 0" />
+      <path d="M15.5 19a2.5 2.5 0 0 0 5 0" />
+    </svg>
   )
 }

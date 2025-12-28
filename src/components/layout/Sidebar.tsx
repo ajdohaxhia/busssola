@@ -1,101 +1,82 @@
 'use client'
 
-import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Icon } from '@/components/ui/Icon'
-import { MODULES_DATA } from '@/data/modules'
+import { Home, LayoutGrid, User, HelpCircle, Shield, Brain } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { cn } from '@/lib/utils'
+
+const NAV_ITEMS = [
+    { icon: Home, label: 'Dashboard', href: '/' },
+    { icon: LayoutGrid, label: 'Moduli', href: '/moduli' },
+    { icon: Shield, label: 'Canale SOS', href: '/sos' },
+    { icon: User, label: 'Il mio Profilo', href: '/profilo' },
+    { icon: HelpCircle, label: 'Aiuto & FAQ', href: '/aiuto' },
+]
 
 export function Sidebar() {
     const pathname = usePathname()
-    const [isOpen, setIsOpen] = useState(false)
-
-    const navItems = [
-        { name: 'Dashboard', path: '/', icon: 'dashboard' },
-        { name: 'Profilo', path: '/profilo', icon: 'profile' },
-        { name: 'SOS Help', path: '/aiuto', icon: 'help' },
-    ]
 
     return (
-        <>
-            {/* Mobile Toggle */}
-            <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="fixed top-4 left-4 z-50 p-2 bg-blue-900/40 backdrop-blur-xl border border-white/10 rounded-lg md:hidden shadow-blue-glow"
-            >
-                <Icon name={isOpen ? 'close' : 'menu'} size={20} />
-            </button>
-
-            {/* Sidebar Container */}
-            <motion.aside
-                initial={false}
-                animate={{ x: isOpen ? 0 : -300 }}
-                className={`fixed inset-y-0 left-0 z-40 w-64 bg-deep-blue/40 backdrop-blur-2xl border-r border-white/5 flex flex-col md:translate-x-0 transition-transform duration-300 ease-in-out shadow-glass`}
-            >
-                {/* Logo */}
-                <div className="p-6 border-b border-white/5">
-                    <Link href="/" className="flex items-center gap-3 group">
-                        <div className="w-10 h-10 bg-accent-gradient rounded-xl flex items-center justify-center text-white shadow-blue-glow group-hover:scale-110 transition">
-                            <Icon name="zap" size={24} />
-                        </div>
-                        <span className="text-xl font-black tracking-tighter text-white">BUSSOLA <span className="text-cyan-400 text-xs align-top">v2.0</span></span>
-                    </Link>
+        <aside className="fixed left-0 top-0 bottom-0 w-64 hidden lg:flex flex-col p-6 z-50">
+            <div className="glass-card flex-1 rounded-[2.5rem] flex flex-col p-6 border-white/5 relative overflow-hidden">
+                {/* Logo Section */}
+                <div className="flex items-center gap-3 mb-12 px-2">
+                    <div className="w-10 h-10 bg-neon-cyan/20 rounded-xl flex items-center justify-center border border-neon-cyan/30 shadow-[0_0_20px_rgba(0,245,255,0.2)]">
+                        <Shield className="w-6 h-6 text-neon-cyan animate-pulse" />
+                    </div>
+                    <span className="text-2xl font-display font-extrabold tracking-tighter">
+                        Bussola <span className="text-neon-pink animate-flicker">v3</span>
+                    </span>
                 </div>
 
-                {/* Navigation */}
-                <div className="flex-1 overflow-y-auto p-4 space-y-8 scrollbar-hide">
-                    {/* Main Links */}
-                    <nav className="space-y-1">
-                        {navItems.map((item) => (
-                            <Link
-                                key={item.path}
-                                href={item.path}
-                                className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${pathname === item.path
-                                    ? 'bg-blue-600/20 text-cyan-300 font-bold border border-cyan-400/20'
-                                    : 'text-gray-400 hover:bg-white/5 hover:text-white'
-                                    }`}
-                            >
-                                <Icon name={item.icon} size={20} />
-                                {item.name}
-                            </Link>
-                        ))}
-                    </nav>
+                {/* Nav Links */}
+                <nav className="flex-1 space-y-3">
+                    {NAV_ITEMS.map((item) => {
+                        const isActive = pathname === item.href
 
-                    {/* Modules List */}
-                    <div>
-                        <h3 className="px-4 text-[10px] uppercase tracking-widest text-cyan-400/50 font-bold mb-4">Percorso Formativo</h3>
-                        <nav className="space-y-1">
-                            {MODULES_DATA.map((mod) => (
-                                <Link
-                                    key={mod.id}
-                                    href={`/moduli/${mod.id}`}
-                                    className={`flex items-center gap-3 px-4 py-2 text-sm rounded-lg transition-all ${pathname.includes(mod.id)
-                                        ? 'bg-white/10 text-white font-medium'
-                                        : 'text-gray-500 hover:text-gray-300'
-                                        }`}
-                                >
-                                    <span className="text-lg opacity-80">{mod.icon}</span>
-                                    <span className="truncate">{mod.title}</span>
-                                </Link>
-                            ))}
-                        </nav>
+                        return (
+                            <Link
+                                key={item.href}
+                                href={item.href}
+                                className={cn(
+                                    "group relative flex items-center gap-3 px-4 py-4 rounded-2xl transition-all duration-300 font-sans",
+                                    isActive
+                                        ? "bg-neon-cyan/10 text-neon-cyan border border-neon-cyan/20 shadow-[0_0_15px_rgba(0,245,255,0.1)]"
+                                        : "text-white/40 hover:text-white hover:bg-white/5"
+                                )}
+                            >
+                                <item.icon className={cn(
+                                    "w-5 h-5 transition-transform duration-300 group-hover:scale-110",
+                                    isActive ? "text-neon-cyan" : ""
+                                )} />
+                                <span className="font-bold text-sm tracking-tight">{item.label}</span>
+
+                                {isActive && (
+                                    <motion.div
+                                        layoutId="sidebar-active-indicator"
+                                        className="absolute left-0 w-1 h-6 bg-neon-cyan rounded-r-full shadow-[0_0_10px_#00f5ff]"
+                                    />
+                                )}
+                            </Link>
+                        )
+                    })}
+                </nav>
+
+                {/* Live Status */}
+                <div className="mt-auto p-5 bg-white/5 rounded-[2rem] border border-white/10 group/status overflow-hidden relative">
+                    <div className="absolute inset-0 bg-neon-green/5 translate-y-full group-hover/status:translate-y-0 transition-transform duration-500" />
+                    <div className="relative z-10">
+                        <div className="flex items-center gap-3 mb-3">
+                            <div className="w-2 h-2 bg-neon-green rounded-full animate-pulse shadow-[0_0_10px_#00d084]" />
+                            <span className="text-[10px] font-black text-neon-green uppercase tracking-[0.2em] animate-flicker">Live Protection</span>
+                        </div>
+                        <p className="text-[10px] text-white/30 leading-relaxed font-sans font-medium">
+                            Monitoraggio attivo delle minacce digitali per la tua protezione locale.
+                        </p>
                     </div>
                 </div>
-
-                {/* Footer */}
-                <div className="p-4 bg-blue-900/20 text-[10px] text-blue-400/40 text-center font-mono uppercase tracking-widest">
-                    Blue Gradient Edition
-                </div>
-            </motion.aside>
-
-            {/* Backdrop */}
-            {isOpen && (
-                <div
-                    onClick={() => setIsOpen(false)}
-                    className="fixed inset-0 bg-deep-blue/60 backdrop-blur-sm z-30 md:hidden"
-                />
-            )}
-        </>
+            </div>
+        </aside>
     )
 }

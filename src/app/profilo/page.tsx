@@ -47,11 +47,11 @@ export default function ProfilePage() {
                     </div>
 
                     <div className="grid grid-cols-2 gap-6">
-                        <div className="bg-deep-blue/40 p-8 rounded-[2rem] border border-white/5 shadow-inner">
+                        <div className="bg-dark-900/40 p-8 rounded-[2rem] border border-white/5 shadow-inner">
                             <span className="text-[10px] text-blue-400/40 block mb-2 uppercase font-black tracking-widest">Esperienza Totale</span>
                             <span className="text-4xl font-black text-white italic tracking-tighter">{totalXP} <span className="text-cyan-400 text-sm">XP</span></span>
                         </div>
-                        <div className="bg-deep-blue/40 p-8 rounded-[2rem] border border-white/5 shadow-inner">
+                        <div className="bg-dark-900/40 p-8 rounded-[2rem] border border-white/5 shadow-inner">
                             <span className="text-[10px] text-blue-400/40 block mb-2 uppercase font-black tracking-widest">Badge Ottenuti</span>
                             <span className="text-4xl font-black text-white italic tracking-tighter">{achievements.length}</span>
                         </div>
@@ -96,7 +96,7 @@ export default function ProfilePage() {
                 {achievements.length > 0 ? (
                     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
                         {achievements.map(a => (
-                            <div key={a} className="p-6 bg-deep-blue/40 rounded-[2rem] border border-cyan-400/10 flex flex-col items-center gap-3 hover:border-cyan-400/40 transition-colors group">
+                            <div key={a} className="p-6 bg-dark-900/40 rounded-[2rem] border border-cyan-400/10 flex flex-col items-center gap-3 hover:border-cyan-400/40 transition-colors group">
                                 <div className="w-12 h-12 rounded-full bg-cyan-400/5 flex items-center justify-center group-hover:scale-110 transition-transform">
                                     <Icon name="award" className="text-cyan-400" />
                                 </div>
@@ -116,11 +116,11 @@ export default function ProfilePage() {
             <AnimatePresence>
                 {showImport && (
                     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} onClick={() => setShowImport(false)} className="absolute inset-0 bg-deep-blue/90 backdrop-blur-xl" />
+                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} onClick={() => setShowImport(false)} className="absolute inset-0 bg-dark-900/90 backdrop-blur-xl" />
                         <motion.div initial={{ scale: 0.9, opacity: 0, y: 20 }} animate={{ scale: 1, opacity: 1, y: 0 }} className="relative bg-blue-900 border border-white/10 p-10 rounded-[3rem] w-full max-w-xl shadow-glass">
                             <h2 className="text-3xl font-black mb-6 italic tracking-tighter uppercase">RIPRISTINA <span className="text-cyan-400">PROGRESSI</span></h2>
                             <textarea
-                                className="w-full h-56 bg-deep-blue/60 border border-white/10 rounded-[2rem] p-6 font-mono text-xs text-blue-200/40 focus:border-cyan-400/40 outline-none mb-8 shadow-inner resize-none"
+                                className="w-full h-56 bg-dark-900/60 border border-white/10 rounded-[2rem] p-6 font-mono text-xs text-blue-200/40 focus:border-cyan-400/40 outline-none mb-8 shadow-inner resize-none"
                                 placeholder="Incolla qui il codice JSON del tuo backup..."
                                 value={importText}
                                 onChange={(e) => setImportText(e.target.value)}

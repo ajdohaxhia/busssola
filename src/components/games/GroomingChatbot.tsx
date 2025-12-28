@@ -115,7 +115,7 @@ export default function GroomingChatbot() {
     }
 
     return (
-        <div className="flex flex-col h-[650px] bg-deep-blue/40 backdrop-blur-2xl rounded-[3rem] border border-white/10 overflow-hidden shadow-glass relative">
+        <div className="flex flex-col h-[650px] bg-dark-900/40 backdrop-blur-2xl rounded-[3rem] border border-white/10 overflow-hidden shadow-glass relative">
             {/* Chat Header */}
             <div className="bg-blue-900/40 p-6 border-b border-white/5 flex items-center justify-between">
                 <div className="flex items-center gap-4">

@@ -1,42 +1,61 @@
-export type Tier = 'ingenuo' | 'consapevole' | 'informato' | 'esperto' | 'guardian';
+export type Difficulty = 'base' | 'intermedia' | 'avanzata'
 
-export interface ModuleProgress {
-    completed: boolean;
-    accuracy: number; // 0-100
-    completions: number;
-    xp: number;
-    lastPlayed: string | null; // ISO date
-    lessonsViewed: string[];
-    gamesCompleted: string[];
+export interface Resource {
+    title: string
+    url: string
+    description: string
 }
 
-export interface Achievement {
-    id: string;
-    name: string;
-    description: string;
-    icon: string; // lucide icon name
-    unlockedAt: string; // ISO date
+export interface MiniQuiz {
+    question: string
+    options: string[]
+    correctIndex: number
+    explanation: string
 }
 
-export interface UserProfile {
-    id: string;
-    createdAt: string;
-    totalXP: number;
-    tier: Tier;
-    modules: Record<string, ModuleProgress>;
-    achievements: Achievement[];
-    settings: {
-        theme: 'dark' | 'light'; // although we default to dark, we support toggle
-    };
+export interface MicroExercise {
+    id: string
+    title: string
+    instruction: string
+    task: string
 }
 
-export interface GameState extends UserProfile {
-    // Actions
-    addXP: (amount: number) => void;
-    completeModule: (moduleId: string, accuracy: number, xp: number) => void;
-    markLessonViewed: (moduleId: string, lessonId: string) => void;
-    completeGame: (moduleId: string, gameId: string, xp: number, accuracy: number) => void;
-    unlockAchievement: (achievement: Omit<Achievement, 'unlockedAt'>) => void;
-    resetProgress: () => void;
-    setTheme: (theme: 'dark' | 'light') => void;
+export interface Lesson {
+    id: string
+    title: string
+    minutes: number
+    difficulty: Difficulty
+    learningGoals: string[]
+    contentMarkdown: string
+    callouts: {
+        type: 'tip' | 'warning' | 'legal' | 'case-study'
+        content: string
+    }[]
+    microExercise: MicroExercise
+    miniQuiz: MiniQuiz[]
+    reflectionPrompt: string
+    resources: Resource[]
+}
+
+export interface Game {
+    id: string
+    title: string
+    description: string
+    type: 'scenario' | 'chatbot' | 'analyzer' | 'detector' | 'recognizer'
+}
+
+export interface Module {
+    id: string
+    number: number
+    title: string
+    subtitle: string
+    description: string
+    difficulty: Difficulty
+    durationHours: number
+    themeColor: string // Tailwind color token
+    icon: string // Lucide icon name
+    lessons: Lesson[]
+    games: Game[]
+    tips: string[]
+    resources: Resource[]
 }

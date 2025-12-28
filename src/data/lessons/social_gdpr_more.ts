@@ -2,206 +2,94 @@ import { Lesson } from '../modules'
 
 export const SOCIAL_GDPR_LESSONS: Lesson[] = [
     {
-        id: '5-infinite-scroll',
-        title: 'Infinite Scroll: La Gabbia Senza Fine',
+        id: '5-infinite-scroll-psych',
+        title: 'Infinite Scroll: Architettura della Dipendenza',
         content: `# Perché non riusciamo a smettere di scorrere?
-L'Infinite Scroll è un'invenzione di Aza Raskin progettata per eliminare i "punti di arresto".
+L'Infinite Scroll non è solo una comodità, è un'arma psicologica progettata per eliminare i "punti di arresto" (Cessation Cues).
 
-## La psicologia dietro
-Nelle vecchie pagine web, dovevi cliccare "Pagina 2". Quel piccolo gesto ti dava il tempo di pensare: "Voglio davvero continuare?". L'infinite scroll toglie questo momento di riflessione.
+## Il Rinforzo a Rapporto Variabile
+Questa tecnica viene usata nelle Slot Machine. Se sapessi che ogni 3 scroll trovi qualcosa di bello, ti annoieresti. Se invece il contenuto interessante arriva in modo casuale (a volte dopo 1 scroll, a volte dopo 10), il tuo cervello rilascia molta più **Dopamina**. Continui a scorrere perché "il prossimo potrebbe essere il video della vita".
 
-### Come un distributore di cibo
-È come un piatto che si riempie automaticamente mentre mangi. Non capisci mai quando sei "pieno" di contenuti finché non è troppo tardi.`,
-        tips: ['L\'infinite scroll è progettato per farti perdere il senso del tempo.', 'Impara a riconoscere il momento in cui stai scorrendo "nel vuoto".']
+## L'illusione del Tempo
+Senza il tasto "Pagina Successiva", il tuo cervello non ha il tempo di elaborare quanto tempo è passato. In media, un utente passa il 50% di tempo in più sulle app che usano l'infinite scroll rispetto a quelle con paginazione classica.
+**Consiglio Tecnico:** Imposta un "Timer App" nelle impostazioni del telefono. Quando il tempo scade, l'app si chiude forzatamente, creando quel punto di arresto che l'algoritmo ha rimosso.`,
+        tips: ['L\'infinite scroll simula il meccanismo delle slot machine.', 'Imposta un timer di 30 minuti per app come TikTok o Instagram.', 'Ogni "scroll" è una scommessa dopaminergica che stai facendo con il tuo tempo.']
     },
     {
-        id: '5-dopamina-notifiche',
-        title: 'Dopamina e Notifiche Rosse',
-        content: `# Il colore dell'urgenza
-Hai mai notato che quasi tutte le notifiche sono di colore rosso acceso?
+        id: '5-dark-patterns-deep-dive',
+        title: 'Dark Patterns: L\'Inganno nel Design',
+        content: `# Come le interfacce ti manipolano
+I Dark Patterns sono trucchi di design che ti spingono a fare scelte che non sono nel tuo interesse, ma in quello dell'azienda.
 
-## Attivazione biologica
-Il rosso segnala pericolo o urgenza nel nostro cervello primitivo. Vedere quel pallino rosso attiva il rilascio di **dopamina**, lo stesso neurotrasmettitore legato alle dipendenze (cibo, gioco d'azzardo).
+## Tipologie Avanzate:
+1. **Sneak into Basket:** Vai per comprare una cosa e te ne trovi un'altra nel carrello (es. un'assicurazione o un abbonamento).
+2. **Disguised Ads:** Pubblicità fatte per sembrare parte del contenuto del sito o bottoni "Download" falsi che installano virus.
+3. **Friend Spam:** L'app ti chiede il permesso di "trovare amici" e poi invia messaggi a tutti i tuoi contatti a tuo nome.
+4. **Nagging:** Popup continui che ti chiedono di attivare le notifiche o di iscriverti alla newsletter, impedendoti di leggere il contenuto finché non accetti.
 
-### Il Loop
-Vedi il pallino → Senti urgenza → Clicchi → Ricevi una gratificazione (un like, un messaggio) → Il cervello chiede un altro giro.`,
-        tips: ['Disattiva i pallini rossi delle notifiche: avrai molta meno ansia.', 'Il tuo cervello è programmato per abboccare al rosso.']
+## Difesa:
+Esercita lo "Scetticismo Visivo". Prima di cliccare un bottone colorato e grande, cerca il link piccolo e grigio (spesso quello "giusto").`,
+        tips: ['I bottoni più grandi e colorati sono quelli che l\'azienda vuole farti cliccare.', 'Se un\'app ti fa sentire in colpa (Confirmshaming), disinstallala.', 'Cerca sempre la "X" piccola o il link "Continua senza accettare".']
     },
     {
-        id: '5-dark-patterns-intro',
-        title: 'Cosa sono i Dark Patterns',
-        content: `# Il design che ti inganna
-I Dark Patterns sono interfacce progettate per farti fare cose che non vorresti (come spendere soldi o dare permessi).
+        id: '6-gdpr-diritti-legali',
+        title: 'GDPR: La tua Costituzione Digitale',
+        content: `# Il Regolamento UE 2016/679 (GDPR)
+Il GDPR è la legge più forte al mondo sulla privacy. Ecco come usarla per riprenderti i tuoi dati.
 
-## Esempi Comuni
-- **Roach Motel:** È facilissimo iscriversi (un click), ma difficilissimo cancellarsi (devi mandare mail, chiamare, navigare in 10 menu).
-- **Privacy Zuckering:** Impostazioni di privacy così confuse che finisci per condividere tutto senza volerlo.
-- **Confirmshaming:** Testi che ti fanno sentire in colpa se non accetti (es. "No grazie, preferisco non avere successo").`,
-        tips: ['Se cancellarsi è difficile, è un Dark Pattern.', 'Non sentirti in colpa per i testi dei bottoni: sono solo trucchi.']
+## Articolo 15: Diritto di Accesso
+Hai il diritto di ottenere una copia GRATUITA di tutti i dati che un'azienda ha su di te. Google e Facebook hanno portali specifici ("Scarica i tuoi dati"). Scoprirai che hanno registrato ogni tua posizione GPS e ogni ricerca fatta negli ultimi 10 anni.
+
+## Articolo 17: Diritto alla Cancellazione (Oblio)
+Puoi obbligare un sito a cancellare i tuoi dati se non sono più necessari. Se un vecchio forum ha ancora i tuoi post di quando avevi 10 anni e ora ti imbarazzano, puoi chiederne la rimozione legale.
+
+## Articolo 22: Decisioni Automatizzate
+Hai il diritto di non essere sottoposto a una decisione basata unicamente su un algoritmo (es. un'app che decide se puoi avere un prestito o un lavoro senza l'intervento di un essere umano).`,
+        tips: ['Usa "Scarica i tuoi dati" per capire quanto sanno di te.', 'Il diritto all\'oblio vale anche per i risultati di Google.', 'Le aziende hanno 30 giorni per rispondere alle tue richieste GDPR.']
     },
     {
-        id: '5-algoritmo-radicalizzazione',
-        title: 'Algoritmo e Radicalizzazione',
-        content: `# La tana del bianconiglio (Rabbit Hole)
-L'algoritmo non vuole darti la verità, vuole darti quello che ti tiene incollato.
+        id: '6-data-brokers-shadow-profiles',
+        title: 'Data Brokers e Shadow Profiles',
+        content: `# Chi vende la tua vita digitale?
+Anche se non hai Facebook, Facebook sa chi sei. Si chiama **Shadow Profile** (Profilo Ombra).
 
-## Come funziona
-Se guardi un video su un tema specifico, l'algoritmo te ne proporrà uno leggermente più estremo per mantenere alto l'interesse. 
+## Come creano il tuo profilo ombra:
+Quando i tuoi amici caricano la loro rubrica contatti per "trovarti", l'azienda salva il tuo numero e la tua mail. Incrociando i dati di migliaia di persone, possono capire chi sei, dove vivi e chi frequenti anche se non ti sei mai iscritto al servizio.
 
-### Il rischio
-In poche ore puoi passare da un video di cucina a teorie del complotto assurde o contenuti di odio, semplicemente perché l'algoritmo ha "imparato" che quei temi ricevono più reazioni emotive.`,
-        tips: ['L\'algoritmo non è tuo amico, è un venditore di tempo.', 'Cerca attivamente opinioni diverse per rompere la bolla.']
+## I Data Brokers
+Aziende come Axiom o Acxiom raccolgono dati da migliaia di fonti (tessere fedeltà dei supermercati, registri immobiliari, quiz online) per creare un profilo di marketing su di te e venderlo a chiunque voglia influenzarti.
+**Difesa:** Usa tracker blockers (come uBlock Origin) e chiedi la cancellazione dei dati tramite servizi come [SayMine](https://saymine.com).`,
+        tips: ['I "profili ombra" mappano anche chi non è sui social.', 'Un tracker blocker è essenziale per non alimentare i data brokers.', 'Riduci le tessere fedeltà fisiche: sono strumenti di sorveglianza commerciale.']
     },
     {
-        id: '5-fomo-ansia',
-        title: 'FOMO: L\'Ansia di Sparire',
-        content: `# Fear Of Missing Out
-La FOMO è la paura di essere tagliati fuori da esperienze gratificanti che gli altri stanno vivendo.
+        id: '7-school-privacy-ferpa-gdpr',
+        title: 'Privacy Scolastica e Sorveglianza',
+        content: `# Studiare sotto controllo
+Le piattaforme educational (GSuite for Education, Microsoft Teams) raccolgono enormi quantità di metadati sugli studenti.
 
-## Alimentata dai Social
-Vedere le storie di amici a una festa a cui non sei andato o che usano un nuovo gadget crea un senso di esclusione e inadeguatezza.
+## Cosa viene tracciato:
+- **Engagement Metrics:** Quanto tempo passi sulla pagina del compito? Hai fatto "copia-incolla" da un altro sito?
+- **Attività del Browser:** Se la scuola fornisce il chromebook o l'account, può vedere tutto quello che fai mentre sei loggato.
+- **Biometria:** Alcune app di proctoring (per gli esami online) usano il tracciamento oculare e l'IA per vedere se stai barando, analizzando il movimento dei tuoi occhi.
 
-### Strategia: JOMO
-Prova a praticare la **JOMO** (Joy Of Missing Out): la gioia di perdersi le cose per dedicarsi a se stessi, leggere un libro o semplicemente riposare senza il rumore del mondo digitale.`,
-        tips: ['Quello che vedi sui social è solo un "highlight reel", non la realtà.', 'La JOMO è un superpotere moderno.']
+## Tuoi Diritti
+La scuola deve pubblicare una "Informativa Privacy" specifica per gli studenti. Leggerla ti permette di capire chi ha accesso ai tuoi voti e ai tuoi dati comportamentali.`,
+        tips: ['Non usare mai l\'account della scuola per scopi personali.', 'Software di monitoraggio oculare sono spesso al limite della legalità.', 'L\'account scolastico è un ambiente di lavoro, non di svago.']
     },
     {
-        id: '6-gdpr-diritti-base',
-        title: 'I tuoi 4 Superpoteri GDPR',
-        content: `# La Legge Europea è il tuo Scudo
-Il GDPR (General Data Protection Regulation) ti dà diritti legali reali contro i colossi tech.
+        id: '8-gaming-discord-hardening',
+        title: 'Gaming & Discord: Hardening del Profilo',
+        content: `# Sicurezza Avanzata per Gamer
+Il gaming è il settore più colpito da furti di account e "doxxing".
 
-## I tuoi diritti principali
-1. **Accesso:** Puoi chiedere: "Cosa sapete di me?". Devono risponderti entro 30 giorni.
-2. **Cancellazione (Oblio):** Puoi dire: "Cancellate tutto quello che avete su di me".
-3. **Portabilità:** Puoi chiedere i tuoi dati in un file leggibile per portarli su un'altra app.
-4. **Opposizione:** Puoi dire: "Smettete di usare i miei dati per la pubblicità".`,
-        tips: ['Usa il diritto all\'oblio per pulire il tuo passato digitale.', 'Le aziende che violano il GDPR rischiano multe miliardarie.']
-    },
-    {
-        id: '6-dati-sensibili',
-        title: 'Cosa sono i Dati Sensibili?',
-        content: `# Non tutti i dati sono uguali
-Ci sono informazioni che la legge protegge molto più intensamente.
+## Discord Hardening:
+1. **Filtro Messaggio Esplicito:** Imposta su "Keep me safe" per evitare che ti mandino immagini con virus o contenuti illegali via DM.
+2. **Dati e Privacy:** Disabilita "Usa i dati per migliorare Discord" e "Usa i dati per personalizzare l'esperienza". Meno dati dai, meno sei tracciabile.
+3. **Authorized Apps:** Controlla ogni mese quali app/bot hanno accesso al tuo account. Molti bot "Nitro Generator" servono solo a rubare il tuo token di accesso.
 
-## Dati Particolari (Sensibili)
-Riguardano:
-- Orientamento sessuale e vita sessuale.
-- Opinioni politiche e sindacali.
-- Convinzioni religiose o filosofiche.
-- Stato di salute e dati genetici/biometrici (es. impronta digitale).
-
-### Protezione Extra
-Le app non possono raccogliere questi dati senza un motivo validissimo e un consenso esplicito e separato dal resto.`,
-        tips: ['Proteggi i tuoi dati sanitari e politici con massima cura.', 'Un\'app di giochi non ha alcun motivo per chiederti la religione.']
-    },
-    {
-        id: '6-data-minimization',
-        title: 'Data Minimization: Meno è Meglio',
-        content: `# Perché dare più del dovuto?
-Il principio della "Minimizzazione dei dati" dice che un'azienda deve raccogliere SOLO i dati strettamente necessari.
-
-## Come applicarlo
-Quando ti iscrivi a un sito, guarda i campi con l'asterisco (\*). Quelli senza asterisco sono facoltativi: **NON COMPILARLI.**
-Perché dovresti dire a un sito di ricette la tua data di nascita o il tuo numero di telefono? Più dati dai, più sarai tracciato e più rischi in caso di data breach.`,
-        tips: ['Compila solo i campi obbligatori.', 'Se chiedono troppo, inventa dati falsi (se non necessari al servizio).']
-    },
-    {
-        id: '6-have-i-been-pwned-pratico',
-        title: 'Check-up: Have I Been Pwned',
-        content: `# La tua password è in vendita?
-Ogni giorno miliardi di credenziali vengono rubate dai server di grandi aziende.
-
-## Cosa fare subito
-1. Vai su [HaveIBeenPwned.com](https://haveibeenpwned.com).
-2. Inserisci la tua mail principale.
-3. Se appare "Oh no — pwned!", guarda sotto: vedrai quali siti sono stati bucati.
-
-### Azione correttiva
-Se vedi "Adobe" o "Canva", vai su quei siti e cambia password. Se usavi quella stessa password per Instagram, cambia ANCHE quella di Instagram.`,
-        tips: ['Controlla la mail su HIBP ogni mese.', 'Se sei stato "pwned", la tua vecchia password non è più sicura.']
-    },
-    {
-        id: '6-cookie-legge',
-        title: 'I Banner dei Cookie: Cosa scegliere?',
-        content: `# Accetta tutto o Rifiuta tutto?
-Quei fastidiosi popup che appaiono su ogni sito servono a raccogliere il tuo consenso.
-
-## La scelta giusta
-Di solito ci sono tre bottoni:
-1. **Accetta Tutti:** Dai il permesso anche ai tracker pubblicitari (SCONSIGLIATO).
-2. **Personalizza:** Ti fa perdere 5 minuti (NOIOSO).
-3. **RIFIUTA TUTTI / SOLO NECESSARI:** La scelta migliore per la privacy.
-
-### Il trucco
-Per legge, il sito DEVE funzionare anche se rifiuti i cookie pubblicitari. Non aver paura di cliccare "Rifiuta".`,
-        tips: ['Clicca sempre su "Rifiuta tutti" o "Solo necessari".', 'Usa estensioni come "Consent-O-Matic" per farlo in automatico.']
-    },
-    {
-        id: '7-classroom-privacy',
-        title: 'Privacy su Google Classroom',
-        content: `# La scuola ti osserva?
-Google Classroom e Workspace for Education hanno impostazioni diverse dal Google normale.
-
-## Cosa vede il prof
-L'insegnante può vedere quando hai aperto un documento, quanto tempo ci hai lavorato e se hai consegnato in ritardo. Non può (di solito) vedere cosa fai in altre tab del browser a meno che non usi software specifici di monitoraggio.
-
-### Consiglio
-Usa un profilo Chrome separato per la scuola e uno per i fatti tuoi. Così i tuoi segnalibri e le tue ricerche personali non si mischiano con i dati scolastici.`,
-        tips: ['Usa profili browser separati per scuola e vita privata.', 'L\'account della scuola è di proprietà della scuola, non tuo.']
-    },
-    {
-        id: '7-meet-zoom-security',
-        title: 'Sicurezza in Videochiamata',
-        content: `# Proteggere la tua casa in DAD
-Quando attivi la webcam, stai aprendo una finestra sulla tua vita privata.
-
-## Consigli pratici
-- **Sfoca lo sfondo:** Impedisce agli altri di vedere i tuoi poster, la tua camera o chi passa dietro di te.
-- **Microfono spento:** Accendilo solo quando devi parlare per evitare di trasmettere conversazioni private dei tuoi genitori.
-- **Attenzione allo Screen Share:** Se devi condividere lo schermo, condividi solo UNA TAB, non l'intero desktop. Potrebbero apparire notifiche private o messaggi su WhatsApp Web.`,
-        tips: ['Sfoca lo sfondo per proteggere i dettagli della tua casa.', 'Condividi sempre la singola finestra, mai l\'intero schermo.']
-    },
-    {
-        id: '8-gaming-grooming',
-        title: 'Predatori nei Videogiochi',
-        content: `# Roblox, Fortnite e il Grooming
-Molti pensano che i predatori siano solo sui social, ma il gaming è il loro terreno preferito.
-
-## Perché il gaming?
-È facile fingere di essere un ragazzo. "Ehi, giochiamo insieme?", "Ti regalo una skin", "Vuoi entrare nel mio server Discord?".
-
-### Il segnale di pericolo
-Se un giocatore più grande (o che dice di essere tale) inizia a farti domande sulla tua vita vera, sui tuoi genitori o ti chiede foto fuori dal gioco, BLOCCALO. Il gaming deve restare gaming.`,
-        tips: ['Regali gratis da sconosciuti = Spesso è l\'inizio di un adescamento.', 'Non condividere mai il tuo nome vero o la tua città in chat di gioco.']
-    },
-    {
-        id: '8-discord-safety',
-        title: 'Discord: La Giungla dei Server',
-        content: `# Configurare Discord in sicurezza
-Discord è il cuore delle community di gaming, ma può essere molto invasivo.
-
-## Impostazioni da cambiare subito
-1. **Privacy e Sicurezza:** Attiva "Keep me safe" (scansiona le immagini nei messaggi diretti).
-2. **Messaggi Diretti:** Disabilita i messaggi diretti dai membri del server che non conosci direttamente.
-3. **Richieste di Amicizia:** Limita a "Amici di Amici" o "Membri del Server".
-
-### Server Sconosciuti
-Evita di entrare in server che promettono "Nitro gratis" o "Leak di foto". Sono quasi sempre esche per rubare il tuo account o installare malware.`,
-        tips: ['Disabilita i DM dai membri del server sconosciuti.', 'Le promesse di "Nitro gratis" sono truffe al 99%.']
-    },
-    {
-        id: '8-skin-trading-scams',
-        title: 'Truffe nel Trading di Skin',
-        content: `# Non farti rubare l'inventario
-Il mercato delle skin (CS:GO, Roblox, Fortnite) muove miliardi ed è pieno di ladri.
-
-## Tattiche comuni
-- **API Scam:** Ti fanno loggare su un sito di trading falso che ruba la tua chiave API di Steam. Da quel momento, possono deviare i tuoi scambi futuri verso i loro account.
-- **Middleman Scam:** "Usiamo un garante (middleman)". Il garante è in realtà un loro amico complice o un profilo fake.
-
-### Regola d'oro
-Usa solo i mercati ufficiali (Steam Market). Se qualcuno ti offre un prezzo troppo alto per una tua skin, sta cercando di truffarti.`,
-        tips: ['Usa solo mercati ufficiali per il trading.', 'L\'API Key di Steam è come la chiave di casa: non darla a nessuno.']
+## Protezione IP nel Gaming
+Se giochi su server privati o peer-to-peer (come alcuni vecchi titoli), il tuo indirizzo IP è visibile agli altri giocatori. Questo può portare ad attacchi **DDoS** (ti buttano giù la connessione) o doxxing.
+**Soluzione:** Usa una VPN con server ottimizzati per il gaming per nascondere il tuo IP reale agli altri giocatori.`,
+        tips: ['Un "token" di Discord dà accesso totale al tuo account senza password.', 'I bot che promettono premi gratuiti sono cavalli di troia.', 'Nascondere l\'IP è fondamentale nei tornei competitivi online.']
     }
 ]

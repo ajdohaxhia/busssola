@@ -1,125 +1,180 @@
 @import "tailwindcss";
 
 @theme {
-  --color-deep-blue: #0f1a35;
-  --color-blue-900: #1a2f5a;
-  --color-blue-800: #2d4a8a;
-  --color-blue-700: #3d5fa8;
-  --color-blue-600: #4d7ac4;
-  --color-blue-500: #5e8dd8;
-  --color-cyan-400: #4db8e8;
-  --color-cyan-300: #6dd9ff;
+  /* Primary Cyberpunk Palette */
+  --color-primary-50: #f0f7ff;
+  --color-primary-100: #e0eeff;
+  --color-primary-200: #bae6ff;
+  --color-primary-300: #7cd5ff;
+  --color-primary-400: #4db8e8;
+  --color-primary-500: #32a8b2;
+  --color-primary-600: #1e6b80;
+  --color-primary-700: #0f4a5c;
+  --color-primary-800: #082d3f;
+  --color-primary-900: #051d2b;
 
-  --color-dark-900: #0a0a0a;
-  --color-dark-800: #1a1a1a;
-  --color-dark-700: #2a2a2a;
+  /* Neon Accents */
+  --color-neon-pink: #ff006e;
+  --color-neon-cyan: #00f5ff;
+  --color-neon-purple: #9d4edd;
+  --color-neon-green: #3a86ff;
 
-  --font-mono: var(--font-jetbrains-mono);
+  /* Semantic Colors */
+  --color-success: #00d084;
+  --color-warning: #ffb703;
+  --color-danger: #ff006e;
+  --color-info: #0096c7;
+
+  /* Dark Mode (AMOLED) */
+  --color-dark-bg: #0a0e27;
+  --color-dark-surface: #16213e;
+  --color-dark-surface-2: #1a1f3a;
+  --color-dark-border: #2a3f5f;
+
+  /* Typography */
+  --font-display: var(--font-space-grotesk);
   --font-sans: var(--font-inter);
+  --font-mono: var(--font-fira-code);
 
-  --shadow-glass: 0 8px 32px 0 rgba(15, 26, 53, 0.37);
-  --shadow-blue-glow: 0 0 25px rgba(77, 184, 232, 0.4);
-  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  /* Shadows & Depth */
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  --shadow-blue-glow: 0 0 40px rgba(77, 184, 232, 0.3);
+  --shadow-neo: 0 12px 48px -12px rgba(0, 0, 0, 0.5);
 
-  --animate-pulse-glow: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  /* Animations */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow-pulse: glow-pulse 3s ease-in-out infinite;
+  --animate-shimmer: shimmer 2.5s linear infinite;
+  --animate-flicker: neon-flicker 2s infinite;
 
-  --background-image-accent-gradient: linear-gradient(135deg, #4db8e8 0%, #7c3aed 100%);
-
-  @keyframes pulse-glow {
+  @keyframes float {
 
     0%,
     100% {
-      opacity: 1;
-      filter: brightness(1);
+      transform: translateY(0);
     }
 
     50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  @keyframes glow-pulse {
+
+    0%,
+    100% {
+      box-shadow: 0 0 10px rgba(0, 245, 255, 0.4);
+    }
+
+    50% {
+      box-shadow: 0 0 25px rgba(0, 245, 255, 0.7);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  @keyframes neon-flicker {
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+      text-shadow: 0 0 10px rgba(0, 245, 255, 1);
+      opacity: 1;
+    }
+
+    20%,
+    24%,
+    55% {
+      text-shadow: 0 0 5px rgba(0, 245, 255, 0.5);
       opacity: 0.8;
-      filter: brightness(1.2);
     }
   }
 }
 
-/* Custom Utilities */
-.glass-panel {
-  @apply bg-blue-900/40 backdrop-blur-xl border border-white/10 shadow-glass;
-}
-
-.blue-glow {
-  text-shadow: 0 0 20px rgba(77, 184, 232, 0.5);
-}
-
-.shimmer-text {
-  background: linear-gradient(90deg, #fff 0%, #4db8e8 50%, #fff 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 5s linear infinite;
-}
-
+/* Base Aesthetics */
 body {
-  @apply bg-deep-blue text-white font-sans antialiased overflow-x-hidden;
-  background: linear-gradient(135deg, #0f1a35 0%, #1a2f5a 50%, #0f1a35 100%);
+  @apply bg-dark-bg text-white font-sans antialiased selection:bg-neon-cyan/30 overflow-x-hidden;
+  background: radial-gradient(circle at top right, rgba(157, 78, 221, 0.1), transparent 40%),
+    radial-gradient(circle at bottom left, rgba(0, 245, 255, 0.1), transparent 40%),
+    var(--color-dark-bg);
+  min-height: 100vh;
 }
 
-@keyframes shimmer {
-  to {
-    background-position: 200% center;
+/* Grain Effect (Reduced for performance) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  opacity: 0.1;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Advanced Components */
+.glass-card {
+  @apply bg-dark-surface/70 backdrop-blur-2xl border border-white/10 shadow-neo transition-all duration-300;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+}
+
+.glass-card:hover {
+  @apply border-white/20 bg-dark-surface/90 -translate-y-1;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 245, 255, 0.1);
+}
+
+.neon-border {
+  @apply border border-neon-cyan/30 shadow-[0_0_15px_rgba(0, 245, 255, 0.2)];
+}
+
+.neon-text-cyan {
+  @apply text-neon-cyan drop-shadow-[0_0_8px_rgba(0, 245, 255, 0.8)];
+}
+
+.neon-text-pink {
+  @apply text-neon-pink drop-shadow-[0_0_8px_rgba(255, 0, 110, 0.8)];
+}
+
+.shimmer-effect {
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2.5s infinite;
+}
+
+/* Layout Utilities */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .bento-grid {
+    grid-template-columns: repeat(12, 1fr);
   }
 }
 
-/* Light Mode Overrides */
+/* Typography Overrides */
+h1,
+h2,
+h3,
+.font-display {
+  @apply font-display tracking-tight;
+}
+
+/* Light Mode (Reserved for future) */
 :root.light body {
-  @apply bg-slate-50 text-blue-900;
+  @apply bg-slate-50 text-dark-bg;
   background: radial-gradient(circle at top left, #f8fafc 0%, #e2e8f0 100%);
-}
-
-:root.light .glass-panel,
-:root.light .bg-blue-900\/20,
-:root.light .bg-blue-900\/40,
-:root.light .bg-deep-blue\/40 {
-  @apply bg-white/80 backdrop-blur-xl border-blue-200/50 shadow-sm text-blue-900;
-}
-
-:root.light .text-blue-200\/40,
-:root.light .text-blue-200\/60,
-:root.light .text-blue-100\/40,
-:root.light .text-blue-100\/60,
-:root.light .text-blue-100\/70 {
-  @apply text-blue-700/60;
-}
-
-:root.light .text-white {
-  @apply text-blue-900;
-}
-
-:root.light .border-white\/5,
-:root.light .border-white\/10 {
-  @apply border-blue-200/30;
-}
-
-:root.light .bg-white\/5 {
-  @apply bg-blue-100/50;
-}
-
-:root.light .blue-glow {
-  text-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
-}
-
-:root.light .shadow-glass {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
-}
-
-:root.light .shadow-blue-glow {
-  box-shadow: 0 0 15px rgba(59, 130, 246, 0.1);
-}
-
-:root.light .text-gray-400,
-:root.light .text-gray-500 {
-  @apply text-blue-600/50;
-}
-
-:root.light .hover\:text-white:hover,
-:root.light .hover\:text-gray-300:hover {
-  @apply text-blue-900;
 }

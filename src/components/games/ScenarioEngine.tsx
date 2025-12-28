@@ -22,6 +22,99 @@ interface ScenarioEngineProps {
 }
 
 const SCENARIOS_DATA: Record<string, { title: string, subtitle: string, icon: string, scenarios: Scenario[] }> = {
+    'predatori-online': {
+        title: 'Predator Hunter',
+        subtitle: 'Identificazione e Difesa',
+        icon: 'sos',
+        scenarios: [
+            {
+                id: '1',
+                title: 'Il "Ragazzo Popolare"',
+                description: 'Un ragazzo di 17 anni (tu ne hai 14) ti scrive su Instagram facendoti mille complimenti e dicendo che i tuoi amici non ti capiscono. Ti chiede di spostarvi su Telegram.',
+                options: [
+                    { text: 'Rifiuto e rimango sull\'app pubblica', isCorrect: true, feedback: 'Ottimo. L\'allontanamento dalle app pubbliche è una tattica di isolamento tipica del grooming.' },
+                    { text: 'Accetto, forse è solo timido', isCorrect: false, feedback: 'Attenzione: Telegram permette chat segrete che non lasciano tracce, ideale per i predatori.' }
+                ]
+            },
+            {
+                id: '2',
+                title: 'La Videochiamata Negata',
+                description: 'Dici al tuo nuovo amico online di fare una videochiamata. Lui dice che la sua camera è rotta perché gli è caduto il telefono ieri.',
+                options: [
+                    { text: 'Faccio una ricerca inversa della sua foto profilo', isCorrect: true, feedback: 'Esatto! Scuse sulla camera rotta sono il segnale numero 1 di un catfish.' },
+                    { text: 'Gli credo e aspetto che lo ripari', isCorrect: false, feedback: 'Troppo rischioso. Potrebbe stare usando foto rubate a qualcun altro.' }
+                ]
+            },
+            {
+                id: '3',
+                title: 'Minaccia di Ricatto',
+                description: 'Un conoscente online ti dice che ha una tua foto compromettente (forse ritoccata) e la manderà alla tua scuola se non gli mandi un video.',
+                options: [
+                    { text: 'Blocco tutto e vado alla Polizia Postale', isCorrect: true, feedback: 'Corretto. Mai pagare o cedere al ricatto: non si fermano mai.' },
+                    { text: 'Gli mando il video per farlo stare zitto', isCorrect: false, feedback: 'Pessima idea. Cedere al ricatto gli dà solo più potere su di te.' }
+                ]
+            }
+        ]
+    },
+    'privacy-tecnica': {
+        title: 'Privacy Architect',
+        subtitle: 'Hardening & Tracking',
+        icon: 'privacy',
+        scenarios: [
+            {
+                id: '1',
+                title: 'Analisi Fingerprint',
+                description: 'Un sito web ti chiede l\'elenco dei font installati e la risoluzione dello schermo.',
+                options: [
+                    { text: 'Uso un browser come Brave o Firefox impostato per "spoofing"', isCorrect: true, feedback: 'Bravo. Queste informazioni creano un\'impronta unica per tracciarti senza cookie.' },
+                    { text: 'Accetto, i font servono per vedere bene il sito', isCorrect: false, feedback: 'In realtà servono a creare un "fingerprint" univoco del tuo browser.' }
+                ]
+            },
+            {
+                id: '2',
+                title: 'Configurazione DNS',
+                description: 'Il tuo operatore internet vede ogni sito che visiti anche in HTTPS tramite le query DNS.',
+                options: [
+                    { text: 'Attivo il DNS over HTTPS (DoH) su NextDNS o Quad9', isCorrect: true, feedback: 'Esatto! Cifrare il DNS impedisce all\'ISP di spiare la tua cronologia.' },
+                    { text: 'Uso la modalità incognito', isCorrect: false, feedback: 'La modalità incognito non nasconde il traffico al tuo fornitore internet.' }
+                ]
+            },
+            {
+                id: '3',
+                title: 'Permessi Android/iOS',
+                description: 'Un\'app di torcia elettrica ti chiede il permesso di accedere ai tuoi contatti e al microfono.',
+                options: [
+                    { text: 'Nego i permessi e disinstallo l\'app', isCorrect: true, feedback: 'Corretto. È un\'app malware o spyware mascherata.' },
+                    { text: 'Accetto, forse serve per scattare foto col flash', isCorrect: false, feedback: 'I contatti non servono a una torcia. È un furto di dati palese.' }
+                ]
+            }
+        ]
+    },
+    'phishing-malware': {
+        title: 'Malware Analyst',
+        subtitle: 'Detection & Shield',
+        icon: 'zap',
+        scenarios: [
+            {
+                id: '1',
+                title: 'L\'Urgenza di Amazon',
+                description: 'Ricevi una mail da "servizio-clienti@amozon-it.com" che dice: "Pacco bloccato, aggiorna i dati entro 2 ore".',
+                options: [
+                    { text: 'Controllo l\'URL: è "amozon" non "amazon"', isCorrect: true, feedback: 'Punto centrale! Spesso cambiano una sola lettera per ingannarti.' },
+                    { text: 'Clicco subito per non perdere il pacco', isCorrect: false, feedback: 'L\'urgenza è la tecnica regina dei truffatori.' }
+                ]
+            },
+            {
+                id: '2',
+                title: 'Allegato Fattura.exe',
+                description: 'Un amico ti manda un file "Fattura_Elettronica.zip" su WhatsApp dicendo di controllarlo.',
+                options: [
+                    { text: 'Analizzo l\'hash del file su VirusTotal', isCorrect: true, feedback: 'Molto professionale. Mai aprire eseguibili da chat, anche se da amici (potrebbero essere stati hackerati).' },
+                    { text: 'Lo apro subito, è un file di un amico', isCorrect: false, feedback: 'Un file .exe o un .zip contenente script è quasi sempre un virus.' }
+                ]
+            }
+        ]
+    },
     'cyberbullismo': {
         title: 'Cyber-Dossier',
         subtitle: 'Analisi Crimini Online',
@@ -44,23 +137,21 @@ const SCENARIOS_DATA: Record<string, { title: string, subtitle: string, icon: st
                     { text: 'Faccio screenshot subito e avviso l\'amico', isCorrect: true, feedback: 'Corretto. Documentare è il primo passo per la denuncia.' },
                     { text: 'Segnalo il post ma non dico nulla all\'amico', isCorrect: false, feedback: 'L\'amico deve sapere che la sua sicurezza fisica è a rischio.' }
                 ]
-            },
+            }
+        ]
+    },
+    'social-addiction': {
+        title: 'Focus Master',
+        subtitle: 'Combattere i Dark Patterns',
+        icon: 'brain',
+        scenarios: [
             {
-                id: '3',
-                title: 'Revenge Porn',
-                description: 'Un compagno ti fa vedere una foto intima di una ragazza della scuola che "gira su Telegram".',
+                id: '1',
+                title: 'Infinite Scroll',
+                description: 'Ti rendi conto che stai scorrendo TikTok da 40 minuti senza un vero motivo.',
                 options: [
-                    { text: 'Segnalo subito alla Polizia Postale', isCorrect: true, feedback: 'Bravo. La diffusione non consensuale è un reato penale grave.' },
-                    { text: 'Chiedo il link per vederla anche io', isCorrect: false, feedback: 'Partecipare alla diffusione ti rende complice di un reato penale.' }
-                ]
-            },
-            {
-                id: '4',
-                title: 'Account Fake',
-                description: 'C\'è un profilo Instagram con il tuo nome che insulta tutti i professori.',
-                options: [
-                    { text: 'Segnalo come "Impersonificazione"', isCorrect: true, feedback: 'Esatto. È il modo più veloce per farlo chiudere.' },
-                    { text: 'Insulto il fake per fargli capire chi comanda', isCorrect: false, feedback: 'Rispondere agli insulti peggiora solo la tua immagine pubblica.' }
+                    { text: 'Imposto un timer app di 30 minuti totali', isCorrect: true, feedback: 'Esatto. Riportare il controllo manuale rompe l\'algoritmo di dipendenza.' },
+                    { text: 'Continuo, forse il prossimo video è meglio', isCorrect: false, feedback: 'Il cervello sta subendo un "rinforzo variabile", come alle slot machine.' }
                 ]
             }
         ]
@@ -72,127 +163,59 @@ const SCENARIOS_DATA: Record<string, { title: string, subtitle: string, icon: st
         scenarios: [
             {
                 id: '1',
-                title: 'App Calcolatrice',
-                description: 'Una nuova app calcolatrice chiede accesso alla tua posizione GPS e ai tuoi contatti.',
+                title: 'Accesso ai Dati',
+                description: 'Vuoi sapere tutto quello che Google sa di te negli ultimi 10 anni.',
                 options: [
-                    { text: 'Nego i permessi - non servono alla funzione', isCorrect: true, feedback: 'Corretto. È un chiaro tentativo di data-mining.' },
-                    { text: 'Accetto per far funzionare l\'app velocemente', isCorrect: false, feedback: 'Mai accettare permessi non necessari. I tuoi dati sono preziosi.' }
-                ]
-            },
-            {
-                id: '2',
-                title: 'Diritto all\'Oblio',
-                description: 'Vuoi che Facebook cancelli definitivamente tutti i tuoi post di quando avevi 10 anni.',
-                options: [
-                    { text: 'Esercito il Diritto all\'Oblio (GDPR)', isCorrect: true, feedback: 'Proprio così. Puoi chiedere la cancellazione totale dei tuoi dati.' },
-                    { text: 'Cancello l\'account e spero basti', isCorrect: false, feedback: 'Cancellare l\'account non sempre rimuove i dati dai server di backup.' }
-                ]
-            },
-            {
-                id: '3',
-                title: 'Data Breach',
-                description: 'Ricevi un avviso: il sito dove compri le scarpe è stato hackerato. Le password sono rubate.',
-                options: [
-                    { text: 'Cambio password lì e ovunque fosse uguale', isCorrect: true, feedback: 'Ottimo. Previene il "Credential Stuffing" su altri siti.' },
-                    { text: 'Non faccio nulla, tanto scadeva tra un mese', isCorrect: false, feedback: 'Un hacker può ora entrare nel tuo account e rubare i dati della carta.' }
+                    { text: 'Uso lo strumento "Takeout" (Art. 15 GDPR)', isCorrect: true, feedback: 'Proprio così. Il Diritto di Accesso ti permette di avere i tuoi dati.' },
+                    { text: 'Chiedo a un amico esperto di hackerarli', isCorrect: false, feedback: 'Non serve. La legge ti dà il diritto di averli gratis.' }
                 ]
             }
         ]
     },
     'ai-deepfake': {
-        title: 'Deepfake Detective',
-        subtitle: 'Verifica Realtà Sintetica',
-        icon: 'ai',
+        title: 'Deepfake Detector',
+        subtitle: 'Smascherare la Sintesi',
+        icon: 'zap',
         scenarios: [
             {
                 id: '1',
-                title: 'Video Politico Scioccante',
-                description: 'Vedi un video di un leader mondiale che dice cose assurde. Noti che i bordi della bocca sono un po\' sfocati.',
+                title: 'Video Politico Strano',
+                description: 'Vedi un video di un politico che dice cose assurde. I suoi occhi sembrano non battere mai le ciglia.',
                 options: [
-                    { text: 'Cerco la notizia su siti di fact-checking', isCorrect: true, feedback: 'Ottimo. Il fact-checking è l\'arma numero uno contro i deepfake.' },
-                    { text: 'Lo condivido subito per avvisare i miei amici', isCorrect: false, feedback: 'Condividere senza verificare aiuta la diffusione di fake news pericolose.' }
-                ]
-            },
-            {
-                id: '2',
-                title: 'Chiamata Vocale Urgente',
-                description: 'Tua madre ti chiama chiedendo soldi subito. La voce sembra la sua ma è un po\' robotica.',
-                options: [
-                    { text: 'Faccio una domanda che solo lei sa', isCorrect: true, feedback: 'Geniale. Una domanda personale smaschera il voice cloning.' },
-                    { text: 'Corro a fare il bonifico per aiutarla', isCorrect: false, feedback: 'I truffatori usano l\'urgenza proprio per impedirti di pensare.' }
-                ]
-            }
-        ]
-    },
-    'finanze-crypto': {
-        title: 'Scam Recognizer',
-        subtitle: 'Analisi Promesse Finanziarie',
-        icon: 'finance',
-        scenarios: [
-            {
-                id: '1',
-                title: 'Il Guru di TikTok',
-                description: 'Un influencer dice che ha trovato un bug in un sito crypto: "Invia 50€, ricevi 5000€ garantiti".',
-                options: [
-                    { text: 'È chiaramente uno schema Ponzi/Scam', isCorrect: true, feedback: 'Corretto. I guadagni garantiti a tripla cifra non esistono.' },
-                    { text: 'Provo con una piccola somma che posso perdere', isCorrect: false, feedback: 'Anche 1€ regalato a un truffatore è un errore. Non alimentare questi schemi.' }
-                ]
-            },
-            {
-                id: '2',
-                title: 'Seed Phrase Smarrita',
-                description: 'Il "supporto tecnico di MetaMask" ti contatta in DM per chiederti le tue 12 parole di sicurezza.',
-                options: [
-                    { text: 'Non rispondo - è un tentativo di furto wallet', isCorrect: true, feedback: 'Esatto! Nessun supporto chiede MAI la seed phrase.' },
-                    { text: 'Le do per sbloccare il mio account', isCorrect: false, feedback: 'Dare la seed phrase significa regalare tutti i tuoi soldi all\'hacker.' }
-                ]
-            }
-        ]
-    },
-    'scuola-online': {
-        title: 'Classroom Guardian',
-        subtitle: 'Protocollo Sicurezza DAD',
-        icon: 'school',
-        scenarios: [
-            {
-                id: '1',
-                title: 'Link Lezione Pubblico',
-                description: 'Un compagno condivide il link della lezione su un server Discord pubblico.',
-                options: [
-                    { text: 'Avviso subito l\'insegnante', isCorrect: true, feedback: 'Bravo. Questo previene il fenomeno del "Zoom-bombing".' },
-                    { text: 'Entro per vedere lo "show"', isCorrect: false, feedback: 'Partecipare a disturbi di lezioni è un\'interruzione di pubblico servizio.' }
+                    { text: 'È probabilmente un Deepfake IA', isCorrect: true, feedback: 'Corretto. Il battito delle ciglia è uno dei punti deboli delle attuali IA.' },
+                    { text: 'È solo stanco, lo condivido subito', isCorrect: false, feedback: 'Condividere senza verificare aiuta la disinformazione.' }
                 ]
             }
         ]
     },
     'gaming-communities': {
         title: 'Secure Gamer',
-        subtitle: 'Protezione Account & Skin',
-        icon: 'game',
+        subtitle: 'Protezione Account & Community',
+        icon: 'gamepad',
         scenarios: [
             {
                 id: '1',
-                title: 'Trade Sospetto',
-                description: 'Un giocatore ti offre una skin rarissima se inserisci il tuo codice 2FA in un sito esterno.',
+                title: 'Il Mercato Grigio',
+                description: 'Un utente ti offre 100€ in skin per il tuo account, chiedendo di loggare su un sito di "price check".',
                 options: [
-                    { text: 'Rifiuto e blocco il giocatore', isCorrect: true, feedback: 'Esatto! Mai condividere codici 2FA. È un furto di account.' },
-                    { text: 'Controllo il sito, sembra legit', isCorrect: false, feedback: 'I siti di phishing imitano quelli reali. Resta sui canali ufficiali.' }
+                    { text: 'Rifiuto, è un attacco API Scam', isCorrect: true, feedback: 'Bravo! Quei siti rubano la tua chiave API di Steam per dirottare i tuoi scambi.' },
+                    { text: 'Controllo il prezzo, sembra un affare', isCorrect: false, feedback: 'Attenzione: loggare su siti non ufficiali espone il tuo inventario al furto totale.' }
                 ]
             }
         ]
     },
-    'sexting-legal': {
-        title: 'Legal Advisor',
-        subtitle: 'Gestione Rischi Immagini',
-        icon: 'help',
+    'finanze-crypto': {
+        title: 'Wealth Guard',
+        subtitle: 'Crypto & Scams',
+        icon: 'brain',
         scenarios: [
             {
                 id: '1',
-                title: 'Richiesta di Foto',
-                description: 'Qualcuno con cui parli da poco ti chiede una foto intima.',
+                title: 'La Seed Phrase',
+                description: 'Un "supporto tecnico" di Metamask ti contatta privatamente chiedendoti le 12 parole di sicurezza.',
                 options: [
-                    { text: 'Rifiuto fermamente', isCorrect: true, feedback: 'Saggia decisione. Una foto inviata è fuori controllo per sempre.' },
-                    { text: 'La invio oscurando il viso', isCorrect: false, feedback: 'Anche senza viso, i metadati o segni particolari possono identificarti.' }
+                    { text: 'Non le do a nessuno, mai.', isCorrect: true, feedback: 'Regola d\'oro. Chi ha la seed phrase ha i tuoi soldi.' },
+                    { text: 'Gliele do così sbloccano il conto', isCorrect: false, feedback: 'Errore fatale. Hai appena regalato i tuoi risparmi a un ladro.' }
                 ]
             }
         ]
@@ -205,71 +228,165 @@ const SCENARIOS_DATA: Record<string, { title: string, subtitle: string, icon: st
             {
                 id: '1',
                 title: 'Rallentamento Strategico',
-                description: 'Il tuo operatore internet rallenta i siti di informazione libera.',
+                description: 'Il tuo operatore internet rallenta i siti di informazione libera favorire i propri servizi.',
                 options: [
                     { text: 'È una violazione della Net Neutrality', isCorrect: true, feedback: 'Appunto. Tutti i dati devono essere trattati allo stesso modo.' },
-                    { text: 'Hanno ragione loro, pago io', isCorrect: false, feedback: 'In Europa la legge protegge l\'equità del traffico dati.' }
+                    { text: 'Hanno ragione loro, sono i proprietari dei cavi', isCorrect: false, feedback: 'In Europa la legge protegge l\'equità del traffico dati contro i monopoli.' }
                 ]
             }
         ]
     },
-    'salute-mentale': {
-        title: 'Mindful Guardian',
-        subtitle: 'Equilibrio Digitale',
-        icon: 'brain',
+    'osint-investigazione': {
+        title: 'Digital Detective',
+        subtitle: 'Investigazione Open Source',
+        icon: 'search',
         scenarios: [
             {
                 id: '1',
-                title: 'Notifiche Notturne',
-                description: 'Sono le 2 di notte, il telefono vibra.',
+                title: 'L\'Ombra Rivelatrice',
+                description: 'Analizzi una foto di un sospetto. Noti che l\'ombra del palazzo punta a Nord-Est alle ore 10:00 del mattino.',
                 options: [
-                    { text: 'Lo ignoro e dormo', isCorrect: true, feedback: 'Ottimo. Il sonno è sacro.' },
-                    { text: 'Controllo subito', isCorrect: false, feedback: 'Le interruzioni notturne degradano la salute mentale.' }
+                    { text: 'Uso SunCalc per triangolare la città', isCorrect: true, feedback: 'Tecnica OSINT avanzata! La posizione del sole non mente mai.' },
+                    { text: 'È solo un\'ombra, non serve a nulla', isCorrect: false, feedback: 'In OSINT, anche un\'ombra può rivelare la geolocalizzazione esatta.' }
+                ]
+            },
+            {
+                id: '2',
+                title: 'Username Sherlock',
+                description: 'Vuoi vedere se un utente @hacker123 è attivo su altri social che non conosci.',
+                options: [
+                    { text: 'Uso il tool Sherlock per scansionare 300+ siti', isCorrect: true, feedback: 'Esatto. Molti criminali riutilizzano lo stesso username ovunque.' },
+                    { text: 'Cerco a mano su Instagram e Facebook', isCorrect: false, feedback: 'Troppo lento e incompleto. Esistono script automatici per questo.' }
+                ]
+            }
+        ]
+    },
+    'dark-web': {
+        title: 'Dark Web Explorer',
+        subtitle: 'Anonimato Tecnico',
+        icon: 'incognito',
+        scenarios: [
+            {
+                id: '1',
+                title: 'Exit Node Sniffing',
+                description: 'Navighi su Tor su un sito che non usa l\'HTTPS.',
+                options: [
+                    { text: 'Il proprietario dell\'Exit Node può vedere i miei dati', isCorrect: true, feedback: 'Vero. Tor cifra il tunnel, ma l\'uscita verso il web normale è visibile se non protetta da SSL.' },
+                    { text: 'Sono protetto dalla crittografia a cipolla', isCorrect: false, feedback: 'La cipolla ti protegge fino all\'ultimo nodo, poi il traffico è in chiaro verso il web.' }
+                ]
+            }
+        ]
+    },
+    'hardware-iot': {
+        title: 'Hardware Guardian',
+        subtitle: 'Sicurezza Fisica & IoT',
+        icon: 'cpu',
+        scenarios: [
+            {
+                id: '1',
+                title: 'Rubber Ducky',
+                description: 'Trovi una chiavetta USB "aziendale" parcheggiata davanti alla scuola.',
+                options: [
+                    { text: 'La lascio lì o la distruggo', isCorrect: true, feedback: 'Diritto al punto. Potrebbe essere un attacco BadUSB/Rubber Ducky.' },
+                    { text: 'La inserisco nel PC per vedere di chi è', isCorrect: false, feedback: 'Appena inserita, inizierà a scrivere comandi per rubare le tue password.' }
+                ]
+            }
+        ]
+    },
+    'algoritmi-psicologia': {
+        title: 'Echo Chambers',
+        subtitle: 'Uscire dalla Bolla',
+        icon: 'zap',
+        scenarios: [
+            {
+                id: '1',
+                title: 'La Tana del Bianconiglio',
+                description: 'YouTube continua a suggerirti video sempre più estremi su una teoria del complotto.',
+                options: [
+                    { text: 'Pulisco la cronologia e cerco fonti scientifiche', isCorrect: true, feedback: 'Ottimo. Riallenare l\'algoritmo è vitale per non radicalizzarsi.' },
+                    { text: 'Lo guardo tutto per capire entrambi i lati', isCorrect: false, feedback: 'Guardarli alimenta l\'algoritmo che te ne darà di ancora più estremi.' }
+                ]
+            }
+        ]
+    },
+    'eredita-digitale': {
+        title: 'Digital Heir',
+        subtitle: 'Organizzazione Postuma',
+        icon: 'file',
+        scenarios: [
+            {
+                id: '1',
+                title: 'Contatto Erede',
+                description: 'Vuoi che le tue foto su iCloud siano accessibili ai tuoi genitori se ti succedesse qualcosa di grave.',
+                options: [
+                    { text: 'Configuro il "Legacy Contact" nelle impostazioni ID Apple', isCorrect: true, feedback: 'Corretto. È il modo legale e sicuro per passare l\'eredità digitale.' },
+                    { text: 'Do la mia password a mia madre ora', isCorrect: false, feedback: 'Poco sicuro. Le password cambiano e possono essere rubate.' }
+                ]
+            }
+        ]
+    },
+    'crittografia-avanzata': {
+        title: 'Enigma Solver',
+        subtitle: 'Matematica della Privacy',
+        icon: 'lock',
+        scenarios: [
+            {
+                id: '1',
+                title: 'Man-in-the-Middle',
+                description: 'Ti connetti a un Wi-Fi pubblico e vedi un errore "Certificato non valido" visitando la tua banca.',
+                options: [
+                    { text: 'Mi disconnetto subito: qualcuno sta intercettando', isCorrect: true, feedback: 'Bravo. Qualcuno sta tentando di decifrare la tua sessione (SSL Stripping).' },
+                    { text: 'Ignoro l\'avviso e procedo', isCorrect: false, feedback: 'Hai appena regalato le credenziali bancarie all\'hacker che gestisce il Wi-Fi.' }
+                ]
+            }
+        ]
+    },
+    'guerra-digitale': {
+        title: 'Cyber General',
+        subtitle: 'Difesa Nazionale',
+        icon: 'shield',
+        scenarios: [
+            {
+                id: '1',
+                title: 'Attacco alle Infrastrutture',
+                description: 'L\'ospedale della città è sotto attacco Ransomware. I computer sono bloccati.',
+                options: [
+                    { text: 'Ripristino dai backup offline isolati', isCorrect: true, feedback: 'Esatto. In una guerra cyber, il backup è l\'unica salvezza.' },
+                    { text: 'Paghiamo il riscatto per salvare i pazienti', isCorrect: false, feedback: 'Pagare finanzia altri attacchi e non garantisce il rilascio dei dati.' }
                 ]
             }
         ]
     }
 }
 
-export default function ScenarioEngine({ moduleId }: ScenarioEngineProps) {
-    const config = SCENARIOS_DATA[moduleId] || {
-        title: 'Simulator',
-        subtitle: 'Scenario didattico',
-        icon: 'zap',
-        scenarios: [
-            {
-                id: 'default',
-                title: 'Decisione Critica',
-                description: 'Analizza la situazione e scegli l\'azione più sicura.',
-                options: [
-                    { text: 'Azione Protettiva', isCorrect: true, feedback: 'Ottima scelta di sicurezza.' },
-                    { text: 'Azione a Rischio', isCorrect: false, feedback: 'Attenzione ai pericoli nascosti.' }
-                ]
-            }
-        ]
-    }
-
-    const [currentIdx, setCurrentIdx] = useState(0)
+export function ScenarioEngine({ moduleId }: ScenarioEngineProps) {
+    const data = SCENARIOS_DATA[moduleId]
+    const [currentStep, setCurrentStep] = useState(0)
     const [selectedOption, setSelectedOption] = useState<number | null>(null)
-    const [score, setScore] = useState(0)
+    const [showFeedback, setShowFeedback] = useState(false)
     const [completed, setCompleted] = useState(false)
-    const addXP = useGameStore(state => state.addXP)
+    const { addXP, completeGame } = useGameStore()
 
-    const handleAnswer = (idx: number) => {
-        if (selectedOption !== null) return
-        setSelectedOption(idx)
-        if (config.scenarios[currentIdx].options[idx].isCorrect) {
-            setScore(s => s + 1)
+    if (!data) return <div>Scenario non trovato per il modulo {moduleId}</div>
+
+    const currentScenario = data.scenarios[currentStep]
+
+    const handleAnswer = (index: number) => {
+        setSelectedOption(index)
+        setShowFeedback(true)
+        if (data.scenarios[currentStep].options[index].isCorrect) {
+            addXP(100)
         }
     }
 
-    const nextScenario = () => {
-        if (currentIdx === config.scenarios.length - 1) {
-            addXP(score * 50 + 25)
-            setCompleted(true)
-        } else {
-            setCurrentIdx(i => i + 1)
+    const nextStep = () => {
+        if (currentStep < data.scenarios.length - 1) {
+            setCurrentStep(currentStep + 1)
             setSelectedOption(null)
+            setShowFeedback(false)
+        } else {
+            setCompleted(true)
+            completeGame(moduleId, `scenario-${moduleId}`, 500, 100)
         }
     }
 
@@ -278,99 +395,118 @@ export default function ScenarioEngine({ moduleId }: ScenarioEngineProps) {
             <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="text-center p-12 bg-blue-900/20 backdrop-blur-3xl rounded-[3rem] border border-cyan-400/20 shadow-glass"
+                className="text-center p-8 glass rounded-3xl"
             >
-                <div className="w-24 h-24 bg-accent-gradient rounded-full flex items-center justify-center mx-auto mb-8 shadow-blue-glow">
-                    <Icon name="check" size={40} className="text-white" />
+                <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <CheckCircle2 className="w-10 h-10 text-green-400" />
                 </div>
-                <h2 className="text-4xl font-black italic tracking-tighter mb-4 uppercase">Simulazione Finita!</h2>
-                <p className="text-xl mb-10 text-blue-200/60 font-medium italic">Grado di consapevolezza: <span className="text-cyan-400 font-black">{Math.round((score / config.scenarios.length) * 100)}%</span></p>
-                <div className="bg-white/5 border border-white/10 p-6 rounded-[2rem] mb-10">
-                    <p className="text-cyan-400 font-black uppercase tracking-widest text-xs">+ {score * 50 + 25} XP GUADAGNATI</p>
-                </div>
+                <h2 className="text-3xl font-bold mb-4">Training Completato!</h2>
+                <p className="text-blue-200 mb-8 text-lg">Hai analizzato tutti gli scenari critici. La tua consapevolezza digitale è aumentata.</p>
                 <button
                     onClick={() => window.location.reload()}
-                    className="px-12 py-5 bg-white text-blue-900 font-black italic uppercase italic tracking-tighter rounded-2xl hover:scale-105 transition shadow-lg"
+                    className="px-8 py-3 bg-blue-600 hover:bg-blue-500 rounded-xl font-bold transition-all shadow-lg shadow-blue-500/25"
                 >
-                    Ottimo
+                    Torna al Dashboard
                 </button>
             </motion.div>
         )
     }
 
-    const scenario = config.scenarios[currentIdx]
-
     return (
-        <div className="max-w-2xl mx-auto space-y-10">
-            <div className="flex justify-between items-end">
-                <div className="space-y-1">
-                    <div className="flex items-center gap-3">
-                        <Icon name={config.icon || 'zap'} className="text-cyan-400" size={20} />
-                        <span className="text-[10px] font-black text-blue-400/40 uppercase tracking-[0.3em]">{config.title}</span>
-                    </div>
-                    <h2 className="text-2xl font-black italic tracking-tighter uppercase italic">{config.subtitle}</h2>
+        <div className="max-w-2xl mx-auto">
+            <div className="flex items-center gap-4 mb-8">
+                <div className="p-3 bg-blue-500/20 rounded-2xl border border-blue-500/30">
+                    <Zap className="w-6 h-6 text-blue-400" />
                 </div>
-                <span className="text-[10px] font-black text-cyan-400/40 uppercase">Target {currentIdx + 1}/{config.scenarios.length}</span>
+                <div>
+                    <h2 className="text-xl font-bold text-white">{data.title}</h2>
+                    <p className="text-sm text-blue-300">{data.subtitle}</p>
+                </div>
+                <div className="ml-auto flex gap-1">
+                    {data.scenarios.map((_, i) => (
+                        <div
+                            key={i}
+                            className={`w-8 h-1.5 rounded-full transition-all ${i === currentStep ? 'bg-blue-500' :
+                                i < currentStep ? 'bg-green-500/50' : 'bg-white/10'
+                                }`}
+                        />
+                    ))}
+                </div>
             </div>
 
             <AnimatePresence mode="wait">
                 <motion.div
-                    key={currentIdx}
+                    key={currentStep}
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}
-                    className="p-10 bg-blue-900/40 backdrop-blur-2xl rounded-[3.5rem] border border-white/10 shadow-glass relative overflow-hidden group"
+                    className="glass p-8 rounded-3xl border border-white/10 relative overflow-hidden"
                 >
-                    <div className="absolute top-0 right-0 p-10 opacity-5 group-hover:opacity-10 transition-opacity">
-                        <Icon name={config.icon} size={150} />
+                    <div className="absolute top-0 right-0 p-6 opacity-5">
+                        <Shield className="w-32 h-32" />
                     </div>
 
-                    <div className="relative z-10 space-y-12">
-                        <div className="space-y-4">
-                            <span className="px-4 py-1.5 bg-cyan-400/10 border border-cyan-400/20 rounded-full text-[10px] font-black text-cyan-400 uppercase tracking-widest italic">Scenario Reale</span>
-                            <h3 className="text-2xl md:text-3xl font-black tracking-tight italic leading-tight text-white">&quot;{scenario.description}&quot;</h3>
-                        </div>
+                    <h3 className="text-2xl font-bold mb-4 relative z-10">{currentScenario.title}</h3>
+                    <p className="text-lg text-blue-100 mb-8 leading-relaxed relative z-10">{currentScenario.description}</p>
 
-                        <div className="grid grid-cols-1 gap-4">
-                            {scenario.options.map((opt, i) => (
-                                <button
-                                    key={i}
-                                    onClick={() => handleAnswer(i)}
-                                    disabled={selectedOption !== null}
-                                    className={`p-6 rounded-2xl font-black text-left transition-all duration-300 border-2 ${selectedOption === i
-                                        ? (opt.isCorrect ? 'bg-cyan-400/20 border-cyan-400 text-white shadow-blue-glow' : 'bg-red-600/20 border-red-500 text-white shadow-red-600/20')
-                                        : (selectedOption !== null ? 'opacity-50 grayscale border-white/5' : 'bg-white/5 border-white/5 hover:border-cyan-400/30 text-blue-100/60 hover:text-white')
-                                        }`}
-                                >
-                                    <div className="flex justify-between items-center italic tracking-tighter uppercase text-sm">
-                                        {opt.text}
-                                        {selectedOption === i && (
-                                            opt.isCorrect ? <CheckCircle2 size={24} className="text-cyan-400" /> : <XCircle size={24} className="text-red-500" />
+                    <div className="grid gap-4 relative z-10">
+                        {currentScenario.options.map((option, index) => (
+                            <button
+                                key={index}
+                                disabled={showFeedback}
+                                onClick={() => handleAnswer(index)}
+                                className={`w-full p-5 rounded-2xl border transition-all text-left text-lg ${selectedOption === index
+                                    ? (option.isCorrect ? 'bg-green-500/20 border-green-500/50' : 'bg-red-500/20 border-red-500/50')
+                                    : 'bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20'
+                                    } ${showFeedback && !option.isCorrect && selectedOption !== index ? 'opacity-50' : ''}`}
+                            >
+                                <div className="flex items-center gap-4">
+                                    <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${selectedOption === index
+                                        ? (option.isCorrect ? 'border-green-400' : 'border-red-400')
+                                        : 'border-white/20'
+                                        }`}>
+                                        {selectedOption === index && (
+                                            <div className={`w-3 h-3 rounded-full ${option.isCorrect ? 'bg-green-400' : 'bg-red-400'}`} />
                                         )}
                                     </div>
-                                </button>
-                            ))}
-                        </div>
+                                    <span>{option.text}</span>
+                                </div>
+                            </button>
+                        ))}
+                    </div>
 
-                        {selectedOption !== null && (
+                    <AnimatePresence>
+                        {showFeedback && (
                             <motion.div
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                className={`p-6 rounded-2xl border ${scenario.options[selectedOption].isCorrect ? 'bg-cyan-400/5 border-cyan-400/20' : 'bg-red-600/5 border-red-500/20'} space-y-4`}
+                                className={`mt-8 p-6 rounded-2xl flex gap-4 ${currentScenario.options[selectedOption!].isCorrect
+                                    ? 'bg-green-500/10 border border-green-500/20'
+                                    : 'bg-red-500/10 border border-red-500/20'
+                                    }`}
                             >
-                                <div className="flex items-start gap-4">
-                                    <Info className={scenario.options[selectedOption].isCorrect ? 'text-cyan-400' : 'text-red-400'} size={20} />
-                                    <p className="text-sm font-medium leading-relaxed italic text-blue-100/60">{scenario.options[selectedOption].feedback}</p>
+                                {currentScenario.options[selectedOption!].isCorrect ? (
+                                    <CheckCircle2 className="w-6 h-6 text-green-400 shrink-0" />
+                                ) : (
+                                    <XCircle className="w-6 h-6 text-red-400 shrink-0" />
+                                )}
+                                <div>
+                                    <p className={`font-bold mb-1 ${currentScenario.options[selectedOption!].isCorrect ? 'text-green-400' : 'text-red-400'
+                                        }`}>
+                                        {currentScenario.options[selectedOption!].isCorrect ? 'Corretto!' : 'Riprova'}
+                                    </p>
+                                    <p className="text-blue-100">{currentScenario.options[selectedOption!].feedback}</p>
+                                    <button
+                                        onClick={nextStep}
+                                        className="mt-4 px-6 py-2 bg-white/10 hover:bg-white/20 rounded-xl font-bold transition-all flex items-center gap-2"
+                                    >
+                                        Continua
+                                        <Zap className="w-4 h-4" />
+                                    </button>
                                 </div>
-                                <button
-                                    onClick={nextScenario}
-                                    className="w-full py-4 bg-white text-blue-900 font-black italic uppercase italic tracking-tighter rounded-xl hover:scale-[1.02] transition shadow-lg text-sm"
-                                >
-                                    Continua Analisi
-                                </button>
                             </motion.div>
                         )}
-                    </div>
+                    </AnimatePresence>
                 </motion.div>
             </AnimatePresence>
         </div>
