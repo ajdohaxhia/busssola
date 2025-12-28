@@ -28,7 +28,7 @@ export default function ProfilePage() {
 
     return (
         <div className="max-w-5xl mx-auto p-4 md:p-12 space-y-12 pb-32">
-            <h1 className="text-5xl font-black italic tracking-tighter uppercase italic leading-none">Profilo <span className="blue-glow text-white">Utente</span></h1>
+            <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter uppercase italic leading-none">Profilo <span className="blue-glow text-white">Utente</span></h1>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Main Stats Card */}
