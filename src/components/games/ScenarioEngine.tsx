@@ -35,6 +35,33 @@ const SCENARIOS_DATA: Record<string, { title: string, subtitle: string, icon: st
                     { text: 'Intervengo pubblicamente per difenderlo', isCorrect: true, feedback: 'Ottimo! Essere un "Upstander" rompe il ciclo del bullismo.' },
                     { text: 'Ignoro per non attirare l\'attenzione su di me', isCorrect: false, feedback: 'L\'indifferenza alimenta il bullo. Anche una segnalazione anonima aiuta.' }
                 ]
+            },
+            {
+                id: '2',
+                title: 'Doxxing in Arrivo',
+                description: 'Qualcuno pubblica l\'indirizzo di casa di un tuo amico su un server Discord pubblico.',
+                options: [
+                    { text: 'Faccio screenshot subito e avviso l\'amico', isCorrect: true, feedback: 'Corretto. Documentare è il primo passo per la denuncia.' },
+                    { text: 'Segnalo il post ma non dico nulla all\'amico', isCorrect: false, feedback: 'L\'amico deve sapere che la sua sicurezza fisica è a rischio.' }
+                ]
+            },
+            {
+                id: '3',
+                title: 'Revenge Porn',
+                description: 'Un compagno ti fa vedere una foto intima di una ragazza della scuola che "gira su Telegram".',
+                options: [
+                    { text: 'Segnalo subito alla Polizia Postale', isCorrect: true, feedback: 'Bravo. La diffusione non consensuale è un reato penale grave.' },
+                    { text: 'Chiedo il link per vederla anche io', isCorrect: false, feedback: 'Partecipare alla diffusione ti rende complice di un reato penale.' }
+                ]
+            },
+            {
+                id: '4',
+                title: 'Account Fake',
+                description: 'C\'è un profilo Instagram con il tuo nome che insulta tutti i professori.',
+                options: [
+                    { text: 'Segnalo come "Impersonificazione"', isCorrect: true, feedback: 'Esatto. È il modo più veloce per farlo chiudere.' },
+                    { text: 'Insulto il fake per fargli capire chi comanda', isCorrect: false, feedback: 'Rispondere agli insulti peggiora solo la tua immagine pubblica.' }
+                ]
             }
         ]
     },
@@ -51,37 +78,23 @@ const SCENARIOS_DATA: Record<string, { title: string, subtitle: string, icon: st
                     { text: 'Nego i permessi - non servono alla funzione', isCorrect: true, feedback: 'Corretto. È un chiaro tentativo di data-mining.' },
                     { text: 'Accetto per far funzionare l\'app velocemente', isCorrect: false, feedback: 'Mai accettare permessi non necessari. I tuoi dati sono preziosi.' }
                 ]
-            }
-        ]
-    },
-    'scuola-online': {
-        title: 'Classroom Guardian',
-        subtitle: 'Protocollo Sicurezza DAD',
-        icon: 'school',
-        scenarios: [
+            },
             {
-                id: '1',
-                title: 'Link Zoom Pubblico',
-                description: 'Un amico condivide il link della lezione su un server Discord pubblico "per scherzo".',
+                id: '2',
+                title: 'Diritto all\'Oblio',
+                description: 'Vuoi che Facebook cancelli definitivamente tutti i tuoi post di quando avevi 10 anni.',
                 options: [
-                    { text: 'Avviso subito l\'insegnante del rischio', isCorrect: true, feedback: 'Bravo. Questo previene il fenomeno del "Zoom-bombing".' },
-                    { text: 'Entro anche io per vedere cosa succede', isCorrect: false, feedback: 'Partecipare a disturbi di lezioni è un\'interruzione di pubblico servizio.' }
+                    { text: 'Esercito il Diritto all\'Oblio (GDPR)', isCorrect: true, feedback: 'Proprio così. Puoi chiedere la cancellazione totale dei tuoi dati.' },
+                    { text: 'Cancello l\'account e spero basti', isCorrect: false, feedback: 'Cancellare l\'account non sempre rimuove i dati dai server di backup.' }
                 ]
-            }
-        ]
-    },
-    'gaming-communities': {
-        title: 'Secure Gamer',
-        subtitle: 'Protezione Account & Skin',
-        icon: 'game',
-        scenarios: [
+            },
             {
-                id: '1',
-                title: 'Trade Sospetto',
-                description: 'Un giocatore ti offre una skin rarissima se inserisci il tuo codice 2FA in un sito "legit" di trading.',
+                id: '3',
+                title: 'Data Breach',
+                description: 'Ricevi un avviso: il sito dove compri le scarpe è stato hackerato. Le password sono rubate.',
                 options: [
-                    { text: 'Rifiuto e blocco il giocatore', isCorrect: true, feedback: 'Esatto! Mai condividere codici 2FA. È un furto di account.' },
-                    { text: 'Controllo il sito, sembra professionale', isCorrect: false, feedback: 'I siti di phishing sono fatti per sembrare professionali. Resta sui canali ufficiali.' }
+                    { text: 'Cambio password lì e ovunque fosse uguale', isCorrect: true, feedback: 'Ottimo. Previene il "Credential Stuffing" su altri siti.' },
+                    { text: 'Non faccio nulla, tanto scadeva tra un mese', isCorrect: false, feedback: 'Un hacker può ora entrare nel tuo account e rubare i dati della carta.' }
                 ]
             }
         ]
@@ -99,6 +112,15 @@ const SCENARIOS_DATA: Record<string, { title: string, subtitle: string, icon: st
                     { text: 'Cerco la notizia su siti di fact-checking', isCorrect: true, feedback: 'Ottimo. Il fact-checking è l\'arma numero uno contro i deepfake.' },
                     { text: 'Lo condivido subito per avvisare i miei amici', isCorrect: false, feedback: 'Condividere senza verificare aiuta la diffusione di fake news pericolose.' }
                 ]
+            },
+            {
+                id: '2',
+                title: 'Chiamata Vocale Urgente',
+                description: 'Tua madre ti chiama chiedendo soldi subito. La voce sembra la sua ma è un po\' robotica.',
+                options: [
+                    { text: 'Faccio una domanda che solo lei sa', isCorrect: true, feedback: 'Geniale. Una domanda personale smaschera il voice cloning.' },
+                    { text: 'Corro a fare il bonifico per aiutarla', isCorrect: false, feedback: 'I truffatori usano l\'urgenza proprio per impedirti di pensare.' }
+                ]
             }
         ]
     },
@@ -115,6 +137,47 @@ const SCENARIOS_DATA: Record<string, { title: string, subtitle: string, icon: st
                     { text: 'È chiaramente uno schema Ponzi/Scam', isCorrect: true, feedback: 'Corretto. I guadagni garantiti a tripla cifra non esistono.' },
                     { text: 'Provo con una piccola somma che posso perdere', isCorrect: false, feedback: 'Anche 1€ regalato a un truffatore è un errore. Non alimentare questi schemi.' }
                 ]
+            },
+            {
+                id: '2',
+                title: 'Seed Phrase Smarrita',
+                description: 'Il "supporto tecnico di MetaMask" ti contatta in DM per chiederti le tue 12 parole di sicurezza.',
+                options: [
+                    { text: 'Non rispondo - è un tentativo di furto wallet', isCorrect: true, feedback: 'Esatto! Nessun supporto chiede MAI la seed phrase.' },
+                    { text: 'Le do per sbloccare il mio account', isCorrect: false, feedback: 'Dare la seed phrase significa regalare tutti i tuoi soldi all\'hacker.' }
+                ]
+            }
+        ]
+    },
+    'scuola-online': {
+        title: 'Classroom Guardian',
+        subtitle: 'Protocollo Sicurezza DAD',
+        icon: 'school',
+        scenarios: [
+            {
+                id: '1',
+                title: 'Link Lezione Pubblico',
+                description: 'Un compagno condivide il link della lezione su un server Discord pubblico.',
+                options: [
+                    { text: 'Avviso subito l\'insegnante', isCorrect: true, feedback: 'Bravo. Questo previene il fenomeno del "Zoom-bombing".' },
+                    { text: 'Entro per vedere lo "show"', isCorrect: false, feedback: 'Partecipare a disturbi di lezioni è un\'interruzione di pubblico servizio.' }
+                ]
+            }
+        ]
+    },
+    'gaming-communities': {
+        title: 'Secure Gamer',
+        subtitle: 'Protezione Account & Skin',
+        icon: 'game',
+        scenarios: [
+            {
+                id: '1',
+                title: 'Trade Sospetto',
+                description: 'Un giocatore ti offre una skin rarissima se inserisci il tuo codice 2FA in un sito esterno.',
+                options: [
+                    { text: 'Rifiuto e blocco il giocatore', isCorrect: true, feedback: 'Esatto! Mai condividere codici 2FA. È un furto di account.' },
+                    { text: 'Controllo il sito, sembra legit', isCorrect: false, feedback: 'I siti di phishing imitano quelli reali. Resta sui canali ufficiali.' }
+                ]
             }
         ]
     },
@@ -126,10 +189,10 @@ const SCENARIOS_DATA: Record<string, { title: string, subtitle: string, icon: st
             {
                 id: '1',
                 title: 'Richiesta di Foto',
-                description: 'Qualcuno con cui parli da poco ti chiede una foto intima assicurandoti che rimarrà tra voi.',
+                description: 'Qualcuno con cui parli da poco ti chiede una foto intima.',
                 options: [
-                    { text: 'Rifiuto fermamente: i rischi sono troppo alti', isCorrect: true, feedback: 'Saggia decisione. Una foto inviata è fuori dal tuo controllo per sempre.' },
-                    { text: 'La invio ma cancello subito la chat', isCorrect: false, feedback: 'Cancellare la chat non cancella la foto dal server o dal telefono del ricevente.' }
+                    { text: 'Rifiuto fermamente', isCorrect: true, feedback: 'Saggia decisione. Una foto inviata è fuori controllo per sempre.' },
+                    { text: 'La invio oscurando il viso', isCorrect: false, feedback: 'Anche senza viso, i metadati o segni particolari possono identificarti.' }
                 ]
             }
         ]
@@ -142,10 +205,26 @@ const SCENARIOS_DATA: Record<string, { title: string, subtitle: string, icon: st
             {
                 id: '1',
                 title: 'Rallentamento Strategico',
-                description: 'Il tuo operatore internet rallenta i siti di informazione libera per favorire i suoi portali partner.',
+                description: 'Il tuo operatore internet rallenta i siti di informazione libera.',
                 options: [
                     { text: 'È una violazione della Net Neutrality', isCorrect: true, feedback: 'Appunto. Tutti i dati devono essere trattati allo stesso modo.' },
-                    { text: 'È un loro diritto, pago io il servizio', isCorrect: false, feedback: 'No, in Europa la legge protegge l\'equità del traffico dati.' }
+                    { text: 'Hanno ragione loro, pago io', isCorrect: false, feedback: 'In Europa la legge protegge l\'equità del traffico dati.' }
+                ]
+            }
+        ]
+    },
+    'salute-mentale': {
+        title: 'Mindful Guardian',
+        subtitle: 'Equilibrio Digitale',
+        icon: 'brain',
+        scenarios: [
+            {
+                id: '1',
+                title: 'Notifiche Notturne',
+                description: 'Sono le 2 di notte, il telefono vibra.',
+                options: [
+                    { text: 'Lo ignoro e dormo', isCorrect: true, feedback: 'Ottimo. Il sonno è sacro.' },
+                    { text: 'Controllo subito', isCorrect: false, feedback: 'Le interruzioni notturne degradano la salute mentale.' }
                 ]
             }
         ]
@@ -259,8 +338,8 @@ export default function ScenarioEngine({ moduleId }: ScenarioEngineProps) {
                                     onClick={() => handleAnswer(i)}
                                     disabled={selectedOption !== null}
                                     className={`p-6 rounded-2xl font-black text-left transition-all duration-300 border-2 ${selectedOption === i
-                                            ? (opt.isCorrect ? 'bg-cyan-400/20 border-cyan-400 text-white shadow-blue-glow' : 'bg-red-600/20 border-red-500 text-white shadow-red-600/20')
-                                            : (selectedOption !== null ? 'opacity-50 grayscale border-white/5' : 'bg-white/5 border-white/5 hover:border-cyan-400/30 text-blue-100/60 hover:text-white')
+                                        ? (opt.isCorrect ? 'bg-cyan-400/20 border-cyan-400 text-white shadow-blue-glow' : 'bg-red-600/20 border-red-500 text-white shadow-red-600/20')
+                                        : (selectedOption !== null ? 'opacity-50 grayscale border-white/5' : 'bg-white/5 border-white/5 hover:border-cyan-400/30 text-blue-100/60 hover:text-white')
                                         }`}
                                 >
                                     <div className="flex justify-between items-center italic tracking-tighter uppercase text-sm">
