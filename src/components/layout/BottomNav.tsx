@@ -9,7 +9,6 @@ import { cn } from '@/lib/utils'
 const NAV_ITEMS = [
     { icon: Home, label: 'Home', href: '/' },
     { icon: LayoutGrid, label: 'Moduli', href: '/moduli' },
-    { icon: Shield, label: 'SOS', href: '/sos' },
     { icon: User, label: 'Profilo', href: '/profilo' },
     { icon: HelpCircle, label: 'Aiuto', href: '/aiuto' },
 ]
