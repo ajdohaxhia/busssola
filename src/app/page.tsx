@@ -76,12 +76,21 @@ export default function Dashboard() {
           animate="show"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {MODULES_DATA.map((mod) => {
+          {MODULES_DATA.map((mod, index) => {
             const progress = modules[mod.id] || { completed: false, xp: 0 }
+
+            // Define Bento spans for a more interesting layout
+            const getSpanClasses = (idx: number) => {
+              if (idx === 0) return 'md:col-span-2 md:row-span-2' // Highlight first module
+              if (idx === 3) return 'md:col-span-2' // Wider card in the middle
+              if (idx === 6) return 'md:row-span-2' // Tall card
+              return 'md:col-span-1'
+            }
+
             return (
-              <motion.div key={mod.id} variants={item}>
-                <Link href={`/moduli/${mod.id}`}>
-                  <div className={`group relative h-full p-8 rounded-[2.5rem] bg-blue-900/20 backdrop-blur-xl border border-white/5 hover:border-cyan-400/30 transition-all duration-500 overflow-hidden shadow-lg hover:shadow-cyan-400/10`}>
+              <motion.div key={mod.id} variants={item} className={getSpanClasses(index)}>
+                <Link href={`/moduli/${mod.id}`} className="block h-full">
+                  <div className={`group relative h-full p-8 rounded-[2.5rem] bg-blue-900/20 backdrop-blur-xl border border-white/5 hover:border-cyan-400/30 transition-all duration-500 overflow-hidden shadow-lg hover:shadow-cyan-400/10 flex flex-col`}>
                     {/* Progress Indicator */}
                     {progress.completed && (
                       <div className="absolute top-0 left-0 right-0 h-1 bg-cyan-400 shadow-blue-glow" />
@@ -95,24 +104,26 @@ export default function Dashboard() {
                           <span className="text-[8px] font-black text-cyan-400 uppercase tracking-widest">Completato</span>
                         </div>
                       ) : (
-                        <div className="text-[10px] font-bold text-blue-400/30 bg-white/5 px-2 py-1 rounded-lg">ID: {mod.id.slice(0, 3)}</div>
+                        <div className="text-[10px] font-bold text-blue-400/30 bg-white/5 px-2 py-1 rounded-lg uppercase tracking-widest">Lvl {mod.difficulty}</div>
                       )}
                     </div>
 
-                    <h3 className="text-2xl font-black mb-3 group-hover:text-cyan-300 transition-colors tracking-tight italic">{mod.title}</h3>
-                    <p className="text-sm text-blue-200/40 mb-10 font-medium leading-relaxed">{mod.description}</p>
+                    <div className="space-y-3">
+                      <h3 className="text-2xl md:text-3xl font-black group-hover:text-cyan-300 transition-colors tracking-tighter italic uppercase">{mod.title}</h3>
+                      <p className={`text-sm text-blue-200/40 font-medium leading-relaxed italic ${index === 0 ? 'max-w-md' : ''}`}>{mod.description}</p>
+                    </div>
 
-                    <div className="flex items-center justify-between mt-auto">
+                    <div className="flex items-center justify-between mt-12">
                       <div className="px-3 py-1 bg-blue-600/10 border border-blue-400/10 rounded-lg">
-                        <span className="text-[10px] font-bold text-blue-400/60 uppercase tracking-widest">{mod.difficulty}</span>
+                        <span className="text-[10px] font-black text-blue-400/60 uppercase tracking-widest italic">{mod.category || 'Security'}</span>
                       </div>
-                      <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-cyan-400/20 transition-colors">
-                        <Icon name="chevron" size={16} className="text-blue-500 group-hover:text-cyan-400 group-hover:translate-x-0.5 transition-all" />
+                      <div className="w-10 h-10 rounded-2xl bg-white/5 flex items-center justify-center group-hover:bg-cyan-400/20 transition-all duration-300 border border-white/5 group-hover:border-cyan-400/30">
+                        <Icon name="chevron" size={18} className="text-blue-500 group-hover:text-cyan-400 group-hover:translate-x-0.5 transition-all" />
                       </div>
                     </div>
 
                     {/* Gradient Glow Effect */}
-                    <div className="absolute -bottom-8 -right-8 w-24 h-24 bg-cyan-400/5 rounded-full blur-[40px] group-hover:bg-cyan-400/10 transition-colors" />
+                    <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-cyan-400/5 rounded-full blur-[50px] group-hover:bg-cyan-400/10 transition-colors" />
                   </div>
                 </Link>
               </motion.div>
