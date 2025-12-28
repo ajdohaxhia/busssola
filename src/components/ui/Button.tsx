@@ -10,7 +10,8 @@ const buttonVariants = cva(
         variants: {
             variant: {
                 default: "bg-white text-dark-900 hover:bg-white/90",
-                neon: "bg-neon-yellow text-dark-900 hover:bg-neon-yellow/90 shadow-[0_0_15px_rgba(204,255,0,0.5)] hover:shadow-[0_0_25px_rgba(204,255,0,0.7)] transition-shadow duration-300",
+                neon: "bg-neon-yellow text-dark-900 hover:bg-neon-yellow/90",
+                cyan: "bg-neon-cyan text-dark-900 hover:bg-neon-cyan/90 shadow-[0_0_20px_rgba(0,245,255,0.3)] hover:shadow-[0_0_30px_rgba(0,245,255,0.5)]",
                 destructive: "bg-neon-pink text-white hover:bg-neon-pink/90",
                 outline: "border border-white/20 bg-transparent hover:bg-white/10 text-white",
                 ghost: "hover:bg-white/10 text-white",

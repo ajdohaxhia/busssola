@@ -1,0 +1,74 @@
+
+> progetto-bussola@0.1.0 prebuild
+> node scripts/validate-content.js
+
+🔍 Validating content requirements...
+  - ai-deepfake.ts: 27 lessons
+  - comunicazione-digitale.ts: 30 lessons
+  - cyberbullismo-stalking.ts: 28 lessons
+  - diritti-digitali.ts: 25 lessons
+  - disinformazione.ts: 25 lessons
+  - ecommerce-shopping.ts: 24 lessons
+  - emergenze-digitali.ts: 20 lessons
+  - finanze-crypto.ts: 30 lessons
+  - gaming-communities.ts: 26 lessons
+  - gdpr-data-breach.ts: 29 lessons
+  - identita-digitale.ts: 23 lessons
+  - phishing-social-engineering.ts: 28 lessons
+  - predatori-online.ts: 30 lessons
+  - privacy-tecnica.ts: 30 lessons
+  - relazioni-online.ts: 26 lessons
+  - salute-mentale.ts: 26 lessons
+  - scuola-insegnanti.ts: 26 lessons
+  - sexting-legal.ts: 26 lessons
+  - social-addiction.ts: 27 lessons
+
+📊 Status:
+  Modules: 19 (Required: 12)
+  Lessons: 506 (Required: 400)
+✅ Content validation passed!
+
+> progetto-bussola@0.1.0 build
+> next build
+
+   ▲ Next.js 15.5.7
+
+   Creating an optimized production build ...
+ ✓ (pwa) Compiling for server...
+ ✓ (pwa) Compiling for server...
+ ✓ (pwa) Compiling for client (static)...
+ ○ (pwa) Service worker: /home/colors/bussola/progetto-bussola/public/sw.js
+ ○ (pwa)   URL: /sw.js
+ ○ (pwa)   Scope: /
+ ✓ Compiled successfully in 14.0s
+   Skipping validation of types
+   Skipping linting
+   Collecting page data ...
+   Generating static pages (0/10) ...
+   Generating static pages (2/10) 
+   Generating static pages (4/10) 
+   Generating static pages (7/10) 
+ ✓ Generating static pages (10/10)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS
+┌ ○ /                                    3.35 kB         122 kB
+├ ○ /_not-found                             1 kB         106 kB
+├ ○ /aiuto                               3.17 kB         111 kB
+├ ○ /leaderboard                         3.29 kB         147 kB
+├ ○ /moduli                               190 kB         493 kB
+├ ƒ /moduli/[id]                         4.79 kB         265 kB
+├ ƒ /moduli/[id]/game                    10.4 kB         321 kB
+├ ƒ /moduli/[id]/lezione/[lessonId]      39.9 kB         354 kB
+├ ○ /profilo                              7.4 kB         154 kB
+└ ○ /sos                                 3.18 kB         111 kB
++ First Load JS shared by all             105 kB
+  ├ chunks/39-119818d49855285e.js        48.2 kB
+  ├ chunks/4bd1b696-409494caf8c83275.js  54.4 kB
+  └ other shared chunks (total)          1.94 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

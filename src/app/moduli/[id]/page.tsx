@@ -1,273 +1,216 @@
 'use client'
 
-import { useState, useEffect } from 'react'
 import { useParams, useRouter } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
 import { getModuleById } from '@/data/modules/index'
-import { Lesson, Module } from '@/types'
-import { ChevronLeft, ChevronRight, BookOpen, ShieldCheck, Zap, AlertTriangle, Scale, HelpCircle, CheckCircle2, Gamepad2, ArrowRight } from 'lucide-react'
+import { Module } from '@/types'
+import { ChevronLeft, Play, Info, Flame, Trophy, Gamepad2, Search } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { useGameStore } from '@/store/useGameStore'
-import ReactMarkdown from 'react-markdown'
+import { Container } from '@/components/ui/Container'
+import { useState } from 'react'
 
-
-export default function ModuleReader() {
+export default function ModuleDetail() {
     const { id } = useParams()
     const router = useRouter()
     const module = getModuleById(id as string) as Module | undefined
-    const { completeLesson } = useGameStore() as { completeLesson: (mid: string, lid: string) => void }
+    const { modules: progress } = useGameStore() as { modules: Record<string, any> }
+    const moduleProgress = module ? (progress[module.id] || { completed: false, xp: 0 }) : { completed: false, xp: 0 }
 
-    const [currentLessonIndex, setCurrentLessonIndex] = useState(0)
-    const [readingProgress, setReadingProgress] = useState(0)
+    // Search state for lessons
+    const [lessonSearch, setLessonSearch] = useState('')
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrolled = window.scrollY
-            const height = document.documentElement.scrollHeight - window.innerHeight
-            setReadingProgress((scrolled / height) * 100)
-        }
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
+    if (!module) return (
+        <Container className="py-20 text-center">
+            <h1 className="text-2xl font-bold">Modulo non trovato</h1>
+            <Link href="/moduli" className="text-neon-cyan hover:underline mt-4 block">Torna al catalogo</Link>
+        </Container>
+    )
 
-    if (!module) return <div className="p-12 text-center">Modulo non trovato.</div>
+    const filteredLessons = module.lessons.filter(l =>
+        l.title.toLowerCase().includes(lessonSearch.toLowerCase())
+    )
 
-    const currentLesson = module.lessons[currentLessonIndex]
-
-    const handleNext = () => {
-        if (currentLessonIndex < module.lessons.length - 1) {
-            setCurrentLessonIndex(prev => prev + 1)
-            window.scrollTo({ top: 0, behavior: 'smooth' })
-            completeLesson(module.id, currentLesson.id)
-        }
-    }
-
-    const handlePrev = () => {
-        if (currentLessonIndex > 0) {
-            setCurrentLessonIndex(prev => prev - 1)
-            window.scrollTo({ top: 0, behavior: 'smooth' })
-        }
-    }
+    // Calculate progress percentage (mock logic - in real app would rely on completed lessons count)
+    const progressPercent = moduleProgress.completed ? 100 : Math.min(15, moduleProgress.xp / 10)
 
     return (
-        <div className="max-w-[1200px] mx-auto">
-            {/* Top Navigation / Breadcrumbs */}
-            <div className="flex items-center justify-between mb-8">
-                <button
-                    onClick={() => router.push('/moduli')}
-                    className="flex items-center gap-2 text-white/40 hover:text-white transition-colors group"
-                >
-                    <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-white/10">
-                        <ChevronLeft className="w-5 h-5" />
-                    </div>
-                    <span className="text-sm font-bold uppercase tracking-widest">Tutti i Moduli</span>
-                </button>
-
-                <div className="flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-white/40">
-                    <span className="text-accent-cyan">{module.title}</span>
-                    <span className="opacity-20">/</span>
-                    <span>Lezione {currentLessonIndex + 1} di {module.lessons.length}</span>
-                </div>
+        <Container size="full" className="py-8 space-y-12">
+            {/* Navbar / Breadcrumbs */}
+            <div className="flex items-center gap-4 text-sm font-medium text-white/40">
+                <Link href="/moduli" className="hover:text-white transition-colors flex items-center gap-1">
+                    <ChevronLeft className="w-4 h-4" /> Moduli
+                </Link>
+                <span>/</span>
+                <span className="text-white">{module.title}</span>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                {/* Main Content Area */}
-                <div className="lg:col-span-8 space-y-12">
-                    {/* Progress Bar */}
-                    <div className="fixed top-0 left-0 right-0 h-1 bg-white/5 z-[60] lg:pl-64">
-                        <motion.div
-                            className="h-full bg-accent-cyan shadow-[0_0_10px_#22d3ee]"
-                            style={{ width: `${readingProgress}%` }}
-                        />
-                    </div>
+            {/* LEVEL 1: OVERVIEW HERO */}
+            <header className="relative overflow-hidden rounded-[2rem] glass-card p-8 md:p-12 border-white/10 group">
+                {/* Background Ambient */}
+                <div className={cn(
+                    "absolute top-0 right-0 w-96 h-96 blur-[120px] opacity-20 pointer-events-none",
+                    module.themeColor === 'accent-purple' ? 'bg-accent-purple' :
+                        module.themeColor === 'accent-blue' ? 'bg-accent-blue' : 'bg-accent-cyan'
+                )} />
 
-                    <AnimatePresence mode="wait">
-                        <motion.div
-                            key={currentLesson.id}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -20 }}
-                            className="space-y-8"
-                        >
-                            <header className="space-y-4">
-                                <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">{currentLesson.title}</h1>
-                                <div className="flex flex-wrap gap-4 items-center text-sm text-white/40">
-                                    <div className="flex items-center gap-2">
-                                        <Icons.Clock className="w-4 h-4" />
-                                        <span>{currentLesson.minutes} min</span>
-                                    </div>
-                                    <div className="w-1 h-1 rounded-full bg-white/20" />
-                                    <div className="flex items-center gap-2 uppercase tracking-widest font-bold">
-                                        <span className={cn(
-                                            currentLesson.difficulty === 'base' ? 'text-green-400' :
-                                                currentLesson.difficulty === 'intermedia' ? 'text-amber-400' : 'text-red-400'
-                                        )}>
-                                            {currentLesson.difficulty}
-                                        </span>
-                                    </div>
-                                </div>
-                            </header>
+                <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+                    <div className="lg:col-span-2 space-y-6">
+                        <div className="flex items-center gap-3">
+                            <span className={cn(
+                                "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest border",
+                                module.difficulty === 'base' ? 'text-neon-green border-neon-green/20' :
+                                    module.difficulty === 'intermedia' ? 'text-neon-yellow border-neon-yellow/20' : 'text-neon-pink border-neon-pink/20'
+                            )}>
+                                {module.difficulty}
+                            </span>
+                            <span className="text-white/40 text-xs font-bold uppercase tracking-widest">
+                                {module.lessons.length} Lezioni
+                            </span>
+                        </div>
 
-                            {/* Learning Goals */}
-                            <div className="glass-card rounded-3xl p-6 bg-accent-cyan/5 border-accent-cyan/10">
-                                <h3 className="text-sm font-bold uppercase tracking-widest mb-4 flex items-center gap-2 text-accent-cyan">
-                                    <Icons.Target className="w-4 h-4" />
-                                    In questa lezione imparerai
-                                </h3>
-                                <ul className="space-y-3">
-                                    {currentLesson.learningGoals.map((goal: string, i: number) => (
-                                        <li key={i} className="flex gap-3 text-sm text-white/80">
-                                            <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent-cyan shrink-0" />
-                                            {goal}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
+                        <h1 className="text-4xl md:text-6xl font-display font-bold tracking-tight leading-[1.1]">
+                            {module.title}
+                        </h1>
+                        <p className="text-xl text-white/60 leading-relaxed max-w-2xl">
+                            {module.description}
+                        </p>
 
-                            {/* Article Content */}
-                            <article className="prose prose-invert prose-lg max-w-none prose-p:leading-relaxed prose-headings:tracking-tight prose-headings:font-bold prose-strong:text-accent-cyan">
-                                <ReactMarkdown>{currentLesson.contentMarkdown}</ReactMarkdown>
-                            </article>
-
-                            {/* Callouts */}
-                            <div className="space-y-4">
-                                {currentLesson.callouts.map((callout: any, i: number) => (
-                                    <div key={i} className={cn(
-                                        "p-6 rounded-2xl border flex gap-4",
-                                        callout.type === 'tip' && "bg-blue-500/10 border-blue-500/20",
-                                        callout.type === 'warning' && "bg-red-500/10 border-red-500/20",
-                                        callout.type === 'legal' && "bg-amber-500/10 border-amber-500/20",
-                                        callout.type === 'case-study' && "bg-accent-purple/10 border-accent-purple/20"
-                                    )}>
-                                        <div className="mt-1">
-                                            {callout.type === 'tip' && <Zap className="w-5 h-5 text-blue-400" />}
-                                            {callout.type === 'warning' && <AlertTriangle className="w-5 h-5 text-red-500" />}
-                                            {callout.type === 'legal' && <Scale className="w-5 h-5 text-amber-500" />}
-                                            {callout.type === 'case-study' && <BookOpen className="w-5 h-5 text-accent-purple" />}
-                                        </div>
-                                        <p className="text-sm text-white/80 leading-relaxed">
-                                            <span className="font-bold uppercase tracking-widest text-xs block mb-1 opacity-60">{callout.type}</span>
-                                            {callout.content}
-                                        </p>
-                                    </div>
-                                ))}
-                            </div>
-
-                            {/* Mini Exercise */}
-                            <div className="glass-card rounded-3xl p-8 border-accent-cyan/20">
-                                <h3 className="text-xl font-bold mb-4 flex items-center gap-3">
-                                    <Icons.Dna className="w-6 h-6 text-accent-cyan" />
-                                    Esercizio Pratico
-                                </h3>
-                                <div className="space-y-4">
-                                    <p className="font-bold text-accent-cyan">{currentLesson.microExercise.title}</p>
-                                    <p className="text-sm text-white/70">{currentLesson.microExercise.instruction}</p>
-                                    <div className="p-4 bg-white/5 rounded-xl border border-white/10 font-mono text-xs text-white/50">
-                                        {currentLesson.microExercise.task}
-                                    </div>
+                        <div className="pt-6 flex flex-wrap gap-4">
+                            <button className="px-8 py-4 bg-neon-cyan text-dark-bg rounded-xl font-bold flex items-center gap-2 hover:bg-white transition-all shadow-lg hover:translate-y-[-2px]">
+                                <Play className="w-5 h-5 fill-current" />
+                                {moduleProgress.xp > 0 ? 'Riprendi Protocollo' : 'Avvia Protocollo'}
+                            </button>
+                            <div className="flex items-center gap-4 px-6 py-4 rounded-xl bg-white/5 border border-white/10">
+                                <Trophy className="w-5 h-5 text-neon-yellow" />
+                                <div className="text-xs">
+                                    <span className="block font-bold text-white">Certificazione</span>
+                                    <span className="text-white/40">{(module.lessons.length * 50) + 250} XP totali</span>
                                 </div>
                             </div>
-
-                            {/* Navigation Footer */}
-                            <footer className="pt-12 flex items-center justify-between border-t border-white/10">
-                                <button
-                                    onClick={handlePrev}
-                                    disabled={currentLessonIndex === 0}
-                                    className="flex items-center gap-3 px-6 py-3 rounded-2xl bg-white/5 hover:bg-white/10 disabled:opacity-20 transition-all font-bold group"
-                                >
-                                    <ChevronLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-                                    Precedente
-                                </button>
-                                <button
-                                    onClick={handleNext}
-                                    className="flex items-center gap-3 px-8 py-3 rounded-2xl bg-accent-cyan text-dark-900 hover:bg-white transition-all font-bold group shadow-lg shadow-accent-cyan/20"
-                                >
-                                    {currentLessonIndex === module.lessons.length - 1 ? 'Concludi Modulo' : 'Prossima Lezione'}
-                                    <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                </button>
-                            </footer>
-                        </motion.div>
-                    </AnimatePresence>
-                </div>
-
-                {/* Sidebar / Lesson Navigation */}
-                <aside className="lg:col-span-4 space-y-8 sticky top-12 self-start hidden lg:block">
-                    <div className="glass-card rounded-3xl p-6 border-white/5">
-                        <h3 className="text-sm font-bold uppercase tracking-widest mb-6 opacity-40">Indice Lezioni</h3>
-                        <div className="space-y-2">
-                            {module.lessons.map((lesson: Lesson, i: number) => (
-                                <button
-                                    key={lesson.id}
-                                    onClick={() => {
-                                        setCurrentLessonIndex(i)
-                                        window.scrollTo({ top: 0, behavior: 'smooth' })
-                                    }}
-                                    className={cn(
-                                        "w-full flex items-center gap-4 px-4 py-3 rounded-xl transition-all text-left group",
-                                        currentLessonIndex === i
-                                            ? "bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/20"
-                                            : "text-white/40 hover:bg-white/5"
-                                    )}
-                                >
-                                    <span className="text-xs font-mono opacity-40">{String(i + 1).padStart(2, '0')}</span>
-                                    <span className="text-sm font-medium line-clamp-1">{lesson.title}</span>
-                                    {currentLessonIndex === i && <Icons.Play className="w-3 h-3 fill-current ml-auto" />}
-                                </button>
-                            ))}
                         </div>
                     </div>
 
-                    {/* Quiz Card */}
-                    <div className="glass-card rounded-3xl p-6 bg-accent-purple/5 border-accent-purple/10">
-                        <h4 className="font-bold flex items-center gap-2 mb-4">
-                            <HelpCircle className="w-5 h-5 text-accent-purple" />
-                            Challenge Rapida
-                        </h4>
-                        <p className="text-xs text-white/60 mb-6">Metti alla prova quello che hai imparato in questa lezione per guadagnare bonus XP.</p>
-                        <button className="w-full py-3 bg-accent-purple/20 hover:bg-accent-purple/30 rounded-xl text-xs font-bold transition-all border border-accent-purple/30">
-                            Inizia Mini-Quiz
-                        </button>
+                    {/* Progress Circle (Desktop) */}
+                    <div className="hidden lg:flex justify-center">
+                        <div className="relative w-48 h-48 flex items-center justify-center">
+                            <svg className="w-full h-full transform -rotate-90">
+                                <circle cx="96" cy="96" r="88" className="stroke-white/5 fill-none" strokeWidth="12" />
+                                <circle
+                                    cx="96" cy="96" r="88"
+                                    className="stroke-neon-cyan fill-none transition-all duration-1000 ease-out"
+                                    strokeWidth="12"
+                                    strokeDasharray="553"
+                                    strokeDashoffset={553 - (553 * progressPercent / 100)}
+                                    strokeLinecap="round"
+                                />
+                            </svg>
+                            <div className="absolute inset-0 flex flex-col items-center justify-center">
+                                <span className="text-4xl font-mono font-bold text-white">{Math.round(progressPercent)}%</span>
+                                <span className="text-xs text-white/40 uppercase tracking-widest font-bold">Completato</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            {/* LEVEL 2: LESSONS LIST */}
+            <section className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div className="lg:col-span-8 space-y-6">
+                    <div className="flex items-center justify-between">
+                        <h2 className="text-2xl font-display font-bold">Piano di Studio</h2>
+                        {/* Search Within Module */}
+                        <div className="relative group w-48 md:w-64">
+                            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40 group-focus-within:text-neon-cyan transition-colors" />
+                            <input
+                                type="text"
+                                placeholder="Cerca lezione..."
+                                value={lessonSearch}
+                                onChange={(e) => setLessonSearch(e.target.value)}
+                                className="w-full bg-transparent border-b border-white/10 py-2 pl-9 pr-4 text-sm text-white placeholder:text-white/20 focus:outline-none focus:border-neon-cyan transition-all"
+                            />
+                        </div>
                     </div>
 
-                    {/* Scenario Simulator Card */}
-                    <div className="glass-card rounded-3xl p-6 bg-blue-500/5 border-blue-500/10">
-                        <h4 className="font-bold flex items-center gap-2 mb-4">
-                            <Gamepad2 className="w-5 h-5 text-blue-400" />
-                            Simulatore
+                    <div className="space-y-3">
+                        {filteredLessons.map((lesson, index) => (
+                            <Link
+                                href={`/moduli/${module.id}/lezione/${index + 1}`}
+                                key={lesson.id}
+                                className="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-white/10 transition-all p-5 flex items-center justify-between cursor-pointer"
+                            >
+                                <div className="flex items-center gap-5">
+                                    <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-sm font-mono font-bold text-white/40 group-hover:bg-neon-cyan group-hover:text-dark-bg transition-colors">
+                                        {index + 1}
+                                    </div>
+                                    <div>
+                                        <h3 className="font-bold text-lg text-white group-hover:text-neon-cyan transition-colors">{lesson.title}</h3>
+                                        <div className="flex items-center gap-3 text-xs text-white/40 mt-1">
+                                            <span>{lesson.minutes} min lettura</span>
+                                            <span className="w-1 h-1 rounded-full bg-white/20" />
+                                            <span>{lesson.difficulty}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0">
+                                    <Play className="w-3 h-3 fill-white" />
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+
+                {/* LEVEL 3: GAMES & SIDEBAR */}
+                <aside className="lg:col-span-4 space-y-6">
+                    {/* Simulator Card (Gamification) */}
+                    <div className="glass-card rounded-[2rem] p-8 border-white/10 relative overflow-hidden group">
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-50" />
+
+                        <div className="relative z-10 text-center">
+                            <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center mb-6 shadow-xl shadow-blue-500/20 group-hover:scale-110 transition-transform">
+                                <Gamepad2 className="w-8 h-8 text-white" />
+                            </div>
+
+                            <h3 className="text-xl font-bold mb-2">Simulatore Finale</h3>
+                            <p className="text-sm text-white/50 mb-6">Metti alla prova le tue skill in uno scenario realistico per sbloccare il badge.</p>
+
+                            <Link
+                                href={`/moduli/${module.id}/game`}
+                                className="block w-full py-3 rounded-xl bg-white text-dark-bg font-bold hover:bg-neon-cyan transition-colors"
+                            >
+                                Avvia Missione
+                            </Link>
+
+                            <div className="mt-4 flex items-center justify-center gap-2 text-xs text-white/30 font-bold uppercase tracking-widest">
+                                <Flame className="w-3 h-3 text-neon-orange" />
+                                +250 XP in palio
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Quick Info */}
+                    <div className="p-6 rounded-[2rem] bg-white/5 border border-white/5">
+                        <h4 className="font-bold flex items-center gap-2 mb-4 text-sm uppercase tracking-widest text-white/50">
+                            <Info className="w-4 h-4" /> Info Corso
                         </h4>
-                        <p className="text-xs text-white/60 mb-6">Affronta scenari realistici e guadagna il badge del modulo.</p>
-                        <button
-                            onClick={() => router.push(`/moduli/${module.id}/game`)}
-                            className="w-full py-3 bg-blue-500/20 hover:bg-blue-500/30 rounded-xl text-xs font-bold transition-all border border-blue-500/30 flex items-center justify-center gap-2"
-                        >
-                            Avvia Simulazione <ArrowRight className="w-4 h-4" />
-                        </button>
+                        <ul className="space-y-4 text-sm text-white/70">
+                            <li className="flex justify-between">
+                                <span>Difficoltà</span>
+                                <span className="font-bold text-white capitalize">{module.difficulty}</span>
+                            </li>
+                            <li className="flex justify-between">
+                                <span>Tempo stimato</span>
+                                <span className="font-bold text-white">{(module.lessons.length * 5)} min</span>
+                            </li>
+                            <li className="flex justify-between">
+                                <span>Aggiornato</span>
+                                <span className="font-bold text-white">Dic 2024</span>
+                            </li>
+                        </ul>
                     </div>
                 </aside>
-            </div>
-        </div>
-    )
-}
-
-const Icons = {
-    Clock: (props: React.SVGProps<SVGSVGElement>) => (
-        <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
-        </svg>
-    ),
-    Target: (props: React.SVGProps<SVGSVGElement>) => (
-        <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" />
-        </svg>
-    ),
-    Dna: (props: React.SVGProps<SVGSVGElement>) => (
-        <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M8 3v3a2 2 0 0 1-2 2H3" /><path d="M21 8h-3a2 2 0 0 1-2-2V3" /><path d="M3 16h3a2 2 0 0 1 2 2v3" /><path d="M16 21v-3a2 2 0 0 1 2-2h3" /><path d="M18 12c.005 0 .01 0 .015 0" /><path d="M17.02 17.02c.005 0 .01 0 .015 0" /><path d="M12 18c.005 0 .01 0 .015 0" /><path d="M6.98 17.02c.005 0 .01 0 .015 0" /><path d="M6 12c.005 0 .01 0 .015 0" /><path d="M6.98 6.98c.005 0 .01 0 .015 0" /><path d="M12 6c.005 0 .01 0 .015 0" /><path d="M17.02 6.98c.005 0 .01 0 .015 0" />
-        </svg>
-    ),
-    Play: (props: React.SVGProps<SVGSVGElement>) => (
-        <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <polygon points="5 3 19 12 5 21 5 3" />
-        </svg>
+            </section>
+        </Container>
     )
 }

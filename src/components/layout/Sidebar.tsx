@@ -40,7 +40,7 @@ export function Sidebar() {
                                 key={item.href}
                                 href={item.href}
                                 className={cn(
-                                    "group relative flex items-center gap-3 px-4 py-4 rounded-2xl transition-all duration-300 font-sans",
+                                    "group relative flex items-center gap-3 px-4 py-4 rounded-2xl transition-all duration-200 font-sans",
                                     isActive
                                         ? "bg-neon-cyan/10 text-neon-cyan border border-neon-cyan/20 shadow-[0_0_15px_rgba(0,245,255,0.1)]"
                                         : "text-white/40 hover:text-white hover:bg-white/5"

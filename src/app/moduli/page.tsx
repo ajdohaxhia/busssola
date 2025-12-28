@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { ALL_MODULES } from '@/data/modules/index'
 import Link from 'next/link'
@@ -7,90 +8,153 @@ import * as Icons from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { useGameStore } from '@/store/useGameStore'
 import { Module } from '@/types'
+import { Container } from '@/components/ui/Container'
 
 export default function ModulesPage() {
     const { modules: progress } = useGameStore() as { modules: Record<string, any> }
+    const [searchQuery, setSearchQuery] = useState('')
+    const [selectedDifficulty, setSelectedDifficulty] = useState<'all' | 'base' | 'intermedia' | 'avanzata'>('all')
+
+    const filteredModules = useMemo(() => {
+        return ALL_MODULES.filter(module => {
+            const matchesSearch = module.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                module.description.toLowerCase().includes(searchQuery.toLowerCase())
+            const matchesDifficulty = selectedDifficulty === 'all' || module.difficulty.toLowerCase() === selectedDifficulty
+            return matchesSearch && matchesDifficulty
+        })
+    }, [searchQuery, selectedDifficulty])
 
     return (
-        <div className="space-y-12">
-            <header className="max-w-2xl">
-                <h1 className="text-4xl font-bold mb-4">Esplora i Moduli</h1>
-                <p className="text-white/60 text-lg">
-                    Un percorso strutturato in 18 tappe per dominare la tua sicurezza digitale.
-                    Ogni modulo contiene lezioni teoriche, esercizi pratici e sfide interattive.
-                </p>
+        <Container size="full" className="py-8 space-y-8">
+            <header className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div className="max-w-xl space-y-2">
+                    <h1 className="text-4xl md:text-5xl font-display font-bold text-white tracking-tight">
+                        Protocolli <span className="text-neon-cyan">Operativi</span>
+                    </h1>
+                    <p className="text-white/60 text-lg leading-relaxed">
+                        19 moduli tattici per la difesa digitale totale. Scegli il tuo target.
+                    </p>
+                </div>
+
+                {/* Filters */}
+                <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                    <div className="relative group">
+                        <Icons.Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40 group-focus-within:text-neon-cyan transition-colors" />
+                        <input
+                            type="text"
+                            placeholder="Cerca protocollo..."
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            className="w-full sm:w-64 bg-white/5 border border-white/10 rounded-xl py-2.5 pl-10 pr-4 text-sm font-medium text-white placeholder:text-white/20 focus:outline-none focus:border-neon-cyan/50 focus:bg-white/10 transition-all"
+                        />
+                    </div>
+                </div>
             </header>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                {ALL_MODULES.map((module: Module, index: number) => {
-                    const IconComponent = (Icons as any)[module.icon] || Icons.HelpCircle
-                    const moduleProgress = progress[module.id] || { completed: false, xp: 0 }
+            {/* Difficulty Tabs */}
+            <div className="flex items-center gap-2 overflow-x-auto pb-2 no-scrollbar">
+                {(['all', 'base', 'intermedia', 'avanzata'] as const).map((level) => (
+                    <button
+                        key={level}
+                        onClick={() => setSelectedDifficulty(level)}
+                        className={cn(
+                            "px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border transition-all whitespace-nowrap",
+                            selectedDifficulty === level
+                                ? "bg-white text-dark-bg border-white"
+                                : "bg-transparent text-white/40 border-white/10 hover:text-white hover:border-white/30"
+                        )}
+                    >
+                        {level === 'all' ? 'Tutti i livelli' : level}
+                    </button>
+                ))}
+            </div>
 
-                    return (
-                        <motion.div
-                            key={module.id}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.05 }}
-                        >
-                            <Link
-                                href={`/moduli/${module.id}`}
-                                className="group block relative glass-card rounded-[2rem] p-8 border-white/5 overflow-hidden"
+            {/* Modules Grid */}
+            <div className="bento-grid gap-6">
+                {filteredModules.length > 0 ? (
+                    filteredModules.map((module: Module, index: number) => {
+                        const IconComponent = (Icons as any)[module.icon] || Icons.HelpCircle
+                        const moduleProgress = progress[module.id] || { completed: false, xp: 0 }
+
+                        // Dynamic class for grid spanning if needed, currently uniform
+                        const isFeatured = false
+
+                        return (
+                            <motion.div
+                                key={module.id}
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: index * 0.05 }}
+                                className={cn(
+                                    "glass-card rounded-[1.5rem] p-0 overflow-hidden group flex flex-col",
+                                    "col-span-1 md:col-span-1 lg:col-span-4" // Consistent sizing typically requires 12-col grid logic
+                                )}
                             >
-                                {/* Background Accent */}
-                                <div className={cn(
-                                    "absolute -right-12 -top-12 w-40 h-40 blur-[80px] opacity-20 transition-opacity group-hover:opacity-40",
-                                    module.themeColor === 'accent-purple' ? 'bg-accent-purple' :
-                                        module.themeColor === 'accent-blue' ? 'bg-accent-blue' : 'bg-accent-cyan'
-                                )} />
+                                <Link href={`/moduli/${module.id}`} className="flex-1 flex flex-col relative p-6 h-full">
+                                    {/* Hover Gradient */}
+                                    <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                                <div className="relative z-10">
-                                    <div className={cn(
-                                        "w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-lg transition-transform group-hover:scale-110",
-                                        module.themeColor === 'accent-purple' ? 'bg-accent-purple text-dark-900' :
-                                            module.themeColor === 'accent-blue' ? 'bg-accent-blue text-dark-900' : 'bg-accent-cyan text-dark-900'
-                                    )}>
-                                        <IconComponent className="w-7 h-7" />
-                                    </div>
+                                    <div className="relative z-10 flex flex-col h-full">
+                                        <div className="flex justify-between items-start mb-6">
+                                            <div className={cn(
+                                                "w-12 h-12 rounded-xl flex items-center justify-center transition-transform group-hover:scale-110 shadow-lg",
+                                                "bg-white/5 text-neon-cyan border border-white/10"
+                                            )}>
+                                                <IconComponent className="w-6 h-6" />
+                                            </div>
 
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <span className="text-[10px] font-bold uppercase tracking-widest text-white/40">Modulo {module.number}</span>
-                                        <div className="w-1 h-1 rounded-full bg-white/20" />
-                                        <span className={cn(
-                                            "text-[10px] font-bold uppercase tracking-widest",
-                                            module.difficulty === 'base' ? 'text-green-400' :
-                                                module.difficulty === 'intermedia' ? 'text-amber-400' : 'text-red-400'
-                                        )}>
-                                            {module.difficulty}
-                                        </span>
-                                    </div>
-
-                                    <h2 className="text-2xl font-bold mb-3 group-hover:text-accent-cyan transition-colors">{module.title}</h2>
-                                    <p className="text-white/60 text-sm mb-6 line-clamp-2 leading-relaxed italic">&quot;{module.subtitle}&quot;</p>
-
-                                    <div className="flex items-center justify-between mt-auto">
-                                        <div className="flex items-center gap-2 text-xs font-bold">
-                                            <Icons.BookOpen className="w-4 h-4 text-white/40" />
-                                            <span>{module.lessons.length} Lezioni</span>
+                                            <span className={cn(
+                                                "text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded-md border",
+                                                module.difficulty === 'base' ? 'text-neon-green border-neon-green/20' :
+                                                    module.difficulty === 'intermedia' ? 'text-neon-yellow border-neon-yellow/20' : 'text-neon-pink border-neon-pink/20'
+                                            )}>
+                                                {module.difficulty}
+                                            </span>
                                         </div>
 
-                                        {moduleProgress.completed ? (
-                                            <div className="flex items-center gap-1 text-accent-cyan text-xs font-bold">
-                                                <Icons.CheckCircle2 className="w-4 h-4" />
-                                                Completato
+                                        <h2 className="text-xl font-display font-bold mb-2 group-hover:text-neon-cyan transition-colors">{module.title}</h2>
+                                        <p className="text-white/50 text-sm line-clamp-2 mb-6">{module.subtitle}</p>
+
+                                        <div className="mt-auto flex items-center justify-between pt-4 border-t border-white/5">
+                                            <div className="flex items-center gap-2 text-xs font-medium text-white/40">
+                                                <Icons.BookOpen className="w-4 h-4" />
+                                                {module.lessons.length} Lezioni
                                             </div>
-                                        ) : (
-                                            <div className="w-24 h-1.5 bg-white/5 rounded-full overflow-hidden">
-                                                <div className="w-1/3 h-full bg-accent-cyan/50" />
-                                            </div>
-                                        )}
+
+                                            {moduleProgress.completed ? (
+                                                <Icons.CheckCircle2 className="w-5 h-5 text-neon-green" />
+                                            ) : (
+                                                <ArrowIcon className="w-4 h-4 text-white/20 group-hover:text-white transition-colors" />
+                                            )}
+                                        </div>
                                     </div>
-                                </div>
-                            </Link>
-                        </motion.div>
-                    )
-                })}
+                                </Link>
+                            </motion.div>
+                        )
+                    })
+                ) : (
+                    <div className="col-span-full py-20 text-center">
+                        <Icons.SearchX className="w-12 h-12 text-white/20 mx-auto mb-4" />
+                        <h3 className="text-xl font-bold text-white mb-2">Nessun modulo trovato</h3>
+                        <p className="text-white/40">Prova a cambiare i filtri di ricerca.</p>
+                        <button
+                            onClick={() => { setSearchQuery(''); setSelectedDifficulty('all'); }}
+                            className="mt-6 text-neon-cyan text-sm font-bold uppercase tracking-widest hover:underline"
+                        >
+                            Mostra tutti
+                        </button>
+                    </div>
+                )}
             </div>
-        </div>
+        </Container>
+    )
+}
+
+function ArrowIcon({ className }: { className?: string }) {
+    return (
+        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+        </svg>
     )
 }

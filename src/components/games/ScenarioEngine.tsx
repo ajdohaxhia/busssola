@@ -2,8 +2,11 @@
 
 import { useState } from 'react'
 import { useGameStore } from '@/store/useGameStore'
+import { useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Icon } from '@/components/ui/Icon'
+import { triggerConfetti } from '@/lib/confetti'
+import { toast } from 'sonner'
 import { Shield, AlertTriangle, CheckCircle2, XCircle, Info, Zap } from 'lucide-react'
 
 interface Scenario {
@@ -467,6 +470,11 @@ export function ScenarioEngine({ moduleId }: ScenarioEngineProps) {
         } else {
             setCompleted(true)
             completeGame(moduleId, `scenario-${moduleId}`, 500, 100)
+            triggerConfetti()
+            toast.success('Training Completato!', {
+                description: '+500 XP guadagnati. Ottimo lavoro, Guardian.',
+                duration: 5000,
+            })
         }
     }
 

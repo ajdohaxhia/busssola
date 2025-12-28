@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  /* Primary Cyberpunk Palette */
+  /* Color Palette (Preserved) */
   --color-primary-50: #f0f7ff;
   --color-primary-100: #e0eeff;
   --color-primary-200: #bae6ff;
@@ -13,92 +13,72 @@
   --color-primary-800: #082d3f;
   --color-primary-900: #051d2b;
 
-  /* Neon Accents */
   --color-neon-pink: #ff006e;
   --color-neon-cyan: #00f5ff;
   --color-neon-purple: #9d4edd;
   --color-neon-green: #3a86ff;
+  --color-neon-yellow: #ccff00;
 
-  /* Semantic Colors */
   --color-success: #00d084;
   --color-warning: #ffb703;
   --color-danger: #ff006e;
   --color-info: #0096c7;
 
-  /* Dark Mode (AMOLED) */
   --color-dark-bg: #0a0e27;
   --color-dark-surface: #16213e;
   --color-dark-surface-2: #1a1f3a;
   --color-dark-border: #2a3f5f;
 
-  /* Typography */
+  /* Typography System (V4.0) */
   --font-display: var(--font-space-grotesk);
   --font-sans: var(--font-inter);
   --font-mono: var(--font-fira-code);
 
-  /* Shadows & Depth */
-  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
-  --shadow-blue-glow: 0 0 40px rgba(77, 184, 232, 0.3);
-  --shadow-neo: 0 12px 48px -12px rgba(0, 0, 0, 0.5);
+  /* Spacing Scale (8px Grid) */
+  --spacing-container-padding: 2rem;
+  /* 32px standard padding */
+  --spacing-gap-sm: 0.5rem;
+  /* 8px */
+  --spacing-gap-md: 1rem;
+  /* 16px */
+  --spacing-gap-lg: 1.5rem;
+  /* 24px */
+  --spacing-gap-xl: 3rem;
+  /* 48px */
 
-  /* Animations */
-  --animate-float: float 6s ease-in-out infinite;
-  --animate-glow-pulse: glow-pulse 3s ease-in-out infinite;
-  --animate-shimmer: shimmer 2.5s linear infinite;
-  --animate-flicker: neon-flicker 2s infinite;
+  /* Radii Tokens */
+  --radius-sm: 0.5rem;
+  /* 8px - Buttons/Inputs */
+  --radius-md: 0.75rem;
+  /* 12px - Cards */
+  --radius-lg: 1rem;
+  /* 16px - Hero/Modal */
+  --radius-xl: 1.5rem;
+  /* 24px - Special */
 
-  @keyframes float {
+  /* Shadows (Simplified V4.0) */
+  --shadow-glass: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+  --shadow-blue-glow: 0 0 20px rgba(77, 184, 232, 0.15);
+  --shadow-neo: 0 4px 16px -4px rgba(0, 0, 0, 0.4);
 
-    0%,
-    100% {
-      transform: translateY(0);
+  /* Motion Tokens (V4.0) */
+  --ease-natural: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 240ms;
+  --duration-slow: 400ms;
+
+  --animate-in: animate-in 240ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  --animate-out: animate-out 150ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+
+  @keyframes animate-in {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
     }
 
-    50% {
-      transform: translateY(-15px);
-    }
-  }
-
-  @keyframes glow-pulse {
-
-    0%,
-    100% {
-      box-shadow: 0 0 10px rgba(0, 245, 255, 0.4);
-    }
-
-    50% {
-      box-shadow: 0 0 25px rgba(0, 245, 255, 0.7);
-    }
-  }
-
-  @keyframes shimmer {
-    0% {
-      background-position: -1000px 0;
-    }
-
-    100% {
-      background-position: 1000px 0;
-    }
-  }
-
-  @keyframes neon-flicker {
-
-    0%,
-    18%,
-    22%,
-    25%,
-    53%,
-    57%,
-    100% {
-      text-shadow: 0 0 10px rgba(0, 245, 255, 1);
+    to {
       opacity: 1;
-    }
-
-    20%,
-    24%,
-    55% {
-      text-shadow: 0 0 5px rgba(0, 245, 255, 0.5);
-      opacity: 0.8;
+      transform: translateY(0);
     }
   }
 }
@@ -106,53 +86,46 @@
 /* Base Aesthetics */
 body {
   @apply bg-dark-bg text-white font-sans antialiased selection:bg-neon-cyan/30 overflow-x-hidden;
-  background: radial-gradient(circle at top right, rgba(157, 78, 221, 0.1), transparent 40%),
-    radial-gradient(circle at bottom left, rgba(0, 245, 255, 0.1), transparent 40%),
+  /* Simplified gradient background for performance */
+  background: radial-gradient(circle at top right, rgba(157, 78, 221, 0.05), transparent 40%),
     var(--color-dark-bg);
   min-height: 100vh;
 }
 
-/* Grain Effect (Reduced for performance) */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  opacity: 0.1;
-  z-index: -1;
-  pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-}
+/* Grain Effect REMOVED for performance */
 
-/* Advanced Components */
+/* Advanced Components (Simplified) */
 .glass-card {
-  @apply bg-dark-surface/70 backdrop-blur-2xl border border-white/10 shadow-neo transition-all duration-300;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+  @apply bg-dark-surface/80 backdrop-blur-md border border-white/5 shadow-neo transition-transform duration-200;
+  /* Removed expensive linear-gradient overlay */
 }
 
 .glass-card:hover {
-  @apply border-white/20 bg-dark-surface/90 -translate-y-1;
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 245, 255, 0.1);
+  @apply border-white/10 -translate-y-0.5;
+  /* Reduced shadow complexity on hover */
+  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.4);
 }
 
 .neon-border {
   @apply border border-neon-cyan/30;
-  box-shadow: 0 0 15px rgba(0, 245, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 245, 255, 0.1);
 }
 
 .neon-text-cyan {
   @apply text-neon-cyan;
-  filter: drop-shadow(0 0 8px rgba(0, 245, 255, 0.8));
+  /* Reduced drop-shadow radius */
+  filter: drop-shadow(0 0 4px rgba(0, 245, 255, 0.6));
 }
 
 .neon-text-pink {
   @apply text-neon-pink;
-  filter: drop-shadow(0 0 8px rgba(255, 0, 110, 0.8));
+  filter: drop-shadow(0 0 4px rgba(255, 0, 110, 0.6));
 }
 
 .shimmer-effect {
-  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
-  background-size: 200% 100%;
-  animation: shimmer 2.5s infinite;
+  /* Disabled shimmer */
+  background: transparent;
+  animation: none;
 }
 
 /* Layout Utilities */
@@ -245,10 +218,20 @@ h3,
   }
 }
 
-/* Focus States for Accessibility */
+/* Focus States for Accessibility - Snap Feel */
 *:focus-visible {
   outline: 2px solid var(--color-neon-cyan);
   outline-offset: 2px;
+  transition: outline-offset 0.1s ease-out;
+}
+
+/* Snap-Fast Active States for Interactive Elements */
+button:active,
+a:active,
+[role="button"]:active {
+  transform: scale(0.97);
+  transition: transform 0.05s ease-out;
+  /* Near instant feedback */
 }
 
 /* Text Selection */
