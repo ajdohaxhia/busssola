@@ -34,26 +34,56 @@ export default function ProfilePage() {
                 {/* Main Stats Card */}
                 <div className="md:col-span-2 bg-blue-900/20 backdrop-blur-2xl p-10 rounded-[3rem] border border-white/5 space-y-10 shadow-glass">
                     <div className="flex items-center gap-8">
-                        <div className="w-24 h-24 bg-accent-gradient rounded-[2rem] flex items-center justify-center text-white shadow-blue-glow">
+                        <div className="w-24 h-24 bg-accent-gradient rounded-[2rem] flex items-center justify-center text-white shadow-blue-glow shrink-0">
                             <Icon name="profile" size={48} />
                         </div>
-                        <div className="space-y-2">
-                            <div className="text-[10px] font-black text-cyan-400 uppercase tracking-[0.2em]">ID Guardiano</div>
-                            <div className="text-lg font-mono text-white/60 truncate max-w-[250px]">{userId}</div>
-                            <div className="inline-flex items-center gap-2 bg-cyan-400/10 border border-cyan-400/20 px-4 py-1.5 rounded-full">
-                                <span className="text-[10px] font-black text-cyan-400 uppercase tracking-widest leading-none">{tier}</span>
+                        <div className="space-y-2 w-full">
+                            <div className="flex justify-between items-start">
+                                <div>
+                                    <div className="text-[10px] font-black text-cyan-400 uppercase tracking-[0.2em] mb-1">ID Guardiano</div>
+                                    <div className="text-lg font-mono text-white/60 truncate max-w-[200px]">{userId}</div>
+                                </div>
+                                <div className="text-right">
+                                    <div className="text-[10px] font-black text-blue-400/60 uppercase tracking-widest mb-1">Livello Attuale</div>
+                                    <div className="text-xl font-black text-white italic tracking-tighter uppercase text-shadow-glow">{tier}</div>
+                                </div>
+                            </div>
+
+                            {/* Visual Tier Progress */}
+                            <div className="space-y-2 pt-2">
+                                <div className="flex justify-between text-[10px] font-bold uppercase tracking-widest text-white/30">
+                                    <span>Ingenuo</span>
+                                    <span>Sage Digitale</span>
+                                </div>
+                                <div className="h-4 bg-dark-900 rounded-full overflow-hidden border border-white/5 relative">
+                                    <motion.div
+                                        initial={{ width: 0 }}
+                                        animate={{ width: `${Math.min(100, (totalXP / 9000) * 100)}%` }}
+                                        transition={{ duration: 1.5, ease: "easeOut" }}
+                                        className="h-full bg-accent-gradient shadow-[0_0_15px_rgba(34,211,238,0.5)]"
+                                    />
+
+                                    {/* Tier Markers */}
+                                    <div className="absolute top-0 bottom-0 left-[16.6%] w-px bg-white/10" title="Consapevole (1500 XP)" />
+                                    <div className="absolute top-0 bottom-0 left-[38.8%] w-px bg-white/10" title="Informato (3500 XP)" />
+                                    <div className="absolute top-0 bottom-0 left-[66.6%] w-px bg-white/10" title="Esperto (6000 XP)" />
+                                    <div className="absolute top-0 bottom-0 left-[100%] w-px bg-white/10" title="Maestro (9000 XP)" />
+                                </div>
+                                <div className="text-right text-[10px] font-mono text-cyan-400">
+                                    {totalXP} / 9000 XP al rango massimo
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div className="grid grid-cols-2 gap-6">
-                        <div className="bg-dark-900/40 p-8 rounded-[2rem] border border-white/5 shadow-inner">
+                        <div className="bg-dark-900/40 p-8 rounded-[2rem] border border-white/5 shadow-inner group hover:border-cyan-400/20 transition-colors">
                             <span className="text-[10px] text-blue-400/40 block mb-2 uppercase font-black tracking-widest">Esperienza Totale</span>
-                            <span className="text-4xl font-black text-white italic tracking-tighter">{totalXP} <span className="text-cyan-400 text-sm">XP</span></span>
+                            <span className="text-4xl font-black text-white italic tracking-tighter group-hover:text-cyan-400 transition-colors">{totalXP} <span className="text-cyan-400 text-sm">XP</span></span>
                         </div>
-                        <div className="bg-dark-900/40 p-8 rounded-[2rem] border border-white/5 shadow-inner">
+                        <div className="bg-dark-900/40 p-8 rounded-[2rem] border border-white/5 shadow-inner group hover:border-purple-400/20 transition-colors">
                             <span className="text-[10px] text-blue-400/40 block mb-2 uppercase font-black tracking-widest">Badge Ottenuti</span>
-                            <span className="text-4xl font-black text-white italic tracking-tighter">{achievements.length}</span>
+                            <span className="text-4xl font-black text-white italic tracking-tighter group-hover:text-purple-400 transition-colors">{achievements.length}</span>
                         </div>
                     </div>
                 </div>
