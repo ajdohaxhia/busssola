@@ -123,23 +123,23 @@ export default function Dashboard() {
           <h3 className="text-2xl font-display font-bold mb-8">Quick Access</h3>
           <div className="space-y-5">
             {[
-              { icon: Eye, label: 'Anti-Grooming', color: 'bg-neon-pink' },
-              { icon: Lock, label: 'Tech Privacy', color: 'bg-neon-purple' },
-              { icon: Shield, label: 'Legal Defense', color: 'bg-neon-cyan' },
-              { icon: BrainIcon, label: 'Social Mental', color: 'bg-neon-green' }
+              { icon: Eye, label: 'Anti-Grooming', color: 'bg-neon-pink', href: '/moduli/predatori-online' },
+              { icon: Lock, label: 'Tech Privacy', color: 'bg-neon-purple', href: '/moduli/privacy-tecnica' },
+              { icon: Shield, label: 'Legal Defense', color: 'bg-neon-cyan', href: '/moduli/gdpr-data-breach' },
+              { icon: BrainIcon, label: 'Social Mental', color: 'bg-neon-green', href: '/moduli/salute-mentale' }
             ].map((cat, i) => (
-              <div key={i} className="flex items-center justify-between p-5 bg-white/5 rounded-2xl hover:bg-white/10 transition-all duration-300 cursor-pointer group/item border border-white/0 hover:border-white/5">
+              <Link key={i} href={cat.href} className="flex items-center justify-between p-5 bg-white/5 rounded-2xl hover:bg-white/10 transition-all duration-300 cursor-pointer group/item border border-white/0 hover:border-white/5">
                 <div className="flex items-center gap-4">
                   <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center text-dark-bg shadow-lg transition-transform group-hover/item:scale-110", cat.color)}>
                     <cat.icon className="w-6 h-6" />
                   </div>
                   <div>
                     <p className="font-bold text-sm tracking-tight">{cat.label}</p>
-                    <p className="text-[10px] text-white/30 font-bold uppercase tracking-wider">Start Lesson</p>
+                    <p className="text-[10px] text-white/30 font-bold uppercase tracking-wider">Inizia</p>
                   </div>
                 </div>
                 <ArrowUpRight className="w-4 h-4 text-white/20 group-hover/item:text-white group-hover/item:translate-x-1 group-hover/item:-translate-y-1 transition-all" />
-              </div>
+              </Link>
             ))}
           </div>
           <Link href="/moduli" className="block w-full text-center mt-10 text-xs font-bold uppercase tracking-[0.2em] text-neon-cyan hover:text-white transition-colors">
@@ -176,7 +176,7 @@ export default function Dashboard() {
               <p className="text-[10px] uppercase font-bold tracking-widest text-white/30 mt-1">AZZURRO</p>
             </div>
           </div>
-          <Link href="/sos" className="mt-8 flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-white/40 hover:text-white transition-colors">
+          <Link href="/aiuto" className="mt-8 flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-white/40 hover:text-white transition-colors">
             Guida d&apos;Emergenza <ArrowUpRight className="w-4 h-4" />
           </Link>
         </div>

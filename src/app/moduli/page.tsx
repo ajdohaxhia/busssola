@@ -90,18 +90,6 @@ export default function ModulesPage() {
                         </motion.div>
                     )
                 })}
-
-                {/* Placeholder for future modules */}
-                {[...Array(5)].map((_, i) => (
-                    <div key={i} className="glass-card rounded-[2rem] p-8 border-white/5 opacity-30 cursor-not-allowed">
-                        <div className="w-14 h-14 bg-white/5 rounded-2xl mb-6 flex items-center justify-center">
-                            <Icons.Lock className="w-6 h-6 text-white/20" />
-                        </div>
-                        <div className="h-4 w-24 bg-white/10 rounded mb-4" />
-                        <div className="h-8 w-48 bg-white/10 rounded mb-4" />
-                        <div className="h-16 w-full bg-white/10 rounded" />
-                    </div>
-                ))}
             </div>
         </div>
     )
