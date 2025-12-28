@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import { useGameStore } from '@/store/useGameStore'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Send, User, Bot, AlertTriangle, ShieldCheck } from 'lucide-react'
+import Icon from '@/components/ui/Icon'
 
 interface Message {
     id: string
