@@ -1,22 +1,25 @@
 {
-    "name": "Progetto Bussola - Sicurezza Digitale",
+    "name": "Progetto Bussola V3.0",
     "short_name": "Bussola",
-    "description": "Impara a proteggerti online",
+    "description": "La guida definitiva alla sicurezza digitale per la Gen Z.",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "#0a0a0a",
-    "theme_color": "#ccff00",
+    "background_color": "#050b14",
+    "theme_color": "#00f5ff",
+    "orientation": "portrait-primary",
     "scope": "/",
     "icons": [
         {
             "src": "/icon-192.png",
             "sizes": "192x192",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         },
         {
             "src": "/icon-512.png",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         }
     ]
 }
