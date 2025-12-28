@@ -15,6 +15,7 @@ import { RELAZIONI_ONLINE_MODULE } from './relazioni-online'
 import { DISINFORMAZIONE_MODULE } from './disinformazione'
 import { ECOMMERCE_MODULE } from './ecommerce-shopping'
 import { IDENTITA_DIGITALE_MODULE } from './identita-digitale'
+import { COMUNICAZIONE_DIGITALE_MODULE } from './comunicazione-digitale'
 
 export const MODULES_DATA = [
     PREDATORI_ONLINE_MODULE,
@@ -34,6 +35,7 @@ export const MODULES_DATA = [
     DISINFORMAZIONE_MODULE,
     ECOMMERCE_MODULE,
     IDENTITA_DIGITALE_MODULE,
+    COMUNICAZIONE_DIGITALE_MODULE,
 ]
 
 
