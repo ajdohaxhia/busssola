@@ -135,15 +135,18 @@ body::before {
 }
 
 .neon-border {
-  @apply border border-neon-cyan/30 shadow-[0_0_15px_rgba(0, 245, 255, 0.2)];
+  @apply border border-neon-cyan/30;
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.2);
 }
 
 .neon-text-cyan {
-  @apply text-neon-cyan drop-shadow-[0_0_8px_rgba(0, 245, 255, 0.8)];
+  @apply text-neon-cyan;
+  filter: drop-shadow(0 0 8px rgba(0, 245, 255, 0.8));
 }
 
 .neon-text-pink {
-  @apply text-neon-pink drop-shadow-[0_0_8px_rgba(255, 0, 110, 0.8)];
+  @apply text-neon-pink;
+  filter: drop-shadow(0 0 8px rgba(255, 0, 110, 0.8));
 }
 
 .shimmer-effect {
