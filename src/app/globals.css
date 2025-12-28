@@ -113,3 +113,13 @@ body {
 :root.light .shadow-blue-glow {
   box-shadow: 0 0 15px rgba(59, 130, 246, 0.1);
 }
+
+:root.light .text-gray-400,
+:root.light .text-gray-500 {
+  @apply text-blue-600/50;
+}
+
+:root.light .hover\:text-white:hover,
+:root.light .hover\:text-gray-300:hover {
+  @apply text-blue-900;
+}
