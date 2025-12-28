@@ -78,10 +78,19 @@ export const MODULES = [
     },
     {
         id: 'm12-rights',
-        title: '12. Diritti Digitali',
-        description: 'Censura e Sorveglianza',
-        icon: 'Globe',
-        difficulty: 'Intermedia'
+        title: 'Diritti Digitali',
+        description: 'La tua libertà online non è scontata. Scopri come difenderla.',
+        icon: 'ShieldAlert',
+        difficulty: 'Pro',
+        category: 'Legal'
+    },
+    {
+        id: 'm13-salute',
+        title: 'Salute Mentale',
+        description: 'Proteggi la tua mente dalle trappole psicologiche del digitale.',
+        icon: 'HeartPulse',
+        difficulty: 'Intermedio',
+        category: 'Wellbeing'
     }
 ] as const;
 

@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { HeaderSafe } from "@/components/layout/Header";
+import { SOSButton } from "@/components/ui/SOSButton";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -36,6 +37,7 @@ export default function RootLayout({
             <main className="flex-1 p-4 md:p-8 overflow-y-auto">
               {children}
             </main>
+            <SOSButton />
           </div>
         </div>
       </body>

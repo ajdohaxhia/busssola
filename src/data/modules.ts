@@ -11,6 +11,7 @@ import { m9 } from "@/data/modules/m9-ai-deepfake";
 import { m10 } from "@/data/modules/m10-finance";
 import { m11 } from "@/data/modules/m11-sexting";
 import { m12 } from "@/data/modules/m12-rights";
+import { m13 } from "@/data/modules/m13-salute";
 // We will import others as we create them
 // import { m2 } from "@/data/modules/m2-privacy";
 
@@ -28,6 +29,7 @@ export const MODULES_DATA: Record<string, ModuleContent> = {
     [m10.id]: m10,
     [m11.id]: m11,
     [m12.id]: m12,
+    [m13.id]: m13,
 };
 
 // Helper for GameContainer to get game config without full content load if needed, 
