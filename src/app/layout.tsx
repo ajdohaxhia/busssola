@@ -47,16 +47,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="it" className="dark">
+      <head>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+      </head>
       <body className={cn(
         inter.variable,
         spaceGrotesk.variable,
         firaCode.variable,
-        "bg-dark-bg text-white min-h-svh flex flex-col lg:flex-row font-sans"
+        "bg-dark-bg text-white min-h-dvh flex flex-col lg:flex-row font-sans antialiased"
       )}>
         <Sidebar />
 
-        <main className="flex-1 lg:pl-64 pb-24 lg:pb-0 relative">
-          <div className="max-w-7xl mx-auto min-h-screen p-4 md:p-8 lg:p-12">
+        <main className="flex-1 lg:pl-64 pb-28 lg:pb-0 relative">
+          <div className="max-w-7xl mx-auto min-h-[100dvh] lg:min-h-screen p-4 md:p-6 lg:p-10">
             {children}
           </div>
         </main>

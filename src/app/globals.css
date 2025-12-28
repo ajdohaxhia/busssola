@@ -181,3 +181,148 @@ h3,
   @apply bg-slate-50 text-dark-bg;
   background: radial-gradient(circle at top left, #f8fafc 0%, #e2e8f0 100%);
 }
+
+/* ========== Mobile Enhancements ========== */
+
+/* Safe Area Insets for iOS */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .safe-bottom {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 1.5rem);
+  }
+
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
+/* Disable hover effects on touch devices */
+@media (hover: none) {
+  .glass-card:hover {
+    transform: none;
+    box-shadow: var(--shadow-neo);
+  }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 245, 255, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 245, 255, 0.4);
+}
+
+/* Hide scrollbar on mobile */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  * {
+    scrollbar-width: none;
+  }
+}
+
+/* Focus States for Accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-neon-cyan);
+  outline-offset: 2px;
+}
+
+/* Text Selection */
+::selection {
+  background: rgba(0, 245, 255, 0.3);
+  color: white;
+}
+
+/* Prevent Text Selection on UI elements */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Full height for mobile browsers */
+html,
+body {
+  min-height: 100dvh;
+}
+
+/* Fix iOS input zoom */
+@media (max-width: 768px) {
+
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
+/* Improve touch targets */
+@media (max-width: 768px) {
+
+  button,
+  a,
+  [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Glass card pressed state for mobile */
+@media (hover: none) {
+  .glass-card:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+}
+
+/* Bottom nav safe area */
+.bottom-nav-safe {
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 1.5rem);
+}
+
+/* Loading skeleton */
+.skeleton {
+  @apply bg-dark-surface/50 animate-pulse rounded-xl;
+}
+
+/* Better link underlines */
+.link-hover {
+  @apply relative;
+}
+
+.link-hover::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-neon-cyan transition-all duration-300;
+}
+
+.link-hover:hover::after {
+  @apply w-full;
+}
