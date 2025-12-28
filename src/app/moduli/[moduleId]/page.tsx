@@ -16,12 +16,12 @@ export default function ModulePage() {
     const [activeTab, setActiveTab] = useState<'lessons' | 'game'>('lessons')
     const { completeLesson } = useGameStore()
 
-    const module = MODULES_DATA.find(m => m.id === moduleId)
+    const moduleData = MODULES_DATA.find(m => m.id === moduleId)
 
-    if (!module) return <div className="p-20 text-center text-blue-200/40 uppercase font-black italic tracking-tighter">Modulo non trovato.</div>
+    if (!moduleData) return <div className="p-20 text-center text-blue-200/40 uppercase font-black italic tracking-tighter">Modulo non trovato.</div>
 
     const renderGame = () => {
-        switch (module.id) {
+        switch (moduleData.id) {
             case 'phishing-malware': return <PhishingClassifier />
             case 'predatori-online': return <GroomingChatbot />
             case 'privacy-tecnica': return <MalwareAnalyzer />
@@ -45,15 +45,15 @@ export default function ModulePage() {
             <section className="flex flex-col md:flex-row gap-10 items-start md:items-center">
                 <div className="text-7xl bg-blue-900/40 backdrop-blur-2xl p-8 rounded-[2.5rem] shadow-glass border border-white/10 relative group">
                     <div className="absolute inset-0 bg-cyan-400/5 rounded-[2.5rem] group-hover:bg-cyan-400/10 transition-colors" />
-                    <span className="relative z-10 drop-shadow-blue">{module.icon}</span>
+                    <span className="relative z-10 drop-shadow-blue">{moduleData.icon}</span>
                 </div>
                 <div className="space-y-3">
                     <div className="flex gap-3 items-center">
                         <span className="text-[10px] font-black text-cyan-400 uppercase tracking-[0.2em] px-3 py-1 bg-cyan-400/10 rounded-full border border-cyan-400/20 shadow-blue-glow">Modulo Didattico</span>
-                        <span className="text-[10px] font-bold text-blue-400/40 uppercase tracking-widest">{module.difficulty}</span>
+                        <span className="text-[10px] font-bold text-blue-400/40 uppercase tracking-widest">{moduleData.difficulty}</span>
                     </div>
-                    <h1 className="text-4xl md:text-6xl font-black tracking-tighter italic uppercase italic leading-none">{module.title}</h1>
-                    <p className="text-blue-200/40 font-medium max-w-xl leading-relaxed">{module.description}</p>
+                    <h1 className="text-4xl md:text-6xl font-black tracking-tighter italic uppercase italic leading-none">{moduleData.title}</h1>
+                    <p className="text-blue-200/40 font-medium max-w-xl leading-relaxed">{moduleData.description}</p>
                 </div>
             </section>
 
@@ -82,11 +82,11 @@ export default function ModulePage() {
                         exit={{ opacity: 0, y: -30 }}
                         className="grid grid-cols-1 gap-12"
                     >
-                        {module.lessons.map((lesson, idx) => (
+                        {moduleData.lessons.map((lesson, idx) => (
                             <div
                                 key={lesson.id}
                                 className="group bg-blue-900/20 backdrop-blur-2xl p-10 rounded-[3rem] border border-white/5 hover:border-cyan-400/20 shadow-glass transition-all duration-500 space-y-10"
-                                onMouseEnter={() => completeLesson(module.id, lesson.id)}
+                                onMouseEnter={() => completeLesson(moduleData.id, lesson.id)}
                             >
                                 <div className="flex items-center gap-6">
                                     <div className="w-14 h-14 rounded-[1.5rem] bg-accent-gradient flex items-center justify-center font-black text-white text-xl shadow-blue-glow group-hover:scale-110 transition-transform">{idx + 1}</div>
