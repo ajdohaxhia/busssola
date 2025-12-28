@@ -5,11 +5,11 @@ import { useParams, useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { getModuleById } from '@/data/modules/index'
 import { Lesson, Module } from '@/types'
-import { ChevronLeft, ChevronRight, BookOpen, ShieldCheck, Zap, AlertTriangle, Scale, HelpCircle, CheckCircle2 } from 'lucide-react'
-import * as Icons from 'lucide-react'
+import { ChevronLeft, ChevronRight, BookOpen, ShieldCheck, Zap, AlertTriangle, Scale, HelpCircle, CheckCircle2, Gamepad2, ArrowRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { useGameStore } from '@/store/useGameStore'
 import ReactMarkdown from 'react-markdown'
+
 
 export default function ModuleReader() {
     const { id } = useParams()
@@ -226,6 +226,21 @@ export default function ModuleReader() {
                         <p className="text-xs text-white/60 mb-6">Metti alla prova quello che hai imparato in questa lezione per guadagnare bonus XP.</p>
                         <button className="w-full py-3 bg-accent-purple/20 hover:bg-accent-purple/30 rounded-xl text-xs font-bold transition-all border border-accent-purple/30">
                             Inizia Mini-Quiz
+                        </button>
+                    </div>
+
+                    {/* Scenario Simulator Card */}
+                    <div className="glass-card rounded-3xl p-6 bg-blue-500/5 border-blue-500/10">
+                        <h4 className="font-bold flex items-center gap-2 mb-4">
+                            <Gamepad2 className="w-5 h-5 text-blue-400" />
+                            Simulatore
+                        </h4>
+                        <p className="text-xs text-white/60 mb-6">Affronta scenari realistici e guadagna il badge del modulo.</p>
+                        <button
+                            onClick={() => router.push(`/moduli/${module.id}/game`)}
+                            className="w-full py-3 bg-blue-500/20 hover:bg-blue-500/30 rounded-xl text-xs font-bold transition-all border border-blue-500/30 flex items-center justify-center gap-2"
+                        >
+                            Avvia Simulazione <ArrowRight className="w-4 h-4" />
                         </button>
                     </div>
                 </aside>

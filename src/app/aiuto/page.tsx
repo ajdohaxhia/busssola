@@ -29,15 +29,27 @@ export default function HelpPage() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <div className="bg-blue-900/40 backdrop-blur-xl p-6 rounded-[2rem] border border-white/5 group-hover:border-red-500/30 transition-all">
                             <span className="text-[10px] font-black text-blue-400/40 uppercase tracking-[0.2em] block mb-2">Polizia di Stato</span>
                             <a href="https://www.commissariatodips.it" target="_blank" className="text-xl font-black text-white flex items-center gap-2 hover:text-red-400 transition">
-                                Commissariato Online <Icon name="chevron" size={16} />
+                                Commissariato <Icon name="chevron" size={16} />
                             </a>
                         </div>
                         <div className="bg-blue-900/40 backdrop-blur-xl p-6 rounded-[2rem] border border-white/5 group-hover:border-red-500/30 transition-all">
-                            <span className="text-[10px] font-black text-blue-400/40 uppercase tracking-[0.2em] block mb-2">Supporto Minori</span>
+                            <span className="text-[10px] font-black text-blue-400/40 uppercase tracking-[0.2em] block mb-2">Emergenza UE</span>
+                            <a href="tel:112" className="text-xl font-black text-white flex items-center gap-2 hover:text-red-400 transition">
+                                Chiama 112 <Icon name="chevron" size={16} />
+                            </a>
+                        </div>
+                        <div className="bg-blue-900/40 backdrop-blur-xl p-6 rounded-[2rem] border border-white/5 group-hover:border-red-500/30 transition-all">
+                            <span className="text-[10px] font-black text-blue-400/40 uppercase tracking-[0.2em] block mb-2">Emergenza Infanzia</span>
+                            <a href="tel:114" className="text-xl font-black text-white flex items-center gap-2 hover:text-red-400 transition">
+                                Chiama 114 <Icon name="chevron" size={16} />
+                            </a>
+                        </div>
+                        <div className="bg-blue-900/40 backdrop-blur-xl p-6 rounded-[2rem] border border-white/5 group-hover:border-red-500/30 transition-all">
+                            <span className="text-[10px] font-black text-blue-400/40 uppercase tracking-[0.2em] block mb-2">Telefono Azzurro</span>
                             <a href="tel:19696" className="text-xl font-black text-white flex items-center gap-2 hover:text-red-400 transition">
                                 Chiama 1.96.96 <Icon name="chevron" size={16} />
                             </a>

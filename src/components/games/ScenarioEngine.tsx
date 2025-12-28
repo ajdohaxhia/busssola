@@ -356,6 +356,86 @@ const SCENARIOS_DATA: Record<string, { title: string, subtitle: string, icon: st
                 ]
             }
         ]
+    },
+    'disinformazione': {
+        title: 'Fact Checker',
+        subtitle: 'Smaschera le Fake News',
+        icon: 'search',
+        scenarios: [
+            {
+                id: '1',
+                title: 'Clickbait Estremo',
+                description: 'Vedi un articolo con titolo: "SHOCK! Quello che i medici non dicono sulle banane".',
+                options: [
+                    { text: 'È sicuramente clickbait, cerco fonti affidabili', isCorrect: true, feedback: 'Giusto. Titoli emotivi e "Shock" sono segnali di bassa qualità.' },
+                    { text: 'Clicco e condivido per avvisare tutti', isCorrect: false, feedback: 'Hai appena diffuso disinformazione basata sulla paura.' }
+                ]
+            }
+        ]
+    },
+    'ecommerce-shopping': {
+        title: 'Shop Detective',
+        subtitle: 'Scam & Dropshipping',
+        icon: 'shopping-cart',
+        scenarios: [
+            {
+                id: '1',
+                title: 'Sconto Impossibile',
+                description: 'Trovi delle Nike Air Jordan a 29€ su un sito "nike-outlet-milano.xyz".',
+                options: [
+                    { text: 'Truffa al 100%, evito', isCorrect: true, feedback: 'Bravo. Prezzi troppo bassi e domini strani = scam.' },
+                    { text: 'Ne compro due paia subito', isCorrect: false, feedback: 'Riceverai scarpe contraffatte o nulla, e avranno i dati della tua carta.' }
+                ]
+            }
+        ]
+    },
+    'identita-digitale': {
+        title: 'Reputation Builder',
+        subtitle: 'Gestione Reputazione',
+        icon: 'user',
+        scenarios: [
+            {
+                id: '1',
+                title: 'Foto della Festa',
+                description: 'Un amico ti tagga in una foto dove sei visibilmente ubriaco alla festa.',
+                options: [
+                    { text: 'Chiedo di rimuoverla o rimuovo il tag', isCorrect: true, feedback: 'Saggio. I datori di lavoro controllano i social.' },
+                    { text: 'La lascio, fa ridere', isCorrect: false, feedback: 'Tra 5 anni, a un colloquio, potrebbe non far ridere.' }
+                ]
+            }
+        ]
+    },
+    'comunicazione-digitale': {
+        title: 'Netiquette Pro',
+        subtitle: 'Comunicazione Efficace',
+        icon: 'message-circle',
+        scenarios: [
+            {
+                id: '1',
+                title: 'Email Furiosa',
+                description: 'Un collega ti accusa ingiustamente in una email in CC a tutti.',
+                options: [
+                    { text: 'Rispondo con calma solo a lui o chiedo un chiarimento a voce', isCorrect: true, feedback: 'Professionale. "Reply All" con rabbia peggiora solo le cose.' },
+                    { text: 'Faccio "Reply All" difendendomi aggressivamente', isCorrect: false, feedback: 'Hai appena creato uno spettacolo pubblico poco professionale.' }
+                ]
+            }
+        ]
+    },
+    'emergenze-digitali': {
+        title: 'Crisis Response',
+        subtitle: 'Gestione Emergenze',
+        icon: 'alert-triangle',
+        scenarios: [
+            {
+                id: '1',
+                title: 'Hackerato!',
+                description: 'Non riesci più ad accedere al tuo Instagram e i tuoi amici ricevono messaggi strani da te.',
+                options: [
+                    { text: 'Panico totale e creo nuovo account', isCorrect: false, feedback: 'Aspetta! Prima prova le procedure di recupero.' },
+                    { text: 'Seguo la procedura di "Account Hacked" e avviso gli amici via WhatsApp', isCorrect: true, feedback: 'Perfetto. Contenere il danno e recuperare l\'accesso è la priorità.' }
+                ]
+            }
+        ]
     }
 }
 
