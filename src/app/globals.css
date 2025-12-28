@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-yellow: #ccff00;
+  --color-neon-mint: #00ff88;
+  --color-neon-orange: #ff6b35;
+  --color-neon-pink: #ff0066;
+  --color-neon-violet: #8a2be2;
+  
+  --color-dark-900: #0a0a0a;
+  --color-dark-800: #1a1a1a;
+  --color-dark-700: #2a2a2a;
+  
+  --font-mono: var(--font-jetbrains-mono);
+  --font-sans: var(--font-inter);
+}
+
+/* Custom Utilities */
+.glass-panel {
+  @apply bg-dark-800/80 backdrop-blur-md border border-white/10;
+}
+
+.neon-text {
+  text-shadow: 0 0 10px currentColor;
+}
+
+body {
+  @apply bg-dark-900 text-white font-sans antialiased;
+}
