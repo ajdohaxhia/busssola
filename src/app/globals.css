@@ -1,520 +1,82 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-  /* Color Palette (Preserved) */
-  --color-primary-50: #f0f7ff;
-  --color-primary-100: #e0eeff;
-  --color-primary-200: #bae6ff;
-  --color-primary-300: #7cd5ff;
-  --color-primary-400: #4db8e8;
-  --color-primary-500: #32a8b2;
-  --color-primary-600: #1e6b80;
-  --color-primary-700: #0f4a5c;
-  --color-primary-800: #082d3f;
-  --color-primary-900: #051d2b;
+@layer base {
+  :root {
+    /* Deep Cosmos Palette */
+    --cosmos-bg: 10 14 39;
+    /* #0a0e27 - Deepest Void */
+    --cosmos-surface: 20 25 60;
+    /* #14193c - Lighter Void */
+    --nebula-purple: 124 58 237;
+    /* #7c3aed - Electric Purple */
+    --nebula-cyan: 0 245 255;
+    /* #00f5ff - Cyber Cyan */
+    --nebula-pink: 255 0 128;
+    /* #ff0080 - Neon Pink */
 
-  --color-neon-pink: #ff006e;
-  --color-neon-cyan: #00f5ff;
-  --color-neon-purple: #9d4edd;
-  --color-neon-green: #3a86ff;
-  --color-neon-yellow: #ccff00;
+    /* Typography */
+    --font-display: var(--font-space-grotesk);
+    --font-body: var(--font-inter);
+  }
 
-  --color-success: #00d084;
-  --color-warning: #ffb703;
-  --color-danger: #ff006e;
-  --color-info: #0096c7;
-
-  --color-dark-bg: #0a0e27;
-  --color-dark-surface: #16213e;
-  --color-dark-surface-2: #1a1f3a;
-  --color-dark-border: #2a3f5f;
-
-  /* Typography System (V4.0) */
-  --font-display: var(--font-space-grotesk);
-  --font-sans: var(--font-inter);
-  --font-mono: var(--font-fira-code);
-
-  /* Spacing Scale (8px Grid) */
-  --spacing-container-padding: 2rem;
-  /* 32px standard padding */
-  --spacing-gap-sm: 0.5rem;
-  /* 8px */
-  --spacing-gap-md: 1rem;
-  /* 16px */
-  --spacing-gap-lg: 1.5rem;
-  /* 24px */
-  --spacing-gap-xl: 3rem;
-  /* 48px */
-
-  /* Radii Tokens */
-  --radius-sm: 0.5rem;
-  /* 8px - Buttons/Inputs */
-  --radius-md: 0.75rem;
-  /* 12px - Cards */
-  --radius-lg: 1rem;
-  /* 16px - Hero/Modal */
-  --radius-xl: 1.5rem;
-  /* 24px - Special */
-
-  /* Shadows (Simplified V4.0) */
-  --shadow-glass: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
-  --shadow-blue-glow: 0 0 20px rgba(77, 184, 232, 0.15);
-  --shadow-neo: 0 4px 16px -4px rgba(0, 0, 0, 0.4);
-
-  /* Motion Tokens (V4.0) */
-  --ease-natural: cubic-bezier(0.2, 0.8, 0.2, 1);
-  --duration-fast: 150ms;
-  --duration-normal: 240ms;
-  --duration-slow: 400ms;
-
-  --animate-in: animate-in 240ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-  --animate-out: animate-out 150ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-
-  @keyframes animate-in {
-    from {
-      opacity: 0;
-      transform: translateY(4px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  body {
+    @apply bg-[#030712] text-white font-sans antialiased selection:bg-cyan-500/30;
+    background-image:
+      radial-gradient(circle at 50% 0%, rgba(124, 58, 237, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 0% 50%, rgba(0, 245, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 100% 50%, rgba(255, 0, 128, 0.1) 0%, transparent 50%),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+    background-attachment: fixed;
   }
 }
 
-/* Base Aesthetics */
-body {
-  @apply bg-dark-bg text-white font-sans antialiased selection:bg-neon-cyan/30 overflow-x-hidden;
-  /* Simplified gradient background for performance */
-  background: radial-gradient(circle at top right, rgba(157, 78, 221, 0.05), transparent 40%),
-    var(--color-dark-bg);
-  min-height: 100vh;
-}
+@layer components {
 
-/* Grain Effect REMOVED for performance */
-
-/* Advanced Components (Simplified) */
-.glass-card {
-  @apply bg-dark-surface/80 backdrop-blur-md border border-white/5 shadow-neo transition-transform duration-200;
-  /* Removed expensive linear-gradient overlay */
-}
-
-.glass-card:hover {
-  @apply border-white/10 -translate-y-0.5;
-  /* Reduced shadow complexity on hover */
-  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.4);
-}
-
-.neon-border {
-  @apply border border-neon-cyan/30;
-  box-shadow: 0 0 10px rgba(0, 245, 255, 0.1);
-}
-
-.neon-text-cyan {
-  @apply text-neon-cyan;
-  /* Reduced drop-shadow radius */
-  filter: drop-shadow(0 0 4px rgba(0, 245, 255, 0.6));
-}
-
-.neon-text-pink {
-  @apply text-neon-pink;
-  filter: drop-shadow(0 0 4px rgba(255, 0, 110, 0.6));
-}
-
-.shimmer-effect {
-  /* Disabled shimmer */
-  background: transparent;
-  animation: none;
-}
-
-/* Layout Utilities */
-.bento-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-
-@media (min-width: 1024px) {
-  .bento-grid {
-    grid-template-columns: repeat(12, 1fr);
-  }
-}
-
-/* Typography Overrides */
-h1,
-h2,
-h3,
-.font-display {
-  @apply font-display tracking-tight;
-}
-
-/* Light Mode (Reserved for future) */
-:root.light body {
-  @apply bg-slate-50 text-dark-bg;
-  background: radial-gradient(circle at top left, #f8fafc 0%, #e2e8f0 100%);
-}
-
-/* ========== Mobile Enhancements ========== */
-
-/* Safe Area Insets for iOS */
-@supports (padding: env(safe-area-inset-bottom)) {
-  .safe-bottom {
-    padding-bottom: calc(env(safe-area-inset-bottom) + 1.5rem);
+  /* Premium Glass Cards */
+  .glass-card {
+    @apply relative overflow-hidden backdrop-blur-xl bg-white/[0.03] border border-white/[0.08] shadow-glass transition-all duration-300;
   }
 
-  .safe-top {
-    padding-top: env(safe-area-inset-top);
-  }
-}
-
-/* Disable hover effects on touch devices */
-@media (hover: none) {
   .glass-card:hover {
-    transform: none;
-    box-shadow: var(--shadow-neo);
+    @apply border-white/[0.15] bg-white/[0.05] shadow-[0_0_30px_rgba(0, 245, 255, 0.1)];
+  }
+
+  /* Ultra Thin Glass (for floating elements) */
+  .glass-thin {
+    @apply backdrop-blur-2xl bg-[#0a0e27]/70 border border-white/[0.08] shadow-2xl;
+  }
+
+  /* Text Gradients */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/70;
+  }
+
+  .text-gradient-cyan {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500;
   }
 }
 
-/* Reduced motion for accessibility */
-@media (prefers-reduced-motion: reduce) {
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
   }
-}
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
+  .text-balance {
+    text-wrap: balance;
+  }
 
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(0, 245, 255, 0.2);
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 245, 255, 0.4);
-}
-
-/* Hide scrollbar on mobile */
-@media (max-width: 768px) {
+  /* Custom Scrollbar */
   ::-webkit-scrollbar {
-    display: none;
+    width: 6px;
   }
 
-  * {
-    scrollbar-width: none;
-  }
-}
-
-/* Focus States for Accessibility - Snap Feel */
-*:focus-visible {
-  outline: 2px solid var(--color-neon-cyan);
-  outline-offset: 2px;
-  transition: outline-offset 0.1s ease-out;
-}
-
-/* Snap-Fast Active States for Interactive Elements */
-button:active,
-a:active,
-[role="button"]:active {
-  transform: scale(0.97);
-  transition: transform 0.05s ease-out;
-  /* Near instant feedback */
-}
-
-/* Text Selection */
-::selection {
-  background: rgba(0, 245, 255, 0.3);
-  color: white;
-}
-
-/* Prevent Text Selection on UI elements */
-.no-select {
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Smooth Scroll */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Full height for mobile browsers */
-html,
-body {
-  min-height: 100dvh;
-}
-
-/* Fix iOS input zoom */
-@media (max-width: 768px) {
-
-  input,
-  textarea,
-  select {
-    font-size: 16px !important;
-  }
-}
-
-/* Improve touch targets */
-@media (max-width: 768px) {
-
-  button,
-  a,
-  [role="button"] {
-    min-height: 44px;
-    min-width: 44px;
-  }
-}
-
-/* Glass card pressed state for mobile */
-@media (hover: none) {
-  .glass-card:active {
-    transform: scale(0.98);
-    opacity: 0.9;
-  }
-}
-
-/* Bottom nav safe area */
-.bottom-nav-safe {
-  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 1.5rem);
-}
-
-/* Loading skeleton */
-.skeleton {
-  @apply bg-dark-surface/50 animate-pulse rounded-xl;
-}
-
-/* Better link underlines */
-.link-hover {
-  @apply relative;
-}
-
-.link-hover::after {
-  content: '';
-  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-neon-cyan transition-all duration-300;
-}
-
-.link-hover:hover::after {
-  @apply w-full;
-}
-
-/* ========== Responsive Sizing System ========== */
-
-/* Fluid Typography */
-html {
-  font-size: clamp(14px, 2.5vw, 16px);
-}
-
-/* Responsive container padding */
-.responsive-container {
-  @apply px-4 sm:px-6 md:px-8 lg:px-12;
-}
-
-/* Scale down large headings on mobile */
-/* ========== Mobile Enhancements & Fixes ========== */
-
-/* Safe Area Insets for iOS */
-@supports (padding: env(safe-area-inset-bottom)) {
-  .safe-bottom {
-    padding-bottom: calc(env(safe-area-inset-bottom) + 1.5rem);
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
   }
 
-  .safe-top {
-    padding-top: env(safe-area-inset-top);
-  }
-}
-
-/* Hard reset for horizontal scroll on mobile */
-html,
-body {
-  overflow-x: hidden;
-  max-width: 100vw;
-  width: 100%;
-}
-
-/* Force text to fit */
-* {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  /* legacy */
-}
-
-/* Mobile Typography Scaling */
-@media (max-width: 640px) {
-  h1 {
-    font-size: clamp(2rem, 6vw, 2.5rem) !important;
-    /* Slightly smaller clamp */
-    line-height: 1.1 !important;
-    letter-spacing: -0.02em !important;
-    hyphens: auto;
-    /* Allow hyphenation for very long words */
-  }
-
-  h2 {
-    font-size: 1.5rem !important;
-    /* 24px */
-    line-height: 1.2 !important;
-  }
-
-  h3 {
-    font-size: 1.25rem !important;
-    /* 20px */
-    line-height: 1.3 !important;
-  }
-
-  /* Prevent flex/grid items from blowing out */
-  .min-w-0 {
-    min-width: 0;
-  }
-
-  /* Ensure images/videos constrain */
-  img,
-  video,
-  canvas,
-  svg {
-    max-width: 100%;
-    height: auto;
-  }
-
-  p,
-  li {
-    font-size: 1rem !important;
-    /* 16px base text */
-    line-height: 1.6 !important;
-  }
-
-  /* Compact Bento Grid */
-  .bento-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    /* 20px gap */
-  }
-
-  /* Optimizing Card Padding */
-  .glass-card {
-    padding: 1.25rem !important;
-    /* 20px padding */
-    border-radius: 1.25rem !important;
-  }
-
-  /* Reset special paddings */
-  [class*="p-8"],
-  [class*="p-10"],
-  [class*="p-12"] {
-    padding: 1.25rem !important;
-  }
-
-  [class*="px-8"],
-  [class*="px-12"] {
-    padding-left: 1.25rem !important;
-    padding-right: 1.25rem !important;
-  }
-
-  /* Buttons should span full width often on mobile or handle wrapping */
-  .flex-wrap {
-    flex-wrap: wrap;
-  }
-
-  /* Adjust spacing Y */
-  .space-y-8> :not([hidden])~ :not([hidden]) {
-    margin-top: 1.5rem !important;
-  }
-
-  /* Fix absolute positioned elements that might overflow */
-  .absolute {
-    max-width: 100%;
-  }
-}
-
-/* Tablet adjustments */
-@media (min-width: 641px) and (max-width: 1023px) {
-  h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem) !important;
-  }
-
-  .glass-card {
-    padding: 1.5rem !important;
-    border-radius: 1.5rem !important;
-  }
-
-  [class*="rounded-[2.5rem]"],
-  [class*="rounded-[3rem]"] {
-    border-radius: 1.75rem !important;
-  }
-}
-
-/* Ensure images and videos are responsive */
-img,
-video,
-svg {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Prevent horizontal scroll */
-body {
-  overflow-x: hidden;
-}
-
-/* Fix grid on mobile */
-@media (max-width: 640px) {
-  .grid-cols-2 {
-    grid-template-columns: 1fr !important;
-  }
-
-  .grid-cols-3,
-  .grid-cols-4 {
-    grid-template-columns: 1fr !important;
-  }
-
-  /* Only 2 columns for smaller grids on mobile */
-  .md\\:grid-cols-2 {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-/* Improved mobile content width */
-@media (max-width: 640px) {
-
-  .max-w-2xl,
-  .max-w-3xl,
-  .max-w-4xl,
-  .max-w-5xl {
-    max-width: 100% !important;
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
-}
-
-/* Fix sidebar on mobile */
-@media (max-width: 1023px) {
-  aside {
-    display: none !important;
-  }
-
-  .lg\\:col-span-8 {
-    grid-column: span 12 / span 12 !important;
-  }
-}
-
-/* Ensure proper main content sizing when sidebar hidden */
-@media (max-width: 1023px) {
-  main {
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-    width: 100% !important;
+  ::-webkit-scrollbar-thumb {
+    @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
   }
 }

@@ -79,8 +79,7 @@ export default function HelpPage() {
 
             {/* Credits / Footer */}
             <footer className="pt-20 text-center space-y-4 opacity-20 hover:opacity-100 transition-opacity">
-                <div className="text-[10px] font-black tracking-[0.5em] uppercase text-cyan-400">Progetto Bussola v3.0</div>
-                <div className="text-[8px] font-mono text-blue-300">Gen Z Edition • Local First Infrastructure • 2025</div>
+                <div className="text-[10px] font-black tracking-[0.5em] uppercase text-cyan-400">Progetto Bussola</div>
             </footer>
         </div>
     )

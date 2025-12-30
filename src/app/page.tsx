@@ -1,173 +1,302 @@
 'use client'
 
+import { useMemo } from 'react'
 import { motion } from 'framer-motion'
-import { Play, Trophy, Flame, Target, ChevronRight, Lock, Eye, Shield, Zap, ArrowUpRight } from 'lucide-react'
+import { Play, Trophy, Flame, Target, ChevronRight, Lock, Eye, Shield, Zap, Gamepad2, Compass, Sparkles } from 'lucide-react'
 import Link from 'next/link'
 import { useGameStore } from '@/store/useGameStore'
 import { cn } from '@/lib/utils'
 import { Container } from '@/components/ui/Container'
+import { Card } from '@/components/ui/Card'
+import { Button } from '@/components/ui/Button'
+import { ALL_MODULES } from '@/data/modules/index'
 
 export default function Dashboard() {
-  const { totalXP, tier } = useGameStore()
+  const { totalXP, tier, modules, achievements } = useGameStore()
 
-  // Mock data for Flow A (Next Step)
-  const nextLesson = {
-    title: "Come riconoscere un Deepfake",
-    module: "AI & Deepfakes",
-    duration: "5 min",
-    difficulty: "Intermedio"
+  // Calculate streak (mock)
+  const streak = 3
+
+  // Get recommended module
+  const recommendedModule = useMemo(() => {
+    const incomplete = ALL_MODULES.find(m => {
+      const progress = modules[m.id]
+      return !progress || !progress.completed
+    })
+    return incomplete || ALL_MODULES[0]
+  }, [modules])
+
+  // Get featured game
+  const featuredGame = useMemo(() => {
+    const games: Array<{ id: string; title: string; description: string; moduleId: string; moduleTitle: string; icon: string }> = []
+    ALL_MODULES.slice(0, 5).forEach(m => {
+      if (m.games && m.games.length > 0) {
+        const game = m.games[0]
+        games.push({
+          id: game.id,
+          title: game.title,
+          description: game.description,
+          moduleId: m.id,
+          moduleTitle: m.title,
+          icon: m.icon || '🎮'
+        })
+      }
+    })
+    return games[Math.floor(Math.random() * games.length)] || games[0]
+  }, [])
+
+  // Daily goal mock
+  const dailyGoal = {
+    current: Object.keys(modules).length % 4,
+    target: 3,
+    label: "lezioni"
   }
 
-  const dailyGoal = {
-    current: 1,
-    target: 3,
-    label: "Lezioni oggi"
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  }
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { type: "spring", stiffness: 100 }
+    }
   }
 
   return (
-    <Container size="full" className="py-8 space-y-8">
-      {/* Header: Greeting & Daily Goal */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 px-2">
-        <div>
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-2 tracking-tight">
-            Bentornato, <span className="text-neon-cyan">Guardian.</span>
-          </h1>
-          <p className="text-white/60 font-medium">Il tuo percorso verso la sicurezza digitale continua.</p>
+    <Container size="full" className="py-8 space-y-12">
+
+      {/* ==================== HERO SECTION ==================== */}
+      <motion.section
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        className="relative overflow-hidden rounded-[3rem] border border-white/10"
+      >
+        {/* Cinematic Background */}
+        <div className="absolute inset-0 bg-[#0a0e27]">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-neon-cyan/20 rounded-full blur-[120px] animate-pulse-slow" />
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-neon-purple/20 rounded-full blur-[120px] animate-pulse-slow delay-700" />
+          <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-20 brightness-100 contrast-150" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0e27]/50 to-[#0a0e27]" />
         </div>
 
-        {/* Daily Goal Micro-Widget */}
-        <div className="flex items-center gap-4 bg-white/5 border border-white/10 px-4 py-2 rounded-full backdrop-blur-md">
-          <Target className="w-5 h-5 text-neon-pink" />
-          <div className="text-sm font-bold">
-            <span className="text-white">{dailyGoal.current}/{dailyGoal.target}</span> <span className="text-white/40">{dailyGoal.label}</span>
-          </div>
-          <div className="w-16 h-1.5 bg-white/10 rounded-full overflow-hidden">
-            <div className="h-full bg-neon-pink w-1/3" />
-          </div>
-        </div>
-      </div>
+        <div className="relative z-10 p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-12">
+          <div className="space-y-8 max-w-2xl">
+            {/* Brand Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md"
+            >
+              <Compass className="w-4 h-4 text-neon-cyan animate-spin-slow" />
+              <span className="text-xs font-bold text-white tracking-[0.2em] uppercase">Progetto Bussola</span>
+            </motion.div>
 
-      {/* Primary Flow A: Continue Learning Hero */}
-      <Link href="/moduli/ai-deepfake" className="block group">
-        <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-neon-cyan/20 to-neon-purple/20 border border-white/10 p-8 md:p-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-neon">
-          <div className="absolute inset-0 bg-dark-bg/40 backdrop-blur-sm -z-10" />
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="text-5xl md:text-7xl font-display font-bold text-white leading-[0.9] tracking-tight"
+            >
+              Naviga il <br />
+              <span className="text-gradient-cyan">Futuro Digitale</span>
+            </motion.h1>
 
-          <div className="flex flex-col md:flex-row justify-between md:items-center gap-8">
-            <div className="space-y-4 max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neon-cyan/10 border border-neon-cyan/20 text-neon-cyan text-xs font-bold uppercase tracking-widest">
-                <Play className="w-3 h-3 fill-current" />
-                Continua ad imparare
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              className="text-lg text-white/60 max-w-lg leading-relaxed font-light"
+            >
+              La tua guida alla sicurezza online. Impara a difenderti da predatori, truffe e manipolazioni con moduli interattivi.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="flex flex-wrap gap-4 pt-4"
+            >
+              <Link href={`/moduli/${recommendedModule?.id || 'predatori-online'}`}>
+                <Button size="lg" variant="cyan" className="rounded-2xl text-lg px-8 shadow-neon hover:scale-105 transition-transform">
+                  <Play className="w-5 h-5 fill-current mr-2" />
+                  Inizia Ora
+                </Button>
+              </Link>
+              <Link href="/moduli">
+                <Button size="lg" variant="outline" className="rounded-2xl text-lg px-8 border-white/20 hover:bg-white/5">
+                  Esplora Moduli
+                </Button>
+              </Link>
+            </motion.div>
+          </div>
+
+          {/* 3D Glass Stats */}
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.6, type: "spring" }}
+            className="relative w-64 h-64 md:w-80 md:h-80"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/30 to-neon-purple/30 rounded-[3rem] rotate-6 blur-md opacity-50" />
+            <div className="absolute inset-0 glass-card rounded-[3rem] flex flex-col items-center justify-center p-8 border border-white/20 shadow-2xl backdrop-blur-2xl">
+              <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-neon-purple to-neon-cyan flex items-center justify-center mb-6 shadow-lg">
+                <Trophy className="w-10 h-10 text-white fill-white/20" />
               </div>
-
-              <h2 className="text-3xl md:text-5xl font-display font-bold leading-tight">
-                {nextLesson.title}
-              </h2>
-
-              <div className="flex items-center gap-4 text-white/50 text-sm font-medium">
-                <span>{nextLesson.module}</span>
-                <span className="w-1 h-1 bg-white/20 rounded-full" />
-                <span>{nextLesson.duration}</span>
-                <span className="w-1 h-1 bg-white/20 rounded-full" />
-                <span className="text-neon-yellow">{nextLesson.difficulty}</span>
+              <div className="text-center space-y-2">
+                <div className="text-5xl font-display font-bold text-white">{totalXP}</div>
+                <div className="text-xs text-white/40 uppercase tracking-[0.3em] font-bold">Punti Esperienza</div>
               </div>
             </div>
+          </motion.div>
+        </div>
+      </motion.section>
 
-            <div className="flex-shrink-0">
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-neon-cyan text-dark-bg flex items-center justify-center shadow-[0_0_30px_rgba(0,245,255,0.4)] group-hover:scale-110 transition-transform duration-300">
-                <Play className="w-6 h-6 md:w-8 md:h-8 fill-current ml-1" />
+      {/* ==================== BENTO GRID ==================== */}
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6"
+      >
+        {/* Daily Goal (Start Small) */}
+        <motion.div variants={itemVariants} className="lg:col-span-4">
+          <Card className="h-full flex flex-col justify-between p-8 bg-gradient-to-br from-white/5 to-transparent border-white/10" hoverEffect>
+            <div className="flex justify-between items-start">
+              <div className="w-12 h-12 rounded-2xl bg-neon-pink/10 flex items-center justify-center text-neon-pink">
+                <Target className="w-6 h-6" />
+              </div>
+              <span className="font-mono text-neon-pink bg-neon-pink/10 px-3 py-1 rounded-full text-xs font-bold">
+                Daily Goal
+              </span>
+            </div>
+            <div className="space-y-4">
+              <div className="flex justify-between items-end">
+                <h3 className="text-2xl font-bold text-white">{dailyGoal.current}/{dailyGoal.target}</h3>
+                <span className="text-white/40 text-sm">lezioni completate</span>
+              </div>
+              <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: `${(dailyGoal.current / dailyGoal.target) * 100}%` }}
+                  transition={{ duration: 1, delay: 0.8 }}
+                  className="h-full bg-gradient-to-r from-neon-pink to-neon-purple"
+                />
               </div>
             </div>
-          </div>
-        </div>
-      </Link>
+          </Card>
+        </motion.div>
 
-      {/* Bento Grid layout */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        {/* 1. Streak Card */}
-        <div className="glass-card rounded-[1.5rem] p-6 flex flex-col justify-between h-48 group cursor-default">
-          <div className="flex justify-between items-start">
-            <div className="p-3 bg-neon-orange/10 rounded-xl text-neon-orange">
-              <Flame className="w-6 h-6" />
+        {/* Streak (Small) */}
+        <motion.div variants={itemVariants} className="lg:col-span-3">
+          <Card className="h-full p-8 flex flex-col justify-center items-center text-center bg-gradient-to-b from-neon-orange/5 to-transparent" hoverEffect>
+            <div className="w-16 h-16 rounded-full bg-neon-orange/10 flex items-center justify-center text-neon-orange mb-4 shadow-[0_0_30px_rgba(255,149,0,0.2)]">
+              <Flame className="w-8 h-8 fill-current animate-pulse" />
             </div>
-            <span className="text-4xl font-display font-bold text-white">3</span>
-          </div>
-          <div>
-            <h3 className="text-lg font-bold text-white mb-1">Day Streak</h3>
-            <p className="text-sm text-white/40">Sei on fire! Torna domani.</p>
-          </div>
-        </div>
+            <div className="text-4xl font-display font-bold text-white mb-1">{streak}</div>
+            <div className="text-xs text-white/40 uppercase tracking-widest">Giorni di fila</div>
+          </Card>
+        </motion.div>
 
-        {/* 2. XP & Rank Card */}
-        <Link href="/profilo" className="glass-card rounded-[1.5rem] p-6 flex flex-col justify-between h-48 group hover:border-neon-purple/50">
-          <div className="flex justify-between items-start">
-            <div className="p-3 bg-neon-purple/10 rounded-xl text-neon-purple">
-              <Trophy className="w-6 h-6" />
-            </div>
-            <span className="text-xl font-mono font-bold text-neon-purple">{totalXP} XP</span>
-          </div>
-          <div>
-            <h3 className="text-lg font-bold text-white mb-1 capitalize">{tier}</h3>
-            <div className="w-full h-1.5 bg-white/10 rounded-full mt-2 overflow-hidden">
-              <div className="h-full bg-neon-purple w-[45%]" />
-            </div>
-            <p className="text-xs text-white/40 mt-2 text-right">Prossimo rank: 450 XP</p>
-          </div>
-        </Link>
+        {/* Featured Game (Medium Wide) */}
+        <motion.div variants={itemVariants} className="lg:col-span-5">
+          <Link href="/gioca" className="block h-full group">
+            <Card className="h-full p-0 relative overflow-hidden group-hover:border-neon-cyan/50 transition-colors" hoverEffect>
+              <div className="absolute inset-0 bg-gradient-to-r from-neon-cyan/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
-        {/* 3. Browse Modules (Large Tile) */}
-        <Link href="/moduli" className="md:col-span-2 glass-card rounded-[1.5rem] p-8 flex flex-col md:flex-row items-center justify-between gap-6 group hover:border-neon-green/50">
-          <div className="space-y-4">
-            <div className="inline-flex items-center gap-2 text-neon-green font-bold text-sm uppercase tracking-widest">
-              <Zap className="w-4 h-4" /> Catalogo
-            </div>
-            <h3 className="text-2xl font-display font-bold">Esplora 19 Moduli di Sicurezza</h3>
-            <p className="text-white/50 max-w-sm">Dalla privacy base alla difesa contro AI deepfakes. Scegli il tuo percorso.</p>
-          </div>
-          <div className="flex-shrink-0 w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-neon-green group-hover:text-dark-bg group-hover:border-neon-green transition-all">
-            <ChevronRight className="w-6 h-6" />
-          </div>
-        </Link>
+              <div className="relative z-10 p-8 flex flex-col justify-between h-full">
+                <div className="flex items-start justify-between">
+                  <div className="px-3 py-1 rounded-lg bg-neon-cyan/10 text-neon-cyan text-xs font-bold border border-neon-cyan/20">
+                    IN EVIDENZA
+                  </div>
+                  <Gamepad2 className="w-6 h-6 text-white/20 group-hover:text-neon-cyan transition-colors" />
+                </div>
 
-        {/* 4. Quick Access: Anti-Grooming */}
-        <Link href="/moduli/predatori-online" className="glass-card rounded-[1.5rem] p-6 flex items-center gap-4 group hover:border-neon-pink/50">
-          <div className="w-12 h-12 rounded-xl bg-neon-pink/10 flex items-center justify-center text-neon-pink group-hover:scale-110 transition-transform">
-            <Eye className="w-6 h-6" />
-          </div>
-          <div>
-            <h4 className="font-bold text-white">Anti-Grooming</h4>
-            <p className="text-xs text-neon-pink font-bold uppercase tracking-wider mt-1">Avvia &rarr;</p>
-          </div>
-        </Link>
+                <div className="flex items-end gap-6">
+                  <div className="flex-1 space-y-2">
+                    <div className="flex items-center gap-2 text-white/60 text-xs uppercase tracking-wider">
+                      <span>{featuredGame?.moduleTitle}</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white group-hover:text-neon-cyan transition-colors line-clamp-1">
+                      {featuredGame?.title}
+                    </h3>
+                  </div>
+                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-neon-cyan group-hover:text-dark-bg transition-colors">
+                    <Play className="w-5 h-5 fill-current" />
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </Link>
+        </motion.div>
 
-        {/* 5. Quick Access: Tech Privacy */}
-        <Link href="/moduli/privacy-tecnica" className="glass-card rounded-[1.5rem] p-6 flex items-center gap-4 group hover:border-neon-cyan/50">
-          <div className="w-12 h-12 rounded-xl bg-neon-cyan/10 flex items-center justify-center text-neon-cyan group-hover:scale-110 transition-transform">
-            <Lock className="w-6 h-6" />
+        {/* Categories (Full Row) */}
+        <motion.div variants={itemVariants} className="lg:col-span-12 mt-4">
+          <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <Sparkles className="w-6 h-6 text-neon-yellow" />
+            <span>Percorsi Rapidi</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              {
+                title: "Predatori",
+                desc: "Anti-grooming",
+                icon: Eye,
+                color: "text-neon-pink",
+                bg: "bg-neon-pink/10",
+                href: "/moduli/predatori-online"
+              },
+              {
+                title: "Privacy",
+                desc: "Difesa tecnica",
+                icon: Lock,
+                color: "text-neon-cyan",
+                bg: "bg-neon-cyan/10",
+                href: "/moduli/privacy-tecnica"
+              },
+              {
+                title: "Social",
+                desc: "Ingegneria sociale",
+                icon: Shield,
+                color: "text-neon-purple",
+                bg: "bg-neon-purple/10",
+                href: "/moduli/phishing-social-engineering"
+              },
+              {
+                title: "AI Fake",
+                desc: "Deepfake detector",
+                icon: Zap,
+                color: "text-neon-green",
+                bg: "bg-neon-green/10",
+                href: "/moduli/ai-deepfake"
+              },
+            ].map((item, i) => (
+              <Link key={i} href={item.href}>
+                <Card className="p-4 flex items-center gap-4 hover:border-white/30 transition-colors group cursor-pointer" hoverEffect>
+                  <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center transition-transform group-hover:scale-110", item.bg, item.color)}>
+                    <item.icon className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-white">{item.title}</h4>
+                    <p className="text-xs text-white/50 uppercase tracking-wider">{item.desc}</p>
+                  </div>
+                </Card>
+              </Link>
+            ))}
           </div>
-          <div>
-            <h4 className="font-bold text-white">Tech Privacy</h4>
-            <p className="text-xs text-neon-cyan font-bold uppercase tracking-wider mt-1">Inizia Ora</p>
-          </div>
-        </Link>
-
-        {/* 6. SOS Widget */}
-        <Link href="/sos" className="md:col-span-2 glass-card rounded-[1.5rem] p-6 flex items-center justify-between bg-neon-danger/5 border-neon-danger/20 hover:bg-neon-danger/10 transition-colors group">
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-xl bg-neon-danger/20 flex items-center justify-center text-neon-danger animate-pulse">
-              <Shield className="w-6 h-6" />
-            </div>
-            <div>
-              <h4 className="font-bold text-white text-lg">Canale SOS</h4>
-              <p className="text-white/50 text-sm">Hai bisogno di aiuto immediato?</p>
-            </div>
-          </div>
-          <div className="px-4 py-2 bg-neon-danger text-white rounded-lg font-bold text-sm group-hover:scale-105 transition-transform">
-            Chiama 112
-          </div>
-        </Link>
-
-      </div>
+        </motion.div>
+      </motion.div>
     </Container>
   )
 }
