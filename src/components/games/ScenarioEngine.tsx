@@ -443,7 +443,7 @@ const SCENARIOS_DATA: Record<string, { title: string, subtitle: string, icon: st
     }
 }
 
-export function ScenarioEngine({ moduleId }: ScenarioEngineProps) {
+export function ScenarioEngine({ moduleId, onComplete }: ScenarioEngineProps) {
     const data = SCENARIOS_DATA[moduleId]
     const [currentStep, setCurrentStep] = useState(0)
     const [selectedOption, setSelectedOption] = useState<number | null>(null)

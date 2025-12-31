@@ -41,7 +41,7 @@ export interface Game {
     id: string
     title: string
     description: string
-    type: 'scenario' | 'chatbot' | 'analyzer' | 'detector' | 'recognizer'
+    type: 'scenario' | 'chatbot' | 'analyzer' | 'detector' | 'recognizer' | 'quiz' | 'classifier' | 'inspector' | 'malware' | 'mood' | 'phishing'
 }
 
 export interface Module {

@@ -1,7 +1,7 @@
 'use client'
 
 import { useMemo } from 'react'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import { Play, Trophy, Flame, Target, ChevronRight, Lock, Eye, Shield, Zap, Gamepad2, Compass, Sparkles } from 'lucide-react'
 import Link from 'next/link'
 import { useGameStore } from '@/store/useGameStore'
@@ -63,7 +63,7 @@ export default function Dashboard() {
     }
   }
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,

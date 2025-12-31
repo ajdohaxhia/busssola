@@ -8,13 +8,12 @@ import { ALL_MODULES } from '@/data/modules/index'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
 import { cn } from '@/lib/utils'
-import { cn } from '@/lib/utils'
 import GroomingChatbot from '@/components/games/GroomingChatbot'
 import { ScenarioEngine } from '@/components/games/ScenarioEngine'
-import { PhishingClassifier } from '@/components/games/PhishingClassifier'
+import PhishingClassifier from '@/components/games/PhishingClassifier'
 import { InspectorGame } from '@/components/games/InspectorGame'
-import { MalwareAnalyzer } from '@/components/games/MalwareAnalyzer'
-import { MoodTrackerGame } from '@/components/games/MoodTrackerGame'
+import MalwareAnalyzer from '@/components/games/MalwareAnalyzer'
+import MoodTrackerGame from '@/components/games/MoodTrackerGame'
 import { ClassifierGame } from '@/components/games/ClassifierGame'
 
 interface GameContainerProps {
@@ -37,7 +36,7 @@ export function GameContainer({ moduleId, onComplete, onBack }: GameContainerPro
         setResult({ score, passed })
         setGameStage('result')
         if (passed) {
-            useGameStore.getState().completeGame(moduleId, gameConfig.id, score)
+            useGameStore.getState().completeGame(moduleId, gameConfig.id, score, 100)
         }
     }
 
@@ -133,7 +132,7 @@ export function GameContainer({ moduleId, onComplete, onBack }: GameContainerPro
 
                                 {gameConfig.type === 'classifier' && <ClassifierGame items={[]} onComplete={(score) => handleGameComplete(score, true)} />} {/* TODO: Pass real items */}
                                 {gameConfig.type === 'phishing' && <PhishingClassifier onComplete={(score) => handleGameComplete(score, score >= 60)} />}
-                                {gameConfig.type === 'inspector' && <InspectorGame onComplete={(score) => handleGameComplete(score, true)} />}
+                                {gameConfig.type === 'inspector' && <InspectorGame items={[]} onComplete={(score) => handleGameComplete(score, true)} />}
                                 {gameConfig.type === 'malware' && <MalwareAnalyzer onComplete={(score) => handleGameComplete(score, true)} />}
                                 {gameConfig.type === 'mood' && <MoodTrackerGame onComplete={(score) => handleGameComplete(score, true)} />}
 

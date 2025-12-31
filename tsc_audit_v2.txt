@@ -1,0 +1,5 @@
+src/app/moduli/[id]/game/page.tsx(58,18): error TS2741: Property 'onComplete' is missing in type '{ moduleId: string; }' but required in type 'ScenarioEngineProps'.
+src/components/moduli/GameContainer.tsx(37,37): error TS2554: Expected 4 arguments, but got 3.
+src/components/moduli/GameContainer.tsx(58,18): error TS2304: Cannot find name 'Card'.
+src/components/moduli/GameContainer.tsx(150,48): error TS2304: Cannot find name 'cn'.
+src/components/moduli/GameContainer.tsx(187,19): error TS2304: Cannot find name 'Card'.

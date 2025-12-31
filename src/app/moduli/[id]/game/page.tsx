@@ -55,7 +55,13 @@ export default function GamePage() {
 
             {/* Game Canvas */}
             <Container className="pt-32 max-w-3xl">
-                <ScenarioEngine moduleId={id as string} />
+                <ScenarioEngine
+                    moduleId={id as string}
+                    onComplete={(xp) => {
+                        useGameStore.getState().addXP(xp)
+                        router.back()
+                    }}
+                />
             </Container>
         </div>
     )

@@ -1,0 +1,62 @@
+src/app/moduli/[id]/game/page.tsx(58,18): error TS2741: Property 'onComplete' is missing in type '{ moduleId: string; }' but required in type 'ScenarioEngineProps'.
+src/app/page.tsx(174,21): error TS2322: Type '{ hidden: { y: number; opacity: number; }; visible: { y: number; opacity: number; transition: { type: string; stiffness: number; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; }; }' is not assignable to type 'Variant'.
+      Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ type: string; stiffness: number; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ type: string; stiffness: number; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ type: string; stiffness: number; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'type' are incompatible.
+                    Type 'string' is not assignable to type 'AnimationGeneratorType | undefined'.
+src/app/page.tsx(202,21): error TS2322: Type '{ hidden: { y: number; opacity: number; }; visible: { y: number; opacity: number; transition: { type: string; stiffness: number; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; }; }' is not assignable to type 'Variant'.
+      Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ type: string; stiffness: number; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ type: string; stiffness: number; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ type: string; stiffness: number; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'type' are incompatible.
+                    Type 'string' is not assignable to type 'AnimationGeneratorType | undefined'.
+src/app/page.tsx(213,21): error TS2322: Type '{ hidden: { y: number; opacity: number; }; visible: { y: number; opacity: number; transition: { type: string; stiffness: number; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; }; }' is not assignable to type 'Variant'.
+      Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ type: string; stiffness: number; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ type: string; stiffness: number; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ type: string; stiffness: number; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'type' are incompatible.
+                    Type 'string' is not assignable to type 'AnimationGeneratorType | undefined'.
+src/app/page.tsx(245,21): error TS2322: Type '{ hidden: { y: number; opacity: number; }; visible: { y: number; opacity: number; transition: { type: string; stiffness: number; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; }; }' is not assignable to type 'Variant'.
+      Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ y: number; opacity: number; transition: { type: string; stiffness: number; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ type: string; stiffness: number; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ type: string; stiffness: number; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ type: string; stiffness: number; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'type' are incompatible.
+                    Type 'string' is not assignable to type 'AnimationGeneratorType | undefined'.
+src/components/games/ScenarioEngine.tsx(473,13): error TS2552: Cannot find name 'onComplete'. Did you mean 'completed'?
+src/components/moduli/GameContainer.tsx(10,10): error TS2300: Duplicate identifier 'cn'.
+src/components/moduli/GameContainer.tsx(11,10): error TS2300: Duplicate identifier 'cn'.
+src/components/moduli/GameContainer.tsx(14,10): error TS2614: Module '"@/components/games/PhishingClassifier"' has no exported member 'PhishingClassifier'. Did you mean to use 'import PhishingClassifier from "@/components/games/PhishingClassifier"' instead?
+src/components/moduli/GameContainer.tsx(16,10): error TS2614: Module '"@/components/games/MalwareAnalyzer"' has no exported member 'MalwareAnalyzer'. Did you mean to use 'import MalwareAnalyzer from "@/components/games/MalwareAnalyzer"' instead?
+src/components/moduli/GameContainer.tsx(17,10): error TS2614: Module '"@/components/games/MoodTrackerGame"' has no exported member 'MoodTrackerGame'. Did you mean to use 'import MoodTrackerGame from "@/components/games/MoodTrackerGame"' instead?
+src/components/moduli/GameContainer.tsx(40,37): error TS2554: Expected 4 arguments, but got 3.
+src/components/moduli/GameContainer.tsx(132,34): error TS2367: This comparison appears to be unintentional because the types '"scenario" | "chatbot" | "analyzer" | "detector" | "recognizer"' and '"quiz"' have no overlap.
+src/components/moduli/GameContainer.tsx(134,34): error TS2367: This comparison appears to be unintentional because the types '"scenario" | "chatbot" | "analyzer" | "detector" | "recognizer"' and '"classifier"' have no overlap.
+src/components/moduli/GameContainer.tsx(135,34): error TS2367: This comparison appears to be unintentional because the types '"scenario" | "chatbot" | "analyzer" | "detector" | "recognizer"' and '"phishing"' have no overlap.
+src/components/moduli/GameContainer.tsx(135,101): error TS7006: Parameter 'score' implicitly has an 'any' type.
+src/components/moduli/GameContainer.tsx(136,34): error TS2367: This comparison appears to be unintentional because the types '"scenario" | "chatbot" | "analyzer" | "detector" | "recognizer"' and '"inspector"' have no overlap.
+src/components/moduli/GameContainer.tsx(136,70): error TS2741: Property 'items' is missing in type '{ onComplete: (score: number) => void; }' but required in type 'InspectorGameProps'.
+src/components/moduli/GameContainer.tsx(137,34): error TS2367: This comparison appears to be unintentional because the types '"scenario" | "chatbot" | "analyzer" | "detector" | "recognizer"' and '"malware"' have no overlap.
+src/components/moduli/GameContainer.tsx(137,97): error TS7006: Parameter 'score' implicitly has an 'any' type.
+src/components/moduli/GameContainer.tsx(138,34): error TS2367: This comparison appears to be unintentional because the types '"scenario" | "chatbot" | "analyzer" | "detector" | "recognizer"' and '"mood"' have no overlap.
+src/components/moduli/GameContainer.tsx(138,94): error TS7006: Parameter 'score' implicitly has an 'any' type.
