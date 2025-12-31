@@ -71,6 +71,7 @@ export function Sidebar() {
                 </nav>
 
                 {/* Footer Settings - Removed as per user request */}
+            </div>
         </aside>
     )
 }
