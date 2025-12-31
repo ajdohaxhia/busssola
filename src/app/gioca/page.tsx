@@ -34,7 +34,7 @@ function getAllGames() {
                     type: game.type,
                     moduleId: module.id,
                     moduleTitle: module.title,
-                    moduleIcon: module.icon || '🎮',
+                    moduleIcon: module.id,
                     moduleColor: module.themeColor || 'accent-cyan',
                     xpReward: 100, // Base XP for completing a game
                     duration: 10, // Estimated minutes

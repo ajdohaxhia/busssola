@@ -24,7 +24,7 @@ interface Step {
     choices: Choice[]
 }
 
-export default function GroomingChatbot() {
+export default function GroomingChatbot({ onComplete }: { onComplete: (score: number) => void }) {
     const [currentStep, setCurrentStep] = useState(0)
     const [messages, setMessages] = useState<Message[]>([])
     const [isTyping, setIsTyping] = useState(false)
@@ -87,32 +87,13 @@ export default function GroomingChatbot() {
             triggerPredator(steps[currentStep + 1].predatorText)
         } else {
             setTimeout(() => {
-                setCompleted(true)
-                addXP(score * 50)
+                const finalScore = score + (choice.isSafe ? 1 : 0)
+                onComplete(finalScore * 50)
             }, 1000)
         }
     }
 
-    if (completed) {
-        return (
-            <div className="text-center p-12 bg-blue-900/20 backdrop-blur-2xl rounded-[3rem] border border-white/10 shadow-glass">
-                <div className="w-20 h-20 bg-accent-gradient rounded-full flex items-center justify-center mx-auto mb-6 shadow-blue-glow">
-                    <ShieldCheck size={40} className="text-white" />
-                </div>
-                <h2 className="text-4xl font-black italic tracking-tighter mb-4 text-white uppercase">Chat Terminata</h2>
-                <p className="text-xl text-blue-200/60 mb-8 font-medium">Hai dimostrato una buona capacità critica.</p>
-                <div className="bg-white/5 border border-white/10 p-6 rounded-[2rem] mb-10">
-                    <p className="text-cyan-400 font-black uppercase tracking-widest text-sm">+ {score * 50} XP GUADAGNATI</p>
-                </div>
-                <button
-                    onClick={() => window.location.reload()}
-                    className="px-10 py-4 bg-white text-blue-900 font-black italic uppercase tracking-tighter rounded-2xl hover:scale-105 transition shadow-lg"
-                >
-                    Torna al Percorso
-                </button>
-            </div>
-        )
-    }
+    // Completion UI handled by parent
 
     return (
         <div className="flex flex-col h-[650px] bg-dark-900/40 backdrop-blur-2xl rounded-[3rem] border border-white/10 overflow-hidden shadow-glass relative">

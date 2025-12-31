@@ -5,7 +5,7 @@ import { useGameStore } from '@/store/useGameStore'
 import { motion } from 'framer-motion'
 import { Brain, Smartphone, Battery, Heart, ShieldCheck } from 'lucide-react'
 
-export default function MoodTrackerGame() {
+export default function MoodTrackerGame({ onComplete }: { onComplete: (score: number) => void }) {
     const [screenTime, setScreenTime] = useState(0)
     const [mentalEnergy, setMentalEnergy] = useState(100)
     const [day, setDay] = useState(1)
@@ -24,35 +24,11 @@ export default function MoodTrackerGame() {
         if (day < 7) {
             setDay(prev => prev + 1)
         } else {
-            setCompleted(true)
-            addXP(mentalEnergy > 50 ? 100 : 50)
+            onComplete(mentalEnergy > 50 ? 100 : 50)
         }
     }
 
-    if (completed) {
-        return (
-            <div className="text-center p-12 bg-blue-900/20 backdrop-blur-2xl rounded-[3rem] border border-white/10 shadow-glass">
-                <div className="w-20 h-20 bg-accent-gradient rounded-full flex items-center justify-center mx-auto mb-6 shadow-blue-glow">
-                    <Brain size={40} className="text-white" />
-                </div>
-                <h2 className="text-4xl font-black italic tracking-tighter mb-4 text-white uppercase">Settimana Conclusa</h2>
-                <p className="text-xl mb-8 text-blue-200/60 font-medium">
-                    {mentalEnergy > 70
-                        ? "Ottimo equilibrio! Sei un Mindful Warrior."
-                        : "Attenzione: l'uso eccessivo ha ridotto la tua energia mentale."}
-                </p>
-                <div className="bg-white/5 border border-white/10 p-6 rounded-[2rem] mb-10">
-                    <p className="text-cyan-400 font-black uppercase tracking-widest text-sm">+ {mentalEnergy > 50 ? 100 : 50} XP GUADAGNATI</p>
-                </div>
-                <button
-                    onClick={() => window.location.reload()}
-                    className="px-10 py-4 bg-white text-blue-900 font-black italic uppercase tracking-tighter rounded-2xl hover:scale-105 transition shadow-lg"
-                >
-                    Ricomincia Sfida
-                </button>
-            </div>
-        )
-    }
+    // Completion UI handled by parent
 
     return (
         <div className="max-w-md mx-auto space-y-12">

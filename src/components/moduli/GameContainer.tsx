@@ -8,7 +8,14 @@ import { ALL_MODULES } from '@/data/modules/index'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
 import { cn } from '@/lib/utils'
+import { cn } from '@/lib/utils'
 import GroomingChatbot from '@/components/games/GroomingChatbot'
+import { ScenarioEngine } from '@/components/games/ScenarioEngine'
+import { PhishingClassifier } from '@/components/games/PhishingClassifier'
+import { InspectorGame } from '@/components/games/InspectorGame'
+import { MalwareAnalyzer } from '@/components/games/MalwareAnalyzer'
+import { MoodTrackerGame } from '@/components/games/MoodTrackerGame'
+import { ClassifierGame } from '@/components/games/ClassifierGame'
 
 interface GameContainerProps {
     moduleId: string
@@ -118,15 +125,21 @@ export function GameContainer({ moduleId, onComplete, onBack }: GameContainerPro
                         {/* PLAYING STAGE */}
                         {gameStage === 'playing' && (
                             <div className="h-full">
-                                {gameConfig.type === 'chatbot' ? (
-                                    <GroomingChatbot />
-                                ) : (
-                                    <div className="flex items-center justify-center h-full text-white/40">
-                                        Modalità di gioco non ancora implementata
-                                        <Button variant="outline" className="ml-4" onClick={() => handleGameComplete(100, true)}>
-                                            Skip (Debug)
-                                        </Button>
-                                    </div>
+                                {gameConfig.type === 'chatbot' && <GroomingChatbot onComplete={(score) => handleGameComplete(score, score >= 60)} />}
+                                {gameConfig.type === 'scenario' && <ScenarioEngine moduleId={moduleId} onComplete={(score) => handleGameComplete(score, true)} />}
+
+                                {/* Mapping 'quiz' to ScenarioEngine as they are functionally similar (choice based) */}
+                                {gameConfig.type === 'quiz' && <ScenarioEngine moduleId={moduleId} onComplete={(score) => handleGameComplete(score, true)} />}
+
+                                {gameConfig.type === 'classifier' && <ClassifierGame items={[]} onComplete={(score) => handleGameComplete(score, true)} />} {/* TODO: Pass real items */}
+                                {gameConfig.type === 'phishing' && <PhishingClassifier onComplete={(score) => handleGameComplete(score, score >= 60)} />}
+                                {gameConfig.type === 'inspector' && <InspectorGame onComplete={(score) => handleGameComplete(score, true)} />}
+                                {gameConfig.type === 'malware' && <MalwareAnalyzer onComplete={(score) => handleGameComplete(score, true)} />}
+                                {gameConfig.type === 'mood' && <MoodTrackerGame onComplete={(score) => handleGameComplete(score, true)} />}
+
+                                {/* Fallback for unknown types */}
+                                {!['chatbot', 'scenario', 'quiz', 'classifier', 'phishing', 'inspector', 'malware', 'mood'].includes(gameConfig.type) && (
+                                    <ScenarioEngine moduleId={moduleId} onComplete={(score) => handleGameComplete(score, true)} />
                                 )}
                             </div>
                         )}

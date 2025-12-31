@@ -12,7 +12,7 @@ interface PhishingQuestion {
     explanation: string
 }
 
-export default function PhishingClassifier() {
+export default function PhishingClassifier({ onComplete }: { onComplete: (score: number) => void }) {
     const [currentQuestion, setCurrentQuestion] = useState(0)
     const [score, setScore] = useState(0)
     const [completed, setCompleted] = useState(false)
@@ -62,39 +62,13 @@ export default function PhishingClassifier() {
         setShowExplanation(false)
         if (currentQuestion === questions.length - 1) {
             const finalXP = score * 25
-            addXP(finalXP)
-            setCompleted(true)
+            onComplete(finalXP)
         } else {
             setCurrentQuestion(currentQuestion + 1)
         }
     }
 
-    if (completed) {
-        return (
-            <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="text-center p-12 bg-blue-900/20 backdrop-blur-2xl rounded-[3rem] border border-cyan-400/20 shadow-glass"
-            >
-                <div className="w-20 h-20 bg-accent-gradient rounded-full flex items-center justify-center mx-auto mb-6 shadow-blue-glow">
-                    <ShieldCheck size={40} className="text-white" />
-                </div>
-                <h2 className="text-4xl font-black italic tracking-tighter mb-4 text-white">ADDESTRAMENTO COMPLETATO!</h2>
-                <p className="text-xl mb-8 text-blue-200/60 font-medium">Punteggio: <span className="text-cyan-400 font-black">{score}/{questions.length}</span></p>
-
-                <div className="bg-white/5 border border-white/10 p-6 rounded-[2rem] mb-10">
-                    <p className="text-cyan-400 font-black uppercase tracking-widest text-sm">+ {score * 25} XP GUADAGNATI</p>
-                </div>
-
-                <button
-                    onClick={() => window.location.reload()}
-                    className="px-10 py-4 bg-white text-blue-900 font-black italic uppercase tracking-tighter rounded-2xl hover:scale-105 transition shadow-lg"
-                >
-                    Riprova o Continua
-                </button>
-            </motion.div>
-        )
-    }
+    // Completion UI handled by parent
 
     const question = questions[currentQuestion]
 

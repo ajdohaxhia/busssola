@@ -22,6 +22,7 @@ interface Scenario {
 
 interface ScenarioEngineProps {
     moduleId: string
+    onComplete: (score: number) => void
 }
 
 const SCENARIOS_DATA: Record<string, { title: string, subtitle: string, icon: string, scenarios: Scenario[] }> = {
@@ -468,37 +469,12 @@ export function ScenarioEngine({ moduleId }: ScenarioEngineProps) {
             setSelectedOption(null)
             setShowFeedback(false)
         } else {
-            setCompleted(true)
-            completeGame(moduleId, `scenario-${moduleId}`, 500, 100)
             triggerConfetti()
-            toast.success('Training Completato!', {
-                description: '+500 XP guadagnati. Ottimo lavoro, Guardian.',
-                duration: 5000,
-            })
+            onComplete(500) // Pass score to parent
         }
     }
 
-    if (completed) {
-        return (
-            <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="text-center p-8 glass rounded-3xl"
-            >
-                <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle2 className="w-10 h-10 text-green-400" />
-                </div>
-                <h2 className="text-3xl font-bold mb-4">Training Completato!</h2>
-                <p className="text-blue-200 mb-8 text-lg">Hai analizzato tutti gli scenari critici. La tua consapevolezza digitale è aumentata.</p>
-                <button
-                    onClick={() => window.location.reload()}
-                    className="px-8 py-3 bg-blue-600 hover:bg-blue-500 rounded-xl font-bold transition-all shadow-lg shadow-blue-500/25"
-                >
-                    Torna al Dashboard
-                </button>
-            </motion.div>
-        )
-    }
+    // Internal completion UI removed - handled by GameContainer
 
     return (
         <div className="max-w-2xl mx-auto">
