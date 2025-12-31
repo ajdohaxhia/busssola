@@ -1,26 +1,12 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Space_Grotesk, Fira_Code } from 'next/font/google'
 import './globals.css'
 import { Sidebar } from '@/components/layout/Sidebar'
 import { BottomNav } from '@/components/layout/BottomNav'
 import { cn } from '@/lib/utils'
 import { Toaster } from 'sonner'
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-})
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  variable: '--font-space-grotesk',
-})
-
-const firaCode = Fira_Code({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  variable: '--font-fira-code',
-})
+// Using system font stacks as fallback when offline
+const fontVariables = '--font-inter --font-space-grotesk --font-fira-code'
 
 export const metadata: Metadata = {
   title: 'Bussola | Digital Safety for Gen Z',
@@ -53,9 +39,6 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
       </head>
       <body className={cn(
-        inter.variable,
-        spaceGrotesk.variable,
-        firaCode.variable,
         "bg-dark-bg text-white min-h-dvh flex flex-col lg:flex-row font-sans antialiased"
       )}>
         <Sidebar />

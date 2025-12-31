@@ -1,0 +1,179 @@
+
+> bussola@0.1.0 prebuild
+> node scripts/validate-content.js
+
+🔍 Validating content requirements...
+  - ai-deepfake.ts: 27 lessons
+  - comunicazione-digitale.ts: 30 lessons
+  - cyberbullismo-stalking.ts: 28 lessons
+  - diritti-digitali.ts: 25 lessons
+  - disinformazione.ts: 25 lessons
+  - ecommerce-shopping.ts: 24 lessons
+  - emergenze-digitali.ts: 20 lessons
+  - finanze-crypto.ts: 30 lessons
+  - gaming-communities.ts: 26 lessons
+  - gdpr-data-breach.ts: 29 lessons
+  - identita-digitale.ts: 23 lessons
+  - phishing-social-engineering.ts: 28 lessons
+  - predatori-online.ts: 30 lessons
+  - privacy-tecnica.ts: 30 lessons
+  - relazioni-online.ts: 26 lessons
+  - salute-mentale.ts: 26 lessons
+  - scuola-insegnanti.ts: 26 lessons
+  - sexting-legal.ts: 26 lessons
+  - social-addiction.ts: 27 lessons
+
+📊 Status:
+  Modules: 19 (Required: 12)
+  Lessons: 506 (Required: 400)
+✅ Content validation passed!
+
+> bussola@0.1.0 build
+> next build
+
+   ▲ Next.js 15.5.7
+
+   Creating an optimized production build ...
+
+
+Retrying 1/3...
+
+
+Retrying 1/3...
+
+
+Retrying 1/3...
+
+
+Retrying 2/3...
+
+
+Retrying 2/3...
+
+
+Retrying 2/3...
+getaddrinfo EAI_AGAIN fonts.googleapis.com
+
+Retrying 3/3...
+getaddrinfo EAI_AGAIN fonts.googleapis.com
+
+Retrying 3/3...
+getaddrinfo EAI_AGAIN fonts.googleapis.com
+
+Retrying 3/3...
+[Error: getaddrinfo EAI_AGAIN fonts.googleapis.com] {
+  errno: -3001,
+  code: 'EAI_AGAIN',
+  syscall: 'getaddrinfo',
+  hostname: 'fonts.googleapis.com'
+}
+[Error: getaddrinfo EAI_AGAIN fonts.googleapis.com] {
+  errno: -3001,
+  code: 'EAI_AGAIN',
+  syscall: 'getaddrinfo',
+  hostname: 'fonts.googleapis.com'
+}
+[Error: getaddrinfo EAI_AGAIN fonts.googleapis.com] {
+  errno: -3001,
+  code: 'EAI_AGAIN',
+  syscall: 'getaddrinfo',
+  hostname: 'fonts.googleapis.com'
+}
+Failed to compile.
+
+src/app/layout.tsx
+`next/font` error:
+Failed to fetch `Fira Code` from Google Fonts.
+
+src/app/layout.tsx
+`next/font` error:
+Failed to fetch `Inter` from Google Fonts.
+
+src/app/layout.tsx
+`next/font` error:
+Failed to fetch `Space Grotesk` from Google Fonts.
+
+src/app/layout.tsx
+An error occurred in `next/font`.
+
+NextFontError: Failed to fetch `Fira Code` from Google Fonts.
+    at nextFontError (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/@next/font/dist/next-font-error.js:8:17)
+    at nextFontGoogleFontLoader (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/@next/font/dist/google/loader.js:97:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Span.traceAsyncFn (/home/colors/bussola/progetto-bussola/node_modules/next/dist/trace/trace.js:157:20)
+    at async /home/colors/bussola/progetto-bussola/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js:84:87
+    at async Span.traceAsyncFn (/home/colors/bussola/progetto-bussola/node_modules/next/dist/trace/trace.js:157:20)
+    at tryRunOrWebpackError (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:29:316119)
+    at __webpack_require_module__ (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:29:131532)
+    at __nested_webpack_require_161494__ (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:29:130967)
+    at /home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:29:131824
+    at symbolIterator (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/neo-async/async.js:1:14444)
+    at done (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/neo-async/async.js:1:14824)
+    at Hook.eval [as callAsync] (eval at create (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:14:9224), <anonymous>:15:1)
+    at /home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:29:130687
+    at symbolIterator (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/neo-async/async.js:1:14402)
+    at timesSync (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/neo-async/async.js:1:5027)
+-- inner error --
+NextFontError: Failed to fetch `Fira Code` from Google Fonts.
+    at nextFontError (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/@next/font/dist/next-font-error.js:8:17)
+    at nextFontGoogleFontLoader (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/@next/font/dist/google/loader.js:97:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Span.traceAsyncFn (/home/colors/bussola/progetto-bussola/node_modules/next/dist/trace/trace.js:157:20)
+    at async /home/colors/bussola/progetto-bussola/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js:84:87
+    at async Span.traceAsyncFn (/home/colors/bussola/progetto-bussola/node_modules/next/dist/trace/trace.js:157:20)
+    at Object.<anonymous> (/home/colors/bussola/progetto-bussola/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[2].use[1]!/home/colors/bussola/progetto-bussola/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[14].oneOf[2].use[2]!/home/colors/bussola/progetto-bussola/node_modules/next/font/google/target.css?{"path":"src/app/layout.tsx","import":"Fira_Code","arguments":[{"subsets":["latin"],"weight":["400","500"],"variable":"--font-fira-code"}],"variableName":"firaCode"}:1:7)
+    at /home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:29:962717
+    at Hook.eval [as call] (eval at create (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:14:9002), <anonymous>:7:1)
+    at /home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:29:131565
+    at tryRunOrWebpackError (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:29:316073)
+    at __webpack_require_module__ (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:29:131532)
+    at __nested_webpack_require_161494__ (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:29:130967)
+    at /home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:29:131824
+    at symbolIterator (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/neo-async/async.js:1:14444)
+    at done (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/neo-async/async.js:1:14824)
+
+Generated code for /home/colors/bussola/progetto-bussola/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[2].use[1]!/home/colors/bussola/progetto-bussola/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[14].oneOf[2].use[2]!/home/colors/bussola/progetto-bussola/node_modules/next/font/google/target.css?{"path":"src/app/layout.tsx","import":"Fira_Code","arguments":[{"subsets":["latin"],"weight":["400","500"],"variable":"--font-fira-code"}],"variableName":"firaCode"}
+
+src/app/layout.tsx
+An error occurred in `next/font`.
+
+NextFontError: Failed to fetch `Inter` from Google Fonts.
+    at nextFontError (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/@next/font/dist/next-font-error.js:8:17)
+    at nextFontGoogleFontLoader (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/@next/font/dist/google/loader.js:97:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Span.traceAsyncFn (/home/colors/bussola/progetto-bussola/node_modules/next/dist/trace/trace.js:157:20)
+    at async /home/colors/bussola/progetto-bussola/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js:84:87
+    at async Span.traceAsyncFn (/home/colors/bussola/progetto-bussola/node_modules/next/dist/trace/trace.js:157:20)
+    at tryRunOrWebpackError (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:29:316119)
+    at __webpack_require_module__ (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:29:131532)
+    at __nested_webpack_require_161494__ (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:29:130967)
+    at /home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:29:131824
+    at symbolIterator (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/neo-async/async.js:1:14444)
+    at done (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/neo-async/async.js:1:14824)
+    at Hook.eval [as callAsync] (eval at create (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:14:9224), <anonymous>:15:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:14:6378)
+    at /home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:29:130687
+    at symbolIterator (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/neo-async/async.js:1:14402)
+-- inner error --
+NextFontError: Failed to fetch `Inter` from Google Fonts.
+    at nextFontError (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/@next/font/dist/next-font-error.js:8:17)
+    at nextFontGoogleFontLoader (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/@next/font/dist/google/loader.js:97:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Span.traceAsyncFn (/home/colors/bussola/progetto-bussola/node_modules/next/dist/trace/trace.js:157:20)
+    at async /home/colors/bussola/progetto-bussola/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js:84:87
+    at async Span.traceAsyncFn (/home/colors/bussola/progetto-bussola/node_modules/next/dist/trace/trace.js:157:20)
+    at Object.<anonymous> (/home/colors/bussola/progetto-bussola/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[2].use[1]!/home/colors/bussola/progetto-bussola/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[14].oneOf[2].use[2]!/home/colors/bussola/progetto-bussola/node_modules/next/font/google/target.css?{"path":"src/app/layout.tsx","import":"Inter","arguments":[{"subsets":["latin"],"variable":"--font-inter"}],"variableName":"inter"}:1:7)
+    at /home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:29:962717
+    at Hook.eval [as call] (eval at create (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:14:9002), <anonymous>:7:1)
+    at Hook.CALL_DELEGATE [as _call] (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:14:6272)
+    at /home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:29:131565
+    at tryRunOrWebpackError (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:29:316073)
+    at __webpack_require_module__ (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:29:131532)
+    at __nested_webpack_require_161494__ (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:29:130967)
+    at /home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/webpack/bundle5.js:29:131824
+    at symbolIterator (/home/colors/bussola/progetto-bussola/node_modules/next/dist/compiled/neo-async/async.js:1:14444)
+
+Generated code for /home/colors/bussola/progetto-bussola/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[2].use[1]!/home/colors/bussola/progetto-bussola/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[14].oneOf[2].use[2]!/home/colors/bussola/progetto-bussola/node_modules/next/font/google/target.css?{"path":"src/app/layout.tsx","import":"Inter","arguments":[{"subsets":["latin"],"variable":"--font-inter"}],"variableName":"inter"}
+
+
+> Build failed because of webpack errors
