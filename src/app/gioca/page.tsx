@@ -7,6 +7,7 @@ import { Gamepad2, Play, Zap, Clock, Star } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Container } from '@/components/ui/Container'
 import { GameContainer } from '@/components/moduli/GameContainer'
+import { Icon } from '@/components/ui/Icon'
 
 // Extract all games from all modules with their parent module info
 function getAllGames() {
@@ -141,12 +142,12 @@ export default function GiocaPage() {
                             "bg-gradient-to-br from-neon-cyan/10 via-neon-purple/5 to-transparent",
                             idx === 0 && "md:h-48"
                         )}>
-                            <span className={cn(
-                                "text-5xl group-hover:scale-110 transition-transform duration-300",
-                                idx === 0 && "md:text-7xl"
+                            <div className={cn(
+                                "group-hover:scale-110 transition-transform duration-300",
+                                "text-neon-cyan"
                             )}>
-                                {game.moduleIcon}
-                            </span>
+                                <Icon name={game.moduleIcon} className={cn("w-16 h-16", idx === 0 && "md:w-24 md:h-24")} />
+                            </div>
                         </div>
 
                         {/* Game Info */}

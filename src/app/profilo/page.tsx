@@ -32,25 +32,26 @@ export default function ProfilePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Main Stats Card */}
-                <div className="md:col-span-2 bg-blue-900/20 backdrop-blur-2xl p-10 rounded-[3rem] border border-white/5 space-y-10 shadow-glass">
-                    <div className="flex items-center gap-8">
-                        <div className="w-24 h-24 bg-accent-gradient rounded-[2rem] flex items-center justify-center text-white shadow-blue-glow shrink-0">
-                            <Icon name="profile" size={48} />
+                <div className="md:col-span-2 bg-blue-900/20 backdrop-blur-2xl p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] border border-white/5 space-y-8 md:space-y-10 shadow-glass overflow-hidden">
+                    <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 md:gap-8">
+                        <div className="w-20 h-20 md:w-24 md:h-24 bg-accent-gradient rounded-2xl md:rounded-[2rem] flex items-center justify-center text-white shadow-blue-glow shrink-0">
+                            <Icon name="profile" size={32} className="md:hidden" />
+                            <Icon name="profile" size={48} className="hidden md:block" />
                         </div>
-                        <div className="space-y-2 w-full">
-                            <div className="flex justify-between items-start">
-                                <div>
+                        <div className="space-y-4 w-full min-w-0">
+                            <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start text-center sm:text-left gap-4">
+                                <div className="min-w-0 max-w-full">
                                     <div className="text-[10px] font-black text-cyan-400 uppercase tracking-[0.2em] mb-1">ID Guardiano</div>
-                                    <div className="text-lg font-mono text-white/60 truncate max-w-[200px]">{userId}</div>
+                                    <div className="text-sm md:text-lg font-mono text-white/60 truncate max-w-[180px] sm:max-w-xs">{userId}</div>
                                 </div>
-                                <div className="text-right">
+                                <div className="text-center sm:text-right shrink-0">
                                     <div className="text-[10px] font-black text-blue-400/60 uppercase tracking-widest mb-1">Livello Attuale</div>
                                     <div className="text-xl font-black text-white italic tracking-tighter uppercase text-shadow-glow">{tier}</div>
                                 </div>
                             </div>
 
                             {/* Visual Tier Progress */}
-                            <div className="space-y-2 pt-2">
+                            <div className="space-y-2 pt-2 w-full">
                                 <div className="flex justify-between text-[10px] font-bold uppercase tracking-widest text-white/30">
                                     <span>Ingenuo</span>
                                     <span>Sage Digitale</span>
@@ -70,7 +71,7 @@ export default function ProfilePage() {
                                     <div className="absolute top-0 bottom-0 left-[100%] w-px bg-white/10" title="Maestro (9000 XP)" />
                                 </div>
                                 <div className="text-right text-[10px] font-mono text-cyan-400">
-                                    {totalXP} / 9000 XP al rango massimo
+                                    {totalXP} / 9000 XP
                                 </div>
                             </div>
                         </div>

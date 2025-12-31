@@ -70,17 +70,7 @@ export function Sidebar() {
                     })}
                 </nav>
 
-                {/* Footer Settings */}
-                <div className="relative z-10 pt-6 border-t border-white/10">
-                    <button className="w-full flex items-center gap-3 px-4 py-3 text-white/40 hover:text-white transition-colors rounded-xl hover:bg-white/5 group">
-                        <Settings className="w-5 h-5 group-hover:rotate-90 transition-transform duration-500" />
-                        <span className="text-sm font-medium">Impostazioni</span>
-                    </button>
-                    <div className="mt-4 px-4 text-[10px] text-white/20 font-mono">
-                        v3.0.0 • Local First
-                    </div>
-                </div>
-            </div>
+                {/* Footer Settings - Removed as per user request */}
         </aside>
     )
 }
