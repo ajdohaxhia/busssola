@@ -6,9 +6,13 @@ import { Icon } from '@/components/ui/Icon'
 import { useState } from 'react'
 
 export default function ProfilePage() {
-    const { totalXP, tier, userId, achievements, exportProgress, importProgress, resetProgress } = useGameStore()
+    const { modules, userId, exportProgress, importProgress, resetProgress } = useGameStore()
     const [importText, setImportText] = useState('')
     const [showImport, setShowImport] = useState(false)
+
+    // Calculate real progress
+    const completedModulesCount = Object.values(modules).filter(m => m.completed).length
+    const totalLessonsRead = Object.values(modules).reduce((acc, m) => acc + m.lessonsViewed.length, 0)
 
     const handleExport = () => {
         const data = exportProgress()
@@ -44,47 +48,18 @@ export default function ProfilePage() {
                                     <div className="text-[10px] font-black text-cyan-400 uppercase tracking-[0.2em] mb-1">ID Guardiano</div>
                                     <div className="text-sm md:text-lg font-mono text-white/60 truncate max-w-[180px] sm:max-w-xs">{userId}</div>
                                 </div>
-                                <div className="text-center sm:text-right shrink-0">
-                                    <div className="text-[10px] font-black text-blue-400/60 uppercase tracking-widest mb-1">Livello Attuale</div>
-                                    <div className="text-xl font-black text-white italic tracking-tighter uppercase text-shadow-glow">{tier}</div>
-                                </div>
-                            </div>
-
-                            {/* Visual Tier Progress */}
-                            <div className="space-y-2 pt-2 w-full">
-                                <div className="flex justify-between text-[10px] font-bold uppercase tracking-widest text-white/30">
-                                    <span>Ingenuo</span>
-                                    <span>Sage Digitale</span>
-                                </div>
-                                <div className="h-4 bg-dark-900 rounded-full overflow-hidden border border-white/5 relative">
-                                    <motion.div
-                                        initial={{ width: 0 }}
-                                        animate={{ width: `${Math.min(100, (totalXP / 9000) * 100)}%` }}
-                                        transition={{ duration: 1.5, ease: "easeOut" }}
-                                        className="h-full bg-accent-gradient shadow-[0_0_15px_rgba(34,211,238,0.5)]"
-                                    />
-
-                                    {/* Tier Markers */}
-                                    <div className="absolute top-0 bottom-0 left-[16.6%] w-px bg-white/10" title="Consapevole (1500 XP)" />
-                                    <div className="absolute top-0 bottom-0 left-[38.8%] w-px bg-white/10" title="Informato (3500 XP)" />
-                                    <div className="absolute top-0 bottom-0 left-[66.6%] w-px bg-white/10" title="Esperto (6000 XP)" />
-                                    <div className="absolute top-0 bottom-0 left-[100%] w-px bg-white/10" title="Maestro (9000 XP)" />
-                                </div>
-                                <div className="text-right text-[10px] font-mono text-cyan-400">
-                                    {totalXP} / 9000 XP
-                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div className="grid grid-cols-2 gap-6">
                         <div className="bg-dark-900/40 p-8 rounded-[2rem] border border-white/5 shadow-inner group hover:border-cyan-400/20 transition-colors">
-                            <span className="text-[10px] text-blue-400/40 block mb-2 uppercase font-black tracking-widest">Esperienza Totale</span>
-                            <span className="text-4xl font-black text-white italic tracking-tighter group-hover:text-cyan-400 transition-colors">{totalXP} <span className="text-cyan-400 text-sm">XP</span></span>
+                            <span className="text-[10px] text-blue-400/40 block mb-2 uppercase font-black tracking-widest">Moduli Completati</span>
+                            <span className="text-4xl font-black text-white italic tracking-tighter group-hover:text-cyan-400 transition-colors">{completedModulesCount}</span>
                         </div>
                         <div className="bg-dark-900/40 p-8 rounded-[2rem] border border-white/5 shadow-inner group hover:border-purple-400/20 transition-colors">
-                            <span className="text-[10px] text-blue-400/40 block mb-2 uppercase font-black tracking-widest">Badge Ottenuti</span>
-                            <span className="text-4xl font-black text-white italic tracking-tighter group-hover:text-purple-400 transition-colors">{achievements.length}</span>
+                            <span className="text-[10px] text-blue-400/40 block mb-2 uppercase font-black tracking-widest">Lezioni Lette</span>
+                            <span className="text-4xl font-black text-white italic tracking-tighter group-hover:text-purple-400 transition-colors">{totalLessonsRead}</span>
                         </div>
                     </div>
                 </div>
@@ -117,31 +92,6 @@ export default function ProfilePage() {
                     </button>
                 </div>
             </div>
-
-            {/* Legacy Achievements */}
-            <section className="bg-blue-900/20 backdrop-blur-2xl p-10 rounded-[3rem] border border-white/5 shadow-glass">
-                <h2 className="text-2xl font-black italic mb-8 flex items-center gap-4 tracking-tighter uppercase whitespace-pre">
-                    <Icon name="award" size={28} className="text-cyan-400 drop-shadow-blue" /> I TUOI <span className="text-cyan-400">TROFEI</span>
-                </h2>
-
-                {achievements.length > 0 ? (
-                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-                        {achievements.map(a => (
-                            <div key={a} className="p-6 bg-dark-900/40 rounded-[2rem] border border-cyan-400/10 flex flex-col items-center gap-3 hover:border-cyan-400/40 transition-colors group">
-                                <div className="w-12 h-12 rounded-full bg-cyan-400/5 flex items-center justify-center group-hover:scale-110 transition-transform">
-                                    <Icon name="award" className="text-cyan-400" />
-                                </div>
-                                <span className="text-[10px] font-black uppercase tracking-widest text-center text-blue-200/60">{a}</span>
-                            </div>
-                        ))}
-                    </div>
-                ) : (
-                    <div className="py-20 text-center space-y-4 border-2 border-dashed border-white/5 rounded-[2.5rem]">
-                        <Icon name="award" size={48} className="mx-auto text-blue-500/10" />
-                        <p className="text-sm text-blue-400/20 font-black uppercase tracking-widest italic">Nessun trofeo sbloccato</p>
-                    </div>
-                )}
-            </section>
 
             {/* Import Modal */}
             <AnimatePresence>
