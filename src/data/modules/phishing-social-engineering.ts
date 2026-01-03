@@ -376,8 +376,7 @@ export const PHISHING_MODULE: Module = {
             resources: [{ title: 'NIST Phishing', url: 'https://csrc.nist.gov', description: 'Framework sicurezza.' }]
         }
     ],
-    games: [{ id: 'phishing-detector', title: 'Phishing Detector', description: 'Identifica le email vere da quelle false.', type: 'detector' }],
-    tips: ['Non cliccare mai link in email urgenti.', 'Verifica sempre chiamando numeri ufficiali.', 'Se sembra troppo urgente, è una trappola.'],
-    resources: [{ title: 'Have I Been Pwned', url: 'https://haveibeenpwned.com', description: 'Controlla se i tuoi dati sono stati violati.' }]
-}
 
+    tips: [],
+    resources: []
+}

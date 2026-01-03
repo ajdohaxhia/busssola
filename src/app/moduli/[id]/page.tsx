@@ -46,6 +46,7 @@ export default function ModuleDetail() {
                 <span className="text-white">{module.title}</span>
             </div>
 
+
             {/* LEVEL 1: OVERVIEW HERO */}
             <header className="relative overflow-hidden rounded-[2rem] glass-card p-8 md:p-12 border-white/10 group">
                 {/* Background Ambient */}
@@ -78,17 +79,12 @@ export default function ModuleDetail() {
                         </p>
 
                         <div className="pt-6 flex flex-wrap gap-4">
-                            <button className="px-8 py-4 bg-neon-cyan text-dark-bg rounded-xl font-bold flex items-center gap-2 hover:bg-white transition-all shadow-lg hover:translate-y-[-2px]">
-                                <Play className="w-5 h-5 fill-current" />
-                                {moduleProgress.xp > 0 ? 'Riprendi Protocollo' : 'Avvia Protocollo'}
-                            </button>
-                            <div className="flex items-center gap-4 px-6 py-4 rounded-xl bg-white/5 border border-white/10">
-                                <Trophy className="w-5 h-5 text-neon-yellow" />
-                                <div className="text-xs">
-                                    <span className="block font-bold text-white">Certificazione</span>
-                                    <span className="text-white/40">{(module.lessons.length * 50) + 250} XP totali</span>
-                                </div>
-                            </div>
+                            <Link href={`/moduli/${module.id}/lezione/1`}>
+                                <button className="px-8 py-4 bg-neon-cyan text-dark-bg rounded-xl font-bold flex items-center gap-2 hover:bg-white transition-all shadow-lg hover:translate-y-[-2px]">
+                                    <Play className="w-5 h-5 fill-current" />
+                                    {moduleProgress.lessonsViewed?.length > 0 ? 'Riprendi Protocollo' : 'Avvia Protocollo'}
+                                </button>
+                            </Link>
                         </div>
                     </div>
 
@@ -161,34 +157,8 @@ export default function ModuleDetail() {
                     </div>
                 </div>
 
-                {/* LEVEL 3: GAMES & SIDEBAR */}
+                {/* LEVEL 3: SIDEBAR */}
                 <aside className="lg:col-span-4 space-y-6">
-                    {/* Simulator Card (Gamification) */}
-                    <div className="glass-card rounded-[2rem] p-8 border-white/10 relative overflow-hidden group">
-                        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-50" />
-
-                        <div className="relative z-10 text-center">
-                            <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center mb-6 shadow-xl shadow-blue-500/20 group-hover:scale-110 transition-transform">
-                                <Gamepad2 className="w-8 h-8 text-white" />
-                            </div>
-
-                            <h3 className="text-xl font-bold mb-2">Simulatore Finale</h3>
-                            <p className="text-sm text-white/50 mb-6">Metti alla prova le tue skill in uno scenario realistico per sbloccare il badge.</p>
-
-                            <Link
-                                href={`/moduli/${module.id}/game`}
-                                className="block w-full py-3 rounded-xl bg-white text-dark-bg font-bold hover:bg-neon-cyan transition-colors"
-                            >
-                                Avvia Missione
-                            </Link>
-
-                            <div className="mt-4 flex items-center justify-center gap-2 text-xs text-white/30 font-bold uppercase tracking-widest">
-                                <Flame className="w-3 h-3 text-neon-orange" />
-                                +250 XP in palio
-                            </div>
-                        </div>
-                    </div>
-
                     {/* Quick Info */}
                     <div className="p-6 rounded-[2rem] bg-white/5 border border-white/5">
                         <h4 className="font-bold flex items-center gap-2 mb-4 text-sm uppercase tracking-widest text-white/50">

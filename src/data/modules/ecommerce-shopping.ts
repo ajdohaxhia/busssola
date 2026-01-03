@@ -324,7 +324,7 @@ export const ECOMMERCE_MODULE: Module = {
             resources: [{ title: 'Safe Shopping Hub', url: 'https://www.consumatori.it', description: 'Centro risorse.' }]
         }
     ],
-    games: [{ id: 'shop-detective', title: 'Shop Detective', description: 'Identifica i siti truffa.', type: 'detector' }],
-    tips: ['Verifica sempre il sito.', 'Usa pagamenti protetti.', 'Leggi le recensioni critiche.'],
-    resources: [{ title: 'ScamAdviser', url: 'https://www.scamadviser.com', description: 'Verifica siti.' }]
+
+    tips: [],
+    resources: []
 }

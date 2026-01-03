@@ -72,15 +72,5 @@ export const m3: ModuleContent = {
             )
         }
     ],
-    game: {
-        type: 'classifier',
-        objective: 'Analizza i messaggi e i file allegati. Sono sicuri o pericolosi?',
-        data: [
-            { id: '1', type: 'text', content: "SMS: 'PosteInfo: Il tuo pacco è bloccato. Clicca su bit.ly/poste-verify per sbloccare la consegna.'", correct: 'unsafe', explanation: 'Link accorciato (bit.ly) in un SMS di servizio. Le poste non usano questi link. È Smishing.' },
-            { id: '2', type: 'text', content: "Email: 'Ciao Marco, qui HR. Puoi mandarmi il tuo IBAN per lo stipendio? Rispondi a questa email.' (Da: hr-company@gmail.com)", correct: 'unsafe', explanation: 'Guarda il mittente! Un\'azienda seria usa @azienda.com, non @gmail.com.' },
-            { id: '3', type: 'text', content: "Pop-up Browser: 'Il tuo iPhone è infetto! Clicca OK per scansionare.'", correct: 'unsafe', explanation: 'I browser non possono scansionare virus. È una truffa per farti scaricare malware.' },
-            { id: '4', type: 'text', content: "Notifica App Banca (Ufficiale): 'Autorizzi pagamento di 15€?'", correct: 'safe', explanation: 'È una notifica push dell\'app ufficiale che hai installato tu. Se hai fatto tu l\'acquisto, è sicuro.' },
-            { id: '5', type: 'text', content: "DM Instagram: 'Ho perso l'accesso al mio account, puoi aiutarmi? Ti mando un codice, me lo giri?'", correct: 'unsafe', explanation: 'Classico furto account. Il codice serve A LUI per resettare la TUA password.' }
-        ]
-    }
+
 };

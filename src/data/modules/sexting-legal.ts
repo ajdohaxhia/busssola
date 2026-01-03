@@ -350,7 +350,7 @@ export const SEXTING_MODULE: Module = {
             resources: [{ title: 'Safety Hub', url: 'https://www.internetsafety101.org', description: 'Centro risorse.' }]
         }
     ],
-    games: [{ id: 'scenario-sexting', title: 'Scenario Sexting', description: 'Affronta scenari realistici.', type: 'scenario' }],
-    tips: ['Mai inviare nulla che non vorresti fosse pubblico.', 'Il consenso può essere ritirato.', 'Chiedere aiuto non è debolezza.'],
-    resources: [{ title: 'Telefono Azzurro', url: 'https://www.azzurro.it', description: 'Linea 19696.' }]
+
+    tips: [],
+    resources: []
 }

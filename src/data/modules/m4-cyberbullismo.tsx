@@ -78,55 +78,5 @@ export const m4: ModuleContent = {
             )
         }
     ],
-    game: {
-        type: 'chat',
-        objective: 'Gestisci un attacco di cyberbullismo senza peggiorare la situazione.',
-        data: {
-            initialMessage: "Oh guardate chi c'è, lo sfigato della 3B. Ma non ti vergogni a mettere quelle foto?",
-            nodes: {
-                'root': {
-                    text: "Oh guardate chi c'è, lo sfigato della 3B. Ma non ti vergogni a mettere quelle foto?",
-                    sender: 'bot',
-                    options: [
-                        { label: "Ma stai zitto, scemo.", nextId: 'escalation', score: -10 },
-                        { label: "(Ignora e fai screenshot)", nextId: 'ignore', score: 20 }
-                    ]
-                },
-                'escalation': {
-                    text: "Ahahah si arrabbia pure. Ragazzi guardate, piange! (Il bullo condivide lo screen nel gruppo scuola)",
-                    sender: 'bot',
-                    options: [
-                        { label: "Basta vi prego!", nextId: 'victim', score: -20 },
-                        { label: "(Blocca e report)", nextId: 'block', score: 10 }
-                    ]
-                },
-                'ignore': {
-                    text: "(Nessuna risposta). Ehy? Ci sei? Codardo. (Il bullo prova a provocarti ancora)",
-                    sender: 'bot',
-                    options: [
-                        { label: "(Continua a ignorare e salva URL profilo)", nextId: 'win', score: 30 },
-                        { label: "Smettila.", nextId: 'escalation', score: -5 }
-                    ]
-                },
-                'win': {
-                    text: "(Il bullo smette di scrivere perché non riceve attenzione)",
-                    sender: 'bot',
-                    isEnding: true,
-                    feedback: "Perfetto. Hai tolto ossigeno al fuoco. Hai le prove salvate se serve, ma non hai dato soddisfazione."
-                },
-                'victim': {
-                    text: "Piagnucolone. (L'attacco continua e peggiora)",
-                    sender: 'bot',
-                    isEnding: true,
-                    feedback: "Rispondere o mostrare debolezza spesso alimenta il bullismo. La prossima volta, blocca subito e parlane con un adulto."
-                },
-                'block': {
-                    text: "(Utente Bloccato)",
-                    sender: 'user',
-                    isEnding: true,
-                    feedback: "Bene. Hai bloccato la fonte di stress."
-                }
-            }
-        }
-    }
+
 };

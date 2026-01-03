@@ -350,7 +350,7 @@ export const RELAZIONI_ONLINE_MODULE: Module = {
             resources: [{ title: 'Relationship Safety', url: 'https://www.loveisrespect.org', description: 'Centro risorse.' }]
         }
     ],
-    games: [{ id: 'catfish-detector', title: 'Catfish Detector', description: 'Identifica i profili falsi.', type: 'detector' }],
-    tips: ['Verifica sempre le foto.', 'Non inviare mai soldi.', 'Incontra in pubblico.'],
-    resources: [{ title: 'Catfish Show', url: 'https://www.mtv.com/shows/catfish', description: 'Casi reali.' }]
+
+    tips: [],
+    resources: []
 }

@@ -70,49 +70,5 @@ export const m11: ModuleContent = {
             )
         }
     ],
-    game: {
-        type: 'chat',
-        objective: 'Gestisci la pressione di un partner che chiede foto intime.',
-        data: {
-            initialMessage: "Mi manchi troppo... vorrei vederti adesso. Tutta.",
-            nodes: {
-                'root': {
-                    text: "Mi manchi troppo... vorrei vederti adesso. Tutta.",
-                    sender: 'bot',
-                    options: [
-                        { label: "Anche tu mi manchi.", nextId: 'push1', score: 0 },
-                        { label: "Non mi va di mandare foto.", nextId: 'boundary', score: 20 }
-                    ]
-                },
-                'push1': {
-                    text: "Dai, mandami una fotina. Solo per me. Cancello subito, promesso.",
-                    sender: 'bot',
-                    options: [
-                        { label: "Mmm ok ma cancellala eh.", nextId: 'fail', score: -50 },
-                        { label: "No, non mi sento a mio agio.", nextId: 'boundary', score: 20 }
-                    ]
-                },
-                'boundary': {
-                    text: "Ma dai, non ti fidi di me? Tutte le altre lo fanno. Se mi amassi lo faresti.",
-                    sender: 'bot',
-                    options: [
-                        { label: "Se mi amassi rispetteresti il mio NO.", nextId: 'win', score: 50 },
-                        { label: "Ok scusa, te la mando.", nextId: 'fail', score: -50 }
-                    ]
-                },
-                'fail': {
-                    text: "(Foto Inviata). Wow grazie. (Screen salvato... ora rischio revenge porn)",
-                    sender: 'bot',
-                    isEnding: true,
-                    feedback: "Una volta inviata, perdi il controllo. 'Cancello subito' è la bugia più comune."
-                },
-                'win': {
-                    text: "... Ok, scusa. Hai ragione. Cambiamo argomento.",
-                    sender: 'bot',
-                    isEnding: true,
-                    feedback: "Bravissimo/a. Riconoscere la manipolazione ('se mi amassi') e tenere il punto è segno di maturità."
-                }
-            }
-        }
-    }
+
 };

@@ -402,7 +402,7 @@ export const COMUNICAZIONE_DIGITALE_MODULE: Module = {
             resources: [{ title: 'Communication Hub', url: 'https://www.mindtools.com', description: 'Centro risorse.' }]
         }
     ],
-    games: [{ id: 'communication-simulator', title: 'Communication Sim', description: 'Simula conversazioni difficili.', type: 'scenario' }],
-    tips: ['Pensa prima di scrivere.', 'Rileggi sempre.', 'Rispetta i confini.'],
-    resources: [{ title: 'Communication Hub', url: 'https://www.mindtools.com', description: 'Risorse.' }]
+
+    tips: [],
+    resources: []
 }

@@ -69,15 +69,5 @@ export const m5: ModuleContent = {
             )
         }
     ],
-    game: {
-        type: 'inspector',
-        objective: 'Rimuovi le fonti di distrazione e dipendenza dal tuo "profilo".',
-        data: [
-            { id: 'notif', label: 'Notifiche Push (Tutte)', status: 'enabled', correctStatus: 'disabled', feedback: 'Le notifiche comandano la tua attenzione. Disabilitale.' },
-            { id: 'gray', label: 'Modalità Grayscale', status: 'disabled', correctStatus: 'enabled', feedback: 'Rende il telefono noioso, riducendo la voglia di scrollare.' },
-            { id: 'limit', label: 'App Limit (30 min/day)', status: 'disabled', correctStatus: 'enabled', feedback: 'Metti un freno automatico.' },
-            { id: 'bed', label: 'Telefono sul comodino', status: 'enabled', correctStatus: 'disabled', feedback: 'Il telefono in camera disturba il sonno e invita allo scrolling notturno.' },
-            { id: 'streak', label: 'Snapchat Streaks', status: 'enabled', correctStatus: 'disabled', feedback: 'È solo un numero per manipolarti. Ignoralo.' }
-        ]
-    }
+
 };

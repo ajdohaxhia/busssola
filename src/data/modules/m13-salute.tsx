@@ -103,15 +103,5 @@ export const m13: ModuleContent = {
             )
         }
     ],
-    game: {
-        type: 'classifier',
-        objective: 'Bilancia il tuo benessere. Distingui tra abitudini tossiche e salutari.',
-        data: [
-            { id: '1', type: 'text', content: "Controllare Instagram appena svegli prima ancora di scendere dal letto.", correct: 'unsafe', explanation: 'Questo imposta il tuo cervello in modalità reattiva e confronto sociale fin dal primo minuto della giornata.' },
-            { id: '2', type: 'text', content: "Usare un filtro per nascondere un brufolo in una storia divertente.", correct: 'safe', explanation: 'Un uso sporadico e consapevole per divertimento non è dannoso, purché tu accetti il tuo viso reale.' },
-            { id: '3', type: 'text', content: "Sentire ansia se non rispondi immediatamente a un messaggio WhatsApp.", correct: 'unsafe', explanation: 'È un segnale di iper-vigilanza digitale. Hai il diritto di rispondere quando sei pronto.' },
-            { id: '4', type: 'text', content: "Guardare video di gattini per rilassarsi 10 minuti dopo lo studio.", correct: 'safe', explanation: 'Il digitale può essere uno strumento di relax positivo se limitato nel tempo.' },
-            { id: '5', type: 'text', content: "Scorrere i commenti di un post politico per 2 ore di fila arrabbiandosi.", correct: 'unsafe', explanation: 'È doomscrolling/rage-baiting. Distrugge la tua energia mentale senza produrre nulla di utile.' }
-        ]
-    }
+
 };

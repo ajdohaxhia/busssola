@@ -350,7 +350,7 @@ export const SCUOLA_MODULE: Module = {
             resources: [{ title: 'MIUR', url: 'https://www.miur.gov.it', description: 'Ministero Istruzione.' }]
         }
     ],
-    games: [{ id: 'school-safety', title: 'School Safety Quiz', description: 'Verifica le tue conoscenze sulla sicurezza scolastica.', type: 'scenario' }],
-    tips: ['Separa account scolastico e personale.', 'Non condividere link delle lezioni.', 'Usa solo canali ufficiali con i docenti.'],
-    resources: [{ title: 'MIUR', url: 'https://www.miur.gov.it', description: 'Ministero dell\'Istruzione.' }]
+
+    tips: [],
+    resources: []
 }

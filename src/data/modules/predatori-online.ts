@@ -1171,14 +1171,6 @@ export const PREDATORI_ONLINE_MODULE: Module = {
             ]
         }
     ],
-    games: [
-        {
-            id: 'predator-scenario',
-            title: 'Predator Hunter',
-            description: 'Analizza chat reali e identifica i tentativi di manipolazione.',
-            type: 'scenario'
-        }
-    ],
     tips: [
         'Non accettare mai regali da sconosciuti online.',
         'Copri la webcam quando non la usi.',

@@ -63,14 +63,5 @@ export const m12: ModuleContent = {
             )
         }
     ],
-    game: {
-        type: 'classifier',
-        objective: 'Scegli gli strumenti giusti per la privacy e la libertà.',
-        data: [
-            { id: '1', type: 'text', content: "Vuoi chattare con un giornalista in modo sicuro al 100%.", correct: 'safe', explanation: 'Usa Signal. Ha la crittografia end-to-end più affidabile e non salva metadati.' },
-            { id: '2', type: 'text', content: "Vuoi navigare senza che l'ISP o la scuola vedano i siti.", correct: 'safe', explanation: 'Usa Tor Browser o una VPN affidabile.' },
-            { id: '3', type: 'text', content: "Usi la chat di Facebook per organizzare una protesta.", correct: 'unsafe', explanation: 'Facebook non è privato. I metadati sono visibili e possono essere richiesti dalle autorità.' },
-            { id: '4', type: 'text', content: "Usi la modalità 'Incognito' di Chrome per essere anonimo.", correct: 'unsafe', explanation: 'Falso mito! Incognito non ti rende anonimo. Nasconde solo la cronologia sul TUO computer, non alla rete.' }
-        ]
-    }
+
 };

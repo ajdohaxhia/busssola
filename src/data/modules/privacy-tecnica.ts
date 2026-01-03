@@ -543,14 +543,6 @@ export const PRIVACY_TECNICA_MODULE: Module = {
             resources: [{ title: 'Privacy Guides', url: 'https://privacyguides.org', description: 'La risorsa definitiva.' }]
         }
     ],
-    games: [
-        {
-            id: 'privacy-defender',
-            title: 'Privacy Defender',
-            description: 'Ripara le configurazioni di privacy di 5 browser compromessi.',
-            type: 'scenario'
-        }
-    ],
     tips: [
         'Cambia le password ogni 6 mesi, anche se non ci sono state violazioni.',
         'Non usare mai lo stesso DNS del tuo provider internet.',

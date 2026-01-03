@@ -363,7 +363,7 @@ export const AI_DEEPFAKE_MODULE: Module = {
             resources: [{ title: 'AI Safety', url: 'https://www.safe.ai', description: 'Center for AI Safety.' }]
         }
     ],
-    games: [{ id: 'deepfake-detector', title: 'Deepfake Detector', description: 'Impara a riconoscere contenuti AI.', type: 'detector' }],
-    tips: ['Mai fidarsi ciecamente di video/audio.', 'Verifica sempre le fonti.', 'Limita foto pubbliche del viso.'],
-    resources: [{ title: 'MIT AI Ethics', url: 'https://www.media.mit.edu/', description: 'Ricerca MIT su AI.' }]
+
+    tips: [],
+    resources: []
 }

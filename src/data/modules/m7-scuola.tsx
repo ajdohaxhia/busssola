@@ -76,14 +76,5 @@ export const m7: ModuleContent = {
             )
         }
     ],
-    game: {
-        type: 'classifier',
-        objective: 'Valuta comportamenti in ambiente scolastico digitale.',
-        data: [
-            { id: '1', type: 'text', content: "Il Prof ti scrive su Instagram alle 23:00: 'Ehi, come stai?'", correct: 'unsafe', explanation: 'Comportamento inappropriato. I prof devono usare canali ufficiali.' },
-            { id: '2', type: 'text', content: "Zoom call. Ti chiedono di mostrare la tua camera per 'conoscerci meglio'.", correct: 'unsafe', explanation: 'Violazione della privacy. Usa lo sfondo virtuale.' },
-            { id: '3', type: 'text', content: "Compagno chiede screenshot del registro elettronico con i voti di tutti.", correct: 'unsafe', explanation: 'È illegale diffondere i dati (voti) degli altri.' },
-            { id: '4', type: 'text', content: "Usi ChatGPT per farti spiegare un concetto di storia difficile.", correct: 'safe', explanation: 'Ottimo uso! È come un tutor personale. Basta non copiare il testo per il tema.' }
-        ]
-    }
+
 };

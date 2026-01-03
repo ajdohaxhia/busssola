@@ -2,7 +2,7 @@
 
 import { useMemo } from 'react'
 import { motion, Variants } from 'framer-motion'
-import { Play, Trophy, Flame, Target, ChevronRight, Lock, Eye, Shield, Zap, Gamepad2, Compass, Sparkles } from 'lucide-react'
+import { Play, ChevronRight, Lock, Eye, Shield, Zap, Compass, Sparkles } from 'lucide-react'
 import Link from 'next/link'
 import { useGameStore } from '@/store/useGameStore'
 import { cn } from '@/lib/utils'
@@ -12,10 +12,7 @@ import { Button } from '@/components/ui/Button'
 import { ALL_MODULES } from '@/data/modules/index'
 
 export default function Dashboard() {
-  const { totalXP, tier, modules, achievements } = useGameStore()
-
-  // Calculate streak (mock)
-  const streak = 3
+  const { modules } = useGameStore()
 
   // Get recommended module
   const recommendedModule = useMemo(() => {
@@ -25,32 +22,6 @@ export default function Dashboard() {
     })
     return incomplete || ALL_MODULES[0]
   }, [modules])
-
-  // Get featured game
-  const featuredGame = useMemo(() => {
-    const games: Array<{ id: string; title: string; description: string; moduleId: string; moduleTitle: string; icon: string }> = []
-    ALL_MODULES.slice(0, 5).forEach(m => {
-      if (m.games && m.games.length > 0) {
-        const game = m.games[0]
-        games.push({
-          id: game.id,
-          title: game.title,
-          description: game.description,
-          moduleId: m.id,
-          moduleTitle: m.title,
-          icon: m.icon || '🎮'
-        })
-      }
-    })
-    return games[Math.floor(Math.random() * games.length)] || games[0]
-  }, [])
-
-  // Daily goal mock
-  const dailyGoal = {
-    current: Object.keys(modules).length % 4,
-    target: 3,
-    label: "lezioni"
-  }
 
   // Animation variants
   const containerVariants = {
@@ -90,7 +61,7 @@ export default function Dashboard() {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0e27]/50 to-[#0a0e27]" />
         </div>
 
-        <div className="relative z-10 p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-12">
+        <div className="relative z-10 p-8 md:p-16 flex flex-col items-start justify-center text-left">
           <div className="space-y-8 max-w-2xl">
             {/* Brand Badge */}
             <motion.div
@@ -128,38 +99,19 @@ export default function Dashboard() {
               transition={{ delay: 0.5 }}
               className="flex flex-wrap gap-4 pt-4"
             >
-              <Link href={`/moduli/${recommendedModule?.id || 'predatori-online'}`}>
-                <Button size="lg" variant="cyan" className="rounded-2xl text-lg px-8 shadow-neon hover:scale-105 transition-transform">
+              <Button asChild size="lg" variant="cyan" className="rounded-2xl text-lg px-8 shadow-neon hover:scale-105 transition-transform">
+                <Link href={`/moduli/${recommendedModule?.id || 'predatori-online'}`}>
                   <Play className="w-5 h-5 fill-current mr-2" />
                   Inizia Ora
-                </Button>
-              </Link>
-              <Link href="/moduli">
-                <Button size="lg" variant="outline" className="rounded-2xl text-lg px-8 border-white/20 hover:bg-white/5">
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="rounded-2xl text-lg px-8 border-white/20 hover:bg-white/5">
+                <Link href="/moduli">
                   Esplora Moduli
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </motion.div>
           </div>
-
-          {/* 3D Glass Stats */}
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.6, type: "spring" }}
-            className="relative w-64 h-64 md:w-80 md:h-80"
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/30 to-neon-purple/30 rounded-[3rem] rotate-6 blur-md opacity-50" />
-            <div className="absolute inset-0 glass-card rounded-[3rem] flex flex-col items-center justify-center p-8 border border-white/20 shadow-2xl backdrop-blur-2xl">
-              <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-neon-purple to-neon-cyan flex items-center justify-center mb-6 shadow-lg">
-                <Trophy className="w-10 h-10 text-white fill-white/20" />
-              </div>
-              <div className="text-center space-y-2">
-                <div className="text-5xl font-display font-bold text-white">{totalXP}</div>
-                <div className="text-xs text-white/40 uppercase tracking-[0.3em] font-bold">Punti Esperienza</div>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </motion.section>
 
@@ -168,81 +120,10 @@ export default function Dashboard() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6"
+        className="grid grid-cols-1 gap-6"
       >
-        {/* Daily Goal (Start Small) */}
-        <motion.div variants={itemVariants} className="lg:col-span-4">
-          <Card className="h-full flex flex-col justify-between p-8 bg-gradient-to-br from-white/5 to-transparent border-white/10" hoverEffect>
-            <div className="flex justify-between items-start">
-              <div className="w-12 h-12 rounded-2xl bg-neon-pink/10 flex items-center justify-center text-neon-pink">
-                <Target className="w-6 h-6" />
-              </div>
-              <span className="font-mono text-neon-pink bg-neon-pink/10 px-3 py-1 rounded-full text-xs font-bold">
-                Daily Goal
-              </span>
-            </div>
-            <div className="space-y-4">
-              <div className="flex justify-between items-end">
-                <h3 className="text-2xl font-bold text-white">{dailyGoal.current}/{dailyGoal.target}</h3>
-                <span className="text-white/40 text-sm">lezioni completate</span>
-              </div>
-              <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
-                <motion.div
-                  initial={{ width: 0 }}
-                  animate={{ width: `${(dailyGoal.current / dailyGoal.target) * 100}%` }}
-                  transition={{ duration: 1, delay: 0.8 }}
-                  className="h-full bg-gradient-to-r from-neon-pink to-neon-purple"
-                />
-              </div>
-            </div>
-          </Card>
-        </motion.div>
-
-        {/* Streak (Small) */}
-        <motion.div variants={itemVariants} className="lg:col-span-3">
-          <Card className="h-full p-8 flex flex-col justify-center items-center text-center bg-gradient-to-b from-neon-orange/5 to-transparent" hoverEffect>
-            <div className="w-16 h-16 rounded-full bg-neon-orange/10 flex items-center justify-center text-neon-orange mb-4 shadow-[0_0_30px_rgba(255,149,0,0.2)]">
-              <Flame className="w-8 h-8 fill-current animate-pulse" />
-            </div>
-            <div className="text-4xl font-display font-bold text-white mb-1">{streak}</div>
-            <div className="text-xs text-white/40 uppercase tracking-widest">Giorni di fila</div>
-          </Card>
-        </motion.div>
-
-        {/* Featured Game (Medium Wide) */}
-        <motion.div variants={itemVariants} className="lg:col-span-5">
-          <Link href="/gioca" className="block h-full group">
-            <Card className="h-full p-0 relative overflow-hidden group-hover:border-neon-cyan/50 transition-colors" hoverEffect>
-              <div className="absolute inset-0 bg-gradient-to-r from-neon-cyan/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-
-              <div className="relative z-10 p-8 flex flex-col justify-between h-full">
-                <div className="flex items-start justify-between">
-                  <div className="px-3 py-1 rounded-lg bg-neon-cyan/10 text-neon-cyan text-xs font-bold border border-neon-cyan/20">
-                    IN EVIDENZA
-                  </div>
-                  <Gamepad2 className="w-6 h-6 text-white/20 group-hover:text-neon-cyan transition-colors" />
-                </div>
-
-                <div className="flex items-end gap-6">
-                  <div className="flex-1 space-y-2">
-                    <div className="flex items-center gap-2 text-white/60 text-xs uppercase tracking-wider">
-                      <span>{featuredGame?.moduleTitle}</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-neon-cyan transition-colors line-clamp-1">
-                      {featuredGame?.title}
-                    </h3>
-                  </div>
-                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-neon-cyan group-hover:text-dark-bg transition-colors">
-                    <Play className="w-5 h-5 fill-current" />
-                  </div>
-                </div>
-              </div>
-            </Card>
-          </Link>
-        </motion.div>
-
         {/* Categories (Full Row) */}
-        <motion.div variants={itemVariants} className="lg:col-span-12 mt-4">
+        <motion.div variants={itemVariants}>
           <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
             <Sparkles className="w-6 h-6 text-neon-yellow" />
             <span>Percorsi Rapidi</span>

@@ -42,7 +42,6 @@ export default function LessonReader() {
         completeLesson(module.id, currentLesson.id)
 
         toast.success(`Lezione Completata!`, {
-            description: '+10 XP guadagnati.',
             position: 'top-center',
             duration: 2000
         })

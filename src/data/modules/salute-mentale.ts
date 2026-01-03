@@ -350,7 +350,7 @@ export const SALUTE_MENTALE_MODULE: Module = {
             resources: [{ title: 'Mental Health Hub', url: 'https://www.mentalhealth.org', description: 'Risorse.' }]
         }
     ],
-    games: [{ id: 'wellbeing-check', title: 'Wellbeing Check', description: 'Valuta il tuo benessere digitale.', type: 'scenario' }],
-    tips: ['Le pause fanno bene.', 'I filtri non sono realtà.', 'Chiedere aiuto è forza.'],
-    resources: [{ title: 'Ministero Salute', url: 'https://www.salute.gov.it/portale/saluteMentale/', description: 'Risorse.' }]
+
+    tips: [],
+    resources: []
 }

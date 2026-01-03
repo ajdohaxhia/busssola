@@ -337,7 +337,7 @@ export const DIRITTI_DIGITALI_MODULE: Module = {
             resources: [{ title: 'Rights Hub', url: 'https://www.accessnow.org', description: 'Centro risorse.' }]
         }
     ],
-    games: [{ id: 'rights-quiz', title: 'Rights Quiz', description: 'Testa le tue conoscenze sui diritti digitali.', type: 'scenario' }],
-    tips: ['I diritti offline valgono online.', 'Puoi chiedere i tuoi dati.', 'L\'anonimato ha valore.'],
-    resources: [{ title: 'EFF', url: 'https://www.eff.org', description: 'Electronic Frontier Foundation.' }]
+
+    tips: [],
+    resources: []
 }

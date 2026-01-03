@@ -363,7 +363,7 @@ export const SOCIAL_ADDICTION_MODULE: Module = {
             resources: [{ title: 'Digital Wellness Institute', url: 'https://www.digitalwellnessinstitute.com', description: 'Risorse.' }]
         }
     ],
-    games: [{ id: 'screen-time-challenge', title: 'Screen Time Challenge', description: 'Riduci il tempo schermo del 20%.', type: 'scenario' }],
-    tips: ['Disattiva tutte le notifiche social.', 'Imposta un limite giornaliero.', 'Non usare il telefono nella prima ora del giorno.'],
-    resources: [{ title: 'Center for Humane Technology', url: 'https://www.humanetech.com', description: 'Risorse per un tech più umano.' }]
+
+    tips: [],
+    resources: []
 }

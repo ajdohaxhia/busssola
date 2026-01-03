@@ -311,7 +311,7 @@ export const IDENTITA_DIGITALE_MODULE: Module = {
             resources: [{ title: 'Identity Hub', url: 'https://www.internetsafety101.org', description: 'Centro risorse.' }]
         }
     ],
-    games: [{ id: 'reputation-builder', title: 'Reputation Builder', description: 'Costruisci la tua reputazione.', type: 'analyzer' }],
-    tips: ['Cercati regolarmente.', 'Crea contenuti positivi.', 'Imposta la privacy.'],
-    resources: [{ title: 'Google Alerts', url: 'https://www.google.com/alerts', description: 'Monitora il tuo nome.' }]
+
+    tips: [],
+    resources: []
 }

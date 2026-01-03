@@ -70,14 +70,5 @@ export const m9: ModuleContent = {
             )
         }
     ],
-    game: {
-        type: 'classifier',
-        objective: 'Reale o AI? Analizza gli indizi.',
-        data: [
-            { id: '1', type: 'text', content: "Foto: Una persona con 6 dita in una mano.", correct: 'unsafe', explanation: 'AI error classico. Midjourney e DALL-E spesso sbagliano le mani.' },
-            { id: '2', type: 'text', content: "Audio: Una chiamata dal 'CEO' che chiede soldi con voce metallica e senza pause.", correct: 'unsafe', explanation: 'Voice Cloning. La mancanza di pause naturali è un indizio.' },
-            { id: '3', type: 'text', content: "Video: Obama dice una cosa controversa, ma la bocca si muove leggermente fuori sincrono.", correct: 'unsafe', explanation: 'Problema di lip-sync tipico dei deepfake video economici.' },
-            { id: '4', type: 'text', content: "Foto: Testo su un cartello stradale è 'Xjh%aa @11'.", correct: 'unsafe', explanation: 'AI struggle con il testo coerente.' }
-        ]
-    }
+
 };

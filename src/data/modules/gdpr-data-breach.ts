@@ -389,7 +389,7 @@ export const GDPR_MODULE: Module = {
             resources: [{ title: 'GDPR.eu', url: 'https://gdpr.eu', description: 'Risorsa completa.' }]
         }
     ],
-    games: [{ id: 'gdpr-defender', title: 'GDPR Defender', description: 'Esercita i tuoi diritti in scenari reali.', type: 'scenario' }],
-    tips: ['Controlla regolarmente haveibeenpwned.', 'Usa password uniche per limitare i danni di un breach.', 'Esercita i tuoi diritti: le aziende devono rispondere.'],
-    resources: [{ title: 'Garante Privacy', url: 'https://www.garanteprivacy.it', description: 'Autorità italiana protezione dati.' }]
+
+    tips: [],
+    resources: []
 }

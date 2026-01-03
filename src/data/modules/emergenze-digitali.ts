@@ -272,7 +272,7 @@ export const EMERGENZE_MODULE: Module = {
             resources: [{ title: 'Emergency Hub', url: 'https://www.commissariatodips.it', description: 'Centro risorse.' }]
         }
     ],
-    games: [{ id: 'emergency-response', title: 'Emergency Response', description: 'Simula risposte a emergenze.', type: 'scenario' }],
-    tips: ['Prepara prima.', 'Mai pagare ricatti.', 'Denuncia sempre.'],
-    resources: [{ title: 'Polizia Postale', url: 'https://www.commissariatodips.it', description: 'Emergenze.' }]
+
+    tips: [],
+    resources: []
 }

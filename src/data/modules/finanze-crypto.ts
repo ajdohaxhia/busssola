@@ -402,7 +402,7 @@ export const FINANZE_MODULE: Module = {
             resources: [{ title: 'Educazione Finanziaria', url: 'https://www.quellocheconta.gov.it', description: 'Portale governo.' }]
         }
     ],
-    games: [{ id: 'scam-detector', title: 'Scam Detector', description: 'Riconosci le truffe finanziarie.', type: 'detector' }],
-    tips: ['Mai credere a guadagni facili.', 'Non pagare mai per lavorare.', 'La banca non chiede mai password.'],
-    resources: [{ title: 'Banca d\'Italia', url: 'https://www.bancaditalia.it', description: 'Educazione finanziaria.' }]
+
+    tips: [],
+    resources: []
 }

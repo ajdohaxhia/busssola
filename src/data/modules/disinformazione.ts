@@ -337,7 +337,7 @@ export const DISINFORMAZIONE_MODULE: Module = {
             resources: [{ title: 'Truth Hub', url: 'https://firstdraftnews.org', description: 'Centro risorse.' }]
         }
     ],
-    games: [{ id: 'fake-detector', title: 'Fake News Detector', description: 'Identifica le notizie false.', type: 'detector' }],
-    tips: ['Verifica sempre.', 'Guarda oltre il titolo.', 'Segui fonti diverse.'],
-    resources: [{ title: 'First Draft', url: 'https://firstdraftnews.org', description: 'Risorse.' }]
+
+    tips: [],
+    resources: []
 }

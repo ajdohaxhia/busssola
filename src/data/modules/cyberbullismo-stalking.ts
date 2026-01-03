@@ -376,7 +376,7 @@ export const CYBERBULLISMO_MODULE: Module = {
             resources: [{ title: 'Cyberbullismo.com', url: 'https://www.cyberbullismo.com', description: 'Portale italiano.' }]
         }
     ],
-    games: [{ id: 'bullismo-analyzer', title: 'Bullismo Analyzer', description: 'Identifica le forme di cyberbullismo.', type: 'analyzer' }],
-    tips: ['Mai rispondere alle provocazioni.', 'Documenta sempre prima di bloccare.', 'Parlare con un adulto non è debolezza.'],
-    resources: [{ title: 'Telefono Azzurro', url: 'https://azzurro.it', description: '19696 - Linea gratuita.' }]
+
+    tips: [],
+    resources: []
 }

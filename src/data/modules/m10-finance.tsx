@@ -65,14 +65,5 @@ export const m10: ModuleContent = {
             )
         }
     ],
-    game: {
-        type: 'classifier',
-        objective: 'Investimento o Truffa?',
-        data: [
-            { id: '1', type: 'text', content: "Instagram Ad: 'Guadagna 500€ al giorno da casa con questo bot di trading! 100% garantito.'", correct: 'unsafe', explanation: 'Garantito = Truffa. Sempre.' },
-            { id: '2', type: 'text', content: "TikTok: 'Questa coin andrà sulla luna! Comprate ORA prima che sia tardi! #ad'", correct: 'unsafe', explanation: 'Classico Pump & Dump. L\'hashtag #ad significa che è pagato per dirtelo.' },
-            { id: '3', type: 'text', content: "Messaggio: 'Hai vinto 1 Bitcoin! Clicca qui e paga 50€ di tasse per ritirarlo.'", correct: 'unsafe', explanation: 'Fee advance scam. Non hai vinto nulla, vogliono solo i 50€.' },
-            { id: '4', type: 'text', content: "Banca: Acquisto ETF su piattaforma regolamentata con rischio variabile.", correct: 'safe', explanation: 'Questo è un investimento reale. Si parla di rischio, non di garanzie.' }
-        ]
-    }
+
 };

@@ -37,13 +37,6 @@ export interface Lesson {
     resources: Resource[]
 }
 
-export interface Game {
-    id: string
-    title: string
-    description: string
-    type: 'scenario' | 'chatbot' | 'analyzer' | 'detector' | 'recognizer' | 'quiz' | 'classifier' | 'inspector' | 'malware' | 'mood' | 'phishing'
-}
-
 export interface Module {
     id: string
     number: number
@@ -55,7 +48,6 @@ export interface Module {
     themeColor: string // Tailwind color token
     icon: string // Lucide icon name
     lessons: Lesson[]
-    games: Game[]
     tips: string[]
     resources: Resource[]
 }

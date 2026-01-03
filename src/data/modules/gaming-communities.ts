@@ -350,7 +350,7 @@ export const GAMING_MODULE: Module = {
             resources: [{ title: 'Gaming Safety', url: 'https://www.esrb.org/tools-for-parents/', description: 'ESRB.' }]
         }
     ],
-    games: [{ id: 'gaming-safety-quiz', title: 'Gaming Safety Quiz', description: 'Testa le tue conoscenze sulla sicurezza nel gaming.', type: 'scenario' }],
-    tips: ['Attiva 2FA su tutte le piattaforme.', 'Non rivelare info personali in chat.', 'Muta i giocatori tossici.'],
-    resources: [{ title: 'ESA Game Safety', url: 'https://www.theesa.com', description: 'Entertainment Software Association.' }]
+
+    tips: [],
+    resources: []
 }

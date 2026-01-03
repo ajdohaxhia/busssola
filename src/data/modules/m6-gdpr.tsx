@@ -71,15 +71,5 @@ export const m6: ModuleContent = {
             )
         }
     ],
-    game: {
-        type: 'inspector',
-        objective: 'Esercita i tuoi diritti e configura la privacy dei dati.',
-        data: [
-            { id: 'access', label: 'Richiesta Download Dati (GDPR)', status: 'disabled', correctStatus: 'enabled', feedback: 'Fallo ogni tanto per vedere cosa sanno di te.' },
-            { id: 'loc', label: 'Cronologia Posizioni Google', status: 'enabled', correctStatus: 'disabled', feedback: 'Google registra ogni tuo passo. Disabilita la History.' },
-            { id: 'bday', label: 'Data Nascita Reale (su Forum pubblico)', status: 'enabled', correctStatus: 'disabled', feedback: 'Usa una data falsa per profili non ufficiali. È un dato identificativo.' },
-            { id: 'cookie', label: 'Cookie Terze Parti', status: 'enabled', correctStatus: 'disabled', feedback: 'Servono solo a tracciarti tra un sito e l\'altro.' },
-            { id: 'login', label: 'Login with Facebook', status: 'enabled', correctStatus: 'disabled', feedback: 'Comodo, ma dà a Facebook dati su tutto ciò che fai altrove.' }
-        ]
-    }
+
 };

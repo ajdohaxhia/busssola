@@ -77,15 +77,5 @@ export const m2: ModuleContent = {
             )
         }
     ],
-    game: {
-        type: 'inspector',
-        objective: 'Configura correttamente le impostazioni di privacy del dispositivo.',
-        data: [
-            { id: 'gps', label: 'Posizione GPS (Sempre attiva)', status: 'enabled', correctStatus: 'disabled', feedback: 'Tieni il GPS spento quando non usi mappe. Le app vendono la tua posizione.' },
-            { id: 'dns', label: 'DNS Automatico (ISP)', status: 'enabled', correctStatus: 'disabled', feedback: 'Usa DNS cifrati (es. 9.9.9.9) per evitare il tracking del provider.' },
-            { id: '2fa', label: '2FA via SMS', status: 'enabled', correctStatus: 'disabled', feedback: 'Gli SMS sono intercettabili (SIM Swap). Usa un\'app Authenticator o una chiave hardware.' },
-            { id: 'mic', label: 'Permesso Microfono (Tutte le app)', status: 'enabled', correctStatus: 'disabled', feedback: 'Nessuna app dovrebbe ascoltarti sempre. Disabilita.' },
-            { id: 'pw', label: 'Password Manager attivo', status: 'disabled', correctStatus: 'enabled', feedback: 'Essenziale per avere password uniche ovunque.' }
-        ]
-    }
+
 };
