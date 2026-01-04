@@ -4,17 +4,23 @@ import { motion, HTMLMotionProps } from "framer-motion"
 
 interface CardProps extends HTMLMotionProps<"div"> {
     hoverEffect?: boolean
+    glowColor?: 'cyan' | 'purple' | 'pink' | 'none'
 }
 
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
-    ({ className, hoverEffect = false, ...props }, ref) => (
+    ({ className, hoverEffect = false, glowColor = 'none', ...props }, ref) => (
         <motion.div
             ref={ref}
             initial={hoverEffect ? { y: 0 } : undefined}
-            whileHover={hoverEffect ? { y: -5, boxShadow: "0 20px 40px rgba(0,0,0,0.4)" } : undefined}
-            transition={{ duration: 0.3 }}
+            whileHover={hoverEffect ? {
+                y: -4,
+                transition: { type: "spring", stiffness: 300, damping: 20 }
+            } : undefined}
             className={cn(
-                "glass-card rounded-[1.5rem]", // Using global glass-card utility
+                "glass-card rounded-[1.5rem]",
+                glowColor === 'cyan' && 'hover:glow-cyan',
+                glowColor === 'purple' && 'hover:glow-purple',
+                glowColor === 'pink' && 'hover:glow-pink',
                 className
             )}
             {...props}
