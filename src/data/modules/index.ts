@@ -18,6 +18,12 @@ import { IDENTITA_DIGITALE_MODULE } from './identita-digitale'
 import { COMUNICAZIONE_DIGITALE_MODULE } from './comunicazione-digitale'
 import { EMERGENZE_MODULE } from './emergenze-digitali'
 
+import { SICUREZZA_VIAGGIO_MODULE } from './sicurezza-viaggio'
+import { SICUREZZA_DOMESTICA_MODULE } from './sicurezza-domestica'
+import { LAVORO_REMOTO_MODULE } from './lavoro-remoto'
+import { SMARTPHONE_HARDENING_MODULE } from './smartphone-hardening'
+import { EREDITA_DIGITALE_MODULE } from './eredita-digitale'
+
 export const MODULES_DATA = [
     PREDATORI_ONLINE_MODULE,
     PRIVACY_TECNICA_MODULE,
@@ -38,6 +44,11 @@ export const MODULES_DATA = [
     IDENTITA_DIGITALE_MODULE,
     COMUNICAZIONE_DIGITALE_MODULE,
     EMERGENZE_MODULE,
+    SICUREZZA_VIAGGIO_MODULE,
+    SICUREZZA_DOMESTICA_MODULE,
+    LAVORO_REMOTO_MODULE,
+    SMARTPHONE_HARDENING_MODULE,
+    EREDITA_DIGITALE_MODULE,
 ]
 
 
