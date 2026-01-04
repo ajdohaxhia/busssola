@@ -2,12 +2,11 @@
 
 import { useState, useEffect } from 'react'
 import { useGameStore } from '@/store/useGameStore'
-import { Sun, Moon, Zap, Trophy } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { cn } from '@/lib/utils'
+import { Sun, Moon } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 export function HeaderSafe() {
-    const { totalXP, tier, theme, setTheme } = useGameStore()
+    const { theme, setTheme } = useGameStore()
     const [isVisible, setIsVisible] = useState(true)
     const [lastScrollY, setLastScrollY] = useState(0)
 
@@ -41,24 +40,6 @@ export function HeaderSafe() {
         >
             <div className="flex justify-end pointer-events-auto">
                 <div className="glass-thin rounded-2xl px-4 py-2 flex items-center gap-4">
-                    {/* Tier Badge */}
-                    <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10">
-                        <div className="relative">
-                            <div className="w-2 h-2 rounded-full bg-neon-cyan shadow-[0_0_10px_#00f5ff] animate-pulse" />
-                            <div className="absolute inset-0 bg-neon-cyan/50 rounded-full animate-ping" />
-                        </div>
-                        <span className="text-[10px] font-bold text-white/60 uppercase tracking-widest">Rank</span>
-                        <span className="text-xs font-bold text-white uppercase ml-1">{tier}</span>
-                    </div>
-
-                    {/* XP Counter */}
-                    <div className="flex items-center gap-3 px-3 py-1.5 rounded-xl bg-neon-purple/10 border border-neon-purple/20 text-neon-purple shadow-[0_0_15px_rgba(124,58,237,0.2)]">
-                        <Zap className="w-4 h-4 fill-current" />
-                        <span className="font-mono font-bold text-sm tracking-tighter">{totalXP} XP</span>
-                    </div>
-
-                    <div className="w-px h-6 bg-white/10" />
-
                     {/* Theme Toggle */}
                     <button
                         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}

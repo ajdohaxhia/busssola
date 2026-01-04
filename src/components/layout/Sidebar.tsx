@@ -4,14 +4,12 @@ import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
-import { Home, LayoutGrid, User, HelpCircle, Gamepad2, Settings, Shield } from 'lucide-react'
+import { Home, LayoutGrid, HelpCircle, Settings, Shield } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const NAV_ITEMS = [
     { icon: Home, label: 'Dashboard', href: '/' },
-    { icon: Gamepad2, label: 'Gioca', href: '/gioca' },
     { icon: LayoutGrid, label: 'Moduli', href: '/moduli' },
-    { icon: User, label: 'Profilo', href: '/profilo' },
     { icon: HelpCircle, label: 'Aiuto', href: '/aiuto' },
 ]
 
