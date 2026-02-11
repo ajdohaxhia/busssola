@@ -19,48 +19,48 @@ const ModuleCard = memo(({ module, index, progress }: { module: ModuleMetadata, 
             animate={{ opacity: 1, y: 0 }}
             transition={{
                 duration: 0.3,
-                delay: Math.min(index * 0.03, 0.3),
+                delay: Math.min(index * 0.02, 0.3),
                 ease: "easeOut"
             }}
             className={cn(
-                "glass-card rounded-[1.5rem] p-0 overflow-hidden group flex flex-col",
-                "col-span-1 md:col-span-1 lg:col-span-4"
+                "glass-card rounded-2xl p-0 overflow-hidden group flex flex-col aspect-square",
+                "col-span-1"
             )}
         >
-            <Link href={`/moduli/${module.id}`} className="flex-1 flex flex-col relative p-6 h-full">
+            <Link href={`/moduli/${module.id}`} className="flex-1 flex flex-col relative p-4 h-full">
                 <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 <div className="relative z-10 flex flex-col h-full">
-                    <div className="flex justify-between items-start mb-6">
+                    <div className="flex justify-between items-start mb-3">
                         <div className={cn(
-                            "w-12 h-12 rounded-xl flex items-center justify-center transition-transform group-hover:scale-110 shadow-lg",
+                            "w-10 h-10 rounded-xl flex items-center justify-center transition-transform group-hover:scale-110 shadow-lg",
                             "bg-white/5 text-neon-cyan border border-white/10"
                         )}>
-                            <IconComponent className="w-6 h-6" />
+                            <IconComponent className="w-5 h-5" />
                         </div>
 
                         <span className={cn(
-                            "text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded-md border",
+                            "text-[8px] font-bold uppercase tracking-widest px-1.5 py-0.5 rounded-md border",
                             module.difficulty === 'base' ? 'text-neon-green border-neon-green/20' :
                                 module.difficulty === 'intermedia' ? 'text-neon-yellow border-neon-yellow/20' : 'text-neon-pink border-neon-pink/20'
                         )}>
-                            {module.difficulty}
+                            {module.difficulty[0]}
                         </span>
                     </div>
 
-                    <h2 className="text-xl font-display font-bold mb-2 group-hover:text-neon-cyan transition-colors">{module.title}</h2>
-                    <p className="text-white/50 text-sm line-clamp-2 mb-6">{module.subtitle}</p>
+                    <h2 className="text-sm md:text-base font-display font-bold mb-1 line-clamp-2 group-hover:text-neon-cyan transition-colors leading-tight">{module.title}</h2>
+                    <p className="hidden xs:block text-white/40 text-[10px] line-clamp-2 mb-2 leading-tight">{module.subtitle}</p>
 
-                    <div className="mt-auto flex items-center justify-between pt-4 border-t border-white/5">
-                        <div className="flex items-center gap-2 text-xs font-medium text-white/40">
-                            <Icons.BookOpen className="w-4 h-4" />
-                            {module.lessonCount} Lezioni
+                    <div className="mt-auto flex items-center justify-between pt-3 border-t border-white/5">
+                        <div className="flex items-center gap-1.5 text-[10px] font-medium text-white/30">
+                            <Icons.BookOpen className="w-3 h-3" />
+                            {module.lessonCount}
                         </div>
 
                         {progress?.completed ? (
-                            <Icons.CheckCircle2 className="w-5 h-5 text-neon-green" />
+                            <Icons.CheckCircle2 className="w-4 h-4 text-neon-green" />
                         ) : (
-                            <ArrowIcon className="w-4 h-4 text-white/20 group-hover:text-white transition-colors" />
+                            <ArrowIcon className="w-3.5 h-3.5 text-white/10 group-hover:text-white transition-colors" />
                         )}
                     </div>
                 </div>
@@ -131,7 +131,7 @@ export default function ModulesPage() {
             </div>
 
             {/* Modules Grid */}
-            <div className="bento-grid gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
                 {filteredModules.length > 0 ? (
                     filteredModules.map((module, index: number) => (
                         <ModuleCard
