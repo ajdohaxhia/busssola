@@ -31,7 +31,7 @@ export const AI_DEEPFAKE_MODULE: Module = {
             difficulty: 'intermedia',
             learningGoals: ['Capire cosa sono i deepfake.', 'Rischi per la società.'],
             contentMarkdown: `# Deepfake\nVideo e immagini create dall\'AI che sembrano reali:\n- Volti sovrapposti\n- Labbra sincronizzate\n- Voci clonate\n- Interi video inventati`,
-            callouts: [{ type: 'warning', content: 'Nel 2024 è quasi impossibile distinguere un deepfake di qualità.' }],
+            callouts: [{ type: 'warning', content: 'Nel 2026 è quasi impossibile distinguere un deepfake di qualità.' }],
             microExercise: { id: 'ex-2', title: 'Deepfake Search', instruction: 'Cerca "deepfake examples" su YouTube.', task: 'Riesci a distinguerli?' },
             miniQuiz: [{ question: 'I deepfake sono:', options: ['Sempre riconoscibili', 'Spesso indistinguibili dalla realtà', 'Impossibili', 'Solo foto'], correctIndex: 1, explanation: 'La tecnologia è molto avanzata.' }],
             reflectionPrompt: 'Ti fideresti di un video senza verificarlo?',

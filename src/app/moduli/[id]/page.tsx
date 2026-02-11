@@ -177,7 +177,7 @@ export default function ModuleDetail() {
                             </li>
                             <li className="flex justify-between">
                                 <span>Aggiornato</span>
-                                <span className="font-bold text-white">Dic 2024</span>
+                                <span className="font-bold text-white">Feb 2026</span>
                             </li>
                         </ul>
                     </div>
