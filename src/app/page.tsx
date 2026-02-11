@@ -125,7 +125,7 @@ export default function Dashboard() {
           <p className="text-white/60 text-lg">Inizia subito con i moduli più richiesti</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             {
               title: "Predatori",
@@ -166,6 +166,46 @@ export default function Dashboard() {
               borderGlow: "hover:border-neon-green/30",
               glow: "cyan" as const,
               href: "/moduli/ai-deepfake"
+            },
+            {
+              title: "Gaming",
+              desc: "Safe Communities",
+              icon: Compass,
+              color: "text-neon-purple",
+              bg: "bg-neon-purple/10",
+              borderGlow: "hover:border-neon-purple/30",
+              glow: "purple" as const,
+              href: "/moduli/gaming-communities"
+            },
+            {
+              title: "Finanze",
+              desc: "Crypto & Scam",
+              icon: Shield,
+              color: "text-neon-yellow",
+              bg: "bg-neon-yellow/10",
+              borderGlow: "hover:border-neon-yellow/30",
+              glow: "purple" as const,
+              href: "/moduli/finanze-crypto"
+            },
+            {
+              title: "Dati",
+              desc: "GDPR & Privacy",
+              icon: Lock,
+              color: "text-neon-cyan",
+              bg: "bg-neon-cyan/10",
+              borderGlow: "hover:border-neon-cyan/30",
+              glow: "cyan" as const,
+              href: "/moduli/gdpr-data-breach"
+            },
+            {
+              title: "Diritti",
+              desc: "Libertà Online",
+              icon: CheckCircle2,
+              color: "text-neon-green",
+              bg: "bg-neon-green/10",
+              borderGlow: "hover:border-neon-green/30",
+              glow: "cyan" as const,
+              href: "/moduli/diritti-digitali"
             },
           ].map((item, i) => (
             <motion.div key={i} variants={itemVariants}>
