@@ -5,9 +5,7 @@ import { Icon } from '@/components/ui/Icon'
 export default function HelpPage() {
     const faqs = [
         { q: 'I miei dati sono al sicuro?', a: 'Sì, Progetto Bussola opera esclusivamente sul tuo dispositivo. Tutti i progressi sono salvati nel LocalStorage del browser. Nessun dato viene mai inviato a server esterni.' },
-        { q: 'Come posso trasferire i progressi?', a: 'Nella pagina Profilo, usa la funzione "Backup JSON". Scaricherai un file che potrai importare su un altro browser o dispositivo per riprendere da dove avevi lasciato.' },
-        { q: 'Funziona senza internet?', a: 'Assolutamente. Come PWA (Personal Web App), Progetto Bussola scarica i contenuti essenziali alla prima visita, permettendoti di studiare anche in modalità aereo.' },
-        { q: 'Cosa significa "Guardian Digitale"?', a: 'È il grado massimo di consapevolezza. Indica che hai completato la maggior parte dei moduli e dei giochi, dimostrando una conoscenza profonda della sicurezza online.' }
+        { q: 'Funziona senza internet?', a: 'Assolutamente. Come PWA (Personal Web App), Progetto Bussola scarica i contenuti essenziali alla prima visita, permettendoti di studiare anche in modalità aereo.' }
     ]
 
     return (
