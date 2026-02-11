@@ -42,15 +42,6 @@ export function BottomNav() {
                                         isActive && "fill-neon-cyan/20 drop-shadow-[0_0_10px_rgba(0,245,255,0.6)]"
                                     )} />
                                 </div>
-
-                                {isActive && (
-                                    <motion.span
-                                        initial={{ opacity: 0, scale: 0.3 }}
-                                        animate={{ opacity: 1, scale: 1 }}
-                                        transition={{ delay: 0.1 }}
-                                        className="absolute -bottom-1 w-1.5 h-1.5 bg-neon-cyan rounded-full shadow-[0_0_10px_#00f5ff]"
-                                    />
-                                )}
                             </div>
                         </Link>
                     )

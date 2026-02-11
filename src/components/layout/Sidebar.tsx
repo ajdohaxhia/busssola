@@ -65,17 +65,6 @@ export function Sidebar() {
                                         )} />
                                         <span className="font-semibold text-[15px] tracking-wide">{item.label}</span>
 
-                                        {/* Hover/Active Glow Indicator */}
-                                        {isActive && (
-                                            <motion.span
-                                                initial={{ opacity: 0, scale: 0.5 }}
-                                                animate={{ opacity: 1, scale: 1 }}
-                                                className="absolute right-3 w-2 h-2 rounded-full bg-neon-cyan shadow-[0_0_10px_#00f5ff]"
-                                            />
-                                        )}
-                                        {!isActive && (
-                                            <span className="absolute right-3 w-1.5 h-1.5 rounded-full bg-neon-cyan opacity-0 group-hover:opacity-70 transition-opacity shadow-[0_0_8px_#00f5ff]" />
-                                        )}
                                     </div>
                                 </div>
                             </Link>
