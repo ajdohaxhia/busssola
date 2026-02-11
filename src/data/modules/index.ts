@@ -57,6 +57,8 @@ export const MODULES_DATA = [
 
 export const ALL_MODULES = MODULES_DATA
 
+export { MODULES_MAP } from '../modules-meta'
+
 export function getModuleById(id: string) {
     return ALL_MODULES.find(m => m.id === id)
 }

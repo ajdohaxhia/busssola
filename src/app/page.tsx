@@ -100,7 +100,7 @@ export default function Dashboard() {
               className="flex flex-wrap gap-5 pt-6"
             >
               <Button asChild size="lg" variant="cyan" className="rounded-2xl text-lg px-10 shadow-neon hover:shadow-[0_0_40px_rgba(0,245,255,0.5)] hover:scale-105 transition-all">
-                <Link href={`/moduli/${recommendedModule?.id || 'predatori-online'}`}>
+                <Link href="/moduli">
                   <Play className="w-5 h-5 fill-current mr-2" />
                   Inizia Ora
                 </Link>

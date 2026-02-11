@@ -1,14 +1,75 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, memo } from 'react'
 import { motion } from 'framer-motion'
-import { ALL_MODULES } from '@/data/modules/index'
+import { MODULES_MAP } from '@/data/modules/index'
 import Link from 'next/link'
 import * as Icons from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { useGameStore } from '@/store/useGameStore'
-import { Module } from '@/types'
+import { ModuleMetadata } from '@/types'
 import { Container } from '@/components/ui/Container'
+
+const ModuleCard = memo(({ module, index, progress }: { module: ModuleMetadata, index: number, progress: any }) => {
+    const IconComponent = (Icons as any)[module.icon] || Icons.HelpCircle
+
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+                duration: 0.3,
+                delay: Math.min(index * 0.03, 0.3),
+                ease: "easeOut"
+            }}
+            className={cn(
+                "glass-card rounded-[1.5rem] p-0 overflow-hidden group flex flex-col",
+                "col-span-1 md:col-span-1 lg:col-span-4"
+            )}
+        >
+            <Link href={`/moduli/${module.id}`} className="flex-1 flex flex-col relative p-6 h-full">
+                <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                <div className="relative z-10 flex flex-col h-full">
+                    <div className="flex justify-between items-start mb-6">
+                        <div className={cn(
+                            "w-12 h-12 rounded-xl flex items-center justify-center transition-transform group-hover:scale-110 shadow-lg",
+                            "bg-white/5 text-neon-cyan border border-white/10"
+                        )}>
+                            <IconComponent className="w-6 h-6" />
+                        </div>
+
+                        <span className={cn(
+                            "text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded-md border",
+                            module.difficulty === 'base' ? 'text-neon-green border-neon-green/20' :
+                                module.difficulty === 'intermedia' ? 'text-neon-yellow border-neon-yellow/20' : 'text-neon-pink border-neon-pink/20'
+                        )}>
+                            {module.difficulty}
+                        </span>
+                    </div>
+
+                    <h2 className="text-xl font-display font-bold mb-2 group-hover:text-neon-cyan transition-colors">{module.title}</h2>
+                    <p className="text-white/50 text-sm line-clamp-2 mb-6">{module.subtitle}</p>
+
+                    <div className="mt-auto flex items-center justify-between pt-4 border-t border-white/5">
+                        <div className="flex items-center gap-2 text-xs font-medium text-white/40">
+                            <Icons.BookOpen className="w-4 h-4" />
+                            {module.lessonCount} Lezioni
+                        </div>
+
+                        {progress?.completed ? (
+                            <Icons.CheckCircle2 className="w-5 h-5 text-neon-green" />
+                        ) : (
+                            <ArrowIcon className="w-4 h-4 text-white/20 group-hover:text-white transition-colors" />
+                        )}
+                    </div>
+                </div>
+            </Link>
+        </motion.div>
+    )
+})
+
+ModuleCard.displayName = 'ModuleCard'
 
 export default function ModulesPage() {
     const { modules: progress } = useGameStore() as { modules: Record<string, any> }
@@ -16,7 +77,7 @@ export default function ModulesPage() {
     const [selectedDifficulty, setSelectedDifficulty] = useState<'all' | 'base' | 'intermedia' | 'avanzata'>('all')
 
     const filteredModules = useMemo(() => {
-        return ALL_MODULES.filter(module => {
+        return MODULES_MAP.filter(module => {
             const matchesSearch = module.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 module.description.toLowerCase().includes(searchQuery.toLowerCase())
             const matchesDifficulty = selectedDifficulty === 'all' || module.difficulty.toLowerCase() === selectedDifficulty
@@ -72,66 +133,14 @@ export default function ModulesPage() {
             {/* Modules Grid */}
             <div className="bento-grid gap-6">
                 {filteredModules.length > 0 ? (
-                    filteredModules.map((module: Module, index: number) => {
-                        const IconComponent = (Icons as any)[module.icon] || Icons.HelpCircle
-                        const moduleProgress = progress[module.id] || { completed: false, xp: 0 }
-
-                        // Dynamic class for grid spanning if needed, currently uniform
-                        const isFeatured = false
-
-                        return (
-                            <motion.div
-                                key={module.id}
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ delay: index * 0.05 }}
-                                className={cn(
-                                    "glass-card rounded-[1.5rem] p-0 overflow-hidden group flex flex-col",
-                                    "col-span-1 md:col-span-1 lg:col-span-4" // Consistent sizing typically requires 12-col grid logic
-                                )}
-                            >
-                                <Link href={`/moduli/${module.id}`} className="flex-1 flex flex-col relative p-6 h-full">
-                                    {/* Hover Gradient */}
-                                    <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                                    <div className="relative z-10 flex flex-col h-full">
-                                        <div className="flex justify-between items-start mb-6">
-                                            <div className={cn(
-                                                "w-12 h-12 rounded-xl flex items-center justify-center transition-transform group-hover:scale-110 shadow-lg",
-                                                "bg-white/5 text-neon-cyan border border-white/10"
-                                            )}>
-                                                <IconComponent className="w-6 h-6" />
-                                            </div>
-
-                                            <span className={cn(
-                                                "text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded-md border",
-                                                module.difficulty === 'base' ? 'text-neon-green border-neon-green/20' :
-                                                    module.difficulty === 'intermedia' ? 'text-neon-yellow border-neon-yellow/20' : 'text-neon-pink border-neon-pink/20'
-                                            )}>
-                                                {module.difficulty}
-                                            </span>
-                                        </div>
-
-                                        <h2 className="text-xl font-display font-bold mb-2 group-hover:text-neon-cyan transition-colors">{module.title}</h2>
-                                        <p className="text-white/50 text-sm line-clamp-2 mb-6">{module.subtitle}</p>
-
-                                        <div className="mt-auto flex items-center justify-between pt-4 border-t border-white/5">
-                                            <div className="flex items-center gap-2 text-xs font-medium text-white/40">
-                                                <Icons.BookOpen className="w-4 h-4" />
-                                                {module.lessons.length} Lezioni
-                                            </div>
-
-                                            {moduleProgress.completed ? (
-                                                <Icons.CheckCircle2 className="w-5 h-5 text-neon-green" />
-                                            ) : (
-                                                <ArrowIcon className="w-4 h-4 text-white/20 group-hover:text-white transition-colors" />
-                                            )}
-                                        </div>
-                                    </div>
-                                </Link>
-                            </motion.div>
-                        )
-                    })
+                    filteredModules.map((module, index: number) => (
+                        <ModuleCard
+                            key={module.id}
+                            module={module}
+                            index={index}
+                            progress={progress[module.id]}
+                        />
+                    ))
                 ) : (
                     <div className="col-span-full py-20 text-center">
                         <Icons.SearchX className="w-12 h-12 text-white/20 mx-auto mb-4" />

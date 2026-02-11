@@ -37,16 +37,20 @@ export interface Lesson {
     resources: Resource[]
 }
 
-export interface Module {
+export interface ModuleMetadata {
     id: string
     number: number
     title: string
     subtitle: string
     description: string
     difficulty: Difficulty
+    themeColor: string
+    icon: string
+    lessonCount: number
+}
+
+export interface Module extends Omit<ModuleMetadata, 'lessonCount'> {
     durationHours: number
-    themeColor: string // Tailwind color token
-    icon: string // Lucide icon name
     lessons: Lesson[]
     tips: string[]
     resources: Resource[]
