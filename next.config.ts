@@ -18,6 +18,9 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  images: {
+    unoptimized: true, // Required for Cloudflare Pages (Free)
+  },
 };
 
 export default withPWA(nextConfig);
