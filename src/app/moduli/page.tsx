@@ -27,7 +27,7 @@ const ModuleCard = memo(({ module, index, progress }: { module: ModuleMetadata, 
                 "col-span-1"
             )}
         >
-            <Link href={`/moduli/${module.id}`} className="flex-1 flex flex-col relative p-4 h-full">
+            <Link href={`/moduli/${module.id}`} className="flex-1 flex flex-col relative p-5 h-full">
                 <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 <div className="relative z-10 flex flex-col h-full">
@@ -48,8 +48,8 @@ const ModuleCard = memo(({ module, index, progress }: { module: ModuleMetadata, 
                         </span>
                     </div>
 
-                    <h2 className="text-sm md:text-base font-display font-bold mb-1 line-clamp-2 group-hover:text-neon-cyan transition-colors leading-tight">{module.title}</h2>
-                    <p className="hidden xs:block text-white/40 text-[10px] line-clamp-2 mb-2 leading-tight">{module.subtitle}</p>
+                    <h2 className="text-base md:text-lg font-display font-bold mb-1 line-clamp-2 group-hover:text-neon-cyan transition-colors leading-tight">{module.title}</h2>
+                    <p className="hidden sm:block text-white/40 text-[10px] line-clamp-2 mb-2 leading-tight">{module.subtitle}</p>
 
                     <div className="mt-auto flex items-center justify-between pt-3 border-t border-white/5">
                         <div className="flex items-center gap-1.5 text-[10px] font-medium text-white/30">
@@ -131,7 +131,7 @@ export default function ModulesPage() {
             </div>
 
             {/* Modules Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+            <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6">
                 {filteredModules.length > 0 ? (
                     filteredModules.map((module, index: number) => (
                         <ModuleCard

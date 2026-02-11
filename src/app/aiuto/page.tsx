@@ -21,8 +21,8 @@ export default function HelpPage() {
                 </div>
                 <div className="relative z-10 space-y-8">
                     <div className="space-y-3">
-                        <h2 className="text-3xl font-black italic flex items-center gap-4 tracking-tighter uppercase whitespace-pre underline decoration-red-500/30 underline-offset-8">
-                            <Icon name="sos" size={32} className="text-red-500 animate-pulse" /> SICUREZZA IMMEDIATA
+                        <h2 className="text-2xl md:text-3xl font-black italic flex items-center gap-4 tracking-tighter uppercase whitespace-normal underline decoration-red-500/30 underline-offset-8">
+                            <Icon name="sos" size={32} className="text-red-500 animate-pulse shrink-0" /> SICUREZZA IMMEDIATA
                         </h2>
                         <p className="font-medium text-blue-100/60 max-w-2xl text-lg leading-relaxed italic">
                             Se ti senti in pericolo, vittima di ricatto o stalking, non aver paura di chiedere aiuto. Esistono professionisti pronti ad ascoltarti.

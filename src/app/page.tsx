@@ -105,12 +105,6 @@ export default function Dashboard() {
                   Inizia Ora
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-2xl text-lg px-10 border-white/20 hover:bg-white/5 hover:border-white/30">
-                <Link href="/moduli">
-                  Esplora Moduli
-                  <ChevronRight className="w-5 h-5 ml-2" />
-                </Link>
-              </Button>
             </motion.div>
           </div>
         </div>
