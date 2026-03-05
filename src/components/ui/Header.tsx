@@ -5,14 +5,13 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { cn } from '@/lib/utils';
-import { Compass, ShieldAlert } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
+import { Compass } from 'lucide-react';
 
 const navItems = [
     { href: '/', label: 'Home' },
     { href: '/moduli', label: 'Moduli' },
     { href: '/about', label: 'Chi Siamo' },
-    { href: '/contact', label: 'Contatti' },
+    { href: '/sos', label: 'SOS' },
 ];
 
 export function Header() {
@@ -76,15 +75,6 @@ export function Header() {
                     })}
                 </nav>
 
-                {/* Right Action */}
-                <div className="flex items-center space-x-4">
-                    <Button asChild variant="destructive" size="sm" className="hidden sm:flex rounded-full px-5 py-2 h-auto font-black uppercase text-[10px] tracking-widest gap-2">
-                        <Link href="/sos">
-                            <ShieldAlert className="w-4 h-4" />
-                            SOS
-                        </Link>
-                    </Button>
-                </div>
             </div>
         </motion.header>
     );
