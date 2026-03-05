@@ -219,7 +219,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
         "difficulty": "avanzata",
         "themeColor": "accent-cyan",
         "icon": "Plane",
-        "lessonCount": 3
+        "lessonCount": 20
     },
     {
         "id": "sicurezza-domestica",
@@ -230,7 +230,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
         "difficulty": "avanzata",
         "themeColor": "accent-green",
         "icon": "Home",
-        "lessonCount": 3
+        "lessonCount": 20
     },
     {
         "id": "lavoro-remoto",
@@ -241,7 +241,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
         "difficulty": "avanzata",
         "themeColor": "accent-purple",
         "icon": "Briefcase",
-        "lessonCount": 3
+        "lessonCount": 20
     },
     {
         "id": "smartphone-hardening",
@@ -252,7 +252,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
         "difficulty": "avanzata",
         "themeColor": "accent-orange",
         "icon": "Smartphone",
-        "lessonCount": 3
+        "lessonCount": 20
     },
     {
         "id": "eredita-digitale",
@@ -263,6 +263,6 @@ export const MODULES_MAP: ModuleMetadata[] = [
         "difficulty": "avanzata",
         "themeColor": "accent-pink",
         "icon": "Scroll",
-        "lessonCount": 3
+        "lessonCount": 20
     }
 ];
