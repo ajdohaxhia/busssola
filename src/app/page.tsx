@@ -2,7 +2,7 @@
 
 import { useMemo } from 'react'
 import { motion, Variants } from 'framer-motion'
-import { Play, ChevronRight, Lock, Eye, Shield, Zap, Compass, Sparkles, CheckCircle2 } from 'lucide-react'
+import { ChevronRight, Lock, Eye, Shield, Zap, Compass } from 'lucide-react'
 import Link from 'next/link'
 import { useGameStore } from '@/store/useGameStore'
 import { cn } from '@/lib/utils'
@@ -10,18 +10,10 @@ import { Container } from '@/components/ui/Container'
 import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { ALL_MODULES } from '@/data/modules/index'
+import { Hero } from '@/components/ui/Hero'
 
 export default function Dashboard() {
   const { modules } = useGameStore()
-
-  // Get recommended module
-  const recommendedModule = useMemo(() => {
-    const incomplete = ALL_MODULES.find(m => {
-      const progress = modules[m.id]
-      return !progress || !progress.completed
-    })
-    return incomplete || ALL_MODULES[0]
-  }, [modules])
 
   // Animation variants
   const containerVariants = {
@@ -29,13 +21,13 @@ export default function Dashboard() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.08
+        staggerChildren: 0.1
       }
     }
   }
 
   const itemVariants: Variants = {
-    hidden: { y: 30, opacity: 0 },
+    hidden: { y: 40, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -44,192 +36,125 @@ export default function Dashboard() {
   }
 
   return (
-    <Container size="full" className="py-10 space-y-16">
+    <Container size="full" className="py-12 space-y-24">
 
       {/* ==================== HERO SECTION ==================== */}
-      <motion.section
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="relative overflow-hidden rounded-[3rem] border border-white/10"
-      >
-        {/* Cinematic Background */}
-        <div className="absolute inset-0 bg-[#0a0e27]">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-neon-cyan/25 rounded-full blur-[140px] animate-pulse-slow" />
-          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-neon-purple/25 rounded-full blur-[140px] animate-pulse-slow delay-700" />
-          <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-20 brightness-100 contrast-150" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0e27]/50 to-[#0a0e27]" />
-        </div>
+      <Hero />
 
-        <div className="relative z-10 p-10 md:p-20 flex flex-col items-start justify-center text-left min-h-[500px]">
-          <div className="space-y-10 max-w-3xl">
-            {/* Brand Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md"
-            >
-              <Compass className="w-4 h-4 text-neon-cyan animate-spin-slow" />
-              <span className="text-xs font-bold text-white tracking-[0.25em] uppercase">Progetto Bussola</span>
-            </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              className="text-6xl md:text-8xl font-display font-bold text-white leading-[0.9] tracking-tight"
-            >
-              Naviga il <br />
-              <span className="text-gradient-cyan">Futuro Digitale</span>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-xl text-white/70 max-w-2xl leading-relaxed font-light"
-            >
-              La tua guida alla sicurezza online. Impara a difenderti da predatori, truffe e manipolazioni con moduli interattivi.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.6 }}
-              className="flex flex-wrap gap-5 pt-6"
-            >
-              <Button asChild size="lg" variant="cyan" className="rounded-2xl text-lg px-10 shadow-neon hover:shadow-[0_0_40px_rgba(0,245,255,0.5)] hover:scale-105 transition-all">
-                <Link href="/moduli">
-                  <Play className="w-5 h-5 fill-current mr-2" />
-                  Inizia Ora
-                </Link>
-              </Button>
-            </motion.div>
-          </div>
-        </div>
-      </motion.section>
-
-      {/* ==================== QUICK PATHS SECTION ==================== */}
+      {/* ==================== BENTO GRID PATHS SECTION ==================== */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
-        animate="visible"
-        className="space-y-8"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        className="space-y-12"
       >
-        <motion.div variants={itemVariants}>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 flex items-center gap-4">
-            <Sparkles className="w-8 h-8 text-neon-yellow" />
-            <span>Percorsi Rapidi</span>
-          </h2>
-          <p className="text-white/60 text-lg">Inizia subito con i moduli più richiesti</p>
-        </motion.div>
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-l-4 border-neon-cyan pl-8 py-2">
+          <div>
+            <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter mb-4">
+              PIANO DI <span className="text-gradient-purple">ADDESTRAMENTO</span>
+            </h2>
+            <p className="text-white/40 text-xl font-medium tracking-tight">Scegli la tua prossima missione di sicurezza digitale</p>
+          </div>
+          <Button variant="link" className="text-lg">Tutti i moduli <ChevronRight className="ml-1 w-5 h-5" /></Button>
+        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
             {
-              title: "Predatori",
-              desc: "Anti-grooming",
+              title: "PREDATORI",
+              desc: "Anti-grooming System",
               icon: Eye,
               color: "text-neon-pink",
               bg: "bg-neon-pink/10",
-              borderGlow: "hover:border-neon-pink/30",
               glow: "pink" as const,
-              href: "/moduli/predatori-online"
+              href: "/moduli/predatori-online",
+              span: "col-span-1"
             },
             {
-              title: "Privacy",
-              desc: "Difesa tecnica",
+              title: "PRIVACY PURE",
+              desc: "Deep Defense Layer",
               icon: Lock,
               color: "text-neon-cyan",
               bg: "bg-neon-cyan/10",
-              borderGlow: "hover:border-neon-cyan/30",
               glow: "cyan" as const,
-              href: "/moduli/privacy-tecnica"
+              href: "/moduli/privacy-tecnica",
+              span: "col-span-1"
             },
             {
-              title: "Social",
-              desc: "Ingegneria sociale",
+              title: "SOCIAL LAB",
+              desc: "Mind Control Defense",
               icon: Shield,
               color: "text-neon-purple",
               bg: "bg-neon-purple/10",
-              borderGlow: "hover:border-neon-purple/30",
               glow: "purple" as const,
-              href: "/moduli/phishing-social-engineering"
+              href: "/moduli/phishing-social-engineering",
+              span: "col-span-1 md:col-span-2"
             },
             {
-              title: "AI Fake",
-              desc: "Deepfake detector",
+              title: "AI DETECTOR",
+              desc: "Post-Truth Engine",
               icon: Zap,
               color: "text-neon-green",
               bg: "bg-neon-green/10",
-              borderGlow: "hover:border-neon-green/30",
               glow: "cyan" as const,
-              href: "/moduli/ai-deepfake"
+              href: "/moduli/ai-deepfake",
+              span: "col-span-1"
             },
             {
-              title: "Gaming",
-              desc: "Safe Communities",
+              title: "ARENA GAMING",
+              desc: "Squad Security",
               icon: Compass,
               color: "text-neon-purple",
               bg: "bg-neon-purple/10",
-              borderGlow: "hover:border-neon-purple/30",
               glow: "purple" as const,
-              href: "/moduli/gaming-communities"
+              href: "/moduli/gaming-communities",
+              span: "col-span-1"
             },
             {
-              title: "Finanze",
-              desc: "Crypto & Scam",
+              title: "CRYPTO VAULT",
+              desc: "Wealth Protection",
               icon: Shield,
               color: "text-neon-yellow",
               bg: "bg-neon-yellow/10",
-              borderGlow: "hover:border-neon-yellow/30",
               glow: "purple" as const,
-              href: "/moduli/finanze-crypto"
+              href: "/moduli/finanze-crypto",
+              span: "col-span-1"
             },
             {
-              title: "Dati",
-              desc: "GDPR & Privacy",
+              title: "DATA SOVEREIGNTY",
+              desc: "Digital Rights Admin",
               icon: Lock,
               color: "text-neon-cyan",
               bg: "bg-neon-cyan/10",
-              borderGlow: "hover:border-neon-cyan/30",
               glow: "cyan" as const,
-              href: "/moduli/gdpr-data-breach"
-            },
-            {
-              title: "Diritti",
-              desc: "Libertà Online",
-              icon: CheckCircle2,
-              color: "text-neon-green",
-              bg: "bg-neon-green/10",
-              borderGlow: "hover:border-neon-green/30",
-              glow: "cyan" as const,
-              href: "/moduli/diritti-digitali"
+              href: "/moduli/gdpr-data-breach",
+              span: "col-span-1"
             },
           ].map((item, i) => (
-            <motion.div key={i} variants={itemVariants}>
-              <Link href={item.href}>
+            <motion.div key={i} variants={itemVariants} className={item.span}>
+              <Link href={item.href} className="block h-full group">
                 <Card
-                  className={cn(
-                    "p-6 flex flex-col gap-5 transition-all duration-300 group cursor-pointer border-white/10",
-                    item.borderGlow
-                  )}
+                  className="h-full p-10 flex flex-col gap-8 transition-all duration-500 border-white/5 bg-white/[0.02]"
                   hoverEffect
                   glowColor={item.glow}
                 >
                   <div className={cn(
-                    "w-16 h-16 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3",
+                    "w-20 h-20 rounded-3xl flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 shadow-2xl",
                     item.bg,
                     item.color
                   )}>
-                    <item.icon className="w-8 h-8" strokeWidth={2} />
+                    <item.icon className="w-10 h-10" strokeWidth={2.5} />
                   </div>
-                  <div className="flex-1">
-                    <h4 className="font-bold text-xl text-white mb-1 group-hover:text-gradient-cyan transition-colors">{item.title}</h4>
-                    <p className="text-sm text-white/50 uppercase tracking-wider font-medium">{item.desc}</p>
+
+                  <div className="flex-1 space-y-2">
+                    <h4 className="font-black text-2xl text-white tracking-tighter group-hover:text-neon-cyan transition-colors">{item.title}</h4>
+                    <p className="text-sm font-bold text-white/30 uppercase tracking-[0.2em]">{item.desc}</p>
                   </div>
-                  <ChevronRight className="w-5 h-5 text-white/30 group-hover:text-white/70 group-hover:translate-x-1 transition-all self-end" />
+
+                  <div className="flex items-center justify-end pt-4 border-t border-white/5">
+                    <ChevronRight className="w-6 h-6 text-white/20 group-hover:text-neon-cyan group-hover:translate-x-2 transition-all" />
+                  </div>
                 </Card>
               </Link>
             </motion.div>

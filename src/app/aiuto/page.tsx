@@ -52,6 +52,13 @@ export default function HelpPage() {
                                 Chiama 1.96.96 <Icon name="chevron" size={16} />
                             </a>
                         </div>
+                        <div className="bg-blue-900/40 backdrop-blur-xl p-6 rounded-[2rem] border border-white/5 group-hover:border-red-500/30 transition-all md:col-span-2 lg:col-span-4">
+                            <span className="text-[10px] font-black text-blue-400/40 uppercase tracking-[0.2em] block mb-2">Violenza e Stalking</span>
+                            <a href="tel:1522" className="text-xl font-black text-white flex items-center gap-2 hover:text-red-400 transition">
+                                Chiama 1522 <Icon name="chevron" size={16} />
+                            </a>
+                            <p className="text-xs text-blue-200/50 mt-2 italic">Numero gratuito di pubblica utilità attivo 24 ore su 24.</p>
+                        </div>
                     </div>
                 </div>
             </section>

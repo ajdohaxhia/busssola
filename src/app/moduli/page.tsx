@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useMemo, memo } from 'react'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import { MODULES_MAP } from '@/data/modules/index'
 import Link from 'next/link'
 import * as Icons from 'lucide-react'
@@ -9,61 +9,80 @@ import { cn } from '@/lib/utils'
 import { useGameStore } from '@/store/useGameStore'
 import { ModuleMetadata } from '@/types'
 import { Container } from '@/components/ui/Container'
+import { Card } from '@/components/ui/Card'
 
-const ModuleCard = memo(({ module, index, progress }: { module: ModuleMetadata, index: number, progress: any }) => {
-    const IconComponent = (Icons as any)[module.icon] || Icons.HelpCircle
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: { staggerChildren: 0.1 }
+    }
+}
+
+const itemVariants: Variants = {
+    hidden: { y: 40, opacity: 0 },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: { type: "spring", stiffness: 100, damping: 15 }
+    }
+}
+
+const ModuleCard = memo(({ module, progress }: { module: ModuleMetadata, progress: unknown }) => {
+    const IconComponent = (Icons as unknown as Record<string, React.ElementType>)[module.icon] || Icons.HelpCircle
+
+    const color = module.difficulty === 'base' ? 'text-neon-green' : module.difficulty === 'intermedia' ? 'text-neon-yellow' : 'text-neon-pink'
+    const bg = module.difficulty === 'base' ? 'bg-neon-green/10' : module.difficulty === 'intermedia' ? 'bg-neon-yellow/10' : 'bg-neon-pink/10'
+    const glow = module.difficulty === 'base' ? 'cyan' : module.difficulty === 'intermedia' ? 'purple' : 'pink'
+
+    // safe cast for progress
+    const isCompleted = (progress as { completed?: boolean })?.completed
 
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-                duration: 0.3,
-                delay: Math.min(index * 0.02, 0.3),
-                ease: "easeOut"
-            }}
-            className={cn(
-                "glass-card rounded-2xl p-0 overflow-hidden group flex flex-col aspect-square",
-                "col-span-1"
-            )}
-        >
-            <Link href={`/moduli/${module.id}`} className="flex-1 flex flex-col relative p-5 h-full">
-                <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                <div className="relative z-10 flex flex-col h-full">
-                    <div className="flex justify-between items-start mb-3">
+        <motion.div variants={itemVariants} className="col-span-1 h-full">
+            <Link href={`/moduli/${module.id}`} className="block h-full group">
+                <Card
+                    className="h-full p-8 flex flex-col gap-6 transition-all duration-500 border-white/5 bg-white/[0.02]"
+                    hoverEffect
+                    glowColor={glow as Extract<Parameters<typeof Card>[0]['glowColor'], string>}
+                >
+                    <div className="flex justify-between items-start">
                         <div className={cn(
-                            "w-10 h-10 rounded-xl flex items-center justify-center transition-transform group-hover:scale-110 shadow-lg",
-                            "bg-white/5 text-neon-cyan border border-white/10"
+                            "w-16 h-16 rounded-2xl flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 shadow-2xl",
+                            bg, color
                         )}>
-                            <IconComponent className="w-5 h-5" />
+                            <IconComponent className="w-8 h-8" strokeWidth={2.5} />
                         </div>
-
                         <span className={cn(
-                            "text-[8px] font-bold uppercase tracking-widest px-1.5 py-0.5 rounded-md border",
-                            module.difficulty === 'base' ? 'text-neon-green border-neon-green/20' :
-                                module.difficulty === 'intermedia' ? 'text-neon-yellow border-neon-yellow/20' : 'text-neon-pink border-neon-pink/20'
+                            "text-[10px] font-black uppercase tracking-[0.2em] px-2 py-1 rounded-md border",
+                            module.difficulty === 'base' ? 'text-neon-green border-neon-green/20 bg-neon-green/10' :
+                                module.difficulty === 'intermedia' ? 'text-neon-yellow border-neon-yellow/20 bg-neon-yellow/10' : 'text-neon-pink border-neon-pink/20 bg-neon-pink/10'
                         )}>
-                            {module.difficulty[0]}
+                            {module.difficulty}
                         </span>
                     </div>
 
-                    <h2 className="text-base md:text-lg font-display font-bold mb-1 line-clamp-2 group-hover:text-neon-cyan transition-colors leading-tight">{module.title}</h2>
-                    <p className="hidden sm:block text-white/40 text-[10px] line-clamp-2 mb-2 leading-tight">{module.subtitle}</p>
+                    <div className="flex-1 space-y-2">
+                        <h2 className="text-xl md:text-2xl font-black text-white tracking-tighter group-hover:text-neon-cyan transition-colors leading-tight">
+                            {module.title}
+                        </h2>
+                        <p className="text-sm font-medium text-white/40 leading-relaxed line-clamp-2">
+                            {module.subtitle}
+                        </p>
+                    </div>
 
-                    <div className="mt-auto flex items-center justify-between pt-3 border-t border-white/5">
-                        <div className="flex items-center gap-1.5 text-[10px] font-medium text-white/30">
-                            <Icons.BookOpen className="w-3 h-3" />
-                            {module.lessonCount}
+                    <div className="flex items-center justify-between pt-4 border-t border-white/5">
+                        <div className="flex items-center gap-2 text-xs font-bold text-white/30 uppercase tracking-widest">
+                            <Icons.BookOpen className="w-4 h-4" />
+                            {module.lessonCount} LEZIONI
                         </div>
-
-                        {progress?.completed ? (
-                            <Icons.CheckCircle2 className="w-4 h-4 text-neon-green" />
+                        {isCompleted ? (
+                            <Icons.CheckCircle2 className="w-5 h-5 text-neon-green" />
                         ) : (
-                            <ArrowIcon className="w-3.5 h-3.5 text-white/10 group-hover:text-white transition-colors" />
+                            <Icons.ChevronRight className="w-6 h-6 text-white/20 group-hover:text-neon-cyan group-hover:translate-x-2 transition-all" />
                         )}
                     </div>
-                </div>
+                </Card>
             </Link>
         </motion.div>
     )
@@ -72,7 +91,7 @@ const ModuleCard = memo(({ module, index, progress }: { module: ModuleMetadata, 
 ModuleCard.displayName = 'ModuleCard'
 
 export default function ModulesPage() {
-    const { modules: progress } = useGameStore() as { modules: Record<string, any> }
+    const { modules: progress } = useGameStore() as { modules: Record<string, { completed?: boolean }> }
     const [searchQuery, setSearchQuery] = useState('')
     const [selectedDifficulty, setSelectedDifficulty] = useState<'all' | 'base' | 'intermedia' | 'avanzata'>('all')
 
@@ -86,84 +105,91 @@ export default function ModulesPage() {
     }, [searchQuery, selectedDifficulty])
 
     return (
-        <Container size="full" className="py-8 space-y-8">
-            <header className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-                <div className="max-w-xl space-y-2">
-                    <h1 className="text-4xl md:text-5xl font-display font-bold text-white tracking-tight">
-                        Protocolli <span className="text-neon-cyan">Operativi</span>
+        <Container size="full" className="py-16 space-y-16">
+            <header className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="max-w-2xl space-y-4"
+                >
+                    <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-[0.9]">
+                        Protocolli <span className="text-gradient-cyan">Operativi</span>
                     </h1>
-                    <p className="text-white/60 text-lg leading-relaxed">
-                        19 moduli tattici per la difesa digitale totale. Scegli il tuo target.
+                    <p className="text-xl text-white/50 leading-relaxed font-medium">
+                        19 moduli tattici per la difesa digitale totale. Scegli il tuo target e inizia l&apos;addestramento.
                     </p>
-                </div>
+                </motion.div>
 
-                {/* Filters */}
-                <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-                    <div className="relative group">
-                        <Icons.Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40 group-focus-within:text-neon-cyan transition-colors" />
+                <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="flex flex-col w-full md:w-auto gap-4"
+                >
+                    <div className="relative group w-full md:w-80">
+                        <Icons.Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40 group-focus-within:text-neon-cyan transition-colors" />
                         <input
                             type="text"
                             placeholder="Cerca protocollo..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full sm:w-64 bg-white/5 border border-white/10 rounded-xl py-2.5 pl-10 pr-4 text-sm font-medium text-white placeholder:text-white/20 focus:outline-none focus:border-neon-cyan/50 focus:bg-white/10 transition-all"
+                            className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pl-12 pr-4 text-base font-medium text-white placeholder:text-white/20 focus:outline-none focus:border-neon-cyan/50 focus:ring-1 focus:ring-neon-cyan/20 transition-all"
                         />
                     </div>
-                </div>
+                </motion.div>
             </header>
 
-            {/* Difficulty Tabs */}
-            <div className="flex items-center gap-2 overflow-x-auto pb-2 no-scrollbar">
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="flex items-center gap-3 overflow-x-auto pb-4 no-scrollbar border-b border-white/5"
+            >
                 {(['all', 'base', 'intermedia', 'avanzata'] as const).map((level) => (
                     <button
                         key={level}
                         onClick={() => setSelectedDifficulty(level)}
                         className={cn(
-                            "px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border transition-all whitespace-nowrap",
+                            "px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest transition-all whitespace-nowrap border",
                             selectedDifficulty === level
-                                ? "bg-white text-dark-bg border-white"
-                                : "bg-transparent text-white/40 border-white/10 hover:text-white hover:border-white/30"
+                                ? "bg-white text-dark-bg border-white shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+                                : "bg-transparent text-white/40 border-white/10 hover:text-white hover:border-white/30 hover:bg-white/5"
                         )}
                     >
                         {level === 'all' ? 'Tutti i livelli' : level}
                     </button>
                 ))}
-            </div>
+            </motion.div>
 
-            {/* Modules Grid */}
-            <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6">
+            <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+            >
                 {filteredModules.length > 0 ? (
                     filteredModules.map((module, index: number) => (
                         <ModuleCard
                             key={module.id}
                             module={module}
-                            index={index}
                             progress={progress[module.id]}
                         />
                     ))
                 ) : (
-                    <div className="col-span-full py-20 text-center">
-                        <Icons.SearchX className="w-12 h-12 text-white/20 mx-auto mb-4" />
-                        <h3 className="text-xl font-bold text-white mb-2">Nessun modulo trovato</h3>
-                        <p className="text-white/40">Prova a cambiare i filtri di ricerca.</p>
+                    <div className="col-span-full py-24 text-center">
+                        <Icons.SearchX className="w-16 h-16 text-white/20 mx-auto mb-6" />
+                        <h3 className="text-3xl font-black text-white tracking-tighter mb-4">Nessun protocollo trovato</h3>
+                        <p className="text-lg text-white/40 mb-8">Prova a cambiare i filtri di ricerca per trovare nuovi target.</p>
                         <button
                             onClick={() => { setSearchQuery(''); setSelectedDifficulty('all'); }}
-                            className="mt-6 text-neon-cyan text-sm font-bold uppercase tracking-widest hover:underline"
+                            className="text-neon-cyan text-sm font-black uppercase tracking-widest hover:underline"
                         >
-                            Mostra tutti
+                            Reset Filtri
                         </button>
                     </div>
                 )}
-            </div>
+            </motion.div>
         </Container>
-    )
-}
-
-function ArrowIcon({ className }: { className?: string }) {
-    return (
-        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M5 12h14" />
-            <path d="m12 5 7 7-7 7" />
-        </svg>
     )
 }

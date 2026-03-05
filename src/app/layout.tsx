@@ -1,12 +1,9 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
-import { Sidebar } from '@/components/layout/Sidebar'
-import { BottomNav } from '@/components/layout/BottomNav'
+import { Header } from '@/components/ui/Header'
+import { Footer } from '@/components/ui/Footer'
 import { cn } from '@/lib/utils'
 import { Toaster } from 'sonner'
-
-// Using system font stacks as fallback when offline
-const fontVariables = '--font-inter --font-space-grotesk --font-fira-code'
 
 export const metadata: Metadata = {
   title: 'Bussola | Digital Safety for Gen Z',
@@ -39,18 +36,16 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
       </head>
       <body className={cn(
-        "bg-dark-bg text-white min-h-dvh flex flex-col lg:flex-row font-sans antialiased"
+        "bg-dark-bg text-white min-h-dvh flex flex-col font-sans antialiased"
       )}>
-        <Sidebar />
+        <Header />
         <Toaster position="top-center" theme="dark" closeButton richColors />
-
-        <main className="flex-1 lg:pl-64 pb-28 lg:pb-0 relative">
+        <main className="flex-1 pb-28 lg:pb-0 relative">
           <div className="max-w-7xl mx-auto min-h-[100dvh] lg:min-h-screen p-4 md:p-6 lg:p-10">
             {children}
           </div>
         </main>
-
-        <BottomNav />
+        <Footer />
       </body>
     </html>
   )

@@ -1,31 +1,80 @@
+"use client"
+
 import * as React from "react"
 import { cn } from "@/lib/utils"
-import { motion, HTMLMotionProps } from "framer-motion"
+import { motion, HTMLMotionProps, useMotionValue, useSpring, useTransform } from "framer-motion"
 
 interface CardProps extends HTMLMotionProps<"div"> {
     hoverEffect?: boolean
     glowColor?: 'cyan' | 'purple' | 'pink' | 'none'
+    tilt?: boolean
 }
 
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
-    ({ className, hoverEffect = false, glowColor = 'none', ...props }, ref) => (
-        <motion.div
-            ref={ref}
-            initial={hoverEffect ? { y: 0 } : undefined}
-            whileHover={hoverEffect ? {
-                y: -4,
-                transition: { type: "spring", stiffness: 300, damping: 20 }
-            } : undefined}
-            className={cn(
-                "glass-card rounded-[1.5rem]",
-                glowColor === 'cyan' && 'hover:glow-cyan',
-                glowColor === 'purple' && 'hover:glow-purple',
-                glowColor === 'pink' && 'hover:glow-pink',
-                className
-            )}
-            {...props}
-        />
-    )
+    ({ className, hoverEffect = false, glowColor = 'none', tilt = true, onMouseMove, ...props }, ref) => {
+        const x = useMotionValue(0)
+        const y = useMotionValue(0)
+
+        const mouseX = useSpring(x, { stiffness: 500, damping: 50 })
+        const mouseY = useSpring(y, { stiffness: 500, damping: 50 })
+
+        const rotateX = useTransform(mouseY, [-0.5, 0.5], [10, -10])
+        const rotateY = useTransform(mouseX, [-0.5, 0.5], [-10, 10])
+
+        function handleMouseMove(event: React.MouseEvent<HTMLDivElement>) {
+            const rect = event.currentTarget.getBoundingClientRect()
+            const width = rect.width
+            const height = rect.height
+            const mouseXPos = event.clientX - rect.left
+            const mouseYPos = event.clientY - rect.top
+            const xPct = mouseXPos / width - 0.5
+            const yPct = mouseYPos / height - 0.5
+            x.set(xPct)
+            y.set(yPct)
+            onMouseMove?.(event)
+        }
+
+        function handleMouseLeave() {
+            x.set(0)
+            y.set(0)
+        }
+
+        return (
+            <motion.div
+                ref={ref}
+                style={tilt ? {
+                    rotateX,
+                    rotateY,
+                    transformStyle: "preserve-3d",
+                } : undefined}
+                onMouseMove={handleMouseMove}
+                onMouseLeave={handleMouseLeave}
+                className={cn(
+                    "glass-card rounded-[2rem]",
+                    glowColor === 'cyan' && 'hover:glow-cyan',
+                    glowColor === 'purple' && 'hover:glow-purple',
+                    glowColor === 'pink' && 'hover:glow-pink',
+                    className
+                )}
+                {...props}
+            >
+                {/* 3D Content Layer */}
+                <div style={tilt ? { transform: "translateZ(50px)", transformStyle: "preserve-3d" } : undefined}>
+                    {props.children as React.ReactNode}
+                </div>
+
+                {/* Mouse Tracking Glow Overlay */}
+                {hoverEffect && (
+                    <motion.div
+                        className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                        style={{
+                            background: `radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.06), transparent 40%)`
+                        }}
+                    />
+                )}
+            </motion.div>
+        )
+    }
 )
 Card.displayName = "Card"
 
@@ -35,7 +84,7 @@ const CardHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <div
         ref={ref}
-        className={cn("flex flex-col space-y-2 p-8 pb-4", className)}
+        className={cn("flex flex-col space-y-3 p-8 pb-4", className)}
         {...props}
     />
 ))
@@ -48,7 +97,7 @@ const CardTitle = React.forwardRef<
     <h3
         ref={ref}
         className={cn(
-            "text-2xl font-display font-bold leading-none tracking-tight text-white",
+            "text-2xl font-display font-bold leading-tight tracking-tight text-white",
             className
         )}
         {...props}
@@ -62,7 +111,7 @@ const CardDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <p
         ref={ref}
-        className={cn("text-sm text-white/50 font-medium leading-relaxed", className)}
+        className={cn("text-base text-white/50 font-medium leading-relaxed", className)}
         {...props}
     />
 ))

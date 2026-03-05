@@ -1,4 +1,4 @@
-
+import { ReactNode } from 'react';
 export interface Lesson {
     id: string;
     title: string;
