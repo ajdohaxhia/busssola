@@ -50,6 +50,7 @@ export interface ModuleMetadata {
     themeColor: string
     icon: string
     lessonCount: number
+    featuredType?: 'start' | 'curated' | 'situational' | 'none'
 }
 
 export interface Module extends Omit<ModuleMetadata, 'lessonCount'> {

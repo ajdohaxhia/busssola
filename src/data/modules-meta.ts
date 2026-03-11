@@ -6,6 +6,15 @@ export const MODULES_MAP: ModuleMetadata[] = (ALL_MODULES as Module[]).map((m: M
     const numMatch = m.title.match(/Modulo (\d+)/i) || m.id.match(/\d+/);
     const num = numMatch ? parseInt(numMatch[1] || numMatch[0], 10) : index + 1;
 
+    let featuredType: 'start' | 'curated' | 'situational' | 'none' = 'none';
+    if (['modulo-02-privacy-digitale', 'modulo-03-password', 'modulo-19-phishing'].includes(m.id)) {
+        featuredType = 'start';
+    } else if (['modulo-13-grooming', 'modulo-08-social-media', 'modulo-24-emergenze'].includes(m.id)) {
+        featuredType = 'curated';
+    } else if (['modulo-37-genitori-panico', 'modulo-40-policy-scuole', 'modulo-18-truffe-ragazzi', 'modulo-41-minori-legge'].includes(m.id)) {
+        featuredType = 'situational';
+    }
+
     return {
         id: m.id,
         number: num,
@@ -15,6 +24,7 @@ export const MODULES_MAP: ModuleMetadata[] = (ALL_MODULES as Module[]).map((m: M
         difficulty: (m as any).difficulty || 'base',
         themeColor: (m as any).themeColor || 'accent-cyan',
         icon: (m as any).icon || 'Compass',
-        lessonCount: m.lessons ? m.lessons.length : 20
+        lessonCount: m.lessons ? m.lessons.length : 20,
+        featuredType
     };
 });
