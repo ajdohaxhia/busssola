@@ -23,141 +23,141 @@ export default function ContactPage() {
     }
 
     return (
-        <Container size="full" className="py-16 space-y-24">
+        <Container size="md" className="py-16 md:py-24 space-y-16">
             {/* Hero */}
             <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-center space-y-6 max-w-3xl mx-auto"
+                className="text-center space-y-6 max-w-2xl mx-auto"
             >
-                <h1 className="text-6xl md:text-8xl font-black text-white tracking-tighter leading-[0.9]">
-                    <span className="text-gradient-purple">Contattaci</span>
+                <h1 className="text-5xl md:text-6xl font-display font-semibold text-foreground tracking-tight leading-loose">
+                    Contattaci
                 </h1>
-                <p className="text-xl text-white/50 leading-relaxed">
-                    Hai domande, suggerimenti o vuoi collaborare? Siamo qui per te.
+                <p className="text-lg text-secondary leading-relaxed">
+                    Hai domande, suggerimenti o vuoi collaborare? Siamo qui per ascoltarti. Compila il form qui sotto o usa uno dei nostri canali diretti.
                 </p>
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
                 {/* Contact Info */}
                 <motion.div
-                    initial={{ opacity: 0, x: -30 }}
+                    initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    className="lg:col-span-2 space-y-8"
+                    className="lg:col-span-2 space-y-6"
                 >
                     {[
                         {
                             icon: Mail,
                             title: 'Email',
-                            value: 'info@bussola.edu',
-                            color: 'text-neon-cyan',
-                            bg: 'bg-neon-cyan/10',
+                            value: 'hello@busssola.edu',
+                            color: 'text-primary',
+                            bg: 'bg-primary/10',
                         },
                         {
                             icon: MessageCircle,
-                            title: 'Chat',
-                            value: 'Disponibile 24/7',
-                            color: 'text-neon-purple',
-                            bg: 'bg-neon-purple/10',
+                            title: 'Chat Supporto',
+                            value: 'Disponibile 09:00 - 18:00',
+                            color: 'text-purple-600',
+                            bg: 'bg-purple-50',
                         },
                         {
                             icon: MapPin,
-                            title: 'Sede',
-                            value: 'Italia',
-                            color: 'text-neon-pink',
-                            bg: 'bg-neon-pink/10',
+                            title: 'Sede Principale',
+                            value: 'Milano, Italia',
+                            color: 'text-emerald-600',
+                            bg: 'bg-emerald-50',
                         },
                         {
                             icon: Phone,
                             title: 'Emergenze',
-                            value: 'Bottone SOS nell\'app',
-                            color: 'text-neon-yellow',
-                            bg: 'bg-neon-yellow/10',
+                            value: 'Consulta la sezione SOS',
+                            color: 'text-sos',
+                            bg: 'bg-[#fef2f2]',
                         },
                     ].map((info, i) => (
                         <motion.div
                             key={i}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.1 }}
                         >
-                            <Card className="p-6 flex items-center gap-6 border-white/5 bg-white/[0.02]" hoverEffect glowColor="cyan">
-                                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center ${info.bg} ${info.color}`}>
-                                    <info.icon className="w-7 h-7" strokeWidth={2} />
+                            <div className="p-6 flex items-start gap-5 rounded-2xl border border-border bg-surface shadow-sm hover:border-primary/30 transition-all">
+                                <div className={`w-12 h-12 shrink-0 rounded-xl flex items-center justify-center ${info.bg} ${info.color}`}>
+                                    <info.icon className="w-6 h-6" strokeWidth={2.5} />
                                 </div>
-                                <div>
-                                    <div className="text-xs font-bold text-white/30 uppercase tracking-widest mb-1">{info.title}</div>
-                                    <div className="text-lg font-bold text-white">{info.value}</div>
+                                <div className="space-y-1">
+                                    <div className="text-xs font-semibold text-secondary uppercase tracking-wider">{info.title}</div>
+                                    <div className="text-base font-medium text-foreground">{info.value}</div>
                                 </div>
-                            </Card>
+                            </div>
                         </motion.div>
                     ))}
                 </motion.div>
 
                 {/* Contact Form */}
                 <motion.div
-                    initial={{ opacity: 0, x: 30 }}
+                    initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     className="lg:col-span-3"
                 >
-                    <Card className="p-8 md:p-12 border-white/5 bg-white/[0.02]" hoverEffect={false}>
+                    <div className="p-8 md:p-10 rounded-3xl border border-border bg-surface shadow-sm hover:shadow-md transition-shadow">
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label className="text-xs font-bold text-white/40 uppercase tracking-widest">Nome</label>
+                                    <label className="text-sm font-medium text-secondary">Nome completo</label>
                                     <input
                                         type="text"
                                         value={formData.name}
                                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                         required
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-3 text-white placeholder-white/20 focus:outline-none focus:border-neon-cyan/50 focus:ring-1 focus:ring-neon-cyan/20 transition-all"
-                                        placeholder="Il tuo nome"
+                                        className="w-full bg-background border border-border rounded-xl px-4 py-3 text-foreground placeholder:text-secondary/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/20 transition-all"
+                                        placeholder="Mario Rossi"
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-xs font-bold text-white/40 uppercase tracking-widest">Email</label>
+                                    <label className="text-sm font-medium text-secondary">Email</label>
                                     <input
                                         type="email"
                                         value={formData.email}
                                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                         required
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-3 text-white placeholder-white/20 focus:outline-none focus:border-neon-cyan/50 focus:ring-1 focus:ring-neon-cyan/20 transition-all"
-                                        placeholder="email@esempio.com"
+                                        className="w-full bg-background border border-border rounded-xl px-4 py-3 text-foreground placeholder:text-secondary/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/20 transition-all"
+                                        placeholder="mario@esempio.com"
                                     />
                                 </div>
                             </div>
                             <div className="space-y-2">
-                                <label className="text-xs font-bold text-white/40 uppercase tracking-widest">Oggetto</label>
+                                <label className="text-sm font-medium text-secondary">Oggetto</label>
                                 <input
                                     type="text"
                                     value={formData.subject}
                                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                                     required
-                                    className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-3 text-white placeholder-white/20 focus:outline-none focus:border-neon-cyan/50 focus:ring-1 focus:ring-neon-cyan/20 transition-all"
-                                    placeholder="Di cosa vuoi parlare?"
+                                    className="w-full bg-background border border-border rounded-xl px-4 py-3 text-foreground placeholder:text-secondary/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/20 transition-all"
+                                    placeholder="Come possiamo aiutarti?"
                                 />
                             </div>
                             <div className="space-y-2">
-                                <label className="text-xs font-bold text-white/40 uppercase tracking-widest">Messaggio</label>
+                                <label className="text-sm font-medium text-secondary">Messaggio</label>
                                 <textarea
                                     value={formData.message}
                                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                     required
                                     rows={5}
-                                    className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-3 text-white placeholder-white/20 focus:outline-none focus:border-neon-cyan/50 focus:ring-1 focus:ring-neon-cyan/20 transition-all resize-none"
-                                    placeholder="Scrivi il tuo messaggio..."
+                                    className="w-full bg-background border border-border rounded-xl px-4 py-3 text-foreground placeholder:text-secondary/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/20 transition-all resize-none"
+                                    placeholder="Scrivi qui il tuo messaggio..."
                                 />
                             </div>
-                            <Button variant="cyan" size="lg" className="w-full rounded-2xl text-lg font-black">
-                                <Send className="w-5 h-5 mr-3" />
-                                INVIA MESSAGGIO
+                            <Button type="submit" size="lg" className="w-full rounded-xl mt-4">
+                                <Send className="w-4 h-4 mr-2" />
+                                Invia Messaggio
                             </Button>
                         </form>
-                    </Card>
+                    </div>
                 </motion.div>
             </div>
         </Container>

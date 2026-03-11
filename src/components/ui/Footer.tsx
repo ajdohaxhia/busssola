@@ -2,70 +2,82 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { cn } from '@/lib/utils';
-import { Compass, Twitter, Instagram, Send, ShieldCheck } from 'lucide-react';
+import { Compass, ShieldCheck } from 'lucide-react';
 
 export function Footer() {
     return (
         <motion.footer
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="relative mt-24 border-t border-white/10 bg-[#0a0e27]/80 backdrop-blur-2xl overflow-hidden"
+            className="border-t border-border bg-surface-muted mt-24"
         >
-            {/* Top Glow Edge */}
-            <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-neon-cyan/50 to-transparent" />
-
-            {/* Background Ambient Glow */}
-            <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-neon-cyan/5 rounded-[100%] blur-[120px] pointer-events-none" />
-
-            <div className="relative z-10 max-w-7xl mx-auto px-6 pt-16 pb-8 md:pt-24 md:pb-12">
+            <div className="max-w-7xl mx-auto px-6 py-16 md:py-20 flex flex-col gap-16">
+                
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16">
-
                     {/* Brand Section */}
                     <div className="md:col-span-5 space-y-6">
-                        <Link href="/" className="group flex items-center gap-3 w-fit">
-                            <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-neon-cyan/10 group-hover:border-neon-cyan/30 transition-all duration-500 shadow-xl group-hover:shadow-[0_0_20px_rgba(0,245,255,0.2)]">
-                                <Compass className="w-6 h-6 text-white group-hover:text-neon-cyan transition-colors duration-500" />
-                            </div>
-                            <span className="text-3xl font-black tracking-tighter text-white">
-                                Bussola<span className="text-neon-cyan">.</span>
+                        <Link href="/" className="flex items-center gap-3 w-fit text-foreground group">
+                            <Compass className="w-8 h-8 text-primary group-hover:text-primary-hover transition-colors" strokeWidth={2} />
+                            <span className="text-2xl font-display font-semibold tracking-tight">
+                                Busssola.
                             </span>
                         </Link>
-                        <p className="text-white/40 text-lg leading-relaxed max-w-sm">
-                            Il primo sistema operativo educativo progettato esclusivamente per formare la Gen Z alla difesa e sicurezza digitale globale.
+                        <p className="text-muted text-base leading-relaxed max-w-sm">
+                            Piattaforma educativa per imparare a riconoscere i rischi online, difendere la propria privacy e sapere sempre cosa fare.
                         </p>
-                        <div className="flex items-center gap-2 text-neon-green/80 bg-neon-green/10 px-4 py-2 rounded-full w-fit border border-neon-green/20">
-                            <ShieldCheck className="w-4 h-4" />
-                            <span className="text-xs font-bold uppercase tracking-widest">Sistemi Online</span>
+                        <div className="flex flex-col gap-2">
+                            <div className="flex items-center gap-2 text-sm font-medium text-secondary">
+                                <ShieldCheck className="w-5 h-5 text-primary" />
+                                <span>Supporto e strumenti pratici</span>
+                            </div>
                         </div>
                     </div>
 
                     {/* Quick Links */}
-                    <div className="md:col-span-4 md:col-start-7 flex flex-wrap gap-16 md:gap-24">
-                        <div className="space-y-6">
-                            <h4 className="text-xs font-black text-white/30 uppercase tracking-[0.2em]">Navigazione</h4>
-                            <ul className="space-y-4">
-                                {['Home', 'Moduli', 'Chi Siamo', 'Contatti'].map((item) => (
+                    <div className="md:col-span-6 md:col-start-7 grid grid-cols-2 sm:grid-cols-3 gap-8">
+                        <div className="space-y-4">
+                            <h4 className="text-sm font-semibold text-foreground">Il Progetto</h4>
+                            <ul className="space-y-3">
+                                {['Home', 'Percorsi', 'Cos\'è Busssola', 'Per le scuole'].map((item) => {
+                                    const href = item === 'Home' ? '/' : item === 'Cos\'è Busssola' ? '/about' : item === 'Per le scuole' ? '/scuole' : `/${item.toLowerCase().replace(' ', '-')}`;
+                                    return (
                                     <li key={item}>
                                         <Link
-                                            href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
-                                            className="text-white/60 hover:text-neon-cyan text-sm font-medium transition-colors"
+                                            href={href}
+                                            className="text-secondary hover:text-primary text-sm transition-colors"
                                         >
                                             {item}
                                         </Link>
                                     </li>
-                                ))}
+                                )})}
                             </ul>
                         </div>
-                        <div className="space-y-6">
-                            <h4 className="text-xs font-black text-white/30 uppercase tracking-[0.2em]">Legale</h4>
-                            <ul className="space-y-4">
-                                {['Privacy Policy', 'Termini d\'Uso', 'Cookie Policy'].map((item) => (
+                        <div className="space-y-4">
+                            <h4 className="text-sm font-semibold text-foreground">Aiuto</h4>
+                            <ul className="space-y-3">
+                                {['Centro SOS', 'Contatti', 'Domande frequenti'].map((item) => {
+                                    const href = item === 'Centro SOS' ? '/sos' : item === 'Contatti' ? '/contact' : '/faq';
+                                    return (
+                                    <li key={item}>
+                                        <Link
+                                            href={href}
+                                            className="text-secondary hover:text-primary text-sm transition-colors"
+                                        >
+                                            {item}
+                                        </Link>
+                                    </li>
+                                )})}
+                            </ul>
+                        </div>
+                        <div className="space-y-4">
+                            <h4 className="text-sm font-semibold text-foreground">Legale</h4>
+                            <ul className="space-y-3">
+                                {['Privacy Policy', 'Termini d\'Uso', 'Metodo Editoriale'].map((item) => (
                                     <li key={item}>
                                         <Link
                                             href="#"
-                                            className="text-white/60 hover:text-white text-sm font-medium transition-colors"
+                                            className="text-secondary hover:text-primary text-sm transition-colors"
                                         >
                                             {item}
                                         </Link>
@@ -78,23 +90,14 @@ export function Footer() {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
-                    <p className="text-sm font-medium text-white/30 text-center md:text-left">
-                        © {new Date().getFullYear()} Bussola. Tutti i diritti riservati.<br className="md:hidden" />
-                        <span className="hidden md:inline"> | </span>Costruito per una generazione sicura.
+                <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-6">
+                    <p className="text-sm text-muted">
+                        © {new Date().getFullYear()} Busssola. Un progetto educativo indipendente.
                     </p>
 
-                    {/* Social Icons */}
-                    <div className="flex items-center gap-4">
-                        {[Twitter, Instagram, Send].map((Icon, i) => (
-                            <Link
-                                key={i}
-                                href="#"
-                                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-300"
-                            >
-                                <Icon className="w-4 h-4" />
-                            </Link>
-                        ))}
+                    <div className="flex items-center gap-6">
+                        <Link href="/privacy" className="text-sm text-muted hover:text-foreground transition-colors">Trasparenza</Link>
+                        <Link href="/about" className="text-sm text-muted hover:text-foreground transition-colors">Accessibilità</Link>
                     </div>
                 </div>
             </div>

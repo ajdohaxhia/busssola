@@ -1,91 +1,89 @@
 'use client'
 
-import { Icon } from '@/components/ui/Icon'
+import { ShieldAlert, Phone, HelpCircle, ExternalLink, Info } from 'lucide-react'
+import { Container } from '@/components/ui/Container'
 
 export default function HelpPage() {
     const faqs = [
-        { q: 'I miei dati sono al sicuro?', a: 'Sì, Progetto Bussola opera esclusivamente sul tuo dispositivo. Tutti i progressi sono salvati nel LocalStorage del browser. Nessun dato viene mai inviato a server esterni.' },
-        { q: 'Funziona senza internet?', a: 'Assolutamente. Come PWA (Personal Web App), Progetto Bussola scarica i contenuti essenziali alla prima visita, permettendoti di studiare anche in modalità aereo.' }
+        { q: 'I miei dati sono al sicuro?', a: 'Sì, Busssola opera esclusivamente sul tuo dispositivo. Tutti i progressi o le impostazioni sono salvati localmente. Nessun dato personale viene inviato a server esterni.' },
+        { q: 'Funziona senza internet?', a: 'Sì. Una volta caricata la prima volta, l\'applicazione memorizza i contenuti essenziali, permettendoti di consultare le guide di emergenza anche se non hai connessione o sei in modalità aereo.' }
+    ]
+    
+    const emergencyContacts = [
+        { name: 'Polizia di Stato', type: 'Sito Web Ufficiale', value: 'Commissariato P.S. Online', link: 'https://www.commissariatodips.it' },
+        { name: 'Emergenza Nazionale', type: 'Numero Unico Europeo', value: '112', link: 'tel:112' },
+        { name: 'Emergenza Infanzia', type: 'Numero Gratuito', value: '114', link: 'tel:114' },
+        { name: 'Telefono Azzurro', type: 'Supporto a bambini e adolescenti', value: '1.96.96', link: 'tel:19696' },
+        { name: 'Violenza e Stalking', type: 'Numero gratuito attivo 24/24', value: '1522', link: 'tel:1522', colSpan: true }
     ]
 
     return (
-        <div className="max-w-5xl mx-auto p-4 md:p-12 space-y-16 pb-32">
-            <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter uppercase italic leading-none">Centro <span className="blue-glow text-white">Supporto</span></h1>
+        <Container size="md" className="py-12 md:py-24 space-y-16">
+            <header className="space-y-4 text-center pb-8 border-b border-border">
+                <h1 className="text-4xl md:text-5xl font-display font-semibold tracking-tight text-foreground leading-tight">
+                    Supporto ed Emergenza
+                </h1>
+                <p className="text-lg text-secondary max-w-2xl mx-auto">
+                    Trova risposte alle domande frequenti o contatta immediatamente i professionisti giusti se ti trovi in una situazione di pericolo reale.
+                </p>
+            </header>
 
             {/* Emergency Hotline Banner */}
-            <section className="bg-red-600/10 border-2 border-red-500/20 p-10 rounded-[3rem] shadow-glass relative overflow-hidden group">
-                <div className="absolute top-0 right-0 p-10 opacity-5 group-hover:opacity-10 transition-opacity">
-                    <Icon name="sos" size={180} />
+            <section className="bg-[#fef2f2] border border-sos-border p-8 md:p-12 rounded-3xl shadow-sm relative overflow-hidden">
+                <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
+                    <ShieldAlert size={200} className="text-sos" />
                 </div>
-                <div className="relative z-10 space-y-8">
+                
+                <div className="relative z-10 flex flex-col gap-10">
                     <div className="space-y-3">
-                        <h2 className="text-2xl md:text-3xl font-black italic flex items-center gap-4 tracking-tighter uppercase whitespace-normal underline decoration-red-500/30 underline-offset-8">
-                            <Icon name="sos" size={32} className="text-red-500 animate-pulse shrink-0" /> SICUREZZA IMMEDIATA
+                        <h2 className="text-2xl md:text-3xl font-display font-semibold flex items-center gap-3 tracking-tight text-foreground">
+                            <ShieldAlert size={32} className="text-sos" /> Sicurezza Immediata
                         </h2>
-                        <p className="font-medium text-blue-100/60 max-w-2xl text-lg leading-relaxed italic">
-                            Se ti senti in pericolo, vittima di ricatto o stalking, non aver paura di chiedere aiuto. Esistono professionisti pronti ad ascoltarti.
+                        <p className="font-medium text-secondary max-w-3xl text-lg leading-relaxed">
+                            Se ti senti in pericolo, sei vittima di minacce, ricatto o stalking, non avere paura e non sentirti in colpa. Esistono professionisti addestrati pronti ad ascoltarti e aiutarti subito, in modo confidenziale.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div className="bg-blue-900/40 backdrop-blur-xl p-6 rounded-[2rem] border border-white/5 group-hover:border-red-500/30 transition-all">
-                            <span className="text-[10px] font-black text-blue-400/40 uppercase tracking-[0.2em] block mb-2">Polizia di Stato</span>
-                            <a href="https://www.commissariatodips.it" target="_blank" className="text-xl font-black text-white flex items-center gap-2 hover:text-red-400 transition">
-                                Commissariato <Icon name="chevron" size={16} />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {emergencyContacts.map((contact, idx) => (
+                            <a 
+                                key={idx}
+                                href={contact.link} 
+                                target={contact.link.startsWith('http') ? '_blank' : '_self'}
+                                className={`bg-white p-6 rounded-2xl border border-[#fca5a5]/50 hover:border-sos hover:shadow-md transition-all group flex flex-col justify-center ${contact.colSpan ? 'md:col-span-2' : ''}`}
+                            >
+                                <span className="text-xs font-semibold text-sos uppercase tracking-wider block mb-1">{contact.type}</span>
+                                <span className="text-sm text-secondary font-medium mb-2">{contact.name}</span>
+                                <div className="text-2xl font-bold text-foreground flex items-center justify-between group-hover:text-sos transition-colors">
+                                    {contact.value}
+                                    {contact.link.startsWith('http') ? <ExternalLink size={20} className="text-sos opacity-50 group-hover:opacity-100" /> : <Phone size={20} className="text-sos opacity-50 group-hover:opacity-100" />}
+                                </div>
                             </a>
-                        </div>
-                        <div className="bg-blue-900/40 backdrop-blur-xl p-6 rounded-[2rem] border border-white/5 group-hover:border-red-500/30 transition-all">
-                            <span className="text-[10px] font-black text-blue-400/40 uppercase tracking-[0.2em] block mb-2">Emergenza UE</span>
-                            <a href="tel:112" className="text-xl font-black text-white flex items-center gap-2 hover:text-red-400 transition">
-                                Chiama 112 <Icon name="chevron" size={16} />
-                            </a>
-                        </div>
-                        <div className="bg-blue-900/40 backdrop-blur-xl p-6 rounded-[2rem] border border-white/5 group-hover:border-red-500/30 transition-all">
-                            <span className="text-[10px] font-black text-blue-400/40 uppercase tracking-[0.2em] block mb-2">Emergenza Infanzia</span>
-                            <a href="tel:114" className="text-xl font-black text-white flex items-center gap-2 hover:text-red-400 transition">
-                                Chiama 114 <Icon name="chevron" size={16} />
-                            </a>
-                        </div>
-                        <div className="bg-blue-900/40 backdrop-blur-xl p-6 rounded-[2rem] border border-white/5 group-hover:border-red-500/30 transition-all">
-                            <span className="text-[10px] font-black text-blue-400/40 uppercase tracking-[0.2em] block mb-2">Telefono Azzurro</span>
-                            <a href="tel:19696" className="text-xl font-black text-white flex items-center gap-2 hover:text-red-400 transition">
-                                Chiama 1.96.96 <Icon name="chevron" size={16} />
-                            </a>
-                        </div>
-                        <div className="bg-blue-900/40 backdrop-blur-xl p-6 rounded-[2rem] border border-white/5 group-hover:border-red-500/30 transition-all md:col-span-2 lg:col-span-4">
-                            <span className="text-[10px] font-black text-blue-400/40 uppercase tracking-[0.2em] block mb-2">Violenza e Stalking</span>
-                            <a href="tel:1522" className="text-xl font-black text-white flex items-center gap-2 hover:text-red-400 transition">
-                                Chiama 1522 <Icon name="chevron" size={16} />
-                            </a>
-                            <p className="text-xs text-blue-200/50 mt-2 italic">Numero gratuito di pubblica utilità attivo 24 ore su 24.</p>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
             {/* FAQ Grid */}
-            <section className="space-y-10">
-                <h2 className="text-2xl font-black italic flex items-center gap-4 tracking-tighter uppercase whitespace-pre italic">
-                    <Icon name="help" size={24} className="text-cyan-400" /> FAQ <span className="text-cyan-400/30">SICUREZZA</span>
+            <section className="space-y-8">
+                <h2 className="text-2xl font-display font-semibold flex items-center gap-3 tracking-tight text-foreground">
+                    <HelpCircle size={24} className="text-primary" /> Domande Frequenti
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {faqs.map((f, i) => (
-                        <div key={i} className="bg-blue-900/20 backdrop-blur-2xl p-8 rounded-[2.5rem] border border-white/5 hover:border-cyan-400/20 transition-all duration-300">
-                            <h3 className="font-black text-lg mb-3 flex items-center gap-3 tracking-tight italic">
-                                <span className="text-cyan-400 font-mono">?</span> {f.q}
+                        <div key={i} className="bg-surface p-8 rounded-2xl border border-border hover:border-primary/30 transition-all duration-300 shadow-sm">
+                            <h3 className="font-semibold text-lg mb-3 flex items-start gap-3 tracking-tight text-foreground">
+                                <span className="text-primary font-bold bg-primary/10 w-6 h-6 rounded flex items-center justify-center shrink-0 text-sm mt-0.5">?</span> 
+                                {f.q}
                             </h3>
-                            <p className="text-blue-200/40 font-medium leading-relaxed italic text-sm">
+                            <p className="text-secondary leading-relaxed pl-9">
                                 {f.a}
                             </p>
                         </div>
                     ))}
                 </div>
             </section>
-
-            {/* Credits / Footer */}
-            <footer className="pt-20 text-center space-y-4 opacity-20 hover:opacity-100 transition-opacity">
-                <div className="text-[10px] font-black tracking-[0.5em] uppercase text-cyan-400">Progetto Bussola</div>
-            </footer>
-        </div>
+        </Container>
     )
 }

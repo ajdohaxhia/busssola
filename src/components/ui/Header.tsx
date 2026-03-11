@@ -9,9 +9,9 @@ import { Compass } from 'lucide-react';
 
 const navItems = [
     { href: '/', label: 'Home' },
-    { href: '/moduli', label: 'Moduli' },
-    { href: '/about', label: 'Chi Siamo' },
-    { href: '/sos', label: 'SOS' },
+    { href: '/moduli', label: 'Percorsi' },
+    { href: '/about', label: 'Cos\'è Busssola' },
+    { href: '/contact', label: 'Contatti' },
 ];
 
 export function Header() {
@@ -25,29 +25,29 @@ export function Header() {
 
     return (
         <motion.header
-            initial={{ y: -100 }}
-            animate={{ y: 0 }}
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
             className={cn(
-                'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
+                'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
                 isScrolled
-                    ? 'bg-[#0a0e27]/80 backdrop-blur-xl border-b border-white/5 py-3 shadow-[0_10px_30px_rgba(0,0,0,0.5)]'
+                    ? 'bg-surface/80 backdrop-blur-md border-b border-border py-4 shadow-sm'
                     : 'bg-transparent py-6'
             )}
         >
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
                 {/* Logo Section */}
                 <Link href="/" className="group flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-2xl bg-neon-cyan/10 border border-neon-cyan/20 flex items-center justify-center group-hover:bg-neon-cyan/20 transition-all duration-300 group-hover:scale-110 shadow-[0_0_15px_rgba(0,245,255,0.15)] group-hover:shadow-[0_0_25px_rgba(0,245,255,0.3)]">
-                        <Compass className="w-5 h-5 text-neon-cyan animate-spin-slow" />
+                    <div className="w-10 h-10 flex items-center justify-center text-primary group-hover:text-primary-hover transition-colors">
+                        <Compass className="w-8 h-8" strokeWidth={2} />
                     </div>
-                    <span className="text-2xl font-black tracking-tighter text-white">
-                        Bussola<span className="text-neon-cyan">.</span>
+                    <span className="text-2xl font-display font-semibold tracking-tight text-foreground">
+                        Busssola.
                     </span>
                 </Link>
 
                 {/* Navigation Links */}
-                <nav className="hidden md:flex items-center space-x-1 glass-card px-2 py-1.5 rounded-full border-white/5">
+                <nav className="hidden md:flex items-center space-x-1">
                     {navItems.map((item) => {
                         const isActive = pathname === item.href || (item.href !== '/' && pathname?.startsWith(item.href));
                         return (
@@ -55,26 +55,24 @@ export function Header() {
                                 key={item.href}
                                 href={item.href}
                                 className={cn(
-                                    'relative px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300',
+                                    'relative px-4 py-2 rounded-full text-sm font-medium transition-colors',
                                     isActive
-                                        ? 'text-white'
-                                        : 'text-white/50 hover:text-white hover:bg-white/5'
+                                        ? 'text-primary bg-primary/5'
+                                        : 'text-secondary hover:text-foreground hover:bg-surface-hover'
                                 )}
                             >
                                 <span className="relative z-10">{item.label}</span>
-                                {isActive && (
-                                    <motion.div
-                                        layoutId="header-active-tab"
-                                        className="absolute inset-0 bg-white/10 rounded-full border border-white/10"
-                                        initial={false}
-                                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                                    />
-                                )}
                             </Link>
                         );
                     })}
+                    {/* Persistent SOS Link in Header */}
+                    <Link
+                        href="/sos"
+                        className="ml-4 px-4 py-2 rounded-full text-sm font-semibold bg-sos/10 text-sos hover:bg-sos hover:text-white transition-colors"
+                    >
+                        Emergenza SOS
+                    </Link>
                 </nav>
-
             </div>
         </motion.header>
     );
