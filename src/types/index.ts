@@ -25,16 +25,19 @@ export interface Lesson {
     title: string
     minutes: number
     difficulty: Difficulty
+    audienceTag?: string
+    moduleTag?: string
+    sosTag?: string
     learningGoals: string[]
     contentMarkdown: string
-    callouts: {
+    callouts?: {
         type: 'tip' | 'warning' | 'legal' | 'case-study'
         content: string
     }[]
-    microExercise: MicroExercise
-    miniQuiz: MiniQuiz[]
-    reflectionPrompt: string
-    resources: Resource[]
+    microExercise?: MicroExercise
+    miniQuiz?: MiniQuiz[]
+    reflectionPrompt?: string
+    resources?: Resource[]
 }
 
 export interface ModuleMetadata {
