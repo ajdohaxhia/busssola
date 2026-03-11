@@ -59,3 +59,16 @@ export interface Module extends Omit<ModuleMetadata, 'lessonCount'> {
     tips: string[]
     resources: Resource[]
 }
+
+export interface LearningPath {
+    id: string
+    title: string
+    description: string
+    audience: string
+    moduleIds: string[]
+    estimatedDuration: string
+    cta: string
+    relatedPathIds: string[]
+    type: 'onboarding' | 'security' | 'relational' | 'emergency' | 'audience'
+    level: Difficulty
+}

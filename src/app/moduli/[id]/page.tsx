@@ -5,13 +5,14 @@ import Link from 'next/link'
 import { motion, Variants } from 'framer-motion'
 import { getModuleById, ALL_MODULES } from '@/data/modules/index'
 import { Module } from '@/types'
-import { ChevronLeft, Play, Search, BookOpen, Clock, ShieldAlert, Target, Users, CheckCircle } from 'lucide-react'
+import { ChevronLeft, Play, Search, BookOpen, Clock, ShieldAlert, Target, Users, CheckCircle, ArrowRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { useGameStore } from '@/store/useGameStore'
 import { Container } from '@/components/ui/Container'
 import { useState } from 'react'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
+import { LEARNING_PATHS } from '@/data/paths'
 
 // List of module IDs that require an immediate SOS jumper
 const SENSITIVE_MODULES = ['predatori-online', 'cyberbullismo-stalking', 'sexting-legal', 'emergenze-digitali', 'relazioni-online']
@@ -58,6 +59,8 @@ export default function ModuleDetail() {
         : module.difficulty === 'intermedia' 
         ? "Utenti regolari, famiglie e giovani adulti." 
         : "Utenti più esperti, educatori o chi cerca tutele avanzate."
+
+    const parentPaths = LEARNING_PATHS.filter(p => p.moduleIds.includes(module.id))
 
     return (
         <Container size="md" className="py-12 space-y-16 min-h-screen">
@@ -162,6 +165,36 @@ export default function ModuleDetail() {
                     </div>
                 </div>
             </motion.header>
+
+            {/* LEARNING PATH CONTEXT */}
+            {parentPaths.length > 0 && (
+                <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                    className="bg-primary/5 border border-primary/10 rounded-[2rem] p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6"
+                >
+                    <div className="flex items-center gap-6">
+                        <div className="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                            <BookOpen className="w-8 h-8" />
+                        </div>
+                        <div className="space-y-1">
+                            <h3 className="text-sm font-bold text-primary uppercase tracking-wider">Questo modulo fa parte di un percorso</h3>
+                            <p className="text-lg font-display font-semibold text-foreground">
+                                {parentPaths[0].title}
+                            </p>
+                            <p className="text-sm text-secondary">
+                                Proseguire in ordine ti aiuterà a costruire una competenza completa.
+                            </p>
+                        </div>
+                    </div>
+                    <Button asChild variant="outline" className="rounded-xl border-primary/20 text-primary hover:bg-primary/5 shrink-0">
+                        <Link href={`/percorsi/${parentPaths[0].id}`}>
+                            Vedi il percorso completo <ArrowRight className="ml-2 w-4 h-4" />
+                        </Link>
+                    </Button>
+                </motion.div>
+            )}
 
             {/* LESSONS LIST */}
             <motion.section 
