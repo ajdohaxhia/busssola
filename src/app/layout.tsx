@@ -19,8 +19,28 @@ const outfit = Outfit({
 })
 
 export const metadata: Metadata = {
-  title: 'Busssola | Impara a proteggerti online',
-  description: 'Percorsi pratici e gratuiti per capire i rischi del web, difendere la tua privacy e sapere cosa fare.',
+  metadataBase: new URL('https://busssola.com'),
+  title: {
+    default: 'Busssola | Educazione civica per l\'era digitale',
+    template: '%s | Busssola'
+  },
+  description: 'Scopri come proteggere la tua identità, riconoscere i rischi online e navigare la rete con sicurezza. Guide pratiche, gratuite e sicure.',
+  keywords: ['sicurezza online', 'privacy', 'cyberbullismo', 'grooming', 'sextortion', 'educazione digitale', 'busssola'],
+  authors: [{ name: 'Team Busssola' }],
+  creator: 'Team Busssola',
+  openGraph: {
+    type: 'website',
+    locale: 'it_IT',
+    url: 'https://busssola.com',
+    title: 'Busssola | Educazione civica per l\'era digitale',
+    description: 'Piattaforma gratuita e senza tracciamento per imparare a proteggersi in rete.',
+    siteName: 'Busssola',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Busssola | Educazione civica per l\'era digitale',
+    description: 'Piattaforma gratuita e senza tracciamento per imparare a proteggersi in rete.',
+  },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,

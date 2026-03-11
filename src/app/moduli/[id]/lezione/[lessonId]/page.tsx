@@ -1,13 +1,11 @@
 'use client'
 
-export const runtime = 'edge';
-
 import { useParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { motion, useScroll, useSpring } from 'framer-motion'
 import { triggerConfetti } from '@/lib/confetti'
 import { toast } from 'sonner'
-import { getModuleById } from '@/data/modules/index'
+import { getModuleById, ALL_MODULES } from '@/data/modules/index'
 import { Module } from '@/types'
 import { ChevronLeft, ChevronRight, Zap, AlertTriangle, Scale, BookOpen, CheckCircle2, Clock } from 'lucide-react'
 import { cn } from '@/lib/utils'

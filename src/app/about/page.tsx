@@ -77,11 +77,14 @@ export default function AboutPage() {
                 transition={{ duration: 0.8 }}
                 className="text-center space-y-6 max-w-4xl mx-auto"
             >
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold tracking-wide mb-2">
+                    <Shield className="w-4 h-4" /> Progetto Indipendente
+                </div>
                 <h1 className="text-5xl md:text-7xl font-display font-semibold text-foreground tracking-tight leading-tight">
-                    La nostra visione
+                    Sicurezza senza allarmismi.
                 </h1>
                 <p className="text-xl text-secondary leading-relaxed max-w-2xl mx-auto">
-                    Busssola è nata dalla convinzione che ogni individuo meriti gli strumenti necessari per navigare il mondo digitale con sicurezza, consapevolezza e serenità.
+                    Busssola è una piattaforma di educazione civica digitale. Non vendiamo software di sicurezza, non tracciamo le tue abitudini e non usiamo il terrore per fare click. Offriamo solo indicazioni pratiche per comprendere la rete.
                 </p>
             </motion.div>
 
@@ -95,10 +98,10 @@ export default function AboutPage() {
             >
                 <div className="relative z-10 text-center max-w-3xl mx-auto space-y-8">
                     <h2 className="text-3xl md:text-5xl font-display font-semibold text-foreground tracking-tight">
-                        Educazione civica per l'era digitale.
+                        Il nostro metodo.
                     </h2>
                     <p className="text-lg md:text-xl text-secondary leading-relaxed font-medium">
-                        La nostra missione è colmare il divario tra la rapida evoluzione tecnologica e la nostra capacità di comprenderla. Costruiamo una piattaforma premium, chiara e accessibile per educare all'uso consapevole della rete, prevenire le minacce digitali e supportare chi si trova in difficoltà.
+                        La tecnologia evolve più velocemente della nostra consapevolezza. Invece di stilare lunghi manuali teorici, destrutturiamo i pericoli reali (truffe, grooming, data breach) in guide visive, brevi e immediatamente applicabili. È educazione alla cittadinanza per il secolo corrente.
                     </p>
                 </div>
             </motion.div>

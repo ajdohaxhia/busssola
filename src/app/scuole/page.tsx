@@ -37,26 +37,26 @@ export default function SchoolsPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-center space-y-8 max-w-4xl mx-auto"
+                className="text-center space-y-8 max-w-4xl mx-auto flex flex-col items-center"
             >
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold tracking-wide mb-4">
-                    <BookOpen size={16} /> Percorsi per le Scuole
+                    <BookOpen size={16} /> Materiali per Docenti
                 </div>
                 <h1 className="text-5xl md:text-7xl font-display font-semibold text-foreground tracking-tight leading-tight">
-                    Educazione civica digitale per la tua classe.
+                    La rete spiegata in classe.
                 </h1>
                 <p className="text-xl text-secondary leading-relaxed max-w-2xl mx-auto">
-                    Busssola offre agli insegnanti ed educatori risorse gratuite, chiare e immediate per affrontare i temi della sicurezza online e del benessere digitale a scuola.
+                    Busssola fornisce ad insegnanti ed educatori risorse gratuite, strutturate e prive di sensazionalismi per affrontare i temi chiave della cittadinanza digitale con i propri studenti.
                 </p>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                    <Link href="/moduli">
-                        <Button size="lg" className="rounded-xl px-8 h-14 text-base">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 w-full">
+                    <Link href="/moduli" className="w-full sm:w-auto">
+                        <Button size="lg" className="rounded-xl px-8 h-14 text-base w-full sm:w-auto">
                             Esplora i Moduli
                         </Button>
                     </Link>
-                    <Link href="/contact">
-                        <Button variant="outline" size="lg" className="rounded-xl px-8 h-14 text-base">
-                            Richiedi Materiale <ArrowRight className="w-4 h-4 ml-2" />
+                    <Link href="/contact" className="w-full sm:w-auto">
+                        <Button variant="outline" size="lg" className="rounded-xl px-8 h-14 text-base w-full sm:w-auto">
+                            Richiedi Linee Guida Educatori <ArrowRight className="w-4 h-4 ml-2" />
                         </Button>
                     </Link>
                 </div>

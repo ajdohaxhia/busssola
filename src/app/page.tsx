@@ -1,8 +1,12 @@
 import { Hero } from '@/components/ui/Hero'
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/Card'
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
-import { ArrowRight, ShieldCheck, User, Users, GraduationCap, Lock, Heart, ShieldAlert, MonitorSmartphone, Target, Search } from 'lucide-react'
+import { 
+  ArrowRight, ShieldCheck, User, Users, GraduationCap, 
+  Lock, Heart, ShieldAlert, MonitorSmartphone, Target, 
+  Search, BookOpen, Clock, AlertTriangle 
+} from 'lucide-react'
 
 export default function Home() {
   return (
@@ -11,181 +15,285 @@ export default function Home() {
       {/* SECTION 1: Hero */}
       <Hero />
 
-      {/* SECTION 2: Choose where to start */}
+      {/* SECTION 2: Scelta situazionale (Start Here) */}
       <section className="space-y-12">
         <div className="text-center space-y-4 max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-display font-semibold">Scegli da dove iniziare</h2>
-          <p className="text-secondary text-lg">Seleziona il percorso più adatto alle tue necessità in questo momento.</p>
+          <h2 className="text-3xl md:text-4xl font-display font-semibold tracking-tight text-foreground">
+            Da dove vuoi iniziare?
+          </h2>
+          <p className="text-secondary text-lg">
+            Scegli il percorso più adatto alle tue necessità in questo momento.
+          </p>
         </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="flex flex-col hover:border-primary/50 group border border-border">
-            <CardHeader>
-              <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
-                <ShieldCheck className="w-6 h-6" />
+          <Link href="/moduli?filter=basi" className="group">
+            <Card className="h-full flex flex-col border border-border bg-surface hover:border-primary/50 transition-all shadow-sm">
+              <CardHeader className="pb-4">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+                  <ShieldCheck className="w-6 h-6" />
+                </div>
+                <CardTitle className="text-xl">Voglio proteggermi</CardTitle>
+              </CardHeader>
+              <CardContent className="flex-1 text-secondary leading-relaxed">
+                Costruisci una base solida: imposta la privacy dei tuoi account, proteggi i tuoi dati e impara a navigare senza lasciare tracce indesiderate.
+              </CardContent>
+              <div className="p-6 pt-0 mt-auto flex items-center text-primary font-medium text-sm">
+                Vai alle basi <ArrowRight className="w-4 h-4 ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
               </div>
-              <CardTitle>Proteggi la tua vita online</CardTitle>
-            </CardHeader>
-            <CardContent className="flex-1">
-              Impara le basi della privacy, come proteggere i tuoi account e difendere i tuoi dati personali. 
-            </CardContent>
-            <div className="p-6 pt-0">
-              <Button asChild variant="outline" className="w-full">
-                <Link href="/moduli">Esplora i moduli</Link>
-              </Button>
-            </div>
-          </Card>
-          <Card className="flex flex-col hover:border-primary/50 group border border-border">
-            <CardHeader>
-              <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
-                <Search className="w-6 h-6" />
+            </Card>
+          </Link>
+
+          <Link href="/moduli?filter=rischi" className="group">
+            <Card className="h-full flex flex-col border border-border bg-surface hover:border-amber-500/50 transition-all shadow-sm">
+              <CardHeader className="pb-4">
+                <div className="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center mb-4 group-hover:bg-amber-500 group-hover:text-white transition-colors">
+                  <AlertTriangle className="w-6 h-6" />
+                </div>
+                <CardTitle className="text-xl">Voglio riconoscere i pericoli</CardTitle>
+              </CardHeader>
+              <CardContent className="flex-1 text-secondary leading-relaxed">
+                Scopri le tecniche usate nelle truffe, nel phishing, nel grooming e nella manipolazione per difenderti prima che accada il peggio.
+              </CardContent>
+              <div className="p-6 pt-0 mt-auto flex items-center text-amber-600 font-medium text-sm">
+                Esplora i rischi <ArrowRight className="w-4 h-4 ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
               </div>
-              <CardTitle>Riconosci i rischi</CardTitle>
-            </CardHeader>
-            <CardContent className="flex-1">
-              Scopri come riconoscere truffe, profili falsi, manipolazione e situazioni sospette prima che sia troppo tardi.
-            </CardContent>
-            <div className="p-6 pt-0">
-              <Button asChild variant="outline" className="w-full">
-                <Link href="/moduli">Esplora i moduli</Link>
-              </Button>
-            </div>
-          </Card>
-          <Card className="flex flex-col border-sos-border bg-sos-bg group">
-            <CardHeader>
-              <div className="w-12 h-12 bg-sos/10 text-sos rounded-xl flex items-center justify-center mb-4">
-                <ShieldAlert className="w-6 h-6" />
+            </Card>
+          </Link>
+
+          <Link href="/sos" className="group">
+            <Card className="h-full flex flex-col border border-sos-border bg-sos-bg hover:border-sos transition-all shadow-sm">
+              <CardHeader className="pb-4">
+                <div className="w-12 h-12 bg-sos/10 text-sos rounded-xl flex items-center justify-center mb-4 group-hover:bg-sos group-hover:text-white transition-colors">
+                  <ShieldAlert className="w-6 h-6" />
+                </div>
+                <CardTitle className="text-xl text-sos">Sono in emergenza</CardTitle>
+              </CardHeader>
+              <CardContent className="flex-1 text-sos/80 leading-relaxed font-medium">
+                Se sei vittima di ricatto, furto d'identità, stalking o sei preoccupato per un minore. Trova subito orientamento e contatti utili.
+              </CardContent>
+              <div className="p-6 pt-0 mt-auto flex items-center text-sos font-bold text-sm">
+                Apri il centro SOS <ArrowRight className="w-4 h-4 ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
               </div>
-              <CardTitle className="text-sos">Hai bisogno di aiuto adesso?</CardTitle>
-            </CardHeader>
-            <CardContent className="flex-1 text-sos/80">
-              Se ti trovi in una situazione di pericolo, minaccia o ricatto, vai direttamente al Centro SOS per indicazioni immediate.
-            </CardContent>
-            <div className="p-6 pt-0">
-              <Button asChild variant="destructive" className="w-full">
-                <Link href="/sos">Vedi contatti di emergenza</Link>
-              </Button>
-            </div>
-          </Card>
+            </Card>
+          </Link>
         </div>
       </section>
 
-      {/* SECTION 3: Who it is for */}
-      <section className="space-y-12 bg-surface-muted p-8 md:p-16 rounded-[2.5rem] border border-border">
-        <div className="space-y-4 max-w-2xl">
-          <h2 className="text-3xl md:text-4xl font-display font-semibold">Percorsi pensati per tutti</h2>
-          <p className="text-secondary text-lg">Contenuti mirati in base alla propria età e ruolo.</p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <User className="text-primary w-6 h-6" />
-              <h3 className="text-xl font-semibold">Ragazzi e Giovani</h3>
-            </div>
-            <p className="text-secondary">Informazioni pratiche e dirette per riconoscere pericoli reali sui social, nel gaming e nelle relazioni online, senza atteggiamenti paternalistici.</p>
-          </div>
-          <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <Users className="text-primary w-6 h-6" />
-              <h3 className="text-xl font-semibold">Genitori e Famiglie</h3>
-            </div>
-            <p className="text-secondary">Strumenti concreti per capire il mondo digitale dei figli, imparare ad ascoltare e intervenire correttamente in caso di emergenza.</p>
-          </div>
-          <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <GraduationCap className="text-primary w-6 h-6" />
-              <h3 className="text-xl font-semibold">Scuole ed Educatori</h3>
-            </div>
-            <p className="text-secondary">Moduli strutturati da utilizzare in classe o nei gruppi giovanili per facilitare il dialogo sulla cittadinanza digitale e la sicurezza strutturata.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 4: Core Topics */}
+      {/* SECTION 3: Audiences */}
       <section className="space-y-12">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <div className="space-y-4">
-            <h2 className="text-3xl md:text-4xl font-display font-semibold">Temi trattati</h2>
-            <p className="text-secondary text-lg max-w-xl">Istruzioni chiare per le sfide digitali più comuni e pericolose.</p>
+        <div className="text-center space-y-4 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-display font-semibold tracking-tight text-foreground">
+            L'educazione digitale è per tutti
+          </h2>
+          <p className="text-secondary text-lg">
+            Le risorse di Busssola sono organizzate in modo chiaro per essere utili a ogni età e livello di competenza.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="space-y-5 p-8 rounded-[2rem] bg-surface border border-border">
+            <div className="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center">
+              <User className="w-7 h-7" strokeWidth={2.5} />
+            </div>
+            <h3 className="text-2xl font-semibold text-foreground tracking-tight">Per i più giovani</h3>
+            <p className="text-secondary leading-relaxed">
+              Consigli pratici, veloci e diretti per gestire gaming, social network, relazioni online e difendersi dalle pressioni dei coetanei o degli sconosciuti, senza inutili lezioni paternalistiche.
+            </p>
           </div>
-          <Button asChild variant="link" className="text-lg px-0">
-            <Link href="/moduli">Vedi tutti i temi <ArrowRight className="ml-2 w-5 h-5" /></Link>
+          
+          <div className="space-y-5 p-8 rounded-[2rem] bg-surface border border-border">
+            <div className="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center">
+              <Users className="w-7 h-7" strokeWidth={2.5} />
+            </div>
+            <h3 className="text-2xl font-semibold text-foreground tracking-tight">Per le famiglie</h3>
+            <p className="text-secondary leading-relaxed">
+              Una guida concreta per comprendere le dinamiche del digitale, impostare limiti sani, instaurare un dialogo aperto in casa e sapere come intervenire tempestivamente senza creare il panico.
+            </p>
+          </div>
+          
+          <div className="space-y-5 p-8 rounded-[2rem] bg-surface border border-border">
+            <div className="w-14 h-14 bg-fuchsia-50 text-fuchsia-600 rounded-2xl flex items-center justify-center">
+              <GraduationCap className="w-7 h-7" strokeWidth={2.5} />
+            </div>
+            <h3 className="text-2xl font-semibold text-foreground tracking-tight">Per gli educatori</h3>
+            <p className="text-secondary leading-relaxed">
+              Un archivio di moduli strutturati ed esempi mirati, pensati per essere portati direttamente in classe o usati in laboratori per facilitare lezioni moderne di cittadinanza digitale.
+            </p>
+            <div className="pt-2">
+               <Link href="/scuole" className="text-primary font-medium hover:underline flex items-center gap-1">Scopri le risorse <ArrowRight className="w-4 h-4" /></Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4: Topics Covered */}
+      <section className="space-y-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 px-4">
+          <div className="space-y-4">
+            <h2 className="text-3xl md:text-4xl font-display font-semibold tracking-tight text-foreground">
+              Tutto ciò di cui hai bisogno
+            </h2>
+            <p className="text-secondary text-lg max-w-xl">
+              Guide pratiche, suddivise per argomenti, per superare indenni l'era dell'iper-connessione.
+            </p>
+          </div>
+          <Button asChild variant="outline" className="rounded-xl h-12">
+            <Link href="/moduli">Catalogo completo <ArrowRight className="ml-2 w-4 h-4" /></Link>
           </Button>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
-            { title: "Privacy e sicurezza account", icon: Lock },
-            { title: "Riconoscere il grooming e predatori", icon: User },
-            { title: "Truffe online e identità false", icon: Target },
-            { title: "Deepfake e manipolazione", icon: MonitorSmartphone },
-            { title: "Molestie e ricatti online", icon: ShieldAlert },
-            { title: "Benessere digitale", icon: Heart },
+            { title: "Privacy e sicurezza tecnica", desc: "Password, 2FA, data breach e impostazioni", icon: Lock },
+            { title: "Frodi, truffe e phishing", desc: "Dai messaggi sospetti all'ecommerce truffaldino", icon: Target },
+            { title: "Relazioni online e grooming", desc: "Riconoscere i predatori e gestire la fiducia", icon: User },
+            { title: "Cyberbullismo e stalking", desc: "Come reagire, bloccare e conservare prove", icon: ShieldAlert },
+            { title: "Sexting e revenge porn", desc: "Il consenso, l'intimità digitale e i rischi legali", icon: MonitorSmartphone },
+            { title: "Benessere mentale e digitale", desc: "Gestire l'ansia da notifica, algoritmi e FOMO", icon: Heart },
           ].map((topic, i) => (
-            <div key={i} className="flex items-center gap-4 bg-surface border border-border p-5 rounded-2xl hover:border-primary/30 transition-colors">
-              <div className="bg-surface-muted p-3 rounded-lg border border-border">
-                <topic.icon className="w-5 h-5 text-secondary" />
+            <Link href="/moduli" key={i} className="group">
+              <div className="flex items-start gap-4 bg-surface border border-border p-6 rounded-[1.5rem] hover:border-primary/40 hover:shadow-sm transition-all h-full">
+                <div className="bg-background border border-border p-3 rounded-xl group-hover:bg-primary/5 transition-colors shrink-0">
+                  <topic.icon className="w-6 h-6 text-secondary group-hover:text-primary transition-colors" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground text-lg tracking-tight mb-1">{topic.title}</h4>
+                  <p className="text-sm text-secondary leading-relaxed">{topic.desc}</p>
+                </div>
               </div>
-              <h4 className="font-semibold text-foreground">{topic.title}</h4>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
 
-      {/* SECTION 5: How it works */}
-      <section className="space-y-16">
-        <div className="text-center space-y-4">
-          <h2 className="text-3xl md:text-4xl font-display font-semibold">Come funziona</h2>
+      {/* SECTION 5: How it works (Cleaned) */}
+      <section className="space-y-16 py-8 border-y border-border">
+        <div className="text-center space-y-4 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-display font-semibold tracking-tight text-foreground">
+            Semplice e intuitivo
+          </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
-          {/* Subtle connecting line for desktop */}
-          <div className="hidden md:block absolute top-6 left-[20%] right-[20%] h-px bg-border -z-10" />
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative max-w-5xl mx-auto">
+          <div className="hidden md:block absolute top-8 left-[15%] right-[15%] h-[2px] bg-border border-dashed -z-10" />
           
-          <div className="flex flex-col items-center text-center space-y-4">
-            <div className="w-12 h-12 rounded-full bg-primary text-white font-bold text-xl flex items-center justify-center">1</div>
-            <h4 className="text-xl font-semibold">Scegli un percorso</h4>
-            <p className="text-secondary">Esplora i temi disponibili e seleziona quello che ti interessa o di cui hai bisogno.</p>
+          <div className="flex flex-col items-center text-center space-y-5 bg-background">
+            <div className="w-16 h-16 rounded-2xl bg-surface border border-border text-foreground font-display font-bold text-2xl flex items-center justify-center shadow-sm">
+              <Search className="w-6 h-6 text-secondary" />
+            </div>
+            <div className="space-y-2">
+              <h4 className="text-xl font-semibold text-foreground">1. Trova il tema</h4>
+              <p className="text-secondary leading-relaxed px-4">Ricerca l'argomento che ti interessa o seleziona un percorso suggerito in base alle tue esigenze.</p>
+            </div>
           </div>
-          <div className="flex flex-col items-center text-center space-y-4">
-            <div className="w-12 h-12 rounded-full bg-primary text-white font-bold text-xl flex items-center justify-center">2</div>
-            <h4 className="text-xl font-semibold">Impara con moduli pratici</h4>
-            <p className="text-secondary">Leggi informazioni scritte in modo chiaro, diretto e orientato all'azione.</p>
+          
+          <div className="flex flex-col items-center text-center space-y-5 bg-background">
+            <div className="w-16 h-16 rounded-2xl bg-surface border border-border text-foreground font-display font-bold text-2xl flex items-center justify-center shadow-sm">
+              <BookOpen className="w-6 h-6 text-secondary" />
+            </div>
+            <div className="space-y-2">
+              <h4 className="text-xl font-semibold text-foreground">2. Leggi le guide</h4>
+              <p className="text-secondary leading-relaxed px-4">Lezioni brevi, senza gergo inutile, progettate per essere lette in 5-10 minuti, direttamente dal tuo telefono.</p>
+            </div>
           </div>
-          <div className="flex flex-col items-center text-center space-y-4">
-            <div className="w-12 h-12 rounded-full bg-primary text-white font-bold text-xl flex items-center justify-center">3</div>
-            <h4 className="text-xl font-semibold">Riduci i rischi</h4>
-            <p className="text-secondary">Saprai come difenderti e a chi rivolgerti prima che un problema diventi grave.</p>
+          
+          <div className="flex flex-col items-center text-center space-y-5 bg-background">
+            <div className="w-16 h-16 rounded-2xl bg-primary text-primary-foreground font-display font-bold text-2xl flex items-center justify-center shadow-md shadow-primary/20">
+              <ShieldCheck className="w-6 h-6" />
+            </div>
+            <div className="space-y-2">
+              <h4 className="text-xl font-semibold text-foreground">3. Applica e proteggiti</h4>
+              <p className="text-secondary leading-relaxed px-4">Ogni modulo si conclude con azioni pratiche. Non saprai solo "cosa" è sbagliato, ma esattamente "come" risolverlo.</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* SECTION 6: Trust block */}
-      <section className="rounded-[2.5rem] bg-surface border border-border p-8 md:p-16 text-center max-w-4xl mx-auto space-y-8">
-        <h2 className="text-2xl md:text-3xl font-display font-semibold">Progettato per essere utile</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm text-secondary font-medium">
-          <div className="space-y-2"><div className="w-8 h-8 rounded-full bg-primary/10 text-primary mx-auto flex items-center justify-center mb-3"><ShieldCheck className="w-4 h-4"/></div>Linguaggio chiaro</div>
-          <div className="space-y-2"><div className="w-8 h-8 rounded-full bg-primary/10 text-primary mx-auto flex items-center justify-center mb-3"><ShieldCheck className="w-4 h-4"/></div>Consigli pratici</div>
-          <div className="space-y-2"><div className="w-8 h-8 rounded-full bg-primary/10 text-primary mx-auto flex items-center justify-center mb-3"><ShieldCheck className="w-4 h-4"/></div>Nessun allarmismo</div>
-          <div className="space-y-2"><div className="w-8 h-8 rounded-full bg-primary/10 text-primary mx-auto flex items-center justify-center mb-3"><ShieldCheck className="w-4 h-4"/></div>Uso gratuito e anonimo</div>
+      <section className="bg-surface border border-border rounded-[3rem] p-10 md:p-16 lg:p-20 overflow-hidden relative">
+        <div className="absolute top-0 right-0 p-20 opacity-[0.03] pointer-events-none">
+          <ShieldCheck size={400} />
+        </div>
+        <div className="max-w-4xl mx-auto space-y-12 relative z-10">
+          <div className="space-y-4 text-center">
+            <h2 className="text-3xl md:text-5xl font-display font-semibold tracking-tight text-foreground">
+              Informazione verificata, rispetto garantito
+            </h2>
+            <p className="text-xl text-secondary max-w-2xl mx-auto leading-relaxed">
+              Il progetto Busssola nasce con una precisa integrità etica. Rifiutiamo clickbait, falsi allarmismi e profilazione invasiva dei dati.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-8">
+            <div className="space-y-3">
+              <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-4">
+                <Lock className="w-5 h-5"/>
+              </div>
+              <h4 className="font-semibold text-foreground">Privacy by design</h4>
+              <p className="text-sm text-secondary leading-relaxed">Nessun tracciamento aggressivo. I tuoi progressi sono salvati localmente sul tuo dispositivo.</p>
+            </div>
+            <div className="space-y-3">
+              <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-4">
+                <Search className="w-5 h-5"/>
+              </div>
+              <h4 className="font-semibold text-foreground">Chiaro, non banale</h4>
+              <p className="text-sm text-secondary leading-relaxed">Tradotto il linguaggio tecnico in italiano comprensibile e accessibile, senza mai banalizzare il rischio.</p>
+            </div>
+            <div className="space-y-3">
+              <div className="w-10 h-10 rounded-full bg-sos/10 text-sos flex items-center justify-center mb-4">
+                <Heart className="w-5 h-5"/>
+              </div>
+              <h4 className="font-semibold text-foreground">Senza giudizio</h4>
+              <p className="text-sm text-secondary leading-relaxed">Se hai subito una truffa o un ricatto, non usiamo linguaggi colpevolizzanti. Ti aiutiamo e basta.</p>
+            </div>
+            <div className="space-y-3">
+              <div className="w-10 h-10 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4">
+                <Clock className="w-5 h-5"/>
+              </div>
+              <h4 className="font-semibold text-foreground">Totalmente indipendente</h4>
+              <p className="text-sm text-secondary leading-relaxed">Busssola non mostra pubblicità, non vende corsi ed è finanziata indipendentemente per restare gratuita per le scuole e i giovani.</p>
+            </div>
+          </div>
+          
+          <div className="text-center pt-8">
+             <Button asChild variant="link" className="text-primary font-medium">
+               <Link href="/metodo">Leggi il nostro metodo editoriale <ArrowRight className="w-4 h-4 ml-1" /></Link>
+             </Button>
+          </div>
         </div>
       </section>
 
       {/* SECTION 7 & 8: SOS CTA & Final CTA */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="bg-sos-bg border border-sos-border rounded-3xl p-8 md:p-12 space-y-6 flex flex-col justify-between">
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="bg-sos-bg border border-sos-border rounded-[2rem] p-10 md:p-14 space-y-8 flex flex-col justify-between items-start">
           <div className="space-y-4">
-            <h3 className="text-2xl font-display font-semibold text-sos">Emergenza SOS</h3>
-            <p className="text-sos/80">Problemi seri online? Se ti senti in pericolo o sotto ricatto, ci sono persone pronte ad aiutarti subito. Scopri chi contattare e cosa fare.</p>
+            <div className="inline-flex items-center gap-2 bg-sos/10 text-sos px-3 py-1.5 rounded-full text-sm font-bold tracking-wide">
+              <ShieldAlert className="w-4 h-4" /> Centro Emergenze
+            </div>
+            <h3 className="text-3xl font-display font-semibold text-sos tracking-tight">Hai bisogno di aiuto adesso?</h3>
+            <p className="text-sos/80 text-lg leading-relaxed">
+              Problemi urgenti online? Se sei sotto ricatto (sextortion), stalking, o in forte crisi a causa di abusi digitali, trova la tua situazione per ricevere indicazioni dirette e calme. Non sei solo/a.
+            </p>
           </div>
-          <Button asChild variant="destructive" size="lg" className="w-fit">
-            <Link href="/sos">Apri area SOS</Link>
+          <Button asChild variant="destructive" size="lg" className="rounded-xl h-14 px-8 text-base w-full sm:w-auto mt-4">
+            <Link href="/sos">Accedi immediatamente all'area SOS</Link>
           </Button>
         </div>
-        <div className="bg-surface-muted border border-border rounded-3xl p-8 md:p-12 space-y-6 flex flex-col justify-between">
-          <div className="space-y-4">
-            <h3 className="text-2xl font-display font-semibold text-foreground">Inizia subito</h3>
-            <p className="text-secondary relative z-10">La sicurezza digitale non è materia per soli esperti. Con piccoli accorgimenti quotidiani, puoi rendere la tua navigazione molto più sicura.</p>
+        
+        <div className="bg-foreground text-background rounded-[2rem] p-10 md:p-14 space-y-8 flex flex-col justify-between items-start relative overflow-hidden">
+          <div className="absolute inset-0 bg-primary/10 pointer-events-none" />
+          <div className="space-y-4 relative z-10">
+            <div className="inline-flex items-center gap-2 bg-background/10 px-3 py-1.5 rounded-full text-sm font-medium tracking-wide">
+              Formazione e Prevenzione
+            </div>
+            <h3 className="text-3xl font-display font-semibold tracking-tight">Pronto/a per orientarti?</h3>
+            <p className="text-background/80 text-lg leading-relaxed">
+              La sicurezza digitale non è materia per soli esperti. Con brevi lezioni settimanali e piccoli accorgimenti quotidiani, puoi rendere la tua presenza online blindata e consapevole.
+            </p>
           </div>
-          <Button asChild size="lg" className="w-fit relative z-10">
-            <Link href="/moduli">Inizia l'apprendimento</Link>
+          <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90 rounded-xl h-14 px-8 text-base w-full sm:w-auto relative z-10 mt-4 font-semibold">
+            <Link href="/moduli">Vai al catalogo completo</Link>
           </Button>
         </div>
       </section>

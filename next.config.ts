@@ -12,6 +12,8 @@ const withPWA = require('@ducanh2912/next-pwa').default({
 })
 
 const nextConfig: NextConfig = {
+  output: "export",
+  trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -19,7 +21,7 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true, // Required for Cloudflare Pages (Free)
+    unoptimized: true, // Required for next export / Cloudflare Pages
   },
 };
 

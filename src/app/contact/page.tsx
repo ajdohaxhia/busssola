@@ -1,27 +1,10 @@
 'use client'
 
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Mail, MessageCircle, Send, MapPin, Phone } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
-import { Card } from '@/components/ui/Card'
-import { Button } from '@/components/ui/Button'
-import { toast } from 'sonner'
 
 export default function ContactPage() {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-    })
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault()
-        toast.success('Messaggio inviato con successo!')
-        setFormData({ name: '', email: '', subject: '', message: '' })
-    }
-
     return (
         <Container size="md" className="py-16 md:py-24 space-y-16">
             {/* Hero */}
@@ -97,66 +80,64 @@ export default function ContactPage() {
                     ))}
                 </motion.div>
 
-                {/* Contact Form */}
+                {/* Contact Options - Honest Static Implementation */}
                 <motion.div
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    className="lg:col-span-3"
+                    className="lg:col-span-3 space-y-6"
                 >
                     <div className="p-8 md:p-10 rounded-3xl border border-border bg-surface shadow-sm hover:shadow-md transition-shadow">
-                        <form onSubmit={handleSubmit} className="space-y-6">
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                <div className="space-y-2">
-                                    <label className="text-sm font-medium text-secondary">Nome completo</label>
-                                    <input
-                                        type="text"
-                                        value={formData.name}
-                                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                        required
-                                        className="w-full bg-background border border-border rounded-xl px-4 py-3 text-foreground placeholder:text-secondary/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/20 transition-all"
-                                        placeholder="Mario Rossi"
-                                    />
-                                </div>
-                                <div className="space-y-2">
-                                    <label className="text-sm font-medium text-secondary">Email</label>
-                                    <input
-                                        type="email"
-                                        value={formData.email}
-                                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                        required
-                                        className="w-full bg-background border border-border rounded-xl px-4 py-3 text-foreground placeholder:text-secondary/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/20 transition-all"
-                                        placeholder="mario@esempio.com"
-                                    />
-                                </div>
-                            </div>
+                        <div className="space-y-6">
                             <div className="space-y-2">
-                                <label className="text-sm font-medium text-secondary">Oggetto</label>
-                                <input
-                                    type="text"
-                                    value={formData.subject}
-                                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                                    required
-                                    className="w-full bg-background border border-border rounded-xl px-4 py-3 text-foreground placeholder:text-secondary/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/20 transition-all"
-                                    placeholder="Come possiamo aiutarti?"
-                                />
+                                <h3 className="text-2xl font-bold tracking-tight text-foreground">Inviaci un'email</h3>
+                                <p className="text-secondary leading-relaxed">
+                                    Al momento non utilizziamo un modulo di contatto automatico per garantire la massima privacy e sicurezza ed evitare lo stoccaggio di dati personali sui server. 
+                                </p>
                             </div>
-                            <div className="space-y-2">
-                                <label className="text-sm font-medium text-secondary">Messaggio</label>
-                                <textarea
-                                    value={formData.message}
-                                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                    required
-                                    rows={5}
-                                    className="w-full bg-background border border-border rounded-xl px-4 py-3 text-foreground placeholder:text-secondary/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/20 transition-all resize-none"
-                                    placeholder="Scrivi qui il tuo messaggio..."
-                                />
+
+                            <div className="pt-4 space-y-4">
+                                <a 
+                                    href="mailto:scuole@busssola.com?subject=Richiesta%20Materiali%20Scuole"
+                                    className="flex items-center justify-between p-5 rounded-2xl border border-border hover:border-primary/50 hover:bg-primary/5 transition-all group"
+                                >
+                                    <div>
+                                        <div className="font-semibold text-foreground group-hover:text-primary transition-colors">Educatori e Scuole</div>
+                                        <div className="text-sm text-secondary">scuole@busssola.com</div>
+                                    </div>
+                                    <Send className="w-5 h-5 text-secondary group-hover:text-primary transition-colors" />
+                                </a>
+
+                                <a 
+                                    href="mailto:privacy@busssola.com?subject=Richiesta%20Trasparenza"
+                                    className="flex items-center justify-between p-5 rounded-2xl border border-border hover:border-emerald-500/50 hover:bg-emerald-50 transition-all group"
+                                >
+                                    <div>
+                                        <div className="font-semibold text-foreground group-hover:text-emerald-600 transition-colors">Privacy e Dati</div>
+                                        <div className="text-sm text-secondary">privacy@busssola.com</div>
+                                    </div>
+                                    <Send className="w-5 h-5 text-secondary group-hover:text-emerald-600 transition-colors" />
+                                </a>
+
+                                <a 
+                                    href="mailto:info@busssola.com?subject=Informazioni%20Generali"
+                                    className="flex items-center justify-between p-5 rounded-2xl border border-border hover:border-purple-500/50 hover:bg-purple-50 transition-all group"
+                                >
+                                    <div>
+                                        <div className="font-semibold text-foreground group-hover:text-purple-600 transition-colors">Informazioni Generali</div>
+                                        <div className="text-sm text-secondary">info@busssola.com</div>
+                                    </div>
+                                    <Send className="w-5 h-5 text-secondary group-hover:text-purple-600 transition-colors" />
+                                </a>
                             </div>
-                            <Button type="submit" size="lg" className="w-full rounded-xl mt-4">
-                                <Send className="w-4 h-4 mr-2" />
-                                Invia Messaggio
-                            </Button>
-                        </form>
+
+                            <div className="pt-6 border-t border-border/50">
+                                <p className="text-sm text-secondary flex items-start gap-2">
+                                    <Phone className="w-4 h-4 shrink-0 mt-0.5" /> 
+                                    <span>Se ci stai contattando per un'emergenza in corso, non usare l'email. Visita la <strong>pagina SOS</strong> per trovare i numeri diretti delle Forze dell'Ordine.</span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </motion.div>
             </div>

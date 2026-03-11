@@ -39,47 +39,56 @@ export function Footer() {
                         <div className="space-y-4">
                             <h4 className="text-sm font-semibold text-foreground">Il Progetto</h4>
                             <ul className="space-y-3">
-                                {['Home', 'Percorsi', 'Cos\'è Busssola', 'Per le scuole'].map((item) => {
-                                    const href = item === 'Home' ? '/' : item === 'Cos\'è Busssola' ? '/about' : item === 'Per le scuole' ? '/scuole' : `/${item.toLowerCase().replace(' ', '-')}`;
-                                    return (
-                                    <li key={item}>
+                                {[
+                                    { label: 'Home', href: '/' },
+                                    { label: 'Tutti i Moduli', href: '/moduli' },
+                                    { label: 'Cos\'è Busssola', href: '/about' },
+                                    { label: 'Per le scuole', href: '/scuole' }
+                                ].map((item) => (
+                                    <li key={item.label}>
                                         <Link
-                                            href={href}
+                                            href={item.href}
                                             className="text-secondary hover:text-primary text-sm transition-colors"
                                         >
-                                            {item}
+                                            {item.label}
                                         </Link>
                                     </li>
-                                )})}
+                                ))}
                             </ul>
                         </div>
                         <div className="space-y-4">
                             <h4 className="text-sm font-semibold text-foreground">Aiuto</h4>
                             <ul className="space-y-3">
-                                {['Centro SOS', 'Contatti', 'Domande frequenti'].map((item) => {
-                                    const href = item === 'Centro SOS' ? '/sos' : item === 'Contatti' ? '/contact' : '/faq';
-                                    return (
-                                    <li key={item}>
+                                {[
+                                    { label: 'Centro SOS', href: '/sos' },
+                                    { label: 'Contatti', href: '/contact' },
+                                    { label: 'Domande frequenti', href: '/aiuto' }
+                                ].map((item) => (
+                                    <li key={item.label}>
                                         <Link
-                                            href={href}
+                                            href={item.href}
                                             className="text-secondary hover:text-primary text-sm transition-colors"
                                         >
-                                            {item}
+                                            {item.label}
                                         </Link>
                                     </li>
-                                )})}
+                                ))}
                             </ul>
                         </div>
                         <div className="space-y-4">
                             <h4 className="text-sm font-semibold text-foreground">Legale</h4>
                             <ul className="space-y-3">
-                                {['Privacy Policy', 'Termini d\'Uso', 'Metodo Editoriale'].map((item) => (
-                                    <li key={item}>
+                                {[
+                                    { label: 'Privacy Policy', href: '/privacy' },
+                                    { label: 'Termini d\'Uso', href: '/termini' },
+                                    { label: 'Metodo Editoriale', href: '/metodo-editoriale' }
+                                ].map((item) => (
+                                    <li key={item.label}>
                                         <Link
-                                            href="#"
+                                            href={item.href}
                                             className="text-secondary hover:text-primary text-sm transition-colors"
                                         >
-                                            {item}
+                                            {item.label}
                                         </Link>
                                     </li>
                                 ))}
@@ -96,8 +105,8 @@ export function Footer() {
                     </p>
 
                     <div className="flex items-center gap-6">
-                        <Link href="/privacy" className="text-sm text-muted hover:text-foreground transition-colors">Trasparenza</Link>
-                        <Link href="/about" className="text-sm text-muted hover:text-foreground transition-colors">Accessibilità</Link>
+                        <Link href="/trasparenza" className="text-sm text-muted hover:text-foreground transition-colors">Trasparenza</Link>
+                        <Link href="/about" className="text-sm text-muted hover:text-foreground transition-colors">Il Progetto</Link>
                     </div>
                 </div>
             </div>

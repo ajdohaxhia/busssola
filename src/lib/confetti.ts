@@ -1,6 +1,7 @@
-import confetti from 'canvas-confetti'
+export const triggerConfetti = async () => {
+    const confettiModule = await import('canvas-confetti')
+    const confetti = confettiModule.default
 
-export const triggerConfetti = () => {
     const duration = 3 * 1000
     const animationEnd = Date.now() + duration
     const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 }
@@ -18,7 +19,6 @@ export const triggerConfetti = () => {
 
         const particleCount = 50 * (timeLeft / duration)
 
-        // since particles fall down, start a bit higher than random
         confetti({
             ...defaults,
             particleCount,
@@ -34,10 +34,11 @@ export const triggerConfetti = () => {
     }, 250)
 }
 
-export const triggerSchoolPride = () => {
-    const end = Date.now() + (1 * 1000);
+export const triggerSchoolPride = async () => {
+    const confettiModule = await import('canvas-confetti')
+    const confetti = confettiModule.default
 
-    // go Buckeyes!
+    const end = Date.now() + (1 * 1000);
     const colors = ['#00f5ff', '#ffffff'];
 
     (function frame() {
