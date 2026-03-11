@@ -9,9 +9,9 @@ import { Compass } from 'lucide-react';
 
 const navItems = [
     { href: '/', label: 'Home' },
-    { href: '/moduli', label: 'Percorsi' },
+    { href: '/percorsi', label: 'Percorsi' },
+    { href: '/moduli', label: 'Catalogo' },
     { href: '/about', label: 'Cos\'è Busssola' },
-    { href: '/contact', label: 'Contatti' },
 ];
 
 export function Header() {
