@@ -35,11 +35,24 @@ export const metadata: Metadata = {
     title: 'Busssola | Educazione civica per l\'era digitale',
     description: 'Piattaforma gratuita e senza tracciamento per imparare a proteggersi in rete.',
     siteName: 'Busssola',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Busssola - Naviga il tuo apprendimento con sicurezza'
+      }
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Busssola | Educazione civica per l\'era digitale',
     description: 'Piattaforma gratuita e senza tracciamento per imparare a proteggersi in rete.',
+    images: ['/og-image.png'],
+  },
+  icons: {
+    icon: '/icon.png',
+    apple: '/icon.png',
   },
   manifest: '/manifest.json',
   appleWebApp: {
