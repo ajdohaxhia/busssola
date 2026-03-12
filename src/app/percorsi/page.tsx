@@ -105,7 +105,7 @@ export default function PercorsiPage() {
                     <ShieldCheck size={300} />
                 </div>
                 <div className="max-w-2xl space-y-6 relative z-10">
-                    <h3 className="text-3xl font-display font-bold">Preferisci esplorare da solo?</h3>
+                    <h3 className="text-3xl font-display font-bold text-white">Preferisci esplorare da solo?</h3>
                     <p className="text-background/80 text-lg">
                         Se cerchi un argomento specifico o vuoi vedere l'elenco completo dei 50 moduli di Busssola, puoi consultare il nostro catalogo completo e filtrabile.
                     </p>

@@ -13,6 +13,7 @@
 
   --color-primary: #2563EB; /* Calm, authoritative blue */
   --color-primary-hover: #1D4ED8;
+  --color-primary-foreground: #FFFFFF;
   
   --color-secondary: #4B5563;
   --color-secondary-hover: #374151;
@@ -23,6 +24,7 @@
   --color-sos-hover: #B91C1C;
   --color-sos-bg: #FEF2F2;
   --color-sos-border: #FECACA;
+  --color-sos-foreground: #FFFFFF;
 
   --color-muted: #6B7280;
 
@@ -89,7 +91,16 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
   font-weight: 600;
   letter-spacing: -0.025em;
+  color: inherit;
+}
+
+body h1, body h2, body h3, body h4, body h5, body h6 {
   color: var(--color-foreground);
+}
+
+.text-background h1, .text-background h2, .text-background h3, .text-background h4, .text-background h5, .text-background h6,
+.text-white h1, .text-white h2, .text-white h3, .text-white h4, .text-white h5, .text-white h6 {
+  color: inherit;
 }
 
 ::selection {

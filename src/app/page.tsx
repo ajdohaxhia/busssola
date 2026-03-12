@@ -165,8 +165,8 @@ export default function Home() {
           <div className="hidden md:block absolute top-8 left-[15%] right-[15%] h-[2px] bg-border border-dashed -z-10" />
           
           <div className="flex flex-col items-center text-center space-y-5 bg-background">
-            <div className="w-16 h-16 rounded-2xl bg-surface border border-border text-foreground font-display font-bold text-2xl flex items-center justify-center shadow-sm">
-              <Search className="w-6 h-6 text-secondary" />
+            <div className="w-16 h-16 rounded-2xl bg-primary text-white font-display font-bold text-2xl flex items-center justify-center shadow-md shadow-primary/20">
+              <Search className="w-6 h-6" />
             </div>
             <div className="space-y-2">
               <h4 className="text-xl font-semibold text-foreground">1. Trova il tema</h4>
@@ -175,8 +175,8 @@ export default function Home() {
           </div>
           
           <div className="flex flex-col items-center text-center space-y-5 bg-background">
-            <div className="w-16 h-16 rounded-2xl bg-surface border border-border text-foreground font-display font-bold text-2xl flex items-center justify-center shadow-sm">
-              <BookOpen className="w-6 h-6 text-secondary" />
+            <div className="w-16 h-16 rounded-2xl bg-primary text-white font-display font-bold text-2xl flex items-center justify-center shadow-md shadow-primary/20">
+              <BookOpen className="w-6 h-6" />
             </div>
             <div className="space-y-2">
               <h4 className="text-xl font-semibold text-foreground">2. Leggi le guide</h4>
@@ -185,7 +185,7 @@ export default function Home() {
           </div>
           
           <div className="flex flex-col items-center text-center space-y-5 bg-background">
-            <div className="w-16 h-16 rounded-2xl bg-primary text-primary-foreground font-display font-bold text-2xl flex items-center justify-center shadow-md shadow-primary/20">
+            <div className="w-16 h-16 rounded-2xl bg-primary text-white font-display font-bold text-2xl flex items-center justify-center shadow-md shadow-primary/20">
               <ShieldCheck className="w-6 h-6" />
             </div>
             <div className="space-y-2">
@@ -273,12 +273,12 @@ export default function Home() {
             <div className="inline-flex items-center gap-2 bg-background/10 px-3 py-1.5 rounded-full text-sm font-medium tracking-wide">
               Formazione e Prevenzione
             </div>
-            <h3 className="text-3xl font-display font-semibold tracking-tight">Pronto/a per orientarti?</h3>
-            <p className="text-background/80 text-lg leading-relaxed">
+            <h3 className="text-3xl font-display font-semibold tracking-tight text-white">Pronto/a per orientarti?</h3>
+            <p className="text-white/80 text-lg leading-relaxed">
               La sicurezza digitale non è materia per soli esperti. Con brevi lezioni settimanali e piccoli accorgimenti quotidiani, puoi rendere la tua presenza online blindata e consapevole.
             </p>
           </div>
-          <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90 rounded-xl h-14 px-8 text-base w-full sm:w-auto relative z-10 mt-4 font-semibold">
+          <Button asChild size="lg" className="bg-white text-foreground hover:bg-white/90 rounded-xl h-14 px-8 text-base w-full sm:w-auto relative z-10 mt-4 font-semibold">
             <Link href="/moduli">Vai al catalogo completo</Link>
           </Button>
         </div>
