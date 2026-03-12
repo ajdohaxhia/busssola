@@ -62,7 +62,7 @@ export function Footer() {
                                 {[
                                     { label: 'Centro SOS', href: '/sos' },
                                     { label: 'Contatti', href: '/contact' },
-                                    { label: 'Domande frequenti', href: '/aiuto' }
+                                    { label: 'Domande frequenti', href: '/faq' }
                                 ].map((item) => (
                                     <li key={item.label}>
                                         <Link
@@ -106,6 +106,7 @@ export function Footer() {
 
                     <div className="flex items-center gap-6">
                         <Link href="/trasparenza" className="text-sm text-muted hover:text-foreground transition-colors">Trasparenza</Link>
+                        <Link href="/accessibilita" className="text-sm text-muted hover:text-foreground transition-colors">Accessibilità</Link>
                         <Link href="/about" className="text-sm text-muted hover:text-foreground transition-colors">Il Progetto</Link>
                     </div>
                 </div>

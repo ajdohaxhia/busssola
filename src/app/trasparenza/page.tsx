@@ -1,74 +1,64 @@
-'use client'
-
 import { Container } from '@/components/ui/Container'
-import { motion } from 'framer-motion'
-import { Eye, Code, Heart, DollarSign } from 'lucide-react'
+import { Badge } from '@/components/ui/Badge'
+import { CheckCircle2, Globe, Lock, Code } from 'lucide-react'
 
 export default function TrasparenzaPage() {
     return (
-        <Container size="md" className="py-16 md:py-24 space-y-16 min-h-screen">
-            <header className="space-y-6 text-center pb-12 border-b border-border">
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-primary/10 text-primary mb-4 p-5">
-                    <Eye size={40} className="w-full h-full" />
-                </div>
-                <h1 className="text-4xl md:text-5xl font-display font-semibold tracking-tight text-foreground leading-[1.1]">
-                    Trasparenza Totale
-                </h1>
-                <p className="text-xl text-secondary max-w-2xl mx-auto font-medium">
-                    Chi siamo, chi ci finanzia e come costruiamo questa piattaforma. Nessun segreto.
+        <Container size="md" className="py-16 space-y-12">
+            <header className="space-y-4">
+                <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground tracking-tight">Trasparenza</h1>
+                <p className="text-xl text-secondary leading-relaxed">
+                    Busssola è un progetto indipendente. Ecco come stiamo al mondo.
                 </p>
             </header>
 
-            <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="space-y-12"
-            >
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div className="bg-surface p-8 rounded-[2rem] border border-border space-y-4 shadow-sm">
-                        <div className="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center">
-                            <DollarSign className="w-6 h-6" />
-                        </div>
-                        <h3 className="font-bold text-xl text-foreground">Modello di Business</h3>
-                        <p className="text-secondary leading-relaxed">
-                            Busssola è autosostenuta e gratuita. Nessun paywall, nessuna pubblicità ("No Ads"), nessuna vendita di dati, nessun abbonamento "Premium" per sbloccare la sicurezza.
-                        </p>
-                    </div>
+            <div className="space-y-12 text-secondary leading-relaxed">
+                <section className="space-y-6">
+                    <h2 className="text-2xl font-bold text-foreground">Chi finanzia il progetto?</h2>
+                    <p>
+                        Busssola è attualmente un'iniziativa a scopo educativo indipendente. Non riceviamo finanziamenti da aziende tecnologiche, non ospitiamo pubblicità e non vendiamo i dati degli utenti (semplicemente perché non li raccogliamo).
+                    </p>
+                </section>
 
-                    <div className="bg-surface p-8 rounded-[2rem] border border-border space-y-4 shadow-sm">
-                        <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center">
-                            <Heart className="w-6 h-6" />
+                <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="p-8 rounded-2xl bg-emerald-50 border border-emerald-100 space-y-4">
+                        <div className="w-12 h-12 rounded-xl bg-emerald-500 text-white flex items-center justify-center">
+                            <Lock size={24} />
                         </div>
-                        <h3 className="font-bold text-xl text-foreground">Sponsor & Vendor</h3>
-                        <p className="text-secondary leading-relaxed">
-                            Siamo indipendenti. Non riceviamo fondi da aziende di sicurezza informatica. Qualsiasi brand menzionato lo è unicamente in ottica imparziale se rappresenta uno standard di settore.
+                        <h3 className="text-xl font-bold text-emerald-900">Nessun Vendor Lock-in</h3>
+                        <p className="text-emerald-800/80 text-sm">
+                            Non ti consiglieremo mai un prodotto specifico (un antivirus, una VPN) perché veniamo pagati dall'azienda produttrice. Se citiamo uno strumento, è perché lo riteniamo tecnicamente valido.
                         </p>
                     </div>
-
-                    <div className="bg-surface p-8 rounded-[2rem] border border-border space-y-4 shadow-sm">
-                        <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center">
-                            <Code className="w-6 h-6" />
+                    <div className="p-8 rounded-2xl bg-blue-50 border border-blue-100 space-y-4">
+                        <div className="w-12 h-12 rounded-xl bg-blue-500 text-white flex items-center justify-center">
+                            <Code size={24} />
                         </div>
-                        <h3 className="font-bold text-xl text-foreground">La Piattaforma</h3>
-                        <p className="text-secondary leading-relaxed">
-                            Costruita e gestita da un piccolo team di esperti, sviluppatori ed educatori italiani con il solo obiettivo di migliorare l'educazione civica digitale nel nostro Paese.
+                        <h3 className="text-xl font-bold text-blue-900">Codice e Contenuti</h3>
+                        <p className="text-blue-800/80 text-sm">
+                            Busssola è costruita con tecnologie moderne (Next.js, Tailwind) puntando alla massima velocità e sostenibilità digitale (basso consumo di dati).
                         </p>
                     </div>
-                </div>
+                </section>
 
-                <div className="mt-16 bg-surface-muted border border-border rounded-[2.5rem] p-10 md:p-16">
-                    <h2 className="text-3xl font-display font-semibold text-foreground tracking-tight mb-6">Perché lo facciamo?</h2>
-                    <div className="prose prose-lg dark:prose-invert max-w-none text-secondary">
-                        <p className="leading-relaxed font-medium">
-                            La maggior parte delle risorse e dei corsi di sicurezza informatica in lingua italiana è costosa o inutilmente complessa per un cittadino comune o uno studente. Quando succede un'emergenza (una foto rubata, una truffa), trovare istruzioni chiare tra centinaia di articoli in "avvocatese" o scritti per SEO è impossibile.
-                        </p>
-                        <p className="leading-relaxed font-medium">
-                            Busssola serve a questo: azzerare il debito tecnologico e fornire indicazioni di sicurezza immediatamente difensive, con un'interfaccia calma che rispetti lo stress dell'utente.
-                        </p>
-                    </div>
-                </div>
-            </motion.div>
+                <section className="space-y-6">
+                    <h2 className="text-2xl font-bold text-foreground">Il nostro impegno</h2>
+                    <ul className="space-y-4">
+                        <li className="flex items-start gap-3">
+                            <CheckCircle2 className="w-6 h-6 text-primary shrink-0" />
+                            <span><strong>Indipendenza:</strong> Nessun legame con partiti o aziende di sorveglianza.</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                            <CheckCircle2 className="w-6 h-6 text-primary shrink-0" />
+                            <span><strong>Gratuità:</strong> I contenuti fondamentali resteranno accessibili a tutti.</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                            <CheckCircle2 className="w-6 h-6 text-primary shrink-0" />
+                            <span><strong>Etica dei Dati:</strong> Zero profilazione. Mai.</span>
+                        </li>
+                    </ul>
+                </section>
+            </div>
         </Container>
     )
 }

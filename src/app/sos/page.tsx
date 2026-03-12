@@ -57,7 +57,7 @@ const SCENARIOS: Scenario[] = [
         id: 'hacking',
         title: 'Mi hanno rubato l\'account, i soldi o l\'identità digitale',
         description: 'Non accedi più ai tuoi profili, vedi transazioni non autorizzate o qualcuno si finge te.',
-        immediateAction: 'Blocca subito le carte di credito coinvolte. Avvisa i tuoi contatti del furto di identità tramite altri canali.',
+        immediateAction: 'Blocca subito le carte di credito coinvolte. Avvisa i tuoi contatti del furto di identità.',
         doNot: 'NON cliccare su link inviati via SMS o email che promettono di "recuperare" l\'account.',
         contactLabel: 'Polizia Postale',
         contactNumber: 'Denuncia Online',
@@ -65,12 +65,34 @@ const SCENARIOS: Scenario[] = [
         moduleLink: '/moduli/privacy-tecnica'
     },
     {
+        id: 'diffusione-intima',
+        title: 'Le mie immagini intime si stanno diffondendo senza consenso',
+        description: 'Qualcuno ha condiviso foto o video privati su social, chat o siti web.',
+        immediateAction: 'Segnala il contenuto direttamente alla piattaforma. Contatta il Garante Privacy per la rimozione urgente.',
+        doNot: 'NON cercare di cancellare tutto se non hai prima salvato le prove (URL e screenshot).',
+        contactLabel: 'Garante Privacy',
+        contactNumber: 'Segnala per rimozione',
+        contactLink: 'https://www.gpdp.it/temi/cyberbullismo',
+        moduleLink: '/moduli/sexting-legal'
+    },
+    {
+        id: 'crisi-psicologica',
+        title: 'Mi sento in crisi e ho bisogno di supporto immediato',
+        description: 'Quello che sta succedendo online ti sta togliendo la serenità e non sai come uscirne.',
+        immediateAction: 'Ricorda che non è colpa tua. C\'è sempre una via d\'uscita e persone pronte ad ascoltarti.',
+        doNot: 'NON restare solo/a con questo peso. Parlare è il primo passo per risolvere.',
+        contactLabel: 'Telefono Azzurro / Samaritans',
+        contactNumber: '19696',
+        contactLink: 'tel:19696',
+        moduleLink: '/about'
+    },
+    {
         id: 'pericolo-fisico',
-        title: 'Ho paura per la mia incolumità o quella di un amico',
-        description: 'C\'è una minaccia fisica imminente, qualcuno si è fatto male o c\'è rischio di vita.',
-        immediateAction: 'Mettiti al sicuro. Allontanati dalla situazione di pericolo e chiedi aiuto a chi hai vicino.',
-        doNot: 'NON aspettare e NON esitare a chiamare i soccorsi se la situazione è critica.',
-        contactLabel: 'Emergenza Nazionale (NUE)',
+        title: 'Ho paura per la mia incolumità or quella di un amico',
+        description: 'C\'è una minaccia fisica imminente o rischio di vita.',
+        immediateAction: 'Mettiti al sicuro. Chiedi aiuto a chi hai vicino.',
+        doNot: 'NON aspettare. Chiama subito.',
+        contactLabel: 'Emergenza Nazionale',
         contactNumber: '112',
         contactLink: 'tel:112',
         moduleLink: '/moduli/emergenze-digitali'
