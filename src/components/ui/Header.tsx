@@ -5,19 +5,21 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { cn } from '@/lib/utils';
-import { Compass } from 'lucide-react';
+import { Compass, Menu, X } from 'lucide-react';
 
 const navItems = [
     { href: '/', label: 'Home' },
     { href: '/percorsi', label: 'Percorsi' },
     { href: '/moduli', label: 'Catalogo' },
     { href: '/about', label: 'Cos\'è Busssola' },
+    { href: '/profilo', label: 'Profilo' },
 ];
 
 export function Header() {
     const pathname = usePathname();
     const { scrollY } = useScroll();
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         setIsScrolled(latest > 20);
@@ -37,7 +39,7 @@ export function Header() {
         >
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
                 {/* Logo Section */}
-                <Link href="/" className="group flex items-center gap-3">
+                <Link href="/" className="group flex items-center gap-3" onClick={() => setIsMenuOpen(false)}>
                     <div className="w-10 h-10 flex items-center justify-center text-primary group-hover:text-primary-hover transition-colors">
                         <Compass className="w-8 h-8" strokeWidth={2} />
                     </div>
@@ -73,7 +75,55 @@ export function Header() {
                         Emergenza SOS
                     </Link>
                 </nav>
+
+                <button
+                    type="button"
+                    className="md:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-surface text-foreground shadow-sm"
+                    aria-label={isMenuOpen ? 'Chiudi menu' : 'Apri menu'}
+                    aria-expanded={isMenuOpen}
+                    onClick={() => setIsMenuOpen((open) => !open)}
+                >
+                    {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                </button>
             </div>
+
+            {isMenuOpen && (
+                <motion.nav
+                    initial={{ opacity: 0, y: -8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    className="md:hidden mx-4 mt-4 rounded-2xl border border-border bg-surface p-3 shadow-lg"
+                >
+                    <div className="grid gap-1">
+                        {navItems.map((item) => {
+                            const isActive = pathname === item.href || (item.href !== '/' && pathname?.startsWith(item.href));
+
+                            return (
+                                <Link
+                                    key={item.href}
+                                    href={item.href}
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className={cn(
+                                        'rounded-xl px-4 py-3 text-sm font-semibold transition-colors',
+                                        isActive
+                                            ? 'bg-primary/10 text-primary'
+                                            : 'text-secondary hover:bg-surface-hover hover:text-foreground'
+                                    )}
+                                >
+                                    {item.label}
+                                </Link>
+                            );
+                        })}
+                        <Link
+                            href="/sos"
+                            onClick={() => setIsMenuOpen(false)}
+                            className="rounded-xl bg-sos/10 px-4 py-3 text-sm font-bold text-sos hover:bg-sos hover:text-white transition-colors"
+                        >
+                            Emergenza SOS
+                        </Link>
+                    </div>
+                </motion.nav>
+            )}
         </motion.header>
     );
 }

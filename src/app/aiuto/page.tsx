@@ -7,7 +7,7 @@ import Link from 'next/link'
 export default function HelpPage() {
     const faqs = [
         { q: 'Cosa significa che i miei dati sono al sicuro?', a: 'Busssola è progettata senza database utente. Usa il tuo dispositivo (Local Storage) per ricordarsi dove sei arrivato. Se cambi telefono o cancelli la cronologia, perdi i progressi, ma mantieni l\'anonimato assoluto al 100%.' },
-        { q: 'Busssola funziona offline?', a: 'Non è un\'app nativa, ma usa tecnologie moderne web. Se hai scaricato una pagina in cache, potrai leggerla anche senza campo cellulare.' },
+        { q: 'Busssola funziona offline?', a: 'No. La versione pubblica è un sito statico veloce e leggero, ma richiede connessione per aprire pagine non già caricate dal browser. Abbiamo rimosso la vecchia modalità PWA per privilegiare affidabilità, semplicità e sicurezza.' },
         { q: 'Siete affiliati con la Polizia Postale o enti statali?', a: 'No, siamo un progetto educativo indipendente. Forniamo solo i link corretti per permetterti di effettuare denunce o segnalazioni quando necessario.' },
         { q: 'Posso usare questi materiali a scuola?', a: 'Sì. Tutti i nostri moduli sono gratuiti e pensati per essere proiettati su LIM o usati in laboratori scolastici. Guarda la pagina Scuole per maggiori dettagli.' },
         { q: 'Cosa succede cliccando il bottone rosso SOS?', a: 'Vieni portato a una pagina sicura dove, senza registrazioni o telefonate automatiche immediate, ricevi le istruzioni esatte su cosa (non) fare per arginare un problema prima di chiamare i soccorsi.' }

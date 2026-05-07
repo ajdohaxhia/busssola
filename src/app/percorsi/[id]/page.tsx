@@ -5,8 +5,16 @@ import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { ArrowLeft, ArrowRight, Clock, Users, CheckCircle2, PlayCircle, BookOpen, ShieldCheck } from 'lucide-react'
-import { cn } from '@/lib/utils'
+import { ArrowLeft, ArrowRight, Clock, Users, BookOpen, ShieldCheck } from 'lucide-react'
+import type { LearningPath, ModuleMetadata } from '@/types'
+
+function isModuleMetadata(module: ModuleMetadata | undefined): module is ModuleMetadata {
+    return Boolean(module)
+}
+
+function isLearningPath(path: LearningPath | undefined): path is LearningPath {
+    return Boolean(path)
+}
 
 export function generateStaticParams() {
     return LEARNING_PATHS.map((path) => ({
@@ -22,13 +30,13 @@ export default async function PathDetailPage({ params }: { params: Promise<{ id:
         notFound()
     }
 
-    const pathModules = path.moduleIds.map(moduleId => 
+    const pathModules = path.moduleIds.map(moduleId =>
         MODULES_MAP.find(m => m.id === moduleId)
-    ).filter(Boolean)
+    ).filter(isModuleMetadata)
 
     const relatedPaths = path.relatedPathIds.map(relatedId =>
         LEARNING_PATHS.find(p => p.id === relatedId)
-    ).filter(Boolean)
+    ).filter(isLearningPath)
 
     return (
         <div className="max-w-5xl mx-auto px-4 py-12 space-y-16">
@@ -78,7 +86,7 @@ export default async function PathDetailPage({ params }: { params: Promise<{ id:
                 </div>
 
                 <div className="space-y-4">
-                    {pathModules.map((module: any, index) => (
+                    {pathModules.map((module, index) => (
                         <Link href={`/moduli/${module.id}`} key={module.id} className="group block">
                             <Card className="p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 border border-border bg-surface hover:border-primary/40 hover:shadow-md transition-all rounded-[1.5rem]">
                                 <div className="flex items-center justify-center w-12 h-12 rounded-full bg-background border-2 border-primary/20 text-primary font-display font-bold text-xl shrink-0 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all">
@@ -113,7 +121,7 @@ export default async function PathDetailPage({ params }: { params: Promise<{ id:
                 <section className="space-y-8 pt-12 border-t border-border">
                     <h3 className="text-2xl font-display font-bold tracking-tight italic text-secondary">Potrebbe interessarti anche...</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {relatedPaths.map((related: any) => (
+                        {relatedPaths.map((related) => (
                             <Link href={`/percorsi/${related.id}`} key={related.id} className="group">
                                 <Card className="p-6 border border-border bg-surface hover:border-foreground/20 transition-all rounded-2xl flex justify-between items-center">
                                     <div className="space-y-1">

@@ -1,0 +1,119 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Busssola." [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img [ref=e6]
+        - generic [ref=e9]: Busssola.
+      - navigation [ref=e10]:
+        - link "Home" [ref=e11] [cursor=pointer]:
+          - /url: /
+        - link "Percorsi" [ref=e12] [cursor=pointer]:
+          - /url: /percorsi/
+        - link "Catalogo" [ref=e13] [cursor=pointer]:
+          - /url: /moduli/
+        - link "Cos'è Busssola" [ref=e14] [cursor=pointer]:
+          - /url: /about/
+        - link "Profilo" [ref=e15] [cursor=pointer]:
+          - /url: /profilo/
+        - link "Emergenza SOS" [ref=e16] [cursor=pointer]:
+          - /url: /sos/
+  - region "Notifications alt+T"
+  - main [ref=e17]:
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - img [ref=e22]
+        - heading "Centro Emergenze" [level=1] [ref=e24]
+        - paragraph [ref=e25]: Mantieni la calma. Non sei solo e ogni problema digitale ha una soluzione legale e tecnica. Cosa sta succedendo?
+      - generic [ref=e26]:
+        - button "Qualcuno minaccia di pubblicare mie foto intime (Sextortion)" [ref=e27]:
+          - generic [ref=e28]: Qualcuno minaccia di pubblicare mie foto intime (Sextortion)
+          - img [ref=e29]
+        - button "Un adulto mi chiede incontri segreti o materiale intimo" [ref=e31]:
+          - generic [ref=e32]: Un adulto mi chiede incontri segreti o materiale intimo
+          - img [ref=e33]
+        - button "Sono vittima di insulti continui, stalking o cyberbullismo" [ref=e35]:
+          - generic [ref=e36]: Sono vittima di insulti continui, stalking o cyberbullismo
+          - img [ref=e37]
+        - button "Mi hanno rubato l'account, i soldi o l'identità digitale" [ref=e39]:
+          - generic [ref=e40]: Mi hanno rubato l'account, i soldi o l'identità digitale
+          - img [ref=e41]
+        - button "Le mie immagini intime si stanno diffondendo senza consenso" [ref=e43]:
+          - generic [ref=e44]: Le mie immagini intime si stanno diffondendo senza consenso
+          - img [ref=e45]
+        - button "Mi sento in crisi e ho bisogno di supporto immediato" [ref=e47]:
+          - generic [ref=e48]: Mi sento in crisi e ho bisogno di supporto immediato
+          - img [ref=e49]
+        - button "Ho paura per la mia incolumità o quella di un amico" [ref=e51]:
+          - generic [ref=e52]: Ho paura per la mia incolumità o quella di un amico
+          - img [ref=e53]
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - heading "Pericolo imminente o violenza?" [level=3] [ref=e58]
+            - paragraph [ref=e59]: Chiama immediatamente il Numero Unico Europeo per le Emergenze. È gratuito e attivo 24/7.
+          - link "112" [ref=e60] [cursor=pointer]:
+            - /url: tel:112
+            - img [ref=e61]
+            - text: "112"
+  - contentinfo [ref=e63]:
+    - generic [ref=e64]:
+      - generic [ref=e65]:
+        - generic [ref=e66]:
+          - link "Busssola." [ref=e67] [cursor=pointer]:
+            - /url: /
+            - img [ref=e68]
+            - generic [ref=e71]: Busssola.
+          - paragraph [ref=e72]: Piattaforma educativa per imparare a riconoscere i rischi online, difendere la propria privacy e sapere sempre cosa fare.
+          - generic [ref=e74]:
+            - img [ref=e75]
+            - generic [ref=e78]: Supporto e strumenti pratici
+        - generic [ref=e79]:
+          - generic [ref=e80]:
+            - heading "Il Progetto" [level=4] [ref=e81]
+            - list [ref=e82]:
+              - listitem [ref=e83]:
+                - link "Home" [ref=e84] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e85]:
+                - link "Tutti i Moduli" [ref=e86] [cursor=pointer]:
+                  - /url: /moduli/
+              - listitem [ref=e87]:
+                - link "Cos'è Busssola" [ref=e88] [cursor=pointer]:
+                  - /url: /about/
+              - listitem [ref=e89]:
+                - link "Per le scuole" [ref=e90] [cursor=pointer]:
+                  - /url: /scuole/
+          - generic [ref=e91]:
+            - heading "Aiuto" [level=4] [ref=e92]
+            - list [ref=e93]:
+              - listitem [ref=e94]:
+                - link "Centro SOS" [ref=e95] [cursor=pointer]:
+                  - /url: /sos/
+              - listitem [ref=e96]:
+                - link "Contatti" [ref=e97] [cursor=pointer]:
+                  - /url: /contact/
+              - listitem [ref=e98]:
+                - link "Domande frequenti" [ref=e99] [cursor=pointer]:
+                  - /url: /faq/
+          - generic [ref=e100]:
+            - heading "Legale" [level=4] [ref=e101]
+            - list [ref=e102]:
+              - listitem [ref=e103]:
+                - link "Privacy Policy" [ref=e104] [cursor=pointer]:
+                  - /url: /privacy/
+              - listitem [ref=e105]:
+                - link "Termini d'Uso" [ref=e106] [cursor=pointer]:
+                  - /url: /termini/
+              - listitem [ref=e107]:
+                - link "Metodo Editoriale" [ref=e108] [cursor=pointer]:
+                  - /url: /metodo-editoriale/
+      - generic [ref=e109]:
+        - paragraph [ref=e110]: © 2026 Busssola. Un progetto educativo indipendente.
+        - generic [ref=e111]:
+          - link "Trasparenza" [ref=e112] [cursor=pointer]:
+            - /url: /trasparenza/
+          - link "Accessibilità" [ref=e113] [cursor=pointer]:
+            - /url: /accessibilita/
+          - link "Il Progetto" [ref=e114] [cursor=pointer]:
+            - /url: /about/
+  - alert [ref=e115]

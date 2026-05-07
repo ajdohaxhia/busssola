@@ -1,0 +1,120 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Busssola." [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img [ref=e6]
+        - generic [ref=e9]: Busssola.
+      - navigation [ref=e10]:
+        - link "Home" [ref=e11] [cursor=pointer]:
+          - /url: /
+        - link "Percorsi" [ref=e12] [cursor=pointer]:
+          - /url: /percorsi/
+        - link "Catalogo" [ref=e13] [cursor=pointer]:
+          - /url: /moduli/
+        - link "Cos'è Busssola" [ref=e14] [cursor=pointer]:
+          - /url: /about/
+        - link "Profilo" [ref=e15] [cursor=pointer]:
+          - /url: /profilo/
+        - link "Emergenza SOS" [ref=e16] [cursor=pointer]:
+          - /url: /sos/
+  - region "Notifications alt+T"
+  - main [ref=e17]:
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - img [ref=e22]
+          - text: Progressi salvati solo sul dispositivo
+        - heading "Profilo" [level=1] [ref=e25]
+        - paragraph [ref=e26]: Gestisci i tuoi progressi locali, crea un backup e ripristina un percorso da un altro dispositivo.
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - img [ref=e31]
+            - generic [ref=e34]:
+              - paragraph [ref=e35]: ID profilo locale
+              - paragraph [ref=e36]: 6e2ed9f3-d68f-49aa-9671-b1401d89ad9c
+              - paragraph [ref=e37]: 07 maggio 2026
+          - generic [ref=e38]:
+            - generic [ref=e39]:
+              - paragraph [ref=e40]: Moduli completati
+              - paragraph [ref=e41]: "0"
+            - generic [ref=e42]:
+              - paragraph [ref=e43]: Lezioni lette
+              - paragraph [ref=e44]: "1"
+        - generic [ref=e45]:
+          - generic [ref=e46]:
+            - heading "Dati e backup" [level=2] [ref=e47]
+            - paragraph [ref=e48]: "Busssola non usa account: esporta un file JSON se vuoi conservare o spostare i progressi."
+          - generic [ref=e49]:
+            - button "Backup JSON" [ref=e50]:
+              - img [ref=e51]
+              - text: Backup JSON
+            - button "Importa backup" [ref=e54]:
+              - img [ref=e55]
+              - text: Importa backup
+            - button "Reset progressi" [ref=e58]:
+              - img [ref=e59]
+              - text: Reset progressi
+  - contentinfo [ref=e62]:
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - generic [ref=e65]:
+          - link "Busssola." [ref=e66] [cursor=pointer]:
+            - /url: /
+            - img [ref=e67]
+            - generic [ref=e70]: Busssola.
+          - paragraph [ref=e71]: Piattaforma educativa per imparare a riconoscere i rischi online, difendere la propria privacy e sapere sempre cosa fare.
+          - generic [ref=e73]:
+            - img [ref=e74]
+            - generic [ref=e77]: Supporto e strumenti pratici
+        - generic [ref=e78]:
+          - generic [ref=e79]:
+            - heading "Il Progetto" [level=4] [ref=e80]
+            - list [ref=e81]:
+              - listitem [ref=e82]:
+                - link "Home" [ref=e83] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e84]:
+                - link "Tutti i Moduli" [ref=e85] [cursor=pointer]:
+                  - /url: /moduli/
+              - listitem [ref=e86]:
+                - link "Cos'è Busssola" [ref=e87] [cursor=pointer]:
+                  - /url: /about/
+              - listitem [ref=e88]:
+                - link "Per le scuole" [ref=e89] [cursor=pointer]:
+                  - /url: /scuole/
+          - generic [ref=e90]:
+            - heading "Aiuto" [level=4] [ref=e91]
+            - list [ref=e92]:
+              - listitem [ref=e93]:
+                - link "Centro SOS" [ref=e94] [cursor=pointer]:
+                  - /url: /sos/
+              - listitem [ref=e95]:
+                - link "Contatti" [ref=e96] [cursor=pointer]:
+                  - /url: /contact/
+              - listitem [ref=e97]:
+                - link "Domande frequenti" [ref=e98] [cursor=pointer]:
+                  - /url: /faq/
+          - generic [ref=e99]:
+            - heading "Legale" [level=4] [ref=e100]
+            - list [ref=e101]:
+              - listitem [ref=e102]:
+                - link "Privacy Policy" [ref=e103] [cursor=pointer]:
+                  - /url: /privacy/
+              - listitem [ref=e104]:
+                - link "Termini d'Uso" [ref=e105] [cursor=pointer]:
+                  - /url: /termini/
+              - listitem [ref=e106]:
+                - link "Metodo Editoriale" [ref=e107] [cursor=pointer]:
+                  - /url: /metodo-editoriale/
+      - generic [ref=e108]:
+        - paragraph [ref=e109]: © 2026 Busssola. Un progetto educativo indipendente.
+        - generic [ref=e110]:
+          - link "Trasparenza" [ref=e111] [cursor=pointer]:
+            - /url: /trasparenza/
+          - link "Accessibilità" [ref=e112] [cursor=pointer]:
+            - /url: /accessibilita/
+          - link "Il Progetto" [ref=e113] [cursor=pointer]:
+            - /url: /about/
+  - alert [ref=e114]

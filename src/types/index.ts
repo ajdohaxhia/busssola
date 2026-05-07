@@ -44,20 +44,25 @@ export interface ModuleMetadata {
     id: string
     number: number
     title: string
-    subtitle: string
+    subtitle?: string
     description: string
     difficulty: Difficulty
-    themeColor: string
-    icon: string
+    themeColor?: string
+    icon?: string
+    category?: string
+    coverImage?: string
+    progress?: number
     lessonCount: number
     featuredType?: 'start' | 'curated' | 'situational' | 'none'
 }
 
-export interface Module extends Omit<ModuleMetadata, 'lessonCount'> {
-    durationHours: number
+export interface Module extends Omit<ModuleMetadata, 'lessonCount' | 'number' | 'difficulty'> {
+    number?: number
+    difficulty?: Difficulty
+    durationHours?: number
     lessons: Lesson[]
-    tips: string[]
-    resources: Resource[]
+    tips?: string[]
+    resources?: Resource[]
 }
 
 export interface LearningPath {

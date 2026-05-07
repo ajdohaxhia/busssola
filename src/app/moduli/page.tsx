@@ -27,7 +27,7 @@ const itemVariants: Variants = {
 }
 
 const ModuleCard = memo(({ module, progress }: { module: ModuleMetadata, progress: unknown }) => {
-    const IconComponent = (Icons as unknown as Record<string, React.ElementType>)[module.icon] || Icons.HelpCircle
+    const IconComponent = (Icons as unknown as Record<string, React.ElementType>)[module.icon ?? 'HelpCircle'] || Icons.HelpCircle
     const isCompleted = (progress as { completed?: boolean })?.completed
     
     let highlightedBadge = null;
@@ -177,10 +177,10 @@ function ModulesContent() {
                     className="max-w-2xl space-y-4"
                 >
                     <h1 className="text-4xl md:text-5xl font-display font-semibold text-foreground tracking-tight">
-                        Catalogo dei Percorsi
+                        Catalogo dei moduli
                     </h1>
                     <p className="text-lg text-secondary leading-relaxed">
-                        Esplora la library completa. Non sai da dove iniziare? Lasciati guidare dai nostri percorsi consigliati per costruire una consapevolezza digitale solida. 
+                        Esplora la libreria completa. Non sai da dove iniziare? Lasciati guidare dai percorsi consigliati per costruire una consapevolezza digitale solida.
                     </p>
                 </motion.div>
 
@@ -255,7 +255,7 @@ function ModulesContent() {
             <div className="space-y-6">
                 <div className="flex items-center justify-between">
                     <h2 className="text-2xl font-display font-semibold tracking-tight text-foreground">
-                        {isFiltered ? `${filteredModules.length} ${filteredModules.length === 1 ? 'Percorso trovato' : 'Percorsi trovati'}` : 'Esplora il catalogo'}
+                        {isFiltered ? `${filteredModules.length} ${filteredModules.length === 1 ? 'Modulo trovato' : 'Moduli trovati'}` : 'Esplora il catalogo'}
                     </h2>
                 </div>
 

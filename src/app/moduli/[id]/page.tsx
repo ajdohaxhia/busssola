@@ -3,10 +3,9 @@
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import { motion, Variants } from 'framer-motion'
-import { getModuleById, ALL_MODULES } from '@/data/modules/index'
+import { getModuleById } from '@/data/modules/index'
 import { Module } from '@/types'
 import { ChevronLeft, Play, Search, BookOpen, Clock, ShieldAlert, Target, Users, CheckCircle, ArrowRight } from 'lucide-react'
-import { cn } from '@/lib/utils'
 import { useGameStore } from '@/store/useGameStore'
 import { Container } from '@/components/ui/Container'
 import { useState } from 'react'
@@ -14,8 +13,13 @@ import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import { LEARNING_PATHS } from '@/data/paths'
 
-// List of module IDs that require an immediate SOS jumper
-const SENSITIVE_MODULES = ['predatori-online', 'cyberbullismo-stalking', 'sexting-legal', 'emergenze-digitali', 'relazioni-online']
+const SENSITIVE_MODULES = [
+    'modulo-13-grooming',
+    'modulo-15-sextortion',
+    'modulo-16-cyberbullismo',
+    'modulo-17-stalking',
+    'modulo-24-emergenze',
+]
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -29,13 +33,15 @@ const itemVariants: Variants = {
 
 export default function ModuleDetail() {
     const { id } = useParams()
-    const module = getModuleById(id as string) as Module | undefined
-    const { modules: progress } = useGameStore() as { modules: Record<string, any> }
-    const moduleProgress = module ? (progress[module.id] || { completed: false, xp: 0 }) : { completed: false, xp: 0 }
+    const currentModule = getModuleById(id as string) as Module | undefined
+    const { modules: progress } = useGameStore()
+    const moduleProgress = currentModule
+        ? progress[currentModule.id] || { completed: false, lastPlayed: null, lessonsViewed: [] }
+        : { completed: false, lastPlayed: null, lessonsViewed: [] }
 
     const [lessonSearch, setLessonSearch] = useState('')
 
-    if (!module) return (
+    if (!currentModule) return (
         <Container className="py-20 flex flex-col items-center text-center min-h-[60vh] justify-center">
             <h1 className="text-3xl font-semibold text-foreground mb-4">Percorso non trovato</h1>
             <p className="text-secondary mb-8">Il modulo che stai cercando non esiste o è stato rimosso.</p>
@@ -45,22 +51,24 @@ export default function ModuleDetail() {
         </Container>
     )
 
-    const filteredLessons = module.lessons.filter(l =>
+    const filteredLessons = currentModule.lessons.filter(l =>
         l.title.toLowerCase().includes(lessonSearch.toLowerCase())
     )
 
-    const progressPercent = moduleProgress.completed ? 100 : Math.min(100, (moduleProgress.lessonsViewed?.length || 0) / module.lessons.length * 100)
-    const isSensitive = SENSITIVE_MODULES.includes(module.id)
-    const totalMinutes = module.lessons.length * 5 // Rough estimate
+    const progressPercent = moduleProgress.completed ? 100 : Math.min(100, (moduleProgress.lessonsViewed?.length || 0) / currentModule.lessons.length * 100)
+    const isSensitive = SENSITIVE_MODULES.includes(currentModule.id)
+    const totalMinutes = currentModule.lessons.length * 5 // Rough estimate
+    const moduleDifficulty = currentModule.difficulty ?? 'base'
+    const displayTitle = currentModule.title.replace(/Modulo \d+:\s*/i, '')
     
     // Determine audience string based on difficulty
-    const audience = module.difficulty === 'base' 
+    const audience = moduleDifficulty === 'base'
         ? "Per tutti, inclusi ragazzi e principianti." 
-        : module.difficulty === 'intermedia' 
+        : moduleDifficulty === 'intermedia'
         ? "Utenti regolari, famiglie e giovani adulti." 
         : "Utenti più esperti, educatori o chi cerca tutele avanzate."
 
-    const parentPaths = LEARNING_PATHS.filter(p => p.moduleIds.includes(module.id))
+    const parentPaths = LEARNING_PATHS.filter(p => p.moduleIds.includes(currentModule.id))
 
     return (
         <Container size="md" className="py-12 space-y-16 min-h-screen">
@@ -70,7 +78,7 @@ export default function ModuleDetail() {
                     <ChevronLeft className="w-4 h-4" /> Catalogo
                 </Link>
                 <span>/</span>
-                <span className="text-foreground line-clamp-1">{module.title}</span>
+                <span className="text-foreground line-clamp-1">{displayTitle}</span>
             </motion.div>
 
             {/* OVERVIEW HERO */}
@@ -99,21 +107,21 @@ export default function ModuleDetail() {
                     
                     <div className="space-y-4">
                         <div className="flex flex-wrap items-center gap-3">
-                            <Badge variant="muted" className="capitalize px-3 py-1 font-semibold">{module.difficulty}</Badge>
+                            <Badge variant="muted" className="capitalize px-3 py-1 font-semibold">{moduleDifficulty}</Badge>
                             <Badge variant="outline" className="text-secondary border-border px-3 py-1 font-medium bg-surface">Modulo Formativo</Badge>
                         </div>
 
                         <h1 className="text-4xl md:text-5xl font-display font-semibold tracking-tight text-foreground leading-[1.1]">
-                            {module.title}
+                            {displayTitle}
                         </h1>
                         <p className="text-xl text-secondary leading-relaxed max-w-2xl">
-                            {module.description}
+                            {currentModule.description}
                         </p>
                     </div>
 
                     <div className="flex flex-wrap items-center gap-4 pt-4">
                         <Button asChild size="lg" className="rounded-xl h-14 px-8 text-base shadow-sm">
-                            <Link href={`/moduli/${module.id}/lezione/1`}>
+                            <Link href={`/moduli/${currentModule.id}/lezione/1`}>
                                 <Play className="w-5 h-5 mr-2 fill-current" />
                                 {moduleProgress.lessonsViewed?.length > 0 ? 'Riprendi percorso' : 'Inizia percorso'}
                             </Link>
@@ -157,7 +165,7 @@ export default function ModuleDetail() {
                                     </div>
                                     <div className="space-y-1 mt-1">
                                         <p className="text-sm font-semibold text-foreground leading-none">Tempo richiesto</p>
-                                        <p className="text-sm text-secondary leading-relaxed">~{totalMinutes} minuti totali di lettura ({module.lessons.length} lezioni brevi).</p>
+                                        <p className="text-sm text-secondary leading-relaxed">~{totalMinutes} minuti totali di lettura ({currentModule.lessons.length} lezioni brevi).</p>
                                     </div>
                                 </li>
                             </ul>
@@ -228,17 +236,19 @@ export default function ModuleDetail() {
                     className="grid grid-cols-1 md:grid-cols-2 gap-4"
                 >
                     {filteredLessons.length > 0 ? (
-                        filteredLessons.map((lesson, index) => {
-                            const isLessonCompleted = moduleProgress.lessonsViewed?.includes(index);
+                        filteredLessons.map((lesson) => {
+                            const originalIndex = currentModule.lessons.findIndex((item) => item.id === lesson.id)
+                            const lessonNumber = originalIndex + 1
+                            const isLessonCompleted = moduleProgress.lessonsViewed.includes(lesson.id);
                             return (
                                 <motion.div variants={itemVariants} key={lesson.id}>
                                     <Link
-                                        href={`/moduli/${module.id}/lezione/${index + 1}`}
+                                        href={`/moduli/${currentModule.id}/lezione/${lessonNumber}`}
                                         className="group block overflow-hidden rounded-[1.5rem] bg-surface border border-border hover:border-primary/40 hover:shadow-sm transition-all p-5 h-full"
                                     >
                                         <div className="flex items-start gap-4">
                                             <div className="w-12 h-12 shrink-0 rounded-xl bg-background border border-border flex items-center justify-center text-sm font-semibold text-secondary group-hover:bg-primary/5 group-hover:text-primary group-hover:border-primary/20 transition-colors">
-                                                {index + 1}
+                                                {lessonNumber}
                                             </div>
                                             <div className="w-full">
                                                 <div className="flex items-start justify-between gap-4">

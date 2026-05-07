@@ -39,7 +39,7 @@ Il progetto è costruito per essere **stabile, veloce e scalabile**.
 *   **UI Engine**: [React 19](https://react.dev/)
 *   **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
 *   **Animations**: [Framer Motion](https://www.framer.com/motion/) (Premium motion design)
-*   **PWA**: Supporto offline nativo tramite Workbox.
+*   **Static Export**: Output HTML statico ottimizzato per CDN e Cloudflare Pages.
 *   **Privacy**: Nessun tracciamento esterno, nessun database centrale. Tutti i progressi sono salvati localmente.
 
 ---
@@ -82,7 +82,7 @@ npm run build
 ## 🆘 Centro SOS & Supporto
 Busssola include un **Centro SOS** situazionale progettato per offrire aiuto immediato:
 *   **Selector Situazionale**: Guida l'utente verso la risorsa giusta in base all'urgenza.
-*   **Numeri Utili**: 112 (Emergenza), 114 (Emergenza Infanzia), 1-96-96 (Telefono Azzurro).
+*   **Numeri Utili**: 112 (Emergenza), 114 (Emergenza Infanzia), 1522 (violenza e stalking), Telefono Amico Italia.
 *   **Protocolli di Difesa**: Step-by-step per ripristino account e segnalazioni legali.
 
 ---
@@ -91,6 +91,6 @@ Busssola include un **Centro SOS** situazionale progettato per offrire aiuto imm
 Questo progetto è rilasciato sotto licenza MIT.
 © 2026 Busssola - Educazione Digitale.
 
-*Ultimo aggiornamento: 11 Marzo 2026*
+*Ultimo aggiornamento: 7 Maggio 2026*
 *Status: Production Ready* ✅
 *Versione: 5.0 (Lancio Editoriale)*

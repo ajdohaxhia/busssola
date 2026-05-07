@@ -1,6 +1,5 @@
 import { Container } from '@/components/ui/Container'
-import { Badge } from '@/components/ui/Badge'
-import { CheckCircle2, Globe, Lock, Code } from 'lucide-react'
+import { CheckCircle2, Lock, Code } from 'lucide-react'
 
 export default function TrasparenzaPage() {
     return (

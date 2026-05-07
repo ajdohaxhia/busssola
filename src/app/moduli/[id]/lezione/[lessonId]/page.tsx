@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { motion, useScroll, useSpring } from 'framer-motion'
 import { triggerConfetti } from '@/lib/confetti'
 import { toast } from 'sonner'
-import { getModuleById, ALL_MODULES } from '@/data/modules/index'
+import { getModuleById } from '@/data/modules/index'
 import { Module } from '@/types'
 import { ChevronLeft, ChevronRight, Zap, AlertTriangle, Scale, BookOpen, CheckCircle2, Clock } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -21,8 +21,8 @@ export default function LessonReader() {
     const router = useRouter()
 
     const lessonIndex = parseInt(lessonId as string) - 1
-    const module = getModuleById(id as string) as Module | undefined
-    const { completeLesson } = useGameStore() as { completeLesson: (mid: string, lid: string) => void }
+    const currentModule = getModuleById(id as string) as Module | undefined
+    const { completeLesson, completeModule } = useGameStore()
 
     const { scrollYProgress } = useScroll()
     const scaleX = useSpring(scrollYProgress, {
@@ -31,7 +31,7 @@ export default function LessonReader() {
         restDelta: 0.001
     })
 
-    if (!module || isNaN(lessonIndex) || !module.lessons[lessonIndex]) {
+    if (!currentModule || isNaN(lessonIndex) || !currentModule.lessons[lessonIndex]) {
         return (
             <Container className="py-20 flex flex-col items-center justify-center text-center">
                 <h1 className="text-2xl font-semibold mb-4 text-foreground">Lezione non trovata</h1>
@@ -42,11 +42,11 @@ export default function LessonReader() {
         )
     }
 
-    const currentLesson = module.lessons[lessonIndex]
-    const isLastLesson = lessonIndex === module.lessons.length - 1
+    const currentLesson = currentModule.lessons[lessonIndex]
+    const isLastLesson = lessonIndex === currentModule.lessons.length - 1
 
     const handleNext = () => {
-        completeLesson(module.id, currentLesson.id)
+        completeLesson(currentModule.id, currentLesson.id)
 
         toast.success(`Lezione Completata!`, {
             position: 'top-center',
@@ -54,10 +54,11 @@ export default function LessonReader() {
         })
 
         if (isLastLesson) {
+            completeModule(currentModule.id)
             triggerConfetti()
-            router.push(`/moduli/${module.id}`)
+            router.push(`/moduli/${currentModule.id}`)
         } else {
-            router.push(`/moduli/${module.id}/lezione/${lessonIndex + 2}`)
+            router.push(`/moduli/${currentModule.id}/lezione/${lessonIndex + 2}`)
         }
     }
 
@@ -72,7 +73,7 @@ export default function LessonReader() {
             {/* Navigation Header */}
             <header className="fixed top-0 left-0 right-0 bg-background/90 backdrop-blur-md border-b border-border z-40 h-16 flex items-center">
                 <Container size="full" className="flex items-center justify-between">
-                    <Link href={`/moduli/${module.id}`} className="flex items-center gap-2 text-sm font-medium text-secondary hover:text-foreground transition-colors">
+                    <Link href={`/moduli/${currentModule.id}`} className="flex items-center gap-2 text-sm font-medium text-secondary hover:text-foreground transition-colors">
                         <ChevronLeft className="w-4 h-4" />
                         <span className="hidden sm:inline">Torna al Modulo</span>
                     </Link>
@@ -89,7 +90,7 @@ export default function LessonReader() {
                 {/* Hero Section */}
                 <ReadingWidth className="space-y-6 text-center pt-8">
                     <Badge variant="muted" className="mb-4">
-                        Lezione {lessonIndex + 1} di {module.lessons.length}
+                        Lezione {lessonIndex + 1} di {currentModule.lessons.length}
                     </Badge>
 
                     <h1 className="text-4xl md:text-5xl font-display font-semibold leading-tight text-foreground text-balance">
@@ -165,7 +166,7 @@ export default function LessonReader() {
                         <Button
                             variant="ghost"
                             onClick={() => {
-                                if (lessonIndex > 0) router.push(`/moduli/${module.id}/lezione/${lessonIndex}`)
+                                if (lessonIndex > 0) router.push(`/moduli/${currentModule.id}/lezione/${lessonIndex}`)
                             }}
                             disabled={lessonIndex === 0}
                             className="w-full sm:w-auto text-secondary hover:text-foreground disabled:opacity-50 font-medium"
@@ -190,4 +191,3 @@ export default function LessonReader() {
         </div>
     )
 }
-

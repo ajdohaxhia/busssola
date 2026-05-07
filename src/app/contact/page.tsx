@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Mail, MessageCircle, Send, MapPin, Phone } from 'lucide-react'
+import { Mail, Send, MapPin, Phone, Clock } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 
 export default function ContactPage() {
@@ -14,7 +14,7 @@ export default function ContactPage() {
                 transition={{ duration: 0.8 }}
                 className="text-center space-y-6 max-w-2xl mx-auto"
             >
-                <h1 className="text-5xl md:text-6xl font-display font-semibold text-foreground tracking-tight leading-loose">
+                <h1 className="text-5xl md:text-6xl font-display font-semibold text-foreground tracking-tight leading-tight">
                     Contattaci
                 </h1>
                 <p className="text-lg text-secondary leading-relaxed">
@@ -34,14 +34,14 @@ export default function ContactPage() {
                         {
                             icon: Mail,
                             title: 'Email',
-                            value: 'hello@busssola.edu',
+                            value: 'info@busssola.com',
                             color: 'text-primary',
                             bg: 'bg-primary/10',
                         },
                         {
-                            icon: MessageCircle,
-                            title: 'Chat Supporto',
-                            value: 'Disponibile 09:00 - 18:00',
+                            icon: Clock,
+                            title: 'Tempo di risposta',
+                            value: 'Entro 2-3 giorni lavorativi',
                             color: 'text-purple-600',
                             bg: 'bg-purple-50',
                         },

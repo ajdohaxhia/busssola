@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { LifeBuoy, X, Phone, ShieldAlert, ExternalLink, AlertTriangle } from 'lucide-react'
+import { LifeBuoy, X, Phone, ExternalLink, AlertTriangle } from 'lucide-react'
 
 export function SOSButton() {
     const [isOpen, setIsOpen] = useState(false)

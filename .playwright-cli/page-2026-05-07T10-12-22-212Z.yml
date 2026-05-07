@@ -1,0 +1,1037 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Busssola." [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img [ref=e6]
+        - generic [ref=e9]: Busssola.
+      - navigation [ref=e10]:
+        - link "Home" [ref=e11] [cursor=pointer]:
+          - /url: /
+        - link "Percorsi" [ref=e12] [cursor=pointer]:
+          - /url: /percorsi/
+        - link "Catalogo" [ref=e13] [cursor=pointer]:
+          - /url: /moduli/
+        - link "Cos'è Busssola" [ref=e14] [cursor=pointer]:
+          - /url: /about/
+        - link "Profilo" [ref=e15] [cursor=pointer]:
+          - /url: /profilo/
+        - link "Emergenza SOS" [ref=e16] [cursor=pointer]:
+          - /url: /sos/
+  - region "Notifications alt+T"
+  - main [ref=e17]:
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - heading "Catalogo dei moduli" [level=1] [ref=e22]
+          - paragraph [ref=e23]: Esplora la libreria completa. Non sai da dove iniziare? Lasciati guidare dai percorsi consigliati per costruire una consapevolezza digitale solida.
+        - generic [ref=e25]:
+          - img [ref=e26]
+          - textbox "Cerca un argomento (es. phishing)..." [ref=e29]
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - heading "Tematica" [level=3] [ref=e32]
+          - generic [ref=e33]:
+            - button "Tutti i temi" [ref=e34]
+            - button "Basi e Privacy" [ref=e35]
+            - button "Rischi e Truffe" [ref=e36]
+            - button "Relazioni Online" [ref=e37]
+            - button "Benessere" [ref=e38]
+            - button "Emergenze" [ref=e39]
+        - generic [ref=e40]:
+          - heading "Esperienza" [level=3] [ref=e41]
+          - generic [ref=e42]:
+            - button "Tutte" [ref=e43]
+            - button "base" [ref=e44]
+            - button "intermedia" [ref=e45]
+            - button "avanzata" [ref=e46]
+      - generic [ref=e47]:
+        - heading "Esplora il catalogo" [level=2] [ref=e49]
+        - generic [ref=e50]:
+          - generic [ref=e51]:
+            - heading "I percorsi migliori per cominciare" [level=3] [ref=e52]
+            - generic [ref=e53]:
+              - link "Inizia da qui base Privacy digitale di base Una guida pratica per capire privacy digitale di base, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e55] [cursor=pointer]:
+                - /url: /moduli/modulo-02-privacy-digitale/
+                - generic [ref=e56]:
+                  - generic [ref=e57]:
+                    - img [ref=e59]
+                    - generic [ref=e62]:
+                      - generic [ref=e63]: Inizia da qui
+                      - generic [ref=e64]: base
+                  - generic [ref=e65]:
+                    - heading "Privacy digitale di base" [level=2] [ref=e66]
+                    - paragraph [ref=e67]: Una guida pratica per capire privacy digitale di base, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana.
+                  - generic [ref=e68]:
+                    - generic [ref=e69]:
+                      - generic [ref=e70]:
+                        - img [ref=e71]
+                        - text: 20 LEZIONI
+                      - generic [ref=e73]:
+                        - img [ref=e74]
+                        - text: 100 MIN
+                    - img [ref=e77]
+              - link "Inizia da qui base Password, passkey e autenticazione Una guida pratica per capire password, passkey e autenticazione, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e80] [cursor=pointer]:
+                - /url: /moduli/modulo-03-password/
+                - generic [ref=e81]:
+                  - generic [ref=e82]:
+                    - img [ref=e84]
+                    - generic [ref=e87]:
+                      - generic [ref=e88]: Inizia da qui
+                      - generic [ref=e89]: base
+                  - generic [ref=e90]:
+                    - heading "Password, passkey e autenticazione" [level=2] [ref=e91]
+                    - paragraph [ref=e92]: Una guida pratica per capire password, passkey e autenticazione, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana.
+                  - generic [ref=e93]:
+                    - generic [ref=e94]:
+                      - generic [ref=e95]:
+                        - img [ref=e96]
+                        - text: 20 LEZIONI
+                      - generic [ref=e98]:
+                        - img [ref=e99]
+                        - text: 100 MIN
+                    - img [ref=e102]
+              - link "Inizia da qui base Phishing, smishing e vishing Impara a riconoscere link, SMS, email e chiamate costruite per rubare credenziali o soldi, usando controlli rapidi e ripetibili. 20 LEZIONI 100 MIN" [ref=e105] [cursor=pointer]:
+                - /url: /moduli/modulo-19-phishing/
+                - generic [ref=e106]:
+                  - generic [ref=e107]:
+                    - img [ref=e109]
+                    - generic [ref=e112]:
+                      - generic [ref=e113]: Inizia da qui
+                      - generic [ref=e114]: base
+                  - generic [ref=e115]:
+                    - heading "Phishing, smishing e vishing" [level=2] [ref=e116]
+                    - paragraph [ref=e117]: Impara a riconoscere link, SMS, email e chiamate costruite per rubare credenziali o soldi, usando controlli rapidi e ripetibili.
+                  - generic [ref=e118]:
+                    - generic [ref=e119]:
+                      - generic [ref=e120]:
+                        - img [ref=e121]
+                        - text: 20 LEZIONI
+                      - generic [ref=e123]:
+                        - img [ref=e124]
+                        - text: 100 MIN
+                    - img [ref=e127]
+          - generic [ref=e129]:
+            - heading "Altri moduli utili" [level=3] [ref=e130]
+            - generic [ref=e131]:
+              - 'link "base Social media: impostazioni e confini Una guida pratica per capire social media: impostazioni e confini, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e133] [cursor=pointer]':
+                - /url: /moduli/modulo-08-social-media/
+                - generic [ref=e134]:
+                  - generic [ref=e135]:
+                    - img [ref=e137]
+                    - generic [ref=e141]: base
+                  - generic [ref=e142]:
+                    - 'heading "Social media: impostazioni e confini" [level=2] [ref=e143]'
+                    - paragraph [ref=e144]: "Una guida pratica per capire social media: impostazioni e confini, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana."
+                  - generic [ref=e145]:
+                    - generic [ref=e146]:
+                      - generic [ref=e147]:
+                        - img [ref=e148]
+                        - text: 20 LEZIONI
+                      - generic [ref=e150]:
+                        - img [ref=e151]
+                        - text: 100 MIN
+                    - img [ref=e154]
+              - link "base Grooming e adescamento online Segnali, dinamiche e azioni concrete per riconoscere l’adescamento online e chiedere aiuto senza vergogna. 20 LEZIONI 100 MIN" [ref=e157] [cursor=pointer]:
+                - /url: /moduli/modulo-13-grooming/
+                - generic [ref=e158]:
+                  - generic [ref=e159]:
+                    - img [ref=e161]
+                    - generic [ref=e165]: base
+                  - generic [ref=e166]:
+                    - heading "Grooming e adescamento online" [level=2] [ref=e167]
+                    - paragraph [ref=e168]: Segnali, dinamiche e azioni concrete per riconoscere l’adescamento online e chiedere aiuto senza vergogna.
+                  - generic [ref=e169]:
+                    - generic [ref=e170]:
+                      - generic [ref=e171]:
+                        - img [ref=e172]
+                        - text: 20 LEZIONI
+                      - generic [ref=e174]:
+                        - img [ref=e175]
+                        - text: 100 MIN
+                    - img [ref=e178]
+              - 'link "Se hai bisogno di aiuto subito base Emergenze online: cosa fare subito Protocolli essenziali per mantenere calma, ridurre il danno e contattare i canali giusti quando una situazione digitale diventa urgente. 20 LEZIONI 100 MIN" [ref=e181] [cursor=pointer]':
+                - /url: /moduli/modulo-24-emergenze/
+                - generic [ref=e182]:
+                  - generic [ref=e183]:
+                    - img [ref=e185]
+                    - generic [ref=e188]:
+                      - generic [ref=e189]: Se hai bisogno di aiuto subito
+                      - generic [ref=e190]: base
+                  - generic [ref=e191]:
+                    - 'heading "Emergenze online: cosa fare subito" [level=2] [ref=e192]'
+                    - paragraph [ref=e193]: Protocolli essenziali per mantenere calma, ridurre il danno e contattare i canali giusti quando una situazione digitale diventa urgente.
+                  - generic [ref=e194]:
+                    - generic [ref=e195]:
+                      - generic [ref=e196]:
+                        - img [ref=e197]
+                        - text: 20 LEZIONI
+                      - generic [ref=e199]:
+                        - img [ref=e200]
+                        - text: 100 MIN
+                    - img [ref=e203]
+          - generic [ref=e205]:
+            - heading "Tutti i percorsi" [level=3] [ref=e206]
+            - generic [ref=e207]:
+              - link "base E-mail in sicurezza Una guida pratica per capire e-mail in sicurezza, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e209] [cursor=pointer]:
+                - /url: /moduli/modulo-04-email/
+                - generic [ref=e210]:
+                  - generic [ref=e211]:
+                    - img [ref=e213]
+                    - generic [ref=e217]: base
+                  - generic [ref=e218]:
+                    - heading "E-mail in sicurezza" [level=2] [ref=e219]
+                    - paragraph [ref=e220]: Una guida pratica per capire e-mail in sicurezza, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana.
+                  - generic [ref=e221]:
+                    - generic [ref=e222]:
+                      - generic [ref=e223]:
+                        - img [ref=e224]
+                        - text: 20 LEZIONI
+                      - generic [ref=e226]:
+                        - img [ref=e227]
+                        - text: 100 MIN
+                    - img [ref=e230]
+              - link "base Smartphone sicuro ogni giorno Una guida pratica per capire smartphone sicuro ogni giorno, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e233] [cursor=pointer]:
+                - /url: /moduli/modulo-05-smartphone/
+                - generic [ref=e234]:
+                  - generic [ref=e235]:
+                    - img [ref=e237]
+                    - generic [ref=e241]: base
+                  - generic [ref=e242]:
+                    - heading "Smartphone sicuro ogni giorno" [level=2] [ref=e243]
+                    - paragraph [ref=e244]: Una guida pratica per capire smartphone sicuro ogni giorno, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana.
+                  - generic [ref=e245]:
+                    - generic [ref=e246]:
+                      - generic [ref=e247]:
+                        - img [ref=e248]
+                        - text: 20 LEZIONI
+                      - generic [ref=e250]:
+                        - img [ref=e251]
+                        - text: 100 MIN
+                    - img [ref=e254]
+              - link "base Computer, browser e aggiornamenti Una guida accessibile per mantenere computer e browser ordinati, aggiornati e meno esposti a malware, pop-up e impostazioni rischiose. 20 LEZIONI 100 MIN" [ref=e257] [cursor=pointer]:
+                - /url: /moduli/modulo-06-computer/
+                - generic [ref=e258]:
+                  - generic [ref=e259]:
+                    - img [ref=e261]
+                    - generic [ref=e265]: base
+                  - generic [ref=e266]:
+                    - heading "Computer, browser e aggiornamenti" [level=2] [ref=e267]
+                    - paragraph [ref=e268]: Una guida accessibile per mantenere computer e browser ordinati, aggiornati e meno esposti a malware, pop-up e impostazioni rischiose.
+                  - generic [ref=e269]:
+                    - generic [ref=e270]:
+                      - generic [ref=e271]:
+                        - img [ref=e272]
+                        - text: 20 LEZIONI
+                      - generic [ref=e274]:
+                        - img [ref=e275]
+                        - text: 100 MIN
+                    - img [ref=e278]
+              - link "base App, permessi e dati personali Una guida pratica per capire app, permessi e dati personali, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e281] [cursor=pointer]:
+                - /url: /moduli/modulo-07-app-permessi/
+                - generic [ref=e282]:
+                  - generic [ref=e283]:
+                    - img [ref=e285]
+                    - generic [ref=e289]: base
+                  - generic [ref=e290]:
+                    - heading "App, permessi e dati personali" [level=2] [ref=e291]
+                    - paragraph [ref=e292]: Una guida pratica per capire app, permessi e dati personali, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana.
+                  - generic [ref=e293]:
+                    - generic [ref=e294]:
+                      - generic [ref=e295]:
+                        - img [ref=e296]
+                        - text: 20 LEZIONI
+                      - generic [ref=e298]:
+                        - img [ref=e299]
+                        - text: 100 MIN
+                    - img [ref=e302]
+              - link "base Chat e messaggistica senza guai Una guida pratica per capire chat e messaggistica senza guai, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e305] [cursor=pointer]:
+                - /url: /moduli/modulo-09-chat/
+                - generic [ref=e306]:
+                  - generic [ref=e307]:
+                    - img [ref=e309]
+                    - generic [ref=e313]: base
+                  - generic [ref=e314]:
+                    - heading "Chat e messaggistica senza guai" [level=2] [ref=e315]
+                    - paragraph [ref=e316]: Una guida pratica per capire chat e messaggistica senza guai, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana.
+                  - generic [ref=e317]:
+                    - generic [ref=e318]:
+                      - generic [ref=e319]:
+                        - img [ref=e320]
+                        - text: 20 LEZIONI
+                      - generic [ref=e322]:
+                        - img [ref=e323]
+                        - text: 100 MIN
+                    - img [ref=e326]
+              - link "base Orientarsi online senza panico Le basi per capire i rischi digitali, scegliere il percorso giusto e distinguere prevenzione, supporto e urgenza. 20 LEZIONI 100 MIN" [ref=e329] [cursor=pointer]:
+                - /url: /moduli/orientarsi-online/
+                - generic [ref=e330]:
+                  - generic [ref=e331]:
+                    - img [ref=e333]
+                    - generic [ref=e337]: base
+                  - generic [ref=e338]:
+                    - heading "Orientarsi online senza panico" [level=2] [ref=e339]
+                    - paragraph [ref=e340]: Le basi per capire i rischi digitali, scegliere il percorso giusto e distinguere prevenzione, supporto e urgenza.
+                  - generic [ref=e341]:
+                    - generic [ref=e342]:
+                      - generic [ref=e343]:
+                        - img [ref=e344]
+                        - text: 20 LEZIONI
+                      - generic [ref=e346]:
+                        - img [ref=e347]
+                        - text: 100 MIN
+                    - img [ref=e350]
+              - link "base Gaming online e community Una guida per vivere gaming, chat vocali, acquisti e community online senza sottovalutare privacy, truffe e comportamenti tossici. 20 LEZIONI 100 MIN" [ref=e353] [cursor=pointer]:
+                - /url: /moduli/modulo-10-gaming/
+                - generic [ref=e354]:
+                  - generic [ref=e355]:
+                    - img [ref=e357]
+                    - generic [ref=e361]: base
+                  - generic [ref=e362]:
+                    - heading "Gaming online e community" [level=2] [ref=e363]
+                    - paragraph [ref=e364]: Una guida per vivere gaming, chat vocali, acquisti e community online senza sottovalutare privacy, truffe e comportamenti tossici.
+                  - generic [ref=e365]:
+                    - generic [ref=e366]:
+                      - generic [ref=e367]:
+                        - img [ref=e368]
+                        - text: 20 LEZIONI
+                      - generic [ref=e370]:
+                        - img [ref=e371]
+                        - text: 100 MIN
+                    - img [ref=e374]
+              - link "base Livestream, creator e visibilità Una guida pratica per capire livestream, creator e visibilità, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e377] [cursor=pointer]:
+                - /url: /moduli/modulo-11-livestream/
+                - generic [ref=e378]:
+                  - generic [ref=e379]:
+                    - img [ref=e381]
+                    - generic [ref=e385]: base
+                  - generic [ref=e386]:
+                    - heading "Livestream, creator e visibilità" [level=2] [ref=e387]
+                    - paragraph [ref=e388]: Una guida pratica per capire livestream, creator e visibilità, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana.
+                  - generic [ref=e389]:
+                    - generic [ref=e390]:
+                      - generic [ref=e391]:
+                        - img [ref=e392]
+                        - text: 20 LEZIONI
+                      - generic [ref=e394]:
+                        - img [ref=e395]
+                        - text: 100 MIN
+                    - img [ref=e398]
+              - link "base Foto, video e immagini intime Un percorso sul consenso digitale, la condivisione di immagini e le scelte da fare prima, durante e dopo la pubblicazione di contenuti privati. 20 LEZIONI 100 MIN" [ref=e401] [cursor=pointer]:
+                - /url: /moduli/modulo-12-foto-video/
+                - generic [ref=e402]:
+                  - generic [ref=e403]:
+                    - img [ref=e405]
+                    - generic [ref=e409]: base
+                  - generic [ref=e410]:
+                    - heading "Foto, video e immagini intime" [level=2] [ref=e411]
+                    - paragraph [ref=e412]: Un percorso sul consenso digitale, la condivisione di immagini e le scelte da fare prima, durante e dopo la pubblicazione di contenuti privati.
+                  - generic [ref=e413]:
+                    - generic [ref=e414]:
+                      - generic [ref=e415]:
+                        - img [ref=e416]
+                        - text: 20 LEZIONI
+                      - generic [ref=e418]:
+                        - img [ref=e419]
+                        - text: 100 MIN
+                    - img [ref=e422]
+              - link "base Catfishing e identità false Impara a riconoscere profili falsi, storie incoerenti e manipolazioni affettive prima che diventino dannose. 20 LEZIONI 100 MIN" [ref=e425] [cursor=pointer]:
+                - /url: /moduli/modulo-14-catfishing/
+                - generic [ref=e426]:
+                  - generic [ref=e427]:
+                    - img [ref=e429]
+                    - generic [ref=e433]: base
+                  - generic [ref=e434]:
+                    - heading "Catfishing e identità false" [level=2] [ref=e435]
+                    - paragraph [ref=e436]: Impara a riconoscere profili falsi, storie incoerenti e manipolazioni affettive prima che diventino dannose.
+                  - generic [ref=e437]:
+                    - generic [ref=e438]:
+                      - generic [ref=e439]:
+                        - img [ref=e440]
+                        - text: 20 LEZIONI
+                      - generic [ref=e442]:
+                        - img [ref=e443]
+                        - text: 100 MIN
+                    - img [ref=e446]
+              - 'link "base Sextortion e ricatti sessuali Una guida calma e operativa per affrontare ricatti sessuali online: cosa fare subito, cosa evitare e dove chiedere aiuto. 20 LEZIONI 100 MIN" [ref=e449] [cursor=pointer]':
+                - /url: /moduli/modulo-15-sextortion/
+                - generic [ref=e450]:
+                  - generic [ref=e451]:
+                    - img [ref=e453]
+                    - generic [ref=e457]: base
+                  - generic [ref=e458]:
+                    - heading "Sextortion e ricatti sessuali" [level=2] [ref=e459]
+                    - paragraph [ref=e460]: "Una guida calma e operativa per affrontare ricatti sessuali online: cosa fare subito, cosa evitare e dove chiedere aiuto."
+                  - generic [ref=e461]:
+                    - generic [ref=e462]:
+                      - generic [ref=e463]:
+                        - img [ref=e464]
+                        - text: 20 LEZIONI
+                      - generic [ref=e466]:
+                        - img [ref=e467]
+                        - text: 100 MIN
+                    - img [ref=e470]
+              - link "base Molestie, cyberbullismo e attacchi di gruppo Strumenti per riconoscere cyberbullismo, molestie coordinate e attacchi di gruppo, proteggendo prove e benessere. 20 LEZIONI 100 MIN" [ref=e473] [cursor=pointer]:
+                - /url: /moduli/modulo-16-cyberbullismo/
+                - generic [ref=e474]:
+                  - generic [ref=e475]:
+                    - img [ref=e477]
+                    - generic [ref=e481]: base
+                  - generic [ref=e482]:
+                    - heading "Molestie, cyberbullismo e attacchi di gruppo" [level=2] [ref=e483]
+                    - paragraph [ref=e484]: Strumenti per riconoscere cyberbullismo, molestie coordinate e attacchi di gruppo, proteggendo prove e benessere.
+                  - generic [ref=e485]:
+                    - generic [ref=e486]:
+                      - generic [ref=e487]:
+                        - img [ref=e488]
+                        - text: 20 LEZIONI
+                      - generic [ref=e490]:
+                        - img [ref=e491]
+                        - text: 100 MIN
+                    - img [ref=e494]
+              - link "base Stalking digitale, doxxing e controllo Una guida per individuare controllo digitale, persecuzione online e diffusione di dati personali, con passi pratici di protezione. 20 LEZIONI 100 MIN" [ref=e497] [cursor=pointer]:
+                - /url: /moduli/modulo-17-stalking/
+                - generic [ref=e498]:
+                  - generic [ref=e499]:
+                    - img [ref=e501]
+                    - generic [ref=e505]: base
+                  - generic [ref=e506]:
+                    - heading "Stalking digitale, doxxing e controllo" [level=2] [ref=e507]
+                    - paragraph [ref=e508]: Una guida per individuare controllo digitale, persecuzione online e diffusione di dati personali, con passi pratici di protezione.
+                  - generic [ref=e509]:
+                    - generic [ref=e510]:
+                      - generic [ref=e511]:
+                        - img [ref=e512]
+                        - text: 20 LEZIONI
+                      - generic [ref=e514]:
+                        - img [ref=e515]
+                        - text: 100 MIN
+                    - img [ref=e518]
+              - 'link "In base alla tua situazione base Truffe online per ragazzi Esempi e difese semplici contro truffe mirate ai più giovani: regali falsi, account gaming, ricariche, marketplace e messaggi privati. 20 LEZIONI 100 MIN" [ref=e521] [cursor=pointer]':
+                - /url: /moduli/modulo-18-truffe-ragazzi/
+                - generic [ref=e522]:
+                  - generic [ref=e523]:
+                    - img [ref=e525]
+                    - generic [ref=e528]:
+                      - generic [ref=e529]: In base alla tua situazione
+                      - generic [ref=e530]: base
+                  - generic [ref=e531]:
+                    - heading "Truffe online per ragazzi" [level=2] [ref=e532]
+                    - paragraph [ref=e533]: "Esempi e difese semplici contro truffe mirate ai più giovani: regali falsi, account gaming, ricariche, marketplace e messaggi privati."
+                  - generic [ref=e534]:
+                    - generic [ref=e535]:
+                      - generic [ref=e536]:
+                        - img [ref=e537]
+                        - text: 20 LEZIONI
+                      - generic [ref=e539]:
+                        - img [ref=e540]
+                        - text: 100 MIN
+                    - img [ref=e543]
+              - link "base Shopping online e marketplace Una guida pratica per capire shopping online e marketplace, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e546] [cursor=pointer]:
+                - /url: /moduli/modulo-20-shopping/
+                - generic [ref=e547]:
+                  - generic [ref=e548]:
+                    - img [ref=e550]
+                    - generic [ref=e554]: base
+                  - generic [ref=e555]:
+                    - heading "Shopping online e marketplace" [level=2] [ref=e556]
+                    - paragraph [ref=e557]: Una guida pratica per capire shopping online e marketplace, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana.
+                  - generic [ref=e558]:
+                    - generic [ref=e559]:
+                      - generic [ref=e560]:
+                        - img [ref=e561]
+                        - text: 20 LEZIONI
+                      - generic [ref=e563]:
+                        - img [ref=e564]
+                        - text: 100 MIN
+                    - img [ref=e567]
+              - link "base Soldi digitali, carte e wallet Una guida pratica per capire soldi digitali, carte e wallet, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e570] [cursor=pointer]:
+                - /url: /moduli/modulo-21-soldi-digitali/
+                - generic [ref=e571]:
+                  - generic [ref=e572]:
+                    - img [ref=e574]
+                    - generic [ref=e578]: base
+                  - generic [ref=e579]:
+                    - heading "Soldi digitali, carte e wallet" [level=2] [ref=e580]
+                    - paragraph [ref=e581]: Una guida pratica per capire soldi digitali, carte e wallet, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana.
+                  - generic [ref=e582]:
+                    - generic [ref=e583]:
+                      - generic [ref=e584]:
+                        - img [ref=e585]
+                        - text: 20 LEZIONI
+                      - generic [ref=e587]:
+                        - img [ref=e588]
+                        - text: 100 MIN
+                    - img [ref=e591]
+              - link "base Furto account e recupero accessi Passi ordinati per reagire a un account rubato, proteggere gli altri profili e comunicare il furto ai contatti. 20 LEZIONI 100 MIN" [ref=e594] [cursor=pointer]:
+                - /url: /moduli/modulo-22-recupero-account/
+                - generic [ref=e595]:
+                  - generic [ref=e596]:
+                    - img [ref=e598]
+                    - generic [ref=e602]: base
+                  - generic [ref=e603]:
+                    - heading "Furto account e recupero accessi" [level=2] [ref=e604]
+                    - paragraph [ref=e605]: Passi ordinati per reagire a un account rubato, proteggere gli altri profili e comunicare il furto ai contatti.
+                  - generic [ref=e606]:
+                    - generic [ref=e607]:
+                      - generic [ref=e608]:
+                        - img [ref=e609]
+                        - text: 20 LEZIONI
+                      - generic [ref=e611]:
+                        - img [ref=e612]
+                        - text: 100 MIN
+                    - img [ref=e615]
+              - link "base Prove digitali, screenshot e segnalazioni Una guida pratica per capire prove digitali, screenshot e segnalazioni, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e618] [cursor=pointer]:
+                - /url: /moduli/modulo-23-prove-digitali/
+                - generic [ref=e619]:
+                  - generic [ref=e620]:
+                    - img [ref=e622]
+                    - generic [ref=e626]: base
+                  - generic [ref=e627]:
+                    - heading "Prove digitali, screenshot e segnalazioni" [level=2] [ref=e628]
+                    - paragraph [ref=e629]: Una guida pratica per capire prove digitali, screenshot e segnalazioni, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana.
+                  - generic [ref=e630]:
+                    - generic [ref=e631]:
+                      - generic [ref=e632]:
+                        - img [ref=e633]
+                        - text: 20 LEZIONI
+                      - generic [ref=e635]:
+                        - img [ref=e636]
+                        - text: 100 MIN
+                    - img [ref=e639]
+              - link "base Segnali di crisi e supporto emotivo Un percorso per riconoscere quando un problema online pesa troppo e attivare supporto umano senza restare soli. 20 LEZIONI 100 MIN" [ref=e642] [cursor=pointer]:
+                - /url: /moduli/modulo-25-crisi-emotiva/
+                - generic [ref=e643]:
+                  - generic [ref=e644]:
+                    - img [ref=e646]
+                    - generic [ref=e650]: base
+                  - generic [ref=e651]:
+                    - heading "Segnali di crisi e supporto emotivo" [level=2] [ref=e652]
+                    - paragraph [ref=e653]: Un percorso per riconoscere quando un problema online pesa troppo e attivare supporto umano senza restare soli.
+                  - generic [ref=e654]:
+                    - generic [ref=e655]:
+                      - generic [ref=e656]:
+                        - img [ref=e657]
+                        - text: 20 LEZIONI
+                      - generic [ref=e659]:
+                        - img [ref=e660]
+                        - text: 100 MIN
+                    - img [ref=e663]
+              - link "base Fake news e disinformazione Una guida pratica per capire fake news e disinformazione, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e666] [cursor=pointer]:
+                - /url: /moduli/modulo-26-fake-news/
+                - generic [ref=e667]:
+                  - generic [ref=e668]:
+                    - img [ref=e670]
+                    - generic [ref=e674]: base
+                  - generic [ref=e675]:
+                    - heading "Fake news e disinformazione" [level=2] [ref=e676]
+                    - paragraph [ref=e677]: Una guida pratica per capire fake news e disinformazione, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana.
+                  - generic [ref=e678]:
+                    - generic [ref=e679]:
+                      - generic [ref=e680]:
+                        - img [ref=e681]
+                        - text: 20 LEZIONI
+                      - generic [ref=e683]:
+                        - img [ref=e684]
+                        - text: 100 MIN
+                    - img [ref=e687]
+              - link "base Deepfake, AI e contenuti manipolati Una guida per riconoscere contenuti generati o manipolati dall’AI, valutando prove, contesto e fonti affidabili. 20 LEZIONI 100 MIN" [ref=e690] [cursor=pointer]:
+                - /url: /moduli/modulo-27-deepfake/
+                - generic [ref=e691]:
+                  - generic [ref=e692]:
+                    - img [ref=e694]
+                    - generic [ref=e698]: base
+                  - generic [ref=e699]:
+                    - heading "Deepfake, AI e contenuti manipolati" [level=2] [ref=e700]
+                    - paragraph [ref=e701]: Una guida per riconoscere contenuti generati o manipolati dall’AI, valutando prove, contesto e fonti affidabili.
+                  - generic [ref=e702]:
+                    - generic [ref=e703]:
+                      - generic [ref=e704]:
+                        - img [ref=e705]
+                        - text: 20 LEZIONI
+                      - generic [ref=e707]:
+                        - img [ref=e708]
+                        - text: 100 MIN
+                    - img [ref=e711]
+              - 'link "base Cercare bene: motori, fonti e verifiche Una guida pratica per capire cercare bene: motori, fonti e verifiche, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e714] [cursor=pointer]':
+                - /url: /moduli/modulo-28-ricerca/
+                - generic [ref=e715]:
+                  - generic [ref=e716]:
+                    - img [ref=e718]
+                    - generic [ref=e722]: base
+                  - generic [ref=e723]:
+                    - 'heading "Cercare bene: motori, fonti e verifiche" [level=2] [ref=e724]'
+                    - paragraph [ref=e725]: "Una guida pratica per capire cercare bene: motori, fonti e verifiche, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana."
+                  - generic [ref=e726]:
+                    - generic [ref=e727]:
+                      - generic [ref=e728]:
+                        - img [ref=e729]
+                        - text: 20 LEZIONI
+                      - generic [ref=e731]:
+                        - img [ref=e732]
+                        - text: 100 MIN
+                    - img [ref=e735]
+              - link "base Algoritmi, feed e manipolazione dell’attenzione Una guida pratica per capire algoritmi, feed e manipolazione dell’attenzione, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e738] [cursor=pointer]:
+                - /url: /moduli/modulo-29-algoritmi/
+                - generic [ref=e739]:
+                  - generic [ref=e740]:
+                    - img [ref=e742]
+                    - generic [ref=e746]: base
+                  - generic [ref=e747]:
+                    - heading "Algoritmi, feed e manipolazione dell’attenzione" [level=2] [ref=e748]
+                    - paragraph [ref=e749]: Una guida pratica per capire algoritmi, feed e manipolazione dell’attenzione, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana.
+                  - generic [ref=e750]:
+                    - generic [ref=e751]:
+                      - generic [ref=e752]:
+                        - img [ref=e753]
+                        - text: 20 LEZIONI
+                      - generic [ref=e755]:
+                        - img [ref=e756]
+                        - text: 100 MIN
+                    - img [ref=e759]
+              - link "base Tempo online, sonno e benessere digitale Una guida pratica per capire tempo online, sonno e benessere digitale, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e762] [cursor=pointer]:
+                - /url: /moduli/modulo-30-benessere-digitale/
+                - generic [ref=e763]:
+                  - generic [ref=e764]:
+                    - img [ref=e766]
+                    - generic [ref=e770]: base
+                  - generic [ref=e771]:
+                    - heading "Tempo online, sonno e benessere digitale" [level=2] [ref=e772]
+                    - paragraph [ref=e773]: Una guida pratica per capire tempo online, sonno e benessere digitale, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana.
+                  - generic [ref=e774]:
+                    - generic [ref=e775]:
+                      - generic [ref=e776]:
+                        - img [ref=e777]
+                        - text: 20 LEZIONI
+                      - generic [ref=e779]:
+                        - img [ref=e780]
+                        - text: 100 MIN
+                    - img [ref=e783]
+              - link "base Relazioni online sane e confini Una guida pratica per capire relazioni online sane e confini, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e786] [cursor=pointer]:
+                - /url: /moduli/modulo-31-relazioni-sane/
+                - generic [ref=e787]:
+                  - generic [ref=e788]:
+                    - img [ref=e790]
+                    - generic [ref=e794]: base
+                  - generic [ref=e795]:
+                    - heading "Relazioni online sane e confini" [level=2] [ref=e796]
+                    - paragraph [ref=e797]: Una guida pratica per capire relazioni online sane e confini, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana.
+                  - generic [ref=e798]:
+                    - generic [ref=e799]:
+                      - generic [ref=e800]:
+                        - img [ref=e801]
+                        - text: 20 LEZIONI
+                      - generic [ref=e803]:
+                        - img [ref=e804]
+                        - text: 100 MIN
+                    - img [ref=e807]
+              - link "base Amicizie online e gruppi Una guida pratica per capire amicizie online e gruppi, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e810] [cursor=pointer]:
+                - /url: /moduli/modulo-32-amicizie-gruppi/
+                - generic [ref=e811]:
+                  - generic [ref=e812]:
+                    - img [ref=e814]
+                    - generic [ref=e818]: base
+                  - generic [ref=e819]:
+                    - heading "Amicizie online e gruppi" [level=2] [ref=e820]
+                    - paragraph [ref=e821]: Una guida pratica per capire amicizie online e gruppi, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana.
+                  - generic [ref=e822]:
+                    - generic [ref=e823]:
+                      - generic [ref=e824]:
+                        - img [ref=e825]
+                        - text: 20 LEZIONI
+                      - generic [ref=e827]:
+                        - img [ref=e828]
+                        - text: 100 MIN
+                    - img [ref=e831]
+              - link "base Dating app e incontri offline Una guida per usare app di dating e organizzare incontri con più sicurezza, chiarezza e rispetto dei propri limiti. 20 LEZIONI 100 MIN" [ref=e834] [cursor=pointer]:
+                - /url: /moduli/modulo-33-dating-app/
+                - generic [ref=e835]:
+                  - generic [ref=e836]:
+                    - img [ref=e838]
+                    - generic [ref=e842]: base
+                  - generic [ref=e843]:
+                    - heading "Dating app e incontri offline" [level=2] [ref=e844]
+                    - paragraph [ref=e845]: Una guida per usare app di dating e organizzare incontri con più sicurezza, chiarezza e rispetto dei propri limiti.
+                  - generic [ref=e846]:
+                    - generic [ref=e847]:
+                      - generic [ref=e848]:
+                        - img [ref=e849]
+                        - text: 20 LEZIONI
+                      - generic [ref=e851]:
+                        - img [ref=e852]
+                        - text: 100 MIN
+                    - img [ref=e855]
+              - link "base Scuola digitale e comportamenti corretti Una guida pratica per capire scuola digitale e comportamenti corretti, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e858] [cursor=pointer]:
+                - /url: /moduli/modulo-34-scuola-digitale/
+                - generic [ref=e859]:
+                  - generic [ref=e860]:
+                    - img [ref=e862]
+                    - generic [ref=e866]: base
+                  - generic [ref=e867]:
+                    - heading "Scuola digitale e comportamenti corretti" [level=2] [ref=e868]
+                    - paragraph [ref=e869]: Una guida pratica per capire scuola digitale e comportamenti corretti, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana.
+                  - generic [ref=e870]:
+                    - generic [ref=e871]:
+                      - generic [ref=e872]:
+                        - img [ref=e873]
+                        - text: 20 LEZIONI
+                      - generic [ref=e875]:
+                        - img [ref=e876]
+                        - text: 100 MIN
+                    - img [ref=e879]
+              - link "base Studiare online senza farsi fregare Una guida pratica per capire studiare online senza farsi fregare, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e882] [cursor=pointer]:
+                - /url: /moduli/modulo-35-studiare-online/
+                - generic [ref=e883]:
+                  - generic [ref=e884]:
+                    - img [ref=e886]
+                    - generic [ref=e890]: base
+                  - generic [ref=e891]:
+                    - heading "Studiare online senza farsi fregare" [level=2] [ref=e892]
+                    - paragraph [ref=e893]: Una guida pratica per capire studiare online senza farsi fregare, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana.
+                  - generic [ref=e894]:
+                    - generic [ref=e895]:
+                      - generic [ref=e896]:
+                        - img [ref=e897]
+                        - text: 20 LEZIONI
+                      - generic [ref=e899]:
+                        - img [ref=e900]
+                        - text: 100 MIN
+                    - img [ref=e903]
+              - link "base Privacy a scuola, foto di classe e chat Una guida pratica per capire privacy a scuola, foto di classe e chat, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e906] [cursor=pointer]:
+                - /url: /moduli/modulo-36-privacy-scuola/
+                - generic [ref=e907]:
+                  - generic [ref=e908]:
+                    - img [ref=e910]
+                    - generic [ref=e914]: base
+                  - generic [ref=e915]:
+                    - heading "Privacy a scuola, foto di classe e chat" [level=2] [ref=e916]
+                    - paragraph [ref=e917]: Una guida pratica per capire privacy a scuola, foto di classe e chat, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana.
+                  - generic [ref=e918]:
+                    - generic [ref=e919]:
+                      - generic [ref=e920]:
+                        - img [ref=e921]
+                        - text: 20 LEZIONI
+                      - generic [ref=e923]:
+                        - img [ref=e924]
+                        - text: 100 MIN
+                    - img [ref=e927]
+              - 'link "Per genitori e scuole base Genitori: parlare di sicurezza senza panico Una guida pratica per capire genitori: parlare di sicurezza senza panico, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e930] [cursor=pointer]':
+                - /url: /moduli/modulo-37-genitori-panico/
+                - generic [ref=e931]:
+                  - generic [ref=e932]:
+                    - img [ref=e934]
+                    - generic [ref=e937]:
+                      - generic [ref=e938]: Per genitori e scuole
+                      - generic [ref=e939]: base
+                  - generic [ref=e940]:
+                    - 'heading "Genitori: parlare di sicurezza senza panico" [level=2] [ref=e941]'
+                    - paragraph [ref=e942]: "Una guida pratica per capire genitori: parlare di sicurezza senza panico, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana."
+                  - generic [ref=e943]:
+                    - generic [ref=e944]:
+                      - generic [ref=e945]:
+                        - img [ref=e946]
+                        - text: 20 LEZIONI
+                      - generic [ref=e948]:
+                        - img [ref=e949]
+                        - text: 100 MIN
+                    - img [ref=e952]
+              - 'link "base Famiglie: regole, routine e accordi Una guida pratica per capire famiglie: regole, routine e accordi, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e955] [cursor=pointer]':
+                - /url: /moduli/modulo-38-famiglie-regole/
+                - generic [ref=e956]:
+                  - generic [ref=e957]:
+                    - img [ref=e959]
+                    - generic [ref=e963]: base
+                  - generic [ref=e964]:
+                    - 'heading "Famiglie: regole, routine e accordi" [level=2] [ref=e965]'
+                    - paragraph [ref=e966]: "Una guida pratica per capire famiglie: regole, routine e accordi, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana."
+                  - generic [ref=e967]:
+                    - generic [ref=e968]:
+                      - generic [ref=e969]:
+                        - img [ref=e970]
+                        - text: 20 LEZIONI
+                      - generic [ref=e972]:
+                        - img [ref=e973]
+                        - text: 100 MIN
+                    - img [ref=e976]
+              - 'link "base Educatori: attività e discussioni in classe Una guida pratica per capire educatori: attività e discussioni in classe, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e979] [cursor=pointer]':
+                - /url: /moduli/modulo-39-educatori-classe/
+                - generic [ref=e980]:
+                  - generic [ref=e981]:
+                    - img [ref=e983]
+                    - generic [ref=e987]: base
+                  - generic [ref=e988]:
+                    - 'heading "Educatori: attività e discussioni in classe" [level=2] [ref=e989]'
+                    - paragraph [ref=e990]: "Una guida pratica per capire educatori: attività e discussioni in classe, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana."
+                  - generic [ref=e991]:
+                    - generic [ref=e992]:
+                      - generic [ref=e993]:
+                        - img [ref=e994]
+                        - text: 20 LEZIONI
+                      - generic [ref=e996]:
+                        - img [ref=e997]
+                        - text: 100 MIN
+                    - img [ref=e1000]
+              - 'link "Per genitori e scuole base Coordinatori e scuole: policy e procedure Una guida pratica per capire coordinatori e scuole: policy e procedure, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e1003] [cursor=pointer]':
+                - /url: /moduli/modulo-40-policy-scuole/
+                - generic [ref=e1004]:
+                  - generic [ref=e1005]:
+                    - img [ref=e1007]
+                    - generic [ref=e1010]:
+                      - generic [ref=e1011]: Per genitori e scuole
+                      - generic [ref=e1012]: base
+                  - generic [ref=e1013]:
+                    - 'heading "Coordinatori e scuole: policy e procedure" [level=2] [ref=e1014]'
+                    - paragraph [ref=e1015]: "Una guida pratica per capire coordinatori e scuole: policy e procedure, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana."
+                  - generic [ref=e1016]:
+                    - generic [ref=e1017]:
+                      - generic [ref=e1018]:
+                        - img [ref=e1019]
+                        - text: 20 LEZIONI
+                      - generic [ref=e1021]:
+                        - img [ref=e1022]
+                        - text: 100 MIN
+                    - img [ref=e1025]
+              - 'link "Per genitori e scuole base Minori e legge: diritti, limiti e responsabilità Una guida pratica per capire minori e legge: diritti, limiti e responsabilità, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e1028] [cursor=pointer]':
+                - /url: /moduli/modulo-41-minori-legge/
+                - generic [ref=e1029]:
+                  - generic [ref=e1030]:
+                    - img [ref=e1032]
+                    - generic [ref=e1035]:
+                      - generic [ref=e1036]: Per genitori e scuole
+                      - generic [ref=e1037]: base
+                  - generic [ref=e1038]:
+                    - 'heading "Minori e legge: diritti, limiti e responsabilità" [level=2] [ref=e1039]'
+                    - paragraph [ref=e1040]: "Una guida pratica per capire minori e legge: diritti, limiti e responsabilità, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana."
+                  - generic [ref=e1041]:
+                    - generic [ref=e1042]:
+                      - generic [ref=e1043]:
+                        - img [ref=e1044]
+                        - text: 20 LEZIONI
+                      - generic [ref=e1046]:
+                        - img [ref=e1047]
+                        - text: 100 MIN
+                    - img [ref=e1050]
+              - 'link "base Piattaforme: bloccare, segnalare, documentare Una guida pratica per capire piattaforme: bloccare, segnalare, documentare, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e1053] [cursor=pointer]':
+                - /url: /moduli/modulo-42-segnalare-bloccare/
+                - generic [ref=e1054]:
+                  - generic [ref=e1055]:
+                    - img [ref=e1057]
+                    - generic [ref=e1061]: base
+                  - generic [ref=e1062]:
+                    - 'heading "Piattaforme: bloccare, segnalare, documentare" [level=2] [ref=e1063]'
+                    - paragraph [ref=e1064]: "Una guida pratica per capire piattaforme: bloccare, segnalare, documentare, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana."
+                  - generic [ref=e1065]:
+                    - generic [ref=e1066]:
+                      - generic [ref=e1067]:
+                        - img [ref=e1068]
+                        - text: 20 LEZIONI
+                      - generic [ref=e1070]:
+                        - img [ref=e1071]
+                        - text: 100 MIN
+                    - img [ref=e1074]
+              - link "base Viaggi, luoghi pubblici e reti Wi‑Fi Una guida pratica per capire viaggi, luoghi pubblici e reti wi‑fi, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e1077] [cursor=pointer]:
+                - /url: /moduli/modulo-43-viaggi-wifi/
+                - generic [ref=e1078]:
+                  - generic [ref=e1079]:
+                    - img [ref=e1081]
+                    - generic [ref=e1085]: base
+                  - generic [ref=e1086]:
+                    - heading "Viaggi, luoghi pubblici e reti Wi‑Fi" [level=2] [ref=e1087]
+                    - paragraph [ref=e1088]: Una guida pratica per capire viaggi, luoghi pubblici e reti wi‑fi, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana.
+                  - generic [ref=e1089]:
+                    - generic [ref=e1090]:
+                      - generic [ref=e1091]:
+                        - img [ref=e1092]
+                        - text: 20 LEZIONI
+                      - generic [ref=e1094]:
+                        - img [ref=e1095]
+                        - text: 100 MIN
+                    - img [ref=e1098]
+              - link "base Geolocalizzazione e tracce invisibili Una guida pratica per capire geolocalizzazione e tracce invisibili, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e1101] [cursor=pointer]:
+                - /url: /moduli/modulo-44-geolocalizzazione/
+                - generic [ref=e1102]:
+                  - generic [ref=e1103]:
+                    - img [ref=e1105]
+                    - generic [ref=e1109]: base
+                  - generic [ref=e1110]:
+                    - heading "Geolocalizzazione e tracce invisibili" [level=2] [ref=e1111]
+                    - paragraph [ref=e1112]: Una guida pratica per capire geolocalizzazione e tracce invisibili, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana.
+                  - generic [ref=e1113]:
+                    - generic [ref=e1114]:
+                      - generic [ref=e1115]:
+                        - img [ref=e1116]
+                        - text: 20 LEZIONI
+                      - generic [ref=e1118]:
+                        - img [ref=e1119]
+                        - text: 100 MIN
+                    - img [ref=e1122]
+              - link "base Cloud, backup e recupero dati Una guida pratica per capire cloud, backup e recupero dati, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e1125] [cursor=pointer]:
+                - /url: /moduli/modulo-45-cloud-backup/
+                - generic [ref=e1126]:
+                  - generic [ref=e1127]:
+                    - img [ref=e1129]
+                    - generic [ref=e1133]: base
+                  - generic [ref=e1134]:
+                    - heading "Cloud, backup e recupero dati" [level=2] [ref=e1135]
+                    - paragraph [ref=e1136]: Una guida pratica per capire cloud, backup e recupero dati, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana.
+                  - generic [ref=e1137]:
+                    - generic [ref=e1138]:
+                      - generic [ref=e1139]:
+                        - img [ref=e1140]
+                        - text: 20 LEZIONI
+                      - generic [ref=e1142]:
+                        - img [ref=e1143]
+                        - text: 100 MIN
+                    - img [ref=e1146]
+              - 'link "base Casa connessa: smart device e privacy Una guida pratica per capire casa connessa: smart device e privacy, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e1149] [cursor=pointer]':
+                - /url: /moduli/modulo-46-casa-connessa/
+                - generic [ref=e1150]:
+                  - generic [ref=e1151]:
+                    - img [ref=e1153]
+                    - generic [ref=e1157]: base
+                  - generic [ref=e1158]:
+                    - 'heading "Casa connessa: smart device e privacy" [level=2] [ref=e1159]'
+                    - paragraph [ref=e1160]: "Una guida pratica per capire casa connessa: smart device e privacy, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana."
+                  - generic [ref=e1161]:
+                    - generic [ref=e1162]:
+                      - generic [ref=e1163]:
+                        - img [ref=e1164]
+                        - text: 20 LEZIONI
+                      - generic [ref=e1166]:
+                        - img [ref=e1167]
+                        - text: 100 MIN
+                    - img [ref=e1170]
+              - 'link "base AI quotidiana: usare chatbot e tool con criterio Una guida pratica per capire ai quotidiana: usare chatbot e tool con criterio, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e1173] [cursor=pointer]':
+                - /url: /moduli/modulo-47-ai-quotidiana/
+                - generic [ref=e1174]:
+                  - generic [ref=e1175]:
+                    - img [ref=e1177]
+                    - generic [ref=e1181]: base
+                  - generic [ref=e1182]:
+                    - 'heading "AI quotidiana: usare chatbot e tool con criterio" [level=2] [ref=e1183]'
+                    - paragraph [ref=e1184]: "Una guida pratica per capire ai quotidiana: usare chatbot e tool con criterio, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana."
+                  - generic [ref=e1185]:
+                    - generic [ref=e1186]:
+                      - generic [ref=e1187]:
+                        - img [ref=e1188]
+                        - text: 20 LEZIONI
+                      - generic [ref=e1190]:
+                        - img [ref=e1191]
+                        - text: 100 MIN
+                    - img [ref=e1194]
+              - link "base Creatività online, copyright e consenso Una guida pratica per capire creatività online, copyright e consenso, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e1197] [cursor=pointer]:
+                - /url: /moduli/modulo-48-creativita-copyright/
+                - generic [ref=e1198]:
+                  - generic [ref=e1199]:
+                    - img [ref=e1201]
+                    - generic [ref=e1205]: base
+                  - generic [ref=e1206]:
+                    - heading "Creatività online, copyright e consenso" [level=2] [ref=e1207]
+                    - paragraph [ref=e1208]: Una guida pratica per capire creatività online, copyright e consenso, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana.
+                  - generic [ref=e1209]:
+                    - generic [ref=e1210]:
+                      - generic [ref=e1211]:
+                        - img [ref=e1212]
+                        - text: 20 LEZIONI
+                      - generic [ref=e1214]:
+                        - img [ref=e1215]
+                        - text: 100 MIN
+                    - img [ref=e1218]
+              - link "base Reputazione digitale e futuro Un percorso per curare la reputazione digitale, gestire vecchi contenuti e presentarsi online in modo coerente. 20 LEZIONI 100 MIN" [ref=e1221] [cursor=pointer]:
+                - /url: /moduli/modulo-49-reputazione/
+                - generic [ref=e1222]:
+                  - generic [ref=e1223]:
+                    - img [ref=e1225]
+                    - generic [ref=e1229]: base
+                  - generic [ref=e1230]:
+                    - heading "Reputazione digitale e futuro" [level=2] [ref=e1231]
+                    - paragraph [ref=e1232]: Un percorso per curare la reputazione digitale, gestire vecchi contenuti e presentarsi online in modo coerente.
+                  - generic [ref=e1233]:
+                    - generic [ref=e1234]:
+                      - generic [ref=e1235]:
+                        - img [ref=e1236]
+                        - text: 20 LEZIONI
+                      - generic [ref=e1238]:
+                        - img [ref=e1239]
+                        - text: 100 MIN
+                    - img [ref=e1242]
+              - 'link "base Percorso finale Busssola: scenari e piano personale Una guida pratica per capire percorso finale busssola: scenari e piano personale, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana. 20 LEZIONI 100 MIN" [ref=e1245] [cursor=pointer]':
+                - /url: /moduli/modulo-50-percorso-finale/
+                - generic [ref=e1246]:
+                  - generic [ref=e1247]:
+                    - img [ref=e1249]
+                    - generic [ref=e1253]: base
+                  - generic [ref=e1254]:
+                    - 'heading "Percorso finale Busssola: scenari e piano personale" [level=2] [ref=e1255]'
+                    - paragraph [ref=e1256]: "Una guida pratica per capire percorso finale busssola: scenari e piano personale, riconoscere i segnali importanti e scegliere azioni sicure nella vita quotidiana."
+                  - generic [ref=e1257]:
+                    - generic [ref=e1258]:
+                      - generic [ref=e1259]:
+                        - img [ref=e1260]
+                        - text: 20 LEZIONI
+                      - generic [ref=e1262]:
+                        - img [ref=e1263]
+                        - text: 100 MIN
+                    - img [ref=e1266]
+  - contentinfo [ref=e1268]:
+    - generic [ref=e1269]:
+      - generic [ref=e1270]:
+        - generic [ref=e1271]:
+          - link "Busssola." [ref=e1272] [cursor=pointer]:
+            - /url: /
+            - img [ref=e1273]
+            - generic [ref=e1276]: Busssola.
+          - paragraph [ref=e1277]: Piattaforma educativa per imparare a riconoscere i rischi online, difendere la propria privacy e sapere sempre cosa fare.
+          - generic [ref=e1279]:
+            - img [ref=e1280]
+            - generic [ref=e1283]: Supporto e strumenti pratici
+        - generic [ref=e1284]:
+          - generic [ref=e1285]:
+            - heading "Il Progetto" [level=4] [ref=e1286]
+            - list [ref=e1287]:
+              - listitem [ref=e1288]:
+                - link "Home" [ref=e1289] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e1290]:
+                - link "Tutti i Moduli" [ref=e1291] [cursor=pointer]:
+                  - /url: /moduli/
+              - listitem [ref=e1292]:
+                - link "Cos'è Busssola" [ref=e1293] [cursor=pointer]:
+                  - /url: /about/
+              - listitem [ref=e1294]:
+                - link "Per le scuole" [ref=e1295] [cursor=pointer]:
+                  - /url: /scuole/
+          - generic [ref=e1296]:
+            - heading "Aiuto" [level=4] [ref=e1297]
+            - list [ref=e1298]:
+              - listitem [ref=e1299]:
+                - link "Centro SOS" [ref=e1300] [cursor=pointer]:
+                  - /url: /sos/
+              - listitem [ref=e1301]:
+                - link "Contatti" [ref=e1302] [cursor=pointer]:
+                  - /url: /contact/
+              - listitem [ref=e1303]:
+                - link "Domande frequenti" [ref=e1304] [cursor=pointer]:
+                  - /url: /faq/
+          - generic [ref=e1305]:
+            - heading "Legale" [level=4] [ref=e1306]
+            - list [ref=e1307]:
+              - listitem [ref=e1308]:
+                - link "Privacy Policy" [ref=e1309] [cursor=pointer]:
+                  - /url: /privacy/
+              - listitem [ref=e1310]:
+                - link "Termini d'Uso" [ref=e1311] [cursor=pointer]:
+                  - /url: /termini/
+              - listitem [ref=e1312]:
+                - link "Metodo Editoriale" [ref=e1313] [cursor=pointer]:
+                  - /url: /metodo-editoriale/
+      - generic [ref=e1314]:
+        - paragraph [ref=e1315]: © 2026 Busssola. Un progetto educativo indipendente.
+        - generic [ref=e1316]:
+          - link "Trasparenza" [ref=e1317] [cursor=pointer]:
+            - /url: /trasparenza/
+          - link "Accessibilità" [ref=e1318] [cursor=pointer]:
+            - /url: /accessibilita/
+          - link "Il Progetto" [ref=e1319] [cursor=pointer]:
+            - /url: /about/
+  - alert [ref=e1320]

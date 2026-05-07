@@ -1,11 +1,11 @@
 {
-    "name": "Bussola",
-    "short_name": "Bussola",
-    "description": "Naviga nel mare digitale in sicurezza",
+    "name": "Busssola",
+    "short_name": "Busssola",
+    "description": "Educazione civica per l'era digitale",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "#050b14",
-    "theme_color": "#00f5ff",
+    "background_color": "#FAFAFA",
+    "theme_color": "#2563EB",
     "orientation": "portrait-primary",
     "scope": "/",
     "icons": [

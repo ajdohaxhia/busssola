@@ -1,0 +1,60 @@
+- generic [active] [ref=e1]:
+  - region "Notifications alt+T"
+  - main [ref=e17]:
+    - generic [ref=e517]:
+      - generic [ref=e519]:
+        - link "Torna al Modulo" [ref=e520] [cursor=pointer]:
+          - /url: /moduli/modulo-15-sextortion/
+          - img [ref=e521]
+          - generic [ref=e523]: Torna al Modulo
+        - generic [ref=e524]: Capire sextortion e ricatti sessuali
+      - generic [ref=e525]:
+        - generic [ref=e526]:
+          - generic [ref=e527]: Lezione 1 di 20
+          - heading "Capire sextortion e ricatti sessuali" [level=1] [ref=e528]
+          - generic [ref=e529]:
+            - generic [ref=e530]:
+              - img [ref=e531]
+              - text: 5 min lettura
+            - generic [ref=e535]: base
+        - generic [ref=e536]:
+          - generic [ref=e537]:
+            - heading "Cosa imparerai" [level=3] [ref=e538]:
+              - img [ref=e539]
+              - text: Cosa imparerai
+            - list [ref=e541]:
+              - listitem [ref=e542]: Comprendere il punto chiave di sextortion e ricatti sessuali senza allarmismi.
+              - listitem [ref=e544]: Riconoscere segnali, pressioni e scelte da valutare con calma.
+              - listitem [ref=e546]: Applicare un’azione pratica e verificabile nella vita quotidiana.
+          - article [ref=e548]:
+            - heading "Perché conta" [level=3] [ref=e549]
+            - paragraph [ref=e550]: Questa lezione mette a fuoco sextortion e ricatti sessuali con parole semplici e senza allarmismi. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
+            - heading "Segnali da riconoscere" [level=3] [ref=e551]
+            - list [ref=e552]:
+              - listitem [ref=e553]: Quali termini ricorrono più spesso.
+              - listitem [ref=e554]: Quali situazioni sono davvero rilevanti.
+              - listitem [ref=e555]: Quando una parola vaga nasconde un rischio concreto.
+            - heading "Cosa fare" [level=3] [ref=e556]
+            - list [ref=e557]:
+              - listitem [ref=e558]:
+                - strong [ref=e559]: Dai un nome preciso al problema.
+              - listitem [ref=e560]:
+                - strong [ref=e561]: Separalo da casi simili ma meno urgenti.
+              - listitem [ref=e562]:
+                - strong [ref=e563]: Annota la domanda che vuoi chiarire prima di agire.
+            - heading "Cosa evitare" [level=3] [ref=e564]
+            - list [ref=e565]:
+              - listitem [ref=e566]: Non usare etichette generiche come “mi hanno hackerato” se puoi descrivere meglio cosa è successo.
+              - listitem [ref=e567]: Non minimizzare solo perché la situazione avviene online.
+            - heading "Quando chiedere aiuto" [level=3] [ref=e568]
+            - paragraph [ref=e569]: Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+            - heading "Passo pratico" [level=3] [ref=e570]
+            - paragraph [ref=e571]: Scrivi in una frase cosa significa per te sextortion e ricatti sessuali e quale dubbio vuoi chiarire per primo.
+        - generic [ref=e573]:
+          - button "Precedente" [disabled]:
+            - img
+            - text: Precedente
+          - button "Prossima Lezione" [ref=e574]:
+            - text: Prossima Lezione
+            - img [ref=e575]
+  - alert [ref=e115]

@@ -1,0 +1,311 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Busssola." [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img [ref=e6]
+        - generic [ref=e9]: Busssola.
+      - navigation [ref=e10]:
+        - link "Home" [ref=e11] [cursor=pointer]:
+          - /url: /
+        - link "Percorsi" [ref=e12] [cursor=pointer]:
+          - /url: /percorsi/
+        - link "Catalogo" [ref=e13] [cursor=pointer]:
+          - /url: /moduli/
+        - link "Cos'è Busssola" [ref=e14] [cursor=pointer]:
+          - /url: /about/
+        - link "Profilo" [ref=e15] [cursor=pointer]:
+          - /url: /profilo/
+        - link "Emergenza SOS" [ref=e16] [cursor=pointer]:
+          - /url: /sos/
+  - region "Notifications alt+T"
+  - main [ref=e17]:
+    - generic [ref=e19]:
+      - generic [ref=e23]:
+        - heading "Busssola" [level=1] [ref=e24]
+        - paragraph [ref=e25]: Educazione civica per l'era digitale.
+        - paragraph [ref=e26]: 50 moduli gratuiti per proteggere privacy, account e serenità online. Niente registrazione, niente tracciamento invasivo, un centro SOS sempre raggiungibile.
+        - generic [ref=e27]:
+          - link "Esplora i moduli" [ref=e28] [cursor=pointer]:
+            - /url: /moduli/
+            - text: Esplora i moduli
+            - img [ref=e29]
+          - link "Scopri il metodo" [ref=e31] [cursor=pointer]:
+            - /url: /metodo-editoriale/
+        - generic [ref=e32]:
+          - generic [ref=e33]:
+            - img [ref=e34]
+            - text: 100% Gratuito
+          - generic [ref=e37]:
+            - img [ref=e38]
+            - text: Nessuna registrazione
+          - generic [ref=e41]:
+            - img [ref=e42]
+            - text: Centro emergenze SOS integrato
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - heading "Scegli il tuo percorso" [level=2] [ref=e46]
+          - paragraph [ref=e47]: Non una semplice lista di argomenti, ma percorsi curati per guidarti passo dopo passo.
+        - generic [ref=e48]:
+          - link "Inizia da qui I passi fondamentali per costruire una base solida di sicurezza digitale. Esplora percorso" [ref=e49] [cursor=pointer]:
+            - /url: /percorsi/inizia-da-qui/
+            - generic [ref=e50]:
+              - img [ref=e52]
+              - generic [ref=e55]:
+                - heading "Inizia da qui" [level=3] [ref=e56]
+                - paragraph [ref=e57]: I passi fondamentali per costruire una base solida di sicurezza digitale.
+              - generic [ref=e58]:
+                - text: Esplora percorso
+                - img [ref=e59]
+          - link "Proteggi i tuoi account Un percorso tecnico ma accessibile per blindare i tuoi profili social ed email. Esplora percorso" [ref=e61] [cursor=pointer]:
+            - /url: /percorsi/proteggi-account/
+            - generic [ref=e62]:
+              - img [ref=e64]
+              - generic [ref=e67]:
+                - heading "Proteggi i tuoi account" [level=3] [ref=e68]
+                - paragraph [ref=e69]: Un percorso tecnico ma accessibile per blindare i tuoi profili social ed email.
+              - generic [ref=e70]:
+                - text: Esplora percorso
+                - img [ref=e71]
+          - link "Relazioni e sicurezza online Gestisci i social, capisci i rischi delle relazioni e difenditi dal bullismo. Esplora percorso" [ref=e73] [cursor=pointer]:
+            - /url: /percorsi/relazioni-social/
+            - generic [ref=e74]:
+              - img [ref=e76]
+              - generic [ref=e81]:
+                - heading "Relazioni e sicurezza online" [level=3] [ref=e82]
+                - paragraph [ref=e83]: Gestisci i social, capisci i rischi delle relazioni e difenditi dal bullismo.
+              - generic [ref=e84]:
+                - text: Esplora percorso
+                - img [ref=e85]
+          - 'link "Se ti è successo qualcosa Protocolli di emergenza per situazioni critiche: ricatti, furti o molestie. Esplora percorso" [ref=e87] [cursor=pointer]':
+            - /url: /percorsi/sos-digitale/
+            - generic [ref=e88]:
+              - img [ref=e90]
+              - generic [ref=e92]:
+                - heading "Se ti è successo qualcosa" [level=3] [ref=e93]
+                - paragraph [ref=e94]: "Protocolli di emergenza per situazioni critiche: ricatti, furti o molestie."
+              - generic [ref=e95]:
+                - text: Esplora percorso
+                - img [ref=e96]
+          - link "Per genitori e famiglie Come accompagnare i figli nel digitale e stabilire regole sane in casa. Esplora percorso" [ref=e98] [cursor=pointer]:
+            - /url: /percorsi/genitori-famiglie/
+            - generic [ref=e99]:
+              - img [ref=e101]
+              - generic [ref=e103]:
+                - heading "Per genitori e famiglie" [level=3] [ref=e104]
+                - paragraph [ref=e105]: Come accompagnare i figli nel digitale e stabilire regole sane in casa.
+              - generic [ref=e106]:
+                - text: Esplora percorso
+                - img [ref=e107]
+          - link "Per scuole ed educatori Strumenti e policy per gestire la cittadinanza digitale in classe. Esplora percorso" [ref=e109] [cursor=pointer]:
+            - /url: /percorsi/scuole-educatori/
+            - generic [ref=e110]:
+              - img [ref=e112]
+              - generic [ref=e115]:
+                - heading "Per scuole ed educatori" [level=3] [ref=e116]
+                - paragraph [ref=e117]: Strumenti e policy per gestire la cittadinanza digitale in classe.
+              - generic [ref=e118]:
+                - text: Esplora percorso
+                - img [ref=e119]
+        - link "Vedi tutti i percorsi" [ref=e122] [cursor=pointer]:
+          - /url: /percorsi/
+          - text: Vedi tutti i percorsi
+          - img [ref=e123]
+      - generic [ref=e125]:
+        - generic [ref=e126]:
+          - heading "L'educazione digitale è per tutti" [level=2] [ref=e127]
+          - paragraph [ref=e128]: Le risorse di Busssola sono organizzate in modo chiaro per essere utili a ogni età e livello di competenza.
+        - generic [ref=e129]:
+          - generic [ref=e130]:
+            - img [ref=e132]
+            - heading "Per i più giovani" [level=3] [ref=e135]
+            - paragraph [ref=e136]: Consigli pratici, veloci e diretti per gestire gaming, social network, relazioni online e difendersi dalle pressioni dei coetanei o degli sconosciuti, senza inutili lezioni paternalistiche.
+          - generic [ref=e137]:
+            - img [ref=e139]
+            - heading "Per le famiglie" [level=3] [ref=e144]
+            - paragraph [ref=e145]: Una guida concreta per comprendere le dinamiche del digitale, impostare limiti sani, instaurare un dialogo aperto in casa e sapere come intervenire tempestivamente senza creare il panico.
+          - generic [ref=e146]:
+            - img [ref=e148]
+            - heading "Per gli educatori" [level=3] [ref=e151]
+            - paragraph [ref=e152]: Un archivio di moduli strutturati ed esempi mirati, pensati per essere portati direttamente in classe o usati in laboratori per facilitare lezioni moderne di cittadinanza digitale.
+            - link "Scopri le risorse" [ref=e154] [cursor=pointer]:
+              - /url: /scuole/
+              - text: Scopri le risorse
+              - img [ref=e155]
+      - generic [ref=e157]:
+        - generic [ref=e158]:
+          - generic [ref=e159]:
+            - heading "Tutto ciò di cui hai bisogno" [level=2] [ref=e160]
+            - paragraph [ref=e161]: Non solo percorsi. Esplora il nostro catalogo completo di 50 moduli verticali per approfondire temi specifici.
+          - link "Catalogo moduli" [ref=e162] [cursor=pointer]:
+            - /url: /moduli/
+            - text: Catalogo moduli
+            - img [ref=e163]
+        - generic [ref=e165]:
+          - link "Privacy e sicurezza tecnica Password, 2FA, data breach e impostazioni" [ref=e166] [cursor=pointer]:
+            - /url: /moduli/?filter=basi
+            - generic [ref=e167]:
+              - img [ref=e169]
+              - generic [ref=e172]:
+                - heading "Privacy e sicurezza tecnica" [level=4] [ref=e173]
+                - paragraph [ref=e174]: Password, 2FA, data breach e impostazioni
+          - link "Frodi, truffe e phishing Dai messaggi sospetti all'ecommerce truffaldino" [ref=e175] [cursor=pointer]:
+            - /url: /moduli/?filter=rischi
+            - generic [ref=e176]:
+              - img [ref=e178]
+              - generic [ref=e182]:
+                - heading "Frodi, truffe e phishing" [level=4] [ref=e183]
+                - paragraph [ref=e184]: Dai messaggi sospetti all'ecommerce truffaldino
+          - link "Relazioni online e grooming Riconoscere i predatori e gestire la fiducia" [ref=e185] [cursor=pointer]:
+            - /url: /moduli/?filter=relazioni
+            - generic [ref=e186]:
+              - img [ref=e188]
+              - generic [ref=e191]:
+                - heading "Relazioni online e grooming" [level=4] [ref=e192]
+                - paragraph [ref=e193]: Riconoscere i predatori e gestire la fiducia
+          - link "Cyberbullismo e stalking Come reagire, bloccare e conservare prove" [ref=e194] [cursor=pointer]:
+            - /url: /moduli/?filter=relazioni
+            - generic [ref=e195]:
+              - img [ref=e197]
+              - generic [ref=e199]:
+                - heading "Cyberbullismo e stalking" [level=4] [ref=e200]
+                - paragraph [ref=e201]: Come reagire, bloccare e conservare prove
+          - link "Sexting e revenge porn Il consenso, l'intimità digitale e i rischi legali" [ref=e202] [cursor=pointer]:
+            - /url: /moduli/?filter=relazioni
+            - generic [ref=e203]:
+              - img [ref=e205]
+              - generic [ref=e208]:
+                - heading "Sexting e revenge porn" [level=4] [ref=e209]
+                - paragraph [ref=e210]: Il consenso, l'intimità digitale e i rischi legali
+          - link "Benessere mentale e digitale Gestire l'ansia da notifica, algoritmi e FOMO" [ref=e211] [cursor=pointer]:
+            - /url: /moduli/?filter=benessere
+            - generic [ref=e212]:
+              - img [ref=e214]
+              - generic [ref=e216]:
+                - heading "Benessere mentale e digitale" [level=4] [ref=e217]
+                - paragraph [ref=e218]: Gestire l'ansia da notifica, algoritmi e FOMO
+      - generic [ref=e219]:
+        - heading "Semplice e intuitivo" [level=2] [ref=e221]
+        - generic [ref=e222]:
+          - generic [ref=e224]:
+            - img [ref=e226]
+            - generic [ref=e229]:
+              - heading "1. Trova il tema" [level=4] [ref=e230]
+              - paragraph [ref=e231]: Ricerca l'argomento che ti interessa o seleziona un percorso suggerito in base alle tue esigenze.
+          - generic [ref=e232]:
+            - img [ref=e234]
+            - generic [ref=e236]:
+              - heading "2. Leggi le guide" [level=4] [ref=e237]
+              - paragraph [ref=e238]: Lezioni brevi, senza gergo inutile, progettate per essere lette in 5-10 minuti, direttamente dal tuo telefono.
+          - generic [ref=e239]:
+            - img [ref=e241]
+            - generic [ref=e244]:
+              - heading "3. Applica e proteggiti" [level=4] [ref=e245]
+              - paragraph [ref=e246]: Ogni modulo si conclude con azioni pratiche. Non saprai solo "cosa" è sbagliato, ma esattamente "come" risolverlo.
+      - generic [ref=e247]:
+        - generic:
+          - img
+        - generic [ref=e248]:
+          - generic [ref=e249]:
+            - heading "Informazione verificata, rispetto garantito" [level=2] [ref=e250]
+            - paragraph [ref=e251]: Il progetto Busssola nasce con una precisa integrità etica. Rifiutiamo clickbait, falsi allarmismi e profilazione invasiva dei dati.
+          - generic [ref=e252]:
+            - generic [ref=e253]:
+              - img [ref=e255]
+              - heading "Privacy by design" [level=4] [ref=e258]
+              - paragraph [ref=e259]: Nessun tracciamento aggressivo. I tuoi progressi sono salvati localmente sul tuo dispositivo.
+            - generic [ref=e260]:
+              - img [ref=e262]
+              - heading "Chiaro, non banale" [level=4] [ref=e265]
+              - paragraph [ref=e266]: Tradotto il linguaggio tecnico in italiano comprensibile e accessibile, senza mai banalizzare il rischio.
+            - generic [ref=e267]:
+              - img [ref=e269]
+              - heading "Senza giudizio" [level=4] [ref=e271]
+              - paragraph [ref=e272]: Se hai subito una truffa o un ricatto, non usiamo linguaggi colpevolizzanti. Ti aiutiamo e basta.
+            - generic [ref=e273]:
+              - img [ref=e275]
+              - heading "Totalmente indipendente" [level=4] [ref=e278]
+              - paragraph [ref=e279]: Busssola non mostra pubblicità, non vende corsi ed è finanziata indipendentemente per restare gratuita per le scuole e i giovani.
+          - link "Leggi il nostro metodo editoriale" [ref=e281] [cursor=pointer]:
+            - /url: /metodo-editoriale/
+            - text: Leggi il nostro metodo editoriale
+            - img [ref=e282]
+      - generic [ref=e284]:
+        - generic [ref=e285]:
+          - generic [ref=e286]:
+            - generic [ref=e287]:
+              - img [ref=e288]
+              - text: Centro Emergenze
+            - heading "Hai bisogno di aiuto adesso?" [level=3] [ref=e290]
+            - paragraph [ref=e291]: Problemi urgenti online? Se sei sotto ricatto (sextortion), stalking, o in forte crisi a causa di abusi digitali, trova la tua situazione per ricevere indicazioni dirette e calme. Non sei solo/a.
+          - link "Accedi immediatamente all'area SOS" [ref=e292] [cursor=pointer]:
+            - /url: /sos/
+        - generic [ref=e293]:
+          - generic [ref=e294]:
+            - generic [ref=e295]: Formazione e Prevenzione
+            - heading "Pronto/a per orientarti?" [level=3] [ref=e296]
+            - paragraph [ref=e297]: La sicurezza digitale non è materia per soli esperti. Con brevi lezioni settimanali e piccoli accorgimenti quotidiani, puoi rendere la tua presenza online blindata e consapevole.
+          - link "Vai al catalogo completo" [ref=e298] [cursor=pointer]:
+            - /url: /moduli/
+  - contentinfo [ref=e299]:
+    - generic [ref=e300]:
+      - generic [ref=e301]:
+        - generic [ref=e302]:
+          - link "Busssola." [ref=e303] [cursor=pointer]:
+            - /url: /
+            - img [ref=e304]
+            - generic [ref=e307]: Busssola.
+          - paragraph [ref=e308]: Piattaforma educativa per imparare a riconoscere i rischi online, difendere la propria privacy e sapere sempre cosa fare.
+          - generic [ref=e310]:
+            - img [ref=e311]
+            - generic [ref=e314]: Supporto e strumenti pratici
+        - generic [ref=e315]:
+          - generic [ref=e316]:
+            - heading "Il Progetto" [level=4] [ref=e317]
+            - list [ref=e318]:
+              - listitem [ref=e319]:
+                - link "Home" [ref=e320] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e321]:
+                - link "Tutti i Moduli" [ref=e322] [cursor=pointer]:
+                  - /url: /moduli/
+              - listitem [ref=e323]:
+                - link "Cos'è Busssola" [ref=e324] [cursor=pointer]:
+                  - /url: /about/
+              - listitem [ref=e325]:
+                - link "Per le scuole" [ref=e326] [cursor=pointer]:
+                  - /url: /scuole/
+          - generic [ref=e327]:
+            - heading "Aiuto" [level=4] [ref=e328]
+            - list [ref=e329]:
+              - listitem [ref=e330]:
+                - link "Centro SOS" [ref=e331] [cursor=pointer]:
+                  - /url: /sos/
+              - listitem [ref=e332]:
+                - link "Contatti" [ref=e333] [cursor=pointer]:
+                  - /url: /contact/
+              - listitem [ref=e334]:
+                - link "Domande frequenti" [ref=e335] [cursor=pointer]:
+                  - /url: /faq/
+          - generic [ref=e336]:
+            - heading "Legale" [level=4] [ref=e337]
+            - list [ref=e338]:
+              - listitem [ref=e339]:
+                - link "Privacy Policy" [ref=e340] [cursor=pointer]:
+                  - /url: /privacy/
+              - listitem [ref=e341]:
+                - link "Termini d'Uso" [ref=e342] [cursor=pointer]:
+                  - /url: /termini/
+              - listitem [ref=e343]:
+                - link "Metodo Editoriale" [ref=e344] [cursor=pointer]:
+                  - /url: /metodo-editoriale/
+      - generic [ref=e345]:
+        - paragraph [ref=e346]: © 2026 Busssola. Un progetto educativo indipendente.
+        - generic [ref=e347]:
+          - link "Trasparenza" [ref=e348] [cursor=pointer]:
+            - /url: /trasparenza/
+          - link "Accessibilità" [ref=e349] [cursor=pointer]:
+            - /url: /accessibilita/
+          - link "Il Progetto" [ref=e350] [cursor=pointer]:
+            - /url: /about/
+  - alert [ref=e351]

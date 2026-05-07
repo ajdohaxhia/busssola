@@ -1,17 +1,17 @@
 import { Hero } from '@/components/ui/Hero'
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card'
+import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import { 
   ArrowRight, ShieldCheck, User, Users, GraduationCap, 
   Lock, Heart, ShieldAlert, MonitorSmartphone, Target, 
-  Search, BookOpen, Clock, AlertTriangle 
+  Search, BookOpen, Clock
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 export default function Home() {
   return (
-    <div className="space-y-32 py-12">
+    <div className="space-y-16 pb-12 pt-2">
       
       {/* SECTION 1: Hero */}
       <Hero />
@@ -244,7 +244,7 @@ export default function Home() {
           
           <div className="text-center pt-8">
              <Button asChild variant="link" className="text-primary font-medium">
-               <Link href="/metodo">Leggi il nostro metodo editoriale <ArrowRight className="w-4 h-4 ml-1" /></Link>
+               <Link href="/metodo-editoriale">Leggi il nostro metodo editoriale <ArrowRight className="w-4 h-4 ml-1" /></Link>
              </Button>
           </div>
         </div>

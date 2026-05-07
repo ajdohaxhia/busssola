@@ -1,5 +1,5 @@
 import { Container } from '@/components/ui/Container'
-import { CheckCircle2, Monitor, Keyboard, MousePointer2, Type } from 'lucide-react'
+import { CheckCircle2, Keyboard, Type } from 'lucide-react'
 
 export default function AccessibilitaPage() {
     return (

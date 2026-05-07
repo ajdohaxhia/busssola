@@ -3,7 +3,7 @@ import { Module } from '@/types';
 export const modulo_29_algoritmi : Module = {
     id: 'modulo-29-algoritmi',
     title: 'Modulo 29: Algoritmi, feed e manipolazione dell’attenzione',
-    description: 'Architettura editoriale in approvazione. Contenuto in fase di sviluppo intensivo secondo gli standard qualitativi Busssola.',
+    description: 'Capisci come feed e raccomandazioni influenzano attenzione, opinioni e scelte, e come riprendere controllo.',
     category: 'SKILL',
     coverImage: '/images/modules/skill.webp',
     progress: 0,
@@ -16,21 +16,32 @@ export const modulo_29_algoritmi : Module = {
             audienceTag: 'tutti',
             moduleTag: 'Algoritmi, feed e manipolazione dell’attenzione',
             learningGoals: [
-                'Collega algoritmi, feed e manipolazione dell’attenzione a esempi normali, non solo a casi estremi.',
-                'Spiega quale rischio concreto si riduce imparando questo tema.',
-                'Chiudi con una domanda semplice che agganci la lezione successiva.'
+                'Comprendere il punto chiave di algoritmi, feed e manipolazione dell’attenzione senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-algoritmi, feed e manipolazione dell’attenzione entra nella vita di tutti i giorni molto più di quanto sembri. Questa lezione collega il tema a situazioni concrete, mostra perché conta davvero e prepara il terreno per scelte più sicure senza allarmismi.
+            contentMarkdown: `### Perché conta
+Questa lezione mette a fuoco algoritmi, feed e manipolazione dell’attenzione con parole semplici e senza allarmismi. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Collega algoritmi, feed e manipolazione dell’attenzione a esempi normali, non solo a casi estremi.
-- Spiega quale rischio concreto si riduce imparando questo tema.
-- Chiudi con una domanda semplice che agganci la lezione successiva.
+### Segnali da riconoscere
+- Quali termini ricorrono più spesso.
+- Quali situazioni sono davvero rilevanti.
+- Quando una parola vaga nasconde un rischio concreto.
 
-### Chiusura
-Chiudi con una promessa concreta: capire questo tema aiuta a fare meno errori e a proteggersi meglio.
-`
+### Cosa fare
+- **Dai un nome preciso al problema.**
+- **Separalo da casi simili ma meno urgenti.**
+- **Annota la domanda che vuoi chiarire prima di agire.**
+
+### Cosa evitare
+- Non usare etichette generiche come “mi hanno hackerato” se puoi descrivere meglio cosa è successo.
+- Non minimizzare solo perché la situazione avviene online.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Scrivi in una frase cosa significa per te algoritmi, feed e manipolazione dell’attenzione e quale dubbio vuoi chiarire per primo.`
         },
         {
             id: '2',
@@ -40,21 +51,32 @@ Chiudi con una promessa concreta: capire questo tema aiuta a fare meno errori e 
             audienceTag: 'tutti',
             moduleTag: 'Algoritmi, feed e manipolazione dell’attenzione',
             learningGoals: [
-                'Definisci i termini senza gergo inutile.',
-                'Distingui ciò che spesso viene confuso.',
-                'Aggiungi un mini glossario riutilizzabile nel modulo.'
+                'Comprendere il punto chiave di algoritmi, feed e manipolazione dell’attenzione senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Prima di agire bene serve un vocabolario minimo. Qui spieghi parole, funzioni e differenze utili per leggere meglio impostazioni, avvisi e richieste legate a algoritmi, feed e manipolazione dell’attenzione.
+            contentMarkdown: `### Perché conta
+Questa lezione mette a fuoco algoritmi, feed e manipolazione dell’attenzione con parole semplici e senza allarmismi. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Definisci i termini senza gergo inutile.
-- Distingui ciò che spesso viene confuso.
-- Aggiungi un mini glossario riutilizzabile nel modulo.
+### Segnali da riconoscere
+- Quali termini ricorrono più spesso.
+- Quali situazioni sono davvero rilevanti.
+- Quando una parola vaga nasconde un rischio concreto.
 
-### Chiusura
-Aggiungi tre parole da ricordare e una da smettere di usare male.
-`
+### Cosa fare
+- **Dai un nome preciso al problema.**
+- **Separalo da casi simili ma meno urgenti.**
+- **Annota la domanda che vuoi chiarire prima di agire.**
+
+### Cosa evitare
+- Non usare etichette generiche come “mi hanno hackerato” se puoi descrivere meglio cosa è successo.
+- Non minimizzare solo perché la situazione avviene online.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Scrivi in una frase cosa significa per te algoritmi, feed e manipolazione dell’attenzione e quale dubbio vuoi chiarire per primo.`
         },
         {
             id: '3',
@@ -64,21 +86,32 @@ Aggiungi tre parole da ricordare e una da smettere di usare male.
             audienceTag: 'tutti',
             moduleTag: 'Algoritmi, feed e manipolazione dell’attenzione',
             learningGoals: [
-                'Evita toni colpevolizzanti.',
-                'Mostra perché l’errore è comprensibile ma correggibile.',
-                'Proponi l’alternativa migliore in modo concreto.'
+                'Comprendere il punto chiave di algoritmi, feed e manipolazione dell’attenzione senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Molti problemi non nascono da grandi attacchi, ma da gesti frettolosi e abitudini ripetute. In questa lezione metti a fuoco gli errori più comuni e mostri come correggerli senza complicarsi la vita.
+            contentMarkdown: `### Perché conta
+Il tema Algoritmi, feed e manipolazione dell’attenzione può sfruttare emozioni forti: paura, colpa, curiosità, desiderio di appartenenza o bisogno di approvazione. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Evita toni colpevolizzanti.
-- Mostra perché l’errore è comprensibile ma correggibile.
-- Proponi l’alternativa migliore in modo concreto.
+### Segnali da riconoscere
+- Frasi che ti fanno sentire in debito.
+- Minacce o premi condizionati a una risposta immediata.
+- Richieste di segretezza presentate come prova di fiducia.
 
-### Chiusura
-Concludi con la frase: l’errore non definisce la persona, ma va corretto in fretta.
-`
+### Cosa fare
+- **Metti per iscritto cosa ti viene chiesto.**
+- **Rifiuta le richieste che tolgono libertà o sicurezza.**
+- **Coinvolgi qualcuno prima di prendere decisioni emotive.**
+
+### Cosa evitare
+- Non accettare ricatti o condizioni per paura di deludere.
+- Non trattare la pressione come una prova d’amore o amicizia.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Individua la leva emotiva usata nella situazione: paura, urgenza, colpa, promessa o isolamento.`
         },
         {
             id: '4',
@@ -88,21 +121,32 @@ Concludi con la frase: l’errore non definisce la persona, ma va corretto in fr
             audienceTag: 'tutti',
             moduleTag: 'Algoritmi, feed e manipolazione dell’attenzione',
             learningGoals: [
-                'Fai controllare una sola cosa per volta.',
-                'Indica dove guardare, non solo cosa pensare.',
-                'Concludi con un piccolo risultato verificabile.'
+                'Mettere in ordine le priorità nei primi minuti.',
+                'Proteggere account, prove e persone coinvolte.',
+                'Scegliere il canale di aiuto più adatto alla gravità.'
             ],
-            contentMarkdown: `### Sintesi
-Chi legge deve poter fare subito qualcosa di utile. Trasforma la teoria in un primo controllo pratico, semplice e realistico, così algoritmi, feed e manipolazione dell’attenzione smette di sembrare astratto.
+            contentMarkdown: `### Perché conta
+Il tema Algoritmi, feed e manipolazione dell’attenzione può sfruttare emozioni forti: paura, colpa, curiosità, desiderio di appartenenza o bisogno di approvazione. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Fai controllare una sola cosa per volta.
-- Indica dove guardare, non solo cosa pensare.
-- Concludi con un piccolo risultato verificabile.
+### Segnali da riconoscere
+- Frasi che ti fanno sentire in debito.
+- Minacce o premi condizionati a una risposta immediata.
+- Richieste di segretezza presentate come prova di fiducia.
 
-### Chiusura
-Fai ottenere al lettore un piccolo risultato visibile entro pochi minuti.
-`
+### Cosa fare
+- **Metti per iscritto cosa ti viene chiesto.**
+- **Rifiuta le richieste che tolgono libertà o sicurezza.**
+- **Coinvolgi qualcuno prima di prendere decisioni emotive.**
+
+### Cosa evitare
+- Non accettare ricatti o condizioni per paura di deludere.
+- Non trattare la pressione come una prova d’amore o amicizia.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Individua la leva emotiva usata nella situazione: paura, urgenza, colpa, promessa o isolamento.`
         },
         {
             id: '5',
@@ -112,21 +156,32 @@ Fai ottenere al lettore un piccolo risultato visibile entro pochi minuti.
             audienceTag: 'tutti',
             moduleTag: 'Algoritmi, feed e manipolazione dell’attenzione',
             learningGoals: [
-                'Dai priorità alle impostazioni che cambiano davvero il rischio.',
-                'Spiega il compromesso tra comodità e protezione.',
-                'Ricorda che menu e nomi possono cambiare nel tempo.'
+                'Comprendere il punto chiave di algoritmi, feed e manipolazione dell’attenzione senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Le impostazioni di base sono spesso noiose finché non servono davvero. Qui le rendi comprensibili: poche scelte, spiegate bene, con il motivo per cui valgono la pena.
+            contentMarkdown: `### Perché conta
+Le impostazioni delle piattaforme possono ridurre molto il rischio, se sai dove guardare. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Dai priorità alle impostazioni che cambiano davvero il rischio.
-- Spiega il compromesso tra comodità e protezione.
-- Ricorda che menu e nomi possono cambiare nel tempo.
+### Segnali da riconoscere
+- Permessi troppo ampi.
+- Profilo pubblico quando non serve.
+- Messaggi privati, tag o commenti aperti a tutti.
 
-### Chiusura
-Ricorda che la migliore impostazione è quella che il lettore userà davvero.
-`
+### Cosa fare
+- **Controlla privacy, sicurezza e notifiche.**
+- **Attiva verifica in due passaggi dove possibile.**
+- **Limita chi può contattarti, taggarti o vedere informazioni sensibili.**
+
+### Cosa evitare
+- Non lasciare impostazioni predefinite solo per comodità.
+- Non condividere codici o link di accesso in chat.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Apri l’app più legata a algoritmi, feed e manipolazione dell’attenzione e controlla una sola impostazione di privacy oggi.`
         },
         {
             id: '6',
@@ -136,21 +191,32 @@ Ricorda che la migliore impostazione è quella che il lettore userà davvero.
             audienceTag: 'tutti',
             moduleTag: 'Algoritmi, feed e manipolazione dell’attenzione',
             learningGoals: [
-                'Preferisci azioni brevi e ripetibili.',
-                'Mostra come legare l’abitudine a un momento della giornata.',
-                'Evita routine irrealistiche o punitive.'
+                'Comprendere il punto chiave di algoritmi, feed e manipolazione dell’attenzione senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-La sicurezza funziona meglio quando diventa routine. Questa lezione costruisce piccole abitudini ripetibili che riducono il rischio senza chiedere perfezione.
+            contentMarkdown: `### Perché conta
+Questa lezione collega algoritmi, feed e manipolazione dell’attenzione a decisioni concrete che puoi prendere nella vita quotidiana. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Preferisci azioni brevi e ripetibili.
-- Mostra come legare l’abitudine a un momento della giornata.
-- Evita routine irrealistiche o punitive.
+### Segnali da riconoscere
+- Cosa ti viene chiesto di fare.
+- Quali dati, account o persone sono coinvolti.
+- Se senti pressione, vergogna o urgenza artificiale.
 
-### Chiusura
-Invita a scegliere una sola abitudine da iniziare oggi.
-`
+### Cosa fare
+- **Rallenta prima di cliccare o rispondere.**
+- **Controlla la fonte o le impostazioni ufficiali.**
+- **Chiedi aiuto quando il problema supera le tue competenze o la tua serenità.**
+
+### Cosa evitare
+- Non agire solo per ansia.
+- Non condividere dati, codici o immagini private senza pensarci.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Applica oggi un controllo concreto legato a algoritmi, feed e manipolazione dell’attenzione e annota cosa hai cambiato.`
         },
         {
             id: '7',
@@ -160,21 +226,32 @@ Invita a scegliere una sola abitudine da iniziare oggi.
             audienceTag: 'tutti',
             moduleTag: 'Algoritmi, feed e manipolazione dell’attenzione',
             learningGoals: [
-                'Usa esempi che sembrano innocui all’inizio.',
-                'Distingui imprevisto, fastidio e vero rischio.',
-                'Invita a fermarsi prima di reagire d’istinto.'
+                'Riconoscere segnali osservabili legati a algoritmi, feed e manipolazione dell’attenzione.',
+                'Distinguere un dubbio gestibile da un limite superato.',
+                'Sapere quando fermarsi e chiedere una seconda opinione.'
             ],
-            contentMarkdown: `### Sintesi
-Non tutti i segnali di rischio sono drammatici: molti sono sfumati, ripetuti o apparentemente normali. Qui insegni a notarli in tempo, prima che il problema cresca.
+            contentMarkdown: `### Perché conta
+I segnali precoci servono a intervenire quando la situazione è ancora gestibile. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Usa esempi che sembrano innocui all’inizio.
-- Distingui imprevisto, fastidio e vero rischio.
-- Invita a fermarsi prima di reagire d’istinto.
+### Segnali da riconoscere
+- Cambi improvvisi di tono.
+- Richieste sproporzionate rispetto al rapporto.
+- Tentativi di isolarti da amici, famiglia, scuola o colleghi.
 
-### Chiusura
-Chiudi con il principio: se qualcosa ti mette pressione, rallenta.
-`
+### Cosa fare
+- **Fai screenshot ordinati.**
+- **Blocca o limita il contatto se ti senti sotto pressione.**
+- **Chiedi una seconda opinione senza vergognarti.**
+
+### Cosa evitare
+- Non aspettare che la situazione diventi “abbastanza grave”.
+- Non cancellare tutto prima di aver salvato le informazioni utili.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Scegli tre segnali che per te indicano un limite superato in tema algoritmi, feed e manipolazione dell’attenzione.`
         },
         {
             id: '8',
@@ -184,21 +261,32 @@ Chiudi con il principio: se qualcosa ti mette pressione, rallenta.
             audienceTag: 'tutti',
             moduleTag: 'Algoritmi, feed e manipolazione dell’attenzione',
             learningGoals: [
-                'Costruisci una scena breve e credibile.',
-                'Fai emergere un errore tipico.',
-                'Spiega la soluzione passo per passo.'
+                'Comprendere il punto chiave di algoritmi, feed e manipolazione dell’attenzione senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Un caso semplice serve a far vedere come si applicano davvero le regole di base. Parti da una situazione quotidiana, fai scegliere al lettore e spiega perché una risposta è migliore di un’altra.
+            contentMarkdown: `### Perché conta
+Questa lezione collega algoritmi, feed e manipolazione dell’attenzione a decisioni concrete che puoi prendere nella vita quotidiana. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Costruisci una scena breve e credibile.
-- Fai emergere un errore tipico.
-- Spiega la soluzione passo per passo.
+### Segnali da riconoscere
+- Cosa ti viene chiesto di fare.
+- Quali dati, account o persone sono coinvolti.
+- Se senti pressione, vergogna o urgenza artificiale.
 
-### Chiusura
-Termina con tre righe su cosa ha funzionato nel caso e cosa no.
-`
+### Cosa fare
+- **Rallenta prima di cliccare o rispondere.**
+- **Controlla la fonte o le impostazioni ufficiali.**
+- **Chiedi aiuto quando il problema supera le tue competenze o la tua serenità.**
+
+### Cosa evitare
+- Non agire solo per ansia.
+- Non condividere dati, codici o immagini private senza pensarci.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Applica oggi un controllo concreto legato a algoritmi, feed e manipolazione dell’attenzione e annota cosa hai cambiato.`
         },
         {
             id: '9',
@@ -208,21 +296,32 @@ Termina con tre righe su cosa ha funzionato nel caso e cosa no.
             audienceTag: 'tutti',
             moduleTag: 'Algoritmi, feed e manipolazione dell’attenzione',
             learningGoals: [
-                'Aggiungi ambiguità realistica.',
-                'Mostra come ordinare i fatti prima di decidere.',
-                'Chiudi con una regola semplice da ricordare.'
+                'Comprendere il punto chiave di algoritmi, feed e manipolazione dell’attenzione senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Una situazione complessa mostra cosa succede quando i dettagli si accumulano. In questa lezione il lettore allena il ragionamento, non solo la memoria.
+            contentMarkdown: `### Perché conta
+Questa lezione collega algoritmi, feed e manipolazione dell’attenzione a decisioni concrete che puoi prendere nella vita quotidiana. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Aggiungi ambiguità realistica.
-- Mostra come ordinare i fatti prima di decidere.
-- Chiudi con una regola semplice da ricordare.
+### Segnali da riconoscere
+- Cosa ti viene chiesto di fare.
+- Quali dati, account o persone sono coinvolti.
+- Se senti pressione, vergogna o urgenza artificiale.
 
-### Chiusura
-Lascia una regola semplice da usare quando i dettagli sono confusi.
-`
+### Cosa fare
+- **Rallenta prima di cliccare o rispondere.**
+- **Controlla la fonte o le impostazioni ufficiali.**
+- **Chiedi aiuto quando il problema supera le tue competenze o la tua serenità.**
+
+### Cosa evitare
+- Non agire solo per ansia.
+- Non condividere dati, codici o immagini private senza pensarci.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Applica oggi un controllo concreto legato a algoritmi, feed e manipolazione dell’attenzione e annota cosa hai cambiato.`
         },
         {
             id: '10',
@@ -232,21 +331,32 @@ Lascia una regola semplice da usare quando i dettagli sono confusi.
             audienceTag: 'tutti',
             moduleTag: 'Algoritmi, feed e manipolazione dell’attenzione',
             learningGoals: [
-                'Usa una sequenza di azioni chiara.',
-                'Metti prima le mosse che proteggono davvero.',
-                'Evita procedure troppo lunghe per momenti di stress.'
+                'Mettere in ordine le priorità nei primi minuti.',
+                'Proteggere account, prove e persone coinvolte.',
+                'Scegliere il canale di aiuto più adatto alla gravità.'
             ],
-            contentMarkdown: `### Sintesi
-Quando qualcosa non torna, servono azioni chiare e ordinate. Qui costruisci una mini procedura: fermarsi, controllare, proteggere, chiedere aiuto se necessario.
+            contentMarkdown: `### Perché conta
+In una situazione legata a algoritmi, feed e manipolazione dell’attenzione, l’ordine delle azioni conta più della quantità di cose fatte. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Usa una sequenza di azioni chiara.
-- Metti prima le mosse che proteggono davvero.
-- Evita procedure troppo lunghe per momenti di stress.
+### Segnali da riconoscere
+- Cosa è urgente e cosa può aspettare.
+- Quali account, persone o dati sono coinvolti.
+- Se c’è un rischio fisico, economico o emotivo immediato.
 
-### Chiusura
-Trasforma la lezione in una mini procedura da salvare.
-`
+### Cosa fare
+- **Metti al sicuro te stesso/a e il dispositivo principale.**
+- **Salva prove essenziali:** chat, URL, profili, date e orari.
+- **Blocca, segnala o contatta i canali appropriati in base alla gravità.**
+
+### Cosa evitare
+- Non agire su dieci fronti insieme.
+- Non fidarti di link di recupero ricevuti da sconosciuti o da messaggi sospetti.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Fai una lista in tre righe: cosa è successo, chi è coinvolto, qual è il prossimo passo sicuro.`
         },
         {
             id: '11',
@@ -256,21 +366,32 @@ Trasforma la lezione in una mini procedura da salvare.
             audienceTag: 'tutti',
             moduleTag: 'Algoritmi, feed e manipolazione dell’attenzione',
             learningGoals: [
-                'Spiega il costo di ogni mossa sbagliata.',
-                'Ricorda che cancellare o negare spesso peggiora il problema.',
-                'Offri subito l’alternativa corretta.'
+                'Comprendere il punto chiave di algoritmi, feed e manipolazione dell’attenzione senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Spesso il danno cresce per fretta, vergogna o impulsività. In questa lezione spieghi quali mosse evitare e perché una cattiva reazione può complicare tutto.
+            contentMarkdown: `### Perché conta
+Quando un problema peggiora, spesso lo fa a piccoli passi. Riconoscere l’escalation riduce il danno. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Spiega il costo di ogni mossa sbagliata.
-- Ricorda che cancellare o negare spesso peggiora il problema.
-- Offri subito l’alternativa corretta.
+### Segnali da riconoscere
+- Richieste sempre più frequenti.
+- Minacce più esplicite o pubbliche.
+- Perdita di controllo su account, immagini, soldi o relazioni.
 
-### Chiusura
-Metti in evidenza che la fretta è spesso alleata del problema.
-`
+### Cosa fare
+- **Interrompi l’interazione non necessaria.**
+- **Metti al sicuro account e dispositivi coinvolti.**
+- **Passa dalla prevenzione alla richiesta di aiuto.**
+
+### Cosa evitare
+- Non negoziare da solo/a se c’è una minaccia.
+- Non pagare, inviare altro materiale o concedere accessi per fermare la pressione.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Se la situazione è peggiorata nelle ultime 24 ore, scegli ora una persona o un canale ufficiale da contattare.`
         },
         {
             id: '12',
@@ -280,21 +401,32 @@ Metti in evidenza che la fretta è spesso alleata del problema.
             audienceTag: 'tutti',
             moduleTag: 'Algoritmi, feed e manipolazione dell’attenzione',
             learningGoals: [
-                'Nomina pochi strumenti, ma bene.',
-                'Spiega a cosa servono e quando NON bastano.',
-                'Collega ogni strumento a un rischio preciso.'
+                'Comprendere il punto chiave di algoritmi, feed e manipolazione dell’attenzione senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Strumenti e funzioni servono solo se il lettore capisce quando usarli. Qui presenti pochi strumenti utili, spieghi il loro scopo e li colleghi a problemi reali.
+            contentMarkdown: `### Perché conta
+Questa lezione collega algoritmi, feed e manipolazione dell’attenzione a decisioni concrete che puoi prendere nella vita quotidiana. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Nomina pochi strumenti, ma bene.
-- Spiega a cosa servono e quando NON bastano.
-- Collega ogni strumento a un rischio preciso.
+### Segnali da riconoscere
+- Cosa ti viene chiesto di fare.
+- Quali dati, account o persone sono coinvolti.
+- Se senti pressione, vergogna o urgenza artificiale.
 
-### Chiusura
-Invita il lettore a provarne almeno uno subito.
-`
+### Cosa fare
+- **Rallenta prima di cliccare o rispondere.**
+- **Controlla la fonte o le impostazioni ufficiali.**
+- **Chiedi aiuto quando il problema supera le tue competenze o la tua serenità.**
+
+### Cosa evitare
+- Non agire solo per ansia.
+- Non condividere dati, codici o immagini private senza pensarci.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Applica oggi un controllo concreto legato a algoritmi, feed e manipolazione dell’attenzione e annota cosa hai cambiato.`
         },
         {
             id: '13',
@@ -304,21 +436,32 @@ Invita il lettore a provarne almeno uno subito.
             audienceTag: 'tutti',
             moduleTag: 'Algoritmi, feed e manipolazione dell’attenzione',
             learningGoals: [
-                'Modella un messaggio semplice da inviare o dire.',
-                'Indica quali dettagli servono davvero.',
-                'Riduci vergogna e confusione con linguaggio calmo.'
+                'Comprendere il punto chiave di algoritmi, feed e manipolazione dell’attenzione senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Chiedere aiuto bene è una competenza, non un fallimento. Questa lezione insegna a descrivere il problema con ordine, così chi aiuta può intervenire più in fretta.
+            contentMarkdown: `### Perché conta
+Questa lezione collega algoritmi, feed e manipolazione dell’attenzione a decisioni concrete che puoi prendere nella vita quotidiana. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Modella un messaggio semplice da inviare o dire.
-- Indica quali dettagli servono davvero.
-- Riduci vergogna e confusione con linguaggio calmo.
+### Segnali da riconoscere
+- Cosa ti viene chiesto di fare.
+- Quali dati, account o persone sono coinvolti.
+- Se senti pressione, vergogna o urgenza artificiale.
 
-### Chiusura
-Fornisci una frase modello pronta da usare.
-`
+### Cosa fare
+- **Rallenta prima di cliccare o rispondere.**
+- **Controlla la fonte o le impostazioni ufficiali.**
+- **Chiedi aiuto quando il problema supera le tue competenze o la tua serenità.**
+
+### Cosa evitare
+- Non agire solo per ansia.
+- Non condividere dati, codici o immagini private senza pensarci.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Applica oggi un controllo concreto legato a algoritmi, feed e manipolazione dell’attenzione e annota cosa hai cambiato.`
         },
         {
             id: '14',
@@ -328,21 +471,32 @@ Fornisci una frase modello pronta da usare.
             audienceTag: 'tutti',
             moduleTag: 'Algoritmi, feed e manipolazione dell’attenzione',
             learningGoals: [
-                'Mostra l’effetto delle scelte individuali sul gruppo.',
-                'Aggiungi almeno un esempio scolastico o familiare.',
-                'Ricorda le differenze di ruolo tra pari e adulti.'
+                'Comprendere il punto chiave di algoritmi, feed e manipolazione dell’attenzione senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-algoritmi, feed e manipolazione dell’attenzione cambia quando entra in gioco una famiglia, una classe, un gruppo o una chat comune. Qui mostri come le scelte individuali influenzano anche gli altri.
+            contentMarkdown: `### Perché conta
+Il tema Algoritmi, feed e manipolazione dell’attenzione può sfruttare emozioni forti: paura, colpa, curiosità, desiderio di appartenenza o bisogno di approvazione. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Mostra l’effetto delle scelte individuali sul gruppo.
-- Aggiungi almeno un esempio scolastico o familiare.
-- Ricorda le differenze di ruolo tra pari e adulti.
+### Segnali da riconoscere
+- Frasi che ti fanno sentire in debito.
+- Minacce o premi condizionati a una risposta immediata.
+- Richieste di segretezza presentate come prova di fiducia.
 
-### Chiusura
-Chiudi ricordando che online si protegge anche il gruppo, non solo il singolo.
-`
+### Cosa fare
+- **Metti per iscritto cosa ti viene chiesto.**
+- **Rifiuta le richieste che tolgono libertà o sicurezza.**
+- **Coinvolgi qualcuno prima di prendere decisioni emotive.**
+
+### Cosa evitare
+- Non accettare ricatti o condizioni per paura di deludere.
+- Non trattare la pressione come una prova d’amore o amicizia.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Individua la leva emotiva usata nella situazione: paura, urgenza, colpa, promessa o isolamento.`
         },
         {
             id: '15',
@@ -352,21 +506,32 @@ Chiudi ricordando che online si protegge anche il gruppo, non solo il singolo.
             audienceTag: 'tutti',
             moduleTag: 'Algoritmi, feed e manipolazione dell’attenzione',
             learningGoals: [
-                'Insegna principi, non percorsi di menu troppo specifici.',
-                'Fai notare cosa controllare in privacy, sicurezza e notifiche.',
-                'Ricorda di verificare periodicamente le impostazioni.'
+                'Comprendere il punto chiave di algoritmi, feed e manipolazione dell’attenzione senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Ogni piattaforma rende alcune cose facili e altre nascoste. Invece di inseguire menu destinati a cambiare, insegni i principi da controllare in qualunque app o servizio.
+            contentMarkdown: `### Perché conta
+Il tema Algoritmi, feed e manipolazione dell’attenzione può sfruttare emozioni forti: paura, colpa, curiosità, desiderio di appartenenza o bisogno di approvazione. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Insegna principi, non percorsi di menu troppo specifici.
-- Fai notare cosa controllare in privacy, sicurezza e notifiche.
-- Ricorda di verificare periodicamente le impostazioni.
+### Segnali da riconoscere
+- Frasi che ti fanno sentire in debito.
+- Minacce o premi condizionati a una risposta immediata.
+- Richieste di segretezza presentate come prova di fiducia.
 
-### Chiusura
-Ricorda che i nomi delle funzioni cambiano, i principi no.
-`
+### Cosa fare
+- **Metti per iscritto cosa ti viene chiesto.**
+- **Rifiuta le richieste che tolgono libertà o sicurezza.**
+- **Coinvolgi qualcuno prima di prendere decisioni emotive.**
+
+### Cosa evitare
+- Non accettare ricatti o condizioni per paura di deludere.
+- Non trattare la pressione come una prova d’amore o amicizia.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Individua la leva emotiva usata nella situazione: paura, urgenza, colpa, promessa o isolamento.`
         },
         {
             id: '16',
@@ -376,21 +541,32 @@ Ricorda che i nomi delle funzioni cambiano, i principi no.
             audienceTag: 'tutti',
             moduleTag: 'Algoritmi, feed e manipolazione dell’attenzione',
             learningGoals: [
-                'Limita il piano a poche regole personali.',
-                'Fai scrivere al lettore cosa farà davvero.',
-                'Prevedi un controllo periodico.'
+                'Comprendere il punto chiave di algoritmi, feed e manipolazione dell’attenzione senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Un piano personale serve a trasformare le buone intenzioni in scelte pratiche. Questa lezione aiuta a definire poche regole chiare, realistiche e sostenibili.
+            contentMarkdown: `### Perché conta
+Questa lezione collega algoritmi, feed e manipolazione dell’attenzione a decisioni concrete che puoi prendere nella vita quotidiana. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Limita il piano a poche regole personali.
-- Fai scrivere al lettore cosa farà davvero.
-- Prevedi un controllo periodico.
+### Segnali da riconoscere
+- Cosa ti viene chiesto di fare.
+- Quali dati, account o persone sono coinvolti.
+- Se senti pressione, vergogna o urgenza artificiale.
 
-### Chiusura
-Fai scrivere tre regole personali realistiche.
-`
+### Cosa fare
+- **Rallenta prima di cliccare o rispondere.**
+- **Controlla la fonte o le impostazioni ufficiali.**
+- **Chiedi aiuto quando il problema supera le tue competenze o la tua serenità.**
+
+### Cosa evitare
+- Non agire solo per ansia.
+- Non condividere dati, codici o immagini private senza pensarci.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Applica oggi un controllo concreto legato a algoritmi, feed e manipolazione dell’attenzione e annota cosa hai cambiato.`
         },
         {
             id: '17',
@@ -400,21 +576,32 @@ Fai scrivere tre regole personali realistiche.
             audienceTag: 'tutti',
             moduleTag: 'Algoritmi, feed e manipolazione dell’attenzione',
             learningGoals: [
-                'Sintetizza senza perdere precisione.',
-                'Usa verbi operativi.',
-                'Mantieni la checklist breve e stampabile.'
+                'Comprendere il punto chiave di algoritmi, feed e manipolazione dell’attenzione senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-La checklist aiuta a ricordare l’essenziale nei momenti normali e in quelli caotici. Riassumi i passaggi davvero importanti, senza riempitivi.
+            contentMarkdown: `### Perché conta
+Questa lezione collega algoritmi, feed e manipolazione dell’attenzione a decisioni concrete che puoi prendere nella vita quotidiana. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Sintetizza senza perdere precisione.
-- Usa verbi operativi.
-- Mantieni la checklist breve e stampabile.
+### Segnali da riconoscere
+- Cosa ti viene chiesto di fare.
+- Quali dati, account o persone sono coinvolti.
+- Se senti pressione, vergogna o urgenza artificiale.
 
-### Chiusura
-Mantieni il tono asciutto e salvabile.
-`
+### Cosa fare
+- **Rallenta prima di cliccare o rispondere.**
+- **Controlla la fonte o le impostazioni ufficiali.**
+- **Chiedi aiuto quando il problema supera le tue competenze o la tua serenità.**
+
+### Cosa evitare
+- Non agire solo per ansia.
+- Non condividere dati, codici o immagini private senza pensarci.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Applica oggi un controllo concreto legato a algoritmi, feed e manipolazione dell’attenzione e annota cosa hai cambiato.`
         },
         {
             id: '18',
@@ -424,21 +611,32 @@ Mantieni il tono asciutto e salvabile.
             audienceTag: 'tutti',
             moduleTag: 'Algoritmi, feed e manipolazione dell’attenzione',
             learningGoals: [
-                'Proponi un’azione reale sul dispositivo.',
-                'Chiedi di annotare cosa è cambiato.',
-                'Trasforma l’esercizio in abitudine possibile.'
+                'Comprendere il punto chiave di algoritmi, feed e manipolazione dell’attenzione senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Un esercizio pratico rende il modulo attivo e memorabile. Fai fare un controllo reale, una modifica concreta o una breve simulazione collegata a algoritmi, feed e manipolazione dell’attenzione.
+            contentMarkdown: `### Perché conta
+Il ripasso serve a trasformare algoritmi, feed e manipolazione dell’attenzione in abitudini, non in nozioni da dimenticare. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Proponi un’azione reale sul dispositivo.
-- Chiedi di annotare cosa è cambiato.
-- Trasforma l’esercizio in abitudine possibile.
+### Segnali da riconoscere
+- Quali punti ti sono più chiari.
+- Quali situazioni ti mettono ancora in difficoltà.
+- Quale abitudine puoi mantenere senza sforzo eccessivo.
 
-### Chiusura
-Chiedi una prova pratica, non solo riflessione.
-`
+### Cosa fare
+- **Scegli un controllo da ripetere ogni mese.**
+- **Scrivi il tuo piano minimo di sicurezza.**
+- **Condividi una cosa utile con una persona che potrebbe beneficiarne.**
+
+### Cosa evitare
+- Non cercare la perfezione immediata.
+- Non rimandare tutto perché il tema sembra grande.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Scegli una sola azione da completare entro oggi e una da programmare entro una settimana.`
         },
         {
             id: '19',
@@ -448,21 +646,32 @@ Chiedi una prova pratica, non solo riflessione.
             audienceTag: 'tutti',
             moduleTag: 'Algoritmi, feed e manipolazione dell’attenzione',
             learningGoals: [
-                'Usa scenari vicini alla vita reale.',
-                'Spiega anche perché le risposte sbagliate attirano.',
-                'Chiudi con una regola pratica.'
+                'Comprendere il punto chiave di algoritmi, feed e manipolazione dell’attenzione senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Il quiz decisionale non deve testare definizioni, ma scelte. Presenta scenari brevi e fai capire perché una risposta è più solida, prudente o utile di un’altra.
+            contentMarkdown: `### Perché conta
+Questa lezione collega algoritmi, feed e manipolazione dell’attenzione a decisioni concrete che puoi prendere nella vita quotidiana. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Usa scenari vicini alla vita reale.
-- Spiega anche perché le risposte sbagliate attirano.
-- Chiudi con una regola pratica.
+### Segnali da riconoscere
+- Cosa ti viene chiesto di fare.
+- Quali dati, account o persone sono coinvolti.
+- Se senti pressione, vergogna o urgenza artificiale.
 
-### Chiusura
-Spiega perché decidere bene vale più che ricordare definizioni.
-`
+### Cosa fare
+- **Rallenta prima di cliccare o rispondere.**
+- **Controlla la fonte o le impostazioni ufficiali.**
+- **Chiedi aiuto quando il problema supera le tue competenze o la tua serenità.**
+
+### Cosa evitare
+- Non agire solo per ansia.
+- Non condividere dati, codici o immagini private senza pensarci.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Applica oggi un controllo concreto legato a algoritmi, feed e manipolazione dell’attenzione e annota cosa hai cambiato.`
         },
         {
             id: '20',
@@ -472,21 +681,32 @@ Spiega perché decidere bene vale più che ricordare definizioni.
             audienceTag: 'tutti',
             moduleTag: 'Algoritmi, feed e manipolazione dell’attenzione',
             learningGoals: [
-                'Raccogli l’essenziale in modo ordinato.',
-                'Indica un modulo successivo coerente.',
-                'Ricorda che la sicurezza si aggiorna nel tempo.'
+                'Comprendere il punto chiave di algoritmi, feed e manipolazione dell’attenzione senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Il ripasso finale chiude il modulo con ordine. Riassumi i concetti chiave, collega algoritmi, feed e manipolazione dell’attenzione ad altri temi Busssola e indica il passo successivo migliore.
+            contentMarkdown: `### Perché conta
+Il ripasso serve a trasformare algoritmi, feed e manipolazione dell’attenzione in abitudini, non in nozioni da dimenticare. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Raccogli l’essenziale in modo ordinato.
-- Indica un modulo successivo coerente.
-- Ricorda che la sicurezza si aggiorna nel tempo.
+### Segnali da riconoscere
+- Quali punti ti sono più chiari.
+- Quali situazioni ti mettono ancora in difficoltà.
+- Quale abitudine puoi mantenere senza sforzo eccessivo.
 
-### Chiusura
-Chiudi con il modulo Busssola più utile da affrontare dopo.
-`
+### Cosa fare
+- **Scegli un controllo da ripetere ogni mese.**
+- **Scrivi il tuo piano minimo di sicurezza.**
+- **Condividi una cosa utile con una persona che potrebbe beneficiarne.**
+
+### Cosa evitare
+- Non cercare la perfezione immediata.
+- Non rimandare tutto perché il tema sembra grande.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Scegli una sola azione da completare entro oggi e una da programmare entro una settimana.`
         }
     ]
 };

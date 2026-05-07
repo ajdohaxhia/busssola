@@ -14,6 +14,7 @@ interface GameState {
     theme: 'dark' | 'light'
 
     // Actions
+    ensureUserId: () => void
     completeModule: (moduleId: string) => void
     completeLesson: (moduleId: string, lessonId: string) => void
     setTheme: (theme: 'dark' | 'light') => void
@@ -22,17 +23,35 @@ interface GameState {
     importProgress: (json: string) => void
 }
 
+const createUserId = () => {
+    if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) {
+        return crypto.randomUUID()
+    }
+
+    return `local-${Date.now()}-${Math.random().toString(16).slice(2)}`
+}
+
 const initialState = {
-    userId: typeof window !== 'undefined' ? localStorage.getItem('userId') || crypto.randomUUID() : crypto.randomUUID(),
-    createdAt: new Date().toISOString(),
+    userId: '',
+    createdAt: '',
     modules: {},
-    theme: 'dark' as const,
+    theme: 'light' as const,
 }
 
 export const useGameStore = create<GameState>()(
     persist(
         (set, get) => ({
             ...initialState,
+
+            ensureUserId: () =>
+                set((state) => {
+                    if (state.userId) return state
+
+                    return {
+                        userId: createUserId(),
+                        createdAt: new Date().toISOString(),
+                    }
+                }),
 
             completeModule: (moduleId) =>
                 set((state) => {
@@ -78,7 +97,8 @@ export const useGameStore = create<GameState>()(
             resetProgress: () =>
                 set({
                     ...initialState,
-                    userId: crypto.randomUUID(),
+                    userId: createUserId(),
+                    createdAt: new Date().toISOString(),
                 }),
 
             exportProgress: () =>

@@ -3,7 +3,7 @@ import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 import Link from 'next/link'
-import { ArrowRight, Clock, Users, ShieldCheck, Lock, ShieldAlert, GraduationCap, Heart } from 'lucide-react'
+import { ArrowRight, Clock, Users, ShieldCheck, Lock, ShieldAlert, GraduationCap } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const ICON_MAP = {

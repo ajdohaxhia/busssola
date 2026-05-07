@@ -1,10 +1,8 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter, Outfit } from 'next/font/google'
 import './globals.css'
-import { Header } from '@/components/ui/Header'
-import { Footer } from '@/components/ui/Footer'
 import { cn } from '@/lib/utils'
-import { Toaster } from 'sonner'
+import { AppShell } from '@/components/layout/AppShell'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -66,8 +64,6 @@ export const viewport: Viewport = {
   themeColor: '#FAFAFA',
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
 }
 
 export default function RootLayout({
@@ -82,14 +78,7 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
       </head>
       <body className="bg-background text-foreground min-h-dvh flex flex-col font-sans antialiased">
-        <Header />
-        <Toaster position="top-center" richColors />
-        <main className="flex-1 pb-28 lg:pb-0 relative">
-          <div className="max-w-7xl mx-auto min-h-[100dvh] lg:min-h-screen p-4 md:p-6 lg:p-10">
-            {children}
-          </div>
-        </main>
-        <Footer />
+        <AppShell>{children}</AppShell>
       </body>
     </html>
   )

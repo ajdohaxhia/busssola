@@ -33,10 +33,11 @@ import {
     History,
     LifeBuoy
 } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 
-export const ICON_MAP: Record<string, any> = {
-    'predatori-online': Shield,
-    'privacy-tecnica': Lock,
+export const ICON_MAP: Record<string, LucideIcon> = {
+    'modulo-13-grooming': Shield,
+    'modulo-02-privacy-digitale': Lock,
     'phishing-malware': AlertTriangle,
     'cyberbullismo': MessageCircle,
     'social-addiction': Smartphone,
@@ -45,7 +46,7 @@ export const ICON_MAP: Record<string, any> = {
     'gaming-communities': Gamepad2,
     'ai-deepfake': Bot,
     'finanze-crypto': Coins,
-    'sexting-legal': Gavel,
+    'modulo-15-sextortion': Gavel,
     'diritti-digitali': Flag,
     'salute-mentale': HeartPulse,
     'dashboard': LayoutDashboard,

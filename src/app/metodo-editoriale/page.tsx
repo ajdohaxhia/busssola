@@ -1,5 +1,5 @@
 import { Container } from '@/components/ui/Container'
-import { ShieldCheck, BookOpen, Clock, Heart } from 'lucide-react'
+import { BookOpen, Heart } from 'lucide-react'
 
 export default function MetodoPage() {
     return (
@@ -27,7 +27,7 @@ export default function MetodoPage() {
                     </div>
                     <h3 className="text-xl font-bold text-foreground">Sicurezza Emotiva</h3>
                     <p className="text-secondary text-sm leading-relaxed">
-                        Molte minacce digitali puntano sulla paura ( sextortion, phishing). Il nostro copy è progettato per abbassare il battito cardiaco, non per alzarlo. Informiamo senza terrorizzare.
+                        Molte minacce digitali puntano sulla paura, come sextortion e phishing. Il nostro copy è progettato per abbassare il battito cardiaco, non per alzarlo. Informiamo senza terrorizzare.
                     </p>
                 </div>
             </div>

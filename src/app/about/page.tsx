@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion'
 import { Shield, Heart, Users, LineChart, Globe, Zap } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
-import { Card } from '@/components/ui/Card'
 
 const values = [
     {
@@ -148,8 +147,8 @@ export default function AboutPage() {
                 className="grid grid-cols-2 md:grid-cols-4 gap-4"
             >
                 {[
-                    { number: '24+', label: 'Moduli Formativi' },
-                    { number: '100+', label: 'Lezioni Pratiche' },
+                    { number: '50', label: 'Moduli Formativi' },
+                    { number: '1000', label: 'Lezioni Pratiche' },
                     { number: '24/7', label: 'Accesso Gratuito' },
                     { number: '100%', label: 'Privacy Respettata' },
                 ].map((stat, i) => (

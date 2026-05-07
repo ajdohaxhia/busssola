@@ -4,45 +4,54 @@ import { motion } from 'framer-motion';
 import { ShieldCheck, ArrowRight, ShieldAlert, Lock } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function Hero() {
     return (
-        <section className="relative overflow-hidden rounded-[2.5rem] bg-surface border border-border">
-            <div className="absolute inset-0 bg-gradient-to-br from-white to-surface pointer-events-none" />
+        <section className="relative min-h-[480px] overflow-hidden rounded-[2rem] border border-border bg-surface md:min-h-[60vh]">
+            <Image
+                src="/images/hero-compass.png"
+                alt=""
+                fill
+                priority
+                sizes="(min-width: 1024px) 1200px, 100vw"
+                className="object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--color-background)_0%,rgba(250,250,250,0.95)_42%,rgba(250,250,250,0.58)_62%,rgba(250,250,250,0)_88%)]" />
+            <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-background/70 to-transparent" />
             
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="relative z-10 px-6 py-20 md:px-16 md:py-32 flex flex-col items-center justify-center text-center max-w-4xl mx-auto"
+                className="relative z-10 flex min-h-[480px] max-w-3xl flex-col items-start justify-center px-6 py-12 text-left md:min-h-[60vh] md:px-16 md:py-20"
             >
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold tracking-wide mb-8">
-                    <ShieldCheck className="w-4 h-4" />
-                    <span>Educazione civica per l'era digitale</span>
-                </div>
-                
-                <h1 className="text-5xl md:text-7xl font-display font-semibold text-foreground leading-[1.1] tracking-tight">
-                    Una guida chiara e sicura per orientarsi nei rischi digitali.
+                <h1 className="text-5xl font-display font-semibold leading-[0.98] tracking-tight text-foreground md:text-7xl">
+                    Busssola
                 </h1>
                 
-                <p className="mt-6 text-lg md:text-xl text-secondary max-w-2xl leading-relaxed text-balance">
-                    Impara a proteggere la tua privacy, riconoscere truffe e manipolazioni, e sapere sempre cosa fare quando qualcosa va storto online.
+                <p className="mt-5 max-w-2xl text-2xl font-display font-semibold leading-tight text-foreground md:text-4xl">
+                    Educazione civica per l'era digitale.
+                </p>
+
+                <p className="mt-6 max-w-2xl text-lg leading-relaxed text-secondary md:text-xl">
+                    50 moduli gratuiti per proteggere privacy, account e serenità online. Niente registrazione, niente tracciamento invasivo, un centro SOS sempre raggiungibile.
                 </p>
                 
-                <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+                <div className="mt-10 flex w-full flex-col items-stretch gap-4 sm:w-auto sm:flex-row">
                     <Button asChild size="lg" className="rounded-xl w-full sm:w-auto text-base h-14 px-8">
                         <Link href="/moduli">
-                            Inizia i percorsi <ArrowRight className="w-5 h-5 ml-2" />
+                            Esplora i moduli <ArrowRight className="w-5 h-5 ml-2" />
                         </Link>
                     </Button>
                     <Button asChild size="lg" variant="outline" className="rounded-xl w-full sm:w-auto text-base h-14 px-8 border-border hover:bg-surface-muted text-foreground">
-                        <Link href="/about">
+                        <Link href="/metodo-editoriale">
                             Scopri il metodo
                         </Link>
                     </Button>
                 </div>
 
-                <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-sm text-secondary font-medium opacity-80">
+                <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm font-medium text-secondary">
                     <div className="flex items-center gap-2"><Lock className="w-4 h-4" /> 100% Gratuito</div>
                     <div className="flex items-center gap-2"><ShieldCheck className="w-4 h-4" /> Nessuna registrazione</div>
                     <div className="flex items-center gap-2 text-sos"><ShieldAlert className="w-4 h-4" /> Centro emergenze SOS integrato</div>

@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { GraduationCap, Users, BookOpen, Presentation, CheckCircle2, Send } from 'lucide-react'
+import { GraduationCap, Users, BookOpen, Presentation, Send } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import Link from 'next/link'
 

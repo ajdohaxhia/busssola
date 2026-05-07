@@ -1,0 +1,64 @@
+- generic [active] [ref=e1]:
+  - region "Notifications alt+T":
+    - list:
+      - listitem [ref=e577]:
+        - img [ref=e579]
+        - generic [ref=e582]: Lezione Completata!
+  - main [ref=e17]:
+    - generic [ref=e583]:
+      - generic [ref=e585]:
+        - link "Torna al Modulo" [ref=e586] [cursor=pointer]:
+          - /url: /moduli/modulo-15-sextortion/
+          - img [ref=e587]
+          - generic [ref=e589]: Torna al Modulo
+        - generic [ref=e590]: Come iniziano queste situazioni
+      - generic [ref=e591]:
+        - generic [ref=e592]:
+          - generic [ref=e593]: Lezione 2 di 20
+          - heading "Come iniziano queste situazioni" [level=1] [ref=e594]
+          - generic [ref=e595]:
+            - generic [ref=e596]:
+              - img [ref=e597]
+              - text: 5 min lettura
+            - generic [ref=e601]: base
+        - generic [ref=e602]:
+          - generic [ref=e603]:
+            - heading "Cosa imparerai" [level=3] [ref=e604]:
+              - img [ref=e605]
+              - text: Cosa imparerai
+            - list [ref=e607]:
+              - listitem [ref=e608]: Comprendere il punto chiave di sextortion e ricatti sessuali senza allarmismi.
+              - listitem [ref=e610]: Riconoscere segnali, pressioni e scelte da valutare con calma.
+              - listitem [ref=e612]: Applicare un’azione pratica e verificabile nella vita quotidiana.
+          - article [ref=e614]:
+            - heading "Perché conta" [level=3] [ref=e615]
+            - paragraph [ref=e616]: "Molti problemi legati a sextortion e ricatti sessuali iniziano in modo normale: un messaggio, una richiesta, un favore, una promessa. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici."
+            - heading "Segnali da riconoscere" [level=3] [ref=e617]
+            - list [ref=e618]:
+              - listitem [ref=e619]: Richieste che diventano più personali nel tempo.
+              - listitem [ref=e620]: Urgenza, segretezza o pressione a rispondere subito.
+              - listitem [ref=e621]: Promesse troppo comode rispetto al contesto.
+            - heading "Cosa fare" [level=3] [ref=e622]
+            - list [ref=e623]:
+              - listitem [ref=e624]:
+                - strong [ref=e625]: Rallenta la conversazione.
+              - listitem [ref=e626]:
+                - strong [ref=e627]: Conserva messaggi e profili se qualcosa non torna.
+              - listitem [ref=e628]:
+                - strong [ref=e629]: Parlane con una persona affidabile prima di proseguire.
+            - heading "Cosa evitare" [level=3] [ref=e630]
+            - list [ref=e631]:
+              - listitem [ref=e632]: Non concedere altri dati o accessi per “chiudere in fretta”.
+              - listitem [ref=e633]: Non spostarti su canali meno sicuri solo perché qualcuno insiste.
+            - heading "Quando chiedere aiuto" [level=3] [ref=e634]
+            - paragraph [ref=e635]: Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+            - heading "Passo pratico" [level=3] [ref=e636]
+            - paragraph [ref=e637]: "Rileggi l’ultima richiesta sospetta ricevuta online e chiediti: mi sta dando tempo e libertà di scelta?"
+        - generic [ref=e639]:
+          - button "Precedente" [ref=e640]:
+            - img [ref=e641]
+            - text: Precedente
+          - button "Prossima Lezione" [ref=e643]:
+            - text: Prossima Lezione
+            - img [ref=e644]
+  - alert [ref=e115]

@@ -3,7 +3,7 @@ import { Module } from '@/types';
 export const modulo_18_truffe_ragazzi : Module = {
     id: 'modulo-18-truffe-ragazzi',
     title: 'Modulo 18: Truffe online per ragazzi',
-    description: 'Architettura editoriale in approvazione. Contenuto in fase di sviluppo intensivo secondo gli standard qualitativi Busssola.',
+    description: 'Esempi e difese semplici contro truffe mirate ai più giovani: regali falsi, account gaming, ricariche, marketplace e messaggi privati.',
     category: 'THREAT',
     coverImage: '/images/modules/threat.webp',
     progress: 0,
@@ -16,21 +16,32 @@ export const modulo_18_truffe_ragazzi : Module = {
             audienceTag: 'ragazzi',
             moduleTag: 'Truffe online per ragazzi',
             learningGoals: [
-                'Definisci truffe online per ragazzi in modo semplice e preciso.',
-                'Distingui il problema da conflitti ordinari o fraintendimenti.',
-                'Evita parole che spaventano senza spiegare.'
+                'Comprendere il punto chiave di truffe online per ragazzi senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-truffe online per ragazzi va spiegato senza sensazionalismo e senza minimizzare. In questa lezione definisci il problema, chiarisci cosa lo distingue da altre situazioni e prepari il lettore a riconoscerlo presto.
+            contentMarkdown: `### Perché conta
+Questa lezione mette a fuoco truffe online per ragazzi con parole semplici e senza allarmismi. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Definisci truffe online per ragazzi in modo semplice e preciso.
-- Distingui il problema da conflitti ordinari o fraintendimenti.
-- Evita parole che spaventano senza spiegare.
+### Segnali da riconoscere
+- Quali termini ricorrono più spesso.
+- Quali situazioni sono davvero rilevanti.
+- Quando una parola vaga nasconde un rischio concreto.
 
-### Chiusura
-Chiudi con l’idea che riconoscere presto vale più che reagire tardi.
-`
+### Cosa fare
+- **Dai un nome preciso al problema.**
+- **Separalo da casi simili ma meno urgenti.**
+- **Annota la domanda che vuoi chiarire prima di agire.**
+
+### Cosa evitare
+- Non usare etichette generiche come “mi hanno hackerato” se puoi descrivere meglio cosa è successo.
+- Non minimizzare solo perché la situazione avviene online.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Scrivi in una frase cosa significa per te truffe online per ragazzi e quale dubbio vuoi chiarire per primo.`
         },
         {
             id: '2',
@@ -40,21 +51,32 @@ Chiudi con l’idea che riconoscere presto vale più che reagire tardi.
             audienceTag: 'ragazzi',
             moduleTag: 'Truffe online per ragazzi',
             learningGoals: [
-                'Mostra come il rischio può sembrare gentile o banale all’inizio.',
-                'Fai notare gradualità, test e confidenza costruita.',
-                'Ricorda che il problema è la condotta di chi manipola, non la vulnerabilità di chi subisce.'
+                'Comprendere il punto chiave di truffe online per ragazzi senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Molte situazioni pericolose non iniziano con una minaccia esplicita, ma con normalità, attenzione o falsa vicinanza. Qui mostri i primi passi con cui il rischio prova a sembrare innocuo.
+            contentMarkdown: `### Perché conta
+Molti problemi legati a truffe online per ragazzi iniziano in modo normale: un messaggio, una richiesta, un favore, una promessa. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Mostra come il rischio può sembrare gentile o banale all’inizio.
-- Fai notare gradualità, test e confidenza costruita.
-- Ricorda che il problema è la condotta di chi manipola, non la vulnerabilità di chi subisce.
+### Segnali da riconoscere
+- Richieste che diventano più personali nel tempo.
+- Urgenza, segretezza o pressione a rispondere subito.
+- Promesse troppo comode rispetto al contesto.
 
-### Chiusura
-Invita a diffidare della pressione travestita da vicinanza.
-`
+### Cosa fare
+- **Rallenta la conversazione.**
+- **Conserva messaggi e profili se qualcosa non torna.**
+- **Parlane con una persona affidabile prima di proseguire.**
+
+### Cosa evitare
+- Non concedere altri dati o accessi per “chiudere in fretta”.
+- Non spostarti su canali meno sicuri solo perché qualcuno insiste.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Rileggi l’ultima richiesta sospetta ricevuta online e chiediti: mi sta dando tempo e libertà di scelta?`
         },
         {
             id: '3',
@@ -64,21 +86,32 @@ Invita a diffidare della pressione travestita da vicinanza.
             audienceTag: 'ragazzi',
             moduleTag: 'Truffe online per ragazzi',
             learningGoals: [
-                'Usa esempi di linguaggio, tempi e richieste.',
-                'Dai segnali osservabili, non intuizioni vaghe.',
-                'Invita a fermarsi ai primi dubbi.'
+                'Riconoscere segnali osservabili legati a truffe online per ragazzi.',
+                'Distinguere un dubbio gestibile da un limite superato.',
+                'Sapere quando fermarsi e chiedere una seconda opinione.'
             ],
-            contentMarkdown: `### Sintesi
-I segnali precoci servono a intervenire prima che la persona si senta intrappolata. Spiega cosa osservare in chat, nei tempi, nelle richieste e nei cambi di tono.
+            contentMarkdown: `### Perché conta
+I segnali precoci servono a intervenire quando la situazione è ancora gestibile. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Usa esempi di linguaggio, tempi e richieste.
-- Dai segnali osservabili, non intuizioni vaghe.
-- Invita a fermarsi ai primi dubbi.
+### Segnali da riconoscere
+- Cambi improvvisi di tono.
+- Richieste sproporzionate rispetto al rapporto.
+- Tentativi di isolarti da amici, famiglia, scuola o colleghi.
 
-### Chiusura
-Rendi i segnali facili da ricordare in tre parole.
-`
+### Cosa fare
+- **Fai screenshot ordinati.**
+- **Blocca o limita il contatto se ti senti sotto pressione.**
+- **Chiedi una seconda opinione senza vergognarti.**
+
+### Cosa evitare
+- Non aspettare che la situazione diventi “abbastanza grave”.
+- Non cancellare tutto prima di aver salvato le informazioni utili.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Scegli tre segnali che per te indicano un limite superato in tema truffe online per ragazzi.`
         },
         {
             id: '4',
@@ -88,21 +121,32 @@ Rendi i segnali facili da ricordare in tre parole.
             audienceTag: 'ragazzi',
             moduleTag: 'Truffe online per ragazzi',
             learningGoals: [
-                'Nomina le tecniche senza gergo da manuale.',
-                'Spiega come pressione e segretezza lavorano insieme.',
-                'Rendi visibile la dinamica emotiva.'
+                'Comprendere il punto chiave di truffe online per ragazzi senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Pressione, segretezza, urgenza, colpa e ricompensa sono strumenti ricorrenti. Questa lezione aiuta a riconoscere i meccanismi psicologici dietro truffe online per ragazzi.
+            contentMarkdown: `### Perché conta
+Il tema Truffe online per ragazzi può sfruttare emozioni forti: paura, colpa, curiosità, desiderio di appartenenza o bisogno di approvazione. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Nomina le tecniche senza gergo da manuale.
-- Spiega come pressione e segretezza lavorano insieme.
-- Rendi visibile la dinamica emotiva.
+### Segnali da riconoscere
+- Frasi che ti fanno sentire in debito.
+- Minacce o premi condizionati a una risposta immediata.
+- Richieste di segretezza presentate come prova di fiducia.
 
-### Chiusura
-Sottolinea che la manipolazione agisce sulle emozioni, non sulla logica soltanto.
-`
+### Cosa fare
+- **Metti per iscritto cosa ti viene chiesto.**
+- **Rifiuta le richieste che tolgono libertà o sicurezza.**
+- **Coinvolgi qualcuno prima di prendere decisioni emotive.**
+
+### Cosa evitare
+- Non accettare ricatti o condizioni per paura di deludere.
+- Non trattare la pressione come una prova d’amore o amicizia.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Individua la leva emotiva usata nella situazione: paura, urgenza, colpa, promessa o isolamento.`
         },
         {
             id: '5',
@@ -112,21 +156,32 @@ Sottolinea che la manipolazione agisce sulle emozioni, non sulla logica soltanto
             audienceTag: 'ragazzi',
             moduleTag: 'Truffe online per ragazzi',
             learningGoals: [
-                'Mostra almeno tre gradini di escalation.',
-                'Fai capire che il peggioramento può essere rapido o lento.',
-                'Collega escalation e perdita di libertà della vittima.'
+                'Comprendere il punto chiave di truffe online per ragazzi senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Quando la situazione peggiora, spesso lo fa a piccoli scatti. Insegna a vedere il passaggio da contatto ambiguo a richiesta grave, controllo o minaccia.
+            contentMarkdown: `### Perché conta
+Quando un problema peggiora, spesso lo fa a piccoli passi. Riconoscere l’escalation riduce il danno. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Mostra almeno tre gradini di escalation.
-- Fai capire che il peggioramento può essere rapido o lento.
-- Collega escalation e perdita di libertà della vittima.
+### Segnali da riconoscere
+- Richieste sempre più frequenti.
+- Minacce più esplicite o pubbliche.
+- Perdita di controllo su account, immagini, soldi o relazioni.
 
-### Chiusura
-Lascia una frase chiave: se aumenta segretezza o urgenza, il rischio cresce.
-`
+### Cosa fare
+- **Interrompi l’interazione non necessaria.**
+- **Metti al sicuro account e dispositivi coinvolti.**
+- **Passa dalla prevenzione alla richiesta di aiuto.**
+
+### Cosa evitare
+- Non negoziare da solo/a se c’è una minaccia.
+- Non pagare, inviare altro materiale o concedere accessi per fermare la pressione.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Se la situazione è peggiorata nelle ultime 24 ore, scegli ora una persona o un canale ufficiale da contattare.`
         },
         {
             id: '6',
@@ -136,21 +191,32 @@ Lascia una frase chiave: se aumenta segretezza o urgenza, il rischio cresce.
             audienceTag: 'ragazzi',
             moduleTag: 'Truffe online per ragazzi',
             learningGoals: [
-                'Evita tono moralista.',
-                'Spiega perché certe reazioni sono istintive ma dannose.',
-                'Offri subito la risposta alternativa.'
+                'Comprendere il punto chiave di truffe online per ragazzi senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Molte reazioni istintive sono comprensibili ma rischiose. Qui spieghi quali errori complicano tutto e come sostituirli con mosse più utili e più sicure.
+            contentMarkdown: `### Perché conta
+Gli errori più frequenti sono comprensibili: nascono da fretta, vergogna o desiderio di risolvere tutto da soli. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Evita tono moralista.
-- Spiega perché certe reazioni sono istintive ma dannose.
-- Offri subito la risposta alternativa.
+### Segnali da riconoscere
+- Cancellare prove per imbarazzo.
+- Rispondere a provocazioni o ricatti.
+- Rimandare password, blocchi o segnalazioni.
 
-### Chiusura
-Ricorda che sbagliare reazione non annulla il diritto a ricevere aiuto.
-`
+### Cosa fare
+- **Sostituisci la reazione impulsiva con un passo verificabile.**
+- **Salva ciò che serve prima di modificare account o chat.**
+- **Chiedi aiuto prima che la vergogna diventi isolamento.**
+
+### Cosa evitare
+- Non colpevolizzarti: l’errore non annulla il tuo diritto a essere aiutato/a.
+- Non lasciare attivi accessi o permessi compromessi.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Scegli un errore che rischieresti di fare sotto stress e scrivi l’azione alternativa.`
         },
         {
             id: '7',
@@ -160,21 +226,32 @@ Ricorda che sbagliare reazione non annulla il diritto a ricevere aiuto.
             audienceTag: 'ragazzi',
             moduleTag: 'Truffe online per ragazzi',
             learningGoals: [
-                'Ordina le azioni per priorità.',
-                'Tieni separate sicurezza personale, prove e segnalazione.',
-                'Scrivi come per una persona agitata, non per un esperto.'
+                'Mettere in ordine le priorità nei primi minuti.',
+                'Proteggere account, prove e persone coinvolte.',
+                'Scegliere il canale di aiuto più adatto alla gravità.'
             ],
-            contentMarkdown: `### Sintesi
-In una situazione delicata servono istruzioni brevi e priorità chiare. Questa lezione mette ordine: mettersi al sicuro, non cedere alla pressione, conservare ciò che serve e attivare aiuto.
+            contentMarkdown: `### Perché conta
+In una situazione legata a truffe online per ragazzi, l’ordine delle azioni conta più della quantità di cose fatte. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Ordina le azioni per priorità.
-- Tieni separate sicurezza personale, prove e segnalazione.
-- Scrivi come per una persona agitata, non per un esperto.
+### Segnali da riconoscere
+- Cosa è urgente e cosa può aspettare.
+- Quali account, persone o dati sono coinvolti.
+- Se c’è un rischio fisico, economico o emotivo immediato.
 
-### Chiusura
-Trasforma la lezione in una mini card SOS.
-`
+### Cosa fare
+- **Metti al sicuro te stesso/a e il dispositivo principale.**
+- **Salva prove essenziali:** chat, URL, profili, date e orari.
+- **Blocca, segnala o contatta i canali appropriati in base alla gravità.**
+
+### Cosa evitare
+- Non agire su dieci fronti insieme.
+- Non fidarti di link di recupero ricevuti da sconosciuti o da messaggi sospetti.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Fai una lista in tre righe: cosa è successo, chi è coinvolto, qual è il prossimo passo sicuro.`
         },
         {
             id: '8',
@@ -184,21 +261,33 @@ Trasforma la lezione in una mini card SOS.
             audienceTag: 'ragazzi',
             moduleTag: 'Truffe online per ragazzi',
             learningGoals: [
-                'Nomina poche mosse sbagliate ma frequenti.',
-                'Spiega il motivo del rischio.',
-                'Usa formule chiare: non fare questo, fai quest’altro.'
+                'Riconoscere le reazioni impulsive che peggiorano il problema.',
+                'Sostituire una mossa rischiosa con un passo più sicuro.',
+                'Ridurre pressione, vergogna e urgenza artificiale.'
             ],
-            contentMarkdown: `### Sintesi
-Dire cosa non fare riduce il caos. Elenchi le mosse più comuni che peggiorano la situazione e spieghi perché vanno evitate, senza colpevolizzare.
+            contentMarkdown: `### Perché conta
+Sapere cosa evitare protegge da mosse impulsive che possono aumentare il danno. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Nomina poche mosse sbagliate ma frequenti.
-- Spiega il motivo del rischio.
-- Usa formule chiare: non fare questo, fai quest’altro.
+### Segnali da riconoscere
+- Richieste che ti spingono a pagare, inviare, cancellare o nasconderti.
+- Link ricevuti proprio mentre sei agitato/a.
+- Pressioni a risolvere tutto senza parlarne con nessuno.
 
-### Chiusura
-Usa un box visivo con i divieti principali.
-`
+### Cosa fare
+- **Prenditi tempo.**
+- **Conserva prove prima di cancellare contenuti o bloccare profili.**
+- **Usa impostazioni ufficiali dell’app invece di soluzioni improvvisate.**
+
+### Cosa evitare
+- Non pagare ricatti.
+- Non inviare altri dati, immagini o codici.
+- Non installare app di “recupero” trovate tramite link sospetti.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Scegli una cosa da non fare anche se ti sembra la più veloce, e sostituiscila con un’azione sicura.`
         },
         {
             id: '9',
@@ -208,21 +297,32 @@ Usa un box visivo con i divieti principali.
             audienceTag: 'ragazzi',
             moduleTag: 'Truffe online per ragazzi',
             learningGoals: [
-                'Spiega cosa salvare e come nominarlo.',
-                'Ricorda di includere profili, orari e contesto.',
-                'Evita suggerimenti invasivi o poco realistici.'
+                'Capire quali prove digitali conservare e perché.',
+                'Salvare informazioni utili senza modificarle o esporle pubblicamente.',
+                'Preparare una segnalazione più ordinata e comprensibile.'
             ],
-            contentMarkdown: `### Sintesi
-Le prove digitali contano perché i dettagli si perdono in fretta. Qui spieghi cosa conservare, come farlo con ordine e cosa evitare di cancellare prima del tempo.
+            contentMarkdown: `### Perché conta
+Le prove digitali sono utili solo se restano leggibili, contestualizzate e ordinate. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Spiega cosa salvare e come nominarlo.
-- Ricorda di includere profili, orari e contesto.
-- Evita suggerimenti invasivi o poco realistici.
+### Segnali da riconoscere
+- Chat complete, non solo l’ultimo messaggio.
+- Nome profilo, URL, ID, data e ora.
+- Eventuali pagamenti, richieste, minacce o contenuti rimossi.
 
-### Chiusura
-Chiudi con un promemoria: prima salva, poi blocca se necessario.
-`
+### Cosa fare
+- **Fai screenshot includendo contesto e data.**
+- **Salva link e nomi profilo in un file separato.**
+- **Conserva una copia in un posto sicuro prima di segnalare.**
+
+### Cosa evitare
+- Non modificare immagini o chat.
+- Non pubblicare le prove sui social per “farti giustizia”.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Crea una cartella con nome chiaro e salva screenshot, link e una breve cronologia dei fatti.`
         },
         {
             id: '10',
@@ -232,21 +332,32 @@ Chiudi con un promemoria: prima salva, poi blocca se necessario.
             audienceTag: 'ragazzi',
             moduleTag: 'Truffe online per ragazzi',
             learningGoals: [
-                'Distingui tra piattaforma, chat, gioco, social e mail.',
-                'Ricorda di non bloccare prima di aver salvato l’essenziale quando serve.',
-                'Spiega il senso della segnalazione.'
+                'Comprendere il punto chiave di truffe online per ragazzi senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Bloccare e segnalare non sono gesti automatici: vanno fatti nel momento giusto e con criterio. Insegni come usarli senza perdere prove o informazioni utili.
+            contentMarkdown: `### Perché conta
+Questa lezione collega truffe online per ragazzi a decisioni concrete che puoi prendere nella vita quotidiana. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Distingui tra piattaforma, chat, gioco, social e mail.
-- Ricorda di non bloccare prima di aver salvato l’essenziale quando serve.
-- Spiega il senso della segnalazione.
+### Segnali da riconoscere
+- Cosa ti viene chiesto di fare.
+- Quali dati, account o persone sono coinvolti.
+- Se senti pressione, vergogna o urgenza artificiale.
 
-### Chiusura
-Ricorda che bloccare e segnalare sono strumenti, non la soluzione completa.
-`
+### Cosa fare
+- **Rallenta prima di cliccare o rispondere.**
+- **Controlla la fonte o le impostazioni ufficiali.**
+- **Chiedi aiuto quando il problema supera le tue competenze o la tua serenità.**
+
+### Cosa evitare
+- Non agire solo per ansia.
+- Non condividere dati, codici o immagini private senza pensarci.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Applica oggi un controllo concreto legato a truffe online per ragazzi e annota cosa hai cambiato.`
         },
         {
             id: '11',
@@ -256,21 +367,32 @@ Ricorda che bloccare e segnalare sono strumenti, non la soluzione completa.
             audienceTag: 'ragazzi',
             moduleTag: 'Truffe online per ragazzi',
             learningGoals: [
-                'Dai una frase modello da dire o scrivere.',
-                'Riduci vergogna e paura di non essere creduti.',
-                'Ricorda che il problema va condiviso presto.'
+                'Comprendere il punto chiave di truffe online per ragazzi senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Chiedere aiuto a un adulto, referente o servizio può fare la differenza, ma spesso la persona coinvolta non sa come iniziare. Dai una traccia semplice e rispettosa.
+            contentMarkdown: `### Perché conta
+Questa lezione collega truffe online per ragazzi a decisioni concrete che puoi prendere nella vita quotidiana. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Dai una frase modello da dire o scrivere.
-- Riduci vergogna e paura di non essere creduti.
-- Ricorda che il problema va condiviso presto.
+### Segnali da riconoscere
+- Cosa ti viene chiesto di fare.
+- Quali dati, account o persone sono coinvolti.
+- Se senti pressione, vergogna o urgenza artificiale.
 
-### Chiusura
-Metti una frase pronta da copiare e inviare.
-`
+### Cosa fare
+- **Rallenta prima di cliccare o rispondere.**
+- **Controlla la fonte o le impostazioni ufficiali.**
+- **Chiedi aiuto quando il problema supera le tue competenze o la tua serenità.**
+
+### Cosa evitare
+- Non agire solo per ansia.
+- Non condividere dati, codici o immagini private senza pensarci.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Applica oggi un controllo concreto legato a truffe online per ragazzi e annota cosa hai cambiato.`
         },
         {
             id: '12',
@@ -280,21 +402,32 @@ Metti una frase pronta da copiare e inviare.
             audienceTag: 'ragazzi',
             moduleTag: 'Truffe online per ragazzi',
             learningGoals: [
-                'Mostra come stare accanto senza prendere il controllo.',
-                'Invita a non promettere segreti impossibili.',
-                'Ricorda quando serve coinvolgere un adulto subito.'
+                'Comprendere il punto chiave di truffe online per ragazzi senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Anche gli amici possono vedere segnali che la persona coinvolta fatica a leggere. Questa lezione insegna come aiutare senza sostituirsi, giudicare o esporsi inutilmente.
+            contentMarkdown: `### Perché conta
+Questa lezione collega truffe online per ragazzi a decisioni concrete che puoi prendere nella vita quotidiana. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Mostra come stare accanto senza prendere il controllo.
-- Invita a non promettere segreti impossibili.
-- Ricorda quando serve coinvolgere un adulto subito.
+### Segnali da riconoscere
+- Cosa ti viene chiesto di fare.
+- Quali dati, account o persone sono coinvolti.
+- Se senti pressione, vergogna o urgenza artificiale.
 
-### Chiusura
-Chiudi con il principio: aiutare non significa sostituirsi.
-`
+### Cosa fare
+- **Rallenta prima di cliccare o rispondere.**
+- **Controlla la fonte o le impostazioni ufficiali.**
+- **Chiedi aiuto quando il problema supera le tue competenze o la tua serenità.**
+
+### Cosa evitare
+- Non agire solo per ansia.
+- Non condividere dati, codici o immagini private senza pensarci.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Applica oggi un controllo concreto legato a truffe online per ragazzi e annota cosa hai cambiato.`
         },
         {
             id: '13',
@@ -304,21 +437,32 @@ Chiudi con il principio: aiutare non significa sostituirsi.
             audienceTag: 'ragazzi',
             moduleTag: 'Truffe online per ragazzi',
             learningGoals: [
-                'Assegna ruoli chiari.',
-                'Evita sia minimizzazione sia panico collettivo.',
-                'Ricorda che la dignità della persona viene prima del gossip.'
+                'Comprendere il punto chiave di truffe online per ragazzi senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Quando un problema tocca scuola, famiglia o gruppo, servono ruoli chiari. Qui spieghi quando allargare il cerchio e come evitare sia il silenzio sia il caos.
+            contentMarkdown: `### Perché conta
+Truffe online per ragazzi cambia quando coinvolge famiglie, classi o gruppi: servono linguaggio calmo e responsabilità condivisa. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Assegna ruoli chiari.
-- Evita sia minimizzazione sia panico collettivo.
-- Ricorda che la dignità della persona viene prima del gossip.
+### Segnali da riconoscere
+- Persone che minimizzano o amplificano il problema.
+- Condivisioni in chat di gruppo.
+- Ruoli confusi tra vittima, testimoni e adulti di riferimento.
 
-### Chiusura
-Ribadisci il valore della riservatezza.
-`
+### Cosa fare
+- **Separare fatti, emozioni e decisioni.**
+- **Usare canali privati per parlare con chi è coinvolto.**
+- **Stabilire chi conserva prove e chi contatta eventuali referenti.**
+
+### Cosa evitare
+- Non trasformare il caso in spettacolo di gruppo.
+- Non interrogare pubblicamente chi ha subito un danno.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Prepara tre frasi calme: cosa sappiamo, cosa non sappiamo, cosa facciamo ora.`
         },
         {
             id: '14',
@@ -328,21 +472,32 @@ Ribadisci il valore della riservatezza.
             audienceTag: 'ragazzi',
             moduleTag: 'Truffe online per ragazzi',
             learningGoals: [
-                'Fai leggere la situazione per dettagli.',
-                'Spiega dove scatta il campanello d’allarme.',
-                'Chiudi con un criterio semplice da riusare.'
+                'Comprendere il punto chiave di truffe online per ragazzi senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Un caso ambiguo allena l’occhio ai dettagli piccoli ma importanti. Costruisci una chat o una sequenza di messaggi e fai emergere la logica del rischio.
+            contentMarkdown: `### Perché conta
+Questa lezione collega truffe online per ragazzi a decisioni concrete che puoi prendere nella vita quotidiana. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Fai leggere la situazione per dettagli.
-- Spiega dove scatta il campanello d’allarme.
-- Chiudi con un criterio semplice da riusare.
+### Segnali da riconoscere
+- Cosa ti viene chiesto di fare.
+- Quali dati, account o persone sono coinvolti.
+- Se senti pressione, vergogna o urgenza artificiale.
 
-### Chiusura
-Lascia un criterio semplice per riconoscere ambiguità sospette.
-`
+### Cosa fare
+- **Rallenta prima di cliccare o rispondere.**
+- **Controlla la fonte o le impostazioni ufficiali.**
+- **Chiedi aiuto quando il problema supera le tue competenze o la tua serenità.**
+
+### Cosa evitare
+- Non agire solo per ansia.
+- Non condividere dati, codici o immagini private senza pensarci.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Applica oggi un controllo concreto legato a truffe online per ragazzi e annota cosa hai cambiato.`
         },
         {
             id: '15',
@@ -352,21 +507,32 @@ Lascia un criterio semplice per riconoscere ambiguità sospette.
             audienceTag: 'ragazzi',
             moduleTag: 'Truffe online per ragazzi',
             learningGoals: [
-                'Simula urgenza e pressione in modo credibile.',
-                'Mostra come non trattare con chi minaccia.',
-                'Collega il caso a prove e aiuto immediato.'
+                'Comprendere il punto chiave di truffe online per ragazzi senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Un caso con pressione o minaccia serve a preparare il lettore al momento peggiore. Mostra come restare lucidi, non negoziare e attivare supporto utile.
+            contentMarkdown: `### Perché conta
+Il tema Truffe online per ragazzi può sfruttare emozioni forti: paura, colpa, curiosità, desiderio di appartenenza o bisogno di approvazione. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Simula urgenza e pressione in modo credibile.
-- Mostra come non trattare con chi minaccia.
-- Collega il caso a prove e aiuto immediato.
+### Segnali da riconoscere
+- Frasi che ti fanno sentire in debito.
+- Minacce o premi condizionati a una risposta immediata.
+- Richieste di segretezza presentate come prova di fiducia.
 
-### Chiusura
-Concludi con una sequenza breve di azioni da ripetere.
-`
+### Cosa fare
+- **Metti per iscritto cosa ti viene chiesto.**
+- **Rifiuta le richieste che tolgono libertà o sicurezza.**
+- **Coinvolgi qualcuno prima di prendere decisioni emotive.**
+
+### Cosa evitare
+- Non accettare ricatti o condizioni per paura di deludere.
+- Non trattare la pressione come una prova d’amore o amicizia.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Individua la leva emotiva usata nella situazione: paura, urgenza, colpa, promessa o isolamento.`
         },
         {
             id: '16',
@@ -376,21 +542,32 @@ Concludi con una sequenza breve di azioni da ripetere.
             audienceTag: 'ragazzi',
             moduleTag: 'Truffe online per ragazzi',
             learningGoals: [
-                'Fai preparare contatti, impostazioni e scelte.',
-                'Tieni il piano breve e memorabile.',
-                'Adatta il piano all’età e al contesto.'
+                'Comprendere il punto chiave di truffe online per ragazzi senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Il piano personale di sicurezza trasforma l’ansia in azioni concrete. In questa lezione il lettore prepara contatti, regole e passaggi da tenere pronti.
+            contentMarkdown: `### Perché conta
+Questa lezione collega truffe online per ragazzi a decisioni concrete che puoi prendere nella vita quotidiana. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Fai preparare contatti, impostazioni e scelte.
-- Tieni il piano breve e memorabile.
-- Adatta il piano all’età e al contesto.
+### Segnali da riconoscere
+- Cosa ti viene chiesto di fare.
+- Quali dati, account o persone sono coinvolti.
+- Se senti pressione, vergogna o urgenza artificiale.
 
-### Chiusura
-Fai uscire il lettore con un piano concreto, non con paura astratta.
-`
+### Cosa fare
+- **Rallenta prima di cliccare o rispondere.**
+- **Controlla la fonte o le impostazioni ufficiali.**
+- **Chiedi aiuto quando il problema supera le tue competenze o la tua serenità.**
+
+### Cosa evitare
+- Non agire solo per ansia.
+- Non condividere dati, codici o immagini private senza pensarci.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Applica oggi un controllo concreto legato a truffe online per ragazzi e annota cosa hai cambiato.`
         },
         {
             id: '17',
@@ -400,21 +577,32 @@ Fai uscire il lettore con un piano concreto, non con paura astratta.
             audienceTag: 'ragazzi',
             moduleTag: 'Truffe online per ragazzi',
             learningGoals: [
-                'Usa verbi operativi.',
-                'Metti la sicurezza davanti a tutto.',
-                'Rendi la checklist stampabile o salvabile.'
+                'Comprendere il punto chiave di truffe online per ragazzi senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-La checklist di emergenza deve essere breve, memorabile e usabile sotto stress. Riassumi le priorità vere: sicurezza, prove, aiuto, segnalazione.
+            contentMarkdown: `### Perché conta
+Questa lezione collega truffe online per ragazzi a decisioni concrete che puoi prendere nella vita quotidiana. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Usa verbi operativi.
-- Metti la sicurezza davanti a tutto.
-- Rendi la checklist stampabile o salvabile.
+### Segnali da riconoscere
+- Cosa ti viene chiesto di fare.
+- Quali dati, account o persone sono coinvolti.
+- Se senti pressione, vergogna o urgenza artificiale.
 
-### Chiusura
-Mantieni la checklist breve e usabile sotto stress.
-`
+### Cosa fare
+- **Rallenta prima di cliccare o rispondere.**
+- **Controlla la fonte o le impostazioni ufficiali.**
+- **Chiedi aiuto quando il problema supera le tue competenze o la tua serenità.**
+
+### Cosa evitare
+- Non agire solo per ansia.
+- Non condividere dati, codici o immagini private senza pensarci.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Applica oggi un controllo concreto legato a truffe online per ragazzi e annota cosa hai cambiato.`
         },
         {
             id: '18',
@@ -424,21 +612,32 @@ Mantieni la checklist breve e usabile sotto stress.
             audienceTag: 'ragazzi',
             moduleTag: 'Truffe online per ragazzi',
             learningGoals: [
-                'Chiedi di ordinare le mosse.',
-                'Spiega il perché, non solo il cosa.',
-                'Collega l’esercizio a un rischio reale.'
+                'Comprendere il punto chiave di truffe online per ragazzi senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Un esercizio pratico di risposta aiuta a non restare paralizzati. Fai simulare una situazione, ordina le mosse corrette e spiega perché funzionano meglio.
+            contentMarkdown: `### Perché conta
+Il ripasso serve a trasformare truffe online per ragazzi in abitudini, non in nozioni da dimenticare. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Chiedi di ordinare le mosse.
-- Spiega il perché, non solo il cosa.
-- Collega l’esercizio a un rischio reale.
+### Segnali da riconoscere
+- Quali punti ti sono più chiari.
+- Quali situazioni ti mettono ancora in difficoltà.
+- Quale abitudine puoi mantenere senza sforzo eccessivo.
 
-### Chiusura
-Chiudi con il messaggio: esercitarsi prima aiuta quando serve davvero.
-`
+### Cosa fare
+- **Scegli un controllo da ripetere ogni mese.**
+- **Scrivi il tuo piano minimo di sicurezza.**
+- **Condividi una cosa utile con una persona che potrebbe beneficiarne.**
+
+### Cosa evitare
+- Non cercare la perfezione immediata.
+- Non rimandare tutto perché il tema sembra grande.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Scegli una sola azione da completare entro oggi e una da programmare entro una settimana.`
         },
         {
             id: '19',
@@ -448,21 +647,32 @@ Chiudi con il messaggio: esercitarsi prima aiuta quando serve davvero.
             audienceTag: 'ragazzi',
             moduleTag: 'Truffe online per ragazzi',
             learningGoals: [
-                'Usa alternative plausibili.',
-                'Premia la lucidità, non il coraggio spettacolare.',
-                'Chiudi con una regola che resta.'
+                'Comprendere il punto chiave di truffe online per ragazzi senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-Il quiz decisionale serve ad allenare il giudizio in scenari realistici. Le alternative devono essere credibili, non caricaturali, così il lettore impara davvero.
+            contentMarkdown: `### Perché conta
+Questa lezione collega truffe online per ragazzi a decisioni concrete che puoi prendere nella vita quotidiana. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Usa alternative plausibili.
-- Premia la lucidità, non il coraggio spettacolare.
-- Chiudi con una regola che resta.
+### Segnali da riconoscere
+- Cosa ti viene chiesto di fare.
+- Quali dati, account o persone sono coinvolti.
+- Se senti pressione, vergogna o urgenza artificiale.
 
-### Chiusura
-Mostra che decidere bene conta più che rispondere in fretta.
-`
+### Cosa fare
+- **Rallenta prima di cliccare o rispondere.**
+- **Controlla la fonte o le impostazioni ufficiali.**
+- **Chiedi aiuto quando il problema supera le tue competenze o la tua serenità.**
+
+### Cosa evitare
+- Non agire solo per ansia.
+- Non condividere dati, codici o immagini private senza pensarci.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Applica oggi un controllo concreto legato a truffe online per ragazzi e annota cosa hai cambiato.`
         },
         {
             id: '20',
@@ -472,21 +682,32 @@ Mostra che decidere bene conta più che rispondere in fretta.
             audienceTag: 'ragazzi',
             moduleTag: 'Truffe online per ragazzi',
             learningGoals: [
-                'Riporta calma e orientamento.',
-                'Ricorda dove trovare aiuto.',
-                'Non lasciare il lettore da solo con la paura.'
+                'Comprendere il punto chiave di truffe online per ragazzi senza allarmismi.',
+                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
+                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
             ],
-            contentMarkdown: `### Sintesi
-La chiusura del modulo deve riportare calma, orientamento e accesso rapido al supporto. Riassumi i concetti chiave e rinforza il collegamento con la pagina SOS.
+            contentMarkdown: `### Perché conta
+Il ripasso serve a trasformare truffe online per ragazzi in abitudini, non in nozioni da dimenticare. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
 
-### Punti Chiave
-- Riporta calma e orientamento.
-- Ricorda dove trovare aiuto.
-- Non lasciare il lettore da solo con la paura.
+### Segnali da riconoscere
+- Quali punti ti sono più chiari.
+- Quali situazioni ti mettono ancora in difficoltà.
+- Quale abitudine puoi mantenere senza sforzo eccessivo.
 
-### Chiusura
-Termina con link e rinvio chiaro alla sezione SOS.
-`
+### Cosa fare
+- **Scegli un controllo da ripetere ogni mese.**
+- **Scrivi il tuo piano minimo di sicurezza.**
+- **Condividi una cosa utile con una persona che potrebbe beneficiarne.**
+
+### Cosa evitare
+- Non cercare la perfezione immediata.
+- Non rimandare tutto perché il tema sembra grande.
+
+### Quando chiedere aiuto
+Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
+
+### Passo pratico
+Scegli una sola azione da completare entro oggi e una da programmare entro una settimana.`
         }
     ]
 };

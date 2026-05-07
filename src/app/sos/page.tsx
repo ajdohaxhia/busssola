@@ -28,8 +28,8 @@ const SCENARIOS: Scenario[] = [
         doNot: 'NON pagare e NON inviare altro materiale. Chi ricatta non si ferma dopo il primo pagamento.',
         contactLabel: 'Polizia Postale',
         contactNumber: 'Segnala il reato online',
-        contactLink: 'https://www.commissariatodips.it/segnalazioni/segnala-online/index.html',
-        moduleLink: '/moduli/sexting-legal'
+        contactLink: 'https://www.commissariatodips.it/',
+        moduleLink: '/moduli/modulo-15-sextortion'
     },
     {
         id: 'grooming',
@@ -40,7 +40,7 @@ const SCENARIOS: Scenario[] = [
         contactLabel: 'Emergenza Infanzia',
         contactNumber: '114',
         contactLink: 'tel:114',
-        moduleLink: '/moduli/predatori-online'
+        moduleLink: '/moduli/modulo-13-grooming'
     },
     {
         id: 'cyberbullismo',
@@ -51,7 +51,7 @@ const SCENARIOS: Scenario[] = [
         contactLabel: 'Anti Violenza e Stalking',
         contactNumber: '1522',
         contactLink: 'tel:1522',
-        moduleLink: '/moduli/cyberbullismo-stalking'
+        moduleLink: '/moduli/modulo-16-cyberbullismo'
     },
     {
         id: 'hacking',
@@ -60,9 +60,9 @@ const SCENARIOS: Scenario[] = [
         immediateAction: 'Blocca subito le carte di credito coinvolte. Avvisa i tuoi contatti del furto di identità.',
         doNot: 'NON cliccare su link inviati via SMS o email che promettono di "recuperare" l\'account.',
         contactLabel: 'Polizia Postale',
-        contactNumber: 'Denuncia Online',
-        contactLink: 'https://www.commissariatodips.it/denunce/denuncia-via-web/index.html',
-        moduleLink: '/moduli/privacy-tecnica'
+        contactNumber: 'Segnalazioni e denunce',
+        contactLink: 'https://www.commissariatodips.it/',
+        moduleLink: '/moduli/modulo-22-recupero-account'
     },
     {
         id: 'diffusione-intima',
@@ -73,7 +73,7 @@ const SCENARIOS: Scenario[] = [
         contactLabel: 'Garante Privacy',
         contactNumber: 'Segnala per rimozione',
         contactLink: 'https://www.gpdp.it/temi/cyberbullismo',
-        moduleLink: '/moduli/sexting-legal'
+        moduleLink: '/moduli/modulo-15-sextortion'
     },
     {
         id: 'crisi-psicologica',
@@ -81,21 +81,21 @@ const SCENARIOS: Scenario[] = [
         description: 'Quello che sta succedendo online ti sta togliendo la serenità e non sai come uscirne.',
         immediateAction: 'Ricorda che non è colpa tua. C\'è sempre una via d\'uscita e persone pronte ad ascoltarti.',
         doNot: 'NON restare solo/a con questo peso. Parlare è il primo passo per risolvere.',
-        contactLabel: 'Telefono Azzurro / Samaritans',
-        contactNumber: '19696',
-        contactLink: 'tel:19696',
-        moduleLink: '/about'
+        contactLabel: 'Telefono Amico Italia',
+        contactNumber: '02 2327 2327',
+        contactLink: 'tel:+390223272327',
+        moduleLink: '/moduli/modulo-25-crisi-emotiva'
     },
     {
         id: 'pericolo-fisico',
-        title: 'Ho paura per la mia incolumità or quella di un amico',
+        title: 'Ho paura per la mia incolumità o quella di un amico',
         description: 'C\'è una minaccia fisica imminente o rischio di vita.',
         immediateAction: 'Mettiti al sicuro. Chiedi aiuto a chi hai vicino.',
         doNot: 'NON aspettare. Chiama subito.',
         contactLabel: 'Emergenza Nazionale',
         contactNumber: '112',
         contactLink: 'tel:112',
-        moduleLink: '/moduli/emergenze-digitali'
+        moduleLink: '/moduli/modulo-24-emergenze'
     }
 ]
 

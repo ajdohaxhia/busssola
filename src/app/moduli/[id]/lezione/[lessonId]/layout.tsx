@@ -1,10 +1,5 @@
 import { ALL_MODULES } from '@/data/modules/index'
 
-type Props = {
-    children: React.ReactNode
-    params: Promise<{ id: string }>
-}
-
 export async function generateStaticParams() {
     const paths: { id: string; lessonId: string }[] = [];
     
