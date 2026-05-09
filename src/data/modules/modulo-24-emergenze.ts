@@ -6,6 +6,38 @@ export const modulo_24_emergenze : Module = {
     description: 'Protocolli essenziali per mantenere calma, ridurre il danno e contattare i canali giusti quando una situazione digitale diventa urgente.',
     category: 'THREAT',
     progress: 0,
+    tips: [
+        'Un’emergenza digitale non si risolve in trenta secondi: dai priorità a sicurezza fisica, conservazione delle prove e contatto con il canale giusto.',
+        'In caso di pericolo immediato per una persona, chiama il 112: non esiste “solo un problema online” se c’è rischio reale.',
+        'Prima di cancellare account o messaggi, fai un export o uno screenshot: cancellare distrugge prove utili.'
+    ],
+    resources: [
+        {
+            title: '112 — Numero unico di emergenza europeo',
+            url: 'tel:112',
+            description: 'Per situazioni di pericolo fisico immediato derivanti da minacce online (incontri, sequestri, autolesionismo).'
+        },
+        {
+            title: 'Emergenza Infanzia 114',
+            url: 'https://www.114.it/',
+            description: 'Per minori in situazioni di rischio o adulti che vogliono segnalare un caso urgente che riguarda un minore.'
+        },
+        {
+            title: 'Polizia Postale',
+            url: 'https://www.commissariatodips.it/',
+            description: 'Per denunce e segnalazioni urgenti su frodi, ricatti, hacking di account, diffusione non consensuale di immagini.'
+        },
+        {
+            title: '1522 — Anti-violenza, stalking e ricatti',
+            url: 'https://www.1522.eu/',
+            description: 'Linea attiva 24/7 anche per emergenze digitali a sfondo sessuale o relazionale, anonima e gratuita.'
+        },
+        {
+            title: 'Telefono Amico Italia',
+            url: 'https://www.telefonoamico.it/',
+            description: 'Ascolto emotivo immediato per momenti di crisi, sopraffazione o paura, da affiancare ai canali tecnici.'
+        }
+    ],
     lessons: [
         {
             id: '1',

@@ -6,6 +6,38 @@ export const modulo_25_crisi_emotiva : Module = {
     description: 'Un percorso per riconoscere quando un problema online pesa troppo e attivare supporto umano senza restare soli.',
     category: 'THREAT',
     progress: 0,
+    tips: [
+        'Se una situazione online ti toglie il sonno, l’appetito o la concentrazione per più giorni, non è "solo nervosismo": chiedi supporto.',
+        'I numeri di ascolto sono pensati anche per “non so cosa dire, ma non sto bene”: non devi avere già tutte le parole.',
+        'Se pensi di farti del male o stai pensando al suicidio, chiama subito il 112 o il Telefono Amico — non sei un peso.'
+    ],
+    resources: [
+        {
+            title: 'Telefono Amico Italia — 02 2327 2327',
+            url: 'https://www.telefonoamico.it/',
+            description: 'Ascolto telefonico anonimo e gratuito per chi sta affrontando un momento difficile, attivo tutti i giorni.'
+        },
+        {
+            title: 'Telefono Azzurro — 19696',
+            url: 'https://www.azzurro.it/',
+            description: 'Linea dedicata a bambini e adolescenti, attiva 24 ore su 24, anche tramite chat dal sito.'
+        },
+        {
+            title: 'Samaritans Onlus — Aiuto Suicidi 06 77208977',
+            url: 'https://www.samaritansonlus.org/',
+            description: 'Linea dedicata a chi pensa al suicidio o si sente in crisi profonda, ascolto non giudicante e riservato.'
+        },
+        {
+            title: 'CNCA — Sportelli psicologici territoriali',
+            url: 'https://www.cnca.it/',
+            description: 'Mappa di sportelli e servizi gratuiti di supporto psicologico in tutta Italia.'
+        },
+        {
+            title: '112 — Numero unico di emergenza',
+            url: 'tel:112',
+            description: 'In caso di rischio immediato per la propria vita o per quella di un’altra persona, chiama subito.'
+        }
+    ],
     lessons: [
         {
             id: '1',

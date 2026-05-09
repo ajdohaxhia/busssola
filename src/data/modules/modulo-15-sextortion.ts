@@ -6,6 +6,38 @@ export const modulo_15_sextortion : Module = {
     description: 'Una guida calma e operativa per affrontare ricatti sessuali online: cosa fare subito, cosa evitare e dove chiedere aiuto.',
     category: 'THREAT',
     progress: 0,
+    tips: [
+        'Non pagare. Pagare conferma al ricattatore che il metodo funziona e raramente ferma le minacce.',
+        'Salva screenshot di chat, profili e richieste prima di bloccare: servono alla denuncia.',
+        'Non sei solo/a. Chi ti ricatta sfrutta la vergogna: parlarne con un adulto o le autorità spezza il meccanismo.'
+    ],
+    resources: [
+        {
+            title: 'Polizia Postale — Denuncia online di Sextortion',
+            url: 'https://www.commissariatodips.it/',
+            description: 'Canale ufficiale per denunciare ricatti sessuali; mantieni le prove digitali allegate.'
+        },
+        {
+            title: 'Emergenza Infanzia 114',
+            url: 'https://www.114.it/',
+            description: 'Per minorenni vittime di sextortion: ascolto e supporto immediato, anche anonimo.'
+        },
+        {
+            title: '1522 — Anti-violenza e Stalking',
+            url: 'https://www.1522.eu/',
+            description: 'Numero gratuito attivo 24/7 per donne e persone vittime di violenza, stalking e ricatti a sfondo sessuale.'
+        },
+        {
+            title: 'NCMEC Take It Down (per minori)',
+            url: 'https://takeitdown.ncmec.org/',
+            description: 'Servizio gratuito che aiuta a far rimuovere immagini intime di minorenni dai principali social.'
+        },
+        {
+            title: 'StopNCII.org (per maggiorenni)',
+            url: 'https://stopncii.org/',
+            description: 'Strumento internazionale per impedire la diffusione di immagini intime non consensuali tra adulti.'
+        }
+    ],
     lessons: [
         {
             id: '1',

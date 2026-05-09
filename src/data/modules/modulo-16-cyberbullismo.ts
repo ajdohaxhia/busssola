@@ -6,6 +6,33 @@ export const modulo_16_cyberbullismo : Module = {
     description: 'Strumenti per riconoscere cyberbullismo, molestie coordinate e attacchi di gruppo, proteggendo prove e benessere.',
     category: 'THREAT',
     progress: 0,
+    tips: [
+        'Il cyberbullismo è regolato dalla legge 71/2017: il minore vittima può chiedere la rimozione dei contenuti al gestore della piattaforma o al Garante Privacy.',
+        'Salva sempre le prove (screenshot, URL, date) prima di bloccare o cancellare: senza prove la denuncia è più difficile.',
+        'Parla con un adulto di riferimento: dirigente scolastico, genitore, allenatore, anche se temi reazioni eccessive.'
+    ],
+    resources: [
+        {
+            title: 'Garante Privacy — Cyberbullismo',
+            url: 'https://www.garanteprivacy.it/cyberbullismo',
+            description: 'Modulo ufficiale per chiedere la rimozione di contenuti che riguardano un minore vittima di cyberbullismo.'
+        },
+        {
+            title: 'Generazioni Connesse — Modulo segnalazioni',
+            url: 'https://www.generazioniconnesse.it/site/it/segnalazioni-helpline/',
+            description: 'Helpline italiana ufficiale Safer Internet Centre, supporto su cyberbullismo e contenuti dannosi.'
+        },
+        {
+            title: 'Telefono Azzurro — Linea di ascolto 19696',
+            url: 'https://www.azzurro.it/i-nostri-servizi/linea-dascolto-1-96-96/',
+            description: 'Supporto gratuito per minori e adulti di riferimento, attivo 24 ore su 24.'
+        },
+        {
+            title: 'Polizia Postale',
+            url: 'https://www.commissariatodips.it/',
+            description: 'Per atti gravi (minacce, diffamazione aggravata, istigazione al suicidio) puoi denunciare online o in commissariato.'
+        }
+    ],
     lessons: [
         {
             id: '1',

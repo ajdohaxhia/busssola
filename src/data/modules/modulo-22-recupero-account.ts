@@ -6,6 +6,33 @@ export const modulo_22_recupero_account : Module = {
     description: 'Passi ordinati per reagire a un account rubato, proteggere gli altri profili e comunicare il furto ai contatti.',
     category: 'THREAT',
     progress: 0,
+    tips: [
+        'Inizia sempre dall’account email: se quello è compromesso, può essere usato per resettare tutti gli altri.',
+        'Dopo aver recuperato l’accesso, esci da tutte le sessioni attive, cambia password e attiva la 2FA con app, non SMS.',
+        'Se hanno usato il tuo account per truffare amici o pubblicare contenuti, scusati pubblicamente e invita a non fidarsi di vecchi link.'
+    ],
+    resources: [
+        {
+            title: 'Google — Centro di recupero account',
+            url: 'https://accounts.google.com/signin/recovery',
+            description: 'Procedura ufficiale per recuperare un account Google compromesso, anche senza accesso al numero registrato.'
+        },
+        {
+            title: 'Apple — Account ID e sicurezza',
+            url: 'https://support.apple.com/it-it/HT204921',
+            description: 'Guida ufficiale Apple per recuperare un Apple ID e proteggere il dispositivo.'
+        },
+        {
+            title: 'Meta — Account compromesso (Facebook/Instagram)',
+            url: 'https://www.facebook.com/hacked',
+            description: 'Procedura ufficiale per riprendere il controllo di un account Facebook o Instagram rubato.'
+        },
+        {
+            title: 'Polizia Postale',
+            url: 'https://www.commissariatodips.it/',
+            description: 'Per furti d’identità con conseguenze economiche o reputazionali, denuncia il fatto online o in commissariato.'
+        }
+    ],
     lessons: [
         {
             id: '1',

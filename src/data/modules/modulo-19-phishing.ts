@@ -6,6 +6,33 @@ export const modulo_19_phishing : Module = {
     description: 'Impara a riconoscere link, SMS, email e chiamate costruite per rubare credenziali o soldi, usando controlli rapidi e ripetibili.',
     category: 'THREAT',
     progress: 0,
+    tips: [
+        'Banche, Poste, Agenzia delle Entrate e SPID non chiedono mai password o codici via SMS, email o telefono.',
+        'Prima di cliccare un link sospetto, apri tu stesso/a il sito ufficiale dal browser e fai login da lì.',
+        'Se hai inserito credenziali su un sito sospetto: cambia subito la password, attiva 2FA e controlla movimenti recenti.'
+    ],
+    resources: [
+        {
+            title: 'Polizia Postale — Frodi informatiche',
+            url: 'https://www.commissariatodips.it/',
+            description: 'Per denunciare phishing che ha già causato un danno economico o un furto di credenziali.'
+        },
+        {
+            title: 'CERT-AGID — Bollettino settimanale',
+            url: 'https://cert-agid.gov.it/',
+            description: 'Pubblica gli alert ufficiali sulle campagne di phishing più diffuse in Italia, in italiano.'
+        },
+        {
+            title: 'ABI — Educazione finanziaria e truffe online',
+            url: 'https://www.abi.it/',
+            description: 'Linee guida dell’Associazione Bancaria Italiana su come riconoscere e segnalare phishing bancario.'
+        },
+        {
+            title: 'Have I Been Pwned',
+            url: 'https://haveibeenpwned.com/',
+            description: 'Verifica gratuita se la tua email è coinvolta in fughe di dati pubbliche e cambia tempestivamente le password.'
+        }
+    ],
     lessons: [
         {
             id: '1',

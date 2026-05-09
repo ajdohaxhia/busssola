@@ -6,6 +6,33 @@ export const modulo_17_stalking : Module = {
     description: 'Una guida per individuare controllo digitale, persecuzione online e diffusione di dati personali, con passi pratici di protezione.',
     category: 'THREAT',
     progress: 0,
+    tips: [
+        'Lo stalking digitale è reato (art. 612-bis c.p.): non minimizzare reiterate intrusioni, controlli o minacce online.',
+        'Conserva un “diario” di episodi con data, ora, link e screenshot: è la base per qualsiasi denuncia.',
+        'Cambia password e disattiva sessioni attive su account sospetti. Controlla anche dispositivi familiari condivisi.'
+    ],
+    resources: [
+        {
+            title: '1522 — Anti-violenza e Stalking',
+            url: 'https://www.1522.eu/',
+            description: 'Numero gratuito attivo 24/7 anche per stalking digitale e doxxing, anonimo e multilingua.'
+        },
+        {
+            title: 'Polizia Postale',
+            url: 'https://www.commissariatodips.it/',
+            description: 'Denuncia stalking, doxxing e diffusione di dati personali attraverso il portale ufficiale.'
+        },
+        {
+            title: 'Garante Privacy — Diffusione dati personali',
+            url: 'https://www.garanteprivacy.it/',
+            description: 'Per violazioni della privacy (doxxing, pubblicazione di indirizzi/foto) puoi presentare reclamo al Garante.'
+        },
+        {
+            title: 'Telefono Rosa',
+            url: 'https://www.telefonorosa.it/',
+            description: 'Sportello dedicato a vittime di stalking e violenza, con consulenza legale e psicologica gratuita.'
+        }
+    ],
     lessons: [
         {
             id: '1',
