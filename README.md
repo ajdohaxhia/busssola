@@ -1,5 +1,11 @@
 # 🧭 Busssola
 
+> 🚧 **WIP — Lavori in corso / Work in Progress**
+>
+> 🇮🇹 Il progetto è ancora in fase di sviluppo: l'infrastruttura è pronta, ma una parte dei contenuti delle lezioni è in revisione e completamento. Non considerarlo "Production Ready" finché questo banner è qui.
+>
+> 🇬🇧 The project is still under development: the infrastructure is ready, but a portion of the lesson content is being reviewed and completed. Do not treat it as "Production Ready" while this banner is here.
+
 **La piattaforma numero uno per l'educazione digitale consapevole in Italia.**
 
 Busssola è una piattaforma educativa moderna e autorevole progettata per aiutare ragazzi, famiglie e scuole a navigare i rischi del web con competenza e serenità. Nata per trasformare la paura in consapevolezza, Busssola offre risposte pratiche, strumenti di protezione e protocolli di emergenza per le sfide digitali di oggi.
@@ -91,6 +97,6 @@ Busssola include un **Centro SOS** situazionale progettato per offrire aiuto imm
 Questo progetto è rilasciato sotto licenza MIT.
 © 2026 Busssola - Educazione Digitale.
 
-*Ultimo aggiornamento: 7 Maggio 2026*
-*Status: Production Ready* ✅
-*Versione: 5.0 (Lancio Editoriale)*
+*Ultimo aggiornamento: 9 Maggio 2026*
+*Status: WIP — Work in Progress* 🚧
+*Versione: 5.0-wip (Lancio Editoriale — contenuti in revisione)*
