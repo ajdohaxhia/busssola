@@ -5,7 +5,6 @@ export const modulo_10_gaming : Module = {
     title: 'Modulo 10: Gaming online e community',
     description: 'Una guida per vivere gaming, chat vocali, acquisti e community online senza sottovalutare privacy, truffe e comportamenti tossici.',
     category: 'SKILL',
-    coverImage: '/images/modules/skill.webp',
     progress: 0,
     lessons: [
         {
@@ -45,41 +44,6 @@ Scrivi in una frase cosa significa per te gaming online e community e quale dubb
         },
         {
             id: '2',
-            title: 'Parole chiave di gaming online e community',
-            minutes: 5,
-            difficulty: 'base',
-            audienceTag: 'ragazzi',
-            moduleTag: 'Gaming online e community',
-            learningGoals: [
-                'Comprendere il punto chiave di gaming online e community senza allarmismi.',
-                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
-                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
-            ],
-            contentMarkdown: `### Perché conta
-Questa lezione mette a fuoco gaming online e community con parole semplici e senza allarmismi. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
-
-### Segnali da riconoscere
-- Quali termini ricorrono più spesso.
-- Quali situazioni sono davvero rilevanti.
-- Quando una parola vaga nasconde un rischio concreto.
-
-### Cosa fare
-- **Dai un nome preciso al problema.**
-- **Separalo da casi simili ma meno urgenti.**
-- **Annota la domanda che vuoi chiarire prima di agire.**
-
-### Cosa evitare
-- Non usare etichette generiche come “mi hanno hackerato” se puoi descrivere meglio cosa è successo.
-- Non minimizzare solo perché la situazione avviene online.
-
-### Quando chiedere aiuto
-Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
-
-### Passo pratico
-Scrivi in una frase cosa significa per te gaming online e community e quale dubbio vuoi chiarire per primo.`
-        },
-        {
-            id: '3',
             title: 'Errori comuni in gaming online e community',
             minutes: 5,
             difficulty: 'base',
@@ -114,7 +78,7 @@ Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, 
 Scegli un errore che rischieresti di fare sotto stress e scrivi l’azione alternativa.`
         },
         {
-            id: '4',
+            id: '3',
             title: 'Primo check pratico su gaming online e community',
             minutes: 5,
             difficulty: 'base',
@@ -149,7 +113,7 @@ Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, 
 Fai una lista in tre righe: cosa è successo, chi è coinvolto, qual è il prossimo passo sicuro.`
         },
         {
-            id: '5',
+            id: '4',
             title: 'Impostazioni di base',
             minutes: 5,
             difficulty: 'base',
@@ -184,7 +148,7 @@ Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, 
 Apri l’app più legata a gaming online e community e controlla una sola impostazione di privacy oggi.`
         },
         {
-            id: '6',
+            id: '5',
             title: 'Abitudini quotidiane utili',
             minutes: 5,
             difficulty: 'base',
@@ -219,7 +183,7 @@ Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, 
 Applica oggi un controllo concreto legato a gaming online e community e annota cosa hai cambiato.`
         },
         {
-            id: '7',
+            id: '6',
             title: 'Segnali di rischio da non ignorare',
             minutes: 5,
             difficulty: 'base',
@@ -254,112 +218,7 @@ Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, 
 Scegli tre segnali che per te indicano un limite superato in tema gaming online e community.`
         },
         {
-            id: '8',
-            title: 'Caso guidato: situazione semplice',
-            minutes: 5,
-            difficulty: 'intermedia',
-            audienceTag: 'ragazzi',
-            moduleTag: 'Gaming online e community',
-            learningGoals: [
-                'Comprendere il punto chiave di gaming online e community senza allarmismi.',
-                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
-                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
-            ],
-            contentMarkdown: `### Perché conta
-Questa lezione collega gaming online e community a decisioni concrete che puoi prendere nella vita quotidiana. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
-
-### Segnali da riconoscere
-- Cosa ti viene chiesto di fare.
-- Quali dati, account o persone sono coinvolti.
-- Se senti pressione, vergogna o urgenza artificiale.
-
-### Cosa fare
-- **Rallenta prima di cliccare o rispondere.**
-- **Controlla la fonte o le impostazioni ufficiali.**
-- **Chiedi aiuto quando il problema supera le tue competenze o la tua serenità.**
-
-### Cosa evitare
-- Non agire solo per ansia.
-- Non condividere dati, codici o immagini private senza pensarci.
-
-### Quando chiedere aiuto
-Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
-
-### Passo pratico
-Applica oggi un controllo concreto legato a gaming online e community e annota cosa hai cambiato.`
-        },
-        {
-            id: '9',
-            title: 'Caso guidato: situazione complessa',
-            minutes: 5,
-            difficulty: 'intermedia',
-            audienceTag: 'ragazzi',
-            moduleTag: 'Gaming online e community',
-            learningGoals: [
-                'Comprendere il punto chiave di gaming online e community senza allarmismi.',
-                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
-                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
-            ],
-            contentMarkdown: `### Perché conta
-Questa lezione collega gaming online e community a decisioni concrete che puoi prendere nella vita quotidiana. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
-
-### Segnali da riconoscere
-- Cosa ti viene chiesto di fare.
-- Quali dati, account o persone sono coinvolti.
-- Se senti pressione, vergogna o urgenza artificiale.
-
-### Cosa fare
-- **Rallenta prima di cliccare o rispondere.**
-- **Controlla la fonte o le impostazioni ufficiali.**
-- **Chiedi aiuto quando il problema supera le tue competenze o la tua serenità.**
-
-### Cosa evitare
-- Non agire solo per ansia.
-- Non condividere dati, codici o immagini private senza pensarci.
-
-### Quando chiedere aiuto
-Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
-
-### Passo pratico
-Applica oggi un controllo concreto legato a gaming online e community e annota cosa hai cambiato.`
-        },
-        {
-            id: '10',
-            title: 'Cosa fare subito quando qualcosa non torna',
-            minutes: 5,
-            difficulty: 'intermedia',
-            audienceTag: 'ragazzi',
-            moduleTag: 'Gaming online e community',
-            learningGoals: [
-                'Mettere in ordine le priorità nei primi minuti.',
-                'Proteggere account, prove e persone coinvolte.',
-                'Scegliere il canale di aiuto più adatto alla gravità.'
-            ],
-            contentMarkdown: `### Perché conta
-In una situazione legata a gaming online e community, l’ordine delle azioni conta più della quantità di cose fatte. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
-
-### Segnali da riconoscere
-- Cosa è urgente e cosa può aspettare.
-- Quali account, persone o dati sono coinvolti.
-- Se c’è un rischio fisico, economico o emotivo immediato.
-
-### Cosa fare
-- **Metti al sicuro te stesso/a e il dispositivo principale.**
-- **Salva prove essenziali:** chat, URL, profili, date e orari.
-- **Blocca, segnala o contatta i canali appropriati in base alla gravità.**
-
-### Cosa evitare
-- Non agire su dieci fronti insieme.
-- Non fidarti di link di recupero ricevuti da sconosciuti o da messaggi sospetti.
-
-### Quando chiedere aiuto
-Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
-
-### Passo pratico
-Fai una lista in tre righe: cosa è successo, chi è coinvolto, qual è il prossimo passo sicuro.`
-        },
-        {
-            id: '11',
+            id: '7',
             title: 'Cosa evitare per non peggiorare',
             minutes: 5,
             difficulty: 'intermedia',
@@ -394,77 +253,7 @@ Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, 
 Se la situazione è peggiorata nelle ultime 24 ore, scegli ora una persona o un canale ufficiale da contattare.`
         },
         {
-            id: '12',
-            title: 'Strumenti utili',
-            minutes: 5,
-            difficulty: 'intermedia',
-            audienceTag: 'ragazzi',
-            moduleTag: 'Gaming online e community',
-            learningGoals: [
-                'Comprendere il punto chiave di gaming online e community senza allarmismi.',
-                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
-                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
-            ],
-            contentMarkdown: `### Perché conta
-Questa lezione collega gaming online e community a decisioni concrete che puoi prendere nella vita quotidiana. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
-
-### Segnali da riconoscere
-- Cosa ti viene chiesto di fare.
-- Quali dati, account o persone sono coinvolti.
-- Se senti pressione, vergogna o urgenza artificiale.
-
-### Cosa fare
-- **Rallenta prima di cliccare o rispondere.**
-- **Controlla la fonte o le impostazioni ufficiali.**
-- **Chiedi aiuto quando il problema supera le tue competenze o la tua serenità.**
-
-### Cosa evitare
-- Non agire solo per ansia.
-- Non condividere dati, codici o immagini private senza pensarci.
-
-### Quando chiedere aiuto
-Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
-
-### Passo pratico
-Applica oggi un controllo concreto legato a gaming online e community e annota cosa hai cambiato.`
-        },
-        {
-            id: '13',
-            title: 'Come chiedere aiuto',
-            minutes: 5,
-            difficulty: 'intermedia',
-            audienceTag: 'ragazzi',
-            moduleTag: 'Gaming online e community',
-            learningGoals: [
-                'Comprendere il punto chiave di gaming online e community senza allarmismi.',
-                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
-                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
-            ],
-            contentMarkdown: `### Perché conta
-Questa lezione collega gaming online e community a decisioni concrete che puoi prendere nella vita quotidiana. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
-
-### Segnali da riconoscere
-- Cosa ti viene chiesto di fare.
-- Quali dati, account o persone sono coinvolti.
-- Se senti pressione, vergogna o urgenza artificiale.
-
-### Cosa fare
-- **Rallenta prima di cliccare o rispondere.**
-- **Controlla la fonte o le impostazioni ufficiali.**
-- **Chiedi aiuto quando il problema supera le tue competenze o la tua serenità.**
-
-### Cosa evitare
-- Non agire solo per ansia.
-- Non condividere dati, codici o immagini private senza pensarci.
-
-### Quando chiedere aiuto
-Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
-
-### Passo pratico
-Applica oggi un controllo concreto legato a gaming online e community e annota cosa hai cambiato.`
-        },
-        {
-            id: '14',
+            id: '8',
             title: 'gaming online e community in famiglia, a scuola o in gruppo',
             minutes: 5,
             difficulty: 'intermedia',
@@ -499,183 +288,8 @@ Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, 
 Prepara tre frasi calme: cosa sappiamo, cosa non sappiamo, cosa facciamo ora.`
         },
         {
-            id: '15',
-            title: 'gaming online e community su app e piattaforme',
-            minutes: 5,
-            difficulty: 'intermedia',
-            audienceTag: 'ragazzi',
-            moduleTag: 'Gaming online e community',
-            learningGoals: [
-                'Comprendere il punto chiave di gaming online e community senza allarmismi.',
-                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
-                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
-            ],
-            contentMarkdown: `### Perché conta
-Le impostazioni delle piattaforme possono ridurre molto il rischio, se sai dove guardare. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
-
-### Segnali da riconoscere
-- Permessi troppo ampi.
-- Profilo pubblico quando non serve.
-- Messaggi privati, tag o commenti aperti a tutti.
-
-### Cosa fare
-- **Controlla privacy, sicurezza e notifiche.**
-- **Attiva verifica in due passaggi dove possibile.**
-- **Limita chi può contattarti, taggarti o vedere informazioni sensibili.**
-
-### Cosa evitare
-- Non lasciare impostazioni predefinite solo per comodità.
-- Non condividere codici o link di accesso in chat.
-
-### Quando chiedere aiuto
-Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
-
-### Passo pratico
-Apri l’app più legata a gaming online e community e controlla una sola impostazione di privacy oggi.`
-        },
-        {
-            id: '16',
-            title: 'Mini piano personale',
-            minutes: 5,
-            difficulty: 'avanzata',
-            audienceTag: 'ragazzi',
-            moduleTag: 'Gaming online e community',
-            learningGoals: [
-                'Comprendere il punto chiave di gaming online e community senza allarmismi.',
-                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
-                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
-            ],
-            contentMarkdown: `### Perché conta
-Questa lezione collega gaming online e community a decisioni concrete che puoi prendere nella vita quotidiana. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
-
-### Segnali da riconoscere
-- Cosa ti viene chiesto di fare.
-- Quali dati, account o persone sono coinvolti.
-- Se senti pressione, vergogna o urgenza artificiale.
-
-### Cosa fare
-- **Rallenta prima di cliccare o rispondere.**
-- **Controlla la fonte o le impostazioni ufficiali.**
-- **Chiedi aiuto quando il problema supera le tue competenze o la tua serenità.**
-
-### Cosa evitare
-- Non agire solo per ansia.
-- Non condividere dati, codici o immagini private senza pensarci.
-
-### Quando chiedere aiuto
-Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
-
-### Passo pratico
-Applica oggi un controllo concreto legato a gaming online e community e annota cosa hai cambiato.`
-        },
-        {
-            id: '17',
-            title: 'Checklist essenziale',
-            minutes: 5,
-            difficulty: 'avanzata',
-            audienceTag: 'ragazzi',
-            moduleTag: 'Gaming online e community',
-            learningGoals: [
-                'Comprendere il punto chiave di gaming online e community senza allarmismi.',
-                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
-                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
-            ],
-            contentMarkdown: `### Perché conta
-Questa lezione collega gaming online e community a decisioni concrete che puoi prendere nella vita quotidiana. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
-
-### Segnali da riconoscere
-- Cosa ti viene chiesto di fare.
-- Quali dati, account o persone sono coinvolti.
-- Se senti pressione, vergogna o urgenza artificiale.
-
-### Cosa fare
-- **Rallenta prima di cliccare o rispondere.**
-- **Controlla la fonte o le impostazioni ufficiali.**
-- **Chiedi aiuto quando il problema supera le tue competenze o la tua serenità.**
-
-### Cosa evitare
-- Non agire solo per ansia.
-- Non condividere dati, codici o immagini private senza pensarci.
-
-### Quando chiedere aiuto
-Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
-
-### Passo pratico
-Applica oggi un controllo concreto legato a gaming online e community e annota cosa hai cambiato.`
-        },
-        {
-            id: '18',
+            id: '9',
             title: 'Esercizio pratico',
-            minutes: 5,
-            difficulty: 'avanzata',
-            audienceTag: 'ragazzi',
-            moduleTag: 'Gaming online e community',
-            learningGoals: [
-                'Comprendere il punto chiave di gaming online e community senza allarmismi.',
-                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
-                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
-            ],
-            contentMarkdown: `### Perché conta
-Il ripasso serve a trasformare gaming online e community in abitudini, non in nozioni da dimenticare. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
-
-### Segnali da riconoscere
-- Quali punti ti sono più chiari.
-- Quali situazioni ti mettono ancora in difficoltà.
-- Quale abitudine puoi mantenere senza sforzo eccessivo.
-
-### Cosa fare
-- **Scegli un controllo da ripetere ogni mese.**
-- **Scrivi il tuo piano minimo di sicurezza.**
-- **Condividi una cosa utile con una persona che potrebbe beneficiarne.**
-
-### Cosa evitare
-- Non cercare la perfezione immediata.
-- Non rimandare tutto perché il tema sembra grande.
-
-### Quando chiedere aiuto
-Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
-
-### Passo pratico
-Scegli una sola azione da completare entro oggi e una da programmare entro una settimana.`
-        },
-        {
-            id: '19',
-            title: 'Quiz decisionale',
-            minutes: 5,
-            difficulty: 'avanzata',
-            audienceTag: 'ragazzi',
-            moduleTag: 'Gaming online e community',
-            learningGoals: [
-                'Comprendere il punto chiave di gaming online e community senza allarmismi.',
-                'Riconoscere segnali, pressioni e scelte da valutare con calma.',
-                'Applicare un’azione pratica e verificabile nella vita quotidiana.'
-            ],
-            contentMarkdown: `### Perché conta
-Questa lezione collega gaming online e community a decisioni concrete che puoi prendere nella vita quotidiana. La sicurezza digitale funziona meglio quando hai pochi passaggi chiari, ripetibili e realistici.
-
-### Segnali da riconoscere
-- Cosa ti viene chiesto di fare.
-- Quali dati, account o persone sono coinvolti.
-- Se senti pressione, vergogna o urgenza artificiale.
-
-### Cosa fare
-- **Rallenta prima di cliccare o rispondere.**
-- **Controlla la fonte o le impostazioni ufficiali.**
-- **Chiedi aiuto quando il problema supera le tue competenze o la tua serenità.**
-
-### Cosa evitare
-- Non agire solo per ansia.
-- Non condividere dati, codici o immagini private senza pensarci.
-
-### Quando chiedere aiuto
-Chiedi aiuto se sono coinvolti soldi, minacce, immagini intime, dati personali, account importanti o se la situazione ti impedisce di dormire, studiare, lavorare o sentirti al sicuro. In caso di pericolo immediato chiama il 112.
-
-### Passo pratico
-Applica oggi un controllo concreto legato a gaming online e community e annota cosa hai cambiato.`
-        },
-        {
-            id: '20',
-            title: 'Ripasso e passo successivo',
             minutes: 5,
             difficulty: 'avanzata',
             audienceTag: 'ragazzi',

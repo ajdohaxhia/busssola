@@ -10,8 +10,14 @@ export const CREATOR_PATH = '/adelajdo-haxhiaj'
 export const CREATOR_URL = `${SITE_URL}${CREATOR_PATH}`
 export const DEFAULT_OG_IMAGE = '/og-image.png'
 
+const TOTAL_LESSONS = ALL_MODULES.reduce((acc, module) => acc + module.lessons.length, 0)
+const LESSON_COUNT_LABEL = `oltre ${Math.max(50, Math.floor(TOTAL_LESSONS / 50) * 50)} lezioni`
+
 export const SITE_DESCRIPTION =
-    'Busssola è una piattaforma gratuita di educazione civica digitale per ragazzi, famiglie e scuole: 50 moduli e 1000 lezioni su sicurezza online, privacy, truffe, cyberbullismo, grooming e benessere digitale.'
+    `Busssola è una piattaforma gratuita di educazione civica digitale per ragazzi, famiglie e scuole: ${ALL_MODULES.length} moduli e ${LESSON_COUNT_LABEL} curate su sicurezza online, privacy, truffe, cyberbullismo, grooming e benessere digitale.`
+
+export const TOTAL_MODULES = ALL_MODULES.length
+export { TOTAL_LESSONS }
 
 const baseKeywords = [
     'Busssola',

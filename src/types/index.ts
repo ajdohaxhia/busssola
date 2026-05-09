@@ -50,7 +50,6 @@ export interface ModuleMetadata {
     themeColor?: string
     icon?: string
     category?: string
-    coverImage?: string
     progress?: number
     lessonCount: number
     featuredType?: 'start' | 'curated' | 'situational' | 'none'

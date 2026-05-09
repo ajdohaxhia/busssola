@@ -18,7 +18,7 @@ export default function ContactPage() {
                     Contattaci
                 </h1>
                 <p className="text-lg text-secondary leading-relaxed">
-                    Hai domande, suggerimenti o vuoi collaborare? Siamo qui per ascoltarti. Compila il form qui sotto o usa uno dei nostri canali diretti.
+                    Hai domande, suggerimenti o vuoi collaborare? Siamo qui per ascoltarti. Scegli il canale email più adatto qui sotto: rispondiamo personalmente.
                 </p>
             </motion.div>
 

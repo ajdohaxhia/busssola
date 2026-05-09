@@ -20,10 +20,10 @@ export default function HelpPage() {
                     <HelpCircle size={40} className="w-full h-full" />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-display font-semibold tracking-tight text-foreground leading-[1.1]">
-                    Domande Frequenti
+                    Centro Aiuto
                 </h1>
                 <p className="text-xl text-secondary max-w-2xl mx-auto font-medium">
-                    Tutto quello che c'è da sapere su come funziona la piattaforma Busssola, la tua privacy e le risorse educative.
+                    Come funziona la piattaforma Busssola, la tua privacy, l'uso dei moduli a casa o in classe.
                 </p>
                 <div className="pt-4">
                     <Link href="/sos" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#fef2f2] text-sos text-sm font-semibold tracking-wide border border-sos-border hover:bg-sos/10 transition-colors">

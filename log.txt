@@ -1,5 +1,0 @@
-a4f1561ea47fc4e379d6599bc93645a33690849d fix: remove incorrect publish dir and redirects to fix netlify build
-ad92f7fe77059f15c61271e28fa161d130714fa8 chore: update tsconfig and pwa assets
-752b186181374a20f962791bfc1d13f16165fd90 feat: massive content expansion - 100+ lessons and scenarios
-17108f14abbf2823dbc470062710ca457253dd31 style: refine light mode overrides for sidebar and text contrast
-3b3b7c3b26cf414cea4b1287b4279142474ae4a2 fix: implement functional dark/light mode toggle with theme persistence

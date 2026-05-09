@@ -18,16 +18,19 @@ const staticRoutes = [
     '/moduli',
     '/percorsi',
     '/privacy',
+    '/profilo',
     '/scuole',
     '/sos',
     '/termini',
     '/trasparenza',
 ]
 
+const lastModified = new Date()
+
 function entry(path: string, priority: number, changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency']) {
     return {
         url: `${baseUrl}${path}`,
-        lastModified: new Date('2026-05-07'),
+        lastModified,
         changeFrequency,
         priority,
     }

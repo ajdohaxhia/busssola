@@ -35,7 +35,7 @@ export function Hero() {
                 </p>
 
                 <p className="mt-6 max-w-2xl text-lg leading-relaxed text-secondary md:text-xl">
-                    50 moduli gratuiti per proteggere privacy, account e serenità online. Niente registrazione, niente tracciamento invasivo, un centro SOS sempre raggiungibile.
+                    50 moduli gratuiti, oltre 480 lezioni curate per proteggere privacy, account e serenità online. Niente registrazione, niente tracciamento invasivo, un centro SOS sempre raggiungibile.
                 </p>
                 
                 <div className="mt-10 flex w-full flex-col items-stretch gap-4 sm:w-auto sm:flex-row">
