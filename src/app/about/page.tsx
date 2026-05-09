@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Shield, Heart, Users, LineChart, Globe, Zap } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
+import Link from 'next/link'
 
 const values = [
     {
@@ -84,6 +85,12 @@ export default function AboutPage() {
                 </h1>
                 <p className="text-xl text-secondary leading-relaxed max-w-2xl mx-auto">
                     Busssola è una piattaforma di educazione civica digitale. Non vendiamo software di sicurezza, non tracciamo le tue abitudini e non usiamo il terrore per fare click. Offriamo solo indicazioni pratiche per comprendere la rete.
+                </p>
+                <p className="text-sm font-semibold text-secondary">
+                    Creato con ❤️ da{' '}
+                    <Link href="/adelajdo-haxhiaj" className="text-primary hover:underline">
+                        Adelajdo Haxhiaj
+                    </Link>.
                 </p>
             </motion.div>
 

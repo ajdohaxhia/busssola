@@ -7,6 +7,8 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { ArrowLeft, ArrowRight, Clock, Users, BookOpen, ShieldCheck } from 'lucide-react'
 import type { LearningPath, ModuleMetadata } from '@/types'
+import type { Metadata } from 'next'
+import { learningPathMetadata } from '@/lib/seo'
 
 function isModuleMetadata(module: ModuleMetadata | undefined): module is ModuleMetadata {
     return Boolean(module)
@@ -20,6 +22,15 @@ export function generateStaticParams() {
     return LEARNING_PATHS.map((path) => ({
         id: path.id,
     }))
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+    const { id } = await params
+
+    return learningPathMetadata(id) ?? {
+        title: 'Percorso non trovato',
+        robots: { index: false, follow: false },
+    }
 }
 
 export default async function PathDetailPage({ params }: { params: Promise<{ id: string }> }) {

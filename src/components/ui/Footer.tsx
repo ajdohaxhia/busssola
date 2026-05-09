@@ -101,7 +101,10 @@ export function Footer() {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-6">
                     <p className="text-sm text-muted">
-                        © {new Date().getFullYear()} Busssola. Creato con ❤️ da Adelajdo Haxhiaj.
+                        © {new Date().getFullYear()} Busssola. Creato con ❤️ da{' '}
+                        <Link href="/adelajdo-haxhiaj" className="font-semibold text-foreground hover:text-primary transition-colors">
+                            Adelajdo Haxhiaj
+                        </Link>.
                     </p>
 
                     <div className="flex items-center gap-6">

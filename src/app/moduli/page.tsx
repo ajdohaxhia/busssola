@@ -129,6 +129,10 @@ function ModulesContent() {
         if (filterStr && THEMES.some(t => t.id === filterStr)) {
             setSelectedTheme(filterStr)
         }
+        const queryStr = searchParams.get('query') || searchParams.get('q')
+        if (queryStr) {
+            setSearchQuery(queryStr)
+        }
     }, [searchParams])
 
     const filteredModules = useMemo(() => {

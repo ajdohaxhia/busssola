@@ -3,6 +3,16 @@ import { Inter, Outfit } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
 import { AppShell } from '@/components/layout/AppShell'
+import { JsonLd } from '@/components/seo/JsonLd'
+import {
+  buildSeoMetadata,
+  CREATOR_NAME,
+  DEFAULT_OG_IMAGE,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_URL,
+  siteStructuredData,
+} from '@/lib/seo'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -17,37 +27,25 @@ const outfit = Outfit({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://busssola.com'),
-  title: {
-    default: 'Busssola | Educazione civica per l\'era digitale',
-    template: '%s | Busssola'
-  },
-  description: 'Scopri come proteggere la tua identità, riconoscere i rischi online e navigare la rete con sicurezza. Guide pratiche, gratuite e sicure.',
-  keywords: ['sicurezza online', 'privacy', 'cyberbullismo', 'grooming', 'sextortion', 'educazione digitale', 'busssola'],
-  authors: [{ name: 'Team Busssola' }],
-  creator: 'Team Busssola',
-  openGraph: {
-    type: 'website',
-    locale: 'it_IT',
-    url: 'https://busssola.com',
-    title: 'Busssola | Educazione civica per l\'era digitale',
-    description: 'Piattaforma gratuita e senza tracciamento per imparare a proteggersi in rete.',
-    siteName: 'Busssola',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Busssola - Naviga il tuo apprendimento con sicurezza'
-      }
+  ...buildSeoMetadata({
+    title: 'Sicurezza online per ragazzi, famiglie e scuole',
+    description: SITE_DESCRIPTION,
+    path: '/',
+    keywords: [
+      'sicurezza internet ragazzi',
+      'guide sicurezza digitale',
+      'educazione digitale gratuita',
+      'creator Adelajdo Haxhiaj',
     ],
+  }),
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `${SITE_NAME} | Sicurezza online per ragazzi, famiglie e scuole`,
+    template: `%s | ${SITE_NAME}`
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Busssola | Educazione civica per l\'era digitale',
-    description: 'Piattaforma gratuita e senza tracciamento per imparare a proteggersi in rete.',
-    images: ['/og-image.png'],
-  },
+  authors: [{ name: CREATOR_NAME, url: `${SITE_URL}/adelajdo-haxhiaj` }],
+  creator: CREATOR_NAME,
+  publisher: SITE_NAME,
   icons: {
     icon: '/icon.png',
     apple: '/icon.png',
@@ -56,7 +54,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'Busssola'
+    title: SITE_NAME
   }
 }
 
@@ -76,6 +74,9 @@ export default function RootLayout({
       <head>
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="author" content={CREATOR_NAME} />
+        <meta name="image" content={`${SITE_URL}${DEFAULT_OG_IMAGE}`} />
+        <JsonLd data={siteStructuredData} />
       </head>
       <body className="bg-background text-foreground min-h-dvh flex flex-col font-sans antialiased">
         <AppShell>{children}</AppShell>
