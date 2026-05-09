@@ -101,7 +101,7 @@ export function Footer() {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-6">
                     <p className="text-sm text-muted">
-                        © {new Date().getFullYear()} Busssola. Un progetto educativo indipendente.
+                        © {new Date().getFullYear()} Busssola. Creato con ❤️ da Adelajdo Haxhiaj.
                     </p>
 
                     <div className="flex items-center gap-6">
