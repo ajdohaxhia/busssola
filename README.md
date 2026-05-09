@@ -22,8 +22,8 @@ Abbiamo superato l'approccio "cyber-hacking" del passato per adottare un'estetic
 
 ---
 
-## 📚 Il Curriculum MVP (50 Moduli)
-Busssola dispone di una libreria completa di **50 moduli** con oltre **1000 lezioni** generate per coprire ogni aspetto della vita digitale:
+## 📚 Il Curriculum (50 Moduli)
+Busssola dispone di una libreria completa di **50 moduli** con **oltre 480 lezioni curate e uniche** per coprire i temi essenziali della vita digitale:
 1.  **Privacy e Sicurezza**: Gestione account, password, 2FA, protezione smartphone.
 2.  **Rischi Relazionali**: Grooming, Sextortion, Cyberbullismo, Stalking online.
 3.  **Contenuti & Verità**: Fake News, Deepfake, Algoritmi, Bolle informative.

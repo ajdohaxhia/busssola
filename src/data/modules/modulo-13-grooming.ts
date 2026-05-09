@@ -6,6 +6,33 @@ export const modulo_13_grooming : Module = {
     description: 'Segnali, dinamiche e azioni concrete per riconoscere l’adescamento online e chiedere aiuto senza vergogna.',
     category: 'THREAT',
     progress: 0,
+    tips: [
+        'Un adulto sano non chiede mai segretezza, foto intime o incontri privati a un minorenne.',
+        'Non cancellare le chat: sono prove. Salva screenshot e poi blocca o segnala.',
+        'Parlarne con un adulto di fiducia non è "fare la spia": è proteggere te e altri.'
+    ],
+    resources: [
+        {
+            title: 'Emergenza Infanzia 114',
+            url: 'https://www.114.it/',
+            description: 'Numero gratuito, attivo 24 ore su 24, per minori in pericolo o adulti che vogliono segnalare un rischio.'
+        },
+        {
+            title: 'Polizia Postale — Commissariato di P.S. Online',
+            url: 'https://www.commissariatodips.it/',
+            description: 'Canale ufficiale per segnalazioni e denunce sui reati informatici, incluso l’adescamento di minori.'
+        },
+        {
+            title: 'Telefono Azzurro',
+            url: 'https://www.azzurro.it/',
+            description: 'Linea di ascolto e supporto per bambini, adolescenti e adulti di riferimento, con consulenti specializzati.'
+        },
+        {
+            title: 'Generazioni Connesse — Safer Internet Italy',
+            url: 'https://www.generazioniconnesse.it/',
+            description: 'Centro nazionale promosso dal MIM con guide, materiali per scuole e modulo di segnalazione.'
+        }
+    ],
     lessons: [
         {
             id: '1',

@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { motion, Variants } from 'framer-motion'
 import { getModuleById } from '@/data/modules/index'
 import { Module } from '@/types'
-import { ChevronLeft, Play, Search, BookOpen, Clock, ShieldAlert, Target, Users, CheckCircle, ArrowRight } from 'lucide-react'
+import { ChevronLeft, Play, Search, BookOpen, Clock, ShieldAlert, Target, Users, CheckCircle, ArrowRight, Lightbulb, ExternalLink, Library } from 'lucide-react'
 import { useGameStore } from '@/store/useGameStore'
 import { Container } from '@/components/ui/Container'
 import { useState } from 'react'
@@ -275,6 +275,78 @@ export default function ModuleDetail() {
                     )}
                 </motion.div>
             </motion.section>
+
+            {currentModule.tips && currentModule.tips.length > 0 && (
+                <motion.section
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="bg-blue-50 border border-blue-100 rounded-[2rem] p-6 md:p-10 space-y-6"
+                >
+                    <div className="flex items-center gap-3 text-blue-900">
+                        <div className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center">
+                            <Lightbulb className="w-5 h-5" />
+                        </div>
+                        <h2 className="text-xl md:text-2xl font-display font-semibold tracking-tight">
+                            Tre cose da ricordare
+                        </h2>
+                    </div>
+                    <ul className="space-y-3">
+                        {currentModule.tips.map((tip, i) => (
+                            <li key={i} className="flex items-start gap-3 text-blue-900/90 leading-relaxed">
+                                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
+                                <span>{tip}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </motion.section>
+            )}
+
+            {currentModule.resources && currentModule.resources.length > 0 && (
+                <motion.section
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="space-y-6"
+                >
+                    <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
+                            <Library className="w-5 h-5" />
+                        </div>
+                        <div className="space-y-1">
+                            <h2 className="text-xl md:text-2xl font-display font-semibold tracking-tight text-foreground">
+                                Risorse e fonti ufficiali
+                            </h2>
+                            <p className="text-sm text-secondary">
+                                Fonti italiane verificate per approfondire o chiedere aiuto.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {currentModule.resources.map((resource, i) => (
+                            <a
+                                key={i}
+                                href={resource.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group block p-5 rounded-2xl border border-border bg-surface hover:border-emerald-300 hover:shadow-sm transition-all"
+                            >
+                                <div className="flex items-start justify-between gap-3">
+                                    <h3 className="font-semibold text-foreground group-hover:text-emerald-700 transition-colors">
+                                        {resource.title}
+                                    </h3>
+                                    <ExternalLink className="w-4 h-4 text-secondary group-hover:text-emerald-700 shrink-0 mt-1 transition-colors" />
+                                </div>
+                                <p className="text-sm text-secondary mt-2 leading-relaxed">
+                                    {resource.description}
+                                </p>
+                            </a>
+                        ))}
+                    </div>
+                </motion.section>
+            )}
         </Container>
     )
 }
