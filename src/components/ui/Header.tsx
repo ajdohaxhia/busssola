@@ -31,7 +31,7 @@ export function Header() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
             className={cn(
-                'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+                'fixed top-9 left-0 right-0 z-50 transition-all duration-300',
                 isScrolled
                     ? 'bg-surface/80 backdrop-blur-md border-b border-border py-4 shadow-sm'
                     : 'bg-transparent py-6'

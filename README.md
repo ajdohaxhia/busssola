@@ -1,5 +1,11 @@
 # 🧭 Busssola
 
+> 🚧 **BOZZA — contenuti da riscrivere / Draft — lessons need rewriting**
+>
+> 🇮🇹 L'infrastruttura è pronta e l'UI funziona, ma le **lezioni dei 50 moduli sono ancora largamente templati ripetuti** (stessa scaletta "Perché conta / Segnali / Cosa fare / Cosa evitare / Quando chiedere aiuto / Passo pratico" applicata 480 volte cambiando solo il nome del tema). Non usare il sito come fonte autorevole. La riscrittura editoriale è il prossimo passo bloccante.
+>
+> 🇬🇧 The shell and UI are production-ready, but **the lessons across the 50 modules are still mostly templated copies** (the same skeleton applied 480× with only the topic name swapped). Do not treat this site as an authoritative source. Editorial rewriting is the next blocking step.
+
 **La piattaforma numero uno per l'educazione digitale consapevole in Italia.**
 
 Busssola è una piattaforma educativa moderna e autorevole progettata per aiutare ragazzi, famiglie e scuole a navigare i rischi del web con competenza e serenità. Nata per trasformare la paura in consapevolezza, Busssola offre risposte pratiche, strumenti di protezione e protocolli di emergenza per le sfide digitali di oggi.
@@ -91,6 +97,6 @@ Busssola include un **Centro SOS** situazionale progettato per offrire aiuto imm
 Questo progetto è rilasciato sotto licenza MIT.
 © 2026 Busssola - Educazione Digitale.
 
-*Ultimo aggiornamento: 9 Maggio 2026*
-*Status: Production Ready* ✅
-*Versione: 5.1 (Catalogo curato — 50 moduli, oltre 480 lezioni uniche)*
+*Ultimo aggiornamento: 10 Maggio 2026*
+*Status: BOZZA — contenuti da riscrivere* 🚧
+*Versione: 5.1-draft (guscio production-ready, lezioni ancora templati)*
