@@ -11,8 +11,8 @@ const navItems = [
     { href: '/', label: 'Home' },
     { href: '/percorsi', label: 'Percorsi' },
     { href: '/moduli', label: 'Catalogo' },
-    { href: '/about', label: 'Cos\'è Busssola' },
-    { href: '/profilo', label: 'Profilo' },
+    { href: '/checklist', label: 'Checklist' },
+    { href: '/glossario', label: 'Glossario' },
 ];
 
 export function Header() {

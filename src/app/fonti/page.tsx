@@ -3,31 +3,37 @@ import { Container } from '@/components/ui/Container'
 import { Card } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 import { siteStats } from '@/data/siteStats'
+import { ALL_MODULES } from '@/data/modules/index'
 import { ExternalLink, ShieldCheck, Globe, Building2 } from 'lucide-react'
 
-const organizations = [
-    { name: 'Polizia Postale', type: 'Istituzionale', description: 'Commissariato di PS Online per denunce e segnalazioni di reati informatici.', url: 'https://www.commissariatodips.it/' },
-    { name: 'Garante Privacy', type: 'Istituzionale', description: 'Autorità per la protezione dei dati personali e contrasto al revenge porn.', url: 'https://www.gpdp.it/' },
-    { name: 'ACN', type: 'Istituzionale', description: 'Agenzia per la Cybersicurezza Nazionale - Protezione infrastrutture critiche.', url: 'https://www.acn.gov.it/' },
-    { name: 'CERT-AgID', type: 'Istituzionale', description: 'Computer Emergency Response Team della Pubblica Amministrazione.', url: 'https://cert-agid.gov.it/' },
-    { name: 'Save the Children', type: 'Non-profit', description: 'Risorse per la protezione dei minori e contrasto al grooming.', url: 'https://www.savethechildren.it/' },
-    { name: 'Telefono Azzurro', type: 'Non-profit', description: 'Linea d\'aiuto 114 per emergenze che coinvolgono minori.', url: 'https://www.azzurro.it/' },
-    { name: 'StopNCII.org', type: 'Tecnologico', description: 'Strumento per prevenire la diffusione di immagini intime non consensuali.', url: 'https://stopncii.org/' },
-    { name: 'Apple Support', type: 'Piattaforma', description: 'Procedure ufficiali per smarrimento iPhone e sicurezza ID Apple.', url: 'https://support.apple.com/' },
-    { name: 'Google Safety', type: 'Piattaforma', description: 'Centro sicurezza per account Android, Gmail e navigazione sicura.', url: 'https://safety.google/' },
-    { name: 'Meta Safety', type: 'Piattaforma', description: 'Risorse per la sicurezza su Facebook, Instagram e WhatsApp.', url: 'https://about.meta.com/it/actions/safety/' },
-    { name: 'TikTok Safety', type: 'Piattaforma', description: 'Centro sicurezza e protocolli di recupero account TikTok.', url: 'https://www.tiktok.com/safety/' },
-    { name: 'Vinted Help', type: 'Piattaforma', description: 'Guide ufficiali per evitare truffe e phishing su marketplace.', url: 'https://www.vinted.it/help' },
-];
-
 export default function FontiPage() {
+    // Extract unique organizations from modules
+    const sources = ALL_MODULES.flatMap(m => m.lessons.flatMap(l => l.sources));
+    const uniqueOrgs = Array.from(new Set(sources.map(s => s.organization)));
+
+    const organizations = uniqueOrgs.map(orgName => {
+        const orgSources = sources.filter(s => s.organization === orgName);
+        const types = Array.from(new Set(orgSources.map(s => s.type)));
+        const lessonCount = ALL_MODULES.flatMap(m => m.lessons).filter(l => l.sources.some(s => s.organization === orgName)).length;
+        const categories = Array.from(new Set(ALL_MODULES.flatMap(m => m.lessons).filter(l => l.sources.some(s => s.organization === orgName)).map(l => l.category)));
+        
+        return {
+            name: orgName,
+            type: types[0], // Use first type found
+            lessonCount,
+            categories,
+            url: orgSources[0].url,
+            lastChecked: orgSources.map(s => s.lastCheckedAt).sort().reverse()[0]
+        };
+    }).sort((a, b) => b.lessonCount - a.lessonCount);
+
     return (
         <Container size="lg" className="py-16 space-y-12">
             <header className="space-y-4 max-w-2xl">
                 <Badge variant="outline" className="bg-primary/5 text-primary border-primary/20">Qualità Verificata</Badge>
                 <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground tracking-tight">Le nostre Fonti</h1>
                 <p className="text-xl text-secondary leading-relaxed">
-                    Bussola non scrive contenuti "a memoria". Ogni lezione è basata su fonti istituzionali, portali ufficiali di supporto o organizzazioni certificate.
+                    Busssola non scrive contenuti "a memoria". Ogni lezione è basata su fonti istituzionali, portali ufficiali di supporto o organizzazioni certificate.
                 </p>
             </header>
 
@@ -37,24 +43,30 @@ export default function FontiPage() {
                         <div className="space-y-4">
                             <div className="flex items-center justify-between">
                                 <div className="p-2 rounded-lg bg-background border border-border">
-                                    {org.type === 'Istituzionale' ? <Building2 className="w-5 h-5 text-indigo-600" /> : <Globe className="w-5 h-5 text-emerald-600" />}
+                                    {org.type === 'official' || org.type === 'institutional' ? <Building2 className="w-5 h-5 text-indigo-600" /> : <Globe className="w-5 h-5 text-emerald-600" />}
                                 </div>
-                                <Badge variant="secondary" className="text-[10px] uppercase tracking-wider">{org.type}</Badge>
+                                <div className="flex flex-wrap gap-1 justify-end">
+                                    <Badge variant="secondary" className="text-[10px] uppercase tracking-wider">{org.type}</Badge>
+                                    <Badge variant="outline" className="text-[10px] uppercase tracking-wider">{org.lessonCount} lezioni</Badge>
+                                </div>
                             </div>
                             <div className="space-y-2">
                                 <h3 className="text-lg font-bold text-foreground">{org.name}</h3>
-                                <p className="text-sm text-secondary leading-relaxed">{org.description}</p>
+                                <p className="text-xs text-muted-foreground">
+                                    Categorie: {org.categories.join(', ')}
+                                </p>
                             </div>
                         </div>
-                        <div className="pt-6">
+                        <div className="pt-6 flex items-center justify-between">
                             <a 
                                 href={org.url} 
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center text-sm font-medium text-primary hover:underline group"
                             >
-                                Visita sito ufficiale <ExternalLink className="w-4 h-4 ml-1.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                Visita fonte <ExternalLink className="w-4 h-4 ml-1.5 opacity-0 group-hover:opacity-100 transition-opacity" />
                             </a>
+                            <span className="text-[10px] text-muted-foreground">Verifica: {org.lastChecked}</span>
                         </div>
                     </Card>
                 ))}
@@ -66,7 +78,7 @@ export default function FontiPage() {
                     <h2 className="text-2xl font-bold font-display">Quality Gate</h2>
                 </div>
                 <p className="text-secondary leading-relaxed">
-                    Tutte le <strong>{siteStats.publishedLessons} lezioni</strong> pubblicate su Bussola seguono un rigoroso processo di verifica:
+                    Tutte le <strong>{siteStats.publishedLessons} lezioni</strong> pubblicate su Busssola seguono un rigoroso processo di verifica:
                 </p>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-secondary">
                     <li className="flex items-start gap-2">

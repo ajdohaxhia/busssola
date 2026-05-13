@@ -1,6 +1,6 @@
 /**
  * AUTO-GENERATED FILE - DO NOT EDIT MANUALLY
- * Generated on: 2026-05-13T17:06:49.814Z
+ * Generated on: 2026-05-13T17:27:42.858Z
  */
 export const siteStats = {
   "totalModules": 16,
@@ -9,7 +9,7 @@ export const siteStats = {
   "draftLessons": 0,
   "needsSourcesLessons": 0,
   "needsReviewLessons": 0,
-  "learningPaths": 5,
+  "learningPaths": 6,
   "categories": 8,
   "totalSources": 74,
   "uniqueOrganizations": 35,

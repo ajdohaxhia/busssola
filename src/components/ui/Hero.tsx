@@ -28,7 +28,7 @@ export function Hero() {
                 className="relative z-10 flex min-h-[480px] max-w-3xl flex-col items-start justify-center px-6 py-12 text-left md:min-h-[60vh] md:px-16 md:py-20"
             >
                 <h1 className="text-5xl font-display font-semibold leading-[0.98] tracking-tight text-foreground md:text-7xl">
-                    Bussola
+                    Busssola
                 </h1>
                 
                 <p className="mt-5 max-w-2xl text-2xl font-display font-semibold leading-tight text-foreground md:text-4xl">

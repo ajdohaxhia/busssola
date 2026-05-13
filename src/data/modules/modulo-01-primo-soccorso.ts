@@ -503,7 +503,8 @@ export const modulo_01_primo_soccorso: Module = {
                 'Se rientri, vai in "Sicurezza > I tuoi dispositivi" e rimuovi quelli sospetti.'
             ],
             dontDo: [
-                'Non rispondere a messaggi che chiedono il tuo codice 2FA "per aiutarti": è l\'hacker che cerca di bloccarti fuori per sempre.'
+                'Non rispondere a messaggi che chiedono il tuo codice 2FA "per aiutarti": è l\'hacker che cerca di bloccarti fuori per sempre.',
+                'Non cancellare l\'account: se lo cancelli perdi la possibilità di dimostrare che era tuo ai fini del recupero.'
             ],
             preserveEvidence: [
                 'Screenshot dei video caricati abusivamente e del profilo modificato.'

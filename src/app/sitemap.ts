@@ -4,7 +4,7 @@ import { LEARNING_PATHS } from '@/data/paths'
 
 export const dynamic = 'force-static'
 
-const baseUrl = 'https://bussola.edu.it'
+const baseUrl = 'https://busssola.com'
 
 const staticRoutes = [
     '',

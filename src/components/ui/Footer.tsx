@@ -22,7 +22,7 @@ export function Footer() {
                         <Link href="/" className="flex items-center gap-3 w-fit text-foreground group">
                             <Compass className="w-8 h-8 text-primary group-hover:text-primary-hover transition-colors" strokeWidth={2} />
                             <span className="text-2xl font-display font-semibold tracking-tight">
-                                Bussola.
+                                Busssola.
                             </span>
                         </Link>
                         <p className="text-muted text-base leading-relaxed max-w-sm">
@@ -34,7 +34,7 @@ export function Footer() {
                                 <span>Supporto e strumenti pratici</span>
                             </div>
                             <div className="flex items-center gap-2 text-xs text-muted-foreground uppercase tracking-widest font-bold">
-                                <span>Stato: {siteStats.projectStage}</span>
+                                <span>Stato: Core v1</span>
                                 <span className="w-1 h-1 bg-border rounded-full" />
                                 <span>Aggiornato: {siteStats.lastUpdatedAt}</span>
                             </div>
@@ -48,9 +48,10 @@ export function Footer() {
                             <ul className="space-y-3">
                                 {[
                                     { label: 'Home', href: '/' },
-                                    { label: 'Tutti i Moduli', href: '/moduli' },
-                                    { label: 'Cos\'è Bussola', href: '/about' },
-                                    { label: 'Per le scuole', href: '/scuole' }
+                                    { label: 'Percorsi', href: '/percorsi' },
+                                    { label: 'Catalogo Moduli', href: '/moduli' },
+                                    { label: 'Checklist', href: '/checklist' },
+                                    { label: 'Glossario', href: '/glossario' }
                                 ].map((item) => (
                                     <li key={item.label}>
                                         <Link
@@ -67,9 +68,10 @@ export function Footer() {
                             <h4 className="text-sm font-semibold text-foreground">Aiuto</h4>
                             <ul className="space-y-3">
                                 {[
-                                    { label: 'Centro SOS', href: '/sos' },
-                                    { label: 'Fonti', href: '/fonti' },
-                                    { label: 'FAQ', href: '/faq' }
+                                    { label: 'Area SOS', href: '/sos' },
+                                    { label: 'Le nostre Fonti', href: '/fonti' },
+                                    { label: 'FAQ', href: '/faq' },
+                                    { label: 'Per le scuole', href: '/scuole' }
                                 ].map((item) => (
                                     <li key={item.label}>
                                         <Link
@@ -88,7 +90,8 @@ export function Footer() {
                                 {[
                                     { label: 'Privacy Policy', href: '/privacy' },
                                     { label: 'Termini d\'Uso', href: '/termini' },
-                                    { label: 'Metodo Editoriale', href: '/metodo-editoriale' }
+                                    { label: 'Metodo Editoriale', href: '/metodo-editoriale' },
+                                    { label: 'Trasparenza', href: '/trasparenza' }
                                 ].map((item) => (
                                     <li key={item.label}>
                                         <Link
@@ -108,14 +111,14 @@ export function Footer() {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-6">
                     <div className="text-sm text-muted">
-                        <p>© {new Date().getFullYear()} Bussola. Creato con ❤️ per l'educazione digitale.</p>
-                        <p className="mt-1 text-xs opacity-70">Le informazioni fornite non sostituiscono supporto legale o psicologico.</p>
+                        <p>© {new Date().getFullYear()} Busssola. Creato per l'educazione digitale.</p>
+                        <p className="mt-1 text-xs opacity-70">Le informazioni fornite non sostituiscono supporto legale o psicologico. In caso di emergenza chiama il 112.</p>
                     </div>
 
                     <div className="flex items-center gap-6">
-                        <Link href="/trasparenza" className="text-sm text-muted hover:text-foreground transition-colors">Trasparenza</Link>
                         <Link href="/accessibilita" className="text-sm text-muted hover:text-foreground transition-colors">Accessibilità</Link>
-                        <Link href="/about" className="text-sm text-muted hover:text-foreground transition-colors">Il Progetto</Link>
+                        <Link href="/about" className="text-sm text-muted hover:text-foreground transition-colors">Cos'è Busssola</Link>
+                        <a href="mailto:info@busssola.com" className="text-sm text-muted hover:text-foreground transition-colors">Contatti</a>
                     </div>
                 </div>
             </div>

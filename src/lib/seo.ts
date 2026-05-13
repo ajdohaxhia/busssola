@@ -3,8 +3,8 @@ import { ALL_MODULES } from '@/data/modules/index'
 import { LEARNING_PATHS } from '@/data/paths'
 import type { Lesson, Module } from '@/types'
 
-export const SITE_URL = 'https://bussola.edu.it'
-export const SITE_NAME = 'Bussola'
+export const SITE_URL = 'https://busssola.com'
+export const SITE_NAME = 'Busssola'
 export const CREATOR_NAME = 'Adelajdo Haxhiaj'
 export const CREATOR_PATH = '/adelajdo-haxhiaj'
 export const CREATOR_URL = `${SITE_URL}${CREATOR_PATH}`
@@ -14,14 +14,14 @@ const TOTAL_LESSONS = ALL_MODULES.reduce((acc, module) => acc + module.lessons.l
 const LESSON_COUNT_LABEL = `${TOTAL_LESSONS} lezioni`
 
 export const SITE_DESCRIPTION =
-    `Bussola è una piattaforma gratuita di educazione civica digitale per ragazzi, famiglie e scuole: ${ALL_MODULES.length} moduli e ${LESSON_COUNT_LABEL} verificate su sicurezza online, privacy, truffe, cyberbullismo e benessere digitale.`
+    `Busssola è una piattaforma gratuita di educazione civica digitale per ragazzi, famiglie e scuole: ${ALL_MODULES.length} moduli e ${LESSON_COUNT_LABEL} verificate su sicurezza online, privacy, truffe, cyberbullismo e benessere digitale.`
 
 export const TOTAL_MODULES = ALL_MODULES.length
 export { TOTAL_LESSONS }
 
 const baseKeywords = [
-    'Bussola',
-    'bussola.edu.it',
+    'Busssola',
+    'busssola.com',
     'sicurezza online',
     'educazione digitale',
     'educazione civica digitale',
@@ -36,7 +36,7 @@ const baseKeywords = [
     'sicurezza digitale famiglie',
     'cittadinanza digitale scuole',
     CREATOR_NAME,
-    'Adelajdo Haxhiaj Bussola',
+    'Adelajdo Haxhiaj Busssola',
 ]
 
 type SeoMetadataOptions = {
@@ -56,7 +56,7 @@ export function absoluteUrl(path = '/') {
 }
 
 export function stripModulePrefix(title: string) {
-    return title.replace(/Modulo \d+:\s*/i, '')
+    return title.replace(/Modulo \d+[b]?:\s*/i, '')
 }
 
 function uniqueKeywords(keywords: string[]) {

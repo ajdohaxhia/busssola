@@ -5,10 +5,11 @@ import Link from 'next/link'
 import { 
   ArrowRight, ShieldCheck, User, Users, GraduationCap, 
   Lock, Heart, ShieldAlert, MonitorSmartphone, Target, 
-  Search, BookOpen, Clock
+  Search, BookOpen, Clock, Smartphone
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { siteStats } from '@/data/siteStats'
+import { LEARNING_PATHS } from '@/data/paths'
 
 export default function Home() {
   return (
@@ -29,33 +30,49 @@ export default function Home() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-            { id: 'inizia-da-qui', title: 'Inizia da qui', icon: ShieldCheck, color: 'text-primary', bg: 'bg-primary/10', border: 'hover:border-primary/50', desc: 'I passi fondamentali per costruire una base solida di sicurezza digitale.' },
-            { id: 'proteggi-account', title: 'Proteggi i tuoi account', icon: Lock, color: 'text-indigo-600', bg: 'bg-indigo-50', border: 'hover:border-indigo-500/50', desc: 'Un percorso tecnico ma accessibile per blindare i tuoi profili social ed email.' },
-            { id: 'relazioni-social', title: 'Relazioni e sicurezza online', icon: Users, color: 'text-emerald-600', bg: 'bg-emerald-50', border: 'hover:border-emerald-500/50', desc: 'Gestisci i social, capisci i rischi delle relazioni e difenditi dal bullismo.' },
-            { id: 'sos-digitale', title: 'Se ti è successo qualcosa', icon: ShieldAlert, color: 'text-sos', bg: 'bg-sos/10', border: 'hover:border-sos', desc: 'Protocolli di emergenza per situazioni critiche: ricatti, furti o molestie.' },
-            { id: 'genitori-famiglie', title: 'Per genitori e famiglie', icon: Heart, color: 'text-orange-600', bg: 'bg-orange-50', border: 'hover:border-orange-500/50', desc: 'Come accompagnare i figli nel digitale e stabilire regole sane in casa.' },
-          ].map((path) => (
-            <Link href={`/percorsi/${path.id}`} key={path.id} className="group">
-              <Card className={cn(
-                "h-full flex flex-col border border-border bg-surface transition-all shadow-sm p-6 space-y-4",
-                path.border
-              )}>
-                <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center transition-colors group-hover:bg-foreground group-hover:text-background", path.bg, path.color)}>
-                  <path.icon className="w-6 h-6" />
-                </div>
-                <div className="space-y-2">
-                  <h3 className="text-xl font-semibold tracking-tight text-foreground">{path.title}</h3>
-                  <p className="text-sm text-secondary leading-relaxed line-clamp-2">
-                    {path.desc}
-                  </p>
-                </div>
-                <div className={cn("pt-2 flex items-center font-medium text-sm mt-auto", path.color)}>
-                  Esplora percorso <ArrowRight className="w-4 h-4 ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-                </div>
-              </Card>
-            </Link>
-          ))}
+          {LEARNING_PATHS.slice(0, 6).map((path) => {
+            const icons: Record<string, React.ElementType> = {
+                'inizia-da-qui': ShieldCheck,
+                'proteggi-account': Lock,
+                'relazioni-social': Users,
+                'sos-digitale': ShieldAlert,
+                'genitori-famiglie': Heart,
+                'truffe-soldi': Target
+            };
+            const colors: Record<string, string> = {
+                'inizia-da-qui': 'text-primary bg-primary/10 hover:border-primary/50',
+                'proteggi-account': 'text-indigo-600 bg-indigo-50 hover:border-indigo-500/50',
+                'relazioni-social': 'text-emerald-600 bg-emerald-50 hover:border-emerald-500/50',
+                'sos-digitale': 'text-sos bg-sos/10 hover:border-sos',
+                'genitori-famiglie': 'text-orange-600 bg-orange-50 hover:border-orange-500/50',
+                'truffe-soldi': 'text-blue-600 bg-blue-50 hover:border-blue-500/50'
+            };
+            const Icon = icons[path.id] || BookOpen;
+            const style = colors[path.id] || 'text-secondary bg-secondary/10 hover:border-secondary/50';
+            const [textColor, bgColor, borderHover] = style.split(' ');
+
+            return (
+              <Link href={`/percorsi/${path.id}`} key={path.id} className="group">
+                <Card className={cn(
+                  "h-full flex flex-col border border-border bg-surface transition-all shadow-sm p-6 space-y-4",
+                  borderHover
+                )}>
+                  <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center transition-colors group-hover:bg-foreground group-hover:text-background", bgColor, textColor)}>
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-semibold tracking-tight text-foreground">{path.title}</h3>
+                    <p className="text-sm text-secondary leading-relaxed line-clamp-2">
+                      {path.description}
+                    </p>
+                  </div>
+                  <div className={cn("pt-2 flex items-center font-medium text-sm mt-auto", textColor)}>
+                    Esplora percorso <ArrowRight className="w-4 h-4 ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                  </div>
+                </Card>
+              </Link>
+            );
+          })}
         </div>
 
         <div className="text-center pt-4">
@@ -73,7 +90,7 @@ export default function Home() {
             L'educazione digitale è per tutti
           </h2>
           <p className="text-secondary text-lg">
-            Le risorse di Bussola sono organizzate in modo chiaro per essere utili a ogni età e livello di competenza.
+            Le risorse di Busssola sono organizzate in modo chiaro per essere utili a ogni età e livello di competenza.
           </p>
         </div>
         
@@ -131,14 +148,14 @@ export default function Home() {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
-            { title: "Privacy e sicurezza tecnica", desc: "Password, 2FA, data breach e impostazioni", icon: Lock, filter: 'basi' },
-            { title: "Frodi, truffe e phishing", desc: "Dai messaggi sospetti all'ecommerce truffaldino", icon: Target, filter: 'rischi' },
-            { title: "Relazioni online e grooming", desc: "Riconoscere i predatori e gestire la fiducia", icon: User, filter: 'relazioni' },
-            { title: "Cyberbullismo e stalking", desc: "Come reagire, bloccare e conservare prove", icon: ShieldAlert, filter: 'relazioni' },
-            { title: "Sexting e revenge porn", desc: "Il consenso, l'intimità digitale e i rischi legali", icon: MonitorSmartphone, filter: 'relazioni' },
-            { title: "Benessere mentale e digitale", desc: "Gestire l'ansia da notifica, algoritmi e FOMO", icon: Heart, filter: 'benessere' },
+            { title: "Sicurezza tecnica", desc: "Password, 2FA, data breach e impostazioni", icon: Lock, id: 'modulo-02-account-security' },
+            { title: "Truffe e phishing", desc: "Dai messaggi sospetti all'ecommerce truffaldino", icon: Target, id: 'modulo-03-truffe-phishing' },
+            { title: "Grooming e minori", desc: "Riconoscere i predatori e gestire la fiducia", icon: User, id: 'modulo-05-grooming-minori' },
+            { title: "Cyberstalking e doxxing", desc: "Come reagire, bloccare e conservare prove", icon: ShieldAlert, id: 'modulo-06-stalking-doxxing' },
+            { title: "Sextortion e immagini intime", desc: "Il consenso, l'intimità digitale e i rischi legali", icon: MonitorSmartphone, id: 'modulo-04-sextortion-ricatti' },
+            { title: "Privacy e Smartphone", desc: "Proteggi i tuoi dati sul dispositivo mobile", icon: Smartphone, id: 'modulo-07-privacy-smartphone' },
           ].map((topic, i) => (
-            <Link href={`/moduli?filter=${topic.filter}`} key={i} className="group">
+            <Link href={`/moduli/${topic.id}`} key={i} className="group">
               <div className="flex items-start gap-4 bg-surface border border-border p-6 rounded-[1.5rem] hover:border-primary/40 hover:shadow-sm transition-all h-full">
                 <div className="bg-background border border-border p-3 rounded-xl group-hover:bg-primary/5 transition-colors shrink-0">
                   <topic.icon className="w-6 h-6 text-secondary group-hover:text-primary transition-colors" />
@@ -153,7 +170,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 5: How it works (Cleaned) */}
+      {/* SECTION 5: How it works */}
       <section className="space-y-16 py-8 border-y border-border">
         <div className="text-center space-y-4 max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-display font-semibold tracking-tight text-foreground">
@@ -207,7 +224,7 @@ export default function Home() {
               Informazione verificata, rispetto garantito
             </h2>
             <p className="text-xl text-secondary max-w-2xl mx-auto leading-relaxed">
-              Il progetto Bussola nasce con una precisa integrità etica. Rifiutiamo clickbait, falsi allarmismi e profilazione invasiva dei dati.
+              Il progetto Busssola nasce con una precisa integrità etica. Rifiutiamo clickbait, falsi allarmismi e profilazione invasiva dei dati.
             </p>
           </div>
           
@@ -238,7 +255,7 @@ export default function Home() {
                 <Clock className="w-5 h-5"/>
               </div>
               <h4 className="font-semibold text-foreground">Totalmente indipendente</h4>
-              <p className="text-sm text-secondary leading-relaxed">Bussola non mostra pubblicità, non vende corsi ed è finanziata indipendentemente per restare gratuita per le scuole e i giovani.</p>
+              <p className="text-sm text-secondary leading-relaxed">Busssola non mostra pubblicità, non vende corsi ed è finanziata indipendentemente per restare gratuita per le scuole e i giovani.</p>
             </div>
           </div>
           

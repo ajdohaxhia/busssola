@@ -15,7 +15,7 @@ export default function PrivacyPage() {
                 <section className="space-y-4">
                     <h2 className="text-2xl font-bold text-foreground">1. Il nostro approccio</h2>
                     <p>
-                        Bussola è un progetto informativo indipendente nato con una precisa etica della riservatezza. Crediamo che l'educazione digitale non debba costarti il tracciamento della tua vita online. Per questo motivo, abbiamo ridotto al minimo tecnico indispensabile la raccolta di dati.
+                        Busssola è un progetto informativo indipendente nato con una precisa etica della riservatezza. Crediamo che l'educazione digitale non debba costarti il tracciamento della tua vita online. Per questo motivo, abbiamo ridotto al minimo tecnico indispensabile la raccolta di dati.
                     </p>
                 </section>
 
@@ -32,14 +32,14 @@ export default function PrivacyPage() {
                 <section className="space-y-4">
                     <h2 className="text-2xl font-bold text-foreground">3. Salvataggio dei progressi</h2>
                     <p>
-                        Bussola utilizza il <strong>LocalStorage</strong> del tuo browser per memorizzare quali lezioni hai letto e i tuoi progressi nei percorsi. Questi dati rimangono esclusivamente sul tuo dispositivo e non vengono mai inviati ai nostri server. Se cancelli la cache del browser, questi dati verranno rimossi.
+                        Busssola utilizza il <strong>LocalStorage</strong> del tuo browser per memorizzare quali lezioni hai letto e i tuoi progressi nei percorsi. Questi dati rimangono esclusivamente sul tuo dispositivo e non vengono mai inviati ai nostri server. Se cancelli la cache del browser, questi dati verranno rimossi.
                     </p>
                 </section>
 
                 <section className="space-y-4">
                     <h2 className="text-2xl font-bold text-foreground">4. Link esterni e Fonti</h2>
                     <p>
-                        Il sito contiene link a siti ufficiali (Polizia Postale, Garante Privacy, Apple, Google, ecc.). Una volta usciti da Bussola, si applicano le policy del sito di destinazione. Non siamo responsabili per il trattamento dati operato da terze parti.
+                        Il sito contiene link a siti ufficiali (Polizia Postale, Garante Privacy, Apple, Google, ecc.). Una volta usciti da Busssola, si applicano le policy del sito di destinazione. Non siamo responsabili per il trattamento dati operato da terze parti.
                     </p>
                 </section>
 
@@ -53,7 +53,7 @@ export default function PrivacyPage() {
                 <div className="bg-primary/5 border border-primary/10 p-8 rounded-2xl space-y-4">
                     <p className="text-xs text-muted-foreground uppercase tracking-widest font-bold">Ultimo aggiornamento: {siteStats.lastUpdatedAt}</p>
                     <h3 className="text-lg font-bold text-primary">Domande sulla privacy?</h3>
-                    <p className="text-sm">Bussola è un progetto informativo. Per comunicazioni relative ai dati: <a href="mailto:privacy@bussola.edu.it" className="font-semibold underline">privacy@bussola.edu.it</a>.</p>
+                    <p className="text-sm">Busssola è un progetto informativo. Per comunicazioni relative ai dati: <a href="mailto:privacy@busssola.com" className="font-semibold underline">privacy@busssola.com</a>.</p>
                 </div>
 
                 <p className="text-xs text-muted-foreground italic">

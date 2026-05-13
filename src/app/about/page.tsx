@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Shield, Heart, Users, LineChart, Globe, Zap } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
+import { siteStats } from '@/data/siteStats'
 import Link from 'next/link'
 
 const values = [
@@ -154,10 +155,10 @@ export default function AboutPage() {
                 className="grid grid-cols-2 md:grid-cols-4 gap-4"
             >
                 {[
-                    { number: '50', label: 'Moduli Formativi' },
-                    { number: '1000', label: 'Lezioni Pratiche' },
+                    { number: siteStats.totalModules.toString(), label: 'Moduli Formativi' },
+                    { number: siteStats.publishedLessons.toString(), label: 'Lezioni Pratiche' },
                     { number: '24/7', label: 'Accesso Gratuito' },
-                    { number: '100%', label: 'Privacy Respettata' },
+                    { number: '100%', label: 'Privacy Rispettata' },
                 ].map((stat, i) => (
                     <motion.div
                         key={i}

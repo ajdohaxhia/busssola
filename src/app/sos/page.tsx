@@ -22,80 +22,80 @@ type Scenario = {
 const SCENARIOS: Scenario[] = [
     {
         id: 'sextortion',
-        title: 'Qualcuno minaccia di pubblicare mie foto intime (Sextortion)',
+        title: 'Ricatto con immagini intime (Sextortion)',
         description: 'Ti stanno chiedendo soldi o altre foto per non diffondere immagini private che ti riguardano.',
-        immediateAction: 'Salva gli screenshot di tutte le conversazioni e dei profili prima che vengano cancellati.',
-        doNot: 'NON pagare e NON inviare altro materiale. Chi ricatta non si ferma dopo il primo pagamento.',
+        immediateAction: 'Interrompi ogni comunicazione. Salva gli screenshot di tutte le conversazioni e dei profili. Usa StopNCII.org.',
+        doNot: 'NON pagare e NON inviare altro materiale. Il pagamento alimenta solo nuove richieste.',
         contactLabel: 'Polizia Postale',
         contactNumber: 'Segnala il reato online',
         contactLink: 'https://www.commissariatodips.it/',
-        moduleLink: '/moduli/modulo-15-sextortion'
+        moduleLink: '/moduli/modulo-04-sextortion-ricatti'
+    },
+    {
+        id: 'hacked',
+        title: 'Account hackerato o rubato (Instagram, WhatsApp, ecc.)',
+        description: 'Non accedi più ai tuoi profili, hanno cambiato la tua email o qualcuno si finge te.',
+        immediateAction: 'Usa i link ufficiali di recupero (facebook.com/hacked, instagram.com/hacked). Avvisa i contatti del furto.',
+        doNot: 'NON contattare finti "hacker di recupero" su Instagram o Telegram: sono altre truffe.',
+        contactLabel: 'Polizia Postale',
+        contactNumber: 'Segnalazioni ufficiali',
+        contactLink: 'https://www.commissariatodips.it/',
+        moduleLink: '/moduli/modulo-01-primo-soccorso'
     },
     {
         id: 'grooming',
-        title: 'Un adulto mi chiede incontri segreti o materiale intimo',
-        description: 'Una persona conosciuta online sta cercando di isolarti, farti regali o ti chiede di mantenere un segreto.',
-        immediateAction: 'Interrompi subito ogni contatto. Fai screenshot delle chat e blocca il profilo.',
+        title: 'Un adulto mi chiede incontri o materiale intimo (Grooming)',
+        description: 'Una persona conosciuta online sta cercando di isolarti o ti chiede di mantenere un segreto.',
+        immediateAction: 'Interrompi subito ogni contatto. Fai screenshot delle chat. Parlane con un adulto di fiducia.',
         doNot: 'NON accettare incontri dal vivo e NON cancellare le chat: sono prove fondamentali.',
         contactLabel: 'Emergenza Infanzia',
         contactNumber: '114',
         contactLink: 'tel:114',
-        moduleLink: '/moduli/modulo-13-grooming'
+        moduleLink: '/moduli/modulo-05-grooming-minori'
     },
     {
-        id: 'cyberbullismo',
-        title: 'Sono vittima di insulti continui, stalking o cyberbullismo',
-        description: 'Ricevi messaggi minatori, ti hanno creato profili falsi per deriderti o sei perseguitato online.',
-        immediateAction: 'Blocca gli account. Parla subito con un adulto di fiducia (genitore o insegnante).',
-        doNot: 'NON rispondere alle provocazioni. Reagire alimenta il ciclo del bullismo.',
+        id: 'stalking',
+        title: 'Cyberstalking o Doxxing (Persecuzione online)',
+        description: 'Ricevi messaggi minatori continui o hanno diffuso i tuoi dati privati (indirizzo, telefono) per danneggiarti.',
+        immediateAction: 'Metti i profili in privato. Salva le prove. Blocca gli account persecutori.',
+        doNot: 'NON rispondere alle provocazioni. Non cercare di "risolvere" parlando con lo stalker.',
         contactLabel: 'Anti Violenza e Stalking',
         contactNumber: '1522',
         contactLink: 'tel:1522',
-        moduleLink: '/moduli/modulo-16-cyberbullismo'
+        moduleLink: '/moduli/modulo-06-stalking-doxxing'
     },
     {
-        id: 'hacking',
-        title: 'Mi hanno rubato l\'account, i soldi o l\'identità digitale',
-        description: 'Non accedi più ai tuoi profili, vedi transazioni non autorizzate o qualcuno si finge te.',
-        immediateAction: 'Blocca subito le carte di credito coinvolte. Avvisa i tuoi contatti del furto di identità.',
-        doNot: 'NON cliccare su link inviati via SMS o email che promettono di "recuperare" l\'account.',
+        id: 'truffe',
+        title: 'Soldi inviati o dati bancari inseriti su sito falso',
+        description: 'Hai cliccato su un link di phishing, inserito la carta o inviato soldi a un truffatore.',
+        immediateAction: 'Blocca subito le carte di credito. Contatta la tua banca. Fai denuncia.',
+        doNot: 'NON aspettare "domani" per bloccare le carte. Ogni minuto conta.',
         contactLabel: 'Polizia Postale',
-        contactNumber: 'Segnalazioni e denunce',
+        contactNumber: 'Denuncia reati telematici',
         contactLink: 'https://www.commissariatodips.it/',
-        moduleLink: '/moduli/modulo-22-recupero-account'
+        moduleLink: '/moduli/modulo-03-truffe-phishing'
     },
     {
-        id: 'diffusione-intima',
-        title: 'Le mie immagini intime si stanno diffondendo senza consenso',
-        description: 'Qualcuno ha condiviso foto o video privati su social, chat o siti web.',
-        immediateAction: 'Segnala il contenuto direttamente alla piattaforma. Contatta il Garante Privacy per la rimozione urgente.',
-        doNot: 'NON cercare di cancellare tutto se non hai prima salvato le prove (URL e screenshot).',
-        contactLabel: 'Garante Privacy',
-        contactNumber: 'Segnala per rimozione',
-        contactLink: 'https://www.gpdp.it/temi/cyberbullismo',
-        moduleLink: '/moduli/modulo-15-sextortion'
-    },
-    {
-        id: 'crisi-psicologica',
-        title: 'Mi sento in crisi e ho bisogno di supporto immediato',
-        description: 'Quello che sta succedendo online ti sta togliendo la serenità e non sai come uscirne.',
-        immediateAction: 'Ricorda che non è colpa tua. C\'è sempre una via d\'uscita e persone pronte ad ascoltarti.',
-        doNot: 'NON restare solo/a con questo peso. Parlare è il primo passo per risolvere.',
-        contactLabel: 'Telefono Amico Italia',
-        contactNumber: '02 2327 2327',
-        contactLink: 'tel:+390223272327',
-        moduleLink: '/moduli/modulo-25-crisi-emotiva'
+        id: 'perso-rubato',
+        title: 'Smartphone perso o rubato',
+        description: 'Il tuo telefono non è più con te e contiene tutti i tuoi accessi e dati personali.',
+        immediateAction: 'Localizzalo da remoto (Find My). Blocca la SIM tramite l\'operatore. Avvia il Wipe dei dati.',
+        doNot: 'NON cercare di affrontare il ladro da solo seguendo il GPS. Avvisa le autorità.',
+        contactLabel: 'Emergenza Nazionale',
+        contactNumber: '112',
+        contactLink: 'tel:112',
+        moduleLink: '/moduli/modulo-01-primo-soccorso'
     },
     {
         id: 'pericolo-fisico',
-        title: 'Ho paura per la mia incolumità o quella di un amico',
-        description: 'C\'è una minaccia fisica imminente o rischio di vita.',
+        title: 'Ho paura per la mia incolumità fisica',
+        description: 'C\'è una minaccia fisica imminente o rischio di vita reale.',
         immediateAction: 'Mettiti al sicuro. Chiedi aiuto a chi hai vicino.',
         doNot: 'NON aspettare. Chiama subito.',
         contactLabel: 'Emergenza Nazionale',
         contactNumber: '112',
         contactLink: 'tel:112',
-        moduleLink: '/moduli/modulo-24-emergenze'
+        moduleLink: '/moduli/modulo-01-primo-soccorso'
     }
 ]
 

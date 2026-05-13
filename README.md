@@ -1,84 +1,58 @@
-# 🧭 Bussola
+# Busssola 🧭
 
-> 🧭 **Core v1 — Contenuti Verificati e Stabili**
+> **Core v1 — Contenuti Verificati e Stabili**
 >
-> Bussola ha raggiunto lo stato **Core v1**. Tutte le lezioni pubblicate hanno superato il **Quality Gate**, integrano fonti istituzionali verificate e offrono protocolli operativi reali. Il sito è pronto per l'uso pubblico e scolastico.
+> Busssola è una guida pratica e verificabile per orientarsi nei rischi digitali: account hackerati, phishing, sextortion, cyberstalking, doxxing, privacy social, smartphone perso, grooming, scuola e famiglia.
 
-**La piattaforma pratica per l'orientamento nei rischi digitali in Italia.**
+## Stato del Progetto (Dati Reali)
+- **Moduli Totali**: 16
+- **Lezioni Pubblicate**: 52 (tutte verificate tramite Quality Gate)
+- **Organizzazioni Fonti**: 12+ (Polizia Postale, Garante Privacy, Meta, Google, Apple, ecc.)
+- **Stato**: Core v1 — Production Ready
+- **Ultimo Aggiornamento**: Maggio 2023
 
-Bussola è un sito educativo progettato per aiutare persone comuni, studenti, genitori ed educatori a gestire le emergenze digitali e costruire una presenza online sicura. Nata per trasformare la paura in competenza, Bussola offre risposte pratiche, checklist di protezione e protocolli di emergenza basati su fonti autorevoli.
+## Principi Editoriali
+Per garantire l'affidabilità delle informazioni, ogni lezione su Busssola segue criteri rigidi:
+- **Niente contenuti generici**: ogni tema è affrontato con protocolli operativi reali.
+- **Fonti Verificabili**: ogni lezione cita fonti istituzionali o ufficiali di piattaforma.
+- **Checklist Pratiche**: ogni guida include una lista di controllo azionabile.
+- **Cosa NON fare**: indicazioni chiare sugli errori comuni che peggiorano la situazione.
+- **Supporto Esterno**: indicazione di quando e a chi chiedere aiuto (112, 114, Polizia Postale).
 
-[Visita il sito live: bussola.edu.it](https://bussola.edu.it)
+## Tech Stack
+- **Framework**: Next.js 15+ (App Router)
+- **UI Engine**: React 19
+- **Styling**: Tailwind CSS v4
+- **Language**: TypeScript
+- **Deployment**: Static HTML Export (ottimizzato per Cloudflare Pages)
 
----
-
-## 🏛️ Visione Editoriale & Design
-Abbiamo adottato un'estetica **Calm UI** e un tono di voce **pragmatico ed empatico**.
-*   **Affidabilità**: Ogni lezione ha fonti reali linkate (Polizia Postale, Garante Privacy, Apple, Google, Meta).
-*   **Praticità**: Zero tecnicismi inutili. Solo quello che devi sapere per agire subito.
-*   **Sicurezza Emotiva**: Un ambiente pensato per supportare le vittime di abusi digitali senza colpevolizzazioni.
-
----
-
-## 📚 Libreria Contenuti (Core v1)
-Bussola dispone di una libreria strutturata di **16 moduli** con **52 lezioni verificate** che coprono:
-1.  **Primo Soccorso**: Sextortion, furto account (WA, IG, FB, TikTok), smartphone rubato.
-2.  **Account Security**: Password, 2FA, checkup privacy, eredità digitale.
-3.  **Truffe & Phishing**: Smishing corrieri, truffe Vinted/Marketplace, phishing bancario.
-4.  **Relazioni & Rischi**: Grooming, sexting sicuro, cyberstalking, doxxing, revenge porn.
-5.  **Scuola & Famiglia**: Cyberbullismo, protocolli per docenti, patto digitale di famiglia.
-
-### Quality Gate
-Ogni lezione pubblicata deve includere:
-- **Scenario**: Contesto reale del rischio.
-- **Do Now**: Cosa fare immediatamente per limitare i danni.
-- **Don't Do**: Errori comuni da evitare (es. non pagare riscatti).
-- **Preserve Evidence**: Come salvare prove con valore legale.
-- **Checklist**: Lista di controllo operativa.
-- **Fonti Verificate**: Collegamenti a portali istituzionali o piattaforme ufficiali.
-
----
-
-## 🛠️ Tech Stack & Architettura
-*   **Framework**: [Next.js 15+](https://nextjs.org/) (App Router)
-*   **UI Engine**: [React 19](https://react.dev/)
-*   **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-*   **Static Export**: Ottimizzato per Cloudflare Pages (Static HTML).
-*   **Privacy**: Nessun tracciamento, nessun database. Progressi salvati in LocalStorage.
-
----
-
-## 🚀 Guida Rapida
+## Comandi per Sviluppatori
 ```bash
-# Installazione
-npm install
-
-# Sviluppo
+# Avvio ambiente di sviluppo
 npm run dev
 
-# Validazione Contenuti (Controlla il Quality Gate di ogni lezione)
+# Validazione robusta dei contenuti (Quality Gate)
 npm run validate:content
 
-# Aggiornamento Statistiche (Sincronizza contatori sito e meta)
+# Aggiornamento statistiche del sito
 npm run update-stats
 
-# Build per Produzione
+# Linting e controllo tipi
+npm run lint
+npm run typecheck
+
+# Build di produzione (Static Export)
 npm run build
 ```
 
+## Privacy e Trasparenza
+Busssola minimizza la raccolta dati:
+- **Zero Login**: non è richiesta registrazione né inserimento di email.
+- **Privacy by Design**: nessun tracciamento invasivo o cookie di profilazione.
+- **Progressi Locali**: i moduli completati sono salvati esclusivamente nel LocalStorage del browser dell'utente.
+
+## Disclaimer
+I contenuti di Busssola sono esclusivamente a scopo informativo e non sostituiscono in alcun modo il supporto legale, medico, psicologico o l'intervento urgente delle autorità competenti. In caso di pericolo immediato, contatta sempre il 112.
+
 ---
-
-## 🆘 Centro SOS
-Bussola include un **Centro SOS** situazionale per offrire aiuto immediato:
-*   **Selector Situazionale**: Guida l'utente verso il protocollo giusto in base all'urgenza.
-*   **Numeri Utili**: 112 (Emergenza), 114 (Emergenza Infanzia), 1522 (Violenza/Stalking).
-*   **Protocolli di Difesa**: Step-by-step per ripristino account e segnalazioni legali.
-
----
-
-## 📄 Licenza
-© 2026 Bussola - Progetto Informativo Indipendente.
-Rilasciato sotto licenza MIT.
-
-*Ultimo aggiornamento: 13 Maggio 2026*
-*Status: Core v1 — Production Ready* 🧭
+© 2026 Busssola — [busssola.com](https://busssola.com)
