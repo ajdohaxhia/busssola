@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/validate-content.js",
+    "validate:content": "ts-node scripts/validate-content.ts",
+    "prebuild": "npm run validate:content",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",
@@ -38,6 +39,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.5.16",
     "tailwindcss": "^4",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   },
   "overrides": {

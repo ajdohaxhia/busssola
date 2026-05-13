@@ -1,98 +1,15 @@
-export const MODULES = [
-    {
-        id: 'm1-predatori',
-        title: '1. Predatori Online',
-        description: 'Grooming, Sextortion e Catfish',
-        icon: 'UserX',
-        difficulty: 'Intermedia'
-    },
-    {
-        id: 'm2-privacy',
-        title: '2. Privacy Tecnica',
-        description: 'DNS, VPN, EXIF e Metadata',
-        icon: 'ShieldCheck',
-        difficulty: 'Avanzata'
-    },
-    {
-        id: 'm3-phishing',
-        title: '3. Phishing & Malware',
-        description: 'Riconoscere truffe e virus',
-        icon: 'AlertTriangle',
-        difficulty: 'Intermedia'
-    },
-    {
-        id: 'm4-cyberbullismo',
-        title: '4. Cyberbullismo',
-        description: 'Difesa da Stalking e Doxxing',
-        icon: 'MessageSquareX',
-        difficulty: 'Intermedia'
-    },
-    {
-        id: 'm5-addiction',
-        title: '5. Social Addiction',
-        description: 'Dark Patterns e Dopamina',
-        icon: 'Smartphone',
-        difficulty: 'Base'
-    },
-    {
-        id: 'm6-gdpr',
-        title: '6. Dati Personali',
-        description: 'I tuoi diritti GDPR',
-        icon: 'FileText',
-        difficulty: 'Intermedia'
-    },
-    {
-        id: 'm7-scuola',
-        title: '7. Scuola Online',
-        description: 'Privacy in DAD e Meet',
-        icon: 'GraduationCap',
-        difficulty: 'Base'
-    },
-    {
-        id: 'm8-gaming',
-        title: '8. Gaming Safe',
-        description: 'Community tossiche e Chat',
-        icon: 'Gamepad2',
-        difficulty: 'Base'
-    },
-    {
-        id: 'm9-ai-deepfake',
-        title: '9. AI & Deepfake',
-        description: ' Realtà vs Sintetico',
-        icon: 'Bot',
-        difficulty: 'Intermedia'
-    },
-    {
-        id: 'm10-finance',
-        title: '10. Finanze & Crypto',
-        description: 'Scam, Ponzi e Rug Pull',
-        icon: 'Bitcoin',
-        difficulty: 'Avanzata'
-    },
-    {
-        id: 'm11-sexting',
-        title: '11. Sexting & Legge',
-        description: 'Rischi legali e Consenso',
-        icon: 'Camera',
-        difficulty: 'Intermedia'
-    },
-    {
-        id: 'm12-rights',
-        title: 'Diritti Digitali',
-        description: 'La tua libertà online non è scontata. Scopri come difenderla.',
-        icon: 'ShieldAlert',
-        difficulty: 'Pro',
-        category: 'Legal'
-    },
-    {
-        id: 'm13-salute',
-        title: 'Salute Mentale',
-        description: 'Proteggi la tua mente dalle trappole psicologiche del digitale.',
-        icon: 'HeartPulse',
-        difficulty: 'Intermedio',
-        category: 'Wellbeing'
-    }
+export const CATEGORIES = [
+    { id: 'first-aid', title: 'Primo soccorso digitale', icon: 'ShieldAlert', description: 'Azioni immediate per emergenze in corso.' },
+    { id: 'accounts', title: 'Account & Sicurezza', icon: 'Key', description: 'Protezione accessi, 2FA e recupero profili.' },
+    { id: 'scams', title: 'Truffe & Phishing', icon: 'AlertTriangle', description: 'Riconoscere esche e manipolazioni online.' },
+    { id: 'sextortion', title: 'Sextortion & Ricatti', icon: 'CameraOff', description: 'Gestione di ricatti sessuali e immagini intime.' },
+    { id: 'grooming', title: 'Grooming & Minori', icon: 'Users', description: 'Prevenzione adescamento e sicurezza ragazzi.' },
+    { id: 'stalking', title: 'Stalking & Doxxing', icon: 'EyeOff', description: 'Difesa da persecuzioni e diffusione dati.' },
+    { id: 'privacy', title: 'Privacy & Smartphone', icon: 'Smartphone', description: 'Configurazione device e protezione identità.' },
+    { id: 'school', title: 'Scuola & Famiglia', icon: 'GraduationCap', description: 'Cyberbullismo e protocolli educativi.' },
 ] as const;
+
+export type CategoryId = typeof CATEGORIES[number]['id'];
 
 export const TIERS = {
     ingenuo: { label: 'Ingenuo', minModules: 0, color: 'text-gray-400' },

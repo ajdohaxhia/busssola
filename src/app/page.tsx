@@ -34,7 +34,6 @@ export default function Home() {
             { id: 'relazioni-social', title: 'Relazioni e sicurezza online', icon: Users, color: 'text-emerald-600', bg: 'bg-emerald-50', border: 'hover:border-emerald-500/50', desc: 'Gestisci i social, capisci i rischi delle relazioni e difenditi dal bullismo.' },
             { id: 'sos-digitale', title: 'Se ti è successo qualcosa', icon: ShieldAlert, color: 'text-sos', bg: 'bg-sos/10', border: 'hover:border-sos', desc: 'Protocolli di emergenza per situazioni critiche: ricatti, furti o molestie.' },
             { id: 'genitori-famiglie', title: 'Per genitori e famiglie', icon: Heart, color: 'text-orange-600', bg: 'bg-orange-50', border: 'hover:border-orange-500/50', desc: 'Come accompagnare i figli nel digitale e stabilire regole sane in casa.' },
-            { id: 'scuole-educatori', title: 'Per scuole ed educatori', icon: GraduationCap, color: 'text-fuchsia-600', bg: 'bg-fuchsia-50', border: 'hover:border-fuchsia-500/50', desc: 'Strumenti e policy per gestire la cittadinanza digitale in classe.' },
           ].map((path) => (
             <Link href={`/percorsi/${path.id}`} key={path.id} className="group">
               <Card className={cn(
