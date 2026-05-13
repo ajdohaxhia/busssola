@@ -22,10 +22,10 @@ export default function Home() {
       <section className="space-y-12">
         <div className="text-center space-y-4 max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-display font-semibold tracking-tight text-foreground">
-            Scegli il tuo percorso
+            Trova la situazione più vicina alla tua
           </h2>
           <p className="text-secondary text-lg">
-            Non una semplice lista di argomenti, ma {siteStats.learningPaths} percorsi curati per guidarti passo dopo passo.
+            Abbiamo raggruppato le guide per aiutarti a trovare più velocemente le informazioni giuste.
           </p>
         </div>
         
@@ -67,7 +67,7 @@ export default function Home() {
                     </p>
                   </div>
                   <div className={cn("pt-2 flex items-center font-medium text-sm mt-auto", textColor)}>
-                    Esplora percorso <ArrowRight className="w-4 h-4 ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                    Apri <ArrowRight className="w-4 h-4 ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                   </div>
                 </Card>
               </Link>
@@ -77,7 +77,7 @@ export default function Home() {
 
         <div className="text-center pt-4">
           <Button asChild variant="outline" className="rounded-xl h-12 px-8">
-            <Link href="/percorsi">Vedi tutti i percorsi <ArrowRight className="ml-2 w-4 h-4" /></Link>
+            <Link href="/percorsi">Vedi tutte le guide <ArrowRight className="ml-2 w-4 h-4" /></Link>
           </Button>
         </div>
       </section>
@@ -87,10 +87,10 @@ export default function Home() {
       <section className="space-y-12">
         <div className="text-center space-y-4 max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-display font-semibold tracking-tight text-foreground">
-            L'educazione digitale è per tutti
+            A chi può servire
           </h2>
           <p className="text-secondary text-lg">
-            Le risorse di Busssola sono organizzate in modo chiaro per essere utili a ogni età e livello di competenza.
+            Le guide di Busssola sono scritte per essere utili a chiunque si trovi a fronteggiare un problema digitale, indipendentemente dall'esperienza tecnica.
           </p>
         </div>
         
@@ -124,7 +124,7 @@ export default function Home() {
               Un archivio di moduli strutturati ed esempi mirati, pensati per essere portati direttamente in classe o usati in laboratori per facilitare lezioni moderne di cittadinanza digitale.
             </p>
             <div className="pt-2">
-               <Link href="/scuole" className="text-primary font-medium hover:underline flex items-center gap-1">Scopri le risorse <ArrowRight className="w-4 h-4" /></Link>
+               <Link href="/scuole" className="text-primary font-medium hover:underline flex items-center gap-1">Vedi le risorse <ArrowRight className="w-4 h-4" /></Link>
             </div>
           </div>
         </div>
@@ -135,10 +135,10 @@ export default function Home() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 px-4">
           <div className="space-y-4">
             <h2 className="text-3xl md:text-4xl font-display font-semibold tracking-tight text-foreground">
-              Tutto ciò di cui hai bisogno
+              Sfoglia per argomento
             </h2>
             <p className="text-secondary text-lg max-w-xl">
-              Non solo percorsi. Esplora il nostro catalogo completo di {siteStats.totalModules} moduli verticali per approfondire temi specifici.
+              Se hai già in mente un tema specifico, puoi trovare la guida giusta direttamente dall'elenco dei {siteStats.totalModules} argomenti disponibili.
             </p>
           </div>
           <Button asChild variant="outline" className="rounded-xl h-12">
@@ -174,7 +174,7 @@ export default function Home() {
       <section className="space-y-16 py-8 border-y border-border">
         <div className="text-center space-y-4 max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-display font-semibold tracking-tight text-foreground">
-            Semplice e intuitivo
+            Come funziona
           </h2>
         </div>
         
@@ -187,7 +187,7 @@ export default function Home() {
             </div>
             <div className="space-y-2">
               <h4 className="text-xl font-semibold text-foreground">1. Trova il tema</h4>
-              <p className="text-secondary leading-relaxed px-4">Ricerca l'argomento che ti interessa o seleziona un percorso suggerito in base alle tue esigenze.</p>
+              <p className="text-secondary leading-relaxed px-4">Cerca l'argomento direttamente, oppure parti da un percorso già raggruppato per situazione.</p>
             </div>
           </div>
           
@@ -196,8 +196,8 @@ export default function Home() {
               <BookOpen className="w-6 h-6" />
             </div>
             <div className="space-y-2">
-              <h4 className="text-xl font-semibold text-foreground">2. Leggi le guide</h4>
-              <p className="text-secondary leading-relaxed px-4">Lezioni brevi, senza gergo inutile, progettate per essere lette in 5-10 minuti, direttamente dal tuo telefono.</p>
+              <h4 className="text-xl font-semibold text-foreground">2. Leggi la guida</h4>
+              <p className="text-secondary leading-relaxed px-4">Testi brevi e senza gergo inutile. Ogni scheda si legge in pochi minuti, anche da telefono.</p>
             </div>
           </div>
           
@@ -206,8 +206,8 @@ export default function Home() {
               <ShieldCheck className="w-6 h-6" />
             </div>
             <div className="space-y-2">
-              <h4 className="text-xl font-semibold text-foreground">3. Applica e proteggiti</h4>
-              <p className="text-secondary leading-relaxed px-4">Ogni modulo si conclude con azioni pratiche. Non saprai solo "cosa" è sbagliato, ma esattamente "come" risolverlo.</p>
+              <h4 className="text-xl font-semibold text-foreground">3. Segui i passaggi</h4>
+              <p className="text-secondary leading-relaxed px-4">Ogni guida include una checklist e indica cosa fare subito, cosa non fare e dove chiedere aiuto.</p>
             </div>
           </div>
         </div>
@@ -221,10 +221,10 @@ export default function Home() {
         <div className="max-w-4xl mx-auto space-y-12 relative z-10">
           <div className="space-y-4 text-center">
             <h2 className="text-3xl md:text-5xl font-display font-semibold tracking-tight text-foreground">
-              Informazione verificata, rispetto garantito
+              Come lavoriamo
             </h2>
             <p className="text-xl text-secondary max-w-2xl mx-auto leading-relaxed">
-              Il progetto Busssola nasce con una precisa integrità etica. Rifiutiamo clickbait, falsi allarmismi e profilazione invasiva dei dati.
+              Busssola è un progetto indipendente. Non vende corsi, non mostra pubblicità, non raccoglie i tuoi dati. Pubblica solo guide con fonti verificabili.
             </p>
           </div>
           
@@ -233,15 +233,15 @@ export default function Home() {
               <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-4">
                 <Lock className="w-5 h-5"/>
               </div>
-              <h4 className="font-semibold text-foreground">Privacy by design</h4>
-              <p className="text-sm text-secondary leading-relaxed">Nessun tracciamento aggressivo. I tuoi progressi sono salvati localmente sul tuo dispositivo.</p>
+              <h4 className="font-semibold text-foreground">Nessun tracciamento</h4>
+              <p className="text-sm text-secondary leading-relaxed">Non raccogliamo dati personali. Le guide consultate sono salvate localmente sul tuo dispositivo, non su server.</p>
             </div>
             <div className="space-y-3">
               <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-4">
                 <Search className="w-5 h-5"/>
               </div>
-              <h4 className="font-semibold text-foreground">Chiaro, non banale</h4>
-              <p className="text-sm text-secondary leading-relaxed">Tradotto il linguaggio tecnico in italiano comprensibile e accessibile, senza mai banalizzare il rischio.</p>
+              <h4 className="font-semibold text-foreground">Linguaggio semplice</h4>
+              <p className="text-sm text-secondary leading-relaxed">Il linguaggio tecnico viene tradotto in parole di uso comune, senza semplificare oltre misura.</p>
             </div>
             <div className="space-y-3">
               <div className="w-10 h-10 rounded-full bg-sos/10 text-sos flex items-center justify-center mb-4">
@@ -254,8 +254,8 @@ export default function Home() {
               <div className="w-10 h-10 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4">
                 <Clock className="w-5 h-5"/>
               </div>
-              <h4 className="font-semibold text-foreground">Totalmente indipendente</h4>
-              <p className="text-sm text-secondary leading-relaxed">Busssola non mostra pubblicità, non vende corsi ed è finanziata indipendentemente per restare gratuita per le scuole e i giovani.</p>
+              <h4 className="font-semibold text-foreground">Indipendente e gratuita</h4>
+              <p className="text-sm text-secondary leading-relaxed">Busssola non mostra pubblicità e non vende nulla. È un progetto indipendente, libero da interessi commerciali.</p>
             </div>
           </div>
           
@@ -272,15 +272,15 @@ export default function Home() {
         <div className="bg-sos-bg border border-sos-border rounded-[2rem] p-10 md:p-14 space-y-8 flex flex-col justify-between items-start">
           <div className="space-y-4">
             <div className="inline-flex items-center gap-2 bg-sos/10 text-sos px-3 py-1.5 rounded-full text-sm font-bold tracking-wide">
-              <ShieldAlert className="w-4 h-4" /> Centro Emergenze
+              <ShieldAlert className="w-4 h-4" /> Se è urgente
             </div>
             <h3 className="text-3xl font-display font-semibold text-sos tracking-tight">Hai bisogno di aiuto adesso?</h3>
             <p className="text-sos/80 text-lg leading-relaxed">
-              Problemi urgenti online? Se sei sotto ricatto (sextortion), stalking, o in forte crisi a causa di abusi digitali, trova la tua situazione per ricevere indicazioni dirette e calme. Non sei solo/a.
+              Se sei sotto ricatto, stai ricevendo minacce o hai subìto un furto d'identità, scegli la tua situazione per trovare i prossimi passi. Non sei solo.
             </p>
           </div>
           <Button asChild variant="destructive" size="lg" className="rounded-xl h-14 px-8 text-base w-full sm:w-auto mt-4">
-            <Link href="/sos">Accedi immediatamente all'area SOS</Link>
+            <Link href="/sos">Vai alla pagina SOS</Link>
           </Button>
         </div>
         
@@ -288,15 +288,15 @@ export default function Home() {
           <div className="absolute inset-0 bg-primary/10 pointer-events-none" />
           <div className="space-y-4 relative z-10">
             <div className="inline-flex items-center gap-2 bg-background/10 px-3 py-1.5 rounded-full text-sm font-medium tracking-wide">
-              Formazione e Prevenzione
+              Prevenzione
             </div>
-            <h3 className="text-3xl font-display font-semibold tracking-tight text-white">Pronto/a per orientarti?</h3>
+            <h3 className="text-3xl font-display font-semibold tracking-tight text-white">Non aspettare che succeda qualcosa.</h3>
             <p className="text-white/80 text-lg leading-relaxed">
-              La sicurezza digitale non è materia per soli esperti. Con brevi lezioni settimanali e piccoli accorgimenti quotidiani, puoi rendere la tua presenza online blindata e consapevole.
+              Poche guide pratiche bastano per proteggere i tuoi account, capire cosa condividere online e sapere come comportarti in caso di problema.
             </p>
           </div>
           <Button asChild size="lg" className="bg-white text-foreground hover:bg-white/90 rounded-xl h-14 px-8 text-base w-full sm:w-auto relative z-10 mt-4 font-semibold">
-            <Link href="/moduli">Vai al catalogo completo</Link>
+            <Link href="/moduli">Vedi tutte le guide</Link>
           </Button>
         </div>
       </section>

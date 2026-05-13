@@ -30,10 +30,10 @@ export default function FontiPage() {
     return (
         <Container size="lg" className="py-16 space-y-12">
             <header className="space-y-4 max-w-2xl">
-                <Badge variant="outline" className="bg-primary/5 text-primary border-primary/20">Qualità Verificata</Badge>
-                <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground tracking-tight">Le nostre Fonti</h1>
+                <Badge variant="outline" className="bg-primary/5 text-primary border-primary/20">Fonti e riferimenti</Badge>
+                <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground tracking-tight">Da dove arrivano le informazioni</h1>
                 <p className="text-xl text-secondary leading-relaxed">
-                    Busssola non scrive contenuti "a memoria". Ogni lezione è basata su fonti istituzionali, portali ufficiali di supporto o organizzazioni certificate.
+                    Ogni guida pubblicata su Busssola indica le fonti usate. Quando possibile vengono privilegiate fonti istituzionali, pagine ufficiali delle piattaforme e organizzazioni riconosciute.
                 </p>
             </header>
 

@@ -27,13 +27,13 @@ export default function PercorsiPage() {
         <div className="max-w-7xl mx-auto px-4 py-12 space-y-16">
             <header className="space-y-4 max-w-3xl">
                 <Badge variant="outline" className="rounded-full px-4 py-1 text-primary border-primary/20 bg-primary/5">
-                    Guida passo dopo passo
+                    Guide per situazione
                 </Badge>
                 <h1 className="text-4xl md:text-5xl font-display font-bold tracking-tight text-foreground">
-                    Percorsi Consigliati
+                    Trova la situazione più vicina alla tua
                 </h1>
                 <p className="text-xl text-secondary leading-relaxed">
-                    Non perderti nel catalogo. Abbiamo selezionato e ordinato i moduli migliori per creare dei percorsi di apprendimento coerenti, adatti alla tua situazione o al tuo ruolo.
+                    Abbiamo raggruppato le guide per aiutarti a trovare più velocemente le informazioni giuste, in base a ciò che stai attraversando.
                 </p>
             </header>
 
@@ -92,7 +92,7 @@ export default function PercorsiPage() {
                                     "flex items-center font-semibold text-lg pt-4",
                                     colors.split(' ')[0]
                                 )}>
-                                    {path.cta} <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                                    Apri le guide <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                                 </div>
                             </Card>
                         </Link>
@@ -107,10 +107,10 @@ export default function PercorsiPage() {
                 <div className="max-w-2xl space-y-6 relative z-10">
                     <h3 className="text-3xl font-display font-bold text-white">Preferisci esplorare da solo?</h3>
                     <p className="text-background/80 text-lg">
-                        Se cerchi un argomento specifico o vuoi vedere l'elenco completo dei 50 moduli di Busssola, puoi consultare il nostro catalogo completo e filtrabile.
+                        Se cerchi un argomento specifico, puoi sfogliare l'elenco di tutti i moduli disponibili su Busssola.
                     </p>
                     <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90 rounded-xl h-14 px-8 font-semibold">
-                        <Link href="/moduli">Vai al catalogo completo</Link>
+                        <Link href="/moduli">Vedi tutte le guide</Link>
                     </Button>
                 </div>
             </section>

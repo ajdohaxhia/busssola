@@ -82,10 +82,10 @@ export default function AboutPage() {
                     <Shield className="w-4 h-4" /> Progetto Indipendente
                 </div>
                 <h1 className="text-5xl md:text-7xl font-display font-semibold text-foreground tracking-tight leading-tight">
-                    Sicurezza senza allarmismi.
+                    Una risorsa per chi non sa da dove cominciare.
                 </h1>
                 <p className="text-xl text-secondary leading-relaxed max-w-2xl mx-auto">
-                    Busssola è una piattaforma di educazione civica digitale. Non vendiamo software di sicurezza, non tracciamo le tue abitudini e non usiamo il terrore per fare click. Offriamo solo indicazioni pratiche per comprendere la rete.
+                    Busssola è una risorsa pubblica di orientamento digitale. Non vende nulla, non traccia nessuno. Raccoglie guide pratiche, fonti verificate e checklist per aiutare chi si trova a fronteggiare un problema online.
                 </p>
                 <p className="text-sm font-semibold text-secondary">
                     Creato con ❤️ da{' '}
@@ -108,7 +108,7 @@ export default function AboutPage() {
                         Il nostro metodo.
                     </h2>
                     <p className="text-lg md:text-xl text-secondary leading-relaxed font-medium">
-                        La tecnologia evolve più velocemente della nostra consapevolezza. Invece di stilare lunghi manuali teorici, destrutturiamo i pericoli reali (truffe, grooming, data breach) in guide visive, brevi e immediatamente applicabili. È educazione alla cittadinanza per il secolo corrente.
+                        La tecnologia cambia rapidamente. Invece di manuali teorici, Busssola raccoglie indicazioni pratiche e aggiornate per affrontare situazioni concrete: un account rubato, una truffa, un messaggio minaccioso. Ogni scheda indica cosa fare, cosa non fare e dove chiedere aiuto.
                     </p>
                 </div>
             </motion.div>
@@ -155,10 +155,10 @@ export default function AboutPage() {
                 className="grid grid-cols-2 md:grid-cols-4 gap-4"
             >
                 {[
-                    { number: siteStats.totalModules.toString(), label: 'Moduli Formativi' },
-                    { number: siteStats.publishedLessons.toString(), label: 'Lezioni Pratiche' },
-                    { number: '24/7', label: 'Accesso Gratuito' },
-                    { number: '100%', label: 'Privacy Rispettata' },
+                    { number: siteStats.totalModules.toString(), label: 'Argomenti disponibili' },
+                    { number: siteStats.publishedLessons.toString(), label: 'Schede pratiche' },
+                    { number: '24/7', label: 'Accesso gratuito' },
+                    { number: '0', label: 'Dati raccolti' },
                 ].map((stat, i) => (
                     <motion.div
                         key={i}

@@ -26,7 +26,7 @@ export function Footer() {
                             </span>
                         </Link>
                         <p className="text-muted text-base leading-relaxed max-w-sm">
-                            Piattaforma educativa per imparare a riconoscere i rischi online, difendere la propria privacy e sapere sempre cosa fare. {siteStats.publishedLessons} lezioni verificate.
+                            Busssola raccoglie guide pratiche e fonti verificate per orientarsi quando succede qualcosa online. {siteStats.publishedLessons} schede disponibili, gratuite e senza registrazione.
                         </p>
                         <div className="flex flex-col gap-3">
                             <div className="flex items-center gap-2 text-sm font-medium text-secondary">
@@ -49,7 +49,7 @@ export function Footer() {
                                 {[
                                     { label: 'Home', href: '/' },
                                     { label: 'Percorsi', href: '/percorsi' },
-                                    { label: 'Catalogo Moduli', href: '/moduli' },
+                                    { label: 'Guide', href: '/moduli' },
                                     { label: 'Checklist', href: '/checklist' },
                                     { label: 'Glossario', href: '/glossario' }
                                 ].map((item) => (

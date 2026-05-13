@@ -109,10 +109,10 @@ export default function SOSPage() {
                     <AlertTriangle size={40} />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-display font-semibold tracking-tight text-foreground leading-[1.1]">
-                    Centro Emergenze
+                    Se è urgente, parti da qui
                 </h1>
                 <p className="text-xl text-secondary max-w-2xl mx-auto font-medium">
-                    Mantieni la calma. Non sei solo e ogni problema digitale ha una soluzione legale e tecnica. Cosa sta succedendo?
+                    Mantieni la calma. Se c’è un pericolo immediato, chiama il 112. Altrimenti scegli la situazione più vicina a te per capire i prossimi passi.
                 </p>
             </header>
 
