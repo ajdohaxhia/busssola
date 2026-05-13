@@ -3,7 +3,7 @@ import { Module } from '@/types';
 export const modulo_05_grooming_minori: Module = {
     id: 'modulo-05-grooming-minori',
     title: 'Modulo 5: Grooming e Protezione Minori',
-    description: 'Riconosci le fasi dell\\'adescamento online, i segnali di allarme nei minori e i protocolli di intervento di Polizia Postale e Save the Children.',
+    description: 'Riconosci le fasi dell\'adescamento online, i segnali di allarme nei minori e i protocolli di intervento di Polizia Postale e Save the Children.',
     category: 'grooming',
     difficulty: 'intermedia',
     icon: 'UserCheck',
