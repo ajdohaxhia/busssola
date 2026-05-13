@@ -238,7 +238,7 @@ export function moduleStructuredData(module: Module) {
         hasCourseInstance: {
             '@type': 'CourseInstance',
             courseMode: 'online',
-            courseWorkload: `PT${module.lessons.reduce((total, lesson) => total + lesson.minutes, 0)}M`,
+            courseWorkload: `PT${module.lessons.reduce((total, lesson) => total + (lesson as any).estimatedMinutes || 0, 0)}M`,
         },
     }
 }
@@ -251,7 +251,7 @@ export function lessonStructuredData(module: Module, lesson: Lesson, lessonNumbe
         '@type': 'Article',
         '@id': `${absoluteUrl(`/moduli/${module.id}/lezione/${lessonNumber}/`)}#article`,
         headline: `${lesson.title} - ${moduleTitle}`,
-        description: lesson.learningGoals.join(' '),
+        description: lesson.summary,
         url: absoluteUrl(`/moduli/${module.id}/lezione/${lessonNumber}/`),
         image: absoluteUrl(DEFAULT_OG_IMAGE),
         inLanguage: 'it-IT',
@@ -302,14 +302,14 @@ export function lessonMetadata(module: Module, lesson: Lesson, lessonNumber: num
 
     return buildSeoMetadata({
         title: `${lesson.title} - ${moduleTitle}`,
-        description: lesson.learningGoals.join(' '),
+        description: lesson.summary,
         path: `/moduli/${module.id}/lezione/${lessonNumber}/`,
         type: 'article',
         keywords: [
             lesson.title,
             moduleTitle,
             module.subtitle ?? '',
-            ...lesson.learningGoals,
+            ...(lesson.checklist || []),
         ],
     })
 }
