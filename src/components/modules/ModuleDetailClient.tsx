@@ -3,18 +3,16 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { motion, Variants } from 'framer-motion'
-import { Module, Lesson } from '@/types'
+import { Module } from '@/types'
 import { 
-  ChevronLeft, Play, Search, BookOpen, Clock, 
-  ShieldAlert, Target, Users, CheckCircle, 
-  ArrowRight, Lightbulb, ExternalLink, Library,
+  ChevronLeft, Play, Search, Clock, 
+  ShieldAlert, Users, CheckCircle, 
   ShieldCheck, AlertTriangle
 } from 'lucide-react'
 import { useGameStore } from '@/store/useGameStore'
 import { Container } from '@/components/ui/Container'
 import { Badge } from '@/components/ui/Badge'
 import { LEARNING_PATHS } from '@/data/paths'
-import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/Button'
 
 const containerVariants = {
@@ -58,8 +56,6 @@ export default function ModuleDetailClient({ currentModule }: ModuleDetailClient
         : moduleDifficulty === 'intermedia'
         ? "Utenti regolari, famiglie e giovani adulti." 
         : "Utenti più esperti, educatori o chi cerca tutele avanzate."
-
-    const parentPaths = LEARNING_PATHS.filter(p => p.moduleIds.includes(currentModule.id))
 
     return (
         <Container size="md" className="py-12 space-y-16 min-h-screen">

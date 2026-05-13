@@ -238,7 +238,7 @@ export function moduleStructuredData(module: Module) {
         hasCourseInstance: {
             '@type': 'CourseInstance',
             courseMode: 'online',
-            courseWorkload: `PT${module.lessons.reduce((total, lesson) => total + (lesson as any).estimatedMinutes || 0, 0)}M`,
+            courseWorkload: `PT${module.lessons.reduce((total, lesson) => total + (lesson.estimatedMinutes || 0), 0)}M`,
         },
     }
 }
