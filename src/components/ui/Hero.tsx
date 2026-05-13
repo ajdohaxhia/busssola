@@ -5,6 +5,7 @@ import { ShieldCheck, ArrowRight, ShieldAlert, Lock } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import Link from 'next/link';
 import Image from 'next/image';
+import { siteStats } from '@/data/siteStats';
 
 export function Hero() {
     return (
@@ -27,7 +28,7 @@ export function Hero() {
                 className="relative z-10 flex min-h-[480px] max-w-3xl flex-col items-start justify-center px-6 py-12 text-left md:min-h-[60vh] md:px-16 md:py-20"
             >
                 <h1 className="text-5xl font-display font-semibold leading-[0.98] tracking-tight text-foreground md:text-7xl">
-                    Busssola
+                    Bussola
                 </h1>
                 
                 <p className="mt-5 max-w-2xl text-2xl font-display font-semibold leading-tight text-foreground md:text-4xl">
@@ -35,7 +36,7 @@ export function Hero() {
                 </p>
 
                 <p className="mt-6 max-w-2xl text-lg leading-relaxed text-secondary md:text-xl">
-                    50 moduli gratuiti, oltre 480 lezioni curate per proteggere privacy, account e serenità online. Niente registrazione, niente tracciamento invasivo, un centro SOS sempre raggiungibile.
+                    {siteStats.totalModules} moduli gratuiti, {siteStats.publishedLessons} lezioni curate per proteggere privacy, account e serenità online. Niente registrazione, niente tracciamento invasivo, un centro SOS sempre raggiungibile.
                 </p>
                 
                 <div className="mt-10 flex w-full flex-col items-stretch gap-4 sm:w-auto sm:flex-row">

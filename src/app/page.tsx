@@ -8,6 +8,7 @@ import {
   Search, BookOpen, Clock
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { siteStats } from '@/data/siteStats'
 
 export default function Home() {
   return (
@@ -23,7 +24,7 @@ export default function Home() {
             Scegli il tuo percorso
           </h2>
           <p className="text-secondary text-lg">
-            Non una semplice lista di argomenti, ma percorsi curati per guidarti passo dopo passo.
+            Non una semplice lista di argomenti, ma {siteStats.learningPaths} percorsi curati per guidarti passo dopo passo.
           </p>
         </div>
         
@@ -72,7 +73,7 @@ export default function Home() {
             L'educazione digitale è per tutti
           </h2>
           <p className="text-secondary text-lg">
-            Le risorse di Busssola sono organizzate in modo chiaro per essere utili a ogni età e livello di competenza.
+            Le risorse di Bussola sono organizzate in modo chiaro per essere utili a ogni età e livello di competenza.
           </p>
         </div>
         
@@ -120,7 +121,7 @@ export default function Home() {
               Tutto ciò di cui hai bisogno
             </h2>
             <p className="text-secondary text-lg max-w-xl">
-              Non solo percorsi. Esplora il nostro catalogo completo di 50 moduli verticali per approfondire temi specifici.
+              Non solo percorsi. Esplora il nostro catalogo completo di {siteStats.totalModules} moduli verticali per approfondire temi specifici.
             </p>
           </div>
           <Button asChild variant="outline" className="rounded-xl h-12">
@@ -206,7 +207,7 @@ export default function Home() {
               Informazione verificata, rispetto garantito
             </h2>
             <p className="text-xl text-secondary max-w-2xl mx-auto leading-relaxed">
-              Il progetto Busssola nasce con una precisa integrità etica. Rifiutiamo clickbait, falsi allarmismi e profilazione invasiva dei dati.
+              Il progetto Bussola nasce con una precisa integrità etica. Rifiutiamo clickbait, falsi allarmismi e profilazione invasiva dei dati.
             </p>
           </div>
           
@@ -237,7 +238,7 @@ export default function Home() {
                 <Clock className="w-5 h-5"/>
               </div>
               <h4 className="font-semibold text-foreground">Totalmente indipendente</h4>
-              <p className="text-sm text-secondary leading-relaxed">Busssola non mostra pubblicità, non vende corsi ed è finanziata indipendentemente per restare gratuita per le scuole e i giovani.</p>
+              <p className="text-sm text-secondary leading-relaxed">Bussola non mostra pubblicità, non vende corsi ed è finanziata indipendentemente per restare gratuita per le scuole e i giovani.</p>
             </div>
           </div>
           

@@ -1,102 +1,84 @@
-# 🧭 Busssola
+# 🧭 Bussola
 
-> 🚧 **BOZZA — contenuti da riscrivere / Draft — lessons need rewriting**
+> 🧭 **Core v1 — Contenuti Verificati e Stabili**
 >
-> 🇮🇹 L'infrastruttura è pronta e l'UI funziona, ma le **lezioni dei 50 moduli sono ancora largamente templati ripetuti** (stessa scaletta "Perché conta / Segnali / Cosa fare / Cosa evitare / Quando chiedere aiuto / Passo pratico" applicata 480 volte cambiando solo il nome del tema). Non usare il sito come fonte autorevole. La riscrittura editoriale è il prossimo passo bloccante.
->
-> 🇬🇧 The shell and UI are production-ready, but **the lessons across the 50 modules are still mostly templated copies** (the same skeleton applied 480× with only the topic name swapped). Do not treat this site as an authoritative source. Editorial rewriting is the next blocking step.
+> Bussola ha raggiunto lo stato **Core v1**. Tutte le lezioni pubblicate hanno superato il **Quality Gate**, integrano fonti istituzionali verificate e offrono protocolli operativi reali. Il sito è pronto per l'uso pubblico e scolastico.
 
-**La piattaforma numero uno per l'educazione digitale consapevole in Italia.**
+**La piattaforma pratica per l'orientamento nei rischi digitali in Italia.**
 
-Busssola è una piattaforma educativa moderna e autorevole progettata per aiutare ragazzi, famiglie e scuole a navigare i rischi del web con competenza e serenità. Nata per trasformare la paura in consapevolezza, Busssola offre risposte pratiche, strumenti di protezione e protocolli di emergenza per le sfide digitali di oggi.
+Bussola è un sito educativo progettato per aiutare persone comuni, studenti, genitori ed educatori a gestire le emergenze digitali e costruire una presenza online sicura. Nata per trasformare la paura in competenza, Bussola offre risposte pratiche, checklist di protezione e protocolli di emergenza basati su fonti autorevoli.
 
-[Visita il sito live: busssola.com](https://busssola.com)
+[Visita il sito live: bussola.edu.it](https://bussola.edu.it)
 
 ---
 
 ## 🏛️ Visione Editoriale & Design
-Abbiamo superato l'approccio "cyber-hacking" del passato per adottare un'estetica **Calm UI** e un tono di voce **emotivamente intelligente**.
-*   **Affidabilità**: Linguaggio chiaro, autorevole e privo di allarmismo.
-*   **Praticità**: Zero tecnicismi inutili. Solo quello che devi sapere per agire.
-*   **Sicurezza Emotiva**: Un ambiente pensato per non spaventare, ma per supportare, specialmente nelle situazioni di crisi (Sextortion, Cyberbullismo, Grooming).
+Abbiamo adottato un'estetica **Calm UI** e un tono di voce **pragmatico ed empatico**.
+*   **Affidabilità**: Ogni lezione ha fonti reali linkate (Polizia Postale, Garante Privacy, Apple, Google, Meta).
+*   **Praticità**: Zero tecnicismi inutili. Solo quello che devi sapere per agire subito.
+*   **Sicurezza Emotiva**: Un ambiente pensato per supportare le vittime di abusi digitali senza colpevolizzazioni.
 
 ---
 
-## 📚 Il Curriculum (50 Moduli)
-Busssola dispone di una libreria completa di **50 moduli** con **oltre 480 lezioni curate e uniche** per coprire i temi essenziali della vita digitale:
-1.  **Privacy e Sicurezza**: Gestione account, password, 2FA, protezione smartphone.
-2.  **Rischi Relazionali**: Grooming, Sextortion, Cyberbullismo, Stalking online.
-3.  **Contenuti & Verità**: Fake News, Deepfake, Algoritmi, Bolle informative.
-4.  **Benessere**: Social media pressure, FOMO, ADHD digitale, Sonno e schermi.
-5.  **Target Specifici**: Percorsi dedicati per Scuole, Educatori e Genitori.
+## 📚 Libreria Contenuti (Core v1)
+Bussola dispone di una libreria strutturata di **16 moduli** con **52 lezioni verificate** che coprono:
+1.  **Primo Soccorso**: Sextortion, furto account (WA, IG, FB, TikTok), smartphone rubato.
+2.  **Account Security**: Password, 2FA, checkup privacy, eredità digitale.
+3.  **Truffe & Phishing**: Smishing corrieri, truffe Vinted/Marketplace, phishing bancario.
+4.  **Relazioni & Rischi**: Grooming, sexting sicuro, cyberstalking, doxxing, revenge porn.
+5.  **Scuola & Famiglia**: Cyberbullismo, protocolli per docenti, patto digitale di famiglia.
 
-### Recommendation Engine
-Il catalogo è curato con un sistema di raccomandazione intelligente:
-*   **Inizia da qui**: I 3 moduli fondamentali per chiunque inizi il percorso.
-*   **Altri moduli utili**: Percorsi suggeriti per approfondire.
-*   **Tutti i percorsi**: Accesso completo a 50 temi specifici.
+### Quality Gate
+Ogni lezione pubblicata deve includere:
+- **Scenario**: Contesto reale del rischio.
+- **Do Now**: Cosa fare immediatamente per limitare i danni.
+- **Don't Do**: Errori comuni da evitare (es. non pagare riscatti).
+- **Preserve Evidence**: Come salvare prove con valore legale.
+- **Checklist**: Lista di controllo operativa.
+- **Fonti Verificate**: Collegamenti a portali istituzionali o piattaforme ufficiali.
 
 ---
 
 ## 🛠️ Tech Stack & Architettura
-Il progetto è costruito per essere **stabile, veloce e scalabile**.
-
 *   **Framework**: [Next.js 15+](https://nextjs.org/) (App Router)
 *   **UI Engine**: [React 19](https://react.dev/)
 *   **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-*   **Animations**: [Framer Motion](https://www.framer.com/motion/) (Premium motion design)
-*   **Static Export**: Output HTML statico ottimizzato per CDN e Cloudflare Pages.
-*   **Privacy**: Nessun tracciamento esterno, nessun database centrale. Tutti i progressi sono salvati localmente.
+*   **Static Export**: Ottimizzato per Cloudflare Pages (Static HTML).
+*   **Privacy**: Nessun tracciamento, nessun database. Progressi salvati in LocalStorage.
 
 ---
 
-## ☁️ Deployment su Cloudflare Pages
-Il progetto è ottimizzato per **Cloudflare Pages** tramite un'architettura **Static HTML Export**.
-*   **Build**: `npm run build` genera una directory `out/` statica.
-*   **Node Version**: Supporto nativo tramite `.node-version` (v20+).
-*   **Performance**: TTFB quasi istantaneo grazie alla distribuzione globale su CDN.
-
----
-
-## 🚀 Guida Rapida per Sviluppatori
-
-### Prerequisiti
-- Node.js 20+
-- npm
-
-### Installazione
+## 🚀 Guida Rapida
 ```bash
-# Clona la repository
-git clone https://github.com/ajdohaxhia/bussola.git
-cd bussola
-
-# Installa le dipendenze
+# Installazione
 npm install
 
-# Avvia il server di sviluppo
+# Sviluppo
 npm run dev
-```
 
-### Build per Produzione
-```bash
-# Genera la build statica con validazione contenuti automatica
+# Validazione Contenuti (Controlla il Quality Gate di ogni lezione)
+npm run validate:content
+
+# Aggiornamento Statistiche (Sincronizza contatori sito e meta)
+npm run update-stats
+
+# Build per Produzione
 npm run build
 ```
 
 ---
 
-## 🆘 Centro SOS & Supporto
-Busssola include un **Centro SOS** situazionale progettato per offrire aiuto immediato:
-*   **Selector Situazionale**: Guida l'utente verso la risorsa giusta in base all'urgenza.
-*   **Numeri Utili**: 112 (Emergenza), 114 (Emergenza Infanzia), 1522 (violenza e stalking), Telefono Amico Italia.
+## 🆘 Centro SOS
+Bussola include un **Centro SOS** situazionale per offrire aiuto immediato:
+*   **Selector Situazionale**: Guida l'utente verso il protocollo giusto in base all'urgenza.
+*   **Numeri Utili**: 112 (Emergenza), 114 (Emergenza Infanzia), 1522 (Violenza/Stalking).
 *   **Protocolli di Difesa**: Step-by-step per ripristino account e segnalazioni legali.
 
 ---
 
 ## 📄 Licenza
-Questo progetto è rilasciato sotto licenza MIT.
-© 2026 Busssola - Educazione Digitale.
+© 2026 Bussola - Progetto Informativo Indipendente.
+Rilasciato sotto licenza MIT.
 
-*Ultimo aggiornamento: 10 Maggio 2026*
-*Status: BOZZA — contenuti da riscrivere* 🚧
-*Versione: 5.1-draft (guscio production-ready, lezioni ancora templati)*
+*Ultimo aggiornamento: 13 Maggio 2026*
+*Status: Core v1 — Production Ready* 🧭

@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Compass, ShieldCheck } from 'lucide-react';
 
+import { siteStats } from '@/data/siteStats';
+
 export function Footer() {
     return (
         <motion.footer
@@ -20,16 +22,21 @@ export function Footer() {
                         <Link href="/" className="flex items-center gap-3 w-fit text-foreground group">
                             <Compass className="w-8 h-8 text-primary group-hover:text-primary-hover transition-colors" strokeWidth={2} />
                             <span className="text-2xl font-display font-semibold tracking-tight">
-                                Busssola.
+                                Bussola.
                             </span>
                         </Link>
                         <p className="text-muted text-base leading-relaxed max-w-sm">
-                            Piattaforma educativa per imparare a riconoscere i rischi online, difendere la propria privacy e sapere sempre cosa fare.
+                            Piattaforma educativa per imparare a riconoscere i rischi online, difendere la propria privacy e sapere sempre cosa fare. {siteStats.publishedLessons} lezioni verificate.
                         </p>
-                        <div className="flex flex-col gap-2">
+                        <div className="flex flex-col gap-3">
                             <div className="flex items-center gap-2 text-sm font-medium text-secondary">
                                 <ShieldCheck className="w-5 h-5 text-primary" />
                                 <span>Supporto e strumenti pratici</span>
+                            </div>
+                            <div className="flex items-center gap-2 text-xs text-muted-foreground uppercase tracking-widest font-bold">
+                                <span>Stato: {siteStats.projectStage}</span>
+                                <span className="w-1 h-1 bg-border rounded-full" />
+                                <span>Aggiornato: {siteStats.lastUpdatedAt}</span>
                             </div>
                         </div>
                     </div>
@@ -42,7 +49,7 @@ export function Footer() {
                                 {[
                                     { label: 'Home', href: '/' },
                                     { label: 'Tutti i Moduli', href: '/moduli' },
-                                    { label: 'Cos\'è Busssola', href: '/about' },
+                                    { label: 'Cos\'è Bussola', href: '/about' },
                                     { label: 'Per le scuole', href: '/scuole' }
                                 ].map((item) => (
                                     <li key={item.label}>
@@ -61,8 +68,8 @@ export function Footer() {
                             <ul className="space-y-3">
                                 {[
                                     { label: 'Centro SOS', href: '/sos' },
-                                    { label: 'Contatti', href: '/contact' },
-                                    { label: 'Domande frequenti', href: '/faq' }
+                                    { label: 'Fonti', href: '/fonti' },
+                                    { label: 'FAQ', href: '/faq' }
                                 ].map((item) => (
                                     <li key={item.label}>
                                         <Link
@@ -100,12 +107,10 @@ export function Footer() {
 
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-6">
-                    <p className="text-sm text-muted">
-                        © {new Date().getFullYear()} Busssola. Creato con ❤️ da{' '}
-                        <Link href="/adelajdo-haxhiaj" className="font-semibold text-foreground hover:text-primary transition-colors">
-                            Adelajdo Haxhiaj
-                        </Link>.
-                    </p>
+                    <div className="text-sm text-muted">
+                        <p>© {new Date().getFullYear()} Bussola. Creato con ❤️ per l'educazione digitale.</p>
+                        <p className="mt-1 text-xs opacity-70">Le informazioni fornite non sostituiscono supporto legale o psicologico.</p>
+                    </div>
 
                     <div className="flex items-center gap-6">
                         <Link href="/trasparenza" className="text-sm text-muted hover:text-foreground transition-colors">Trasparenza</Link>

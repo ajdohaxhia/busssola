@@ -1,164 +1,168 @@
 import { ModuleMetadata } from '@/types';
 
+/**
+ * AUTO-GENERATED FILE - DO NOT EDIT MANUALLY
+ * To update, run: npm run update-stats
+ */
 export const MODULES_MAP: ModuleMetadata[] = [
-    {
-        id: 'modulo-01-primo-soccorso',
-        number: 1,
-        title: 'Primo Soccorso Digitale',
-        description: 'Procedure rapide per sextortion, furto account e smarrimento device.',
-        lessonCount: 4,
-        difficulty: 'base',
-        icon: 'ShieldAlert',
-        featuredType: 'start'
-    },
-    {
-        id: 'modulo-01b-primo-soccorso',
-        number: 2,
-        title: 'Emergenze Specifiche',
-        description: 'Doxxing, SIM Swapping e casi critici di furto d\'identità.',
-        lessonCount: 2,
-        difficulty: 'intermedia',
-        icon: 'ShieldAlert',
-        featuredType: 'curated'
-    },
-    {
-        id: 'modulo-02-account-security',
-        number: 3,
-        title: 'Account e Sicurezza Accessi',
-        description: 'Blindare i tuoi profili con password robuste, 2FA e gestori dedicati.',
-        lessonCount: 3,
-        difficulty: 'base',
-        icon: 'Key',
-        featuredType: 'start'
-    },
-    {
-        id: 'modulo-02b-account-security',
-        number: 4,
-        title: 'Checkup Privacy & Dati',
-        description: 'Pulizia totale della cronologia Google e gestione tracciamento.',
-        lessonCount: 1,
-        difficulty: 'intermedia',
-        icon: 'Key',
-        featuredType: 'curated'
-    },
-    {
-        id: 'modulo-03-truffe-phishing',
-        number: 5,
-        title: 'Frodi, Truffe e Phishing',
-        description: 'Riconoscere e bloccare smishing, vishing e truffe marketplace.',
-        lessonCount: 3,
-        difficulty: 'base',
-        icon: 'Target',
-        featuredType: 'curated'
-    },
-    {
-        id: 'modulo-03b-truffe-phishing',
-        number: 6,
-        title: 'Truffe Marketplace Avanzate',
-        description: 'Casi specifici su Vinted, eBay e Facebook Marketplace.',
-        lessonCount: 1,
-        difficulty: 'intermedia',
-        icon: 'Target',
-        featuredType: 'situational'
-    },
-    {
-        id: 'modulo-04-sextortion-ricatti',
-        number: 7,
-        title: 'Sextortion e Ricatti Sessuali',
-        description: 'Protocolli d\'azione e tutele legali per estorsioni e revenge porn.',
-        lessonCount: 3,
-        difficulty: 'intermedia',
-        icon: 'AlertCircle',
-        featuredType: 'situational'
-    },
-    {
-        id: 'modulo-04b-sextortion-ricatti',
-        number: 8,
-        title: 'Analisi del Ricatto',
-        description: 'Riconoscere i profili Catfish e analizzare la minaccia.',
-        lessonCount: 1,
-        difficulty: 'intermedia',
-        icon: 'AlertCircle',
-        featuredType: 'situational'
-    },
-    {
-        id: 'modulo-05-grooming-minori',
-        number: 9,
-        title: 'Grooming e Protezione Minori',
-        description: 'Riconoscere l\'adescamento e proteggere i più piccoli online.',
-        lessonCount: 1,
-        difficulty: 'intermedia',
-        icon: 'UserCheck',
-        featuredType: 'situational'
-    },
-    {
-        id: 'modulo-05b-grooming-minori',
-        number: 10,
-        title: 'Educazione al Consenso',
-        description: 'La regola del segreto brutto e sicurezza nei videogiochi.',
-        lessonCount: 1,
-        difficulty: 'intermedia',
-        icon: 'UserCheck',
-        featuredType: 'situational'
-    },
-    {
-        id: 'modulo-06-stalking-doxxing',
-        number: 11,
-        title: 'Cyberstalking e Doxxing',
-        description: 'Difesa dalle persecuzioni e protezione dei dati personali.',
-        lessonCount: 1,
-        difficulty: 'intermedia',
-        icon: 'Eye',
-        featuredType: 'situational'
-    },
-    {
-        id: 'modulo-06b-stalking-doxxing',
-        number: 12,
-        title: 'Tutele Legali Stalking',
-        description: 'L\'ammonimento del Questore e strumenti di prevenzione.',
-        lessonCount: 1,
-        difficulty: 'intermedia',
-        icon: 'Eye',
-        featuredType: 'situational'
-    },
-    {
-        id: 'modulo-07-privacy-smartphone',
-        number: 13,
-        title: 'Privacy e Smartphone',
-        description: 'Gestione permessi app e sicurezza in mobilità.',
-        lessonCount: 1,
-        difficulty: 'base',
-        icon: 'Smartphone',
-        featuredType: 'curated'
-    },
-    {
-        id: 'modulo-07b-privacy-smartphone',
-        number: 14,
-        title: 'Smartphone Avanzato',
-        description: 'Audit profondo dei permessi e monitoraggio sensori.',
-        lessonCount: 1,
-        difficulty: 'avanzata',
-        icon: 'Smartphone',
-        featuredType: 'curated'
-    },
-    {
-        id: 'modulo-08-scuola-famiglia',
-        number: 15,
-        title: 'Scuola e Famiglia',
-        description: 'Bullismo online e protocolli scuola-famiglia.',
-        lessonCount: 1,
-        difficulty: 'base',
-        icon: 'GraduationCap',
-        featuredType: 'situational'
-    },
-    {
-        id: 'modulo-08b-scuola-famiglia',
-        number: 16,
-        title: 'Rischi dello Sharenting',
-        description: 'Proteggere l\'immagine dei figli e identità digitale.',
-        lessonCount: 1,
-        difficulty: 'intermedia',
-        icon: 'GraduationCap',
-        featuredType: 'situational'
-    }
+  {
+    "id": "modulo-01-primo-soccorso",
+    "number": 0,
+    "title": "Primo Soccorso Digitale",
+    "description": "Procedure rapide e verificate per gestire emergenze in corso: sextortion, furto account e smarrimento device.",
+    "lessonCount": 8,
+    "difficulty": "base",
+    "icon": "ShieldAlert",
+    "featuredType": "curated"
+  },
+  {
+    "id": "modulo-01b-primo-soccorso",
+    "number": 0,
+    "title": "Primo Soccorso (Casi Specifici)",
+    "description": "Procedure per emergenze meno comuni ma gravissime: doxxing, sim-swapping e truffe bancarie mirate.",
+    "lessonCount": 3,
+    "difficulty": "intermedia",
+    "icon": "ShieldAlert",
+    "featuredType": "curated"
+  },
+  {
+    "id": "modulo-02-account-security",
+    "number": 0,
+    "title": "Account e Sicurezza Accessi",
+    "description": "Procedure e buone pratiche verificate per blindare i tuoi profili: password robuste, 2FA e gestione sessioni.",
+    "lessonCount": 4,
+    "difficulty": "base",
+    "icon": "Key",
+    "featuredType": "curated"
+  },
+  {
+    "id": "modulo-02b-account-security",
+    "number": 0,
+    "title": "Checkup Privacy & Sicurezza",
+    "description": "Procedure guidate per controllare cosa sanno di te Google, Facebook e Instagram, e come blindare i tuoi dati.",
+    "lessonCount": 3,
+    "difficulty": "intermedia",
+    "icon": "Key",
+    "featuredType": "curated"
+  },
+  {
+    "id": "modulo-03-truffe-phishing",
+    "number": 0,
+    "title": "Frodi, Truffe e Phishing",
+    "description": "Riconosci le tecniche di manipolazione digitale e impara a proteggere i tuoi soldi e i tuoi dati da smishing, vishing e truffe marketplace.",
+    "lessonCount": 5,
+    "difficulty": "base",
+    "icon": "Target",
+    "featuredType": "curated"
+  },
+  {
+    "id": "modulo-03b-truffe-phishing",
+    "number": 0,
+    "title": "Casi Specifici di Truffa",
+    "description": "Analisi profonda delle truffe più recenti su Vinted, Marketplace e piattaforme di annunci.",
+    "lessonCount": 3,
+    "difficulty": "intermedia",
+    "icon": "Target",
+    "featuredType": "curated"
+  },
+  {
+    "id": "modulo-04-sextortion-ricatti",
+    "number": 0,
+    "title": "Sextortion e Ricatti Sessuali",
+    "description": "Protocolli rigorosi per gestire estorsioni basate su immagini intime, blocco tecnico della diffusione e tutele legali del Garante Privacy.",
+    "lessonCount": 4,
+    "difficulty": "intermedia",
+    "icon": "AlertCircle",
+    "featuredType": "curated"
+  },
+  {
+    "id": "modulo-04b-sextortion-ricatti",
+    "number": 0,
+    "title": "Sextortion (Protocolli Avanzati)",
+    "description": "Analisi dei profili Catfish e realtà statistica sulla diffusione dei contenuti: dati per mantenere la calma.",
+    "lessonCount": 2,
+    "difficulty": "intermedia",
+    "icon": "AlertCircle",
+    "featuredType": "curated"
+  },
+  {
+    "id": "modulo-05-grooming-minori",
+    "number": 0,
+    "title": "Grooming e Protezione Minori",
+    "description": "Riconosci le fasi dell'adescamento online, i segnali di allarme nei minori e i protocolli di intervento di Polizia Postale e Save the Children.",
+    "lessonCount": 2,
+    "difficulty": "intermedia",
+    "icon": "UserCheck",
+    "featuredType": "curated"
+  },
+  {
+    "id": "modulo-05b-grooming-minori",
+    "number": 0,
+    "title": "Grooming (Educazione e Gaming)",
+    "description": "Come spiegare l'adescamento ai bambini e come proteggerli durante le sessioni di gioco online.",
+    "lessonCount": 2,
+    "difficulty": "intermedia",
+    "icon": "UserCheck",
+    "featuredType": "curated"
+  },
+  {
+    "id": "modulo-06-stalking-doxxing",
+    "number": 0,
+    "title": "Cyberstalking e Doxxing",
+    "description": "Difenditi dalle persecuzioni online e dalla diffusione illecita dei tuoi dati personali con le procedure legali di ammonimento e reclamo al Garante.",
+    "lessonCount": 3,
+    "difficulty": "intermedia",
+    "icon": "Eye",
+    "featuredType": "curated"
+  },
+  {
+    "id": "modulo-06b-stalking-doxxing",
+    "number": 0,
+    "title": "Cyberstalking (Tutele legali e Spyware)",
+    "description": "Procedure per fermare lo stalking tramite l'ammonimento del Questore e come rilevare software spia sul telefono.",
+    "lessonCount": 3,
+    "difficulty": "intermedia",
+    "icon": "Eye",
+    "featuredType": "curated"
+  },
+  {
+    "id": "modulo-07-privacy-smartphone",
+    "number": 0,
+    "title": "Privacy e Smartphone",
+    "description": "Gestisci i permessi delle applicazioni, proteggi i tuoi dati in mobilità e segui il protocollo di emergenza in caso di furto o smarrimento del dispositivo.",
+    "lessonCount": 2,
+    "difficulty": "base",
+    "icon": "Smartphone",
+    "featuredType": "curated"
+  },
+  {
+    "id": "modulo-07b-privacy-smartphone",
+    "number": 0,
+    "title": "Privacy Smartphone (Avanzata)",
+    "description": "Tecniche di difesa avanzate: audit dei permessi sensibili e gestione della biometria.",
+    "lessonCount": 3,
+    "difficulty": "avanzata",
+    "icon": "Smartphone",
+    "featuredType": "curated"
+  },
+  {
+    "id": "modulo-08-scuola-famiglia",
+    "number": 0,
+    "title": "Scuola e Famiglia",
+    "description": "Protocolli istituzionali per la gestione del cyberbullismo, il ruolo del docente referente e le tutele della Legge 71/2017.",
+    "lessonCount": 3,
+    "difficulty": "base",
+    "icon": "GraduationCap",
+    "featuredType": "curated"
+  },
+  {
+    "id": "modulo-08b-scuola-famiglia",
+    "number": 0,
+    "title": "Scuola e Famiglia (Approfondimento)",
+    "description": "Approfondimento sui rischi dello Sharenting e sulle conseguenze legali del sexting tra minori.",
+    "lessonCount": 2,
+    "difficulty": "intermedia",
+    "icon": "GraduationCap",
+    "featuredType": "curated"
+  }
 ];

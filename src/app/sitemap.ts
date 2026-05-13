@@ -4,7 +4,7 @@ import { LEARNING_PATHS } from '@/data/paths'
 
 export const dynamic = 'force-static'
 
-const baseUrl = 'https://busssola.com'
+const baseUrl = 'https://bussola.edu.it'
 
 const staticRoutes = [
     '',
@@ -14,6 +14,7 @@ const staticRoutes = [
     '/aiuto',
     '/contact',
     '/faq',
+    '/fonti',
     '/metodo-editoriale',
     '/moduli',
     '/percorsi',
@@ -40,7 +41,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const modules = ALL_MODULES.map((module) => entry(`/moduli/${module.id}`, 0.75, 'monthly'))
 
     const lessons = ALL_MODULES.flatMap((module) =>
-        module.lessons.map((_, index) => entry(`/moduli/${module.id}/lezione/${index + 1}`, 0.45, 'monthly'))
+        module.lessons
+            .filter(l => l.status === 'published' && l.qualityGatePassed)
+            .map((_, index) => entry(`/moduli/${module.id}/lezione/${index + 1}`, 0.45, 'monthly'))
     )
 
     const paths = LEARNING_PATHS.map((path) => entry(`/percorsi/${path.id}`, 0.7, 'monthly'))
