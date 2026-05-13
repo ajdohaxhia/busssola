@@ -79,6 +79,65 @@ export const modulo_07_privacy_smartphone: Module = {
             ],
             lastReviewedAt: '2024-05-13',
             qualityGatePassed: true
+        },
+        {
+            id: 'public-private-choice',
+            slug: 'profilo-pubblico-privato-differenze-sicurezza',
+            title: 'Profilo pubblico o privato: Cosa cambia',
+            category: 'privacy',
+            audience: ['minors', 'parents'],
+            level: 'base',
+            estimatedMinutes: 4,
+            summary: 'La decisione più importante quando apri un social: chi può vedere i tuoi contenuti e chi può contattarti.',
+            status: 'published',
+            emergencyLevel: 'low',
+            scenario: 'Stai aprendo un nuovo account su Instagram o TikTok. Ti viene chiesto se vuoi un profilo pubblico o privato. Non sei sicuro di quale scegliere per bilanciare divertimento e sicurezza.',
+            question: 'Perché un minore dovrebbe quasi sempre avere un profilo privato?',
+            whatIsHappening: 'Un profilo pubblico espone ogni tua foto, video e commento a chiunque nel mondo, inclusi malintenzionati che potrebbero usare le tue immagini per scopi impropri. Un profilo privato ti permette di controllare chi ti segue e chi può interagire con te.',
+            warningSigns: [
+                'Ricevi messaggi strani (DM) da persone che non conosci.',
+                'Le tue foto vengono ri-condivise da account sconosciuti.',
+                'Vedi commenti inappropriati sotto i tuoi video.'
+            ],
+            doNow: [
+                'Imposta il profilo su "Privato" nelle impostazioni di Privacy del social.',
+                'Rivedi la lista dei follower e rimuovi chiunque non conosci nella vita reale.',
+                'Limita chi può taggarti o menzionarti nei post.',
+                'Attiva il filtro per i "Commenti offensivi" o le "Parole nascoste".'
+            ],
+            dontDo: [
+                'Non accettare richieste di amicizia solo per far salire il numero di follower.',
+                'Non pubblicare informazioni che indicano dove ti trovi o quale scuola frequenti (anche se il profilo è privato, è meglio evitare).'
+            ],
+            preserveEvidence: [
+                'N/A - Si tratta di prevenzione.'
+            ],
+            askHelpWhen: [
+                'Se, nonostante il profilo privato, continui a ricevere molestie o richieste insistenti.'
+            ],
+            whoCanHelp: [
+                'Supporto ufficiale Meta / TikTok',
+                'Genitori o insegnanti (se sei un minore)',
+                'Garante Privacy'
+            ],
+            checklist: [
+                'Attiva Profilo Privato',
+                'Filtra commenti',
+                'Pulisci follower',
+                'No tag da estranei'
+            ],
+            sources: [
+                {
+                    title: 'Privacy su Instagram: Account privati e pubblici',
+                    organization: 'Instagram Help Center',
+                    url: 'https://help.instagram.com/116024195217477',
+                    type: 'platform',
+                    usedFor: 'Descrizione tecnica delle differenze di visibilità.',
+                    lastCheckedAt: '2024-05-13'
+                }
+            ],
+            lastReviewedAt: '2024-05-13',
+            qualityGatePassed: true
         }
     ]
 };

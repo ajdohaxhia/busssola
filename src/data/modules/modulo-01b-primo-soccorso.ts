@@ -141,6 +141,69 @@ export const modulo_01b_primo_soccorso: Module = {
             ],
             lastReviewedAt: '2024-05-13',
             qualityGatePassed: true
+        },
+        {
+            id: 'email-hacked-sos',
+            slug: 'email-compromessa-cosa-fare-subito',
+            title: 'Email compromessa: Primi 30 minuti',
+            category: 'first-aid',
+            audience: ['adults', 'victims'],
+            level: 'medio',
+            estimatedMinutes: 8,
+            summary: 'L\'email è la chiave di tutti i tuoi altri account. Se violata, devi agire immediatamente per isolare l\'attaccante.',
+            status: 'published',
+            emergencyLevel: 'high',
+            scenario: 'Ricevi notifiche di cambio password per servizi a cui non sei loggato, oppure trovi nella cartella "Inviata" messaggi che non hai scritto. Ti rendi conto che qualcuno ha accesso alla tua posta elettronica principale.',
+            question: 'Cosa devo controllare oltre alla password per essere sicuro di aver espulso l\'hacker?',
+            whatIsHappening: 'Un attaccante ha accesso alla tua posta. Oltre a leggere i tuoi messaggi, può usare la funzione "Password dimenticata" su tutti i tuoi social e conti bancari per prenderne il controllo.',
+            warningSigns: [
+                'Regole di inoltro (forwarding) automatico che non hai impostato.',
+                'Dispositivi sconosciuti nell\'elenco degli accessi recenti.',
+                'Messaggi di sicurezza da Google/Microsoft su tentativi di recupero account.',
+                'Cartella "Cestino" piena di mail di reset password che non hai mai visto (l\'hacker le cancella subito per non farsi scoprire).'
+            ],
+            doNow: [
+                'Cambia la password dell\'email usando un dispositivo pulito (es. uno smartphone sicuro, non il PC che potrebbe essere infetto).',
+                'Controlla le "Regole di Inoltro" o "Filtri": gli hacker spesso impostano l\'inoltro automatico di tutte le tue mail a un loro indirizzo.',
+                'Esegui il log-out da tutti i dispositivi (Sessioni attive).',
+                'Verifica che le informazioni di recupero (numero di telefono e mail secondaria) non siano state modificate.',
+                'Controlla la cartella "Inviata" per vedere se sono state inviate mail truffaldine ai tuoi contatti.'
+            ],
+            dontDo: [
+                'Non cambiare solo la password: se l\'hacker ha impostato un inoltro automatico, continuerà a ricevere le tue mail anche con la nuova password.',
+                'Non usare la stessa vecchia password aggiungendo solo un numero.'
+            ],
+            preserveEvidence: [
+                'Salva gli indirizzi IP degli accessi sospetti (disponibili nei log di sicurezza di Gmail/Outlook).',
+                'Fai screenshot di eventuali regole di inoltro fraudolente.'
+            ],
+            askHelpWhen: [
+                'Se sei completamente bloccato fuori e non riesci a usare le opzioni di recupero.',
+                'Se l\'account mail è aziendale o contiene dati sensibili di terze parti.'
+            ],
+            whoCanHelp: [
+                'Google Account Support / Microsoft Security Team',
+                'Polizia Postale',
+                'Amministratore IT (se mail di lavoro)'
+            ],
+            checklist: [
+                'Cambio password immediato',
+                'Verifica filtri/inoltro',
+                'Logout sessioni attive',
+                'Controllo info recupero'
+            ],
+            sources: [
+                {
+                    title: 'Proteggere un account Google violato o compromesso',
+                    organization: 'Google Account Help',
+                    url: 'https://support.google.com/accounts/answer/6294827',
+                    type: 'platform',
+                    usedFor: 'Protocollo di sicurezza e controllo attività sospette.',
+                    lastCheckedAt: '2024-05-13'
+                }
+            ],
+            lastReviewedAt: '2024-05-13',
+            qualityGatePassed: true
         }
     ]
 };

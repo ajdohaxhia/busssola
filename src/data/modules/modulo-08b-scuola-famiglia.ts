@@ -69,6 +69,66 @@ export const modulo_08b_scuola_famiglia: Module = {
             ],
             lastReviewedAt: '2024-05-13',
             qualityGatePassed: true
+        },
+        {
+            id: 'family-digital-agreement',
+            slug: 'patto-digitale-famiglia-regole-condivise',
+            title: 'Patto digitale di famiglia',
+            category: 'school',
+            audience: ['parents', 'minors'],
+            level: 'base',
+            estimatedMinutes: 8,
+            summary: 'Non limitarti a dare un telefono: firma un patto. Uno strumento per stabilire regole, tempi e responsabilità in modo condiviso.',
+            status: 'published',
+            emergencyLevel: 'low',
+            scenario: 'Stai per regalare il primo smartphone a tuo figlio. Vuoi che lo usi in modo responsabile ma non vuoi sembrare solo "quello che mette divieti".',
+            question: 'Come posso dare lo smartphone senza perdere il controllo?',
+            whatIsHappening: 'Il "Patto Digitale" è un contratto simbolico (ma efficace) tra genitori e figli. Serve a chiarire che lo smartphone è uno strumento potente che richiede responsabilità. Invece di subire le regole, il minore le accetta consapevolmente in cambio della fiducia.',
+            warningSigns: [
+                'Uso notturno eccessivo dello smartphone.',
+                'Il minore si isola durante i pasti per stare al telefono.',
+                'Reazioni aggressive se il tempo d\'uso viene limitato.'
+            ],
+            doNow: [
+                'Scarica o scrivi un "Patto di Famiglia" (trovi modelli su Save the Children o Internet Matters).',
+                'Stabilite insieme gli "orari offline" (es: niente telefoni a tavola, niente telefoni dopo le 21:00).',
+                'Definite le "Zone Bianche" della casa (es: la camera da letto è una zona senza smartphone di notte).',
+                'Chiarisci che il genitore ha il diritto/dovere di conoscere le password finché il minore non dimostra piena maturità.',
+                'Stabilite le conseguenze per la violazione del patto (es: riduzione del tempo d\'uso).'
+            ],
+            dontDo: [
+                'Non imporre il patto senza discussione: ascolta le esigenze di tuo figlio.',
+                'Non violare tu stesso il patto: i genitori devono essere i primi a dare l\'esempio (niente telefono a tavola anche per gli adulti!).'
+            ],
+            preserveEvidence: [
+                'Conserva il patto cartaceo appeso in un luogo visibile (es: sul frigorifero).'
+            ],
+            askHelpWhen: [
+                'Se noti che il minore non riesce assolutamente a rispettare i patti, manifestando una possibile dipendenza tecnologica.'
+            ],
+            whoCanHelp: [
+                'Save the Children Italia',
+                'Rete dei Patti Digitali',
+                'Pediatra / Psicologo infantile'
+            ],
+            checklist: [
+                'Modello patto pronto',
+                'Firma condivisa',
+                'Orari offline certi',
+                'Genitori danno esempio'
+            ],
+            sources: [
+                {
+                    title: 'Patto digitale tra genitori e figli',
+                    organization: 'Save the Children',
+                    url: 'https://www.savethechildren.it/blog-11/regole-uso-smartphone-minori-modello-patto-digitale',
+                    type: 'nonprofit',
+                    usedFor: 'Modello educativo e principi di responsabilità condivisa.',
+                    lastCheckedAt: '2024-05-13'
+                }
+            ],
+            lastReviewedAt: '2024-05-13',
+            qualityGatePassed: true
         }
     ]
 };

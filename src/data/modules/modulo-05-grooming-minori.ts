@@ -81,6 +81,68 @@ export const modulo_05_grooming_minori: Module = {
             ],
             lastReviewedAt: '2024-05-13',
             qualityGatePassed: true
+        },
+        {
+            id: 'gaming-grooming-safety',
+            slug: 'grooming-nel-gaming-e-chat-vocali',
+            title: 'Pericolo Gaming: Più che un gioco',
+            category: 'grooming',
+            audience: ['parents', 'minors'],
+            level: 'base',
+            estimatedMinutes: 6,
+            summary: 'I videogiochi online sono piazze pubbliche. Impara come i predatori usano le chat vocali e i regali in-game per avvicinare i minori.',
+            status: 'published',
+            emergencyLevel: 'medium',
+            scenario: 'Tuo figlio gioca a un titolo popolare (come Roblox o Fortnite). Un altro giocatore, apparentemente coetaneo, inizia a regalargli "skin" o moneta del gioco e lo invita a spostare la conversazione su Discord o WhatsApp.',
+            question: 'Perché un estraneo dovrebbe fare regali a mio figlio nei videogiochi?',
+            whatIsHappening: 'Si tratta di una tecnica di grooming chiamata "Gifting". Il predatore crea un debito di gratitudine nel minore per manipolarlo più facilmente. Spostare la conversazione su app esterne serve a sfuggire ai filtri di moderazione del gioco.',
+            warningSigns: [
+                'Il minore riceve regali costosi in-game da sconosciuti.',
+                'Uso costante di cuffie e microfono in isolamento, con reazioni nervose se un adulto si avvicina.',
+                'Il minore usa termini o gergo che non appartengono alla sua età.',
+                'Richiesta di fare "sfide" in videochiamata per ottenere premi nel gioco.'
+            ],
+            doNow: [
+                'Disabilita la chat vocale con estranei nelle impostazioni del gioco (Parental Control).',
+                'Spiega al minore che gli oggetti virtuali hanno un valore reale e non vanno accettati da chi non si conosce offline.',
+                'Mantieni la console o il PC in una stanza comune della casa.',
+                'Controlla periodicamente le amicizie nelle app di chat collegate (es. Discord).'
+            ],
+            dontDo: [
+                'Non colpevolizzare il minore se ha accettato regali: il predatore conta proprio sul suo senso di colpa per farlo tacere.',
+                'Non vietare il gioco tout-court senza spiegare il motivo: spingeresti il minore a giocare di nascosto.'
+            ],
+            preserveEvidence: [
+                'Screenshot della chat del gioco e del profilo del sospetto.',
+                'ID utente (username univoco) dell\'interlocutore.'
+            ],
+            askHelpWhen: [
+                'Se scopri che il minore ha inviato foto reali o ha fornito l\'indirizzo di casa.',
+                'Se il minore riceve minacce di "ban" o ritorsioni nel gioco se smette di rispondere.'
+            ],
+            whoCanHelp: [
+                'Telefono Azzurro (19696)',
+                'Generazioni Connesse',
+                'Polizia Postale'
+            ],
+            checklist: [
+                'Parental Control on',
+                'No chat estranei',
+                'Regali non ammessi',
+                'Gioco in sala comune'
+            ],
+            sources: [
+                {
+                    title: 'Il Grooming nei videogiochi: Guida per genitori',
+                    organization: 'Save the Children Italia',
+                    url: 'https://www.savethechildren.it/blog-11/grooming-adescamento-online-minori-cosa-e-come-prevenirlo',
+                    type: 'nonprofit',
+                    usedFor: 'Descrizione delle tecniche di manipolazione attraverso il gaming.',
+                    lastCheckedAt: '2024-05-13'
+                }
+            ],
+            lastReviewedAt: '2024-05-13',
+            qualityGatePassed: true
         }
     ]
 };

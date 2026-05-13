@@ -219,6 +219,63 @@ export const modulo_02_account_security: Module = {
             ],
             lastReviewedAt: '2024-05-13',
             qualityGatePassed: true
+        },
+        {
+            id: '2fa-backup-codes-guide',
+            slug: 'codici-backup-2fa-guida-sopravvivenza',
+            title: 'Codici Backup 2FA: La tua ancora di salvezza',
+            category: 'accounts',
+            audience: ['adults', 'parents'],
+            level: 'medio',
+            estimatedMinutes: 5,
+            summary: 'Se perdi il telefono o l\'app di autenticazione, i codici di backup sono l\'unico modo per non restare bloccato fuori dai tuoi account.',
+            status: 'published',
+            emergencyLevel: 'medium',
+            scenario: 'Hai attivato l\'autenticazione a due fattori (2FA) su Google. Lo smartphone ti cade in acqua e non si accende più. Provi ad accedere dal PC, ti viene chiesto il codice dell\'app Authenticator, ma non puoi vederlo.',
+            question: 'Cosa succede se perdo il telefono con la 2FA attiva?',
+            whatIsHappening: 'Senza i codici di backup, il recupero di un account con 2FA può richiedere giorni o essere impossibile. I codici di backup sono una lista di codici monouso generati durante il setup iniziale.',
+            warningSigns: [
+                'Hai attivato la 2FA ma non hai mai scaricato o stampato i codici di emergenza.',
+                'L\'unica opzione di backup è un numero di telefono che potresti perdere insieme al device.'
+            ],
+            doNow: [
+                'Vai nelle impostazioni di sicurezza del tuo account (Google, Apple, Microsoft).',
+                'Trova la sezione "Autenticazione a due fattori" -> "Codici di backup" o "Codici di recupero".',
+                'Genera i codici e stampali oppure scrivili a mano su un foglio da conservare in un luogo sicuro (fisico).',
+                'Se usi un gestore di password (es. Bitwarden), salva i codici all\'interno della nota protetta dell\'account.'
+            ],
+            dontDo: [
+                'Non salvare i codici di backup come file di testo non protetto sul desktop del PC o come foto non criptata in galleria.',
+                'Non rimandare: fallo ora mentre hai ancora accesso al dispositivo.'
+            ],
+            preserveEvidence: [
+                'N/A - Si tratta di prevenzione.'
+            ],
+            askHelpWhen: [
+                'Se sei già bloccato fuori e non hai i codici: segui le procedure di "Recupero account" specifiche della piattaforma, ma preparati a tempi lunghi.'
+            ],
+            whoCanHelp: [
+                'Supporto Clienti della piattaforma (Google/Apple/Meta)',
+                'Un familiare fidato (se hai condiviso i codici con lui)'
+            ],
+            checklist: [
+                'Accedi a Impostazioni Sicurezza',
+                'Genera codici backup',
+                'Stampa o salva offline',
+                'Verifica che siano accessibili'
+            ],
+            sources: [
+                {
+                    title: 'Accedere con i codici di backup',
+                    organization: 'Google Account Help',
+                    url: 'https://support.google.com/accounts/answer/1187538',
+                    type: 'platform',
+                    usedFor: 'Spiegazione tecnica sull\'uso e la generazione dei codici.',
+                    lastCheckedAt: '2024-05-13'
+                }
+            ],
+            lastReviewedAt: '2024-05-13',
+            qualityGatePassed: true
         }
     ]
 };

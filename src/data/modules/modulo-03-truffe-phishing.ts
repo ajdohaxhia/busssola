@@ -213,6 +213,131 @@ export const modulo_03_truffe_phishing: Module = {
             ],
             lastReviewedAt: '2024-05-13',
             qualityGatePassed: true
+        },
+        {
+            id: 'phishing-remediation',
+            slug: 'ho-inserito-password-sito-falso-phishing',
+            title: 'Ho inserito la password su un sito falso',
+            category: 'phishing',
+            audience: ['adults', 'victims'],
+            level: 'base',
+            estimatedMinutes: 6,
+            summary: 'Se ti sei reso conto di aver inserito le tue credenziali su una pagina falsa, devi agire nei primi secondi per evitare il furto dell\'account.',
+            status: 'published',
+            emergencyLevel: 'high',
+            scenario: 'Hai cliccato su un link in un SMS che sembrava provenire dalla tua banca o da Amazon. Hai inserito username e password. Solo dopo aver premuto "Invio", noti che l\'indirizzo del sito (URL) era strano (es: www.amazzon-sicuro.it invece di amazon.it).',
+            question: 'Cosa devo fare se l\'hacker ha già la mia password?',
+            whatIsHappening: 'L\'attaccante ha catturato le tue credenziali in tempo reale. Se non agisci subito, userà quelle credenziali per entrare nel tuo account vero, cambiare la mail di recupero e bloccarti fuori.',
+            warningSigns: [
+                'L\'URL del sito non corrisponde a quello ufficiale.',
+                'Errori ortografici o grafica leggermente diversa dal solito.',
+                'Il sito ti chiede dati insoliti (es: il PIN della carta per sbloccare l\'account).',
+                'Dopo il login, il sito "si blocca" o ti rimanda alla homepage reale.'
+            ],
+            doNow: [
+                'Vai immediatamente sul sito UFFICIALE (digitando l\'indirizzo a mano) e cambia la password.',
+                'Se il sito supporta la funzione "Disconnetti tutti i dispositivi", usala subito.',
+                'Verifica che le tue informazioni di recupero (telefono/mail) non siano state modificate.',
+                'Se usi la stessa password su altri siti, cambiala anche lì immediatamente.',
+                'Attiva la 2FA (Autenticazione a due fattori) se non era attiva.'
+            ],
+            dontDo: [
+                'Non aspettare: gli hacker usano script automatici che entrano nel tuo account pochi secondi dopo che hai inserito i dati.',
+                'Non usare link contenuti in mail di "conferma cambio password" sospette: vai sempre dal sito ufficiale.'
+            ],
+            preserveEvidence: [
+                'Fai uno screenshot dell\'URL del sito falso prima di chiudere la pagina.',
+                'Copia il link del sito falso per segnalarlo alle autorità.'
+            ],
+            askHelpWhen: [
+                'Se provi a cambiare password e il sistema ti dice che le informazioni di recupero sono già state cambiate.',
+                'Se il sito coinvolto è la tua banca: chiama subito il loro numero di emergenza.'
+            ],
+            whoCanHelp: [
+                'Polizia Postale (commissariatodips.it)',
+                'CERT-AgID (per segnalare il sito falso)',
+                'Supporto ufficiale del servizio (Amazon, Microsoft, ecc.)'
+            ],
+            checklist: [
+                'Cambio password immediato',
+                'Logout sessioni attive',
+                'Controllo info recupero',
+                'Attiva 2FA'
+            ],
+            sources: [
+                {
+                    title: 'Phishing: Come riconoscerlo e difendersi',
+                    organization: 'CERT-AgID',
+                    url: 'https://cert-agid.gov.it/cittadini/phishing/',
+                    type: 'official',
+                    usedFor: 'Procedure di mitigazione post-attacco e segni distintivi delle esche.',
+                    lastCheckedAt: '2024-05-13'
+                }
+            ],
+            lastReviewedAt: '2024-05-13',
+            qualityGatePassed: true
+        },
+        {
+            id: 'bank-card-breach',
+            slug: 'ho-inserito-dati-carta-sito-falso',
+            title: 'Ho inserito i dati della carta: Cosa fare',
+            category: 'phishing',
+            audience: ['adults', 'victims'],
+            level: 'base',
+            estimatedMinutes: 5,
+            summary: 'Se hai fornito numero di carta, scadenza e CVV a un sito sospetto, la tua priorità è bloccare i movimenti finanziari.',
+            status: 'published',
+            emergencyLevel: 'high',
+            scenario: 'Credevi di pagare una multa o una tassa (es: PagoPA falsa) o di sbloccare un pacco in giacenza. Hai inserito i dati della tua carta di credito o prepagata. Subito dopo ricevi un SMS per un\'autorizzazione di spesa che non riconosci.',
+            question: 'Come posso fermare i ladri prima che svuotino il conto?',
+            whatIsHappening: 'I dati della tua carta sono in mano a criminali che li useranno per acquisti online o per clonare la carta. Molti attacchi avvengono di notte o nel weekend per darti meno tempo di reagire.',
+            warningSigns: [
+                'Notifiche di transazioni (SMS/Push) per importi che non riconosci.',
+                'Il sito di pagamento non usava protocolli sicuri (niente lucchetto o URL sospetto).',
+                'Ti è stato chiesto il codice OTP ricevuto via SMS per "verificare la carta" invece che per un acquisto specifico.'
+            ],
+            doNow: [
+                'Apri l\'app della tua banca e usa la funzione "Blocca Carta" o "Freeze" immediatamente.',
+                'Chiama il numero verde per il blocco carte del tuo istituto (disponibile 24/7).',
+                'Verifica l\'estratto conto e segnati le transazioni non autorizzate.',
+                'Disconosci le transazioni tramite la procedura ufficiale della banca (chargeback).',
+                'Sporgi denuncia presso la Polizia o i Carabinieri: è obbligatoria per molte banche per procedere al rimborso.'
+            ],
+            dontDo: [
+                'Non aspettare il lunedì mattina se la banca è chiusa: i servizi di blocco sono sempre attivi.',
+                'Non fidarti se ricevi una chiamata da qualcuno che dice di essere della tua banca e ti chiede altri codici per "annullare il furto": è un secondo attacco (vishing).'
+            ],
+            preserveEvidence: [
+                'Screenshot della pagina dove hai inserito i dati.',
+                'SMS o notifiche di transazioni sospette.',
+                'Copia della denuncia presentata alle autorità.'
+            ],
+            askHelpWhen: [
+                'Immediatamente. Non c\'è tempo da perdere quando si tratta di dati finanziari.'
+            ],
+            whoCanHelp: [
+                'Tua Banca / Servizio Clienti Carta',
+                'Polizia Postale',
+                'Associazioni Consumatori (per supporto rimborsi)'
+            ],
+            checklist: [
+                'Blocca carta da app',
+                'Chiama numero blocco',
+                'Disconosci transazioni',
+                'Fai denuncia ufficiale'
+            ],
+            sources: [
+                {
+                    title: 'Frodi con carte di pagamento',
+                    organization: 'Polizia di Stato',
+                    url: 'https://www.commissariatodips.it/consigli/per-tutti/le-truffe-online/carte-di-pagamento/index.html',
+                    type: 'official',
+                    usedFor: 'Protocollo di blocco e denuncia in caso di compromissione dati bancari.',
+                    lastCheckedAt: '2024-05-13'
+                }
+            ],
+            lastReviewedAt: '2024-05-13',
+            qualityGatePassed: true
         }
     ]
 };

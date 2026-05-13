@@ -12,7 +12,6 @@ import {
 import { useGameStore } from '@/store/useGameStore'
 import { Container } from '@/components/ui/Container'
 import { Badge } from '@/components/ui/Badge'
-import { LEARNING_PATHS } from '@/data/paths'
 import { Button } from '@/components/ui/Button'
 
 const containerVariants = {

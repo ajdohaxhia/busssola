@@ -84,6 +84,127 @@ export const modulo_06_stalking_doxxing: Module = {
             ],
             lastReviewedAt: '2024-05-13',
             qualityGatePassed: true
+        },
+        {
+            id: 'stalking-safety-plan',
+            slug: 'piano-sicurezza-digitale-personale-stalking',
+            title: 'Piano di sicurezza digitale personale',
+            category: 'stalking',
+            audience: ['adults', 'victims'],
+            level: 'medio',
+            estimatedMinutes: 8,
+            summary: 'Un protocollo completo per blindare la tua identità online quando sei vittima di una persecuzione.',
+            status: 'published',
+            emergencyLevel: 'high',
+            scenario: 'Sei vittima di stalking e sospetti che il persecutore possa accedere ai tuoi account o sapere dove ti trovi. Hai bisogno di un "reset" totale della tua impronta digitale per sicurezza.',
+            question: 'Come posso sparire dal radar di uno stalker senza rinunciare alla tecnologia?',
+            whatIsHappening: 'Lo stalking digitale si nutre di informazioni. Ridurre la tua superficie di attacco significa chiudere ogni porta che lo stalker potrebbe usare per spiarti (posizioni, amici comuni, vecchie password).',
+            warningSigns: [
+                'Lo stalker sa cose che hai detto solo in chat private.',
+                'Ricevi avvisi di login da dispositivi che non riconosci.',
+                'Le persone che frequenti vengono contattate dallo stalker.'
+            ],
+            doNow: [
+                'Cambia la password della tua Email e del Cloud (iCloud/Google) usando un dispositivo sicuro.',
+                'Attiva la 2FA (Autenticazione a due fattori) su tutti gli account.',
+                'Rendi privati tutti i tuoi profili social e rimuovi i follower che non conosci personalmente.',
+                'Disattiva la condivisione della posizione in tempo reale su Google Maps, "Dov\'è" di Apple e WhatsApp.',
+                'Controlla la lista dei "Dispositivi connessi" nei tuoi account ed espelli quelli sospetti.'
+            ],
+            dontDo: [
+                'Non postare mai foto in tempo reale (fallo quando te ne sei già andato dal luogo).',
+                'Non accettare richieste di amicizia da profili nuovi o senza foto, anche se sembrano avere amici in comune.'
+            ],
+            preserveEvidence: [
+                'Prima di rendere i profili privati, assicurati di aver salvato le prove delle molestie passate.'
+            ],
+            askHelpWhen: [
+                'Se sospetti che il tuo telefono sia stato infettato da uno "Stalkerware" (virus spia).',
+                'Se lo stalker si presenta fisicamente nei luoghi che frequenti.'
+            ],
+            whoCanHelp: [
+                'Numero 1522',
+                'Esperti di sicurezza digitale (per bonifica dispositivi)',
+                'Polizia Postale'
+            ],
+            checklist: [
+                'Reset password Cloud',
+                'Privacy social totale',
+                'Posizione OFF',
+                'Logout sessioni sconosciute',
+                '2FA attiva ovunque'
+            ],
+            sources: [
+                {
+                    title: 'Guida alla sicurezza personale',
+                    organization: 'Apple Support',
+                    url: 'https://support.apple.com/it-it/guide/personal-safety/welcome/web',
+                    type: 'platform',
+                    usedFor: 'Protocollo di sicurezza per proteggere account e posizioni.',
+                    lastCheckedAt: '2024-05-13'
+                }
+            ],
+            lastReviewedAt: '2024-05-13',
+            qualityGatePassed: true
+        },
+        {
+            id: 'ex-partner-shared-accounts',
+            slug: 'ex-partner-account-condivisi-sicurezza',
+            title: 'Ex partner e account condivisi',
+            category: 'stalking',
+            audience: ['adults', 'victims'],
+            level: 'base',
+            estimatedMinutes: 6,
+            summary: 'Cosa fare dopo una rottura per evitare che un ex partner possa ancora controllare la tua vita digitale.',
+            status: 'published',
+            emergencyLevel: 'medium',
+            scenario: 'Ti sei separato da poco. In passato avete condiviso password di Netflix, Spotify, ma anche account Amazon, l\'accesso al Cloud delle foto o il "In famiglia" di Apple/Google.',
+            question: 'Come posso separare i miei dati da quelli di un ex senza perdere i miei contenuti?',
+            whatIsHappening: 'Gli account condivisi sono uno strumento comune di "Abuso Facilitato dalla Tecnologia". Un ex partner malintenzionato può usare questi accessi per spiare le tue foto, i tuoi acquisti, i tuoi spostamenti o persino cancellare i tuoi file per ritorsione.',
+            warningSigns: [
+                'L\'ex partner fa commenti su acquisti che hai fatto online.',
+                'Ricevi notifiche che il tuo account è in uso su un altro dispositivo.',
+                'Trovi foto o contatti nuovi nel tuo cloud che non hai aggiunto tu.'
+            ],
+            doNow: [
+                'Esci dai gruppi "In famiglia" (Apple/Google) se non sei tu l\'organizzatore.',
+                'Cambia le password di tutti gli account che avevate in comune, specialmente Amazon, Netflix e siti di utility.',
+                'Controlla se il tuo indirizzo di casa è ancora salvato come "Casa" sul navigatore dell\'ex o viceversa.',
+                'Revoca l\'accesso alle "App di terze parti" che potrebbero essere collegate ai suoi account.'
+            ],
+            dontDo: [
+                'Non sottovalutare gli account "secondari" (es: l\'app del termostato o delle telecamere di casa).',
+                'Non mantenere password "per comodità" se la rottura non è stata consensuale e serena.'
+            ],
+            preserveEvidence: [
+                'Se trovi segni di accesso abusivo (IP diversi nei log), fai uno screenshot prima di cambiare password.'
+            ],
+            askHelpWhen: [
+                'Se la rottura è legata a violenza domestica: contatta centri specializzati PRIMA di cambiare password, poiché l\'ex potrebbe reagire con violenza fisica vedendo revocati gli accessi.'
+            ],
+            whoCanHelp: [
+                '1522 - Numero Antiviolenza',
+                'EFF Surveillance Self-Defense Guide',
+                'Avvocato familiarista'
+            ],
+            checklist: [
+                'Esci da "In famiglia"',
+                'Cambia password comuni',
+                'Verifica cloud foto',
+                'Controlla domotica/app casa'
+            ],
+            sources: [
+                {
+                    title: 'Surveillance Self-Defense: Domestic Violence',
+                    organization: 'Electronic Frontier Foundation (EFF)',
+                    url: 'https://ssd.eff.org/module/privacy-strategies-survivors-domestic-violence',
+                    type: 'nonprofit',
+                    usedFor: 'Strategie di difesa per sopravvissuti a violenza domestica.',
+                    lastCheckedAt: '2024-05-13'
+                }
+            ],
+            lastReviewedAt: '2024-05-13',
+            qualityGatePassed: true
         }
     ]
 };

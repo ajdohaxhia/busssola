@@ -220,6 +220,66 @@ export const modulo_04_sextortion_ricatti: Module = {
             ],
             lastReviewedAt: '2024-05-13',
             qualityGatePassed: true
+        },
+        {
+            id: 'paying-blackmail-risks',
+            slug: 'perche-non-pagare-mai-ricatto-sextortion',
+            title: 'Perché pagare un ricatto quasi sempre peggiora la situazione',
+            category: 'sextortion',
+            audience: ['victims', 'adults'],
+            level: 'medio',
+            estimatedMinutes: 5,
+            summary: 'La reazione istintiva è pagare per far sparire il problema. Ecco perché questa è la scelta più pericolosa che puoi fare.',
+            status: 'published',
+            emergencyLevel: 'high',
+            scenario: 'Il ricattatore ti chiede 500€ per non inviare il tuo video intimo a tutti i tuoi follower. Ti dice: "Paga e cancello tutto, giuro". Sei tentato di farlo solo per chiudere la faccenda e tornare a dormire.',
+            question: 'Se pago, l\'hacker cancellerà davvero il mio video?',
+            whatIsHappening: 'No. Il pagamento conferma al ricattatore due cose: 1. Che hai i soldi. 2. Che sei terrorizzato. Per lui diventi una "mucca da mungere". Subito dopo il primo pagamento, chiederà ancora più soldi, spesso usando la scusa che "il video è su un server e serve un altro pagamento per cancellarlo".',
+            warningSigns: [
+                'Il ricattatore accetta "sconti" o pagamenti rateali: è un segno che vuole solo legarti a sé.',
+                'Le minacce aumentano di tono appena mostri disponibilità a pagare.',
+                'Ti chiede pagamenti in criptovalute o carte regalo (Apple/Amazon) per essere anonimo.'
+            ],
+            doNow: [
+                'Interrompi immediatamente ogni comunicazione. Non rispondere più a nessun messaggio.',
+                'Non pagare nulla. Se hai già pagato, fermati subito e non inviare altro denaro.',
+                'Salva le prove del ricatto (screenshot dei messaggi e delle richieste di soldi).',
+                'Denuncia il fatto alla Polizia Postale: hanno protocolli specifici per questi criminali internazionali.'
+            ],
+            dontDo: [
+                'Non credere alle promesse dell\'estorsore: non hanno alcun onore, il loro unico scopo è il profitto.',
+                'Non cercare di negoziare o "prendere tempo": ogni parola che scrivi dà loro informazioni che useranno contro di te.'
+            ],
+            preserveEvidence: [
+                'Screenshot delle richieste di denaro e delle coordinate fornite per il pagamento.',
+                'Se hai pagato, conserva la ricevuta della transazione.'
+            ],
+            askHelpWhen: [
+                'Immediatamente. La sextortion è un crimine grave e non devi affrontarlo da solo.'
+            ],
+            whoCanHelp: [
+                'Polizia Postale',
+                'Garante Privacy',
+                'Associazioni di supporto vittime online'
+            ],
+            checklist: [
+                'Stop comunicazioni',
+                'Non pagare mai',
+                'Salva prove ricatto',
+                'Contatta Polizia'
+            ],
+            sources: [
+                {
+                    title: 'Sextortion: Non pagare mai e denunciare',
+                    organization: 'Polizia di Stato',
+                    url: 'https://www.commissariatodips.it/consigli/per-i-genitori/adescamento-online/sextortion/index.html',
+                    type: 'official',
+                    usedFor: 'Indicazione categorica sul divieto di pagamento e gestione psicologica della minaccia.',
+                    lastCheckedAt: '2024-05-13'
+                }
+            ],
+            lastReviewedAt: '2024-05-13',
+            qualityGatePassed: true
         }
     ]
 };

@@ -70,6 +70,66 @@ export const modulo_05b_grooming_minori: Module = {
             ],
             lastReviewedAt: '2024-05-13',
             qualityGatePassed: true
+        },
+        {
+            id: 'child-fear-silent-crisis',
+            slug: 'cosa-fare-se-minore-ha-paura-e-tace',
+            title: 'Se il minore ha paura e tace',
+            category: 'school',
+            audience: ['parents', 'teachers'],
+            level: 'medio',
+            estimatedMinutes: 7,
+            summary: 'Riconoscere i segnali di una crisi silenziosa e imparare come aprire un canale di comunicazione senza spaventare ulteriormente il minore.',
+            status: 'published',
+            emergencyLevel: 'high',
+            scenario: 'Noti che tuo figlio o uno studente è diventato improvvisamente cupo, cancella ossessivamente la cronologia o le chat, e sobbalza se riceve una notifica. Quando chiedi cosa succede, risponde "nulla" con rabbia o pianto.',
+            question: 'Come posso aiutarlo se non vuole dirmi cosa è successo online?',
+            whatIsHappening: 'Il minore potrebbe essere sotto ricatto o manipolazione. Spesso il predatore lo ha convinto che se parlerà con gli adulti, finirà nei guai (o lo faranno i genitori). La vergogna e la paura sono le barriere più forti.',
+            warningSigns: [
+                'Abbandono improvviso di attività che prima amava.',
+                'Disturbi del sonno o dell\'appetito.',
+                'Tendenza a nascondere lo schermo appena qualcuno entra nella stanza.',
+                'Richiesta improvvisa di denaro o carte regalo (per pagare piccoli ricatti).'
+            ],
+            doNow: [
+                'Non sequestrare il telefono: per il minore è l\'unico legame col problema e toglierlo aumenterebbe il panico.',
+                'Dì chiaramente: "Qualunque cosa sia successa, non sei nei guai e io sono qui per risolvere il problema con te, non contro di te".',
+                'Contatta il 114 (Emergenza Infanzia) per avere una guida psicologica professionale su come gestire il colloquio.',
+                'Cerca segnali di "grooming" o "cyberbullismo" senza violare brutalmente la privacy, ma spiegando che la sicurezza viene prima del segreto.'
+            ],
+            dontDo: [
+                'Non reagire con rabbia o shock se scopri foto o messaggi espliciti: il minore si chiuderebbe istantaneamente.',
+                'Non promettere di non fare nulla: se c\'è un reato, dovrai agire, ma spiega che lo farai insieme a lui.'
+            ],
+            preserveEvidence: [
+                'Cerca di salvare i dati prima che il minore, preso dal panico, cancelli tutto per "far sparire il problema".'
+            ],
+            askHelpWhen: [
+                'Sempre. In questi casi il supporto professionale di psicologi ed esperti di sicurezza è fondamentale.'
+            ],
+            whoCanHelp: [
+                '114 Emergenza Infanzia',
+                'Telefono Azzurro',
+                'Servizi Sociali / Psicologo scolastico'
+            ],
+            checklist: [
+                'Rassicurazione totale',
+                'Niente punizioni',
+                'Chiama il 114',
+                'Ascolto non giudicante'
+            ],
+            sources: [
+                {
+                    title: 'Cosa fare se un minore è vittima di abusi online',
+                    organization: 'Telefono Azzurro',
+                    url: 'https://azzurro.it/cyberbullismo-e-pericoli-online/',
+                    type: 'nonprofit',
+                    usedFor: 'Supporto psicologico e protocolli di intervento per famiglie.',
+                    lastCheckedAt: '2024-05-13'
+                }
+            ],
+            lastReviewedAt: '2024-05-13',
+            qualityGatePassed: true
         }
     ]
 };

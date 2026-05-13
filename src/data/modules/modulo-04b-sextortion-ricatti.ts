@@ -70,6 +70,65 @@ export const modulo_04b_sextortion_ricatti: Module = {
             ],
             lastReviewedAt: '2024-05-13',
             qualityGatePassed: true
+        },
+        {
+            id: 'preserving-digital-evidence',
+            slug: 'come-salvare-prove-digitali-valore-legale',
+            title: 'Come salvare prove con valore legale',
+            category: 'privacy',
+            audience: ['victims', 'adults'],
+            level: 'medio',
+            estimatedMinutes: 8,
+            summary: 'Gli screenshot a volte non bastano. Impara le tecniche corrette per conservare chat e file affinché siano validi in tribunale.',
+            status: 'published',
+            emergencyLevel: 'medium',
+            scenario: 'Sei vittima di stalking o ricatto. Vuoi denunciare, ma hai paura che il colpevole cancelli i messaggi (come con la funzione "Elimina per tutti" di WhatsApp) o che gli screenshot vengano contestati perché "facili da falsificare".',
+            question: 'Cosa serve alla Polizia oltre ai semplici screenshot?',
+            whatIsHappening: 'In un processo, la controparte può sostenere che uno screenshot sia stato manipolato con Photoshop. Per avere prove "forti", occorre conservare i dati in modo da garantirne l\'integrità (copia forense o esportazione certificata).',
+            warningSigns: [
+                'L\'interlocutore inizia a cancellare messaggi dopo averti minacciato.',
+                'Usi app che prevedono messaggi a scomparsa (Snapchat, segrete di Telegram).'
+            ],
+            doNow: [
+                'Usa la funzione "Esporta Chat" di WhatsApp (senza allegati o con allegati a seconda della dimensione) e inviatela via mail.',
+                'Non cancellare mai la conversazione originale dal telefono: il dispositivo stesso è la prova principale.',
+                'Fai video-registrazioni dello schermo mentre scorri la chat, mostrando chiaramente il numero di telefono del mittente e le date.',
+                'Se il contenuto è su una pagina web, usa servizi di "Web Snapshot" certificati o salva la pagina completa (file .html) sul PC.'
+            ],
+            dontDo: [
+                'Non modificare i file salvati (non rinominarli, non cambiare le date).',
+                'Non cancellare l\'account social coinvolto senza aver prima fatto un backup completo dei dati (Google Takeout / Meta Download Information).'
+            ],
+            preserveEvidence: [
+                'Copia integrale dei log di sistema, se possibile.',
+                'ID univoci dei profili social (non solo il nome visualizzato, che può cambiare).'
+            ],
+            askHelpWhen: [
+                'Se il reato è molto grave (abusi, grandi truffe finanziarie) e serve una perizia informatica forense professionale.'
+            ],
+            whoCanHelp: [
+                'Consulenti Tecnici di Parte (CTP) informatici',
+                'Polizia Postale (Ufficio Analisi Forense)',
+                'Avvocati specializzati in reati informatici'
+            ],
+            checklist: [
+                'Esporta chat subito',
+                'Non cancellare device',
+                'Video-registra schermo',
+                'Salva ID profili'
+            ],
+            sources: [
+                {
+                    title: 'Raccogliere prove online: consigli pratici',
+                    organization: 'Garante Privacy',
+                    url: 'https://www.garanteprivacy.it/temi/cyberbullismo',
+                    type: 'official',
+                    usedFor: 'Indicazioni sulla conservazione dei contenuti lesivi per scopi probatori.',
+                    lastCheckedAt: '2024-05-13'
+                }
+            ],
+            lastReviewedAt: '2024-05-13',
+            qualityGatePassed: true
         }
     ]
 };
