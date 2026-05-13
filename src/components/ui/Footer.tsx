@@ -118,6 +118,7 @@ export function Footer() {
                     <div className="flex items-center gap-6">
                         <Link href="/accessibilita" className="text-sm text-muted hover:text-foreground transition-colors">Accessibilità</Link>
                         <Link href="/about" className="text-sm text-muted hover:text-foreground transition-colors">Cos'è Busssola</Link>
+                        <a href="https://github.com/ajdohaxhia/busssola" target="_blank" rel="noopener noreferrer" className="text-sm text-muted hover:text-foreground transition-colors">GitHub</a>
                         <a href="mailto:info@busssola.com" className="text-sm text-muted hover:text-foreground transition-colors">Contatti</a>
                     </div>
                 </div>

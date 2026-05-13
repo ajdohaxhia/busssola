@@ -173,6 +173,29 @@ export default function AboutPage() {
                     </motion.div>
                 ))}
             </motion.div>
+
+            {/* Contribuisci */}
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="rounded-2xl border border-border bg-surface p-8 md:p-12 space-y-4"
+            >
+                <h2 className="text-2xl font-display font-semibold text-foreground tracking-tight">
+                    Vuoi aiutare a migliorare Busssola?
+                </h2>
+                <p className="text-secondary leading-relaxed max-w-2xl">
+                    Il progetto è aperto a contributi tecnici, revisioni delle fonti, correzioni e segnalazioni. Ogni contributo viene valutato secondo i principi editoriali del progetto.
+                </p>
+                <a
+                    href="https://github.com/ajdohaxhia/busssola"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
+                >
+                    Contribuisci su GitHub →
+                </a>
+            </motion.div>
         </Container>
     )
 }

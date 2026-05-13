@@ -51,6 +51,27 @@ Busssola minimizza la raccolta dati:
 - **Privacy by Design**: nessun tracciamento invasivo o cookie di profilazione.
 - **Progressi Locali**: i moduli completati sono salvati esclusivamente nel LocalStorage del browser dell'utente.
 
+## Contribuisci
+
+Busssola è un progetto aperto. L'obiettivo è creare guide pratiche, verificabili e semplici da usare per aiutare persone comuni ad affrontare rischi digitali come account rubati, phishing, sextortion, cyberstalking, doxxing, truffe online e problemi di privacy.
+
+Puoi contribuire qui: **[github.com/ajdohaxhia/busssola](https://github.com/ajdohaxhia/busssola)**
+
+Sono utili soprattutto contributi su:
+- Correzione bug e link rotti
+- Miglioramento accessibilità e mobile
+- Revisione testi e tono
+- Controllo e aggiornamento fonti
+- Nuove checklist pratiche
+- Segnalazione di pagine poco chiare
+- SEO tecnico
+- Traduzioni future
+- Nuove guide, solo se hanno fonti verificabili
+
+**Regola importante**: non vengono accettate guide generiche, non fontate o scritte "a memoria". Ogni contenuto pubblicato deve avere fonti reali, checklist, cosa fare subito, cosa non fare e indicazioni su quando chiedere aiuto.
+
+Leggi [CONTRIBUTING.md](CONTRIBUTING.md) per i dettagli.
+
 ## Disclaimer
 I contenuti di Busssola sono esclusivamente a scopo informativo e non sostituiscono in alcun modo il supporto legale, medico, psicologico o l'intervento urgente delle autorità competenti. In caso di pericolo immediato, contatta sempre il 112.
 
