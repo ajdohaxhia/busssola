@@ -1,6 +1,6 @@
 /**
  * AUTO-GENERATED FILE - DO NOT EDIT MANUALLY
- * Generated on: 2026-05-13T17:51:37.378Z
+ * Generated on: 2026-05-13T17:55:33.870Z
  */
 export const siteStats = {
   "totalModules": 16,

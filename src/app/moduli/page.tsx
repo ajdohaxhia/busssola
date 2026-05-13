@@ -235,7 +235,7 @@ function ModulesContent() {
                 </div>
 
                 <div className="space-y-3 pt-6 border-t border-border">
-                     <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">Esperienza</h3>
+                     <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">Livello</h3>
                      <div className="flex flex-wrap items-center gap-2">
                         {(['all', 'base', 'intermedia', 'avanzata'] as const).map((level) => (
                             <button
@@ -280,21 +280,8 @@ function ModulesContent() {
                 ) : isFiltered ? (
                     renderGrid(filteredModules)
                 ) : (
-                    <div className="space-y-16">
-                        <section className="space-y-6">
-                            <h3 className="text-xl font-semibold text-foreground border-b border-border pb-2">I percorsi migliori per cominciare</h3>
-                            {renderGrid(filteredModules.filter(m => m.featuredType === 'start').slice(0, 3))}
-                        </section>
-                        
-                        <section className="space-y-6">
-                            <h3 className="text-xl font-semibold text-foreground border-b border-border pb-2">Altri moduli utili</h3>
-                            {renderGrid(filteredModules.filter(m => m.featuredType === 'curated').slice(0, 3))}
-                        </section>
-
-                        <section className="space-y-6">
-                            <h3 className="text-xl font-semibold text-foreground border-b border-border pb-2">Tutti i percorsi</h3>
-                            {renderGrid(filteredModules.filter(m => m.featuredType !== 'start' && m.featuredType !== 'curated'))}
-                        </section>
+                    <div className="space-y-6">
+                        {renderGrid(filteredModules)}
                     </div>
                 )}
             </div>
