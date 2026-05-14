@@ -368,5 +368,17 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "icon": "GraduationCap",
     "category": "universita",
     "featuredType": "none"
+  },
+  {
+    "id": "modulo-99-kit-checklist",
+    "number": 0,
+    "title": "Kit e Checklist Operative",
+    "description": "Raccolta di liste di controllo e kit di documenti pronti all'uso per ogni evenienza civica e digitale.",
+    "lessonCount": 3,
+    "difficulty": "base",
+    "icon": "CheckSquare",
+    "category": "documenti",
+    "lastUpdated": "2026-05-14",
+    "featuredType": "none"
   }
 ];

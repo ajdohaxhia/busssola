@@ -1,6 +1,7 @@
 
 import { ALL_MODULES } from '../data/modules';
 import { LEARNING_PATHS } from '../data/paths';
+import { LIFE_HACKS } from '../data/life-hacks';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -12,6 +13,7 @@ const stats = {
     totalModules: modules.length,
     totalLessons: lessons.length,
     publishedLessons: publishedLessons.length,
+    totalTips: LIFE_HACKS.length,
     draftLessons: lessons.filter(l => l.status === 'draft').length,
     needsSourcesLessons: lessons.filter(l => l.status === 'needs_sources').length,
     needsReviewLessons: lessons.filter(l => l.status === 'needs_review').length,
@@ -21,7 +23,7 @@ const stats = {
     uniqueOrganizations: [...new Set(lessons.flatMap(l => l.sources.map(s => s.organization)))].length,
     totalChecklistItems: lessons.reduce((acc, l) => acc + l.checklist.length, 0),
     lastUpdatedAt: new Date().toISOString().split('T')[0],
-    projectStage: "Public MVP"
+    projectStage: "Public Resource Hub v2 - Life Hacks"
 };
 
 // Update siteStats.ts

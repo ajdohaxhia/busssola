@@ -147,3 +147,29 @@ export interface LearningPath {
     goals?: string[];
     steps?: { title: string; description: string; guideId: string }[];
 }
+
+/**
+ * LifeHack (Trucco Civico)
+ * Legal shortcuts and practical tips for citizens.
+ */
+export interface LifeHack {
+    title: string;
+    slug: string;
+    category: CategoryID;
+    target: ('adults' | 'minors' | 'parents' | 'teachers' | 'victims' | 'prevention' | 'school' | 'cittadini' | 'lavoratori' | 'famiglie' | 'studenti' | 'stranieri' | 'anziani' | 'disabili' | 'caregiver')[];
+    difficulty: 'facile' | 'media' | 'avanzata';
+    time: string;
+    benefit: string;
+    summary: string;
+    whyUseful: string;
+    steps: string[];
+    whatYouNeed: string[];
+    officialLinks: string[]; // Reference to OFFICIAL_SOURCES IDs
+    commonErrors: string[];
+    limitations: string[];
+    relatedGuides?: string[]; // Reference to Lesson slugs
+    relatedChecklists?: string[]; // Reference to checklist titles
+    sources: Source[];
+    lastReviewedAt: string; // YYYY-MM-DD
+    badges: ('Risparmia tempo' | 'Evita errore' | 'Privacy' | 'Soldi' | 'Documenti' | 'Sicurezza' | 'Scuola' | 'Casa' | 'Lavoro' | 'Urgente')[];
+}

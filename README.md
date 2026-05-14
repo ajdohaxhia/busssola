@@ -14,15 +14,17 @@ Rendere accessibili a tutti le informazioni su come esercitare i propri diritti 
 - **Sicurezza e Privacy**: Account, passkey, truffe, phishing, malware.
 - **Sanità**: Medico base, fascicolo elettronico, CPS, consultori.
 - **Scuola e Famiglia**: Cyberbullismo, patti digitali, sharenting.
+- **Life Hacks**: Scorciatoie legali, trucchi per risparmiare tempo e trucchi burocratici.
 - **Altro**: Immigrazione, Consumatori, Mobilità, Università, Anziani.
 
-## Stato del Progetto (Public Resource Hub v2)
+## Stato del Progetto (Public Resource Hub v2 - Life Hacks Civici)
 - **Moduli Totali**: 30+
 - **Guide Pubblicate**: 125+ (tutte verificate tramite Quality Gate)
-- **Checklist Operative**: 40+
-- **Termini Glossario**: 130+
+- **Life Hacks (Tips)**: 85+
+- **Checklist Operative**: 45+
+- **Termini Glossario**: 150+
 - **Organizzazioni Fonti**: 40+ (INPS, AgID, Polizia Postale, Garante Privacy, ecc.)
-- **Stato**: Public Resource Hub v2 — Production Ready
+- **Stato**: Hub Completo — Production Ready
 - **Ultimo Aggiornamento**: Maggio 2026
 
 ## Principi Editoriali

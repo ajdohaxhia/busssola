@@ -4,6 +4,8 @@ Grazie per il tuo interesse nel contribuire a Busssola! Il progetto è aperto a 
 
 ## Cosa puoi fare
 - **Aggiungere una nuova guida**: se conosci bene una procedura (es. Bonus Nido, richiesta Passaporto, ecc.).
+- **Aggiungere un Life Hack (Tip)**: consigli pratici, scorciatoie legali o errori comuni da evitare.
+- **Creare un Kit/Checklist**: liste di controllo per situazioni specifiche.
 - **Aggiornare fonti o link**: le procedure cambiano, aiutaci a tenere il sito aggiornato.
 - **Migliorare i testi**: correggere bozze, semplificare il linguaggio o migliorare il tono.
 - **Segnalare bug**: problemi tecnici, di accessibilità o di visualizzazione su mobile.
@@ -16,30 +18,27 @@ Grazie per il tuo interesse nel contribuire a Busssola! Il progetto è aperto a 
 - **Assenza di Hype**: non usare termini come "rivoluzionario", "magico", "unico". Siamo una guida pratica, non un prodotto marketing.
 - **Inclusivo**: scrivi per tutti, indipendentemente dal livello di istruzione o competenza tecnica.
 
-### 2. Struttura delle Guide
-Ogni guida deve seguire questo schema (mappato sui campi del file `.ts` del modulo):
-- **Titolo**: chiaro e orientato all'azione (es. "Come richiedere lo SPID").
-- **A chi serve**: indica chiaramente il target (cittadini, famiglie, ecc.).
-- **Quando farla**: descrivi la situazione in cui serve questa procedura.
-- **Cosa serve**: lista dei documenti e requisiti necessari.
-- **Dove si fa**: ente di riferimento (Comune, INPS, online, ecc.).
-- **Passaggi**: sequenza numerata di azioni concrete.
-- **Link Ufficiali**: cita sempre le fonti istituzionali.
+### 2. Struttura dei Contenuti
+- **Guide**: schema completo con titoli, passi, link ufficiali e fonti. Mappato sui file `.ts` in `src/data/modules/`.
+- **Life Hacks**: micro-consigli con beneficio chiaro, passi rapidi e fonti. Mappato in `src/data/life-hacks.ts`.
+- **Checklist**: liste puntate di documenti o azioni (kit).
 
 ### 3. Fonti e Veridicità
-Non accettiamo guide basate su "sentito dire" o memoria. Ogni contenuto deve:
-- Citare almeno una fonte ufficiale (sito del Governo, INPS, Gazzetta Ufficiale, ecc.).
+Non accettiamo contenuti basati su "sentito dire" o memoria. Ogni contributo deve:
+- Citare almeno una fonte ufficiale (sito del Governo, INPS, Polizia Postale, Gazzetta Ufficiale, ecc.).
+- Usare il registry centrale delle fonti in `src/data/officialSources.ts` quando possibile.
 - Indicare la data dell'ultima verifica.
 
 ## Workflow Tecnico
 
-### Come aggiungere o modificare un modulo
-1. Naviga in `src/data/modules/`.
-2. Crea un nuovo file `.ts` o modificane uno esistente seguendo il formato attuale.
-3. Se crei un nuovo file, importalo e aggiungilo all'array `ALL_MODULES` in `src/data/modules/index.ts`.
-4. Esegui `npm run validate:content` per verificare che la struttura sia corretta.
-5. Esegui `npm run update-stats` per aggiornare i metadati del sito.
-6. Apri una Pull Request su GitHub spiegando le modifiche.
+### Come aggiungere o modificare un contenuto
+1. **Guide/Moduli**: naviga in `src/data/modules/`. Crea un nuovo file o modificane uno esistente.
+2. **Life Hacks**: aggiungi un oggetto all'array `LIFE_HACKS` in `src/data/life-hacks.ts`.
+3. **Glossario**: aggiungi termini in `src/app/glossario/page.tsx`.
+4. **Fonti**: aggiungi entità in `src/data/officialSources.ts`.
+5. **Validazione**: esegui `npm run validate:content` per verificare che la struttura sia corretta.
+6. **Statistiche**: esegui `npm run update-stats` per aggiornare i metadati del sito.
+7. **PR**: apri una Pull Request su GitHub spiegando le modifiche.
 
 ## Requisiti Tecnici
 - Usa TypeScript in modo rigoroso.

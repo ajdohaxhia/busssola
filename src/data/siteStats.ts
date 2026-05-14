@@ -1,11 +1,12 @@
 /**
  * AUTO-GENERATED FILE - DO NOT EDIT MANUALLY
- * Generated on: 2026-05-14T23:32:51.090Z
+ * Generated on: 2026-05-14T23:55:17.370Z
  */
 export const siteStats = {
-  "totalModules": 30,
-  "totalLessons": 126,
-  "publishedLessons": 126,
+  "totalModules": 31,
+  "totalLessons": 129,
+  "publishedLessons": 129,
+  "totalTips": 85,
   "draftLessons": 0,
   "needsSourcesLessons": 0,
   "needsReviewLessons": 0,
@@ -13,7 +14,7 @@ export const siteStats = {
   "categories": 15,
   "totalSources": 184,
   "uniqueOrganizations": 85,
-  "totalChecklistItems": 548,
+  "totalChecklistItems": 564,
   "lastUpdatedAt": "2026-05-14",
-  "projectStage": "Public MVP"
+  "projectStage": "Public Resource Hub v2 - Life Hacks"
 };

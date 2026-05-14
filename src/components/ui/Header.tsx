@@ -11,6 +11,7 @@ const navItems = [
     { href: '/', label: 'Home' },
     { href: '/percorsi', label: 'Percorsi' },
     { href: '/moduli', label: 'Catalogo' },
+    { href: '/tips', label: 'Tips' },
     { href: '/checklist', label: 'Checklist' },
     { href: '/glossario', label: 'Glossario' },
 ];

@@ -1,6 +1,7 @@
 import { Hero } from '@/components/ui/Hero'
 import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
+import { Badge } from '@/components/ui/Badge'
 import Link from 'next/link'
 import { 
   ArrowRight, ShieldCheck, User, Users, 
@@ -212,7 +213,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 7: Trust block */}
+      {/* SECTION 7: Life Hacks Civici (New) */}
+      <section className="space-y-12 px-4 py-12 bg-primary/5 rounded-[3rem] border border-primary/10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 px-4">
+          <div className="space-y-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-widest border border-primary/20">
+              <Zap className="w-3 h-3" /> Cose utili che sembrano trucchi
+            </div>
+            <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight text-foreground">
+              Life Hacks Civici
+            </h2>
+            <p className="text-secondary text-lg max-w-xl">
+              Piccole scorciatoie legali e consigli pratici per non farsi fregare dalla burocrazia e dalla tecnologia.
+            </p>
+          </div>
+          <Button asChild variant="outline" className="rounded-xl h-12 bg-surface">
+            <Link href="/tips">Vedi tutti i tips <ArrowRight className="ml-2 w-4 h-4" /></Link>
+          </Button>
+        </div>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+          {[
+            { title: "Certificati online da ANPR", slug: "certificati-anagrafici-online-anpr", badge: "Risparmia tempo" },
+            { title: "Recupero PUK CIE", slug: "recupero-puk-cie", badge: "Evita errore" },
+            { title: "Bloccare carta clonata", slug: "bloccare-carta-clonata", badge: "Urgente" },
+            { title: "Controllare sessioni attive", slug: "controllo-sessioni-attive", badge: "Sicurezza" },
+            { title: "Salvare prove digitali", slug: "salvataggio-prove-truffe", badge: "Tutela" },
+            { title: "Verificare avviso pagoPA", slug: "verifica-comunicazione-pagopa", badge: "Evita truffe" },
+          ].map((tip, i) => (
+            <Link href={`/tips/${tip.slug}`} key={i} className="group">
+              <Card className="p-6 border border-border bg-surface hover:shadow-xl hover:border-primary/20 transition-all rounded-[2rem] h-full flex flex-col justify-between">
+                <div className="space-y-4">
+                  <Badge variant="secondary" className="text-[9px] font-bold uppercase bg-primary/10 text-primary border-0">
+                    {tip.badge}
+                  </Badge>
+                  <h4 className="font-bold text-foreground text-lg tracking-tight group-hover:text-primary transition-colors leading-tight">{tip.title}</h4>
+                </div>
+                <div className="pt-4 flex items-center text-xs font-bold text-primary">
+                  Leggi tip <ArrowRight className="ml-1 w-3 h-3 transition-transform group-hover:translate-x-1" />
+                </div>
+              </Card>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* SECTION 8: Trust block */}
       <section className="bg-foreground text-background rounded-[3rem] p-10 md:p-16 lg:p-20 overflow-hidden relative">
         <div className="absolute top-0 right-0 p-20 opacity-[0.05] pointer-events-none">
           <ShieldCheck size={400} />

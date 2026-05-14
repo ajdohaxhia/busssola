@@ -28,6 +28,7 @@ import { modulo_19_mobilita } from './modulo-19-mobilita';
 import { modulo_20_sanita_territoriale } from './modulo-20-sanita-territoriale';
 import { modulo_21_anziani_caregiver } from './modulo-21-anziani-caregiver';
 import { modulo_22_universita_giovani } from './modulo-22-universita-giovani';
+import { modulo_99_kit_checklist } from './modulo-99-kit-checklist';
 
 export const ALL_MODULES = [
     modulo_01_primo_soccorso,
@@ -60,6 +61,7 @@ export const ALL_MODULES = [
     modulo_20_sanita_territoriale,
     modulo_21_anziani_caregiver,
     modulo_22_universita_giovani,
+    modulo_99_kit_checklist,
 ];
 
 export function getModuleById(id: string) {
