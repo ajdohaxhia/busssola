@@ -28,19 +28,19 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   ...buildSeoMetadata({
-    title: 'Sicurezza online per ragazzi, famiglie e scuole',
+    title: 'Orientamento tra documenti, diritti e procedure in Italia',
     description: SITE_DESCRIPTION,
     path: '/',
     keywords: [
-      'sicurezza internet ragazzi',
-      'guide sicurezza digitale',
-      'educazione digitale gratuita',
+      'guida civica italia',
+      'richiesta spid cie naspi',
+      'procedure documenti italia',
       'creator Adelajdo Haxhiaj',
     ],
   }),
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} | Sicurezza online per ragazzi, famiglie e scuole`,
+    default: `${SITE_NAME} | Orientamento tra documenti, diritti e procedure in Italia`,
     template: `%s | ${SITE_NAME}`
   },
   authors: [{ name: CREATOR_NAME, url: `${SITE_URL}/adelajdo-haxhiaj` }],

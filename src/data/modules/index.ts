@@ -14,6 +14,8 @@ import { modulo_07_privacy_smartphone } from './modulo-07-privacy-smartphone';
 import { modulo_07b_privacy_smartphone } from './modulo-07b-privacy-smartphone';
 import { modulo_08_scuola_famiglia } from './modulo-08-scuola-famiglia';
 import { modulo_08b_scuola_famiglia } from './modulo-08b-scuola-famiglia';
+import { modulo_09_documenti_identita } from './modulo-09-documenti-identita';
+import { modulo_10_lavoro_disoccupazione } from './modulo-10-lavoro-disoccupazione';
 
 export const ALL_MODULES = [
     modulo_01_primo_soccorso,
@@ -32,6 +34,8 @@ export const ALL_MODULES = [
     modulo_07b_privacy_smartphone,
     modulo_08_scuola_famiglia,
     modulo_08b_scuola_famiglia,
+    modulo_09_documenti_identita,
+    modulo_10_lavoro_disoccupazione,
 ];
 
 export function getModuleById(id: string) {

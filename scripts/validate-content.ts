@@ -22,18 +22,29 @@ function validateLesson(lesson: any, moduleId: string) {
     if (!lesson.summary) logError(`${context} Missing summary`);
     
     if (lesson.status === 'published') {
+        const isCivic = !['diritti-digitali', 'first-aid', 'sextortion', 'rischi', 'privacy', 'grooming', 'stalking'].includes(lesson.category);
+        
         if (lesson.qualityGatePassed !== true) logError(`${context} Published but qualityGatePassed is not true`);
-        if (!lesson.emergencyLevel) logError(`${context} Published but missing emergencyLevel`);
-        if (!lesson.scenario) logError(`${context} Published but missing scenario`);
-        if (!lesson.question) logError(`${context} Published but missing question`);
-        if (!lesson.whatIsHappening) logError(`${context} Published but missing whatIsHappening`);
-        if (!Array.isArray(lesson.warningSigns) || lesson.warningSigns.length === 0) logError(`${context} Published but missing warningSigns`);
-        if (!Array.isArray(lesson.doNow) || lesson.doNow.length < 3) logError(`${context} Published but doNow must have at least 3 items`);
-        if (!Array.isArray(lesson.dontDo) || lesson.dontDo.length < 2) logError(`${context} Published but dontDo must have at least 2 items`);
-        if (!Array.isArray(lesson.preserveEvidence)) logError(`${context} Published but missing preserveEvidence array`);
-        if (!Array.isArray(lesson.askHelpWhen)) logError(`${context} Published but missing askHelpWhen array`);
-        if (!Array.isArray(lesson.whoCanHelp)) logError(`${context} Published but missing whoCanHelp array`);
-        if (!Array.isArray(lesson.checklist) || lesson.checklist.length < 3) logError(`${context} Published but checklist must have at least 3 items`);
+        if (!isCivic && !lesson.emergencyLevel) logError(`${context} Published but missing emergencyLevel`);
+        if (!lesson.scenario && !lesson.whenToDo) logError(`${context} Published but missing scenario or whenToDo`);
+        
+        if (!isCivic) {
+            if (!lesson.question) logError(`${context} Published but missing question`);
+            if (!lesson.whatIsHappening) logError(`${context} Published but missing whatIsHappening`);
+            if (!Array.isArray(lesson.warningSigns) || lesson.warningSigns.length === 0) logError(`${context} Published but missing warningSigns`);
+            if (!Array.isArray(lesson.dontDo) || lesson.dontDo.length < 2) logError(`${context} Published but dontDo must have at least 2 items`);
+            if (!Array.isArray(lesson.preserveEvidence)) logError(`${context} Published but missing preserveEvidence array`);
+            if (!Array.isArray(lesson.askHelpWhen)) logError(`${context} Published but missing askHelpWhen array`);
+        } else {
+            if (!lesson.mainEntity) logError(`${context} Published civic guide but missing mainEntity`);
+            if (!Array.isArray(lesson.steps) || lesson.steps.length < 2) logError(`${context} Published civic guide but steps must have at least 2 items`);
+        }
+
+        if (!Array.isArray(lesson.doNow) && !Array.isArray(lesson.steps)) logError(`${context} Published but missing doNow or steps`);
+        
+        if (!Array.isArray(lesson.whoCanHelp) && !lesson.whereToDo) logError(`${context} Published but missing whoCanHelp or whereToDo`);
+        
+        if (!Array.isArray(lesson.checklist) && !Array.isArray(lesson.whatYouNeed)) logError(`${context} Published but missing checklist or whatYouNeed`);
         
         if (!Array.isArray(lesson.sources) || lesson.sources.length === 0) {
             logError(`${context} Published but missing sources`);

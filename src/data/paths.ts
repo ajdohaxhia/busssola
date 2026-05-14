@@ -103,5 +103,33 @@ export const LEARNING_PATHS: LearningPath[] = [
         relatedPathIds: ['inizia-da-qui', 'proteggi-account'],
         type: 'security',
         level: 'intermedia'
+    },
+    {
+        id: 'documenti-essenziali',
+        title: 'Documenti Essenziali',
+        description: "Tutto quello che serve per gestire la tua identità digitale e i documenti fondamentali: SPID, CIE e Tessera Sanitaria.",
+        audience: 'Tutti i cittadini',
+        moduleIds: [
+            'modulo-09-documenti-identita'
+        ],
+        estimatedDuration: '30 minuti',
+        cta: 'Gestisci i tuoi documenti',
+        relatedPathIds: ['inizia-da-qui', 'lavoro-e-diritti'],
+        type: 'onboarding',
+        level: 'base'
+    },
+    {
+        id: 'lavoro-e-diritti',
+        title: 'Lavoro e Diritti',
+        description: "Guide pratiche per muoversi nel mondo del lavoro: NASpI, dimissioni e altri servizi INPS fondamentali.",
+        audience: 'Lavoratori e disoccupati',
+        moduleIds: [
+            'modulo-10-lavoro-disoccupazione'
+        ],
+        estimatedDuration: '45 minuti',
+        cta: 'Scopri i tuoi diritti',
+        relatedPathIds: ['documenti-essenziali', 'inizia-da-qui'],
+        type: 'onboarding',
+        level: 'base'
     }
 ];

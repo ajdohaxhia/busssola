@@ -9,7 +9,7 @@ import { Module, Lesson } from '@/types'
 import { 
   ChevronLeft, ChevronRight, Zap, AlertTriangle, 
   BookOpen, CheckCircle2, Clock, ShieldCheck, 
-  HelpCircle, Info, ExternalLink, Calendar, Users
+  HelpCircle, Info, ExternalLink, Calendar, Users, Landmark
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { useGameStore } from '@/store/useGameStore'
@@ -37,6 +37,7 @@ export default function LessonReaderClient({ currentModule, lessonIndex }: Lesso
 
     const currentLesson = currentModule.lessons[lessonIndex] as Lesson
     const isLastLesson = lessonIndex === currentModule.lessons.length - 1
+    const isCivic = currentModule.category && !['diritti-digitali', 'first-aid', 'sextortion'].includes(currentModule.category)
 
     // If lesson is not published, show a placeholder (though routing should prevent this)
     if (currentLesson.status !== 'published' || !currentLesson.qualityGatePassed) {
@@ -144,41 +145,47 @@ export default function LessonReaderClient({ currentModule, lessonIndex }: Lesso
 
                 {/* Main Content Area */}
                 <ReadingWidth className="space-y-16">
-                    {/* Scenario Section */}
+                    {/* Scenario Section / When to do */}
                     <div className="grid grid-cols-1 md:grid-cols-1 gap-12">
                       <section className="space-y-6">
                           <div className="flex items-center gap-3">
                               <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-                                  <HelpCircle className="w-6 h-6" />
+                                  {isCivic ? <Calendar className="w-6 h-6" /> : <HelpCircle className="w-6 h-6" />}
                               </div>
-                              <h2 className="text-2xl font-display font-bold text-foreground">Cosa sta succedendo?</h2>
+                              <h2 className="text-2xl font-display font-bold text-foreground">
+                                {isCivic ? 'Quando serve?' : 'Cosa sta succedendo?'}
+                              </h2>
                           </div>
                           
                           <div className="prose prose-lg text-secondary leading-relaxed max-w-none prose-p:mb-4">
-                              <ReactMarkdown>{currentLesson.scenario}</ReactMarkdown>
+                              <ReactMarkdown>{isCivic ? (currentLesson.whenToDo || currentLesson.scenario) : currentLesson.scenario}</ReactMarkdown>
                           </div>
 
-                          <div className="bg-surface-muted border border-border p-6 rounded-2xl">
-                              <h4 className="text-xs font-bold uppercase tracking-widest text-secondary mb-3 flex items-center gap-2">
-                                <Info className="w-4 h-4" /> Domanda pratica
-                              </h4>
-                              <p className="text-foreground text-lg font-semibold leading-snug">
-                                {currentLesson.question}
-                              </p>
-                          </div>
+                          {!isCivic && (
+                              <div className="bg-surface-muted border border-border p-6 rounded-2xl">
+                                  <h4 className="text-xs font-bold uppercase tracking-widest text-secondary mb-3 flex items-center gap-2">
+                                    <Info className="w-4 h-4" /> Domanda pratica
+                                  </h4>
+                                  <p className="text-foreground text-lg font-semibold leading-snug">
+                                    {currentLesson.question}
+                                  </p>
+                              </div>
+                          )}
                       </section>
                     </div>
 
-                    {/* What is Happening (Pedagogical Explanation) */}
-                    <section className="space-y-6 pt-8 border-t border-border">
-                        <h2 className="text-2xl font-display font-bold text-foreground">Analisi del caso</h2>
-                        <div className="prose prose-lg text-secondary leading-relaxed max-w-none">
-                            <ReactMarkdown>{currentLesson.whatIsHappening}</ReactMarkdown>
-                        </div>
-                    </section>
+                    {/* What is Happening / Analysis (Only for Risks) */}
+                    {!isCivic && (
+                        <section className="space-y-6 pt-8 border-t border-border">
+                            <h2 className="text-2xl font-display font-bold text-foreground">Analisi del caso</h2>
+                            <div className="prose prose-lg text-secondary leading-relaxed max-w-none">
+                                <ReactMarkdown>{currentLesson.whatIsHappening}</ReactMarkdown>
+                            </div>
+                        </section>
+                    )}
 
-                    {/* Warning Signs */}
-                    {currentLesson.warningSigns.length > 0 && (
+                    {/* Warning Signs (Only for Risks) */}
+                    {!isCivic && currentLesson.warningSigns.length > 0 && (
                         <section className="bg-amber-50/30 border border-amber-100 p-8 rounded-[2rem] space-y-6">
                             <h3 className="text-xl font-bold text-amber-900 flex items-center gap-3">
                                 <AlertTriangle className="w-6 h-6 text-amber-500" /> Segnali di rischio
@@ -194,88 +201,142 @@ export default function LessonReaderClient({ currentModule, lessonIndex }: Lesso
                         </section>
                     )}
 
-                    {/* Do Now vs Dont Do */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="bg-emerald-50/40 border border-emerald-100 p-8 rounded-[2rem] space-y-6">
-                            <h3 className="text-xl font-bold text-emerald-900 flex items-center gap-3">
-                                <CheckCircle2 className="w-6 h-6 text-emerald-500" /> Cosa fare subito
-                            </h3>
-                            <ul className="space-y-4 m-0 p-0 list-none">
-                                {currentLesson.doNow.map((action, i) => (
-                                    <li key={i} className="flex gap-3 text-emerald-900/80 font-semibold leading-relaxed">
-                                        <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0" />
+                    {/* Do Now vs Dont Do / Steps */}
+                    {isCivic ? (
+                        <section className="bg-emerald-50/40 border border-emerald-100 p-8 md:p-12 rounded-[2rem] space-y-8">
+                            <div className="flex items-center gap-3">
+                                <CheckCircle2 className="w-8 h-8 text-emerald-500" />
+                                <h3 className="text-2xl font-display font-bold text-emerald-900">Passaggi da seguire</h3>
+                            </div>
+                            <ul className="space-y-6 m-0 p-0 list-none">
+                                {(currentLesson.steps || currentLesson.doNow).map((action, i) => (
+                                    <li key={i} className="flex gap-4 text-emerald-900/80 font-semibold leading-relaxed text-lg bg-white/40 p-5 rounded-2xl border border-emerald-100/50 shadow-sm">
+                                        <span className="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center text-sm font-bold mt-0.5">
+                                            {i + 1}
+                                        </span>
                                         {action}
                                     </li>
                                 ))}
                             </ul>
+                        </section>
+                    ) : (
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="bg-emerald-50/40 border border-emerald-100 p-8 rounded-[2rem] space-y-6">
+                                <h3 className="text-xl font-bold text-emerald-900 flex items-center gap-3">
+                                    <CheckCircle2 className="w-6 h-6 text-emerald-500" /> Cosa fare subito
+                                </h3>
+                                <ul className="space-y-4 m-0 p-0 list-none">
+                                    {currentLesson.doNow.map((action, i) => (
+                                        <li key={i} className="flex gap-3 text-emerald-900/80 font-semibold leading-relaxed">
+                                            <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0" />
+                                            {action}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div className="bg-red-50/40 border border-red-100 p-8 rounded-[2rem] space-y-6">
+                                <h3 className="text-xl font-bold text-red-900 flex items-center gap-3">
+                                    <Zap className="w-6 h-6 text-red-500" /> Cosa NON fare
+                                </h3>
+                                <ul className="space-y-4 m-0 p-0 list-none">
+                                    {currentLesson.dontDo.map((action, i) => (
+                                        <li key={i} className="flex gap-3 text-red-900/80 font-semibold leading-relaxed">
+                                            <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-red-400 shrink-0" />
+                                            {action}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
-                        <div className="bg-red-50/40 border border-red-100 p-8 rounded-[2rem] space-y-6">
-                            <h3 className="text-xl font-bold text-red-900 flex items-center gap-3">
-                                <Zap className="w-6 h-6 text-red-500" /> Cosa NON fare
-                            </h3>
-                            <ul className="space-y-4 m-0 p-0 list-none">
-                                {currentLesson.dontDo.map((action, i) => (
-                                    <li key={i} className="flex gap-3 text-red-900/80 font-semibold leading-relaxed">
-                                        <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-red-400 shrink-0" />
-                                        {action}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
+                    )}
 
-                    {/* Evidence & Help */}
+                    {/* Evidence & Help / Where to do */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                      <section className="bg-blue-50/30 border border-blue-100 p-8 rounded-[2rem] space-y-6">
-                          <h3 className="text-xl font-bold text-blue-900 flex items-center gap-3">
-                              <BookOpen className="w-6 h-6 text-blue-500" /> Conservare le prove
-                          </h3>
-                          <ul className="space-y-3">
-                            {currentLesson.preserveEvidence.map((item, i) => (
-                              <li key={i} className="text-blue-900/80 font-medium leading-relaxed flex gap-3">
-                                <span className="w-1.5 h-1.5 rounded-full bg-blue-300 shrink-0 mt-2.5" />
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                      </section>
-
-                      <section className="bg-sos/5 border border-sos/20 p-8 rounded-[2rem] space-y-6">
-                          <h3 className="text-xl font-bold text-sos flex items-center gap-3 uppercase tracking-wide">
-                              Escalation e Aiuto
-                          </h3>
-                          <div className="space-y-4">
-                            <div className="p-4 bg-white/40 rounded-2xl border border-sos/10">
-                              <h4 className="text-xs font-bold text-sos uppercase mb-2">Quando chiedere aiuto esterno</h4>
-                              <p className="text-sos font-medium leading-relaxed">
-                                  {currentLesson.askHelpWhen}
+                      {isCivic ? (
+                        <>
+                          <section className="bg-blue-50/30 border border-blue-100 p-8 rounded-[2rem] space-y-6">
+                              <h3 className="text-xl font-bold text-blue-900 flex items-center gap-3">
+                                  <Landmark className="w-6 h-6 text-blue-500" /> Dove si fa
+                              </h3>
+                              <p className="text-blue-900/80 font-medium leading-relaxed">
+                                {currentLesson.whereToDo || currentLesson.whoCanHelp.join(', ')}
                               </p>
-                            </div>
-                            <div className="p-4 bg-white/40 rounded-2xl border border-sos/10">
-                              <h4 className="text-xs font-bold text-sos uppercase mb-2">A chi rivolgersi</h4>
-                              <div className="flex flex-wrap gap-2">
-                                {currentLesson.whoCanHelp.map((helper, i) => (
-                                  <Badge key={i} variant="secondary" className="bg-sos/10 text-sos border-sos/20">
-                                    {helper}
-                                  </Badge>
-                                ))}
+                          </section>
+
+                          <section className="bg-fuchsia-50/30 border border-fuchsia-100 p-8 rounded-[2rem] space-y-6">
+                              <h3 className="text-xl font-bold text-fuchsia-900 flex items-center gap-3">
+                                  <Clock className="w-6 h-6 text-fuchsia-500" /> Tempi e Costi
+                              </h3>
+                              <div className="space-y-4">
+                                <p className="text-fuchsia-900/80 font-medium leading-relaxed">
+                                  <span className="font-bold">Tempo stimato:</span> {currentLesson.estimatedMinutes} minuti
+                                </p>
+                                {currentLesson.estimatedCosts && (
+                                  <p className="text-fuchsia-900/80 font-medium leading-relaxed">
+                                    <span className="font-bold">Costi previsti:</span> {currentLesson.estimatedCosts}
+                                  </p>
+                                )}
                               </div>
-                            </div>
-                          </div>
-                      </section>
+                          </section>
+                        </>
+                      ) : (
+                        <>
+                          <section className="bg-blue-50/30 border border-blue-100 p-8 rounded-[2rem] space-y-6">
+                              <h3 className="text-xl font-bold text-blue-900 flex items-center gap-3">
+                                  <BookOpen className="w-6 h-6 text-blue-500" /> Conservare le prove
+                              </h3>
+                              <ul className="space-y-3">
+                                {currentLesson.preserveEvidence.map((item, i) => (
+                                  <li key={i} className="text-blue-900/80 font-medium leading-relaxed flex gap-3">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-blue-300 shrink-0 mt-2.5" />
+                                    {item}
+                                  </li>
+                                ))}
+                              </ul>
+                          </section>
+
+                          <section className="bg-sos/5 border border-sos/20 p-8 rounded-[2rem] space-y-6">
+                              <h3 className="text-xl font-bold text-sos flex items-center gap-3 uppercase tracking-wide">
+                                  Escalation e Aiuto
+                              </h3>
+                              <div className="space-y-4">
+                                <div className="p-4 bg-white/40 rounded-2xl border border-sos/10">
+                                  <h4 className="text-xs font-bold text-sos uppercase mb-2">Quando chiedere aiuto esterno</h4>
+                                  <p className="text-sos font-medium leading-relaxed">
+                                      {currentLesson.askHelpWhen}
+                                  </p>
+                                </div>
+                                <div className="p-4 bg-white/40 rounded-2xl border border-sos/10">
+                                  <h4 className="text-xs font-bold text-sos uppercase mb-2">A chi rivolgersi</h4>
+                                  <div className="flex flex-wrap gap-2">
+                                    {currentLesson.whoCanHelp.map((helper, i) => (
+                                      <Badge key={i} variant="secondary" className="bg-sos/10 text-sos border-sos/20">
+                                        {helper}
+                                      </Badge>
+                                    ))}
+                                  </div>
+                                </div>
+                              </div>
+                          </section>
+                        </>
+                      )}
                     </div>
 
-                    {/* Checklist */}
+                    {/* Checklist / What you need */}
                     <div className="bg-surface border-2 border-primary/20 p-8 md:p-14 rounded-[3rem] shadow-2xl space-y-10 relative overflow-hidden">
                         <div className="absolute top-0 right-0 p-12 opacity-[0.03] pointer-events-none">
                             <CheckCircle2 size={200} />
                         </div>
                         <div className="space-y-4 text-center relative z-10">
-                            <h3 className="text-3xl font-display font-bold text-foreground">Checklist Operativa</h3>
-                            <p className="text-lg text-secondary max-w-xl mx-auto">Segui questi passi in ordine rigoroso per contenere il danno.</p>
+                            <h3 className="text-3xl font-display font-bold text-foreground">
+                              {isCivic ? 'Cosa serve preparare' : 'Checklist Operativa'}
+                            </h3>
+                            <p className="text-lg text-secondary max-w-xl mx-auto">
+                              {isCivic ? 'Assicurati di avere tutto il necessario prima di iniziare.' : 'Segui questi passi in ordine rigoroso per contenere il danno.'}
+                            </p>
                         </div>
                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 m-0 p-0 list-none relative z-10">
-                            {currentLesson.checklist.map((item, i) => (
+                            {(currentLesson.whatYouNeed || currentLesson.checklist).map((item, i) => (
                                 <li key={i} className="flex items-center gap-4 p-5 rounded-3xl bg-background border border-border shadow-sm group hover:border-primary/30 transition-all">
                                     <div className="w-6 h-6 rounded-lg border-2 border-primary/30 flex items-center justify-center shrink-0 group-hover:bg-primary/5 transition-colors">
                                         <div className="w-2 h-2 rounded-sm bg-primary/40" />
@@ -285,6 +346,23 @@ export default function LessonReaderClient({ currentModule, lessonIndex }: Lesso
                             ))}
                         </ul>
                     </div>
+
+                    {/* Common Errors (Only for Civic) */}
+                    {isCivic && currentLesson.commonErrors && currentLesson.commonErrors.length > 0 && (
+                        <section className="bg-amber-50/30 border border-amber-100 p-8 rounded-[2rem] space-y-6">
+                            <h3 className="text-xl font-bold text-amber-900 flex items-center gap-3">
+                                <AlertTriangle className="w-6 h-6 text-amber-500" /> Errori comuni da evitare
+                            </h3>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                {currentLesson.commonErrors.map((error, i) => (
+                                    <div key={i} className="flex gap-4 p-4 bg-white/60 rounded-2xl border border-amber-100/50 text-amber-900/80 font-medium">
+                                        <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0 mt-2" />
+                                        {error}
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    )}
 
                     {/* Sources Section - THE CORE OF THE QUALITY GATE */}
                     <section className="bg-surface border border-border p-8 md:p-12 rounded-[2.5rem] shadow-sm space-y-10">

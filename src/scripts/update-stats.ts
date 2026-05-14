@@ -42,6 +42,9 @@ const modulesMeta = modules.map(m => ({
     lessonCount: m.lessons.filter(l => l.status === 'published' && l.qualityGatePassed).length,
     difficulty: m.difficulty || 'base',
     icon: m.icon,
+    category: m.category,
+    lastUpdated: m.lastUpdated,
+    tags: m.tags,
     featuredType: 'curated' as const // Placeholder logic
 }));
 

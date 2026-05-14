@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Shield, Heart, Users, LineChart, Globe, Zap } from 'lucide-react'
+import { Shield, Users, LineChart, Globe, Zap } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { siteStats } from '@/data/siteStats'
 import Link from 'next/link'
@@ -9,45 +9,45 @@ import Link from 'next/link'
 const values = [
     {
         icon: Shield,
-        title: 'Centralità della Sicurezza',
-        description: 'Ogni risorsa è pensata per offrire strumenti pratici, aggiornati e concreti per proteggere la propria identità e la propria serenità online.',
+        title: 'Chiarezza Istituzionale',
+        description: 'Trasformiamo il gergo burocratico in guide semplici, lineari e immediatamente applicabili, indicando sempre gli enti ufficiali di riferimento.',
         color: 'text-primary',
         bg: 'bg-primary/10',
     },
     {
-        icon: Heart,
-        title: 'Intelligenza Emotiva',
-        description: 'La tecnologia dovrebbe arricchire la nostra vita. Promuoviamo un ambiente digitale basato sul rispetto, l\'empatia e la consapevolezza.',
-        color: 'text-sos',
-        bg: 'bg-[#fef2f2]',
+        icon: Zap,
+        title: 'Cittadinanza Attiva',
+        description: 'Crediamo che conoscere i propri diritti e le procedure per esercitarli sia il primo passo per una partecipazione consapevole alla vita pubblica.',
+        color: 'text-amber-600',
+        bg: 'bg-amber-50',
     },
     {
         icon: Users,
-        title: 'Apprendimento Condiviso',
-        description: 'Crediamo che l\'educazione digitale sia uno sforzo collettivo. Forniamo risorse non solo per singoli, ma per scuole, educatori e famiglie.',
+        title: 'A misura di persona',
+        description: 'Busssola è pensata per cittadini, famiglie, studenti e lavoratori. Usiamo un linguaggio umano, chiaro e privo di tecnicismi inutili.',
         color: 'text-purple-600',
         bg: 'bg-purple-50',
     },
     {
         icon: LineChart,
-        title: 'Chiarezza a ogni costo',
-        description: 'Trasformiamo concetti tecnici complessi in guide chiare, leggibili e immediatamente applicabili nella vita quotidiana.',
+        title: 'Fonti Verificate',
+        description: 'Ogni guida è costruita analizzando siti istituzionali, leggi e circolari ufficiali per garantire informazioni affidabili e sicure.',
         color: 'text-emerald-600',
         bg: 'bg-emerald-50',
     },
     {
         icon: Globe,
         title: 'Accessibilità Totale',
-        description: 'La sicurezza digitale è un diritto, non un privilegio. La nostra piattaforma è e resterà gratuita e accessibile a tutti, senza barriere.',
+        description: 'L\'accesso alle informazioni civiche è un diritto. La nostra piattaforma è e resterà gratuita, senza pubblicità e senza tracciamento.',
         color: 'text-blue-600',
         bg: 'bg-blue-50',
     },
     {
-        icon: Zap,
-        title: 'Supporto Immediato',
-        description: 'Oltre all\'educazione preventiva, forniamo protocolli chiari per gestire situazioni di crisi ed emergenza senza farsi prendere dal panico.',
-        color: 'text-amber-600',
-        bg: 'bg-amber-50',
+        icon: Shield,
+        title: 'Indipendenza e Privacy',
+        description: 'Busssola è un progetto indipendente e civico. Non richiede registrazioni, non raccoglie dati personali e non ha scopi di lucro.',
+        color: 'text-sos',
+        bg: 'bg-[#fef2f2]',
     },
 ]
 
@@ -82,10 +82,10 @@ export default function AboutPage() {
                     <Shield className="w-4 h-4" /> Progetto Indipendente
                 </div>
                 <h1 className="text-5xl md:text-7xl font-display font-semibold text-foreground tracking-tight leading-tight">
-                    Una risorsa per chi non sa da dove cominciare.
+                    Orientarsi tra i propri diritti non deve essere difficile.
                 </h1>
                 <p className="text-xl text-secondary leading-relaxed max-w-2xl mx-auto">
-                    Busssola è una risorsa pubblica di orientamento digitale. Non vende nulla, non traccia nessuno. Raccoglie guide pratiche, fonti verificate e checklist per aiutare chi si trova a fronteggiare un problema online.
+                    Busssola è una risorsa pubblica e gratuita di orientamento civico. Aiutiamo i cittadini a capire documenti, procedure, bonus e tutele in Italia con guide semplici e verificate.
                 </p>
                 <p className="text-sm font-semibold text-secondary">
                     Creato con ❤️ da{' '}
@@ -105,10 +105,10 @@ export default function AboutPage() {
             >
                 <div className="relative z-10 text-center max-w-3xl mx-auto space-y-8">
                     <h2 className="text-3xl md:text-5xl font-display font-semibold text-foreground tracking-tight">
-                        Il nostro metodo.
+                        Semplificare, non sostituire.
                     </h2>
                     <p className="text-lg md:text-xl text-secondary leading-relaxed font-medium">
-                        La tecnologia cambia rapidamente. Invece di manuali teorici, Busssola raccoglie indicazioni pratiche e aggiornate per affrontare situazioni concrete: un account rubato, una truffa, un messaggio minaccioso. Ogni scheda indica cosa fare, cosa non fare e dove chiedere aiuto.
+                        Busssola non sostituisce gli enti ufficiali, ma agisce come un traduttore tra la burocrazia e le persone. Ogni scheda indica cosa serve, dove andare e quali sono i passaggi reali per completare una procedura, dal rilascio dello SPID alla richiesta della NASpI.
                     </p>
                 </div>
             </motion.div>

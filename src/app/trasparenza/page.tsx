@@ -15,8 +15,18 @@ export default function TrasparenzaPage() {
                 <section className="space-y-6">
                     <h2 className="text-2xl font-bold text-foreground">Chi finanzia il progetto?</h2>
                     <p>
-                        Busssola è attualmente un'iniziativa a scopo educativo indipendente. Non riceviamo finanziamenti da aziende tecnologiche, non ospitiamo pubblicità e non vendiamo i dati degli utenti (semplicemente perché non li raccogliamo).
+                        Busssola è un'iniziativa civica indipendente a scopo educativo. Non riceviamo finanziamenti da aziende, non ospitiamo pubblicità e non vendiamo i dati degli utenti (semplicemente perché non li raccogliamo). Il progetto è sostenuto dal lavoro volontario del suo creatore e dei contributori su GitHub.
                     </p>
+                </section>
+
+                <section className="space-y-6">
+                    <h2 className="text-2xl font-bold text-foreground">Relazione con la Pubblica Amministrazione</h2>
+                    <div className="bg-amber-50 border border-amber-100 p-6 rounded-2xl space-y-3">
+                        <p className="text-amber-900 font-semibold">Busssola NON è un ente pubblico, un ufficio governativo o un'agenzia ufficiale.</p>
+                        <p className="text-amber-800 text-sm leading-relaxed">
+                            Le informazioni e le guide presenti sul sito hanno esclusivamente scopo informativo e di orientamento civico. Sebbene ci impegniamo al massimo per mantenere i contenuti aggiornati e precisi basandoci su fonti ufficiali (AgID, INPS, Comuni, Ministeri), <strong>solo le fonti istituzionali hanno valore legale</strong>. Ti invitiamo sempre a verificare ogni procedura sui siti ufficiali degli enti competenti prima di procedere.
+                        </p>
+                    </div>
                 </section>
 
                 <section className="grid grid-cols-1 md:grid-cols-2 gap-8">

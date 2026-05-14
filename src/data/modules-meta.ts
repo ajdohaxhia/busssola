@@ -13,6 +13,8 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 8,
     "difficulty": "base",
     "icon": "ShieldAlert",
+    "category": "diritti-digitali",
+    "lastUpdated": "2024-05-13",
     "featuredType": "curated"
   },
   {
@@ -23,6 +25,8 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 3,
     "difficulty": "intermedia",
     "icon": "ShieldAlert",
+    "category": "diritti-digitali",
+    "lastUpdated": "2024-05-13",
     "featuredType": "curated"
   },
   {
@@ -33,6 +37,8 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 4,
     "difficulty": "base",
     "icon": "Key",
+    "category": "diritti-digitali",
+    "lastUpdated": "2024-05-13",
     "featuredType": "curated"
   },
   {
@@ -43,6 +49,8 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 3,
     "difficulty": "intermedia",
     "icon": "Key",
+    "category": "diritti-digitali",
+    "lastUpdated": "2024-05-13",
     "featuredType": "curated"
   },
   {
@@ -53,6 +61,8 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 5,
     "difficulty": "base",
     "icon": "Target",
+    "category": "diritti-digitali",
+    "lastUpdated": "2024-05-13",
     "featuredType": "curated"
   },
   {
@@ -63,6 +73,8 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 3,
     "difficulty": "intermedia",
     "icon": "Target",
+    "category": "diritti-digitali",
+    "lastUpdated": "2024-05-13",
     "featuredType": "curated"
   },
   {
@@ -73,6 +85,8 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 4,
     "difficulty": "intermedia",
     "icon": "AlertCircle",
+    "category": "diritti-digitali",
+    "lastUpdated": "2024-05-13",
     "featuredType": "curated"
   },
   {
@@ -83,6 +97,8 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 2,
     "difficulty": "intermedia",
     "icon": "AlertCircle",
+    "category": "diritti-digitali",
+    "lastUpdated": "2024-05-13",
     "featuredType": "curated"
   },
   {
@@ -93,6 +109,8 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 2,
     "difficulty": "intermedia",
     "icon": "UserCheck",
+    "category": "diritti-digitali",
+    "lastUpdated": "2024-05-13",
     "featuredType": "curated"
   },
   {
@@ -103,6 +121,8 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 2,
     "difficulty": "intermedia",
     "icon": "UserCheck",
+    "category": "diritti-digitali",
+    "lastUpdated": "2024-05-13",
     "featuredType": "curated"
   },
   {
@@ -113,6 +133,8 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 3,
     "difficulty": "intermedia",
     "icon": "Eye",
+    "category": "diritti-digitali",
+    "lastUpdated": "2024-05-13",
     "featuredType": "curated"
   },
   {
@@ -123,6 +145,8 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 3,
     "difficulty": "intermedia",
     "icon": "Eye",
+    "category": "diritti-digitali",
+    "lastUpdated": "2024-05-13",
     "featuredType": "curated"
   },
   {
@@ -133,6 +157,8 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 2,
     "difficulty": "base",
     "icon": "Smartphone",
+    "category": "diritti-digitali",
+    "lastUpdated": "2024-05-13",
     "featuredType": "curated"
   },
   {
@@ -143,6 +169,8 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 3,
     "difficulty": "avanzata",
     "icon": "Smartphone",
+    "category": "diritti-digitali",
+    "lastUpdated": "2024-05-13",
     "featuredType": "curated"
   },
   {
@@ -153,6 +181,8 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 3,
     "difficulty": "base",
     "icon": "GraduationCap",
+    "category": "diritti-digitali",
+    "lastUpdated": "2024-05-13",
     "featuredType": "curated"
   },
   {
@@ -163,6 +193,32 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 2,
     "difficulty": "intermedia",
     "icon": "GraduationCap",
+    "category": "diritti-digitali",
+    "lastUpdated": "2024-05-13",
+    "featuredType": "curated"
+  },
+  {
+    "id": "modulo-09-documenti-identita",
+    "number": 0,
+    "title": "Documenti e Identità",
+    "description": "Guida pratica ai principali documenti di identità e strumenti di accesso digitale ai servizi pubblici.",
+    "lessonCount": 3,
+    "difficulty": "base",
+    "icon": "IdCard",
+    "category": "documenti-identita",
+    "lastUpdated": "2024-05-13",
+    "featuredType": "curated"
+  },
+  {
+    "id": "modulo-10-lavoro-disoccupazione",
+    "number": 0,
+    "title": "Lavoro e Disoccupazione",
+    "description": "Guida ai principali servizi digitali legati al mondo del lavoro, al sostegno al reddito e alla cessazione dei rapporti lavorativi.",
+    "lessonCount": 2,
+    "difficulty": "base",
+    "icon": "Briefcase",
+    "category": "lavoro-disoccupazione",
+    "lastUpdated": "2024-05-13",
     "featuredType": "curated"
   }
 ];

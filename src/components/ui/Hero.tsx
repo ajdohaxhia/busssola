@@ -28,26 +28,26 @@ export function Hero() {
                 className="relative z-10 flex min-h-[480px] max-w-3xl flex-col items-start justify-center px-6 py-12 text-left md:min-h-[60vh] md:px-16 md:py-20"
             >
                 <h1 className="text-5xl font-display font-semibold leading-[0.98] tracking-tight text-foreground md:text-7xl">
-                    Quando succede qualcosa online, capire cosa fare è il primo passo.
+                    Orientarsi tra documenti, diritti e procedure in Italia non deve essere un labirinto.
                 </h1>
                 
                 <p className="mt-5 max-w-2xl text-2xl font-display font-semibold leading-tight text-foreground md:text-4xl">
-                    Busssola raccoglie guide pratiche, checklist e fonti verificate per affrontare ricatti, account rubati, truffe, stalking, grooming e altri rischi digitali.
+                    Busssola è la tua guida civica: semplice, gratuita e verificata per cittadini, famiglie e studenti.
                 </p>
 
                 <p className="mt-6 max-w-2xl text-lg leading-relaxed text-secondary md:text-xl">
-                    {siteStats.totalModules} argomenti, {siteStats.publishedLessons} schede pratiche. Gratuito, senza registrazione, senza tracciamento.
+                    {siteStats.totalModules} guide pratiche su documenti, lavoro, casa, bonus e sicurezza digitale. Senza registrazione, senza tracciamento, totalmente gratuito.
                 </p>
                 
                 <div className="mt-10 flex w-full flex-col items-stretch gap-4 sm:w-auto sm:flex-row">
                     <Button asChild size="lg" className="rounded-xl w-full sm:w-auto text-base h-14 px-8">
-                        <Link href="/sos">
-                            Ho bisogno di aiuto adesso <ArrowRight className="w-5 h-5 ml-2" />
+                        <Link href="/moduli">
+                            Trova una guida <ArrowRight className="w-5 h-5 ml-2" />
                         </Link>
                     </Button>
                     <Button asChild size="lg" variant="outline" className="rounded-xl w-full sm:w-auto text-base h-14 px-8 border-border hover:bg-surface-muted text-foreground">
-                        <Link href="/moduli">
-                            Trova una guida
+                        <Link href="/sos">
+                            Situazioni urgenti (SOS)
                         </Link>
                     </Button>
                 </div>

@@ -55,3 +55,4 @@ tsc_audit*.txt
 tsc_errors*.txt
 log.txt
 out.txt
+.aider*

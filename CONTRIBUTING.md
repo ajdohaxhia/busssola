@@ -1,115 +1,51 @@
-# Contribuire a Busssola
+# Contribuire a Busssola 🧭
 
-## Prima di iniziare
+Grazie per il tuo interesse nel contribuire a Busssola! Il progetto è aperto a chiunque voglia aiutare a rendere la burocrazia e i diritti in Italia più comprensibili.
 
-Busssola è una risorsa informativa pubblica. Non è un servizio di emergenza e non sostituisce supporto legale, medico, psicologico o intervento urgente.
+## Cosa puoi fare
+- **Aggiungere una nuova guida**: se conosci bene una procedura (es. Bonus Nido, richiesta Passaporto, ecc.).
+- **Aggiornare fonti o link**: le procedure cambiano, aiutaci a tenere il sito aggiornato.
+- **Migliorare i testi**: correggere bozze, semplificare il linguaggio o migliorare il tono.
+- **Segnalare bug**: problemi tecnici, di accessibilità o di visualizzazione su mobile.
 
-Se sei in pericolo, chiama il 112.
+## Linee Guida Editoriali
 
----
+### 1. Tono di voce
+- **Umano e chiaro**: evita il gergo burocratico inutilmente complesso.
+- **Istituzionale ma non freddo**: sii professionale e serio, ma rassicurante.
+- **Assenza di Hype**: non usare termini come "rivoluzionario", "magico", "unico". Siamo una guida pratica, non un prodotto marketing.
+- **Inclusivo**: scrivi per tutti, indipendentemente dal livello di istruzione o competenza tecnica.
 
-## Modi utili per contribuire
+### 2. Struttura delle Guide
+Ogni guida deve seguire questo schema (mappato sui campi del file `.ts` del modulo):
+- **Titolo**: chiaro e orientato all'azione (es. "Come richiedere lo SPID").
+- **A chi serve**: indica chiaramente il target (cittadini, famiglie, ecc.).
+- **Quando farla**: descrivi la situazione in cui serve questa procedura.
+- **Cosa serve**: lista dei documenti e requisiti necessari.
+- **Dove si fa**: ente di riferimento (Comune, INPS, online, ecc.).
+- **Passaggi**: sequenza numerata di azioni concrete.
+- **Link Ufficiali**: cita sempre le fonti istituzionali.
 
-### Bug e problemi tecnici
+### 3. Fonti e Veridicità
+Non accettiamo guide basate su "sentito dire" o memoria. Ogni contenuto deve:
+- Citare almeno una fonte ufficiale (sito del Governo, INPS, Gazzetta Ufficiale, ecc.).
+- Indicare la data dell'ultima verifica.
 
-- Link rotti o pagine 404
-- Problemi di visualizzazione su mobile
-- Problemi di contrasto o leggibilità
-- Errori di build
-- Problemi con sitemap, robots.txt o SEO tecnico
-- Import inutilizzati o codice morto
+## Workflow Tecnico
 
-### Contenuti
+### Come aggiungere o modificare un modulo
+1. Naviga in `src/data/modules/`.
+2. Crea un nuovo file `.ts` o modificane uno esistente seguendo il formato attuale.
+3. Se crei un nuovo file, importalo e aggiungilo all'array `ALL_MODULES` in `src/data/modules/index.ts`.
+4. Esegui `npm run validate:content` per verificare che la struttura sia corretta.
+5. Esegui `npm run update-stats` per aggiornare i metadati del sito.
+6. Apri una Pull Request su GitHub spiegando le modifiche.
 
-- Correggere frasi poco chiare o ambigue
-- Migliorare tono e leggibilità
-- Aggiornare fonti ufficiali (URL cambiati, procedure aggiornate)
-- Segnalare contenuti deboli o non verificati
-- Proporre nuove checklist pratiche
-
-### Fonti
-
-Ogni fonte citata in una guida deve avere:
-
-- **Titolo** della pagina o documento
-- **Organizzazione** (es. Polizia Postale, Garante Privacy, Google, ecc.)
-- **URL ufficiale** (HTTPS, niente link abbreviati)
-- **Cosa supporta** nella guida (a quale punto fa riferimento)
-- **Data ultimo controllo**
-
-Se una fonte non è più raggiungibile o è stata spostata, apri una issue.
-
-### Nuove guide
-
-Una nuova guida può essere proposta solo se:
-
-- Risponde a una **domanda concreta** che una persona reale potrebbe avere
-- **Non duplica** una guida esistente
-- Ha **fonti ufficiali** o altamente affidabili
-- Contiene una **checklist** pratica
-- Contiene una sezione **"Cosa non fare"**
-- Indica **quando chiedere aiuto** e a chi rivolgersi
-- Usa un tono **calmo, diretto e non colpevolizzante**
+## Requisiti Tecnici
+- Usa TypeScript in modo rigoroso.
+- Non aggiungere librerie esterne senza motivo.
+- Mantieni il CSS pulito usando le utility di Tailwind v4.
+- Testa sempre la visualizzazione su schermi piccoli (mobile-first).
 
 ---
-
-## Cosa evitare
-
-- Contenuti generici generati da AI senza verifica
-- Fonti inventate o non verificabili
-- Blog SEO casuali come fonte primaria
-- Consigli legali presentati come assoluti
-- Promesse impossibili ("non ti succederà mai più")
-- Linguaggio allarmista o sensazionalistico
-- Tono da prodotto commerciale o startup
-- Colpevolizzazione della vittima ("non dovevi cliccare")
-- Consigli di vendetta, contro-hacking o azioni illegali
-
----
-
-## Setup locale
-
-```bash
-# Installazione dipendenze
-npm install
-
-# Avvio server di sviluppo
-npm run dev
-
-# Validazione contenuti (Quality Gate)
-npm run validate:content
-
-# Aggiornamento statistiche
-npm run update-stats
-
-# Linting
-npm run lint
-
-# Controllo tipi TypeScript
-npm run typecheck
-
-# Build di produzione
-npm run build
-```
-
----
-
-## Prima di aprire una Pull Request
-
-Esegui tutti i controlli:
-
-```bash
-npm run validate:content
-npm run update-stats
-npm run lint
-npm run typecheck
-npm run build
-```
-
-Se un comando fallisce, spiega il problema nella PR. Non disattivare i controlli per "far passare" la build.
-
----
-
-## Licenza
-
-Contribuendo a Busssola accetti che i tuoi contributi siano distribuiti con la stessa licenza del progetto.
+Grazie per il tuo supporto! Insieme possiamo rendere i diritti più accessibili a tutti.

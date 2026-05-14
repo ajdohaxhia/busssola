@@ -7,7 +7,7 @@ import { Module } from '@/types'
 import { 
   ChevronLeft, Play, Search, Clock, 
   ShieldAlert, Users, CheckCircle, 
-  ShieldCheck, AlertTriangle
+  ShieldCheck, AlertTriangle, Landmark
 } from 'lucide-react'
 import { useGameStore } from '@/store/useGameStore'
 import { Container } from '@/components/ui/Container'
@@ -46,10 +46,18 @@ export default function ModuleDetailClient({ currentModule }: ModuleDetailClient
     const progressPercent = moduleProgress.completed ? 100 : Math.min(100, (moduleProgress.lessonsViewed?.filter(id => publishedLessons.some(pl => pl.id === id)).length || 0) / publishedLessons.length * 100)
     
     const isSos = currentModule.category === 'first-aid' || currentModule.category === 'sextortion'
+    const isCivic = currentModule.category && !['diritti-digitali', 'first-aid', 'sextortion'].includes(currentModule.category)
     const totalMinutes = publishedLessons.reduce((acc, l) => acc + (l.estimatedMinutes || 5), 0)
     const moduleDifficulty = currentModule.difficulty ?? 'base'
     const displayTitle = currentModule.title.replace(/Modulo \d+[b]?:\s*/i, '')
     
+    const categoryLabels: Record<string, string> = {
+        'diritti-digitali': 'Diritti Digitali',
+        'documenti-identita': 'Documenti e Identità',
+        'lavoro-disoccupazione': 'Lavoro e Disoccupazione',
+    }
+    const categoryName = currentModule.category ? categoryLabels[currentModule.category] || currentModule.category : 'Guida'
+
     const audience = moduleDifficulty === 'base'
         ? "Per tutti, inclusi ragazzi e principianti." 
         : moduleDifficulty === 'intermedia'
@@ -61,8 +69,10 @@ export default function ModuleDetailClient({ currentModule }: ModuleDetailClient
             {/* Breadcrumbs */}
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="flex items-center gap-2 text-sm font-medium text-secondary">
                 <Link href="/moduli" className="hover:text-foreground transition-colors flex items-center gap-1">
-                    <ChevronLeft className="w-4 h-4" /> Catalogo
+                    Catalogo
                 </Link>
+                <span>/</span>
+                <span className="text-secondary">{categoryName}</span>
                 <span>/</span>
                 <span className="text-foreground line-clamp-1">{displayTitle}</span>
             </motion.div>
@@ -87,6 +97,18 @@ export default function ModuleDetailClient({ currentModule }: ModuleDetailClient
                                 <Link href="/sos" className="text-sos font-bold text-sm inline-flex items-center gap-1 mt-1 hover:underline">
                                     Vai al Centro SOS <ChevronLeft className="w-4 h-4 rotate-180" />
                                 </Link>
+                            </div>
+                        </div>
+                    )}
+
+                    {isCivic && (
+                        <div className="bg-primary/5 border border-primary/20 rounded-2xl p-4 flex items-start gap-4">
+                            <div className="bg-primary/10 text-primary p-2 rounded-xl shrink-0 mt-0.5">
+                                <ShieldCheck className="w-5 h-5" />
+                            </div>
+                            <div className="space-y-1">
+                                <h4 className="font-semibold text-primary text-sm tracking-wide uppercase">Guida Informativa</h4>
+                                <p className="text-sm text-primary/80 font-medium">Questa guida ti aiuta a orientarti tra le procedure ufficiali. Ricorda che solo le fonti istituzionali hanno valore legale.</p>
                             </div>
                         </div>
                     )}
@@ -154,6 +176,17 @@ export default function ModuleDetailClient({ currentModule }: ModuleDetailClient
                                         <p className="text-xs text-secondary leading-relaxed">{audience}</p>
                                     </div>
                                 </li>
+                                {currentModule.mainEntity && (
+                                    <li className="flex items-start gap-4">
+                                        <div className="bg-background border border-border p-2.5 rounded-xl shrink-0">
+                                            <Landmark className="w-5 h-5 text-secondary" />
+                                        </div>
+                                        <div className="space-y-1 mt-1">
+                                            <p className="text-sm font-bold text-foreground leading-none">Ente Principale</p>
+                                            <p className="text-xs text-secondary leading-relaxed">{currentModule.mainEntity}</p>
+                                        </div>
+                                    </li>
+                                )}
                                 <li className="flex items-start gap-4">
                                     <div className="bg-background border border-border p-2.5 rounded-xl shrink-0">
                                         <Clock className="w-5 h-5 text-secondary" />
@@ -163,6 +196,17 @@ export default function ModuleDetailClient({ currentModule }: ModuleDetailClient
                                         <p className="text-xs text-secondary leading-relaxed">~{totalMinutes} min ({publishedLessons.length} lezioni pubblicate).</p>
                                     </div>
                                 </li>
+                                {currentModule.lastUpdated && (
+                                    <li className="flex items-start gap-4">
+                                        <div className="bg-background border border-border p-2.5 rounded-xl shrink-0">
+                                            <CheckCircle className="w-5 h-5 text-emerald-500" />
+                                        </div>
+                                        <div className="space-y-1 mt-1">
+                                            <p className="text-sm font-bold text-foreground leading-none">Aggiornato</p>
+                                            <p className="text-xs text-secondary leading-relaxed">{new Date(currentModule.lastUpdated).toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+                                        </div>
+                                    </li>
+                                )}
                             </ul>
                         </div>
                     </div>

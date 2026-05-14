@@ -11,10 +11,9 @@ export const CREATOR_URL = `${SITE_URL}${CREATOR_PATH}`
 export const DEFAULT_OG_IMAGE = '/og-image.png'
 
 const TOTAL_LESSONS = ALL_MODULES.reduce((acc, module) => acc + module.lessons.length, 0)
-const LESSON_COUNT_LABEL = `${TOTAL_LESSONS} lezioni`
 
 export const SITE_DESCRIPTION =
-    `Busssola è una piattaforma gratuita di educazione civica digitale per ragazzi, famiglie e scuole: ${ALL_MODULES.length} moduli e ${LESSON_COUNT_LABEL} verificate su sicurezza online, privacy, truffe, cyberbullismo e benessere digitale.`
+    `Busssola è una piattaforma civica gratuita per orientarsi tra documenti, diritti e procedure in Italia: ${ALL_MODULES.length} guide pratiche su SPID, CIE, NASpI, bonus, sicurezza digitale e tutele del cittadino.`
 
 export const TOTAL_MODULES = ALL_MODULES.length
 export { TOTAL_LESSONS }
@@ -22,19 +21,20 @@ export { TOTAL_LESSONS }
 const baseKeywords = [
     'Busssola',
     'busssola.com',
+    'guida civica italia',
+    'documenti e procedure',
+    'come richiedere spid',
+    'come fare cie carta identità',
+    'richiesta naspi online',
+    'cambio residenza comune',
+    'bonus e agevolazioni italia',
+    'diritti del cittadino',
     'sicurezza online',
-    'educazione digitale',
-    'educazione civica digitale',
-    'privacy online',
+    'privacy digitale',
     'cyberbullismo',
-    'grooming online',
-    'sextortion',
     'phishing',
     'truffe online',
     'benessere digitale',
-    'sicurezza ragazzi internet',
-    'sicurezza digitale famiglie',
-    'cittadinanza digitale scuole',
     CREATOR_NAME,
     'Adelajdo Haxhiaj Busssola',
 ]
@@ -131,12 +131,13 @@ export const creatorPerson = {
     name: CREATOR_NAME,
     url: CREATOR_URL,
     jobTitle: `Creatore di ${SITE_NAME}`,
-    description: `${CREATOR_NAME} è il creatore di ${SITE_NAME}, piattaforma gratuita di educazione civica digitale per sicurezza online, privacy e consapevolezza in rete.`,
+    description: `${CREATOR_NAME} è il creatore di ${SITE_NAME}, piattaforma civica gratuita per orientarsi tra diritti, documenti e sicurezza digitale in Italia.`,
     knowsAbout: [
-        'educazione digitale',
+        'cittadinanza attiva',
+        'burocrazia italiana',
+        'diritti del cittadino',
         'sicurezza online',
         'privacy digitale',
-        'cittadinanza digitale',
         'prevenzione dei rischi online',
     ],
 }

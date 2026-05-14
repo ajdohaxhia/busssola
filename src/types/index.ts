@@ -14,13 +14,25 @@ export interface Lesson {
   slug?: string;
   title: string;
   category: string;
-  audience: ('adults' | 'minors' | 'parents' | 'teachers' | 'victims' | 'prevention' | 'school')[];
-  level: 'base' | 'medio';
+  audience: ('adults' | 'minors' | 'parents' | 'teachers' | 'victims' | 'prevention' | 'school' | 'cittadini' | 'lavoratori' | 'famiglie')[];
+  level: 'base' | 'medio' | 'avanzato';
   estimatedMinutes: number;
+  estimatedCosts?: string;
   summary: string;
   status: 'published' | 'draft' | 'needs_sources' | 'needs_review';
   emergencyLevel?: 'low' | 'medium' | 'high';
   tags?: string[];
+  
+  // Civic-specific fields (optional)
+  mainEntity?: string;
+  whenToDo?: string;
+  whatYouNeed?: string[];
+  whereToDo?: string;
+  steps?: string[];
+  commonErrors?: string[];
+  officialLinks?: string[];
+  
+  // Existing risk-specific fields
   scenario: string;
   question: string;
   whatIsHappening: string;
@@ -31,6 +43,7 @@ export interface Lesson {
   askHelpWhen: string[];
   whoCanHelp: string[];
   checklist: string[];
+  
   sources: Source[];
   lastReviewedAt: string; // YYYY-MM-DD
   qualityGatePassed: boolean;
@@ -50,6 +63,9 @@ export interface ModuleMetadata {
     progress?: number;
     lessonCount: number;
     featuredType?: 'start' | 'curated' | 'situational' | 'none';
+    lastUpdated?: string;
+    mainEntity?: string;
+    tags?: string[];
 }
 
 export interface Module extends Omit<ModuleMetadata, 'lessonCount' | 'number' | 'difficulty'> {

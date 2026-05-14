@@ -4,11 +4,10 @@ import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import { 
   ArrowRight, ShieldCheck, User, Users, GraduationCap, 
-  Lock, Heart, ShieldAlert, MonitorSmartphone, Target, 
-  Search, BookOpen, Clock, Smartphone
+  Lock, Heart, ShieldAlert, Target, 
+  Search, BookOpen, Clock, Smartphone, CreditCard, Briefcase
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { siteStats } from '@/data/siteStats'
 import { LEARNING_PATHS } from '@/data/paths'
 
 export default function Home() {
@@ -30,14 +29,16 @@ export default function Home() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {LEARNING_PATHS.slice(0, 6).map((path) => {
+          {LEARNING_PATHS.slice(0, 9).map((path) => {
             const icons: Record<string, React.ElementType> = {
                 'inizia-da-qui': ShieldCheck,
                 'proteggi-account': Lock,
                 'relazioni-social': Users,
                 'sos-digitale': ShieldAlert,
                 'genitori-famiglie': Heart,
-                'truffe-soldi': Target
+                'truffe-soldi': Target,
+                'documenti-essenziali': CreditCard,
+                'lavoro-e-diritti': Briefcase
             };
             const colors: Record<string, string> = {
                 'inizia-da-qui': 'text-primary bg-primary/10 hover:border-primary/50',
@@ -45,7 +46,9 @@ export default function Home() {
                 'relazioni-social': 'text-emerald-600 bg-emerald-50 hover:border-emerald-500/50',
                 'sos-digitale': 'text-sos bg-sos/10 hover:border-sos',
                 'genitori-famiglie': 'text-orange-600 bg-orange-50 hover:border-orange-500/50',
-                'truffe-soldi': 'text-blue-600 bg-blue-50 hover:border-blue-500/50'
+                'truffe-soldi': 'text-blue-600 bg-blue-50 hover:border-blue-500/50',
+                'documenti-essenziali': 'text-fuchsia-600 bg-fuchsia-50 hover:border-fuchsia-500/50',
+                'lavoro-e-diritti': 'text-cyan-600 bg-cyan-50 hover:border-cyan-500/50'
             };
             const Icon = icons[path.id] || BookOpen;
             const style = colors[path.id] || 'text-secondary bg-secondary/10 hover:border-secondary/50';
@@ -90,7 +93,7 @@ export default function Home() {
             A chi può servire
           </h2>
           <p className="text-secondary text-lg">
-            Le guide di Busssola sono scritte per essere utili a chiunque si trovi a fronteggiare un problema digitale, indipendentemente dall'esperienza tecnica.
+            Busssola è pensata per essere utile a chiunque debba affrontare procedure pratiche o problemi digitali, con un linguaggio semplice e diretto.
           </p>
         </div>
         
@@ -99,19 +102,19 @@ export default function Home() {
             <div className="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center">
               <User className="w-7 h-7" strokeWidth={2.5} />
             </div>
-            <h3 className="text-2xl font-semibold text-foreground tracking-tight">Per i più giovani</h3>
+            <h3 className="text-2xl font-semibold text-foreground tracking-tight">Cittadini e Famiglie</h3>
             <p className="text-secondary leading-relaxed">
-              Consigli pratici, veloci e diretti per gestire gaming, social network, relazioni online e difendersi dalle pressioni dei coetanei o degli sconosciuti, senza inutili lezioni paternalistiche.
+              Dalla richiesta dello SPID al cambio di residenza, fino alla gestione della sicurezza online per i più piccoli. Una guida concreta per la vita di tutti i giorni.
             </p>
           </div>
           
           <div className="space-y-5 p-8 rounded-[2rem] bg-surface border border-border">
             <div className="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center">
-              <Users className="w-7 h-7" strokeWidth={2.5} />
+              <Briefcase className="w-7 h-7" strokeWidth={2.5} />
             </div>
-            <h3 className="text-2xl font-semibold text-foreground tracking-tight">Per le famiglie</h3>
+            <h3 className="text-2xl font-semibold text-foreground tracking-tight">Lavoratori</h3>
             <p className="text-secondary leading-relaxed">
-              Una guida concreta per comprendere le dinamiche del digitale, impostare limiti sani, instaurare un dialogo aperto in casa e sapere come intervenire tempestivamente senza creare il panico.
+              Informazioni chiare su disoccupazione (NASpI), dimissioni, bonus e agevolazioni per lavoratori dipendenti e autonomi, senza gergo burocratico.
             </p>
           </div>
           
@@ -119,13 +122,10 @@ export default function Home() {
             <div className="w-14 h-14 bg-fuchsia-50 text-fuchsia-600 rounded-2xl flex items-center justify-center">
               <GraduationCap className="w-7 h-7" strokeWidth={2.5} />
             </div>
-            <h3 className="text-2xl font-semibold text-foreground tracking-tight">Per gli educatori</h3>
+            <h3 className="text-2xl font-semibold text-foreground tracking-tight">Studenti ed Educatori</h3>
             <p className="text-secondary leading-relaxed">
-              Un archivio di moduli strutturati ed esempi mirati, pensati per essere portati direttamente in classe o usati in laboratori per facilitare lezioni moderne di cittadinanza digitale.
+              Risorse per la cittadinanza digitale, orientamento alla formazione e guide pratiche per gestire la propria presenza online in modo consapevole.
             </p>
-            <div className="pt-2">
-               <Link href="/scuole" className="text-primary font-medium hover:underline flex items-center gap-1">Vedi le risorse <ArrowRight className="w-4 h-4" /></Link>
-            </div>
           </div>
         </div>
       </section>
@@ -138,21 +138,21 @@ export default function Home() {
               Sfoglia per argomento
             </h2>
             <p className="text-secondary text-lg max-w-xl">
-              Se hai già in mente un tema specifico, puoi trovare la guida giusta direttamente dall'elenco dei {siteStats.totalModules} argomenti disponibili.
+              Esplora le guide divise per categorie per trovare subito quello che cerchi.
             </p>
           </div>
           <Button asChild variant="outline" className="rounded-xl h-12">
-            <Link href="/moduli">Catalogo moduli <ArrowRight className="ml-2 w-4 h-4" /></Link>
+            <Link href="/moduli">Tutte le categorie <ArrowRight className="ml-2 w-4 h-4" /></Link>
           </Button>
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
-            { title: "Sicurezza tecnica", desc: "Password, 2FA, data breach e impostazioni", icon: Lock, id: 'modulo-02-account-security' },
-            { title: "Truffe e phishing", desc: "Dai messaggi sospetti all'ecommerce truffaldino", icon: Target, id: 'modulo-03-truffe-phishing' },
-            { title: "Grooming e minori", desc: "Riconoscere i predatori e gestire la fiducia", icon: User, id: 'modulo-05-grooming-minori' },
-            { title: "Cyberstalking e doxxing", desc: "Come reagire, bloccare e conservare prove", icon: ShieldAlert, id: 'modulo-06-stalking-doxxing' },
-            { title: "Sextortion e immagini intime", desc: "Il consenso, l'intimità digitale e i rischi legali", icon: MonitorSmartphone, id: 'modulo-04-sextortion-ricatti' },
+            { title: "Documenti e Identità", desc: "SPID, CIE, Passaporto e Tessera Sanitaria", icon: CreditCard, id: 'modulo-09-documenti-identita' },
+            { title: "Lavoro e Disoccupazione", desc: "NASpI, dimissioni e servizi INPS", icon: Briefcase, id: 'modulo-10-lavoro-disoccupazione' },
+            { title: "Sicurezza Digitale", desc: "Account, password e protezione dati", icon: Lock, id: 'modulo-02-account-security' },
+            { title: "Truffe e Phishing", desc: "Dai messaggi sospetti all'ecommerce truffaldino", icon: Target, id: 'modulo-03-truffe-phishing' },
+            { title: "Sextortion e Ricatti", desc: "Gestione emergenze e tutele legali", icon: ShieldAlert, id: 'modulo-04-sextortion-ricatti' },
             { title: "Privacy e Smartphone", desc: "Proteggi i tuoi dati sul dispositivo mobile", icon: Smartphone, id: 'modulo-07-privacy-smartphone' },
           ].map((topic, i) => (
             <Link href={`/moduli/${topic.id}`} key={i} className="group">
