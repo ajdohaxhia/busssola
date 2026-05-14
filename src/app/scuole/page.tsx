@@ -1,25 +1,33 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { GraduationCap, Users, BookOpen, Presentation, Send } from 'lucide-react'
+import { GraduationCap, Users, Presentation, CheckCircle2, FileText, ShieldCheck, Printer } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
+import { Card } from '@/components/ui/Card'
+import { Badge } from '@/components/ui/Badge'
+import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 
-const benefits = [
+const LESSON_PLANS = [
     {
-        icon: Presentation,
-        title: 'Pronto per la LIM',
-        description: 'Lezioni progettate con font grandi e schemi chiari, perfette per essere proiettate in classe e discusse con gli studenti.'
+        title: "Lezione 1: Phishing & Truffe (45 min)",
+        target: "Scuola Secondaria",
+        duration: "45 minuti",
+        objectives: ["Riconoscere SMS e email false", "Capire come funzionano i link truffa", "Cosa fare se si inseriscono i dati"],
+        moduleLink: "/moduli/modulo-03-truffe-phishing"
     },
     {
-        icon: BookOpen,
-        title: 'Moduli Modulari',
-        description: 'Scegli gli argomenti più adatti alla tua classe: dal cyberbullismo alla privacy dei social, senza dover seguire un ordine fisso.'
+        title: "Lezione 2: Cyberbullismo (45 min)",
+        target: "Scuola Secondaria",
+        duration: "45 minuti",
+        objectives: ["Differenza tra scherzo e reato", "Tutele legali e segnalazioni", "Ruolo degli spettatori attivi"],
+        moduleLink: "/moduli/modulo-06-stalking-doxxing"
     },
     {
-        icon: Users,
-        title: 'Linguaggio Adeguato',
-        description: 'Parliamo ai ragazzi con franchezza e rispetto, evitando toni paternalistici o eccessivamente tecnici.'
+        title: "Laboratorio: Privacy Smartphone (60 min)",
+        target: "Laboratorio pratico",
+        duration: "60 minuti",
+        objectives: ["Controllare permessi app", "Blindare account Google/Apple", "Attivare 2FA in classe"],
+        moduleLink: "/moduli/modulo-07-privacy-smartphone"
     }
 ]
 
@@ -28,85 +36,106 @@ export default function ScuolePage() {
         <Container size="md" className="py-16 space-y-24">
             {/* Hero */}
             <header className="text-center space-y-6 max-w-3xl mx-auto">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-wide mb-2 uppercase">
-                    <GraduationCap className="w-4 h-4" /> Per Docenti e Formatori
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest mb-2 uppercase border border-primary/20">
+                    <GraduationCap className="w-4 h-4" /> Risorse per Docenti
                 </div>
                 <h1 className="text-4xl md:text-6xl font-display font-semibold text-foreground tracking-tight leading-tight">
-                    Porta la consapevolezza digitale in classe.
+                    Materiale didattico pronto per la classe.
                 </h1>
                 <p className="text-xl text-secondary leading-relaxed">
-                    Busssola fornisce risorse gratuite e strutturate per aiutare gli insegnanti a guidare gli studenti attraverso i rischi e le opportunità della rete.
+                    Busssola non è solo un sito, è uno strumento per l'educazione civica digitale. Risorse gratuite, senza registrazione, ottimizzate per la LIM e la stampa.
                 </p>
                 <div className="pt-4 flex flex-wrap justify-center gap-4">
-                    <Link href="/percorsi" className="bg-primary text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-primary/20 hover:bg-primary-hover transition-all">
-                        Esplora i Percorsi
-                    </Link>
-                    <Link href="/contact" className="bg-surface border border-border text-foreground px-8 py-4 rounded-xl font-bold hover:bg-surface-muted transition-all">
-                        Richiedi Materiali
-                    </Link>
+                    <Button asChild size="lg" className="h-14 px-8 rounded-xl font-bold">
+                        <Link href="#lezioni">Sfoglia lezioni pronte</Link>
+                    </Button>
+                    <Button asChild variant="outline" size="lg" className="h-14 px-8 rounded-xl font-bold">
+                        <Link href="/contact">Richiedi kit completo</Link>
+                    </Button>
                 </div>
             </header>
 
-            {/* Benefits Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {benefits.map((benefit, i) => (
-                    <motion.div 
-                        key={i}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: i * 0.1 }}
-                        className="p-8 rounded-3xl border border-border bg-surface space-y-4"
-                    >
-                        <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
-                            <benefit.icon size={24} />
-                        </div>
-                        <h3 className="text-xl font-bold text-foreground">{benefit.title}</h3>
-                        <p className="text-secondary text-sm leading-relaxed">{benefit.description}</p>
-                    </motion.div>
-                ))}
-            </div>
+            {/* Ready Lessons Section */}
+            <section id="lezioni" className="space-y-12">
+                <div className="text-center space-y-4">
+                    <h2 className="text-3xl font-display font-bold text-foreground">Lezioni da 45 minuti</h2>
+                    <p className="text-secondary">Piani di lezione strutturati per coprire un'ora scolastica, usando i moduli di Busssola come base.</p>
+                </div>
 
-            {/* How to use section */}
-            <section className="bg-surface-muted rounded-[3rem] p-10 md:p-16 space-y-12">
-                <div className="max-w-3xl mx-auto space-y-8">
-                    <h2 className="text-3xl font-display font-bold text-foreground text-center">Come usare Busssola a scuola</h2>
-                    <div className="space-y-6">
-                        <div className="flex gap-4">
-                            <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center shrink-0 font-bold">1</div>
-                            <div className="space-y-1">
-                                <h4 className="font-bold text-foreground">Lezione Frontale</h4>
-                                <p className="text-secondary">Usa i moduli "Relazioni Online" o "Fake News" come spunto per un dibattito aperto in classe.</p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {LESSON_PLANS.map((lesson, i) => (
+                        <Card key={i} className="p-8 border border-border bg-surface flex flex-col hover:border-primary/20 transition-all rounded-[2rem]">
+                            <div className="space-y-4 flex-1">
+                                <Badge variant="secondary" className="bg-primary/5 text-primary border-primary/10 uppercase tracking-widest text-[9px]">{lesson.target}</Badge>
+                                <h3 className="text-xl font-bold text-foreground leading-tight">{lesson.title}</h3>
+                                <ul className="space-y-3 pt-2">
+                                    {lesson.objectives.map((obj, j) => (
+                                        <li key={j} className="flex gap-2 text-sm text-secondary leading-relaxed">
+                                            <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" /> {obj}
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
-                        </div>
-                        <div className="flex gap-4">
-                            <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center shrink-0 font-bold">2</div>
-                            <div className="space-y-1">
-                                <h4 className="font-bold text-foreground">Laboratorio Pratico</h4>
-                                <p className="text-secondary">Guida gli studenti nella configurazione reale della privacy dei loro account social seguendo i nostri moduli tecnici.</p>
+                            <Button asChild variant="outline" className="mt-8 rounded-xl w-full">
+                                <Link href={lesson.moduleLink}>Apri Modulo <ArrowRight className="w-4 h-4 ml-2" /></Link>
+                            </Button>
+                        </Card>
+                    ))}
+                </div>
+            </section>
+
+            {/* Teachers Materials */}
+            <section className="bg-surface border border-border rounded-[3rem] p-8 md:p-12 space-y-12 relative overflow-hidden">
+                <div className="absolute top-0 right-0 p-12 opacity-[0.03] pointer-events-none">
+                    <FileText size={200} />
+                </div>
+                <div className="max-w-3xl mx-auto space-y-10 relative z-10">
+                    <h2 className="text-3xl font-display font-bold text-foreground text-center">Strumenti per il docente</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {[
+                            { title: "Checklist Docente: Prime 24h", desc: "Cosa fare se uno studente segnala una sextortion o un furto d'identità.", icon: FileText },
+                            { title: "Patto Digitale di Famiglia", desc: "Scheda da consegnare ai genitori per gestire l'uso dello smartphone a casa.", icon: Users },
+                            { title: "Scheda Genitori: Cyber-rischi", desc: "Sintesi veloce per spiegare i pericoli reali ai non esperti.", icon: ShieldCheck },
+                            { title: "Modalità 'Proietta in classe'", desc: "Tutte le guide sono ottimizzate per la lettura su grandi schermi e LIM.", icon: Presentation },
+                        ].map((item, i) => (
+                            <div key={i} className="p-6 bg-background rounded-2xl border border-border/60 space-y-3">
+                                <item.icon className="w-6 h-6 text-primary" />
+                                <h4 className="font-bold text-foreground">{item.title}</h4>
+                                <p className="text-sm text-secondary leading-relaxed">{item.desc}</p>
                             </div>
-                        </div>
-                        <div className="flex gap-4">
-                            <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center shrink-0 font-bold">3</div>
-                            <div className="space-y-1">
-                                <h4 className="font-bold text-foreground">Verifica e Ripasso</h4>
-                                <p className="text-secondary">Lascia che gli studenti esplorino i percorsi in autonomia e monitorino i progressi salvati localmente sui loro tablet.</p>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
+            {/* Print Friendly Callout */}
+            <section className="text-center space-y-8 max-w-2xl mx-auto">
+                <div className="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto">
+                    <Printer size={32} />
+                </div>
+                <div className="space-y-4">
+                    <h2 className="text-3xl font-display font-bold text-foreground">Layout Print-Friendly</h2>
+                    <p className="text-secondary text-lg">
+                        Ogni lezione su Busssola può essere stampata (Ctrl+P) in un formato pulito. Puoi stampare le checklist o le sintesi operative e consegnarle come materiale di studio o di supporto per le famiglie.
+                    </p>
+                </div>
+            </section>
+
             {/* CTA */}
-            <div className="bg-primary text-white p-12 rounded-[3rem] text-center space-y-6 shadow-2xl shadow-primary/30">
-                <h3 className="text-3xl font-display font-bold">Hai bisogno di materiali specifici?</h3>
-                <p className="text-white/80 max-w-xl mx-auto text-lg leading-relaxed">
-                    Stiamo preparando kit didattici pronti all'uso (PDF, slide, schede di lavoro). Contattaci via email per essere avvisato quando saranno pronti.
-                </p>
-                <Link href="mailto:scuole@busssola.com" className="inline-flex items-center gap-2 bg-white text-primary px-10 py-5 rounded-2xl font-bold text-xl hover:bg-white/90 transition-all">
-                    <Send size={24} /> scuole@busssola.com
-                </Link>
+            <div className="bg-foreground text-white p-12 rounded-[3rem] text-center space-y-8 shadow-2xl relative overflow-hidden">
+                <div className="absolute inset-0 bg-primary/10 pointer-events-none" />
+                <div className="relative z-10 space-y-4">
+                    <h3 className="text-3xl font-display font-bold">Invia il tuo feedback</h3>
+                    <p className="text-white/70 max-w-xl mx-auto text-lg leading-relaxed">
+                        Sei un docente e hai usato Busssola in classe? Facci sapere com'è andata o suggerisci nuovi materiali didattici.
+                    </p>
+                </div>
+                <Button asChild size="lg" className="h-14 px-12 rounded-xl font-bold bg-white text-foreground hover:bg-white/90 relative z-10">
+                    <Link href="mailto:scuole@busssola.com">scuole@busssola.com</Link>
+                </Button>
             </div>
         </Container>
     )
 }
+
+import { ArrowRight } from 'lucide-react'

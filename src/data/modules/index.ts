@@ -16,6 +16,12 @@ import { modulo_08_scuola_famiglia } from './modulo-08-scuola-famiglia';
 import { modulo_08b_scuola_famiglia } from './modulo-08b-scuola-famiglia';
 import { modulo_09_documenti_identita } from './modulo-09-documenti-identita';
 import { modulo_10_lavoro_disoccupazione } from './modulo-10-lavoro-disoccupazione';
+import { modulo_11_documenti_identita_avanzata } from './modulo-11-documenti-identita-avanzata';
+import { modulo_12_lavoro_diritti } from './modulo-12-lavoro-diritti';
+import { modulo_13_casa_residenza } from './modulo-13-casa-residenza';
+import { modulo_14_soldi_banche_truffe } from './modulo-14-soldi-banche-truffe';
+import { modulo_15_sicurezza_avanzata } from './modulo-15-sicurezza-avanzata';
+import { modulo_16_famiglia_minori } from './modulo-16-famiglia-minori';
 
 export const ALL_MODULES = [
     modulo_01_primo_soccorso,
@@ -36,6 +42,12 @@ export const ALL_MODULES = [
     modulo_08b_scuola_famiglia,
     modulo_09_documenti_identita,
     modulo_10_lavoro_disoccupazione,
+    modulo_11_documenti_identita_avanzata,
+    modulo_12_lavoro_diritti,
+    modulo_13_casa_residenza,
+    modulo_14_soldi_banche_truffe,
+    modulo_15_sicurezza_avanzata,
+    modulo_16_famiglia_minori,
 ];
 
 export function getModuleById(id: string) {

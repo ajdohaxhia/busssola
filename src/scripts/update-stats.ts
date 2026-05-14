@@ -21,7 +21,7 @@ const stats = {
     uniqueOrganizations: [...new Set(lessons.flatMap(l => l.sources.map(s => s.organization)))].length,
     totalChecklistItems: lessons.reduce((acc, l) => acc + l.checklist.length, 0),
     lastUpdatedAt: new Date().toISOString().split('T')[0],
-    projectStage: "Core v1"
+    projectStage: "Public MVP"
 };
 
 // Update siteStats.ts
@@ -38,6 +38,7 @@ const modulesMeta = modules.map(m => ({
     id: m.id,
     number: m.number || 0,
     title: m.title.replace(/Modulo \d+[b]?:\s*/i, ''),
+    subtitle: m.subtitle,
     description: m.description,
     lessonCount: m.lessons.filter(l => l.status === 'published' && l.qualityGatePassed).length,
     difficulty: m.difficulty || 'base',
@@ -45,7 +46,8 @@ const modulesMeta = modules.map(m => ({
     category: m.category,
     lastUpdated: m.lastUpdated,
     tags: m.tags,
-    featuredType: 'curated' as const // Placeholder logic
+    featuredType: m.featuredType || 'none',
+    mainEntity: m.mainEntity
 }));
 
 const metaFileContent = `import { ModuleMetadata } from '@/types';

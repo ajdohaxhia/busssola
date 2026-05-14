@@ -175,7 +175,7 @@ export default function LessonReaderClient({ currentModule, lessonIndex }: Lesso
                     </div>
 
                     {/* What is Happening / Analysis (Only for Risks) */}
-                    {!isCivic && (
+                    {!isCivic && currentLesson.whatIsHappening && (
                         <section className="space-y-6 pt-8 border-t border-border">
                             <h2 className="text-2xl font-display font-bold text-foreground">Analisi del caso</h2>
                             <div className="prose prose-lg text-secondary leading-relaxed max-w-none">
@@ -185,7 +185,7 @@ export default function LessonReaderClient({ currentModule, lessonIndex }: Lesso
                     )}
 
                     {/* Warning Signs (Only for Risks) */}
-                    {!isCivic && currentLesson.warningSigns.length > 0 && (
+                    {!isCivic && currentLesson.warningSigns && currentLesson.warningSigns.length > 0 && (
                         <section className="bg-amber-50/30 border border-amber-100 p-8 rounded-[2rem] space-y-6">
                             <h3 className="text-xl font-bold text-amber-900 flex items-center gap-3">
                                 <AlertTriangle className="w-6 h-6 text-amber-500" /> Segnali di rischio
@@ -259,7 +259,7 @@ export default function LessonReaderClient({ currentModule, lessonIndex }: Lesso
                                   <Landmark className="w-6 h-6 text-blue-500" /> Dove si fa
                               </h3>
                               <p className="text-blue-900/80 font-medium leading-relaxed">
-                                {currentLesson.whereToDo || currentLesson.whoCanHelp.join(', ')}
+                                {currentLesson.whereToDo || (currentLesson.whoCanHelp && currentLesson.whoCanHelp.join(', '))}
                               </p>
                           </section>
 
@@ -286,7 +286,7 @@ export default function LessonReaderClient({ currentModule, lessonIndex }: Lesso
                                   <BookOpen className="w-6 h-6 text-blue-500" /> Conservare le prove
                               </h3>
                               <ul className="space-y-3">
-                                {currentLesson.preserveEvidence.map((item, i) => (
+                                {currentLesson.preserveEvidence && currentLesson.preserveEvidence.map((item, i) => (
                                   <li key={i} className="text-blue-900/80 font-medium leading-relaxed flex gap-3">
                                     <span className="w-1.5 h-1.5 rounded-full bg-blue-300 shrink-0 mt-2.5" />
                                     {item}
@@ -303,13 +303,13 @@ export default function LessonReaderClient({ currentModule, lessonIndex }: Lesso
                                 <div className="p-4 bg-white/40 rounded-2xl border border-sos/10">
                                   <h4 className="text-xs font-bold text-sos uppercase mb-2">Quando chiedere aiuto esterno</h4>
                                   <p className="text-sos font-medium leading-relaxed">
-                                      {currentLesson.askHelpWhen}
+                                      {currentLesson.askHelpWhen && currentLesson.askHelpWhen.join(', ')}
                                   </p>
                                 </div>
                                 <div className="p-4 bg-white/40 rounded-2xl border border-sos/10">
                                   <h4 className="text-xs font-bold text-sos uppercase mb-2">A chi rivolgersi</h4>
                                   <div className="flex flex-wrap gap-2">
-                                    {currentLesson.whoCanHelp.map((helper, i) => (
+                                    {currentLesson.whoCanHelp && currentLesson.whoCanHelp.map((helper, i) => (
                                       <Badge key={i} variant="secondary" className="bg-sos/10 text-sos border-sos/20">
                                         {helper}
                                       </Badge>
@@ -336,7 +336,7 @@ export default function LessonReaderClient({ currentModule, lessonIndex }: Lesso
                             </p>
                         </div>
                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 m-0 p-0 list-none relative z-10">
-                            {(currentLesson.whatYouNeed || currentLesson.checklist).map((item, i) => (
+                            {(currentLesson.whatYouNeed || currentLesson.checklist || []).map((item, i) => (
                                 <li key={i} className="flex items-center gap-4 p-5 rounded-3xl bg-background border border-border shadow-sm group hover:border-primary/30 transition-all">
                                     <div className="w-6 h-6 rounded-lg border-2 border-primary/30 flex items-center justify-center shrink-0 group-hover:bg-primary/5 transition-colors">
                                         <div className="w-2 h-2 rounded-sm bg-primary/40" />

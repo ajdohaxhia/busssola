@@ -11,18 +11,19 @@ import { ModuleMetadata } from '@/types'
 import { Container } from '@/components/ui/Container'
 import { Card } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
+import { Button } from '@/components/ui/Button'
 import { useSearchParams } from 'next/navigation'
 
 const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
         opacity: 1,
-        transition: { staggerChildren: 0.1 }
+        transition: { staggerChildren: 0.05 }
     }
 }
 
 const itemVariants: Variants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 10, opacity: 0 },
     visible: { y: 0, opacity: 1, transition: { type: "spring", stiffness: 100, damping: 15 } }
 }
 
@@ -30,45 +31,24 @@ const ModuleCard = memo(({ module, progress }: { module: ModuleMetadata, progres
     const IconComponent = (Icons as unknown as Record<string, React.ElementType>)[module.icon ?? 'HelpCircle'] || Icons.HelpCircle
     const isCompleted = (progress as { completed?: boolean })?.completed
     
-    let highlightedBadge = null;
-    let badgeVariant: "default" | "destructive" | "secondary" | "outline" | "muted" = "default";
-    let badgeClass = "";
-
-    if (module.featuredType === 'start') {
-        highlightedBadge = "Inizia da qui";
-        badgeClass = "bg-primary/10 text-primary hover:bg-primary/20 border-0";
-    } else if (module.featuredType === 'situational') {
-        if (module.id.includes('genitori') || module.id.includes('famiglie') || module.id.includes('educatori') || module.id.includes('scuole') || module.id.includes('minori-legge')) {
-            highlightedBadge = "Per genitori e scuole";
-            badgeClass = "bg-indigo-100 text-indigo-700 hover:bg-indigo-200 border-0";
-        } else {
-            highlightedBadge = "In base alla tua situazione";
-            badgeClass = "bg-orange-100 text-orange-700 hover:bg-orange-200 border-0";
-        }
-    } else if (module.id.includes('emergenz') || module.id.includes('sos')) {
-        highlightedBadge = "Se hai bisogno di aiuto subito";
-        badgeVariant = "destructive";
-        badgeClass = "border-0 shadow-sm";
-    }
-
     return (
         <motion.div variants={itemVariants} className="col-span-1 h-full">
             <Link href={`/moduli/${module.id}`} className="block h-full group">
                 <Card className={cn(
                     "h-full p-6 flex flex-col gap-6 transition-all border bg-surface hover:shadow-md",
-                    module.featuredType === 'start' ? "border-primary/20 hover:border-primary/50" : "border-border hover:border-foreground/20"
+                    module.featuredType === 'curated' ? "border-primary/20 hover:border-primary/40" : "border-border hover:border-foreground/10"
                 )}>
                     <div className="flex justify-between items-start gap-4">
-                        <div className="w-12 h-12 rounded-xl bg-surface-muted text-primary border border-border flex items-center justify-center transition-colors group-hover:bg-primary group-hover:text-white shrink-0">
+                        <div className="w-12 h-12 rounded-xl bg-surface-muted text-secondary border border-border flex items-center justify-center transition-colors group-hover:bg-primary group-hover:text-white shrink-0">
                             <IconComponent className="w-6 h-6" />
                         </div>
                         <div className="flex flex-wrap gap-2 justify-end">
-                            {highlightedBadge && (
-                                <Badge variant={badgeVariant} className={badgeClass}>
-                                    {highlightedBadge}
+                            {module.category === 'emergenze' && (
+                                <Badge variant="destructive" className="border-0 shadow-sm text-[10px] uppercase font-bold">
+                                    SOS
                                 </Badge>
                             )}
-                            <Badge variant="muted" className="capitalize text-[10px]">
+                            <Badge variant="muted" className="capitalize text-[10px] border-border/50">
                                 {module.difficulty}
                             </Badge>
                         </div>
@@ -78,26 +58,31 @@ const ModuleCard = memo(({ module, progress }: { module: ModuleMetadata, progres
                         <h2 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors leading-tight">
                             {module.title}
                         </h2>
+                        {module.subtitle && (
+                             <p className="text-xs font-medium text-primary/80 uppercase tracking-wider">{module.subtitle}</p>
+                        )}
                         <p className="text-sm text-secondary leading-relaxed line-clamp-2">
                             {module.description}
                         </p>
                     </div>
 
-                    <div className="flex items-center justify-between pt-4 border-t border-border">
-                        <div className="flex items-center gap-4 text-xs font-medium text-secondary">
+                    <div className="flex items-center justify-between pt-4 border-t border-border/60">
+                        <div className="flex items-center gap-4 text-[10px] font-bold text-secondary/70 uppercase tracking-widest">
                             <div className="flex items-center gap-1.5">
-                                <Icons.BookOpen className="w-4 h-4" />
-                                {module.lessonCount} LEZIONI
+                                <Icons.BookOpen className="w-3.5 h-3.5" />
+                                {module.lessonCount} {module.lessonCount === 1 ? 'LEZIONE' : 'LEZIONI'}
                             </div>
                             <div className="flex items-center gap-1.5 opacity-70">
-                                <Icons.Clock className="w-4 h-4" />
+                                <Icons.Clock className="w-3.5 h-3.5" />
                                 {Math.ceil(module.lessonCount * 5)} MIN
                             </div>
                         </div>
                         {isCompleted ? (
                             <Icons.CheckCircle2 className="w-5 h-5 text-emerald-500" />
                         ) : (
-                            <Icons.ArrowRight className="w-5 h-5 text-secondary group-hover:text-primary transition-colors group-hover:translate-x-1" />
+                            <div className="flex items-center gap-1 text-xs font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                                VAI <Icons.ArrowRight className="w-4 h-4" />
+                            </div>
                         )}
                     </div>
                 </Card>
@@ -107,13 +92,25 @@ const ModuleCard = memo(({ module, progress }: { module: ModuleMetadata, progres
 })
 ModuleCard.displayName = 'ModuleCard'
 
-const THEMES = [
+const CATEGORIES = [
     { id: 'all', label: 'Tutti i temi' },
-    { id: 'basi', label: 'Basi e Privacy', keys: ['privacy', 'password', 'dati', 'account', 'smartphone'] },
-    { id: 'rischi', label: 'Rischi e Truffe', keys: ['truff', 'phishing', 'frodi', 'ecommerce', 'finanz'] },
-    { id: 'relazioni', label: 'Relazioni Online', keys: ['grooming', 'stalking', 'bullismo', 'sexting'] },
-    { id: 'benessere', label: 'Benessere', keys: ['addiction', 'salute', 'comunicazione', 'disinformazione'] },
-    { id: 'emergenze', label: 'Emergenze', keys: ['emergenz', 'sicurezza domestica', 'sicurezza viaggio'] }
+    { id: 'documenti', label: 'Documenti' },
+    { id: 'lavoro', label: 'Lavoro' },
+    { id: 'casa', label: 'Casa e Residenza' },
+    { id: 'soldi', label: 'Soldi e Truffe' },
+    { id: 'sicurezza', label: 'Sicurezza Account' },
+    { id: 'famiglia', label: 'Famiglia' },
+    { id: 'scuola', label: 'Scuola' },
+    { id: 'emergenze', label: 'SOS / Urgenze' }
+]
+
+const AUDIENCES = [
+    { id: 'all', label: 'Tutti i target' },
+    { id: 'cittadini', label: 'Cittadini' },
+    { id: 'lavoratori', label: 'Lavoratori' },
+    { id: 'famiglie', label: 'Famiglie' },
+    { id: 'studenti', label: 'Studenti' },
+    { id: 'minors', label: 'Minori' }
 ]
 
 function ModulesContent() {
@@ -122,12 +119,13 @@ function ModulesContent() {
     
     const [searchQuery, setSearchQuery] = useState('')
     const [selectedDifficulty, setSelectedDifficulty] = useState<'all' | 'base' | 'intermedia' | 'avanzata'>('all')
-    const [selectedTheme, setSelectedTheme] = useState('all')
+    const [selectedCategory, setSelectedCategory] = useState('all')
+    const [selectedAudience, setSelectedAudience] = useState('all')
 
     useEffect(() => {
-        const filterStr = searchParams.get('filter')
-        if (filterStr && THEMES.some(t => t.id === filterStr)) {
-            setSelectedTheme(filterStr)
+        const catStr = searchParams.get('category') || searchParams.get('cat')
+        if (catStr && CATEGORIES.some(c => c.id === catStr)) {
+            setSelectedCategory(catStr)
         }
         const queryStr = searchParams.get('query') || searchParams.get('q')
         if (queryStr) {
@@ -138,113 +136,94 @@ function ModulesContent() {
     const filteredModules = useMemo(() => {
         return MODULES_MAP.filter(module => {
             const matchesSearch = module.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                module.description.toLowerCase().includes(searchQuery.toLowerCase())
-            const matchesDifficulty = selectedDifficulty === 'all' || module.difficulty.toLowerCase() === selectedDifficulty
+                module.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                module.tags?.some(t => t.toLowerCase().includes(searchQuery.toLowerCase()))
             
-            const matchesTheme = selectedTheme === 'all' || (() => {
-                const themeData = THEMES.find(t => t.id === selectedTheme)
-                if (!themeData?.keys) return true
-                const textTarget = (module.title + " " + module.description + " " + module.id).toLowerCase()
-                return themeData.keys.some(key => textTarget.includes(key))
-            })()
+            const matchesDifficulty = selectedDifficulty === 'all' || module.difficulty.toLowerCase() === selectedDifficulty
+            const matchesCategory = selectedCategory === 'all' || module.category === selectedCategory
+            
+            // Note: Currently MODULES_MAP doesn't have audience, but individual lessons do.
+            // We'll filter based on category or tags for now, or assume all are for 'cittadini'
+            const matchesAudience = selectedAudience === 'all' || 
+                                   module.tags?.some(t => t.toLowerCase() === selectedAudience.toLowerCase()) ||
+                                   (selectedAudience === 'famiglie' && module.category === 'famiglia') ||
+                                   (selectedAudience === 'lavoratori' && module.category === 'lavoro')
 
-            return matchesSearch && matchesDifficulty && matchesTheme
+            return matchesSearch && matchesDifficulty && matchesCategory && matchesAudience
         })
-    }, [searchQuery, selectedDifficulty, selectedTheme])
+    }, [searchQuery, selectedDifficulty, selectedCategory, selectedAudience])
 
-    const isFiltered = searchQuery !== '' || selectedDifficulty !== 'all' || selectedTheme !== 'all'
-
-    const renderGrid = (modules: ModuleMetadata[]) => (
-        <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"
-        >
-            {modules.map((module) => (
-                <ModuleCard
-                    key={module.id}
-                    module={module}
-                    progress={progress[module.id]}
-                />
-            ))}
-        </motion.div>
-    );
+    const isFiltered = searchQuery !== '' || selectedDifficulty !== 'all' || selectedCategory !== 'all' || selectedAudience !== 'all'
 
     return (
         <Container size="lg" className="py-16 space-y-12 min-h-screen">
             <header className="flex flex-col md:flex-row md:items-end justify-between gap-8 pb-8">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="max-w-2xl space-y-4"
-                >
+                <div className="max-w-2xl space-y-4">
                     <h1 className="text-4xl md:text-5xl font-display font-semibold text-foreground tracking-tight">
-                        Catalogo dei moduli
+                        Catalogo delle guide
                     </h1>
                     <p className="text-lg text-secondary leading-relaxed">
-                        Esplora la libreria completa. Non sai da dove iniziare? Lasciati guidare dai percorsi consigliati per costruire una consapevolezza digitale solida.
+                        Esplora tutte le guide pratiche di Busssola. Usa i filtri per trovare il tema più adatto alle tue esigenze o cerca un argomento specifico.
                     </p>
-                </motion.div>
+                </div>
 
-                <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 }}
-                    className="flex flex-col w-full md:w-auto min-w-[320px] relative z-20"
-                >
+                <div className="flex flex-col w-full md:w-auto min-w-[320px] relative z-20">
                     <div className="relative group w-full">
                         <Icons.Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-secondary transition-colors group-focus-within:text-primary" />
                         <input
                             type="text"
-                            placeholder="Cerca un argomento (es. phishing)..."
+                            placeholder="Cerca un argomento (es. passaporto)..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                             className="w-full bg-surface border border-border rounded-xl h-14 pl-12 pr-4 text-base font-medium text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all shadow-sm"
                         />
                     </div>
-                </motion.div>
+                </div>
             </header>
 
             {/* Configurable Filters Pipeline */}
-            <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="space-y-6 bg-surface-muted/50 border border-border rounded-[2rem] p-6 lg:p-8"
-            >
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 bg-surface-muted/30 border border-border rounded-[2rem] p-6 lg:p-8">
                 <div className="space-y-3">
-                    <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">Tematica</h3>
-                    <div className="flex flex-wrap items-center gap-2">
-                        {THEMES.map((theme) => (
-                            <button
-                                key={theme.id}
-                                onClick={() => setSelectedTheme(theme.id)}
-                                className={cn(
-                                    "px-4 py-2 rounded-xl text-sm font-medium transition-all border",
-                                    selectedTheme === theme.id
-                                        ? "bg-foreground text-background border-foreground shadow-sm"
-                                        : "bg-surface text-secondary border-border hover:border-foreground/30 hover:text-foreground"
-                                )}
-                            >
-                                {theme.label}
-                            </button>
-                        ))}
+                    <h3 className="text-[10px] font-bold text-secondary uppercase tracking-[0.2em]">Argomento</h3>
+                    <div className="flex flex-wrap gap-2">
+                        <select 
+                            value={selectedCategory}
+                            onChange={(e) => setSelectedCategory(e.target.value)}
+                            className="w-full bg-surface border border-border rounded-xl h-12 px-4 text-sm font-medium text-foreground focus:outline-none focus:border-primary transition-all"
+                        >
+                            {CATEGORIES.map(cat => (
+                                <option key={cat.id} value={cat.id}>{cat.label}</option>
+                            ))}
+                        </select>
                     </div>
                 </div>
 
-                <div className="space-y-3 pt-6 border-t border-border">
-                     <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">Livello</h3>
-                     <div className="flex flex-wrap items-center gap-2">
+                <div className="space-y-3">
+                    <h3 className="text-[10px] font-bold text-secondary uppercase tracking-[0.2em]">Per chi</h3>
+                    <div className="flex flex-wrap gap-2">
+                        <select 
+                            value={selectedAudience}
+                            onChange={(e) => setSelectedAudience(e.target.value)}
+                            className="w-full bg-surface border border-border rounded-xl h-12 px-4 text-sm font-medium text-foreground focus:outline-none focus:border-primary transition-all"
+                        >
+                            {AUDIENCES.map(aud => (
+                                <option key={aud.id} value={aud.id}>{aud.label}</option>
+                            ))}
+                        </select>
+                    </div>
+                </div>
+
+                <div className="space-y-3">
+                     <h3 className="text-[10px] font-bold text-secondary uppercase tracking-[0.2em]">Difficoltà</h3>
+                     <div className="flex gap-2">
                         {(['all', 'base', 'intermedia', 'avanzata'] as const).map((level) => (
                             <button
                                 key={level}
                                 onClick={() => setSelectedDifficulty(level)}
                                 className={cn(
-                                    "px-4 py-2 rounded-xl text-sm font-medium capitalize transition-all border",
+                                    "flex-1 px-3 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all border",
                                     selectedDifficulty === level
-                                        ? "bg-primary text-primary-foreground border-primary shadow-sm"
+                                        ? "bg-foreground text-background border-foreground shadow-sm"
                                         : "bg-surface text-secondary border-border hover:border-foreground/30 hover:text-foreground"
                                 )}
                             >
@@ -253,38 +232,61 @@ function ModulesContent() {
                         ))}
                     </div>
                 </div>
-            </motion.div>
+            </div>
 
             {/* Results Grid */}
-            <div className="space-y-6">
-                <div className="flex items-center justify-between">
-                    <h2 className="text-2xl font-display font-semibold tracking-tight text-foreground">
-                        {isFiltered ? `${filteredModules.length} ${filteredModules.length === 1 ? 'Modulo trovato' : 'Moduli trovati'}` : 'Esplora il catalogo'}
+            <div className="space-y-8">
+                <div className="flex items-center justify-between border-b border-border pb-4">
+                    <h2 className="text-xl font-display font-semibold tracking-tight text-foreground">
+                        {isFiltered ? `${filteredModules.length} ${filteredModules.length === 1 ? 'Risultato' : 'Risultati'}` : 'Tutte le guide'}
                     </h2>
+                    {isFiltered && (
+                        <button
+                            onClick={() => { setSearchQuery(''); setSelectedDifficulty('all'); setSelectedCategory('all'); setSelectedAudience('all'); }}
+                            className="text-xs font-bold text-primary hover:underline flex items-center gap-1.5 uppercase tracking-wider"
+                        >
+                            <Icons.RotateCcw className="w-3.5 h-3.5" /> Resetta
+                        </button>
+                    )}
                 </div>
 
                 {filteredModules.length === 0 ? (
-                    <div className="col-span-full py-24 flex flex-col items-center justify-center text-center bg-surface border border-dashed border-border rounded-[2rem]">
+                    <div className="py-24 flex flex-col items-center justify-center text-center bg-surface border border-dashed border-border rounded-[2rem]">
                         <div className="w-16 h-16 bg-surface-muted flex items-center justify-center rounded-2xl border border-border mb-6">
                             <Icons.SearchX className="w-8 h-8 text-secondary" />
                         </div>
-                        <h3 className="text-xl font-semibold text-foreground mb-2">Nessun modulo trovato</h3>
-                        <p className="text-secondary max-w-sm mb-6 leading-relaxed">I filtri attuali non corrispondono ad alcun percorso. Prova ad ampliare la ricerca.</p>
-                        <button
-                            onClick={() => { setSearchQuery(''); setSelectedDifficulty('all'); setSelectedTheme('all'); }}
-                            className="text-primary font-medium hover:underline flex items-center gap-2"
-                        >
-                            <Icons.RotateCcw className="w-4 h-4" /> Resetta tutti i filtri
-                        </button>
+                        <h3 className="text-xl font-semibold text-foreground mb-2">Nessuna guida trovata</h3>
+                        <p className="text-secondary max-w-sm leading-relaxed">I filtri attuali non corrispondono ad alcun contenuto. Prova a semplificare la ricerca.</p>
                     </div>
-                ) : isFiltered ? (
-                    renderGrid(filteredModules)
                 ) : (
-                    <div className="space-y-6">
-                        {renderGrid(filteredModules)}
-                    </div>
+                    <motion.div
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="visible"
+                        className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"
+                    >
+                        {filteredModules.map((module) => (
+                            <ModuleCard
+                                key={module.id}
+                                module={module}
+                                progress={progress[module.id]}
+                            />
+                        ))}
+                    </motion.div>
                 )}
             </div>
+            
+            <section className="bg-surface border border-border rounded-[2rem] p-8 md:p-12 mt-12">
+                <div className="max-w-2xl space-y-4">
+                    <h3 className="text-2xl font-display font-semibold text-foreground">Non trovi quello che cerchi?</h3>
+                    <p className="text-secondary">
+                        Busssola è in continua espansione. Se hai bisogno di una guida specifica che non è ancora presente, puoi suggerirla tramite il nostro repository GitHub.
+                    </p>
+                    <Button asChild variant="outline" className="mt-4 rounded-xl">
+                        <Link href="/contact">Suggerisci una guida</Link>
+                    </Button>
+                </div>
+            </section>
         </Container>
     )
 }

@@ -3,23 +3,31 @@ import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 import Link from 'next/link'
-import { ArrowRight, Clock, Users, ShieldCheck, Lock, ShieldAlert, GraduationCap } from 'lucide-react'
+import { ArrowRight, Clock, Users, ShieldCheck, Lock, ShieldAlert, GraduationCap, Briefcase, User, Heart } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
-const ICON_MAP = {
+const ICON_MAP: Record<string, React.ElementType> = {
     onboarding: ShieldCheck,
     security: Lock,
     relational: Users,
     emergency: ShieldAlert,
     audience: GraduationCap,
+    citizen: User,
+    worker: Briefcase,
+    parent: Heart,
+    student: GraduationCap
 }
 
-const COLOR_MAP = {
+const COLOR_MAP: Record<string, string> = {
     onboarding: 'text-primary bg-primary/10 border-primary/20 hover:border-primary/50',
     security: 'text-indigo-600 bg-indigo-50 border-indigo-100 hover:border-indigo-400',
     relational: 'text-emerald-600 bg-emerald-50 border-emerald-100 hover:border-emerald-400',
     emergency: 'text-sos bg-sos/10 border-sos-border hover:border-sos',
     audience: 'text-fuchsia-600 bg-fuchsia-50 border-fuchsia-100 hover:border-fuchsia-400',
+    citizen: 'text-blue-600 bg-blue-50 border-blue-100 hover:border-blue-400',
+    worker: 'text-cyan-600 bg-cyan-50 border-cyan-100 hover:border-cyan-400',
+    parent: 'text-orange-600 bg-orange-50 border-orange-100 hover:border-orange-400',
+    student: 'text-violet-600 bg-violet-50 border-violet-100 hover:border-violet-400'
 }
 
 export default function PercorsiPage() {

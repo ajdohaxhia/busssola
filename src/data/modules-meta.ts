@@ -15,7 +15,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "icon": "ShieldAlert",
     "category": "diritti-digitali",
     "lastUpdated": "2024-05-13",
-    "featuredType": "curated"
+    "featuredType": "none"
   },
   {
     "id": "modulo-01b-primo-soccorso",
@@ -27,7 +27,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "icon": "ShieldAlert",
     "category": "diritti-digitali",
     "lastUpdated": "2024-05-13",
-    "featuredType": "curated"
+    "featuredType": "none"
   },
   {
     "id": "modulo-02-account-security",
@@ -39,7 +39,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "icon": "Key",
     "category": "diritti-digitali",
     "lastUpdated": "2024-05-13",
-    "featuredType": "curated"
+    "featuredType": "none"
   },
   {
     "id": "modulo-02b-account-security",
@@ -51,7 +51,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "icon": "Key",
     "category": "diritti-digitali",
     "lastUpdated": "2024-05-13",
-    "featuredType": "curated"
+    "featuredType": "none"
   },
   {
     "id": "modulo-03-truffe-phishing",
@@ -63,7 +63,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "icon": "Target",
     "category": "diritti-digitali",
     "lastUpdated": "2024-05-13",
-    "featuredType": "curated"
+    "featuredType": "none"
   },
   {
     "id": "modulo-03b-truffe-phishing",
@@ -75,7 +75,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "icon": "Target",
     "category": "diritti-digitali",
     "lastUpdated": "2024-05-13",
-    "featuredType": "curated"
+    "featuredType": "none"
   },
   {
     "id": "modulo-04-sextortion-ricatti",
@@ -87,7 +87,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "icon": "AlertCircle",
     "category": "diritti-digitali",
     "lastUpdated": "2024-05-13",
-    "featuredType": "curated"
+    "featuredType": "none"
   },
   {
     "id": "modulo-04b-sextortion-ricatti",
@@ -99,7 +99,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "icon": "AlertCircle",
     "category": "diritti-digitali",
     "lastUpdated": "2024-05-13",
-    "featuredType": "curated"
+    "featuredType": "none"
   },
   {
     "id": "modulo-05-grooming-minori",
@@ -111,7 +111,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "icon": "UserCheck",
     "category": "diritti-digitali",
     "lastUpdated": "2024-05-13",
-    "featuredType": "curated"
+    "featuredType": "none"
   },
   {
     "id": "modulo-05b-grooming-minori",
@@ -123,7 +123,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "icon": "UserCheck",
     "category": "diritti-digitali",
     "lastUpdated": "2024-05-13",
-    "featuredType": "curated"
+    "featuredType": "none"
   },
   {
     "id": "modulo-06-stalking-doxxing",
@@ -135,7 +135,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "icon": "Eye",
     "category": "diritti-digitali",
     "lastUpdated": "2024-05-13",
-    "featuredType": "curated"
+    "featuredType": "none"
   },
   {
     "id": "modulo-06b-stalking-doxxing",
@@ -147,7 +147,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "icon": "Eye",
     "category": "diritti-digitali",
     "lastUpdated": "2024-05-13",
-    "featuredType": "curated"
+    "featuredType": "none"
   },
   {
     "id": "modulo-07-privacy-smartphone",
@@ -159,7 +159,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "icon": "Smartphone",
     "category": "diritti-digitali",
     "lastUpdated": "2024-05-13",
-    "featuredType": "curated"
+    "featuredType": "none"
   },
   {
     "id": "modulo-07b-privacy-smartphone",
@@ -171,7 +171,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "icon": "Smartphone",
     "category": "diritti-digitali",
     "lastUpdated": "2024-05-13",
-    "featuredType": "curated"
+    "featuredType": "none"
   },
   {
     "id": "modulo-08-scuola-famiglia",
@@ -183,7 +183,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "icon": "GraduationCap",
     "category": "diritti-digitali",
     "lastUpdated": "2024-05-13",
-    "featuredType": "curated"
+    "featuredType": "none"
   },
   {
     "id": "modulo-08b-scuola-famiglia",
@@ -195,7 +195,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "icon": "GraduationCap",
     "category": "diritti-digitali",
     "lastUpdated": "2024-05-13",
-    "featuredType": "curated"
+    "featuredType": "none"
   },
   {
     "id": "modulo-09-documenti-identita",
@@ -207,7 +207,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "icon": "IdCard",
     "category": "documenti-identita",
     "lastUpdated": "2024-05-13",
-    "featuredType": "curated"
+    "featuredType": "none"
   },
   {
     "id": "modulo-10-lavoro-disoccupazione",
@@ -219,6 +219,78 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "icon": "Briefcase",
     "category": "lavoro-disoccupazione",
     "lastUpdated": "2024-05-13",
-    "featuredType": "curated"
+    "featuredType": "none"
+  },
+  {
+    "id": "modulo-11-documenti-identita-avanzata",
+    "number": 0,
+    "title": "Documenti e Identità Avanzata",
+    "description": "Procedure digitali per passaporto, residenza, certificati e strumenti di firma elettronica.",
+    "lessonCount": 9,
+    "difficulty": "intermedia",
+    "icon": "FileText",
+    "category": "documenti",
+    "lastUpdated": "2026-05-14",
+    "featuredType": "none"
+  },
+  {
+    "id": "modulo-12-lavoro-diritti",
+    "number": 0,
+    "title": "Lavoro e Diritti",
+    "description": "Guida ai diritti del lavoratore, ammortizzatori sociali e procedure amministrative del mercato del lavoro.",
+    "lessonCount": 9,
+    "difficulty": "base",
+    "icon": "Briefcase",
+    "category": "lavoro",
+    "lastUpdated": "2026-05-14",
+    "featuredType": "none"
+  },
+  {
+    "id": "modulo-13-casa-residenza",
+    "number": 0,
+    "title": "Casa e Residenza",
+    "description": "Gestione del contratto di affitto, utenze domestiche, agevolazioni fiscali e diritti abitativi.",
+    "lessonCount": 7,
+    "difficulty": "base",
+    "icon": "Home",
+    "category": "casa",
+    "lastUpdated": "2026-05-14",
+    "featuredType": "none"
+  },
+  {
+    "id": "modulo-14-soldi-banche-truffe",
+    "number": 0,
+    "title": "Soldi, Banche e Truffe",
+    "description": "Protezione dei risparmi, gestione delle frodi bancarie e tutela negli acquisti online.",
+    "lessonCount": 6,
+    "difficulty": "intermedia",
+    "icon": "ShieldAlert",
+    "category": "soldi",
+    "lastUpdated": "2026-05-14",
+    "featuredType": "none"
+  },
+  {
+    "id": "modulo-15-sicurezza-avanzata",
+    "number": 0,
+    "title": "Sicurezza Digitale Avanzata",
+    "description": "Tecniche e strumenti avanzati per la protezione dei dati personali, della privacy online e dell'identità digitale.",
+    "lessonCount": 7,
+    "difficulty": "avanzata",
+    "icon": "ShieldCheck",
+    "category": "sicurezza",
+    "lastUpdated": "2026-05-14",
+    "featuredType": "none"
+  },
+  {
+    "id": "modulo-16-famiglia-minori",
+    "number": 0,
+    "title": "Famiglia e Minori",
+    "description": "Tutela dei minori online, gestione dei rischi digitali in famiglia e strumenti di supporto psicologico e legale.",
+    "lessonCount": 6,
+    "difficulty": "base",
+    "icon": "Users",
+    "category": "famiglia",
+    "lastUpdated": "2026-05-14",
+    "featuredType": "none"
   }
 ];
