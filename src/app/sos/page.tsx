@@ -706,12 +706,38 @@ export default function SOSPage() {
                                 
                                 <div className="space-y-6">
                                     <h3 className="text-sm font-bold text-foreground uppercase tracking-widest text-center">Contatto Istituzionale di Riferimento:</h3>
+                                    
+                                    {/* SITUATIONAL URGENT CALLS */}
+                                    {selectedScenario.id === 'pericolo-fisico' && (
+                                        <div className="p-6 bg-sos text-white rounded-3xl text-center space-y-2 mb-4 border-b-8 border-sos-border shadow-xl">
+                                            <p className="text-[10px] font-black uppercase tracking-[0.3em] opacity-70">Emergenza Reale</p>
+                                            <p className="text-3xl font-black">Chiama subito il 112</p>
+                                            <p className="text-sm font-medium">Non aspettare. La tua sicurezza fisica è la priorità.</p>
+                                        </div>
+                                    )}
+
+                                    {(selectedScenario.id === 'minore-ricatto' || selectedScenario.id === 'grooming') && (
+                                        <div className="p-6 bg-sos text-white rounded-3xl text-center space-y-2 mb-4 border-b-8 border-sos-border shadow-xl">
+                                            <p className="text-[10px] font-black uppercase tracking-[0.3em] opacity-70">Tutela Minori</p>
+                                            <p className="text-3xl font-black">Contatta subito il 114 o 112</p>
+                                            <p className="text-sm font-medium">Se un minore è in pericolo, le autorità devono essere avvisate immediatamente.</p>
+                                        </div>
+                                    )}
+
+                                    {(selectedScenario.id === 'cyberstalking-emergenza' || selectedScenario.id === 'stalking') && (
+                                        <div className="p-6 bg-sos text-white rounded-3xl text-center space-y-2 mb-4 border-b-8 border-sos-border shadow-xl">
+                                            <p className="text-[10px] font-black uppercase tracking-[0.3em] opacity-70">Violenza e Stalking</p>
+                                            <p className="text-3xl font-black">Chiama 112 o contatta 1522</p>
+                                            <p className="text-sm font-medium">Se c’è rischio immediato chiama 112. Per supporto antiviolenza usa il 1522.</p>
+                                        </div>
+                                    )}
+
                                     <a 
                                         href={selectedScenario.contactLink}
                                         target={selectedScenario.contactLink.startsWith('http') ? '_blank' : '_self'}
                                         className={cn(
                                             "block p-8 rounded-[2rem] hover:scale-[1.01] active:scale-[0.99] transition-all shadow-2xl group border-b-8",
-                                            selectedScenario.id === 'pericolo-fisico' ? "bg-sos text-white border-sos-border" : "bg-foreground text-background border-secondary/20"
+                                            selectedScenario.id === 'pericolo-fisico' ? "bg-white text-sos border-sos/10" : "bg-foreground text-background border-secondary/20"
                                         )}
                                     >
                                         <div className="flex justify-between items-center gap-8">

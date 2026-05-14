@@ -73,7 +73,7 @@ export const modulo_05b_grooming_minori: Module = {
                     url: 'https://www.savethechildren.it/blog-11/cos-e-il-grooming-e-come-proteggere-i-bambini',
                     type: 'nonprofit',
                     usedFor: 'Definizione pedagogica e consigli pratici per famiglie.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',
@@ -140,7 +140,7 @@ export const modulo_05b_grooming_minori: Module = {
                     url: 'https://azzurro.it/cyberbullismo-e-pericoli-online/',
                     type: 'nonprofit',
                     usedFor: 'Supporto psicologico e protocolli di intervento per famiglie.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',

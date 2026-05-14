@@ -68,7 +68,7 @@ export const modulo_17_immigrazione: Module = {
                     url: 'https://www.poliziadistato.it/articolo/rilascio-del-permesso-di-soggiorno',
                     type: 'official',
                     usedFor: 'Procedure ufficiali e scadenze.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Portale Immigrazione',
@@ -76,7 +76,7 @@ export const modulo_17_immigrazione: Module = {
                     url: 'https://www.portaleimmigrazione.it/',
                     type: 'official',
                     usedFor: 'Informazioni sui kit postali e stato della pratica.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             checklist: [
@@ -147,7 +147,7 @@ export const modulo_17_immigrazione: Module = {
                     url: 'https://www.poliziadistato.it/articolo/rinnovo-del-permesso-di-soggiorno',
                     type: 'official',
                     usedFor: 'Tempistiche e requisiti di rinnovo.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Linee guida rinnovo',
@@ -155,7 +155,7 @@ export const modulo_17_immigrazione: Module = {
                     url: 'https://www.patronato.acli.it/',
                     type: 'nonprofit',
                     usedFor: 'Dettaglio documenti necessari.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             checklist: [
@@ -226,7 +226,7 @@ export const modulo_17_immigrazione: Module = {
                     url: 'https://www.poste.it/prodotti/permesso-di-soggiorno.html',
                     type: 'official',
                     usedFor: 'Specifiche tecniche di spedizione.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Guida al Kit',
@@ -234,7 +234,7 @@ export const modulo_17_immigrazione: Module = {
                     url: 'https://www.cinformi.it/',
                     type: 'nonprofit',
                     usedFor: 'Esempi di compilazione moduli.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             checklist: [
@@ -304,7 +304,7 @@ export const modulo_17_immigrazione: Module = {
                     url: 'https://www.agenziaentrate.gov.it/portale/web/guest/schede/istanze/richiesta-ts_cf/cf-cittadini-stranieri',
                     type: 'official',
                     usedFor: 'Modalità di richiesta e modulistica.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Attribuzione codice fiscale',
@@ -312,7 +312,7 @@ export const modulo_17_immigrazione: Module = {
                     url: 'https://www.esteri.it/',
                     type: 'official',
                     usedFor: 'Richiesta tramite consolati all\'estero.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             checklist: [

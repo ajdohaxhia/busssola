@@ -74,7 +74,7 @@ export const modulo_03b_truffe_phishing: Module = {
                     url: 'https://www.vinted.it/help/615',
                     type: 'platform',
                     usedFor: 'Procedure ufficiali di vendita e avvisi sul phishing.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',
@@ -142,7 +142,7 @@ export const modulo_03b_truffe_phishing: Module = {
                     url: 'https://www.commissariatodips.it/notizie/articolo/smishing-attenzione-al-finto-sms-del-corriere/index.html',
                     type: 'official',
                     usedFor: 'Riconoscimento delle campagne di smishing e prevenzione.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',
@@ -211,7 +211,7 @@ export const modulo_03b_truffe_phishing: Module = {
                     url: 'https://www.vinted.it/help/464',
                     type: 'platform',
                     usedFor: 'Regole per acquisti sicuri e protezione acquirente.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',

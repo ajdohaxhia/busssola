@@ -47,7 +47,9 @@ const modulesMeta = modules.map(m => ({
     lastUpdated: m.lastUpdated,
     tags: m.tags,
     featuredType: m.featuredType || 'none',
-    mainEntity: m.mainEntity
+    mainEntity: m.mainEntity,
+    topProcedures: m.topProcedures,
+    relatedChecklists: m.relatedChecklists
 }));
 
 const metaFileContent = `import { ModuleMetadata } from '@/types';

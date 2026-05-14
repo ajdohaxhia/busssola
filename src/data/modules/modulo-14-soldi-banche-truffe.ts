@@ -11,369 +11,526 @@ export const modulo_14_soldi_banche_truffe: Module = {
     themeColor: 'accent-red',
     lessons: [
         {
-            id: 'bonifico-istantaneo-truffa',
-            slug: 'bonifico-istantaneo-truffa-cosa-fare',
-            title: 'Bonifico istantaneo truffa: cosa fare',
+            id: 'bloccare-carta-clonata',
+            slug: 'come-bloccare-una-carta-clonata',
+            title: 'Come bloccare una carta clonata',
+            category: 'soldi',
+            audience: ['adults', 'victims'],
+            level: 'base',
+            estimatedMinutes: 5,
+            summary: 'Procedura d\'emergenza per bloccare istantaneamente una carta di credito o debito in caso di uso non autorizzato.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-14',
+            mainEntity: 'Banca d\'Italia',
+            synthesis: 'Il blocco della carta è l\'unica azione che interrompe immediatamente ulteriori furti dal conto.',
+            whenToDo: 'Appena ricevi un SMS di pagamento sospetto o non trovi più la carta.',
+            scenario: 'Ricevi una notifica di acquisto da un sito estero che non hai effettuato, oppure ti accorgi di aver perso il portafoglio.',
+            prerequisites: ['Essere titolare della carta o avere i dati del titolare'],
+            whatToPrepare: ['Ultime 4 cifre della carta (se disponibili)', 'Codice fiscale', 'Numero verde blocchi della propria banca'],
+            estimatedCosts: 'Gratuito',
+            timeToComplete: '2 minuti',
+            steps: [
+                'Chiama immediatamente il Numero Verde Blocchi della tua banca (attivo 24/7)',
+                'In alternativa, usa l\'opzione "Blocca carta" nell\'app della tua banca',
+                'Comunica all\'operatore i tuoi dati e il motivo del blocco',
+                'Segna il "Codice di blocco" che ti verrà fornito (è la prova legale dell\'avvenuto blocco)',
+                'Verifica se sono presenti altre operazioni sospette nell\'estratto conto'
+            ],
+            doNow: [
+                'Usa l\'app della banca per il blocco istantaneo',
+                'Chiama il numero verde se l\'app non è accessibile'
+            ],
+            dontDo: [
+                'Non aspettare il mattino successivo per chiamare',
+                'Non contattare prima i carabinieri: il blocco deve essere la prima cosa'
+            ],
+            commonErrors: [
+                'Pensare che bloccare l\'account della banca blocchi anche la carta fisica',
+                'Non segnarsi il codice di blocco fornito al telefono'
+            ],
+            ifYouHaveProblems: [
+                'Se non trovi il numero verde, chiama il numero generico della banca e chiedi del servizio blocchi'
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'bancaItaliaSicurezza',
+                    useWhen: 'Per capire i tuoi diritti in caso di carta clonata',
+                    beforeOpening: ['Controlla i contatti della tua banca']
+                }
+            ],
+            checklist: [
+                'Blocco effettuato via app o telefono',
+                'Codice di blocco salvato',
+                'Notifiche della banca attivate per il futuro'
+            ],
+            sources: [
+                {
+                    title: 'Guida ai pagamenti elettronici',
+                    organization: 'Banca d\'Italia',
+                    url: 'https://www.bancaditalia.it/pubblicazioni/guide-bi/guida-pagamenti-elettronici/index.html',
+                    type: 'official',
+                    usedFor: 'Procedure di sicurezza',
+                    lastCheckedAt: '2026-05-14'
+                }
+            ]
+        },
+        {
+            id: 'disconoscere-operazione-bancaria',
+            slug: 'come-disconoscere-operazione-bancaria-rimborso',
+            title: 'Come disconoscere un’operazione bancaria',
+            category: 'soldi',
+            audience: ['adults', 'victims'],
+            level: 'intermedia',
+            estimatedMinutes: 15,
+            summary: 'Procedura formale per contestare pagamenti fraudolenti e richiedere il rimborso alla banca.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-14',
+            mainEntity: 'Arbitro Bancario Finanziario',
+            synthesis: 'Dopo il blocco, hai diritto al rimborso delle somme rubate, al netto di un\'eventuale franchigia di 50€.',
+            whenToDo: 'Entro 60 giorni (o secondo i termini contrattuali) dalla ricezione dell\'estratto conto con l\'operazione sospetta.',
+            scenario: 'Hai bloccato la carta per clonazione e ora devi formalizzare la richiesta per riavere indietro i 200€ che ti hanno sottratto.',
+            prerequisites: ['Aver già bloccato la carta', 'Aver sporto denuncia'],
+            whatToPrepare: ['Copia della denuncia alle autorità', 'Codice di blocco della carta', 'Modulo di disconoscimento (fornito dalla banca)', 'Estratto conto con l\'operazione evidenziata'],
+            estimatedCosts: 'Gratuito',
+            timeToComplete: '30 minuti per la pratica, fino a 30 giorni per il rimborso',
+            steps: [
+                'Recati presso una caserma (Carabinieri o Polizia) per sporgere denuncia',
+                'Scarica il modulo di disconoscimento dal sito della tua banca o richiedilo in filiale',
+                'Compila il modulo indicando data, ora, importo e tipologia dell\'operazione fraudolenta',
+                'Allega la copia della denuncia e del tuo documento di identità',
+                'Invia tutto via PEC o raccomandata A/R alla banca, oppure consegnalo a mano in filiale facendoti timbrare una copia per ricevuta'
+            ],
+            doNow: [
+                'Fai la denuncia alle autorità',
+                'Invia il modulo di disconoscimento via PEC'
+            ],
+            dontDo: [
+                'Non inviare la richiesta tramite semplice email ordinaria',
+                'Non aspettare mesi: i termini per la contestazione scadono'
+            ],
+            commonErrors: [
+                'Non allegare la denuncia (obbligatoria per il rimborso)',
+                'Dimenticare di firmare il modulo'
+            ],
+            ifYouHaveProblems: [
+                'Se la banca rifiuta il rimborso, puoi fare ricorso all\'ABF'
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'abfHome',
+                    useWhen: 'Se la banca non ti rimborsa le somme contestate',
+                    beforeOpening: ['Assicurati di avere la risposta scritta di rifiuto della banca']
+                }
+            ],
+            checklist: [
+                'Denuncia effettuata',
+                'Modulo compilato e firmato',
+                'Invio tracciabile effettuato (PEC/Raccomandata)',
+                'Copia di tutta la documentazione salvata'
+            ],
+            sources: [
+                {
+                    title: 'Come contestare un\'operazione',
+                    organization: 'Arbitro Bancario Finanziario',
+                    url: 'https://www.arbitrobancariofinanziario.it/',
+                    type: 'official',
+                    usedFor: 'Regole di rimborso',
+                    lastCheckedAt: '2026-05-14'
+                }
+            ]
+        },
+        {
+            id: 'reagire-bonifico-truffa',
+            slug: 'reagire-bonifico-truffa-primi-10-minuti',
+            title: 'Come reagire a un bonifico truffa (Primi 10 min)',
             category: 'soldi',
             audience: ['adults', 'victims'],
             level: 'avanzata',
             estimatedMinutes: 10,
-            summary: 'Come reagire immediatamente se hai inviato un bonifico istantaneo a un truffatore.',
+            summary: 'Azioni immediate da compiere nei primi minuti dopo aver inviato denaro a un truffatore tramite bonifico.',
             status: 'published',
             qualityGatePassed: true,
             lastReviewedAt: '2026-05-14',
             mainEntity: 'Polizia Postale',
-            synthesis: 'Il bonifico istantaneo non è revocabile, ma ci sono procedure di "recall" e denuncia obbligatorie.',
-            whenToDo: 'Entro i primi minuti/ore dopo aver realizzato l\'errore.',
-            scenario: 'Hai inviato dei soldi convinto di fare un acquisto o aiutare un parente, ma hai scoperto che era un inganno. Il bonifico è già arrivato al destinatario.',
+            synthesis: 'La velocità è tutto: un bonifico ordinario può essere revocato in poche ore, uno istantaneo richiede un "recall" immediato.',
+            whenToDo: 'Immediatamente dopo aver realizzato che il destinatario è un truffatore.',
+            scenario: 'Hai appena inviato un bonifico per un acquisto o per "aiutare un parente" e ti accorgi di essere stato ingannato.',
+            prerequisites: ['Avere sottomano il TRN o CRO del bonifico'],
+            whatToPrepare: ['Dati del destinatario (IBAN)', 'Importo esatto', 'App della banca o numero del servizio clienti'],
+            estimatedCosts: 'Costo commissionale del richiamo bonifico (variabile)',
+            timeToComplete: '10 minuti',
             steps: [
-                'Chiama immediatamente il servizio clienti della tua banca',
-                'Chiedi l\'attivazione della procedura di "Recall" per frode',
-                'Blocca l\'accesso all\'home banking se hai fornito credenziali',
-                'Recati subito a fare denuncia alla Polizia Postale o Carabinieri'
+                'Entra nell\'app e prova a cliccare su "Revoca bonifico" (se ordinario ed entro i tempi)',
+                'Se la revoca non è disponibile, chiama subito il Servizio Frodi della tua banca',
+                'Chiedi esplicitamente l\'attivazione della procedura di "Recall" per sospetta frode',
+                'Informa la banca che procederai immediatamente con la denuncia',
+                'Se hai fornito anche codici OTP o credenziali, chiedi il blocco dell\'home banking'
             ],
             doNow: [
-                'Chiama subito la tua banca',
-                'Fai denuncia alla Polizia Postale'
+                'Chiama il servizio frodi della banca',
+                'Prova a revocare il bonifico via app'
             ],
             dontDo: [
-                'Non aspettare il giorno dopo (i truffatori svuotano subito il conto)',
-                'Non contattare il truffatore sperando che ti restituisca i soldi',
-                'Non fidarti di chi ti contatta dicendo di essere della banca e chiedendo altri codici per "annullare" il bonifico'
-            ],
-            whatToPrepare: [
-                'Dati del bonifico (TRN, importo, data, ora)',
-                'IBAN del destinatario',
-                'Screenshot della conversazione con il truffatore',
-                'Documento di identità'
+                'Non chiamare prima il truffatore per "chiedere spiegazioni"',
+                'Non aspettare che la banca riapra se è notte: usa i numeri di emergenza 24/7'
             ],
             commonErrors: [
-                'Pensare che la banca possa annullare il bonifico istantaneo con un click (è irrevocabile)',
-                'Non fare denuncia pensando che "tanto non serve"',
-                'Fornire ulteriori codici OTP durante la fase di panico'
+                'Pensare che la banca possa annullare un bonifico istantaneo con un click',
+                'Dimenticare di fare la denuncia subito dopo la chiamata alla banca'
             ],
-            askHelpWhen: [
-                'Se la banca si rifiuta di avviare il recall',
-                'Se il danno economico è ingente e serve assistenza legale'
+            ifYouHaveProblems: [
+                'Se la banca dice che non può fare nulla, insisti per l\'invio della segnalazione di frode alla banca del destinatario'
             ],
-            whoCanHelp: ['Servizio Frodi della propria banca', 'Polizia Postale', 'Arbitro Bancario Finanziario (ABF)'],
-            officialLinks: ['https://www.commissariatodips.it/', 'https://www.arbitrobancariofinanziario.it/'],
+            officialLinksV2: [
+                {
+                    sourceId: 'commissariatoPs',
+                    useWhen: 'Per segnalare la frode e avere indicazioni legali',
+                    beforeOpening: ['Prepara gli screenshot della truffa']
+                }
+            ],
             checklist: [
-                'Banca contattata telefonicamente',
-                'Procedura Recall richiesta',
-                'Credenziali home banking cambiate',
-                'Denuncia presentata',
-                'Copia denuncia inviata alla banca via PEC'
+                'Banca contattata',
+                'Procedura di recall/revoca avviata',
+                'IBAN del truffatore segnato per la denuncia',
+                'Denuncia pronta per essere sporta'
             ],
             sources: [
                 {
                     title: 'Truffe tramite bonifico',
                     organization: 'Polizia Postale',
-                    url: 'https://www.commissariatodips.it/consigli/per-i-cittadini/acquisti-online/index.html',
-                    type: 'official',
-                    usedFor: 'Consigli sicurezza e denuncia',
-                    lastCheckedAt: '2026-05-14'
-                },
-                {
-                    title: 'Arbitro Bancario Finanziario - Guida',
-                    organization: 'Banca d\'Italia',
-                    url: 'https://www.arbitrobancariofinanziario.it/',
-                    type: 'official',
-                    usedFor: 'Risoluzione controversie bancarie',
-                    lastCheckedAt: '2026-05-14'
-                }
-            ]
-        },
-        {
-            id: 'carta-clonata-blocco',
-            slug: 'carta-clonata-blocco-e-disconoscimento',
-            title: 'Carta clonata: blocco e disconoscimento',
-            category: 'soldi',
-            audience: ['adults', 'victims'],
-            level: 'base',
-            estimatedMinutes: 10,
-            summary: 'Cosa fare se noti pagamenti non autorizzati sulla tua carta di credito o debito.',
-            status: 'published',
-            qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
-            mainEntity: 'Banca d\'Italia',
-            synthesis: 'Blocco immediato della carta e procedura di rimborso (chargeback) per operazioni fraudolente.',
-            whenToDo: 'Appena ricevi una notifica di pagamento sospetta o vedi movimenti strani nell\'estratto conto.',
-            scenario: 'Ti trovi a casa e ricevi un SMS che conferma un acquisto di 500€ in un negozio all\'estero dove non sei mai stato.',
-            steps: [
-                'Blocca la carta tramite app o numero verde blocchi (attivo 24/7)',
-                'Annota il codice di blocco fornito dall\'operatore',
-                'Fai una lista delle transazioni non autorizzate',
-                'Fai denuncia entro 48 ore'
-            ],
-            doNow: [
-                'Blocca la carta immediatamente',
-                'Controlla l\'estratto conto per altre frodi'
-            ],
-            dontDo: [
-                'Non aspettare di capire "cosa è successo" prima di bloccare',
-                'Non buttare la carta fisica (potrebbe servire for la denuncia)',
-                'Non cancellare gli SMS di notifica delle transazioni'
-            ],
-            whatToPrepare: [
-                'Numero della carta (o ultime 4 cifre)',
-                'Estratto conto con evidenziate le operazioni sospette',
-                'Copia della denuncia',
-                'Modulo di disconoscimento della banca'
-            ],
-            commonErrors: [
-                'Dimenticare di bloccare la carta anche sui wallet digitali (Apple Pay/Google Pay)',
-                'Non contestare per iscritto le transazioni entro i termini (solitamente 60-90 giorni)',
-                'Pensare che il blocco della carta cancelli anche i pagamenti già autorizzati'
-            ],
-            askHelpWhen: [
-                'Se la banca nega il rimborso sostenendo una tua "grave negligenza"',
-                'Se la carta viene usata ripetutamente nonostante il blocco'
-            ],
-            whoCanHelp: ['Emittente della carta (Mastercard, Visa, American Express, ecc.)', 'Polizia di Stato', 'Associazioni consumatori'],
-            officialLinks: ['https://www.bancaditalia.it/pubblicazioni/guide-bi/guida-pagamenti-elettronici/index.html'],
-            checklist: [
-                'Blocco effettuato via telefono/app',
-                'Codice di blocco segnato',
-                'Denuncia presentata',
-                'Modulo disconoscimento inviato',
-                'Nuova carta richiesta'
-            ],
-            sources: [
-                {
-                    title: 'Sicurezza dei pagamenti',
-                    organization: 'Banca d\'Italia',
-                    url: 'https://www.bancaditalia.it/',
-                    type: 'official',
-                    usedFor: 'Diritti al rimborso e PSD2',
-                    lastCheckedAt: '2026-05-14'
-                },
-                {
-                    title: 'Commissariato PS Online - Carte di pagamento',
-                    organization: 'Polizia Postale',
                     url: 'https://www.commissariatodips.it/',
                     type: 'official',
-                    usedFor: 'Modalità di denuncia clonazione',
+                    usedFor: 'Consigli operativi',
                     lastCheckedAt: '2026-05-14'
                 }
             ]
         },
         {
-            id: 'paypal-contestazione',
-            slug: 'paypal-contestazione-e-chargeback',
-            title: 'PayPal: contestazione e chargeback',
+            id: 'capire-chiamata-banca-falsa',
+            slug: 'come-capire-se-una-chiamata-della-banca-e-falsa',
+            title: 'Come capire se una chiamata della banca è falsa',
             category: 'soldi',
-            audience: ['adults', 'victims'],
+            audience: ['adults', 'prevention'],
             level: 'base',
-            estimatedMinutes: 15,
-            summary: 'Come utilizzare la Protezione Acquisti di PayPal per ottenere il rimborso di un acquisto mai arrivato o non conforme.',
-            status: 'published',
-            qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
-            mainEntity: 'PayPal',
-            synthesis: 'Apertura di una disputa nel Centro Risoluzioni entro 180 giorni dal pagamento.',
-            whenToDo: 'Quando l\'oggetto non arriva dopo la data prevista o è palesemente diverso dalla descrizione.',
-            scenario: 'Hai comprato un paio di scarpe su un sito, hai pagato con PayPal, ma sono passate tre settimane e il venditore è sparito.',
-            steps: [
-                'Accedi al tuo conto PayPal',
-                'Vai nel "Centro risoluzioni" e clicca su "Segnala un problema"',
-                'Seleziona la transazione e scegli il motivo (es. "Oggetto non ricevuto")',
-                'Invia un messaggio al venditore tramite PayPal'
-            ],
-            doNow: [
-                'Apri una contestazione nel Centro Risoluzioni PayPal',
-                'Invia un messaggio al venditore'
-            ],
-            dontDo: [
-                'Non chiudere la contestazione finché non hai ricevuto il rimborso o l\'oggetto (una volta chiusa non si può riaprire)',
-                'Non accettare rimborsi "parziali" fuori dalla piattaforma PayPal',
-                'Non inviare mai denaro con l\'opzione "Amici e Familiari" for acquisti commerciali (non ha protezione)'
-            ],
-            whatToPrepare: [
-                'ID transazione PayPal',
-                'Screenshot dell\'annuncio di vendita',
-                'Email di conferma ordine',
-                'Eventuali prove di mancata consegna (es. tracking fermo)'
-            ],
-            commonErrors: [
-                'Aspettare troppo tempo per segnalare (oltre i 180 giorni)',
-                'Dimenticare di convertire la "contestazione" in "reclamo" se il venditore non risponde (entro 20 giorni)',
-                'Sbagliare il motivo della segnalazione'
-            ],
-            askHelpWhen: [
-                'Se il venditore fornisce un numero di tracking falso che risulta "consegnato" in un\'altra città',
-                'Se PayPal chiude il reclamo a tuo sfavore ingiustamente'
-            ],
-            whoCanHelp: ['Assistenza Clienti PayPal', 'Centro Risoluzioni PayPal', 'Associazioni Consumatori'],
-            officialLinks: ['https://www.paypal.com/it/webapps/mpp/paypal-safety-and-security'],
-            checklist: [
-                'Segnalazione aperta in Centro Risoluzioni',
-                'Messaggio inviato al venditore',
-                'Conversione in reclamo effettuata (se necessario)',
-                'Documentazione aggiuntiva caricata',
-                'Esito monitorato via email'
-            ],
-            sources: [
-                {
-                    title: 'Protezione acquisti per gli acquirenti',
-                    organization: 'PayPal Italia',
-                    url: 'https://www.paypal.com/it/webapps/mpp/ua/buyer-protection',
-                    type: 'platform',
-                    usedFor: 'Regole ufficiali rimborso',
-                    lastCheckedAt: '2026-05-14'
-                },
-                {
-                    title: 'Consigli for acquisti sicuri',
-                    organization: 'Garante Privacy',
-                    url: 'https://www.garanteprivacy.it/',
-                    type: 'official',
-                    usedFor: 'Protezione dati nei pagamenti online',
-                    lastCheckedAt: '2026-05-14'
-                }
-            ]
-        },
-        {
-            id: 'marketplace-truffa',
-            slug: 'marketplace-vinted-ebay-subito-truffato',
-            title: 'Marketplace (Vinted/eBay/Subito): venditore/acquirente truffato',
-            category: 'soldi',
-            audience: ['adults', 'studenti', 'victims'],
-            level: 'base',
-            estimatedMinutes: 15,
-            summary: 'Come proteggersi e cosa fare se si viene raggirati su piattaforme di compravendita tra privati.',
-            status: 'published',
-            qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
-            mainEntity: 'Polizia Postale',
-            synthesis: 'Utilizzo esclusivo dei sistemi di pagamento integrati e segnalazione immediata alla piattaforma.',
-            whenToDo: 'Sia in fase di vendita (per prevenire) che subito dopo aver subito un danno.',
-            scenario: 'Sei un venditore e l\'acquirente dice che il pacco era vuoto, oppure sei un acquirente e hai ricevuto un mattone al posto di un telefono.',
-            steps: [
-                'Sospendi ogni comunicazione fuori dalla chat ufficiale',
-                'Segnala l\'utente alla piattaforma tramite il tasto "Report"',
-                'Apri una contestazione tramite il sistema di protezione del sito (es. "TuttoSubito", "Protezione Vinted")',
-                'Scatta foto dettagliate di quanto ricevuto e dell\'imballaggio'
-            ],
-            doNow: [
-                'Segnala l\'utente alla piattaforma',
-                'Apri una contestazione ufficiale'
-            ],
-            dontDo: [
-                'Non accettare pagamenti tramite ricariche Postepay, bonifici diretti o link esterni',
-                'Non spedire l\'oggetto prima di aver ricevuto la conferma di pagamento dalla piattaforma',
-                'Non fornire il tuo numero di telefono o email se la chat dell\'app è sufficiente'
-            ],
-            whatToPrepare: [
-                'Screenshot della chat',
-                'Foto del pacco e dell\'etichetta di spedizione',
-                'Ricevuta di spedizione/tracking',
-                'Email ricevute dalla piattaforma'
-            ],
-            commonErrors: [
-                'Uscire dalla piattaforma per concludere l\'affare (si perde ogni protezione)',
-                'Fidarsi di screenshot di avvenuto pagamento inviati dal compratore',
-                'Non filmare l\'apertura del pacco for oggetti di alto valore'
-            ],
-            askHelpWhen: [
-                'Se la piattaforma non interviene nonostante le prove',
-                'Se ricevi minacce legali infondate dal truffatore'
-            ],
-            whoCanHelp: ['Supporto clienti della piattaforma', 'Polizia Postale', 'Altroconsumo / Associazioni consumatori'],
-            officialLinks: ['https://www.commissariatodips.it/consigli/per-i-cittadini/acquisti-online/index.html'],
-            checklist: [
-                'Utente segnalato nell\'app',
-                'Contestazione ufficiale aperta',
-                'Chat salvata (screenshot)',
-                'Piattaforma informata del numero di denuncia (se fatta)',
-                'Metodo di pagamento sicuro verificato'
-            ],
-            sources: [
-                {
-                    title: 'Guida all\'acquisto sicuro',
-                    organization: 'Polizia di Stato',
-                    url: 'https://www.poliziadistato.it/articolo/consigli-per-acquisti-online-sicuri',
-                    type: 'official',
-                    usedFor: 'Prevenzione truffe marketplace',
-                    lastCheckedAt: '2026-05-14'
-                },
-                {
-                    title: 'Centro sicurezza Subito.it',
-                    organization: 'Subito.it',
-                    url: 'https://info.subito.it/sicurezza.htm',
-                    type: 'platform',
-                    usedFor: 'Esempi di truffe comuni',
-                    lastCheckedAt: '2026-05-14'
-                }
-            ]
-        },
-        {
-            id: 'finto-corriere-sms',
-            slug: 'finto-corriere-finta-banca-via-sms',
-            title: 'Finto corriere / Finta banca via SMS',
-            category: 'soldi',
-            audience: ['adults', 'victims'],
-            level: 'base',
-            estimatedMinutes: 10,
-            summary: 'Riconoscere e neutralizzare i tentativi di Smishing (SMS phishing) che sfruttano loghi di banche e corrieri.',
+            estimatedMinutes: 8,
+            summary: 'Riconoscere le tecniche di "Vishing" (Voice Phishing) usate dai truffatori che fingono di essere operatori bancari.',
             status: 'published',
             qualityGatePassed: true,
             lastReviewedAt: '2026-05-14',
             mainEntity: 'CERTFin',
-            synthesis: 'Mai cliccare su link in SMS che chiedono dati sensibili o pagamenti urgenti.',
-            whenToDo: 'Sempre, ogni volta che ricevi un SMS con un link, anche se il mittente sembra affidabile.',
-            scenario: 'Ricevi un SMS che sembra arrivare dalla tua banca: "Accesso non autorizzato, clicca qui per bloccare". Oppure da un corriere: "Pacco bloccato, paga 2€ di dogana".',
+            synthesis: 'La banca vera non ti chiederà mai codici OTP o di spostare soldi per "sicurezza".',
+            whenToDo: 'Ogni volta che ricevi una chiamata inaspettata dalla "banca", anche se il numero sembra quello vero.',
+            scenario: 'Ricevi una chiamata da un numero che sembra quello della tua banca. L\'operatore dice che ci sono movimenti sospetti e devi spostare i soldi su un "conto sicuro".',
+            prerequisites: ['Essere consapevoli che i numeri di telefono possono essere falsificati (spoofing)'],
+            whatToPrepare: ['Nessun documento (non devi dare informazioni al telefono)'],
+            estimatedCosts: 'Gratuito',
+            timeToComplete: '2 minuti',
             steps: [
-                'Non cliccare sul link',
-                'Controlla il numero del mittente (spesso è un numero lungo o anonimo)',
-                'Accedi al sito ufficiale della banca o del corriere digitando l\'indirizzo nel browser',
-                'Segnala l\'SMS come spam sul tuo smartphone'
+                'Ascolta con attenzione: se l\'operatore ha fretta o crea allarme, diffida',
+                'Se ti chiedono un codice OTP che hai appena ricevuto via SMS, riattacca immediatamente',
+                'Se ti chiedono di fare un bonifico verso un altro conto per "proteggere i soldi", è una truffa',
+                'Riattacca e chiama tu il numero ufficiale della banca che trovi sul retro della tua carta',
+                'Non usare la funzione "richiama" del telefono: digita il numero manualmente'
             ],
             doNow: [
-                'Ignora e cancella l\'SMS',
-                'Segnala il numero come spam'
+                'Riattacca la chiamata sospetta',
+                'Chiama tu il numero ufficiale della banca'
             ],
             dontDo: [
-                'Non inserire mai PIN, password o dati della carta su siti aperti tramite SMS',
-                'Non rispondere all\'SMS',
-                'Non scaricare app suggerite via SMS'
-            ],
-            whatToPrepare: [
-                'Screenshot dell\'SMS for segnalazione',
-                'Contatti ufficiali della tua banca (salvati in rubrica)'
+                'Non dettare mai codici ricevuti via SMS',
+                'Non confermare dati sensibili come password o PIN',
+                'Non installare app (come AnyDesk) su richiesta dell\'operatore'
             ],
             commonErrors: [
-                'Fidarsi perché l\'SMS appare nella stessa conversazione dei messaggi veri della banca (tecnica dello spoofing)',
-                'Farsi prendere dall\'urgenza comunicata nel messaggio',
-                'Pensare che 2€ di dogana siano "pochi" e non sia una truffa'
+                'Fidarsi perché il numero sul display è quello vero della banca (tecnica dello spoofing)',
+                'Farsi prendere dal panico per le minacce di "conto bloccato" o "furto in corso"'
             ],
-            askHelpWhen: [
-                'Se hai cliccato e inserito dei dati (agisci subito: blocca conti e carte)',
-                'Se il tuo telefono inizia a comportarsi in modo strano dopo il click'
+            ifYouHaveProblems: [
+                'Se hai già dato dei codici, chiama subito il numero ufficiale per bloccare tutto'
             ],
-            whoCanHelp: ['Servizio Clienti della tua banca', 'CERT Finanziario (CERTFin)', 'Polizia Postale'],
-            officialLinks: ['https://www.certfin.it/cittadini/smishing.html'],
+            officialLinksV2: [
+                {
+                    sourceId: 'certfinHome',
+                    useWhen: 'Per imparare a riconoscere le nuove tecniche di vishing',
+                    beforeOpening: []
+                }
+            ],
             checklist: [
-                'Mittente verificato',
-                'Link NON cliccato',
-                'App ufficiale usata for controllo',
-                'SMS cancellato/segnalato',
-                'Password cambiate (se cliccato)'
+                'Chiamata interrotta',
+                'Nessun codice fornito',
+                'Verifica fatta chiamando il numero ufficiale'
             ],
             sources: [
                 {
-                    title: 'Smishing: cos\'è e come difendersi',
+                    title: 'Attenzione al Vishing',
                     organization: 'CERTFin',
-                    url: 'https://www.certfin.it/',
+                    url: 'https://www.certfin.it/cittadini/',
                     type: 'official',
-                    usedFor: 'Definizione tecnica e prevenzione',
+                    usedFor: 'Tecniche di difesa',
                     lastCheckedAt: '2026-05-14'
-                },
+                }
+            ]
+        },
+        {
+            id: 'contestare-pagamento-paypal',
+            slug: 'come-contestare-un-pagamento-paypal',
+            title: 'Come contestare un pagamento PayPal',
+            category: 'soldi',
+            audience: ['adults', 'victims'],
+            level: 'base',
+            estimatedMinutes: 10,
+            summary: 'Guida all\'uso del Centro Risoluzioni PayPal per ottenere rimborsi su acquisti non ricevuti o non conformi.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-14',
+            mainEntity: 'PayPal',
+            synthesis: 'Hai 180 giorni di tempo per aprire una contestazione, ma agisci appena possibile.',
+            whenToDo: 'Quando l\'oggetto non arriva, è rotto o è diverso dalla descrizione.',
+            scenario: 'Hai comprato un vestito online pagando con PayPal, ma hai ricevuto un pacco vuoto o un oggetto totalmente diverso.',
+            prerequisites: ['Aver effettuato il pagamento tramite PayPal (opzione "Beni e Servizi")'],
+            whatToPrepare: ['ID transazione PayPal', 'Foto dell\'oggetto ricevuto', 'Screenshot della descrizione originale', 'Prove di contatto col venditore'],
+            estimatedCosts: 'Gratuito',
+            timeToComplete: '15 minuti per l\'apertura, fino a 20 giorni per la risoluzione',
+            steps: [
+                'Accedi al tuo conto PayPal e vai nel "Centro risoluzioni"',
+                'Clicca su "Segnala un problema" e seleziona la transazione interessata',
+                'Scegli il tipo di contestazione (es. "Oggetto non ricevuto" o "Notevolmente diverso")',
+                'Invia un messaggio al venditore tramite la piattaforma PayPal',
+                'Se il venditore non risponde o non risolve, clicca su "Converti in reclamo" entro 20 giorni'
+            ],
+            doNow: [
+                'Apri la contestazione nel Centro Risoluzioni',
+                'Raccogli le foto delle prove'
+            ],
+            dontDo: [
+                'Non chiudere mai la contestazione finché non hai i soldi (non potrai riaprirla)',
+                'Non accettare rimborsi parziali fuori da PayPal'
+            ],
+            commonErrors: [
+                'Dimenticare di convertire la contestazione in reclamo (se non lo fai, la pratica si chiude da sola)',
+                'Aver usato l\'opzione "Amici e Familiari" (che non offre protezione acquisti)'
+            ],
+            ifYouHaveProblems: [
+                'Se PayPal rigetta il reclamo e hai pagato con carta, puoi provare il chargeback tramite la tua banca'
+            ],
+            officialLinksV2: [
                 {
-                    title: 'Attenzione alle truffe via SMS',
-                    organization: 'Poste Italiane',
-                    url: 'https://www.poste.it/sicurezza.html',
-                    type: 'institutional',
-                    usedFor: 'Esempi reali di messaggi fraudolenti',
+                    sourceId: 'paypalRisoluzioni',
+                    useWhen: 'Per aprire ufficialmente la pratica di rimborso',
+                    beforeOpening: ['Prepara le credenziali di accesso']
+                }
+            ],
+            checklist: [
+                'Contestazione aperta',
+                'Messaggio inviato al venditore',
+                'Data di scadenza per reclamo segnata in calendario'
+            ],
+            sources: [
+                {
+                    title: 'Protezione acquisti PayPal',
+                    organization: 'PayPal Italia',
+                    url: 'https://www.paypal.com/it/webapps/mpp/ua/buyer-protection',
+                    type: 'platform',
+                    usedFor: 'Termini del servizio',
+                    lastCheckedAt: '2026-05-14'
+                }
+            ]
+        },
+        {
+            id: 'reagire-truffa-marketplace',
+            slug: 'come-reagire-a-truffa-marketplace-vinted-ebay-subito',
+            title: 'Come reagire a truffa marketplace (Vinted/eBay/Subito)',
+            category: 'soldi',
+            audience: ['adults', 'victims'],
+            level: 'base',
+            estimatedMinutes: 12,
+            summary: 'Cosa fare se vieni truffato durante una compravendita tra privati su piattaforme online.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-14',
+            mainEntity: 'Polizia Postale',
+            synthesis: 'Agisci subito all\'interno della piattaforma per bloccare il pagamento al venditore.',
+            whenToDo: 'Appena ti accorgi che l\'oggetto ricevuto è falso, danneggiato o che il venditore è sparito.',
+            scenario: 'Hai comprato uno smartphone su Subito o Vinted, hai pagato tramite la piattaforma, ma hai ricevuto un pacco con dentro un mattone.',
+            prerequisites: ['Aver concluso l\'affare tramite il sistema di pagamento interno del sito'],
+            whatToPrepare: ['Screenshot della chat', 'Foto del pacco e dell\'etichetta', 'Video dell\'apertura (se disponibile)'],
+            estimatedCosts: 'Gratuito',
+            timeToComplete: '20 minuti',
+            steps: [
+                'Non cliccare su "Tutto ok" o "Conferma ricezione" nell\'app',
+                'Clicca su "Ho un problema" o "Contesta" nella pagina dell\'ordine',
+                'Segnala l\'utente al supporto clienti del marketplace',
+                'Salva tutta la chat (fai degli screenshot prima che l\'utente possa cancellarli o essere bloccato)',
+                'Se il danno è superiore a poche decine di euro, fai denuncia online alla Polizia Postale'
+            ],
+            doNow: [
+                'Blocca il pagamento nell\'app del marketplace',
+                'Fai screenshot di chat e annuncio'
+            ],
+            dontDo: [
+                'Non continuare la conversazione su WhatsApp: resta nella chat del sito',
+                'Non accettare scuse dal venditore che ti chiede di aspettare "qualche giorno" prima di contestare'
+            ],
+            commonErrors: [
+                'Aver pagato fuori piattaforma (es. ricarica Postepay): in questo caso la protezione del sito è nulla',
+                'Buttare l\'imballaggio originale del pacco ricevuto'
+            ],
+            ifYouHaveProblems: [
+                'Se il marketplace non ti aiuta, verifica se la tua carta di credito offre un\'assicurazione sugli acquisti online'
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'psSegnalaOnline',
+                    useWhen: 'Per sporgere denuncia se la piattaforma non risolve',
+                    beforeOpening: ['Prepara i dati del venditore e del pagamento']
+                }
+            ],
+            checklist: [
+                'Contestazione aperta sul sito',
+                'Supporto clienti contattato',
+                'Screenshot salvati',
+                'Denuncia effettuata (se necessario)'
+            ],
+            sources: [
+                {
+                    title: 'Acquisti online sicuri',
+                    organization: 'Polizia di Stato',
+                    url: 'https://www.commissariatodips.it/consigli/per-i-cittadini/acquisti-online/index.html',
+                    type: 'official',
+                    usedFor: 'Prevenzione e denuncia',
+                    lastCheckedAt: '2026-05-14'
+                }
+            ]
+        },
+        {
+            id: 'riconoscere-finto-corriere',
+            slug: 'come-riconoscere-finto-corriere-smishing',
+            title: 'Come riconoscere finto corriere',
+            category: 'soldi',
+            audience: ['adults', 'prevention'],
+            level: 'base',
+            estimatedMinutes: 7,
+            summary: 'Difendersi dai messaggi (SMS/Email) che chiedono pagamenti per sbloccare pacchi mai ordinati o in giacenza.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-14',
+            mainEntity: 'ACN',
+            synthesis: 'Nessun corriere (BRT, Poste, UPS) ti chiederà mai soldi via SMS per sbloccare una consegna.',
+            whenToDo: 'Ogni volta che ricevi un messaggio relativo a una spedizione, specialmente se contiene un link.',
+            scenario: 'Ricevi un SMS: "Il tuo pacco è bloccato in dogana, paga 1.99€ per sbloccarlo". C\'è un link che sembra quello del corriere.',
+            prerequisites: ['Diffidenza verso le comunicazioni urgenti non sollecitate'],
+            whatToPrepare: ['Nessun documento'],
+            estimatedCosts: 'Gratuito',
+            timeToComplete: '1 minuto',
+            steps: [
+                'Controlla il testo: spesso ci sono errori grammaticali o accenti sbagliati',
+                'Guarda il link: se l\'indirizzo non è quello ufficiale (es. bit.ly, siti strani) è una truffa',
+                'Non cliccare sul link per nessun motivo',
+                'Se aspetti davvero un pacco, vai sul sito ufficiale del corriere e inserisci manualmente il codice di tracking',
+                'Segnala il messaggio come Spam ed eliminalo'
+            ],
+            doNow: [
+                'Ignora e cancella il messaggio',
+                'Blocca il mittente'
+            ],
+            dontDo: [
+                'Non inserire mai i dati della carta di credito "solo per pagare 2 euro"',
+                'Non scaricare file allegati o app suggerite nel messaggio'
+            ],
+            commonErrors: [
+                'Fidarsi perché si sta effettivamente aspettando un pacco (i truffatori mandano milioni di SMS a caso)',
+                'Pensare che, essendo un piccolo importo, non possa essere una truffa'
+            ],
+            ifYouHaveProblems: [
+                'Se hai già inserito i dati della carta, bloccala immediatamente: l\'obiettivo era rubare i tuoi dati, non i 2 euro'
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'pagopaPhishing',
+                    useWhen: 'Per capire come distinguere comunicazioni vere da false',
+                    beforeOpening: []
+                }
+            ],
+            checklist: [
+                'Link NON cliccato',
+                'Messaggio eliminato',
+                'Mittente bloccato'
+            ],
+            sources: [
+                {
+                    title: 'Smishing e truffe sui pacchi',
+                    organization: 'Agenzia per la Cybersicurezza Nazionale',
+                    url: 'https://www.acn.gov.it/',
+                    type: 'official',
+                    usedFor: 'Alert sicurezza',
+                    lastCheckedAt: '2026-05-14'
+                }
+            ]
+        },
+        {
+            id: 'salvare-prove-truffa-online',
+            slug: 'come-salvare-prove-di-una-truffa-online',
+            title: 'Come salvare prove di una truffa online',
+            category: 'soldi',
+            audience: ['adults', 'victims'],
+            level: 'intermedia',
+            estimatedMinutes: 15,
+            summary: 'Metodologia corretta per raccogliere prove digitali valide per una denuncia o una richiesta di rimborso.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-14',
+            mainEntity: 'Polizia Postale',
+            synthesis: 'Non cancellare nulla: gli screenshot e le ricevute sono le tue uniche armi legali.',
+            whenToDo: 'Appena sospetti di essere vittima di una truffa, prima che il truffatore sparisca.',
+            scenario: 'Ti sei accorto che il sito su cui hai comprato è falso e il venditore non risponde. Devi raccogliere tutto per andare dalla Polizia.',
+            prerequisites: ['Accesso alle chat e alle email scambiate'],
+            whatToPrepare: ['Smartphone o PC', 'Spazio cloud o chiavetta USB per il backup'],
+            estimatedCosts: 'Gratuito',
+            timeToComplete: '15 minuti',
+            steps: [
+                'Fai screenshot di tutta la chat, assicurandoti che si veda il numero di telefono o l\'ID dell\'utente',
+                'Salva l\'annuncio di vendita originale (anche se dice "non più disponibile")',
+                'Salva l\'email di conferma ordine e la ricevuta di pagamento (PayPal, bonifico, ecc.)',
+                'Non cancellare gli SMS o i messaggi WhatsApp: la polizia potrebbe aver bisogno dei file originali',
+                'Se possibile, stampa tutto in PDF per averne una copia pronta per la denuncia'
+            ],
+            doNow: [
+                'Fai gli screenshot ora',
+                'Salva le email in una cartella dedicata'
+            ],
+            dontDo: [
+                'Non cancellare la chat "per rabbia" o per pulizia',
+                'Non modificare o tagliare gli screenshot: devono essere integri'
+            ],
+            commonErrors: [
+                'Salvare solo una parte della conversazione',
+                'Dimenticare di salvare l\'URL (indirizzo web) del sito truffaldino'
+            ],
+            ifYouHaveProblems: [
+                'Se il sito è sparito, prova a cercarlo su "Wayback Machine" (Archive.org) per vedere se ne esiste una copia salvata'
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'psDenunceWeb',
+                    useWhen: 'Per iniziare la procedura di denuncia allegando le prove',
+                    beforeOpening: ['Assicurati di avere tutti i file pronti']
+                }
+            ],
+            checklist: [
+                'Chat salvata interamente',
+                'Ricevuta di pagamento salvata',
+                'URL del sito segnato',
+                'Backup fatto su un secondo dispositivo'
+            ],
+            sources: [
+                {
+                    title: 'Conservazione delle prove informatiche',
+                    organization: 'Polizia Postale',
+                    url: 'https://www.commissariatodips.it/',
+                    type: 'official',
+                    usedFor: 'Standard di prova',
                     lastCheckedAt: '2026-05-14'
                 }
             ]
@@ -394,6 +551,10 @@ export const modulo_14_soldi_banche_truffe: Module = {
             synthesis: 'Verifica dell\'autorizzazione CONSOB e diffidenza verso promesse di rendimenti fuori mercato.',
             whenToDo: 'Prima di versare anche un solo euro in piattaforme pubblicizzate sui social o proposte telefonicamente.',
             scenario: 'Hai visto una pubblicità con un personaggio famoso che parla di un nuovo metodo per guadagnare con i Bitcoin. Ti registri e un "consulente" ti chiama per farti fare il primo deposito di 250€.',
+            prerequisites: ['Accesso al sito CONSOB'],
+            whatToPrepare: ['Nome della piattaforma', 'Sito web'],
+            estimatedCosts: 'Gratuito',
+            timeToComplete: '10 minuti per la verifica',
             steps: [
                 'Verifica se il broker è nell\'elenco delle imprese autorizzate sul sito CONSOB',
                 'Controlla la sezione "Warning" della CONSOB per siti segnalati o oscurati',
@@ -409,28 +570,24 @@ export const modulo_14_soldi_banche_truffe: Module = {
                 'Non permettere a nessuno di accedere al tuo computer tramite software come AnyDesk o TeamViewer',
                 'Non credere a chi dice che il rischio è zero'
             ],
-            whatToPrepare: [
-                'Nome esatto della piattaforma e del sito web',
-                'Numeri di telefono da cui ti contattano',
-                'Contabili dei bonifici effettuati'
-            ],
             commonErrors: [
-                'Pensare che la piccola vincita iniziale sia reale (è un esca for farti versare di più)',
-                'Pagare "tasse" o "commissioni" aggiuntive per riavere indietro i propri soldi (è un ulteriore furto)',
-                'Farsi convincere dalla gentilezza e professionalità apparente del "tutor"'
+                'Pensare che la piccola vincita iniziale sia reale (è un esca per farti versare di più)',
+                'Pagare "tasse" o "commissioni" aggiuntive per riavere indietro i propri soldi (è un ulteriore furto)'
             ],
-            askHelpWhen: [
-                'Se non riesci più a prelevare i tuoi fondi',
-                'Se ricevi minacce di denunce fiscali se non versi altri soldi'
+            ifYouHaveProblems: [
+                'Se hai già versato soldi e non riesci a ritirarli, interrompi i pagamenti e fai denuncia'
             ],
-            whoCanHelp: ['CONSOB (Commissione Nazionale per le Società e la Borsa)', 'Polizia Postale', 'Associazioni specializzate in truffe finanziarie'],
-            officialLinks: ['https://www.consob.it/web/area-pubblica/occhio-alle-truffe'],
+            officialLinksV2: [
+                {
+                    sourceId: 'consobTruffe',
+                    useWhen: 'Per verificare la legittimità di una piattaforma di trading',
+                    beforeOpening: []
+                }
+            ],
             checklist: [
                 'Autorizzazione CONSOB verificata',
-                'Warning list controllata',
-                'Software di controllo remoto NON installato',
-                'Promesse di guadagno verificate (se troppo alte è truffa)',
-                'Denuncia pronta (se già versato)'
+                'Blacklist consultata',
+                'Controlli remoti NON installati'
             ],
             sources: [
                 {
@@ -439,14 +596,6 @@ export const modulo_14_soldi_banche_truffe: Module = {
                     url: 'https://www.consob.it/web/area-pubblica/occhio-alle-truffe',
                     type: 'official',
                     usedFor: 'Vademecum antibufala finanziaria',
-                    lastCheckedAt: '2026-05-14'
-                },
-                {
-                    title: 'Imprese di investimento autorizzate',
-                    organization: 'CONSOB',
-                    url: 'https://www.consob.it/web/area-pubblica/albi-e-elenchi',
-                    type: 'official',
-                    usedFor: 'Verifica licenze broker',
                     lastCheckedAt: '2026-05-14'
                 }
             ]

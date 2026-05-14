@@ -76,7 +76,7 @@ export const modulo_04_sextortion_ricatti: Module = {
                     url: 'https://www.poliziadistato.it/articolo/116259074a38f3d640989052',
                     type: 'official',
                     usedFor: 'Protocollo di emergenza e indicazioni sul non pagamento.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Revenge Porn e tutela dei dati',
@@ -84,7 +84,7 @@ export const modulo_04_sextortion_ricatti: Module = {
                     url: 'https://www.garanteprivacy.it/revengeporn',
                     type: 'official',
                     usedFor: 'Informazioni legali sulla tutela della dignità e rimozione contenuti.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',
@@ -154,7 +154,7 @@ export const modulo_04_sextortion_ricatti: Module = {
                     url: 'https://www.garanteprivacy.it/temi/revenge-porn',
                     type: 'official',
                     usedFor: 'Procedura ufficiale di segnalazione e base legale dei diritti della vittima.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Articolo 612-ter Codice Penale',
@@ -162,7 +162,7 @@ export const modulo_04_sextortion_ricatti: Module = {
                     url: 'https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.progressivo=0&art.idArticolo=10&art.versione=1&art.codiceRedazionale=19G00076',
                     type: 'official',
                     usedFor: 'Riferimento normativo sul reato di diffusione illecita di immagini intime.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',
@@ -229,7 +229,7 @@ export const modulo_04_sextortion_ricatti: Module = {
                     url: 'https://stopncii.org/',
                     type: 'nonprofit',
                     usedFor: 'Strumento tecnologico per la prevenzione della diffusione di immagini intime.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Guida all\'uso di StopNCII',
@@ -237,7 +237,7 @@ export const modulo_04_sextortion_ricatti: Module = {
                     url: 'https://www.garanteprivacy.it/temi/revenge-porn',
                     type: 'official',
                     usedFor: 'Raccomandazione istituzionale dello strumento come prevenzione tecnica.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',
@@ -304,7 +304,7 @@ export const modulo_04_sextortion_ricatti: Module = {
                     url: 'https://www.commissariatodips.it/consigli/per-i-genitori/adescamento-online/sextortion/index.html',
                     type: 'official',
                     usedFor: 'Indicazione categorica sul divieto di pagamento e gestione psicologica della minaccia.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',

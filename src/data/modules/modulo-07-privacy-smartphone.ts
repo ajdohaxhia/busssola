@@ -14,6 +14,7 @@ export const modulo_07_privacy_smartphone: Module = {
             id: 'app-permissions-audit',
             slug: 'permessi-app-privacy-smartphone',
             title: 'Permessi App: Chi sta spiando?',
+            mainEntity: 'Garante per la protezione dei dati personali',
             category: 'privacy',
             audience: ['adults', 'minors', 'prevention'],
             level: 'base',
@@ -67,7 +68,7 @@ export const modulo_07_privacy_smartphone: Module = {
                     url: 'https://www.gpdp.it/temi/smartphone-e-tablet',
                     type: 'official',
                     usedFor: 'Consigli sui permessi delle app e sulla protezione dei dati in mobilità.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Sicurezza delle App mobili',
@@ -75,7 +76,7 @@ export const modulo_07_privacy_smartphone: Module = {
                     url: 'https://cert-agid.gov.it/notizie/sicurezza-delle-app-mobili/',
                     type: 'official',
                     usedFor: 'Indicazioni sui rischi legati ad app malevole e malware.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',
@@ -85,6 +86,7 @@ export const modulo_07_privacy_smartphone: Module = {
             id: 'public-private-choice',
             slug: 'profilo-pubblico-privato-differenze-sicurezza',
             title: 'Profilo pubblico o privato: Cosa cambia',
+            mainEntity: 'Instagram Help Center',
             category: 'privacy',
             audience: ['minors', 'parents'],
             level: 'base',
@@ -134,7 +136,7 @@ export const modulo_07_privacy_smartphone: Module = {
                     url: 'https://help.instagram.com/116024195217477',
                     type: 'platform',
                     usedFor: 'Descrizione tecnica delle differenze di visibilità.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',

@@ -76,7 +76,7 @@ export const modulo_05_grooming_minori: Module = {
                     url: 'https://www.savethechildren.it/blog-notizie/adescamento-online-cos-e-e-come-proteggere-i-bambini',
                     type: 'nonprofit',
                     usedFor: 'Definizione del fenomeno e fasi della manipolazione.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Guida per i genitori sul Grooming',
@@ -84,7 +84,7 @@ export const modulo_05_grooming_minori: Module = {
                     url: 'https://www.commissariatodips.it/consigli/per-i-genitori/adescamento-online/index.html',
                     type: 'official',
                     usedFor: 'Consigli operativi e segnali comportamentali dei minori.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',
@@ -153,7 +153,7 @@ export const modulo_05_grooming_minori: Module = {
                     url: 'https://www.savethechildren.it/blog-11/grooming-adescamento-online-minori-cosa-e-come-prevenirlo',
                     type: 'nonprofit',
                     usedFor: 'Descrizione delle tecniche di manipolazione attraverso il gaming.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',

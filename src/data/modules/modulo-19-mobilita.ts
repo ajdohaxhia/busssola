@@ -68,7 +68,7 @@ export const modulo_19_mobilita: Module = {
                     url: 'https://www.aci.it/i-servizi/normative/codice-della-strada.html',
                     type: 'official',
                     usedFor: 'Quadro normativo sanzioni.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Guida alle multe',
@@ -76,7 +76,7 @@ export const modulo_19_mobilita: Module = {
                     url: 'https://www.poliziadistato.it/articolo/13',
                     type: 'official',
                     usedFor: 'Modalità di notifica e pagamento.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             checklist: [
@@ -147,7 +147,7 @@ export const modulo_19_mobilita: Module = {
                     url: 'https://www.pagopa.gov.it/',
                     type: 'official',
                     usedFor: 'Istruzioni sul sistema di pagamento nazionale.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Servizi App IO',
@@ -155,7 +155,7 @@ export const modulo_19_mobilita: Module = {
                     url: 'https://io.italia.it/',
                     type: 'official',
                     usedFor: 'Integrazione multe e pagamenti.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             checklist: [
@@ -226,7 +226,7 @@ export const modulo_19_mobilita: Module = {
                     url: 'https://www.ilportaledellautomobilista.it/',
                     type: 'official',
                     usedFor: 'Pagamento bollettini e verifica scadenza.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Circolare rinnovo patente',
@@ -234,7 +234,7 @@ export const modulo_19_mobilita: Module = {
                     url: 'https://www.mit.gov.it/',
                     type: 'official',
                     usedFor: 'Normativa e tariffe.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             checklist: [
@@ -305,7 +305,7 @@ export const modulo_19_mobilita: Module = {
                     url: 'https://iservizi.aci.it/VisualizzaBollo/',
                     type: 'official',
                     usedFor: 'Verifica importo e scadenza.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Tassa automobilistica',
@@ -313,7 +313,7 @@ export const modulo_19_mobilita: Module = {
                     url: 'https://www.agenziaentrate.gov.it/portale/web/guest/schede/pagamenti/tassa-automobilistica',
                     type: 'official',
                     usedFor: 'Informazioni generali e normativa.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             checklist: [

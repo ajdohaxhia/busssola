@@ -68,7 +68,7 @@ export const modulo_20_sanita_territoriale: Module = {
                     url: 'https://www.salute.gov.it/portale/esenzioni/dettaglioContenutiEsenzioni.jsp?area=esenzioni&id=1016&lingua=italiano',
                     type: 'official',
                     usedFor: 'Informazioni generali sul diritto al medico.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Guida ai servizi territoriali',
@@ -76,7 +76,7 @@ export const modulo_20_sanita_territoriale: Module = {
                     url: 'https://www.regione.lombardia.it/',
                     type: 'institutional',
                     usedFor: 'Esempio di portale per la scelta online.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             checklist: [
@@ -147,7 +147,7 @@ export const modulo_20_sanita_territoriale: Module = {
                     url: 'https://www.fascicolosanitario.gov.it/',
                     type: 'official',
                     usedFor: 'Informazioni sul progetto nazionale.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Privacy e Fascicolo Sanitario',
@@ -155,7 +155,7 @@ export const modulo_20_sanita_territoriale: Module = {
                     url: 'https://www.garanteprivacy.it/',
                     type: 'official',
                     usedFor: 'Dettagli sulla protezione dei dati sensibili.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             checklist: [
@@ -227,7 +227,7 @@ export const modulo_20_sanita_territoriale: Module = {
                     url: 'https://www.iss.it/consultori-familiari',
                     type: 'official',
                     usedFor: 'Mappatura e funzioni dei consultori.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Salute della donna',
@@ -235,7 +235,7 @@ export const modulo_20_sanita_territoriale: Module = {
                     url: 'https://www.salute.gov.it/',
                     type: 'official',
                     usedFor: 'Informazioni su screening e prevenzione.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             checklist: [
@@ -307,7 +307,7 @@ export const modulo_20_sanita_territoriale: Module = {
                     url: 'https://www.salute.gov.it/portale/saluteMentale/homeSaluteMentale.jsp',
                     type: 'official',
                     usedFor: 'Descrizione dei servizi territoriali.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Salute Mentale: guida ai servizi',
@@ -315,7 +315,7 @@ export const modulo_20_sanita_territoriale: Module = {
                     url: 'https://www.airsam.it/',
                     type: 'nonprofit',
                     usedFor: 'Orientamento e diritti del paziente.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             checklist: [

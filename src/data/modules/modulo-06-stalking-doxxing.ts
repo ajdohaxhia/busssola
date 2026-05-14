@@ -72,7 +72,7 @@ export const modulo_06_stalking_doxxing: Module = {
                     url: 'https://www.commissariatodips.it/approfondimenti/cyberstalking/index.html',
                     type: 'official',
                     usedFor: 'Definizione del reato e consigli pratici di autodifesa.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Numero 1522: Supporto Stalking',
@@ -80,7 +80,7 @@ export const modulo_06_stalking_doxxing: Module = {
                     url: 'https://www.1522.eu/',
                     type: 'institutional',
                     usedFor: 'Canale di supporto psicologico e orientamento legale.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',
@@ -90,6 +90,7 @@ export const modulo_06_stalking_doxxing: Module = {
             id: 'stalking-safety-plan',
             slug: 'piano-sicurezza-digitale-personale-stalking',
             title: 'Piano di sicurezza digitale personale',
+            mainEntity: 'Apple Support',
             category: 'privacy',
             audience: ['adults', 'victims'],
             level: 'medio',
@@ -142,7 +143,7 @@ export const modulo_06_stalking_doxxing: Module = {
                     url: 'https://support.apple.com/it-it/guide/personal-safety/welcome/web',
                     type: 'platform',
                     usedFor: 'Protocollo di sicurezza per proteggere account e posizioni.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',
@@ -152,6 +153,7 @@ export const modulo_06_stalking_doxxing: Module = {
             id: 'ex-partner-shared-accounts',
             slug: 'ex-partner-account-condivisi-sicurezza',
             title: 'Ex partner e account condivisi',
+            mainEntity: 'Electronic Frontier Foundation (EFF)',
             category: 'privacy',
             audience: ['adults', 'victims'],
             level: 'base',
@@ -201,7 +203,7 @@ export const modulo_06_stalking_doxxing: Module = {
                     url: 'https://ssd.eff.org/module/privacy-strategies-survivors-domestic-violence',
                     type: 'nonprofit',
                     usedFor: 'Strategie di difesa per sopravvissuti a violenza domestica.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',

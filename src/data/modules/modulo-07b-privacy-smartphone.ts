@@ -14,6 +14,7 @@ export const modulo_07b_privacy_smartphone: Module = {
             id: 'app-permission-audit',
             slug: 'audit-permessi-app-microfono-fotocamera',
             title: 'Audit dei Permessi: Chi ti spia?',
+            mainEntity: 'Google Android Help',
             category: 'privacy',
             audience: ['adults', 'prevention'],
             level: 'medio',
@@ -65,7 +66,7 @@ export const modulo_07b_privacy_smartphone: Module = {
                     url: 'https://support.google.com/android/answer/9431959',
                     type: 'platform',
                     usedFor: 'Istruzioni tecniche per il controllo dei permessi su Android.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Controllare l\'accesso alle informazioni nelle app',
@@ -73,7 +74,7 @@ export const modulo_07b_privacy_smartphone: Module = {
                     url: 'https://support.apple.com/it-it/guide/iphone/iph16405066d/ios',
                     type: 'platform',
                     usedFor: 'Istruzioni tecniche per la gestione privacy su iOS.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',
@@ -83,6 +84,7 @@ export const modulo_07b_privacy_smartphone: Module = {
             id: 'iphone-lost-protocol',
             slug: 'iphone-rubato-modalita-smarrito-procedura',
             title: 'iPhone rubato: Protocollo emergenza',
+            mainEntity: 'Apple Support',
             category: 'privacy',
             audience: ['adults', 'victims'],
             level: 'base',
@@ -131,7 +133,7 @@ export const modulo_07b_privacy_smartphone: Module = {
                     url: 'https://support.apple.com/it-it/102431',
                     type: 'platform',
                     usedFor: 'Istruzioni ufficiali per il blocco remoto del dispositivo.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',
@@ -141,6 +143,7 @@ export const modulo_07b_privacy_smartphone: Module = {
             id: 'android-lost-protocol',
             slug: 'android-perso-trova-mio-dispositivo-guida',
             title: 'Android perso: Blocco e localizzazione',
+            mainEntity: 'Google Help',
             category: 'privacy',
             audience: ['adults', 'victims'],
             level: 'base',
@@ -189,7 +192,7 @@ export const modulo_07b_privacy_smartphone: Module = {
                     url: 'https://support.google.com/android/answer/6160491',
                     type: 'platform',
                     usedFor: 'Procedura ufficiale di gestione emergenza per device Android.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',

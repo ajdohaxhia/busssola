@@ -12,13 +12,13 @@ export const modulo_13_casa_residenza: Module = {
     lessons: [
         {
             id: 'contratto-affitto-controllo',
-            slug: 'contratto-affitto-cosa-controllare',
-            title: 'Contratto d’affitto: cosa controllare',
+            slug: 'come-controllare-contratto-affitto',
+            title: 'Come controllare un contratto d’affitto',
             category: 'casa',
             audience: ['cittadini', 'studenti'],
             level: 'base',
             estimatedMinutes: 20,
-            summary: 'Gli elementi essenziali da verificare in un contratto di locazione prima della firma.',
+            summary: 'Gli elementi essenziali da verificare in un contratto di locazione prima della firma per evitare brutte sorprese.',
             status: 'published',
             qualityGatePassed: true,
             lastReviewedAt: '2026-05-14',
@@ -28,28 +28,30 @@ export const modulo_13_casa_residenza: Module = {
             scenario: 'Hai trovato una casa in affitto e il proprietario ti ha inviato la bozza del contratto. Vuoi evitare clausole vessatorie o costi nascosti.',
             steps: [
                 'Verifica la durata del contratto e le modalità di disdetta (recesso)',
-                'Controlla l\'importo del canone e delle spese condominiali (se incluse o a parte)',
-                'Verifica l\'entità del deposito cauzionale (massimo 3 mensilità)',
-                'Assicurati che sia prevista la registrazione del contratto'
+                'Controlla l\'importo del canone e se le spese condominiali sono incluse',
+                'Verifica l\'entità del deposito cauzionale (per legge massimo 3 mensilità)',
+                'Assicurati che sia prevista la registrazione del contratto a carico di entrambi',
+                'Controlla la presenza del verbale di consegna con lo stato dell\'immobile'
             ],
             doNow: [
                 'Controlla la durata e il preavviso di recesso',
-                'Verifica le spese condominiali e il deposito'
+                'Verifica le spese condominiali e il deposito',
+                'Chiedi se il contratto è in cedolare secca'
             ],
             dontDo: [
                 'Non accettare accordi verbali per pagamenti in nero',
-                'Non firmare se non è presente il verbale di consegna con lo stato dell\'immobile',
+                'Non firmare se non è presente l\'APE (Attestazione Prestazione Energetica)',
                 'Non accettare clausole che pongono a tuo carico la manutenzione straordinaria'
             ],
             whatToPrepare: [
                 'Bozza del contratto',
                 'Documento di identità e codice fiscale',
-                'Verbale di inventario (se arredata)'
+                'Verbale di inventario (se casa arredata)'
             ],
             commonErrors: [
                 'Sottovalutare l\'importanza del preavviso per il recesso (solitamente 6 mesi)',
                 'Non distinguere tra spese ordinarie (inquilino) e straordinarie (proprietario)',
-                'Non verificare se il contratto è a "cedolare secca" (niente aumenti ISTAT e bolli)'
+                'Dimenticare di allegare le planimetrie catastali'
             ],
             askHelpWhen: [
                 'Se il proprietario rifiuta di registrare il contratto',
@@ -62,7 +64,7 @@ export const modulo_13_casa_residenza: Module = {
                 'Canone e spese specificati',
                 'Deposito cauzionale indicato',
                 'Modalità di recesso chiare',
-                'APE (Attestazione Prestazione Energetica) allegata',
+                'APE allegata',
                 'Verbale di consegna pronto'
             ],
             sources: [
@@ -73,26 +75,18 @@ export const modulo_13_casa_residenza: Module = {
                     type: 'official',
                     usedFor: 'Regole registrazione e tipologie',
                     lastCheckedAt: '2026-05-14'
-                },
-                {
-                    title: 'Legge 431/98 sulle locazioni',
-                    organization: 'Parlamento Italiano',
-                    url: 'https://www.normattiva.it/',
-                    type: 'official',
-                    usedFor: 'Riferimento normativo contratti',
-                    lastCheckedAt: '2026-05-14'
                 }
             ]
         },
         {
             id: 'registrazione-locazione',
-            slug: 'registrazione-contratto-locazione-procedura',
-            title: 'Registrazione contratto locazione',
+            slug: 'come-registrare-contratto-locazione',
+            title: 'Come registrare un contratto di locazione',
             category: 'casa',
             audience: ['cittadini'],
             level: 'intermedia',
             estimatedMinutes: 15,
-            summary: 'Come registrare ufficialmente il contratto di affitto all\'Agenzia delle Entrate e perché è fondamentale.',
+            summary: 'La procedura passo-passo per rendere valido il contratto di affitto presso l\'Agenzia delle Entrate.',
             status: 'published',
             qualityGatePassed: true,
             lastReviewedAt: '2026-05-14',
@@ -101,42 +95,42 @@ export const modulo_13_casa_residenza: Module = {
             whenToDo: 'Entro 30 giorni dalla data di stipula o dalla data di decorrenza (se anteriore).',
             scenario: 'Hai firmato il contratto e devi assicurarti che venga registrato per poter detrarre l\'affitto dalle tasse o chiedere la residenza.',
             steps: [
-                'Verifica chi effettua la registrazione (solitamente il proprietario, ma l\'inquilino è co-responsabile)',
-                'Accedi al servizio RLI online sul sito dell\'Agenzia delle Entrate',
-                'Paga l\'imposta di registro e l\'imposta di bollo (se non in cedolare secca)',
-                'Conserva la ricevuta di avvenuta registrazione'
+                'Accedi al sito dell\'Agenzia delle Entrate con SPID/CIE',
+                'Utilizza il software RLI web per la compilazione online',
+                'Inserisci i dati del locatore, del conduttore e dell\'immobile (dati catastali)',
+                'Carica la copia del contratto firmata in formato PDF/A o TIF',
+                'Paga le imposte (se dovute) tramite addebito su conto corrente'
             ],
             doNow: [
-                'Accedi al servizio RLI sul sito AdE',
-                'Invia la richiesta di registrazione'
+                'Recupera i dati catastali dell\'immobile',
+                'Verifica di avere le credenziali SPID attive'
             ],
             dontDo: [
                 'Non lasciare il contratto non registrato (è nullo per la legge)',
-                'Non pagare l\'imposta di registro interamente (si divide a metà tra proprietario e inquilino, salvo cedolare secca)'
+                'Non sbagliare il calcolo dell\'imposta di registro (2% del canone annuo, diviso a metà)'
             ],
             whatToPrepare: [
                 'Contratto firmato in PDF',
-                'Dati catastali dell\'immobile',
-                'Modello RLI compilato',
-                'Credenziali SPID/CIE'
+                'Dati catastali (Foglio, Particella, Subalterno)',
+                'IBAN per il pagamento delle imposte'
             ],
             commonErrors: [
                 'Dimenticare di registrare le proroghe o le risoluzioni anticipate',
-                'Sbagliare il calcolo dell\'imposta di registro (2% del canone annuo)',
-                'Non indicare correttamente l\'opzione per la cedolare secca'
+                'Non spuntare l\'opzione "Cedolare Secca" se concordata',
+                'Inserire un canone diverso da quello reale'
             ],
             askHelpWhen: [
                 'Se il proprietario non ti consegna la ricevuta di registrazione',
-                'Se ricevi un avviso di accertamento per omessa registrazione'
+                'Se non riesci a caricare il file nel formato richiesto'
             ],
-            whoCanHelp: ['Agenzia delle Entrate', 'Centri di Assistenza Fiscale (CAF)', 'Professionisti abilitati'],
+            whoCanHelp: ['Agenzia delle Entrate', 'Centri di Assistenza Fiscale (CAF)', 'Sindacati Inquilini'],
             officialLinks: ['https://www.agenziaentrate.gov.it/portale/web/guest/schede/istanze/registrazione-di-un-nuovo-contratto/rli-web'],
             checklist: [
-                'Contratto firmato da entrambe le parti',
-                'Modello RLI inviato',
-                'Imposte pagate (F24 o addebito)',
-                'Ricevuta telematica scaricata',
-                'Copia del contratto registrato conservata'
+                'File PDF/A creato correttamente',
+                'Dati catastali verificati',
+                'Opzione cedolare secca confermata',
+                'Invio telematico effettuato',
+                'Ricevuta scaricata e conservata'
             ],
             sources: [
                 {
@@ -146,87 +140,397 @@ export const modulo_13_casa_residenza: Module = {
                     type: 'official',
                     usedFor: 'Istruzioni RLI',
                     lastCheckedAt: '2026-05-14'
-                },
+                }
+            ]
+        },
+        {
+            id: 'voltura-luce-gas',
+            slug: 'come-fare-voltura-luce-gas',
+            title: 'Come fare voltura luce/gas',
+            category: 'casa',
+            audience: ['cittadini'],
+            level: 'base',
+            estimatedMinutes: 15,
+            summary: 'Come cambiare il nome dell\'intestatario sulle bollette quando il contatore è ancora attivo.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-14',
+            mainEntity: 'ARERA',
+            synthesis: 'La voltura permette il passaggio del contratto dal vecchio al nuovo inquilino senza interruzione del servizio.',
+            whenToDo: 'Immediatamente dopo essere entrati nella nuova casa se i contatori sono ancora accesi.',
+            scenario: 'Ti sei trasferito e la luce è accesa. Devi intestarti il contratto che è ancora a nome del precedente inquilino.',
+            steps: [
+                'Recupera una vecchia bolletta per i codici POD (luce) e PDR (gas)',
+                'Prendi la lettura aggiornata dei contatori',
+                'Contatta il fornitore attuale (o scegline uno nuovo se disponibile la voltura con cambio)',
+                'Fornisci i tuoi dati personali e il titolo di possesso (es. estremi registrazione affitto)',
+                'Ricevi e firma il nuovo contratto'
+            ],
+            doNow: [
+                'Fai una foto alla lettura del contatore',
+                'Chiedi al precedente inquilino l\'ultima bolletta'
+            ],
+            dontDo: [
+                'Non accettare di pagare i debiti arretrati del precedente inquilino (chiedi voltura senza accollo)',
+                'Non aspettare: se il vecchio inquilino chiude il contratto, dovrai fare un subentro (più costoso)'
+            ],
+            whatToPrepare: [
+                'Codice POD e PDR',
+                'Lettura del contatore',
+                'Documento di identità e codice fiscale',
+                'IBAN per la domiciliazione'
+            ],
+            commonErrors: [
+                'Confondere voltura e subentro',
+                'Non comunicare la data esatta del passaggio',
+                'Sbagliare a trascrivere i codici POD/PDR'
+            ],
+            askHelpWhen: [
+                'Se il fornitore ti chiede di pagare bollette non tue',
+                'Se non riesci a rintracciare il precedente intestatario'
+            ],
+            whoCanHelp: ['ARERA (Autorità di Regolazione)', 'Sportello per il consumatore energia', 'Associazioni consumatori'],
+            officialLinks: ['https://www.arera.it/it/consumatori/voltura.htm'],
+            checklist: [
+                'Codici POD/PDR pronti',
+                'Lettura effettuata',
+                'Dati del precedente inquilino (se richiesti)',
+                'Contratto firmato',
+                'Prima bolletta a tuo nome verificata'
+            ],
+            sources: [
                 {
-                    title: 'Vademecum Casa',
-                    organization: 'Agenzia delle Entrate',
-                    url: 'https://www.agenziaentrate.gov.it/portale/l-agenzia-informa/guide-fiscali',
+                    title: 'Guida alla Voltura',
+                    organization: 'ARERA',
+                    url: 'https://www.arera.it/',
                     type: 'official',
-                    usedFor: 'Approfondimenti fiscali casa',
+                    usedFor: 'Definizioni e costi',
                     lastCheckedAt: '2026-05-14'
                 }
             ]
         },
         {
-            id: 'voltura-subentro-utenze',
-            slug: 'voltura-e-subentro-utenze-luce-gas',
-            title: 'Voltura e Subentro utenze (Luce/Gas)',
+            id: 'subentro-utenze',
+            slug: 'come-fare-subentro-utenze',
+            title: 'Come fare subentro utenze',
             category: 'casa',
             audience: ['cittadini'],
             level: 'base',
-            estimatedMinutes: 15,
-            summary: 'La differenza tra voltura e subentro e come gestire il passaggio dei contratti di energia e gas.',
+            estimatedMinutes: 20,
+            summary: 'Come riattivare la fornitura di luce e gas quando il contatore è stato chiuso.',
             status: 'published',
             qualityGatePassed: true,
             lastReviewedAt: '2026-05-14',
             mainEntity: 'ARERA',
-            synthesis: 'Voltura: cambio nome su contratto attivo. Subentro: riattivazione di contatore chiuso.',
-            whenToDo: 'In concomitanza con l\'ingresso nella nuova abitazione.',
-            scenario: 'Ti sei trasferito in una nuova casa e devi intestarti le bollette della luce e del gas che sono ancora a nome del vecchio inquilino o del proprietario.',
+            synthesis: 'Il subentro è necessario quando il precedente inquilino ha disdetto il contratto e il contatore è piombato.',
+            whenToDo: 'Almeno una settimana prima del trasloco per avere i servizi pronti.',
+            scenario: 'Entri in una casa nuova e non c\'è corrente né gas. Il contatore è presente ma non eroga nulla.',
             steps: [
-                'Recupera una vecchia bolletta per i codici POD (luce) e PDR (gas)',
-                'Prendi la lettura dei contatori al momento del subentro',
-                'Contatta il fornitore scelto per avviare la pratica',
-                'Sottoscrivi il nuovo contratto'
+                'Individua i codici POD/PDR sul contatore o su vecchi documenti',
+                'Scegli un fornitore del mercato libero o tutelato',
+                'Invia la richiesta di subentro fornendo i dati catastali dell\'immobile',
+                'Attendi la riattivazione (solitamente 7 giorni lavorativi per la luce, 12 per il gas)',
+                'Assicurati che un tecnico possa accedere al contatore del gas se richiesto'
             ],
             doNow: [
-                'Recupera i codici POD e PDR',
-                'Effettua la lettura dei contatori'
+                'Trova i codici POD/PDR',
+                'Confronta le offerte sui portali ufficiali'
             ],
             dontDo: [
-                'Non aspettare troppo tempo (rischi il distacco della fornitura)',
-                'Non accettare debiti del precedente inquilino (chiedi la "voltura senza accollo")',
-                'Non dimenticare di chiudere le utenze della vecchia casa'
+                'Non aspettare l\'ultimo giorno: i tempi tecnici non sono immediati',
+                'Non forzare mai i sigilli del contatore (è un reato)'
             ],
             whatToPrepare: [
-                'Codice POD e PDR',
-                'Documento di identità e codice fiscale',
-                'Titolo di possesso immobile (es. data registrazione affitto)',
-                'IBAN for domiciliazione (opzionale)'
+                'Codice POD/PDR',
+                'Documento di identità',
+                'Titolo di possesso (data contratto affitto)',
+                'Dati catastali'
             ],
             commonErrors: [
-                'Confondere voltura e subentro (hanno costi e tempi diversi)',
-                'Non comunicare la lettura esatta (rischio bollette basate su stime errate)',
-                'Dimenticare di attivare anche l\'utenza dell\'acqua e della TARI (rifiuti)'
+                'Non essere in casa quando passa il tecnico per il gas',
+                'Richiedere il subentro a un fornitore che ha bloccato il contatore per morosità precedente'
             ],
             askHelpWhen: [
-                'Se il contatore è piombato per morosità del precedente inquilino',
-                'Se il fornitore rifiuta la voltura senza motivo'
+                'Se il contatore è piombato per morosità e il fornitore rifiuta il subentro',
+                'Se passano i termini massimi e la luce non torna'
             ],
-            whoCanHelp: ['ARERA (Autorità di Regolazione per Energia Reti e Ambiente)', 'Sportello per il consumatore Energia e Ambiente'],
-            officialLinks: ['https://www.arera.it/it/consumatori/consumatori.htm'],
+            whoCanHelp: ['Sportello per il consumatore Energia', 'ARERA', 'Fornitore scelto'],
+            officialLinks: ['https://www.arera.it/it/consumatori/subentro.htm'],
             checklist: [
-                'Codici POD/PDR recuperati',
-                'Lettura contatori effettuata',
-                'Contratto con fornitore firmato',
-                'Documentazione immobile inviata',
-                'Conferma attivazione ricevuta'
+                'Codice identificativo contatore trovato',
+                'Pratica avviata con il fornitore',
+                'Documenti immobile inviati',
+                'Appuntamento col tecnico fissato (se necessario)',
+                'Erogazione verificata'
             ],
             sources: [
                 {
-                    title: 'Guida alla Voltura e al Subentro',
+                    title: 'Rientro in fornitura',
                     organization: 'ARERA',
-                    url: 'https://www.arera.it/it/consumatori/voltura.htm',
+                    url: 'https://www.arera.it/',
                     type: 'official',
-                    usedFor: 'Definizioni e diritti dei consumatori',
+                    usedFor: 'Tempistiche e procedure',
                     lastCheckedAt: '2026-05-14'
-                },
+                }
+            ]
+        },
+        {
+            id: 'gestione-cauzione-non-restituita',
+            slug: 'come-gestire-cauzione-non-restituita',
+            title: 'Come gestire cauzione non restituita',
+            category: 'casa',
+            audience: ['cittadini'],
+            level: 'intermedia',
+            estimatedMinutes: 15,
+            summary: 'Cosa fare se il proprietario di casa non restituisce il deposito cauzionale al termine dell\'affitto.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-14',
+            mainEntity: 'Ministero della Giustizia',
+            synthesis: 'La cauzione deve essere restituita con gli interessi, salvo danni documentati e quantificati.',
+            whenToDo: 'Al momento della riconsegna delle chiavi o subito dopo.',
+            scenario: 'Hai lasciato la casa in ordine, ma il proprietario inventa scuse o non risponde al telefono per non renderti i soldi della cauzione.',
+            steps: [
+                'Firma sempre un verbale di riconsegna delle chiavi che attesti lo stato dell\'immobile',
+                'Invia una richiesta formale di restituzione tramite PEC o Raccomandata A/R',
+                'Ricorda al proprietario che ha diritto agli interessi legali maturati',
+                'Se il proprietario trattiene somme per danni, pretendi fatture o preventivi reali',
+                'Invia una lettera di messa in mora se non ricevi il bonifico entro 15 giorni'
+            ],
+            doNow: [
+                'Scatta foto dettagliate della casa vuota e pulita',
+                'Controlla sul contratto l\'importo esatto versato'
+            ],
+            dontDo: [
+                'Non "compensare" l\'ultimo mese di affitto con la cauzione (è illegale se non concordato)',
+                'Non firmare verbali dove riconosci danni che non hai causato'
+            ],
+            whatToPrepare: [
+                'Copia del contratto con ricevuta versamento cauzione',
+                'Verbale di riconsegna firmato',
+                'Foto dello stato dell\'immobile a fine locazione'
+            ],
+            commonErrors: [
+                'Andarsene senza un verbale scritto e firmato',
+                'Accettare contestazioni generiche senza prove',
+                'Dimenticare di chiedere gli interessi legali'
+            ],
+            askHelpWhen: [
+                'Se il proprietario trattiene l\'intera somma per "usura normale" (non può farlo)',
+                'Se passano mesi senza alcuna giustificazione scritta'
+            ],
+            whoCanHelp: ['Sindacati Inquilini', 'Avvocati civilisti', 'Organismi di Mediazione'],
+            officialLinks: ['https://www.giustizia.it/giustizia/it/mg_2_7.page'],
+            checklist: [
+                'Verbale di riconsegna chiavi firmato',
+                'Foto scattate',
+                'Richiesta formale inviata',
+                'Conteggio interessi effettuato',
+                'Eventuale messa in mora pronta'
+            ],
+            sources: [
                 {
-                    title: 'Portale Offerte Energia',
-                    organization: 'Acquirente Unico / ARERA',
-                    url: 'https://www.ilportaleofferte.it/',
+                    title: 'Disciplina del deposito cauzionale',
+                    organization: 'Codice Civile Art. 11 Legge 392/78',
+                    url: 'https://www.normattiva.it/',
                     type: 'official',
-                    usedFor: 'Confronto tariffe fornitura',
+                    usedFor: 'Base legale',
+                    lastCheckedAt: '2026-05-14'
+                }
+            ]
+        },
+        {
+            id: 'orientamento-sfratto',
+            slug: 'cosa-fare-dopo-uno-sfratto',
+            title: 'Come capire cosa fare dopo uno sfratto (orientamento base)',
+            category: 'casa',
+            audience: ['cittadini', 'victims'],
+            level: 'intermedia',
+            estimatedMinutes: 25,
+            summary: 'Guida d\'emergenza per chi ha ricevuto una convalida di sfratto e deve trovare una soluzione abitativa.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-14',
+            mainEntity: 'Comune / Servizi Sociali',
+            synthesis: 'Azioni legali e sociali per gestire l\'uscita dall\'alloggio e accedere al sostegno pubblico.',
+            whenToDo: 'Non appena ricevi l\'atto di citazione per sfratto o la notifica del precetto.',
+            scenario: 'Non sei riuscito a pagare l\'affitto e il giudice ha convalidato lo sfratto. L\'ufficiale giudiziario arriverà a breve.',
+            steps: [
+                'Verifica la data fissata per l\'esecuzione (primo accesso dell\'ufficiale giudiziario)',
+                'Recati subito ai Servizi Sociali del tuo Comune per segnalare l\'emergenza abitativa',
+                'Controlla se hai i requisiti per il "Fondo Morosità Incolpevole" (se lo sfratto è per morosità)',
+                'Chiedi un termine di grazia al giudice se non l\'hai già fatto (per saldare il debito)',
+                'Contatta un sindacato inquilini per verificare se ci sono i presupposti per una sospensione (es. presenza minori o disabili)'
+            ],
+            doNow: [
+                'Porta gli atti legali ai servizi sociali',
+                'Contatta un sindacato inquilini immediatamente'
+            ],
+            dontDo: [
+                'Non ignorare le notifiche: lo sfratto non si ferma da solo',
+                'Non aspettare l\'ultimo giorno per cercare un nuovo alloggio o aiuto'
+            ],
+            whatToPrepare: [
+                'Atto di convalida dello sfratto',
+                'Attestazione ISEE aggiornata',
+                'Certificati medici se presenti persone fragili nel nucleo'
+            ],
+            commonErrors: [
+                'Pensare che la presenza di bambini blocchi automaticamente lo sfratto (lo rallenta soltanto)',
+                'Non presentarsi all\'udienza davanti al giudice'
+            ],
+            askHelpWhen: [
+                'Se ricevi il "Preccetto" o il "Preavviso di rilascio"',
+                'Se non hai nessun posto dove andare dopo l\'uscita'
+            ],
+            whoCanHelp: ['Sindacati Inquilini (SUNIA, SICET, ecc.)', 'Servizi Sociali Comunali', 'Agenzia Sociale per la Casa', 'Avvocato di Strada'],
+            officialLinks: ['https://www.prefettura.it/'],
+            checklist: [
+                'Data esecuzione segnata',
+                'Colloquio servizi sociali effettuato',
+                'ISEE aggiornato',
+                'Domanda contributo morosità presentata (se possibile)',
+                'Soluzione temporanea individuata'
+            ],
+            sources: [
+                {
+                    title: 'Fondo morosità incolpevole',
+                    organization: 'Ministero delle Infrastrutture e dei Trasporti',
+                    url: 'https://www.mit.gov.it/',
+                    type: 'official',
+                    usedFor: 'Requisiti contributi',
+                    lastCheckedAt: '2026-05-14'
+                }
+            ]
+        },
+        {
+            id: 'bonus-affitto-comunali',
+            slug: 'come-cercare-bonus-affitto-comunali',
+            title: 'Come cercare bonus affitto comunali',
+            category: 'casa',
+            audience: ['cittadini', 'famiglie'],
+            level: 'base',
+            estimatedMinutes: 15,
+            summary: 'Come individuare e richiedere i contributi economici messi a disposizione dai comuni per pagare l\'affitto.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-14',
+            mainEntity: 'Comune',
+            synthesis: 'Bandi periodici che offrono rimborsi parziali del canone di locazione basati sul reddito ISEE.',
+            whenToDo: 'Periodicamente, verificando i bandi solitamente pubblicati tra autunno e primavera.',
+            scenario: 'Fai fatica a pagare l\'affitto ogni mese e vuoi sapere se il tuo Comune offre aiuti economici.',
+            steps: [
+                'Vai sul sito ufficiale del tuo Comune di residenza',
+                'Cerca nella sezione "Sociale" o "Bandi" parole come "Contributo affitto" o "Sostegno locazione"',
+                'Leggi attentamente il bando per verificare la soglia ISEE richiesta',
+                'Assicurati di avere un contratto di affitto regolarmente registrato',
+                'Compila la domanda online o presso i CAF convenzionati nei tempi previsti'
+            ],
+            doNow: [
+                'Controlla l\'ISEE attuale',
+                'Iscriviti alla newsletter del tuo Comune'
+            ],
+            dontDo: [
+                'Non aspettare la scadenza del bando: spesso servono molti documenti',
+                'Non presentare domanda se il contratto non è registrato (requisito fondamentale)'
+            ],
+            whatToPrepare: [
+                'Attestazione ISEE',
+                'Contratto di locazione registrato',
+                'Ricevute di pagamento dell\'affitto dell\'anno corrente',
+                'Copia documento identità'
+            ],
+            commonErrors: [
+                'Mancato aggiornamento dell\'ISEE',
+                'Non allegare la ricevuta di registrazione del contratto',
+                'Sbagliare l\'IBAN per l\'accredito del contributo'
+            ],
+            askHelpWhen: [
+                'Se il sito del Comune è poco chiaro',
+                'Se non sai come calcolare l\'incidenza del canone sul reddito'
+            ],
+            whoCanHelp: ['Ufficio Relazioni con il Pubblico (URP) del Comune', 'CAF', 'Sindacati Inquilini'],
+            officialLinks: ['https://www.comuni-italiani.it/'],
+            checklist: [
+                'Bando individuato',
+                'Requisiti verificati',
+                'Documentazione scansionata',
+                'Domanda inviata',
+                'Ricevuta di protocollo conservata'
+            ],
+            sources: [
+                {
+                    title: 'Fondo nazionale per il sostegno all\'accesso alle abitazioni in locazione',
+                    organization: 'Ministero delle Infrastrutture e dei Trasporti',
+                    url: 'https://www.mit.gov.it/',
+                    type: 'official',
+                    usedFor: 'Normativa generale bandi',
+                    lastCheckedAt: '2026-05-14'
+                }
+            ]
+        },
+        {
+            id: 'tari-cambio-casa',
+            slug: 'come-fare-tari-dopo-cambio-casa',
+            title: 'Come fare TARI dopo cambio casa',
+            category: 'casa',
+            audience: ['cittadini'],
+            level: 'base',
+            estimatedMinutes: 10,
+            summary: 'Come comunicare al Comune l\'occupazione di un nuovo immobile per il pagamento della tassa sui rifiuti.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-14',
+            mainEntity: 'Comune / Gestore Rifiuti',
+            synthesis: 'Dichiarazione obbligatoria per attivare il servizio rifiuti e cessare quello nella vecchia abitazione.',
+            whenToDo: 'Entro 90 giorni dal trasloco (o secondo il termine previsto dal regolamento comunale).',
+            scenario: 'Ti sei trasferito in una nuova casa e devi assicurarti di ricevere le bollette dei rifiuti e di non pagare più quelle della vecchia casa.',
+            steps: [
+                'Identifica il gestore dei rifiuti del tuo nuovo Comune',
+                'Scarica il modulo di "Inizio Occupazione" dal sito del Comune o del gestore',
+                'Recupera i dati catastali e la superficie calpestabile (mq) dell\'immobile',
+                'Invia la dichiarazione tramite PEC, email o sportello fisico',
+                'Contestualmente, invia il modulo di "Cessazione" per la vecchia abitazione'
+            ],
+            doNow: [
+                'Controlla la superficie sulla planimetria catastale',
+                'Verifica la scadenza per la denuncia nel tuo Comune'
+            ],
+            dontDo: [
+                'Non dimenticare di dichiarare box o cantine (fanno cumulo)',
+                'Non aspettare l\'anno successivo: rischi sanzioni per omessa denuncia'
+            ],
+            whatToPrepare: [
+                'Dati catastali (Foglio, Particella, Subalterno)',
+                'Metri quadri calpestabili',
+                'Numero componenti del nucleo familiare',
+                'Data di inizio occupazione (es. data trasloco)'
+            ],
+            commonErrors: [
+                'Dichiarare meno metri quadri del reale (rischio accertamento)',
+                'Dimenticare di chiudere la posizione nel vecchio comune',
+                'Non comunicare variazioni nel numero di occupanti'
+            ],
+            askHelpWhen: [
+                'Se l\'immobile è vuoto e privo di utenze (potresti avere diritto all\'esenzione)',
+                'Se ricevi bollette doppie per lo stesso periodo'
+            ],
+            whoCanHelp: ['Ufficio Tributi del Comune', 'Sportello Tari gestore locale', 'CAF'],
+            officialLinks: ['https://www.amministrazionicomunali.it/tari/calcolo_tari.php'],
+            checklist: [
+                'Modulo inizio occupazione inviato',
+                'Modulo cessazione vecchia casa inviato',
+                'Dati catastali corretti inseriti',
+                'Metratura verificata',
+                'Conferma ricezione ottenuta'
+            ],
+            sources: [
+                {
+                    title: 'La Tassa sui Rifiuti (TARI)',
+                    organization: 'Ministero dell\'Economia e delle Finanze',
+                    url: 'https://www.finanze.gov.it/',
+                    type: 'official',
+                    usedFor: 'Regole generali tributo',
                     lastCheckedAt: '2026-05-14'
                 }
             ]
@@ -290,17 +594,9 @@ export const modulo_13_casa_residenza: Module = {
                 {
                     title: 'ISEE - Guida alla prestazione',
                     organization: 'INPS',
-                    url: 'https://www.inps.it/it/it/dettaglio-scheda.schede-servizi-e-strumenti.servizi.isee-precompilato-e-dsu.html',
+                    url: 'https://www.inps.it/',
                     type: 'official',
                     usedFor: 'Procedura e precompilata',
-                    lastCheckedAt: '2026-05-14'
-                },
-                {
-                    title: 'Ministero del Lavoro - ISEE',
-                    organization: 'Ministero del Lavoro e delle Politiche Sociali',
-                    url: 'https://www.lavoro.gov.it/temi-e-priorita/poverta-ed-esclusione-sociale/Pagine/ISEE.aspx',
-                    type: 'official',
-                    usedFor: 'Finalità e normativa ISEE',
                     lastCheckedAt: '2026-05-14'
                 }
             ]
@@ -361,91 +657,9 @@ export const modulo_13_casa_residenza: Module = {
                 {
                     title: 'Bonus sociali',
                     organization: 'ARERA',
-                    url: 'https://www.arera.it/it/bonus_sociali.htm',
+                    url: 'https://www.arera.it/',
                     type: 'official',
                     usedFor: 'Regole applicazione automatica',
-                    lastCheckedAt: '2026-05-14'
-                },
-                {
-                    title: 'Bonus per disagio fisico',
-                    organization: 'Ministero della Salute',
-                    url: 'https://www.salute.gov.it/',
-                    type: 'official',
-                    usedFor: 'Informazioni apparecchiature salvavita',
-                    lastCheckedAt: '2026-05-14'
-                }
-            ]
-        },
-        {
-            id: 'problemi-proprietario-affitto',
-            slug: 'problemi-col-proprietario-primi-passi',
-            title: 'Problemi col proprietario: primi passi',
-            category: 'casa',
-            audience: ['cittadini', 'victims'],
-            level: 'base',
-            estimatedMinutes: 15,
-            summary: 'Come gestire le controversie più comuni tra inquilino e proprietario (riparazioni, spese, cauzione).',
-            status: 'published',
-            qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
-            mainEntity: 'Ministero della Giustizia',
-            synthesis: 'Comunicazione formale e distinzione legale tra oneri del locatore e del conduttore.',
-            whenToDo: 'Non appena sorge un problema che non si risolve con una conversazione informale.',
-            scenario: 'La caldaia si è rotta e il proprietario dice che devi pagarla tu, oppure non vuole restituirti la cauzione senza motivo.',
-            steps: [
-                'Leggi cosa dice il contratto e il codice civile sul problema specifico',
-                'Invia una comunicazione scritta (PEC o raccomandata A/R) esponendo il problema',
-                'Documenta il guasto o la situazione con foto e video',
-                'Metti in mora il proprietario se necessario'
-            ],
-            doNow: [
-                'Invia una PEC o raccomandata formale',
-                'Scatta foto e video del danno'
-            ],
-            dontDo: [
-                'Non smettere di pagare l\'affitto per protesta (rischi lo sfratto anche se hai ragione)',
-                'Non fare riparazioni costose senza autorizzazione scritta (potresti non essere rimborsato)',
-                'Non cambiare la serratura impedendo l\'accesso (salvo casi eccezionali)'
-            ],
-            whatToPrepare: [
-                'Copia del contratto registrato',
-                'Ricevute dei pagamenti effettuati',
-                'Foto/video del problema',
-                'Corrispondenza precedente'
-            ],
-            commonErrors: [
-                'Agire solo a voce senza lasciare tracce scritte',
-                'Confondere manutenzione ordinaria (inquilino) e straordinaria (proprietario)',
-                'Aspettare la fine del contratto per contestare guasti presenti da tempo'
-            ],
-            askHelpWhen: [
-                'In caso di minaccia di sfratto',
-                'Se il proprietario entra in casa senza permesso e senza urgenza'
-            ],
-            whoCanHelp: ['Sindacati Inquilini', 'Avvocati specializzati in locazioni', 'Organismi di mediazione'],
-            officialLinks: ['https://www.giustizia.it/giustizia/it/mg_2_7_2.page'],
-            checklist: [
-                'Contratto verificato',
-                'Foto del danno scattate',
-                'Comunicazione formale inviata',
-                'Parere sindacale richiesto',
-                'Pagamenti affitto regolari'
-            ],
-            sources: [
-                {
-                    title: 'Obblighi del locatore e del conduttore',
-                    organization: 'Codice Civile (Artt. 1571 e successivi)',
-                    url: 'https://www.normattiva.it/',
-                    type: 'official',
-                    usedFor: 'Riferimento legislativo',
-                    lastCheckedAt: '2026-05-14'
-                },
-                {
-                    title: 'Mediazione civile',
-                    organization: 'Ministero della Giustizia',
-                    url: 'https://www.giustizia.it/',
-                    type: 'official',
-                    usedFor: 'Risoluzione extragiudiziale',
                     lastCheckedAt: '2026-05-14'
                 }
             ]
@@ -511,14 +725,6 @@ export const modulo_13_casa_residenza: Module = {
                     url: 'https://www.interno.gov.it/',
                     type: 'official',
                     usedFor: 'Circolari e normativa anagrafica',
-                    lastCheckedAt: '2026-05-14'
-                },
-                {
-                    title: 'Diritto alla residenza',
-                    organization: 'Associazione Avvocato di Strada',
-                    url: 'https://www.avvocatodistrada.it/',
-                    type: 'nonprofit',
-                    usedFor: 'Supporto pratico e legale',
                     lastCheckedAt: '2026-05-14'
                 }
             ]

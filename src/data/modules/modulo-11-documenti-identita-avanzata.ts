@@ -89,7 +89,7 @@ export const modulo_11_documenti_identita_avanzata: Module = {
         },
         {
             id: 'cambio-residenza-online',
-            slug: 'cambio-residenza-online-anpr',
+            slug: 'cambio-residenza-online-avanzata',
             title: 'Cambio residenza online (ANPR)',
             category: 'documenti',
             audience: ['cittadini'],

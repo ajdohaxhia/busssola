@@ -68,7 +68,7 @@ export const modulo_06b_stalking_doxxing: Module = {
                     url: 'https://www.poliziadistato.it/articolo/3358356828v1',
                     type: 'official',
                     usedFor: 'Descrizione della procedura e base normativa.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',
@@ -78,6 +78,7 @@ export const modulo_06b_stalking_doxxing: Module = {
             id: 'unwanted-tracker-detection',
             slug: 'rilevamento-tracker-sconosciuti-airtag-stalking',
             title: 'AirTag e tracker sconosciuti',
+            mainEntity: 'Apple Support',
             category: 'privacy',
             audience: ['adults', 'victims'],
             level: 'medio',
@@ -128,7 +129,7 @@ export const modulo_06b_stalking_doxxing: Module = {
                     url: 'https://support.apple.com/it-it/102146',
                     type: 'platform',
                     usedFor: 'Procedure ufficiali di rilevamento e disattivazione sicurezza.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Rilevamento di tracker sconosciuti su Android',
@@ -136,7 +137,7 @@ export const modulo_06b_stalking_doxxing: Module = {
                     url: 'https://support.google.com/android/answer/13659628',
                     type: 'platform',
                     usedFor: 'Guida tecnica per utenti Android sugli avvisi di tracciamento.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',
@@ -146,6 +147,7 @@ export const modulo_06b_stalking_doxxing: Module = {
             id: 'spyware-check-guide',
             slug: 'come-capire-se-hai-virus-spia-spyware-smartphone',
             title: 'Come capire se hai uno Spyware',
+            mainEntity: 'Coalition Against Stalkerware',
             category: 'privacy',
             audience: ['adults', 'victims'],
             level: 'medio',
@@ -196,7 +198,7 @@ export const modulo_06b_stalking_doxxing: Module = {
                     url: 'https://stopstalkerware.org/it/',
                     type: 'official',
                     usedFor: 'Indicatori di compromissione e gestione della sicurezza personale.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',

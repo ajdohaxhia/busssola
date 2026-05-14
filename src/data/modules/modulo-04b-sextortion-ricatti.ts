@@ -72,7 +72,7 @@ export const modulo_04b_sextortion_ricatti: Module = {
                     url: 'https://www.commissariatodips.it/approfondimenti/identita-digitale/index.html',
                     type: 'official',
                     usedFor: 'Indicatori di falsità dei profili e protocolli di verifica.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',
@@ -138,7 +138,7 @@ export const modulo_04b_sextortion_ricatti: Module = {
                     url: 'https://www.garanteprivacy.it/temi/cyberbullismo',
                     type: 'official',
                     usedFor: 'Indicazioni sulla conservazione dei contenuti lesivi per scopi probatori.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',

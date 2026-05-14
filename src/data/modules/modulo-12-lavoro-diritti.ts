@@ -11,659 +11,541 @@ export const modulo_12_lavoro_diritti: Module = {
     themeColor: 'accent-green',
     lessons: [
         {
-            id: 'naspi-domanda',
-            slug: 'naspi-requisiti-e-domanda',
-            title: 'NASpI: requisiti e domanda',
+            id: 'busta-paga-lettura-guida',
+            slug: 'come-leggere-busta-paga',
+            title: 'Come leggere una busta paga base',
+            mainEntity: 'CNEL',
             category: 'lavoro',
-            audience: ['lavoratori', 'cittadini'],
+            audience: ['lavoratori'],
             level: 'base',
             estimatedMinutes: 15,
-            summary: 'Come richiedere l\'indennità di disoccupazione NASpI dopo la perdita involontaria del lavoro.',
+            summary: 'Impara a decifrare le voci principali del tuo cedolino: lordo, netto, trattenute e ferie.',
             status: 'published',
             qualityGatePassed: true,
             lastReviewedAt: '2026-05-14',
-            mainEntity: 'INPS',
-            synthesis: 'Domanda telematica all\'INPS entro 68 giorni dalla cessazione del rapporto di lavoro.',
-            whenToDo: 'Quando perdi il lavoro involontariamente (licenziamento, scadenza contratto, dimissioni per giusta causa).',
-            scenario: 'Il tuo contratto a termine è scaduto o sei stato licenziato e vuoi ricevere il sostegno al reddito mentre cerchi un nuovo impiego.',
-            steps: [
-                'Verifica di avere almeno 13 settimane di contributi negli ultimi 4 anni',
-                'Accedi al sito INPS con SPID/CIE',
-                'Invia la domanda NASpI online',
-                'Rilascia la DID (Dichiarazione Immediata Disponibilità)'
-            ],
-            doNow: [
-                'Accedi al sito INPS con SPID/CIE',
-                'Inizia la domanda NASpI'
-            ],
-            dontDo: [
-                'Non aspettare oltre i 68 giorni (perderesti il diritto)',
-                'Non dimenticare di comunicare eventuali nuovi redditi durante la NASpI (NASpI-com)',
-                'Non rifiutare offerte di lavoro congrue senza giustificato motivo'
+            prerequisites: [
+                'Avere un contratto di lavoro subordinato',
+                'Ricevere regolarmente il cedolino (cartaceo o digitale)'
             ],
             whatToPrepare: [
-                'Lettera di licenziamento o contratto scaduto',
-                'Ultime buste paga',
-                'IBAN per l\'accredito',
-                'Credenziali SPID/CIE'
+                'L\'ultima busta paga ricevuta',
+                'Il contratto di assunzione per verificare il livello'
+            ],
+            estimatedCosts: 'Gratuito',
+            timeToComplete: '15 minuti',
+            steps: [
+                'Controlla la "Testata": verifica dati anagrafici, livello, mansione e paga base',
+                'Analizza il "Corpo": guarda le ore lavorate, straordinari, assegni familiari e bonus',
+                'Verifica le "Trattenute": contributi INPS e tasse IRPEF (ritenute fiscali)',
+                'Guarda il "Piede": controlla il netto a pagare e i contatori delle ferie/permessi',
+                'Confronta il "Netto a pagare" con l\'importo accreditato in banca'
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'adeCfTs',
+                    label: 'Guida alle detrazioni',
+                    useWhen: 'Per capire come funzionano le detrazioni per carichi di famiglia',
+                    beforeOpening: ['Tieni pronto il tuo Codice Fiscale']
+                }
             ],
             commonErrors: [
-                'Sbagliare l\'IBAN (l\'accredito non andrà a buon fine)',
-                'Non fare la DID presso il Centro per l\'Impiego',
-                'Inviare la domanda prima dell\'ultimo giorno di lavoro'
+                'Confondere il "Lordo" con il "Netto"',
+                'Non controllare se le ferie godute corrispondono a quelle effettivamente fatte',
+                'Ignorare variazioni sospette nel netto mensile'
             ],
-            askHelpWhen: [
-                'Se la domanda viene respinta e ritieni di avere i requisiti',
-                'Se l\'importo accreditato sembra errato rispetto ai contributi versati'
+            dontDo: [
+                'Non buttare i cedolini: ti serviranno per la pensione, mutui o prestiti',
+                'Non firmare la busta paga per "ricevuta dei soldi" se non hai ancora ricevuto il bonifico'
             ],
-            whoCanHelp: ['Patronati (assistenza gratuita)', 'Contact Center INPS', 'Centri per l\'Impiego'],
-            officialLinks: ['https://www.inps.it/it/it/dettaglio-scheda.schede-servizi-e-strumenti.servizi.naspi-indennit-mensile-di-disoccupazione.html'],
+            ifYouHaveProblems: [
+                'Chiedi chiarimenti all\'ufficio Risorse Umane o al Consulente del Lavoro dell\'azienda',
+                'Rivolgiti a un Sindacato per un controllo formale dei conteggi'
+            ],
             checklist: [
-                'Requisito contributivo verificato',
-                'Domanda inviata sul portale INPS',
-                'Ricevuta di invio salvata',
-                'DID effettuata',
-                'IBAN inserito correttamente'
+                'I dati anagrafici sono corretti',
+                'Il livello corrisponde al contratto',
+                'Le ore lavorate sono giuste',
+                'Il netto corrisponde al bonifico',
+                'Le ferie residue sono aggiornate'
             ],
             sources: [
                 {
-                    title: 'Scheda prestazione NASpI',
-                    organization: 'INPS',
-                    url: 'https://www.inps.it/',
+                    title: 'Guida alla lettura del cedolino',
+                    organization: 'CNEL',
+                    url: 'https://www.cnel.it/',
                     type: 'official',
-                    usedFor: 'Requisiti e modalità invio domanda',
-                    lastCheckedAt: '2026-05-14'
-                },
-                {
-                    title: 'Guida alla disoccupazione',
-                    organization: 'Ministero del Lavoro',
-                    url: 'https://www.lavoro.gov.it/',
-                    type: 'official',
-                    usedFor: 'Quadro normativo ammortizzatori sociali',
+                    usedFor: 'Standardizzazione voci',
                     lastCheckedAt: '2026-05-14'
                 }
             ]
         },
         {
-            id: 'dimissioni-telematiche-procedura',
-            slug: 'dimissioni-telematiche-procedura',
-            title: 'Dimissioni telematiche',
+            id: 'tfr-controllo-guida',
+            slug: 'come-controllare-tfr',
+            title: 'Come controllare il TFR',
+            mainEntity: 'INPS',
             category: 'lavoro',
             audience: ['lavoratori'],
             level: 'base',
             estimatedMinutes: 10,
-            summary: 'La procedura obbligatoria per rassegnare le dimissioni dal lavoro in modo legale tramite il portale del Ministero.',
+            summary: 'Scopri quanto Trattamento di Fine Rapporto hai accumulato e dove si trova.',
             status: 'published',
             qualityGatePassed: true,
             lastReviewedAt: '2026-05-14',
-            mainEntity: 'Ministero del Lavoro e delle Politiche Sociali',
-            synthesis: 'Invio del modulo digitale per evitare il fenomeno delle dimissioni in bianco.',
-            whenToDo: 'Quando decidi di lasciare volontariamente il tuo posto di lavoro.',
-            scenario: 'Hai trovato un nuovo lavoro o vuoi lasciare quello attuale e devi comunicarlo ufficialmente al Ministero e al datore.',
-            steps: [
-                'Verifica il periodo di preavviso nel tuo contratto (CCNL)',
-                'Accedi al sito "Cliclavoro" con SPID/CIE',
-                'Compila il modulo online con i dati del datore di lavoro',
-                'Indica l\'ultimo giorno di lavoro'
-            ],
-            doNow: [
-                'Accedi al sito "Cliclavoro" con SPID/CIE',
-                'Compila il modulo di dimissioni'
-            ],
-            dontDo: [
-                'Non scrivere solo una lettera cartacea (non ha valore per la maggior parte dei contratti)',
-                'Non sbagliare la data di decorrenza (il giorno successivo all\'ultimo lavorato)',
-                'Non dimenticare di avvisare anche informalmente il datore per correttezza'
+            prerequisites: [
+                'Almeno 6 mesi di anzianità lavorativa',
+                'Credenziali SPID o CIE'
             ],
             whatToPrepare: [
-                'PEC o email del datore di lavoro',
-                'Codice Fiscale dell\'azienda (partita IVA)',
-                'Data di inizio del rapporto di lavoro'
+                'Ultime buste paga dell\'anno',
+                'Certificazione Unica (CU) dell\'anno precedente'
+            ],
+            estimatedCosts: 'Gratuito',
+            timeToComplete: '10 minuti',
+            steps: [
+                'Cerca la voce "Fondo TFR" o "Accantonamento annuo" nella tua busta paga (solitamente in basso)',
+                'Verifica se hai scelto di lasciare il TFR in azienda o in un fondo pensione',
+                'Se l\'azienda ha più di 50 dipendenti, accedi al sito INPS per vedere il "Fondo Tesoreria"',
+                'Se hai un fondo pensione, accedi all\'area riservata del fondo per vedere il saldo'
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'inpsHome',
+                    label: 'TFR in INPS',
+                    url: 'https://www.inps.it/it/it/dettaglio-scheda.schede-servizi-e-strumenti.servizi.tfr-trattamento-di-fine-rapporto.html',
+                    useWhen: 'Per verificare il TFR versato al Fondo di Tesoreria INPS',
+                    beforeOpening: ['Entra con SPID']
+                }
             ],
             commonErrors: [
-                'Non rispettare il preavviso (può comportare trattenute in busta paga)',
-                'Inserire l\'ultimo giorno di lavoro sbagliato',
-                'Pensare che basti non presentarsi più a lavoro'
+                'Pensare che il TFR in busta paga sia già al netto delle tasse (verrà tassato alla fine)',
+                'Dimenticare di aver scelto un fondo pensione anni prima'
             ],
-            askHelpWhen: [
-                'In caso di dimissioni per giusta causa (es. mancato pagamento stipendi)',
-                'Se il datore di lavoro ti impedisce di accedere ai dati necessari'
+            dontDo: [
+                'Non chiedere l\'anticipo del TFR se non hai almeno 8 anni di servizio (salvo casi eccezionali)',
+                'Non preoccuparti eccessivamente se non vedi il saldo totale in ogni busta paga: alcune aziende indicano solo l\'incremento mensile'
             ],
-            whoCanHelp: ['Sindacati', 'Patronati', 'Ispettorato Nazionale del Lavoro'],
-            officialLinks: ['https://www.servizi.lavoro.gov.it/'],
+            ifYouHaveProblems: [
+                'Se l\'azienda non versa il TFR al fondo scelto, segnalalo immediatamente al rappresentante sindacale',
+                'In caso di fallimento dell\'azienda, rivolgiti al Fondo di Garanzia INPS'
+            ],
             checklist: [
-                'Periodo di preavviso calcolato',
-                'Accesso a Cliclavoro effettuato',
-                'Modulo compilato correttamente',
-                'Ricevuta telematica ottenuta',
-                'Email di conferma ricevuta'
+                'So dove viene accantonato il mio TFR',
+                'Ho verificato l\'importo accumulato nell\'ultimo anno',
+                'Conosco la procedura per chiedere un eventuale anticipo'
             ],
             sources: [
                 {
-                    title: 'Dimissioni Volontarie',
-                    organization: 'Ministero del Lavoro e delle Politiche Sociali',
-                    url: 'https://www.lavoro.gov.it/strumenti-e-servizi/Dimissioni-volontarie/Pagine/default.aspx',
+                    title: 'Fondo di Garanzia TFR',
+                    organization: 'INPS',
+                    url: 'https://www.inps.it/',
                     type: 'official',
-                    usedFor: 'Procedura ufficiale e normativa',
-                    lastCheckedAt: '2026-05-14'
-                },
-                {
-                    title: 'FAQ Dimissioni Telematiche',
-                    organization: 'Cliclavoro',
-                    url: 'https://www.cliclavoro.gov.it/',
-                    type: 'official',
-                    usedFor: 'Risoluzione problemi tecnici',
+                    usedFor: 'Tutele in caso di insolvenza',
                     lastCheckedAt: '2026-05-14'
                 }
             ]
         },
         {
-            id: 'centro-impiego-did',
-            slug: 'centro-per-impiego-did-patto-servizio',
-            title: 'Centro per l\'Impiego (DID/Patto servizio)',
+            id: 'documenti-colloquio-preparazione',
+            slug: 'come-preparare-documenti-colloquio',
+            title: 'Come preparare documenti per un colloquio',
+            mainEntity: 'ANPAL',
             category: 'lavoro',
-            audience: ['lavoratori', 'studenti'],
+            audience: ['lavoratori'],
             level: 'base',
             estimatedMinutes: 15,
-            summary: 'Come iscriversi ai Centri per l\'Impiego e attivare i percorsi di politica attiva del lavoro.',
+            summary: 'Cosa portare con sé a un colloquio di lavoro per dare un\'impressione professionale e completa.',
             status: 'published',
             qualityGatePassed: true,
             lastReviewedAt: '2026-05-14',
-            mainEntity: 'ANPAL (Ministero del Lavoro)',
-            synthesis: 'Rilascio della DID e sottoscrizione del Patto di Servizio Personalizzato (PSP).',
-            whenToDo: 'Subito dopo essere rimasti disoccupati o se si è in cerca di prima occupazione.',
-            scenario: 'Sei senza lavoro e vuoi accedere a corsi di formazione, bonus assunzionali o programmi come GOL.',
-            steps: [
-                'Rilascia la DID online sul portale ANPAL/MyANPAL',
-                'Prendi appuntamento presso il Centro per l\'Impiego del tuo territorio',
-                'Sottoscrivi il Patto di Servizio Personalizzato',
-                'Aggiorna regolarmente il tuo stato occupazionale'
+            prerequisites: [
+                'Avere un colloquio fissato'
             ],
-            doNow: [
-                'Rilascia la DID online sul portale MyANPAL',
-                'Fissa appuntamento al Centro per l\'Impiego'
+             whatToPrepare: [
+                'Copie cartacee del CV aggiornato',
+                'Documento di identità e Codice Fiscale',
+                'Eventuali certificati o diplomi originali/copie',
+                'Portfolio lavori (se applicabile)',
+                'Penna e taccuino per appunti'
+            ],
+            estimatedCosts: 'Pochi euro per le stampe',
+            timeToComplete: '30 minuti di preparazione',
+            steps: [
+                'Aggiorna il CV e stampane almeno 2 copie (una per te, una per l\'intervistatore)',
+                'Prepara una cartellina pulita con tutti i documenti ordinati',
+                'Porta una copia del tuo documento di identità e codice fiscale (potrebbero servire per l\'ingresso in azienda)',
+                'Se hai attestati di corsi specifici citati nel CV, portali con te',
+                'Segnati le domande che vuoi fare all\'azienda sul tuo taccuino'
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'inpsHome',
+                    label: 'Modello Europass CV',
+                    url: 'https://europa.eu/europass/it',
+                    useWhen: 'Per creare un CV standard riconosciuto in tutta Europa',
+                    beforeOpening: ['Puoi compilarlo online e scaricarlo in PDF']
+                }
+            ],
+            commonErrors: [
+                'Portare un CV vecchio o con errori di battitura',
+                'Non avere una copia del proprio documento',
+                'Cercare i file sul telefono all\'ultimo momento perché non sono stati stampati'
             ],
             dontDo: [
-                'Non mancare agli appuntamenti (rischio perdita indennità NASpI)',
-                'Non dimenticare di portare un CV aggiornato all\'incontro',
-                'Non aspettare mesi prima di iscriverti'
+                'Non consegnare documenti sgualciti o sporchi',
+                'Non dare per scontato che l\'intervistatore abbia già stampato il tuo CV'
+            ],
+            ifYouHaveProblems: [
+                'Se non hai una stampante, vai in una copisteria o in biblioteca',
+                'Se hai smarrito un diploma, chiedi un certificato sostitutivo alla scuola/università'
+            ],
+            checklist: [
+                'CV aggiornato e stampato',
+                'Documento di identità valido',
+                'Cartellina ordinata',
+                'Penna funzionante',
+                'Indirizzo e nome del referente segnati'
+            ],
+            sources: [
+                {
+                    title: 'Guida alla ricerca del lavoro',
+                    organization: 'ANPAL',
+                    url: 'https://www.anpal.gov.it/',
+                    type: 'official',
+                    usedFor: 'Consigli carriera',
+                    lastCheckedAt: '2026-05-14'
+                }
+            ]
+        },
+        {
+            id: 'scelta-caf-patronato-sindacato',
+            slug: 'come-capire-serve-caf-patronato-sindacato',
+            title: 'Come capire se serve CAF, patronato o sindacato',
+            mainEntity: 'Ministero del Lavoro',
+            category: 'lavoro',
+            audience: ['lavoratori'],
+            level: 'base',
+            estimatedMinutes: 10,
+            summary: 'Guida rapida per distinguere i vari enti di assistenza e scegliere quello giusto per le tue esigenze.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-14',
+            prerequisites: [
+                'Necessità di assistenza fiscale, previdenziale o lavorativa'
+            ],
+            whatToPrepare: [
+                'Descrizione chiara del problema o della pratica da svolgere'
+            ],
+            estimatedCosts: 'Variabile (spesso gratuito per gli iscritti o con tariffe agevolate)',
+            timeToComplete: '5 minuti di lettura',
+            steps: [
+                'Scegli il **CAF** per questioni FISCALI: dichiarazione dei redditi (730), ISEE, IMU, successioni',
+                'Scegli il **Patronato** per questioni PREVIDENZIALI: pensioni, NASpI, maternità, invalidità, assegni familiari',
+                'Scegli il **Sindacato** per questioni CONTRATTUALI: controllo busta paga, vertenze, licenziamenti, mobbing',
+                'Controlla se l\'ente scelto richiede un appuntamento o l\'iscrizione (tessera)'
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'inpsElencoPatronati',
+                    label: 'Elenco Patronati convenzionati',
+                    useWhen: 'Per trovare un patronato riconosciuto dall\'INPS',
+                    beforeOpening: []
+                }
+            ],
+            commonErrors: [
+                'Andare al CAF per chiedere la pensione (serve il Patronato)',
+                'Andare al Patronato per fare il 730 (serve il CAF)',
+                'Pensare che siano tutti organi dello Stato (sono enti privati convenzionati o legati alle parti sociali)'
+            ],
+            dontDo: [
+                'Non pagare cifre elevate per pratiche che dovrebbero essere gratuite per legge (come la NASpI)',
+                'Non dare deleghe in bianco senza aver capito cosa si sta firmando'
+            ],
+            ifYouHaveProblems: [
+                'Se non sei soddisfatto dell\'assistenza, puoi revocare la delega e rivolgerti a un altro ufficio',
+                'Verifica sempre le recensioni o chiedi consiglio a conoscenti per trovare uffici affidabili'
+            ],
+            checklist: [
+                'Ho capito la differenza tra i tre enti',
+                'Ho individuato quello adatto alla mia pratica',
+                'Ho controllato se serve un appuntamento'
+            ],
+            sources: [
+                {
+                    title: 'Disciplina dei Patronati',
+                    organization: 'Ministero del Lavoro',
+                    url: 'https://www.lavoro.gov.it/',
+                    type: 'official',
+                    usedFor: 'Definizione ruoli',
+                    lastCheckedAt: '2026-05-14'
+                }
+            ]
+        },
+        {
+            id: 'contratto-lavoro-controllo-guida',
+            slug: 'cosa-controllare-contratto-lavoro',
+            title: 'Contratto di lavoro: cosa controllare',
+            mainEntity: 'Ministero del Lavoro',
+            category: 'lavoro',
+            audience: ['lavoratori'],
+            level: 'base',
+            estimatedMinutes: 20,
+            summary: 'Le clausole fondamentali da verificare prima di firmare un nuovo contratto di assunzione.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-14',
+            prerequisites: [
+                'Bozza di contratto ricevuta'
             ],
             whatToPrepare: [
                 'Documento di identità',
                 'Codice Fiscale',
-                'Titoli di studio (diplomi/lauree)',
-                'Curriculum Vitae'
+                'Calcolatrice per il calcolo lordo/netto'
+            ],
+            estimatedCosts: 'Gratuito',
+            timeToComplete: '20 minuti',
+            steps: [
+                'Verifica la tipologia contrattuale (Indeterminato, Determinato, Apprendistato)',
+                'Controlla il CCNL di riferimento e il livello di inquadramento',
+                'Verifica la Retribuzione Annua Lorda (RAL) e il numero di mensilità (13 o 14)',
+                'Controlla la durata del periodo di prova',
+                'Verifica la sede di lavoro e l\'orario settimanale'
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'cnelArchivioContratti',
+                    label: 'Archivio Contratti CNEL',
+                    useWhen: 'Per consultare il testo completo del tuo CCNL',
+                    beforeOpening: []
+                }
             ],
             commonErrors: [
-                'Pensare che il Centro per l\'Impiego ti trovi lavoro "automaticamente"',
-                'Non comunicare variazioni di domicilio o telefono',
-                'Sottovalutare l\'importanza del Patto di Servizio'
-            ],
-            askHelpWhen: [
-                'Se hai difficoltà a registrarti sui portali regionali o nazionali',
-                'Se appartieni a categorie protette (Legge 68/99)'
-            ],
-            whoCanHelp: ['Operatori del Centro per l\'Impiego (CPI)', 'Sportelli informagiovani'],
-            officialLinks: ['https://www.anpal.gov.it/'],
-            checklist: [
-                'DID rilasciata online',
-                'Profilo MyANPAL completato',
-                'Appuntamento al CPI fissato',
-                'Patto di servizio firmato',
-                'CV caricato nel database regionale'
-            ],
-            sources: [
-                {
-                    title: 'Dichiarazione di Immediata Disponibilità',
-                    organization: 'ANPAL (ora Ministero del Lavoro)',
-                    url: 'https://www.anpal.gov.it/did',
-                    type: 'official',
-                    usedFor: 'Procedura DID',
-                    lastCheckedAt: '2026-05-14'
-                },
-                {
-                    title: 'Centri per l\'impiego',
-                    organization: 'Ministero del Lavoro',
-                    url: 'https://www.lavoro.gov.it/temi-e-priorita/politiche-attive-del-lavoro/Pagine/Centri-per-l-impiego.aspx',
-                    type: 'official',
-                    usedFor: 'Ruolo e funzioni dei CPI',
-                    lastCheckedAt: '2026-05-14'
-                }
-            ]
-        },
-        {
-            id: 'contratto-lavoro-controllo',
-            slug: 'contratto-di-lavoro-cosa-controllare',
-            title: 'Contratto di lavoro: cosa controllare',
-            category: 'lavoro',
-            audience: ['lavoratori', 'studenti'],
-            level: 'base',
-            estimatedMinutes: 20,
-            summary: 'I punti fondamentali da verificare prima di firmare un contratto di assunzione.',
-            status: 'published',
-            qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
-            mainEntity: 'Ministero del Lavoro',
-            synthesis: 'Verifica del CCNL applicato, livello, inquadramento, orario e retribuzione lorda.',
-            whenToDo: 'Prima di apporre la firma definitiva sulla lettera di assunzione o sul contratto.',
-            scenario: 'Ti hanno offerto un lavoro e ti hanno inviato la bozza del contratto. Vuoi essere sicuro che tutto sia in regola.',
-            steps: [
-                'Verifica la tipologia (tempo det./indet., apprendistato)',
-                'Controlla il CCNL di riferimento (es. Commercio, Metalmeccanico)',
-                'Verifica il periodo di prova',
-                'Controlla la RAL (Retribuzione Annua Lorda) e il numero di mensilità'
-            ],
-            doNow: [
-                'Leggi attentamente il CCNL di riferimento',
-                'Verifica l\'inquadramento e la RAL'
+                'Firmare senza sapere quanto sarà il netto mensile',
+                'Non notare clausole di non concorrenza eccessivamente restrittive',
+                'Dimenticare di verificare la durata del preavviso in uscita'
             ],
             dontDo: [
-                'Non firmare se ci sono accordi verbali non scritti nel contratto',
-                'Non ignorare le clausole di non concorrenza o penali',
-                'Non vergognarti di chiedere tempo (24-48 ore) per leggere tutto con calma'
+                'Non farti pressare per firmare subito: hai diritto a portare il contratto a casa per leggerlo con calma',
+                'Non accettare accordi verbali su benefit o aumenti: se non sono scritti, non valgono'
             ],
-            whatToPrepare: [
-                'La bozza del contratto',
-                'Il testo del CCNL (cercabile online)',
-                'Calcolatore lordo/netto'
+            ifYouHaveProblems: [
+                'Se il contratto non cita un CCNL conosciuto, chiedi chiarimenti',
+                'Fai analizzare la bozza a un esperto di un Sindacato'
             ],
-            commonErrors: [
-                'Confondere stipendio lordo e netto',
-                'Non verificare la durata del preavviso',
-                'Sottovalutare la sede di lavoro e le clausole di trasferta'
-            ],
-            askHelpWhen: [
-                'Se il contratto cita un CCNL inesistente o "pirata"',
-                'Se la mansione descritta non corrisponde a quella discussa nei colloqui'
-            ],
-            whoCanHelp: ['Consulenti del lavoro', 'Sindacati di categoria', 'Ispettorato del Lavoro'],
-            officialLinks: ['https://www.cnel.it/Archivio-Contratti'],
             checklist: [
-                'Tipologia contrattuale chiara',
-                'CCNL indicato correttamente',
-                'Livello e mansione specificati',
-                'Retribuzione lorda indicata',
-                'Orario di lavoro e sede definiti',
-                'Periodo di prova specificato'
+                'RAL specificata correttamente',
+                'Livello corrispondente alle mansioni',
+                'Periodo di prova chiaro',
+                'Sede di lavoro definita'
             ],
             sources: [
-                {
-                    title: 'Archivio Nazionale Contratti Collettivi',
-                    organization: 'CNEL',
-                    url: 'https://www.cnel.it/Archivio-Contratti',
-                    type: 'official',
-                    usedFor: 'Verifica CCNL',
-                    lastCheckedAt: '2026-05-14'
-                },
                 {
                     title: 'Tipologie contrattuali',
                     organization: 'Ministero del Lavoro',
-                    url: 'https://www.lavoro.gov.it/temi-e-priorita/rapporto-di-lavoro/Pagine/default.aspx',
+                    url: 'https://www.lavoro.gov.it/',
                     type: 'official',
-                    usedFor: 'Descrizione forme di lavoro',
+                    usedFor: 'Quadro normativo',
                     lastCheckedAt: '2026-05-14'
                 }
             ]
         },
         {
-            id: 'busta-paga-lettura',
-            slug: 'busta-paga-lettura-base',
-            title: 'Busta paga: lettura base',
-            category: 'lavoro',
-            audience: ['lavoratori'],
-            level: 'base',
-            estimatedMinutes: 15,
-            summary: 'Guida per decifrare le voci principali del cedolino dello stipendio: dal lordo al netto.',
-            status: 'published',
-            qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
-            mainEntity: 'Agenzia delle Entrate',
-            synthesis: 'Scomposizione della busta paga in tre sezioni: anagrafica/paga base, corpo (competenze/trattenute) e piede (TFR/netto).',
-            whenToDo: 'Ogni mese, al ricevimento del cedolino, per verificare che lo stipendio sia corretto.',
-            scenario: 'Hai ricevuto lo stipendio ma non capisci perché è diverso dal mese scorso o come vengono calcolate le tasse.',
-            steps: [
-                'Verifica il numero di ore lavorate e gli eventuali straordinari',
-                'Controlla i giorni di ferie e permessi maturati/goduti',
-                'Controlla l\'importo del netto in busta e confrontalo col bonifico'
-            ],
-            doNow: [
-                'Confronta il netto in busta col bonifico ricevuto',
-                'Verifica le ore di straordinario o assenza'
-            ],
-            dontDo: [
-                'Non guardare solo il "netto a pagare" in fondo',
-                'Non buttare i cedolini (servono per mutui, prestiti e pensione)',
-                'Non ignorare le trattenute sindacali se non hai dato l\'autorizzazione'
-            ],
-            whatToPrepare: [
-                'Cedolino del mese corrente',
-                'Contratto di assunzione per confronto parametri',
-                'Foglio presenze personale'
-            ],
-            commonErrors: [
-                'Non controllare i dati anagrafici e fiscali (es. familiari a carico)',
-                'Confondere il TFR maturato con il netto mensile',
-                'Non notare se mancano i bonus fiscali spettanti (es. ex Bonus Renzi)'
-            ],
-            askHelpWhen: [
-                'Se il netto è significativamente diverso dal previsto senza motivo',
-                'Se noti trattenute che non riconosci'
-            ],
-            whoCanHelp: ['Ufficio Risorse Umane/Paghe aziendale', 'Sindacati', 'Consulenti del lavoro'],
-            officialLinks: ['https://www.agenziaentrate.gov.it/portale/web/guest/cittadini/agevolazioni/detrazioni-per-carichi-of-famiglia'],
-            checklist: [
-                'Dati anagrafici corretti',
-                'Paga base corrispondente al livello',
-                'Ore lavorate verificate',
-                'Ferie e permessi aggiornati',
-                'Netto a pagare verificato'
-            ],
-            sources: [
-                {
-                    title: 'Detrazioni per carichi di famiglia',
-                    organization: 'Agenzia delle Entrate',
-                    url: 'https://www.agenziaentrate.gov.it/',
-                    type: 'official',
-                    usedFor: 'Comprensione trattenute fiscali',
-                    lastCheckedAt: '2026-05-14'
-                },
-                {
-                    title: 'Guida al cedolino',
-                    organization: 'INPS',
-                    url: 'https://www.inps.it/',
-                    type: 'official',
-                    usedFor: 'Voci contributive in busta',
-                    lastCheckedAt: '2026-05-14'
-                }
-            ]
-        },
-        {
-            id: 'malattia-certificato-medico',
-            slug: 'malattia-e-certificato-medico-guida',
+            id: 'malattia-certificato-medico-guida',
+            slug: 'guida-malattia-lavoro',
             title: 'Malattia e certificato medico',
+            mainEntity: 'INPS',
             category: 'lavoro',
             audience: ['lavoratori'],
             level: 'base',
             estimatedMinutes: 10,
-            summary: 'Cosa fare quando non si può andare al lavoro per motivi di salute: obblighi e visite fiscali.',
+            summary: 'Cosa fare quando non puoi andare al lavoro per salute: obblighi, orari e visite fiscali.',
             status: 'published',
             qualityGatePassed: true,
             lastReviewedAt: '2026-05-14',
-            mainEntity: 'INPS',
-            synthesis: 'Comunicazione tempestiva al datore e rilascio del certificato telematico dal medico.',
-            whenToDo: 'Al mattino presto del primo giorno di assenza per malattia.',
-            scenario: 'Ti sei svegliato con la febbre o hai avuto un infortunio e non puoi recarti al lavoro.',
-            steps: [
-                'Avvisa immediatamente il datore di lavoro (secondo le modalità aziendali)',
-                'Contatta il tuo Medico di Medicina Generale (MMG)',
-                'Recati a visita o richiedi visita domiciliare',
-                'Ottieni il Numero di Protocollo del certificato'
-            ],
-            doNow: [
-                'Avvisa il datore di lavoro',
-                'Chiama il medico di base'
-            ],
-            dontDo: [
-                'Non aspettare il secondo giorno per chiamare il medico',
-                'Non uscire di casa durante le fasce di reperibilità della visita fiscale',
-                'Non dimenticare di comunicare al medico l\'indirizzo corretto per la reperibilità se diverso dalla residenza'
+            prerequisites: [
+                'Stato di malattia'
             ],
             whatToPrepare: [
                 'Tessera Sanitaria',
-                'Codice Fiscale',
-                'Indirizzo completo dove trascorrerai la malattia'
+                'Indirizzo completo di reperibilità'
+            ],
+            estimatedCosts: 'Gratuito (visita medica di base)',
+            timeToComplete: '1 ora (per la visita)',
+            steps: [
+                'Avvisa tempestivamente il datore di lavoro dell\'assenza',
+                'Recati dal medico di base il primo giorno di malattia',
+                'Assicurati che il medico invii il certificato telematico all\'INPS',
+                'Fatti dare il Numero di Protocollo del certificato',
+                'Resta reperibile a casa durante le fasce orarie per la visita fiscale'
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'inpsCertificatiMalattia',
+                    label: 'Consulta certificati online',
+                    useWhen: 'Per verificare che il medico abbia inviato correttamente il certificato',
+                    beforeOpening: []
+                }
             ],
             commonErrors: [
-                'Pensare che il medico mandi il certificato automaticamente senza visita',
-                'Sbagliare le fasce di reperibilità (10-12 e 17-19 per i privati, diverse per i pubblici)',
-                'Non verificare che il certificato sia stato effettivamente inviato telematicamente'
+                'Dimenticare di avvisare il datore via mail o telefono',
+                'Uscire di casa durante le fasce di reperibilità (10-12 e 17-19 per i privati)',
+                'Aspettare il secondo giorno per chiamare il medico'
             ],
-            askHelpWhen: [
-                'Se il medico di base è assente (rivolgiti alla Guardia Medica)',
-                'Se ricevi una contestazione per assenza alla visita fiscale nonostante fossi in casa'
+            dontDo: [
+                'Non dare per scontato che il medico mandi il certificato senza visitarti',
+                'Non dimenticare di segnalare al medico se l\'indirizzo di malattia è diverso dalla residenza'
             ],
-            whoCanHelp: ['Medico di base (MMG)', 'INPS (Polo unico per le visite fiscali)', 'Guardia Medica'],
-            officialLinks: ['https://www.inps.it/it/it/dettaglio-scheda.schede-servizi-e-strumenti.servizi.certificati-di-malattia-telematici-consultazione-per-i-lavoratori.html'],
+            ifYouHaveProblems: [
+                'Se il medico di base è assente, rivolgiti alla Guardia Medica',
+                'In caso di contestazione per assenza alla visita fiscale, hai 10 giorni per giustificarti'
+            ],
             checklist: [
                 'Datore di lavoro avvisato',
-                'Medico contattato',
-                'Certificato inviato telematicamente',
+                'Visita medica effettuata',
                 'Numero di protocollo ricevuto',
-                'Fasce di reperibilità rispettate'
+                'Fasce di reperibilità note'
             ],
             sources: [
                 {
-                    title: 'Certificati di malattia telematici',
+                    title: 'Regole sulla malattia',
                     organization: 'INPS',
                     url: 'https://www.inps.it/',
                     type: 'official',
-                    usedFor: 'Regole invio e consultazione certificati',
-                    lastCheckedAt: '2026-05-14'
-                },
-                {
-                    title: 'Visite mediche di controllo',
-                    organization: 'INPS',
-                    url: 'https://www.inps.it/it/it/dettaglio-scheda.schede-servizi-e-strumenti.servizi.visite-mediche-di-controllo-vmc-.html',
-                    type: 'official',
-                    usedFor: 'Orari reperibilità e regole',
+                    usedFor: 'Disciplina visite fiscali',
                     lastCheckedAt: '2026-05-14'
                 }
             ]
         },
         {
-            id: 'tfr-spiegazione',
-            slug: 'tfr-trattamento-fine-rapporto-cos-e',
-            title: 'TFR: cos\'è e dove si vede',
+            id: 'stage-tirocinio-diritti-guida',
+            slug: 'diritti-stage-tirocinio',
+            title: 'Stage/tirocinio: diritti minimi',
+            mainEntity: 'Conferenza Stato-Regioni',
             category: 'lavoro',
             audience: ['lavoratori'],
             level: 'base',
-            estimatedMinutes: 10,
-            summary: 'Capire il Trattamento di Fine Rapporto, come viene accumulato e le opzioni di destinazione.',
-            status: 'published',
-            qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
-            mainEntity: 'INPS',
-            synthesis: 'La "liquidazione": una parte dello stipendio accantonata e rivalutata, pagata alla fine del lavoro.',
-            whenToDo: 'All\'assunzione (per scegliere la destinazione) e alla cessazione del rapporto.',
-            scenario: 'Vuoi sapere quanti soldi hai messo da parte negli anni o se ti conviene lasciarli in azienda o metterli in un fondo pensione.',
-            steps: [
-                'Cerca la voce "TFR" o "Accantonamento mese/anno" nell\'ultima busta paga',
-                'Decidi se lasciarlo in azienda (scelta silente) o destinarlo alla previdenza complementare',
-                'Verifica sul sito INPS il TFR se l\'azienda ha più di 50 dipendenti (Fondo Tesoreria)'
-            ],
-            doNow: [
-                'Verifica l\'accantonamento TFR in busta paga',
-                'Scegli la destinazione del TFR (azienda o fondo)'
-            ],
-            dontDo: [
-                'Non pensare che il TFR sia perso se l\'azienda fallisce (c\'è il Fondo di Garanzia INPS)',
-                'Non chiedere l\'anticipo senza un motivo valido previsto dalla legge (es. acquisto prima casa, spese mediche)',
-                'Non dimenticare di controllare la tassazione separata applicata al momento della liquidazione'
-            ],
-            whatToPrepare: [
-                'Ultime buste paga',
-                'Certificazione Unica (CU)',
-                'Accesso al portale INPS'
-            ],
-            commonErrors: [
-                'Confondere il TFR lordo con quello netto (è soggetto a tassazione)',
-                'Non sapere che serve almeno 8 anni di anzianità per chiedere l\'anticipo',
-                'Ignorare i termini di pagamento (spesso non è immediato il giorno dopo il licenziamento)'
-            ],
-            askHelpWhen: [
-                'Se l\'azienda non paga il TFR entro i termini previsti dal CCNL',
-                'Se hai dubbi sulla rivalutazione annua applicata'
-            ],
-            whoCanHelp: ['Ufficio paghe', 'Sindacati', 'Patronati', 'Legali specializzati in diritto del lavoro'],
-            officialLinks: ['https://www.inps.it/it/it/dettaglio-scheda.schede-servizi-e-strumenti.servizi.tfr-trattamento-di-fine-rapporto.html'],
-            checklist: [
-                'Scelta destinazione effettuata (Modulo TFR2)',
-                'Accantonamento verificato in busta paga',
-                'Quota annua calcolata correttamente (circa una mensilità all\'anno)',
-                'Saldo totale verificato periodicamente'
-            ],
-            sources: [
-                {
-                    title: 'Trattamento di Fine Rapporto (TFR)',
-                    organization: 'INPS',
-                    url: 'https://www.inps.it/',
-                    type: 'official',
-                    usedFor: 'Definizione e fondo di garanzia',
-                    lastCheckedAt: '2026-05-14'
-                },
-                {
-                    title: 'Previdenza Complementare',
-                    organization: 'COVIP',
-                    url: 'https://www.covip.it/',
-                    type: 'official',
-                    usedFor: 'Opzioni destinazione TFR',
-                    lastCheckedAt: '2026-05-14'
-                }
-            ]
-        },
-        {
-            id: 'stage-tirocinio-diritti',
-            slug: 'stage-tirocinio-diritti-minimi',
-            title: 'Stage/tirocinio: diritti minimi',
-            category: 'lavoro',
-            audience: ['studenti', 'lavoratori'],
-            level: 'base',
             estimatedMinutes: 15,
-            summary: 'Conoscere la differenza tra stage e lavoro dipendente e i diritti minimi garantiti (indennità, assicurazione).',
+            summary: 'Conosci i tuoi diritti durante un tirocinio: indennità, assicurazione e orari.',
             status: 'published',
             qualityGatePassed: true,
             lastReviewedAt: '2026-05-14',
-            mainEntity: 'Ministero del Lavoro',
-            synthesis: 'Il tirocinio non è un rapporto di lavoro ma un percorso formativo con obbligo di indennità minima.',
-            whenToDo: 'Prima di iniziare uno stage extra-curriculare (dopo gli studi).',
-            scenario: 'Ti hanno proposto uno stage di 6 mesi. Vuoi sapere se devono pagarti, quante ore puoi fare e se hai diritto alle ferie.',
-            steps: [
-                'Verifica che ci sia un Soggetto Promotore (es. Università, Centro Impiego)',
-                'Controlla il Progetto Formativo Individuale (PFI)',
-                'Verifica l\'importo dell\'indennità (variabile per regione, ma obbligatoria)',
-                'Assicurati che sia attiva la copertura assicurativa INAIL'
-            ],
-            doNow: [
-                'Leggi attentamente il Progetto Formativo',
-                'Verifica l\'indennità minima regionale'
-            ],
-            dontDo: [
-                'Non accettare stage non retribuiti se non sono curriculari (inseriti nel piano studi)',
-                'Non farti sostituire a lavoratori dipendenti (è illegale)',
-                'Non fare orari eccessivi o turni notturni se non previsti dal PFI'
+            prerequisites: [
+                'Inizio di un tirocinio extra-curriculare'
             ],
             whatToPrepare: [
-                'Convenzione di tirocinio',
-                'Progetto Formativo',
-                'Registro delle presenze'
+                'Progetto Formativo Individuale (PFI)',
+                'Convenzione di tirocinio'
+            ],
+            estimatedCosts: 'Gratuito',
+            timeToComplete: '15 minuti',
+            steps: [
+                'Verifica che l\'indennità minima corrisponda a quanto stabilito dalla tua Regione',
+                'Controlla la presenza di un tutor aziendale e di un tutor del soggetto promotore',
+                'Assicurati di essere coperto dall\'assicurazione INAIL e per la responsabilità civile',
+                'Rispetta gli orari previsti dal Progetto Formativo',
+                'Ricorda che il tirocinio non è un rapporto di lavoro subordinato'
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'lavoroTirocini',
+                    label: 'Linee guida Tirocini',
+                    useWhen: 'Per conoscere la normativa nazionale e regionale',
+                    beforeOpening: []
+                }
             ],
             commonErrors: [
-                'Pensare di avere diritto a malattia pagata o ferie (hai diritto a sospensioni concordate, ma non sono ferie pagate)',
-                'Non sapere che lo stage non dà diritto alla NASpI',
-                'Confondere il tirocinio con l\'apprendistato (che è un vero contratto di lavoro)'
+                'Confondere lo stage con un lavoro dipendente (non c\'è obbligo di ferie o malattia pagata)',
+                'Svolgere mansioni che non corrispondono al Progetto Formativo',
+                'Lavorare senza la presenza di un tutor'
             ],
-            askHelpWhen: [
-                'Se ti chiedono di lavorare da solo senza tutor',
-                'Se l\'indennità non viene pagata o è inferiore al minimo regionale'
+            dontDo: [
+                'Non accettare stage non retribuiti (se extra-curriculari)',
+                'Non farti sostituire a personale dipendente in momenti di picco o per sostituire lavoratori in ferie'
             ],
-            whoCanHelp: ['Soggetto promotore (es. ufficio stage università)', 'Ispettorato del Lavoro', 'Sindacati (Settore giovani/NIdiL)'],
-            officialLinks: ['https://www.cliclavoro.gov.it/Cittadini/Orientamento-al-lavoro/Pagine/Tirocini.aspx'],
+            ifYouHaveProblems: [
+                'Contatta il soggetto promotore (es. Università, Centro per l\'Impiego)',
+                'Segnala eventuali abusi all\'Ispettorato del Lavoro'
+            ],
             checklist: [
-                'Soggetto promotore identificato',
-                'Progetto formativo firmato',
-                'Indennità minima garantita verificata',
-                'Tutor aziendale assegnato',
-                'Assicurazione INAIL presente'
+                'Progetto Formativo firmato',
+                'Indennità minima garantita',
+                'Assicurazione attiva',
+                'Tutor assegnato'
             ],
             sources: [
                 {
-                    title: 'Linee guida tirocini',
-                    organization: 'Conferenza Stato-Regioni / Ministero del Lavoro',
+                    title: 'Accordo Stato-Regioni sui tirocini',
+                    organization: 'Conferenza Stato-Regioni',
                     url: 'https://www.lavoro.gov.it/',
                     type: 'official',
-                    usedFor: 'Normativa nazionale e regionale',
-                    lastCheckedAt: '2026-05-14'
-                },
-                {
-                    title: 'Tirocini formativi',
-                    organization: 'Cliclavoro',
-                    url: 'https://www.cliclavoro.gov.it/',
-                    type: 'official',
-                    usedFor: 'Informazioni pratiche per tirocinanti',
+                    usedFor: 'Requisiti minimi',
                     lastCheckedAt: '2026-05-14'
                 }
             ]
         },
         {
-            id: 'lavoro-nero-aiuto',
-            slug: 'lavoro-nero-orientamento-e-aiuto',
+            id: 'lavoro-nero-orientamento-guida',
+            slug: 'aiuto-lavoro-nero',
             title: 'Lavoro nero: orientamento e aiuto',
+            mainEntity: 'Ispettorato Nazionale del Lavoro',
             category: 'lavoro',
-            audience: ['lavoratori', 'victims'],
+            audience: ['lavoratori'],
             level: 'base',
             estimatedMinutes: 15,
-            summary: 'Cosa fare e a chi rivolgersi se si lavora senza contratto o con pagamenti "fuori busta".',
+            summary: 'Cosa fare e a chi rivolgersi se lavori senza contratto o in modo irregolare.',
             status: 'published',
             qualityGatePassed: true,
             lastReviewedAt: '2026-05-14',
-            mainEntity: 'Ispettorato Nazionale del Lavoro',
-            synthesis: 'Tutela dei diritti contributivi e retributivi tramite denuncia o conciliazione.',
-            whenToDo: 'Quando ti accorgi che non sei stato regolarizzato o vieni pagato in contanti senza cedolino.',
-            scenario: 'Lavori da mesi in un ristorante ma il titolare continua a rimandare la firma del contratto e ti paga a mano.',
-            steps: [
-                'Raccogli prove della tua presenza (foto, messaggi, testimoni)',
-                'Non firmare fogli in bianco o ricevute di pagamento mai avvenute',
-                'Rivolgiti a uno sportello sindacale per un calcolo delle differenze retributive',
-                'Valuta la denuncia all\'Ispettorato Nazionale del Lavoro'
-            ],
-            doNow: [
-                'Inizia a raccogliere prove del rapporto di lavoro',
-                'Contatta un sindacato per assistenza'
-            ],
-            dontDo: [
-                'Non minacciare il datore di lavoro da solo (rischi ritorsioni)',
-                'Non pensare che "meglio il nero che niente" (perdi pensione, assicurazione infortuni e diritti)',
-                'Non accettare pagamenti tracciati (bonifici) con causali false'
+            prerequisites: [
+                'Situazione di lavoro irregolare (totale o parziale)'
             ],
             whatToPrepare: [
-                'Diario dei giorni e orari lavorati',
-                'Nomi di colleghi o clienti che possono testimoniare',
-                'Messaggi WhatsApp o email di lavoro',
-                'Foto del luogo di lavoro o divise'
+                'Prove del rapporto di lavoro (foto, messaggi, testimoni)',
+                'Diario dei giorni e delle ore lavorate'
+            ],
+            estimatedCosts: 'Gratuito',
+            timeToComplete: '15 minuti',
+            steps: [
+                'Raccogli in modo discreto tutte le prove della tua presenza sul posto di lavoro',
+                'Non firmare documenti di cui non sei sicuro o fogli in bianco',
+                'Rivolgiti a uno sportello sindacale per un calcolo delle differenze retributive',
+                'Valuta di presentare una richiesta di intervento all\'Ispettorato Nazionale del Lavoro (INL)',
+                'In caso di infortunio, comunica sempre la verità al pronto soccorso sulla dinamica e sul luogo'
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'inlRichiestaIntervento',
+                    label: 'Ispettorato Nazionale del Lavoro',
+                    useWhen: 'Per denunciare irregolarità lavorative',
+                    beforeOpening: []
+                }
             ],
             commonErrors: [
+                'Pensare che senza contratto non si abbiano diritti (i diritti esistono anche nel lavoro di fatto)',
                 'Aspettare anni prima di agire (alcuni crediti cadono in prescrizione)',
-                'Non avere prove scritte del rapporto di lavoro',
-                'Pensare che la denuncia porti al licenziamento immediato senza tutele'
+                'Cancellare messaggi o prove del lavoro'
             ],
-            askHelpWhen: [
-                'In caso di infortunio sul lavoro mentre sei in nero (situazione critica, vai al pronto soccorso e di\' la verità)',
-                'Se subisci minacce o mobbing'
+            dontDo: [
+                'Non minacciare il datore di lavoro: agisci sempre tramite vie legali o sindacali',
+                'Non accettare "transazioni" a voce senza assistenza di un esperto'
             ],
-            whoCanHelp: ['Ispettorato Nazionale del Lavoro (INL)', 'Guardia di Finanza (117)', 'Sindacati', 'Uffici vertenze'],
-            officialLinks: ['https://www.ispettorato.gov.it/'],
+            ifYouHaveProblems: [
+                'Contatta il numero di emergenza 117 (Guardia di Finanza) per segnalazioni urgenti',
+                'Chiedi assistenza legale a un avvocato giuslavorista o a un ufficio vertenze sindacale'
+            ],
             checklist: [
-                'Prove raccolte (foto/messaggi)',
+                'Prove raccolte',
                 'Diario presenze compilato',
                 'Consulenza sindacale effettuata',
-                'Denuncia presentata (se deciso)',
-                'Richiesta regolarizzazione contributiva inviata'
+                'Denuncia pronta (se necessaria)'
             ],
             sources: [
                 {
-                    title: 'Denuncia di lavoro irregolare',
+                    title: 'Guida ai diritti del lavoratore',
                     organization: 'Ispettorato Nazionale del Lavoro',
-                    url: 'https://www.ispettorato.gov.it/it-it/strumenti-e-servizi/Pagine/Richiesta-di-intervento-ispettivo.aspx',
+                    url: 'https://www.ispettorato.gov.it/',
                     type: 'official',
-                    usedFor: 'Modalità di denuncia',
-                    lastCheckedAt: '2026-05-14'
-                },
-                {
-                    title: 'Contrasto al lavoro sommerso',
-                    organization: 'Ministero del Lavoro',
-                    url: 'https://www.lavoro.gov.it/',
-                    type: 'official',
-                    usedFor: 'Politiche di contrasto e diritti',
+                    usedFor: 'Tutele legali',
                     lastCheckedAt: '2026-05-14'
                 }
             ]

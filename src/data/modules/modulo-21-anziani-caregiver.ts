@@ -68,7 +68,7 @@ export const modulo_21_anziani_caregiver: Module = {
                     url: 'https://www.spid.gov.it/',
                     type: 'official',
                     usedFor: 'Procedure di rilascio e gestori.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Guida all\'identità digitale per anziani',
@@ -76,7 +76,7 @@ export const modulo_21_anziani_caregiver: Module = {
                     url: 'https://www.pensionati.cisl.it/',
                     type: 'nonprofit',
                     usedFor: 'Consigli pratici per la terza età.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             checklist: [
@@ -147,7 +147,7 @@ export const modulo_21_anziani_caregiver: Module = {
                     url: 'https://www.inps.it/it/it/dettaglio-approfondimento.schede-informative.55214.delega-dell-identit-digitale.html',
                     type: 'official',
                     usedFor: 'Guida ufficiale INPS alla delega.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Abilitazione all\'uso dei servizi online per conto di terzi',
@@ -155,7 +155,7 @@ export const modulo_21_anziani_caregiver: Module = {
                     url: 'https://www.agenziaentrate.gov.it/',
                     type: 'official',
                     usedFor: 'Specifiche per i servizi fiscali.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             checklist: [
@@ -226,7 +226,7 @@ export const modulo_21_anziani_caregiver: Module = {
                     url: 'https://www.inps.it/it/it/dettaglio-approfondimento.schede-informative.50022.invalidit-civile.html',
                     type: 'official',
                     usedFor: 'Iter procedurale e benefici.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Guida all\'invalidità',
@@ -234,7 +234,7 @@ export const modulo_21_anziani_caregiver: Module = {
                     url: 'https://www.handylex.org/',
                     type: 'nonprofit',
                     usedFor: 'Dettagli su Legge 104 e agevolazioni.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             checklist: [
@@ -305,7 +305,7 @@ export const modulo_21_anziani_caregiver: Module = {
                     url: 'https://www.poliziadistato.it/articolo/16574f9d2a632a6111116632',
                     type: 'official',
                     usedFor: 'Vademecum antitruffa.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Campagna contro le truffe',
@@ -313,7 +313,7 @@ export const modulo_21_anziani_caregiver: Module = {
                     url: 'https://www.carabinieri.it/in-vostro-aiuto/consigli/Cose-di-tutti-i-giorni/contro-le-truffe/',
                     type: 'official',
                     usedFor: 'Esempi di tecniche di raggiro.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             checklist: [

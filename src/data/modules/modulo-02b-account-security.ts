@@ -72,7 +72,7 @@ export const modulo_02b_account_security: Module = {
                     url: 'https://myaccount.google.com/privacycheckup',
                     type: 'platform',
                     usedFor: 'Link diretto allo strumento ufficiale di gestione dati.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Come eliminare la cronologia delle attività',
@@ -80,7 +80,7 @@ export const modulo_02b_account_security: Module = {
                     url: 'https://support.google.com/chrome/answer/95589',
                     type: 'platform',
                     usedFor: 'Istruzioni tecniche per la pulizia dei dati di navigazione.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',
@@ -152,7 +152,7 @@ export const modulo_02b_account_security: Module = {
                     url: 'https://www.garanteprivacy.it/temi/data-breach',
                     type: 'official',
                     usedFor: 'Definizione legale e obblighi di tutela dell\'interessato.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Have I Been Pwned - Verifica violazioni',
@@ -160,7 +160,7 @@ export const modulo_02b_account_security: Module = {
                     url: 'https://haveibeenpwned.com/',
                     type: 'expert',
                     usedFor: 'Strumento di verifica per confermare se i dati sono stati esposti in breach noti.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',
@@ -221,7 +221,7 @@ export const modulo_02b_account_security: Module = {
                     url: 'https://support.apple.com/it-it/102631',
                     type: 'platform',
                     usedFor: 'Istruzioni tecniche per la gestione del lascito digitale.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Informazioni su Gestione account inattivo',
@@ -229,7 +229,7 @@ export const modulo_02b_account_security: Module = {
                     url: 'https://support.google.com/accounts/answer/3036546',
                     type: 'platform',
                     usedFor: 'Procedura di pianificazione inattività account Google.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',

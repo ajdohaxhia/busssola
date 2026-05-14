@@ -68,7 +68,7 @@ export const modulo_22_universita_giovani: Module = {
                     url: 'https://www.inps.it/it/it/dettaglio-approfondimento.schede-informative.50088.isee-precompilato.html',
                     type: 'official',
                     usedFor: 'Procedura di richiesta online.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Guida all\'ISEE Università',
@@ -76,7 +76,7 @@ export const modulo_22_universita_giovani: Module = {
                     url: 'https://www.andisu.it/',
                     type: 'nonprofit',
                     usedFor: 'Dettagli normativi sul diritto allo studio.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             checklist: [
@@ -147,7 +147,7 @@ export const modulo_22_universita_giovani: Module = {
                     url: 'https://www.mur.gov.it/it/aree-tematiche/universita/studenti/diritto-allo-studio-universitario',
                     type: 'official',
                     usedFor: 'Quadro normativo nazionale.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Sito ufficiale ente regionale (es. EDISU)',
@@ -155,7 +155,7 @@ export const modulo_22_universita_giovani: Module = {
                     url: 'https://www.istruzione.it/',
                     type: 'institutional',
                     usedFor: 'Dettaglio bandi e scadenze.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             checklist: [
@@ -226,7 +226,7 @@ export const modulo_22_universita_giovani: Module = {
                     url: 'https://www.agenziaentrate.gov.it/portale/web/guest/schede/agevolazioni/detrazioni-spese-affitto-studenti-fuori-sede',
                     type: 'official',
                     usedFor: 'Vantaggi fiscali per le famiglie.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Residenze Universitarie',
@@ -234,7 +234,7 @@ export const modulo_22_universita_giovani: Module = {
                     url: 'https://www.mur.gov.it/',
                     type: 'official',
                     usedFor: 'Mappatura alloggi pubblici.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             checklist: [
@@ -305,7 +305,7 @@ export const modulo_22_universita_giovani: Module = {
                     url: 'https://europa.eu/europass/it/create-europass-cv',
                     type: 'institutional',
                     usedFor: 'Strumento ufficiale di creazione CV.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Orientamento al lavoro',
@@ -313,7 +313,7 @@ export const modulo_22_universita_giovani: Module = {
                     url: 'https://www.anpal.gov.it/',
                     type: 'official',
                     usedFor: 'Consigli per la ricerca attiva di lavoro.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             checklist: [

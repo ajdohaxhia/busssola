@@ -68,7 +68,7 @@ export const modulo_18_consumatori: Module = {
                     url: 'https://www.mimit.gov.it/it/mercato-e-consumatori/tutela-del-consumatore/diritti-dei-consumatori/diritto-di-recesso',
                     type: 'official',
                     usedFor: 'Normativa di riferimento.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Acquisti online: i consigli per evitare problemi',
@@ -76,7 +76,7 @@ export const modulo_18_consumatori: Module = {
                     url: 'https://www.altroconsumo.it/',
                     type: 'nonprofit',
                     usedFor: 'Consigli pratici e modelli.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             checklist: [
@@ -147,7 +147,7 @@ export const modulo_18_consumatori: Module = {
                     url: 'https://www.agcm.it/consumatore/diritti-del-consumatore/garanzia-legale',
                     type: 'official',
                     usedFor: 'Definizione e obblighi del venditore.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Your Europe: Garanzie e resi',
@@ -155,7 +155,7 @@ export const modulo_18_consumatori: Module = {
                     url: 'https://europa.eu/youreurope/citizens/consumers/shopping/guarantees-returns/index_it.htm',
                     type: 'institutional',
                     usedFor: 'Quadro normativo europeo.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             checklist: [
@@ -226,7 +226,7 @@ export const modulo_18_consumatori: Module = {
                     url: 'https://ec.europa.eu/info/law/law-topic/consumer-protection-law_it',
                     type: 'institutional',
                     usedFor: 'Informazioni sulla sicurezza prodotti.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Guida pratica reclami',
@@ -234,7 +234,7 @@ export const modulo_18_consumatori: Module = {
                     url: 'https://www.consumatori.it/',
                     type: 'nonprofit',
                     usedFor: 'Modulistica reclami.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             checklist: [
@@ -305,7 +305,7 @@ export const modulo_18_consumatori: Module = {
                     url: 'https://www.consumatori.it/recesso-ripensamento/',
                     type: 'nonprofit',
                     usedFor: 'Dettagli sul diritto di ripensamento.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Codice del Consumo',
@@ -313,7 +313,7 @@ export const modulo_18_consumatori: Module = {
                     url: 'https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2005-10-08&atto.codiceRedazionale=005G0232',
                     type: 'official',
                     usedFor: 'Testo di legge.',
-                    lastCheckedAt: '2024-05-14'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             checklist: [

@@ -9,12 +9,12 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "id": "modulo-01-primo-soccorso",
     "number": 0,
     "title": "Primo Soccorso Digitale",
-    "description": "Procedure rapide e verificate per gestire emergenze in corso: sextortion, furto account e smarrimento device.",
-    "lessonCount": 8,
+    "description": "Protocolli di emergenza per reagire immediatamente a furti di account, ricatti e smarrimento dispositivi.",
+    "lessonCount": 2,
     "difficulty": "base",
     "icon": "ShieldAlert",
     "category": "emergenze",
-    "lastUpdated": "2024-05-13",
+    "lastUpdated": "2026-05-14",
     "featuredType": "none"
   },
   {
@@ -32,13 +32,13 @@ export const MODULES_MAP: ModuleMetadata[] = [
   {
     "id": "modulo-02-account-security",
     "number": 0,
-    "title": "Account e Sicurezza Accessi",
-    "description": "Procedure e buone pratiche verificate per blindare i tuoi profili: password robuste, 2FA e gestione sessioni.",
-    "lessonCount": 4,
+    "title": "Sicurezza Account e Password",
+    "description": "Procedure pratiche per blindare i tuoi accessi digitali e proteggere la tua identità online.",
+    "lessonCount": 3,
     "difficulty": "base",
-    "icon": "Key",
+    "icon": "Lock",
     "category": "sicurezza",
-    "lastUpdated": "2024-05-13",
+    "lastUpdated": "2026-05-14",
     "featuredType": "none"
   },
   {
@@ -56,13 +56,13 @@ export const MODULES_MAP: ModuleMetadata[] = [
   {
     "id": "modulo-03-truffe-phishing",
     "number": 0,
-    "title": "Frodi, Truffe e Phishing",
-    "description": "Riconosci le tecniche di manipolazione digitale e impara a proteggere i tuoi soldi e i tuoi dati da smishing, vishing e truffe marketplace.",
-    "lessonCount": 5,
+    "title": "Truffe e Phishing",
+    "description": "Come riconoscere i tentativi di truffa online, proteggere i propri dati e reagire in caso di errore.",
+    "lessonCount": 2,
     "difficulty": "base",
-    "icon": "Target",
+    "icon": "AlertTriangle",
     "category": "truffe",
-    "lastUpdated": "2024-05-13",
+    "lastUpdated": "2026-05-14",
     "featuredType": "none"
   },
   {
@@ -176,13 +176,13 @@ export const MODULES_MAP: ModuleMetadata[] = [
   {
     "id": "modulo-08-scuola-famiglia",
     "number": 0,
-    "title": "Scuola e Famiglia",
-    "description": "Protocolli istituzionali per la gestione del cyberbullismo, il ruolo del docente referente e le tutele della Legge 71/2017.",
-    "lessonCount": 3,
+    "title": "Scuola e Famiglia Digitale",
+    "description": "Strumenti per genitori ed educatori per gestire la vita digitale dei minori in modo consapevole e sicuro.",
+    "lessonCount": 2,
     "difficulty": "base",
     "icon": "GraduationCap",
     "category": "famiglia",
-    "lastUpdated": "2024-05-13",
+    "lastUpdated": "2026-05-14",
     "featuredType": "none"
   },
   {
@@ -202,23 +202,33 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "number": 0,
     "title": "Documenti e Identità",
     "description": "Guida pratica ai principali documenti di identità e strumenti di accesso digitale ai servizi pubblici.",
-    "lessonCount": 3,
+    "lessonCount": 5,
     "difficulty": "base",
     "icon": "IdCard",
     "category": "documenti",
-    "lastUpdated": "2024-05-13",
-    "featuredType": "none"
+    "lastUpdated": "2026-05-14",
+    "featuredType": "none",
+    "topProcedures": [
+      "Richiesta SPID",
+      "Cambio Residenza",
+      "Recupero PUK CIE",
+      "Pagamento pagoPA"
+    ],
+    "relatedChecklists": [
+      "Richiesta Passaporto",
+      "Cambio Residenza"
+    ]
   },
   {
     "id": "modulo-10-lavoro-disoccupazione",
     "number": 0,
     "title": "Lavoro e Disoccupazione",
     "description": "Guida ai principali servizi digitali legati al mondo del lavoro, al sostegno al reddito e alla cessazione dei rapporti lavorativi.",
-    "lessonCount": 2,
+    "lessonCount": 6,
     "difficulty": "base",
     "icon": "Briefcase",
     "category": "lavoro",
-    "lastUpdated": "2024-05-13",
+    "lastUpdated": "2026-05-14",
     "featuredType": "none"
   },
   {
@@ -238,7 +248,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "number": 0,
     "title": "Lavoro e Diritti",
     "description": "Guida ai diritti del lavoratore, ammortizzatori sociali e procedure amministrative del mercato del lavoro.",
-    "lessonCount": 9,
+    "lessonCount": 8,
     "difficulty": "base",
     "icon": "Briefcase",
     "category": "lavoro",
@@ -250,7 +260,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "number": 0,
     "title": "Casa e Residenza",
     "description": "Gestione del contratto di affitto, utenze domestiche, agevolazioni fiscali e diritti abitativi.",
-    "lessonCount": 7,
+    "lessonCount": 11,
     "difficulty": "base",
     "icon": "Home",
     "category": "casa",
@@ -262,7 +272,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "number": 0,
     "title": "Soldi, Banche e Truffe",
     "description": "Protezione dei risparmi, gestione delle frodi bancarie e tutela negli acquisti online.",
-    "lessonCount": 6,
+    "lessonCount": 9,
     "difficulty": "intermedia",
     "icon": "ShieldAlert",
     "category": "soldi",

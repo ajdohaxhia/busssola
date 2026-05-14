@@ -72,7 +72,7 @@ export const modulo_08b_scuola_famiglia: Module = {
                     url: 'https://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/9933519',
                     type: 'official',
                     usedFor: 'Raccomandazioni ufficiali per genitori sulla tutela dell\'immagine dei minori.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',
@@ -140,7 +140,7 @@ export const modulo_08b_scuola_famiglia: Module = {
                     url: 'https://www.savethechildren.it/blog-11/regole-uso-smartphone-minori-modello-patto-digitale',
                     type: 'nonprofit',
                     usedFor: 'Modello educativo e principi di responsabilità condivisa.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',

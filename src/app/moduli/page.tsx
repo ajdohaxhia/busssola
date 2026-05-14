@@ -71,6 +71,19 @@ const ModuleCard = memo(({ module, progress }: { module: ModuleMetadata, progres
                         <p className="text-sm text-secondary leading-relaxed line-clamp-2">
                             {module.description}
                         </p>
+
+                        {(module.topProcedures && module.topProcedures.length > 0) && (
+                            <div className="space-y-2 pt-2">
+                                <span className="text-[10px] font-black uppercase text-secondary/40 tracking-widest">Procedure comuni:</span>
+                                <div className="flex flex-wrap gap-2">
+                                    {module.topProcedures.map((proc, i) => (
+                                        <Badge key={i} variant="outline" className="text-[9px] font-bold border-border group-hover:border-primary/20 transition-colors">
+                                            {proc}
+                                        </Badge>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
                     </div>
 
                     <div className="flex items-center justify-between pt-4 border-t border-border/60">

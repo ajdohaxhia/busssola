@@ -30,6 +30,16 @@ export type CategoryID =
   | 'disabilita' 
   | 'casa-digitale';
 
+export interface OfficialLinkV2 {
+  sourceId: string; // Reference to OFFICIAL_SOURCES
+  label?: string;
+  ente?: string;
+  url?: string;
+  useWhen: string;
+  beforeOpening: string[];
+  warning?: string;
+}
+
 /**
  * Lesson (Scheda Pratica o Guida)
  * The atomic unit of content in Busssola.
@@ -60,18 +70,20 @@ export interface Lesson {
   
   // Actionable Content
   whenToDo?: string; // Quando serve
-  prerequisites?: string[]; // Prerequisiti
-  doNow: string[]; // Cosa fare subito / Passo dopo passo
-  dontDo: string[]; // Cosa NON fare
-  whatToPrepare?: string[]; // Documenti o cose da preparare
+  prerequisites?: string[]; // Prerequisiti / Prima di iniziare
+  doNow?: string[]; // Cosa fare subito / Passo dopo passo
+  dontDo?: string[]; // Cosa NON fare
+  whatToPrepare?: string[]; // Documenti o cose da preparare / Cosa ti serve
   whatYouNeed?: string[]; // Legacy
   steps?: string[]; // Passaggi procedurali
   commonErrors?: string[]; // Errori comuni
+  ifYouHaveProblems?: string[]; // Se hai problemi / Quando chiedere aiuto
   
   // Support & Resources
   askHelpWhen?: string[]; // Quando chiedere aiuto
   whoCanHelp?: string[]; // Enti o figure che possono aiutare
-  officialLinks?: string[]; // Link diretti agli enti
+  officialLinks?: string[]; // Legacy string links
+  officialLinksV2?: OfficialLinkV2[]; // New detailed links referencing registry
   checklist: string[]; // Checklist finale
   
   // Metadata & Verification
@@ -106,6 +118,8 @@ export interface ModuleMetadata {
     lastUpdated?: string;
     mainEntity?: string;
     tags?: string[];
+    topProcedures?: string[];
+    relatedChecklists?: string[];
 }
 
 export interface Module extends Omit<ModuleMetadata, 'lessonCount' | 'number' | 'difficulty'> {

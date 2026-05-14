@@ -74,7 +74,7 @@ export const modulo_01b_primo_soccorso: Module = {
                     url: 'https://support.google.com/websearch/answer/9673730',
                     type: 'platform',
                     usedFor: 'Procedura tecnica per la de-indicizzazione di dati sensibili.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 },
                 {
                     title: 'Esercizio dei diritti (Cancellazione)',
@@ -82,7 +82,7 @@ export const modulo_01b_primo_soccorso: Module = {
                     url: 'https://www.garanteprivacy.it/diritti',
                     type: 'official',
                     usedFor: 'Base legale per richiedere la rimozione dei propri dati ai sensi del GDPR.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',
@@ -151,7 +151,7 @@ export const modulo_01b_primo_soccorso: Module = {
                     url: 'https://www.commissariatodips.it/notizie/articolo/sim-swap-la-truffa-dello-scambio-della-sim/index.html',
                     type: 'official',
                     usedFor: 'Spiegazione del fenomeno e consigli di prevenzione e reazione.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',
@@ -222,7 +222,7 @@ export const modulo_01b_primo_soccorso: Module = {
                     url: 'https://support.google.com/accounts/answer/6294827',
                     type: 'platform',
                     usedFor: 'Protocollo di sicurezza e controllo attività sospette.',
-                    lastCheckedAt: '2024-05-13'
+                    lastCheckedAt: '2026-05-14'
                 }
             ],
             lastReviewedAt: '2024-05-13',

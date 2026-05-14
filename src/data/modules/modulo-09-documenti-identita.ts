@@ -2,227 +2,344 @@ import { Module } from '@/types';
 
 export const modulo_09_documenti_identita: Module = {
     id: 'modulo-09-documenti-identita',
-    lastUpdated: '2024-05-13',
+    lastUpdated: '2026-05-14',
     title: 'Documenti e Identità',
     description: 'Guida pratica ai principali documenti di identità e strumenti di accesso digitale ai servizi pubblici.',
     category: 'documenti',
     difficulty: 'base',
     icon: 'IdCard',
     themeColor: 'accent-blue',
+    topProcedures: ['Richiesta SPID', 'Cambio Residenza', 'Recupero PUK CIE', 'Pagamento pagoPA'],
+    relatedChecklists: ['Richiesta Passaporto', 'Cambio Residenza'],
     lessons: [
         {
             id: 'spid-request',
             slug: 'come-richiedere-lo-spid',
             title: 'Come richiedere lo SPID',
             category: 'documenti',
-            audience: ['cittadini'],
+            audience: ['cittadini', 'lavoratori', 'studenti'],
             level: 'base',
             estimatedMinutes: 15,
             mainEntity: 'AgID / Provider SPID',
-            summary: 'Guida alla creazione dell\'Identità Digitale (SPID) per accedere ai servizi della Pubblica Amministrazione.',
+            summary: 'Lo SPID è la tua chiave digitale per entrare nei siti della Pubblica Amministrazione.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2024-05-13',
-            scenario: 'Devi accedere al sito dell\'INPS, dell\'Agenzia delle Entrate o altri servizi pubblici online e non hai ancora le credenziali SPID.',
-            whenToDo: 'Quando hai bisogno di un unico set di credenziali per tutti i servizi pubblici online.',
-            whatYouNeed: [
-                'Documento di identità valido (Carta di identità, passaporto o patente)',
-                'Tessera sanitaria con codice fiscale',
-                'Indirizzo email personale',
-                'Numero di cellulare'
+            lastReviewedAt: '2026-05-14',
+            prerequisites: ['Email personale', 'Numero di cellulare', 'Documento d\'identità'],
+            whatToPrepare: [
+                'Carta d\'identità (o passaporto/patente)',
+                'Tessera sanitaria (per il codice fiscale)',
+                'Smartphone con fotocamera'
             ],
-            whereToDo: 'Sito web del provider scelto o ufficio fisico (es. Poste)',
+            estimatedCosts: 'Gratis (il riconoscimento di persona o video può essere a pagamento)',
+            timeToComplete: '15-20 minuti per la registrazione, attivazione variabile',
             steps: [
-                'Scegli un Identity Provider autorizzato (es. Poste Italiane, Aruba, InfoCert)',
-                'Registrati sul sito del provider scelto',
-                'Effettua il riconoscimento (di persona, tramite CIE/CNS, o video-chiamata)',
-                'Attiva le tue credenziali SPID'
+                'Scegli un Identity Provider (es. Poste Italiane, Aruba, Sielte)',
+                'Inserisci i tuoi dati anagrafici sul sito del provider',
+                'Crea le tue credenziali (username e password)',
+                'Scegli la modalità di riconoscimento (CIE, firma digitale, di persona o video)',
+                'Effettua il riconoscimento seguendo le istruzioni',
+                'Scarica l\'app del provider per generare i codici di accesso'
             ],
-            estimatedCosts: 'Gratuito (alcuni provider offrono il riconoscimento a pagamento)',
+            officialLinksV2: [
+                {
+                    sourceId: 'spidHome',
+                    useWhen: 'Per iniziare la procedura e confrontare i provider.',
+                    beforeOpening: ['Documento identità', 'Tessera sanitaria'],
+                    warning: 'Controlla quali provider offrono il servizio gratuitamente.'
+                },
+                {
+                    sourceId: 'spidAssistenzaIdp',
+                    useWhen: 'Se hai problemi durante la registrazione con un provider specifico.',
+                    beforeOpening: ['Nome del provider scelto']
+                }
+            ],
             commonErrors: [
-                'Utilizzare un numero di cellulare non personale',
-                'Documento scaduto',
-                'Email non accessibile durante la registrazione'
-            ],
-            officialLinks: ['https://www.spid.gov.it/'],
-            
-            // Backward compatibility
-            question: 'Come posso ottenere le credenziali SPID?',
-            whatIsHappening: 'Lo SPID è il Sistema Pubblico di Identità Digitale che permette di accedere con un\'unica coppia di credenziali a tutti i servizi online della Pubblica Amministrazione.',
-            warningSigns: [],
-            doNow: [
-                'Scegli un Identity Provider autorizzato (es. Poste Italiane, Aruba, InfoCert)',
-                'Registrati sul sito del provider scelto',
-                'Effettua il riconoscimento (di persona, tramite CIE/CNS, o video-chiamata)',
-                'Attiva le tue credenziali SPID'
+                'Usare una mail di lavoro o condivisa',
+                'Dimenticare la password subito dopo la creazione',
+                'Non avere la tessera sanitaria a portata di mano'
             ],
             dontDo: [
-                'Non condividere mai le tue credenziali SPID con terzi',
-                'Non utilizzare email o numeri di telefono di altre persone'
+                'Non dare mai le tue credenziali a terzi',
+                'Non fare lo SPID per altre persone a tuo nome'
             ],
-            preserveEvidence: [],
-            askHelpWhen: [
-                'In caso di difficoltà tecnica durante la registrazione',
-                'Se sospetti un furto di identità'
+            ifYouHaveProblems: [
+                'Contatta l\'assistenza del provider scelto',
+                'Consulta l\'Help Desk di AgID'
             ],
-            whoCanHelp: ['Sito web del provider scelto o ufficio fisico (es. Poste)'],
             checklist: [
-                'Documento di identità valido (Carta di identità, passaporto o patente)',
-                'Tessera sanitaria con codice fiscale',
-                'Indirizzo email personale',
-                'Numero di cellulare'
+                'Ho scelto il provider',
+                'Ho inserito i dati correttamente',
+                'Ho effettuato il riconoscimento',
+                'Ho installato l\'app sul telefono',
+                'Ho verificato l\'accesso su un sito (es. INPS)'
             ],
             sources: [
                 {
-                    title: 'Sito ufficiale SPID',
+                    title: 'Linee guida SPID',
                     organization: 'AgID',
                     url: 'https://www.spid.gov.it/',
                     type: 'official',
-                    usedFor: 'Informazioni ufficiali e scelta del provider',
-                    lastCheckedAt: '2024-05-13'
+                    usedFor: 'Procedura standard e requisiti',
+                    lastCheckedAt: '2026-05-14'
                 }
             ]
         },
         {
-            id: 'cie-request',
-            slug: 'come-richiedere-la-carta-identita-elettronica-cie',
-            title: 'Come richiedere la Carta d\'Identità Elettronica (CIE)',
+            id: 'spid-recovery',
+            slug: 'come-recuperare-credenziali-spid',
+            title: 'Come recuperare lo SPID',
             category: 'documenti',
             audience: ['cittadini'],
+            level: 'base',
+            estimatedMinutes: 5,
+            mainEntity: 'Provider SPID',
+            summary: 'Se hai perso username o password del tuo SPID, puoi recuperarli in pochi minuti.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-14',
+            prerequisites: ['Accesso alla mail usata per la registrazione', 'Cellulare associato allo SPID'],
+            whatToPrepare: [
+                'Codice Fiscale',
+                'Nome del tuo provider SPID'
+            ],
+            estimatedCosts: 'Gratis',
+            timeToComplete: '5 minuti',
+            steps: [
+                'Vai sulla pagina di login del tuo provider SPID',
+                'Clicca su "Non ricordi le credenziali?" o "Password dimenticata"',
+                'Inserisci il tuo codice fiscale e la mail',
+                'Segui il link ricevuto via email',
+                'Imposta una nuova password sicura',
+                'Se hai perso lo username, controlla la mail di benvenuto ricevuta al momento dell\'attivazione'
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'spidHelpdesk',
+                    useWhen: 'Se non ricordi nemmeno quale provider avevi scelto.',
+                    beforeOpening: ['Codice Fiscale']
+                }
+            ],
+            commonErrors: [
+                'Cercare di recuperare la password su un provider diverso',
+                'Non avere più accesso al numero di telefono associato'
+            ],
+            dontDo: [
+                'Non creare un secondo SPID se il primo è ancora attivo (recuperalo!)'
+            ],
+            ifYouHaveProblems: [
+                'Usa il servizio di assistenza del tuo Identity Provider'
+            ],
+            checklist: [
+                'Ho trovato il sito del mio provider',
+                'Ho inserito il codice fiscale',
+                'Ho ricevuto la mail di reset',
+                'Ho impostato la nuova password'
+            ],
+            sources: [
+                {
+                    title: 'Recupero credenziali SPID',
+                    organization: 'AgID',
+                    url: 'https://helpdesk.spid.gov.it/',
+                    type: 'official',
+                    usedFor: 'Procedure di assistenza',
+                    lastCheckedAt: '2026-05-14'
+                }
+            ]
+        },
+        {
+            id: 'anpr-residenza',
+            slug: 'cambio-residenza-online-anpr',
+            title: 'Come fare il cambio di residenza online',
+            category: 'documenti',
+            audience: ['cittadini', 'famiglie'],
             level: 'base',
             estimatedMinutes: 20,
-            mainEntity: 'Comune / Ministero Interno',
-            summary: 'Procedura per il rilascio della CIE, il documento d\'identità digitale e fisico.',
+            mainEntity: 'Ministero dell\'Interno / ANPR',
+            summary: 'Puoi trasferire la tua residenza in un altro Comune o cambiare indirizzo senza andare allo sportello.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2024-05-13',
-            scenario: 'La tua vecchia carta d\'identità è scaduta, smarrita o deteriorata e devi richiederne una nuova.',
-            whenToDo: 'In caso di primo rilascio, scadenza, smarrimento, furto o deterioramento del vecchio documento.',
-            whatYouNeed: [
-                'Fototessera recente',
-                'Carta d\'identità precedente o denuncia di smarrimento',
-                'Codice fiscale o tessera sanitaria',
-                'Ricevuta del pagamento del contributo previsto'
+            lastReviewedAt: '2026-05-14',
+            prerequisites: ['SPID, CIE o CNS attivo', 'Dati del nuovo indirizzo'],
+            whatToPrepare: [
+                'Dati catastali dell\'immobile (o estremi contratto affitto)',
+                'Dati di tutti i componenti della famiglia che si trasferiscono',
+                'Documento d\'identità'
             ],
-            whereToDo: 'Ufficio Anagrafe del proprio Comune di residenza o dimora',
+            estimatedCosts: 'Gratis',
+            timeToComplete: '20-30 minuti per l\'invio, circa 45 giorni per la chiusura pratica',
             steps: [
-                'Prenota l\'appuntamento sul portale Agenda CIE',
-                'Recati presso l\'Ufficio Anagrafe del tuo Comune',
-                'Fornisci i dati e le impronte digitali',
-                'Ricevi la CIE all\'indirizzo indicato entro 6 giorni lavorativi'
+                'Accedi al portale ANPR con SPID o CIE',
+                'Seleziona "Servizi Anagrafici" e poi "Cambio di Residenza"',
+                'Scegli se ti trasferisci in un nuovo Comune o nello stesso',
+                'Inserisci i dati del nuovo indirizzo e il titolo di possesso (proprietà/affitto)',
+                'Aggiungi eventuali familiari che si spostano con te',
+                'Invia la dichiarazione e salva il numero di protocollo',
+                'Attendi l\'accertamento dei vigili urbani (entro 45 giorni)'
             ],
-            estimatedCosts: 'Circa 22€ (può variare leggermente tra i Comuni)',
+            officialLinksV2: [
+                {
+                    sourceId: 'anprResidenza',
+                    useWhen: 'Per inviare la dichiarazione ufficiale.',
+                    beforeOpening: ['SPID o CIE', 'Dati nuovo indirizzo'],
+                    warning: 'Usa solo il portale ANPR ufficiale del Ministero.'
+                }
+            ],
             commonErrors: [
-                'Non prenotare l\'appuntamento',
-                'Foto non conforme agli standard ICAO',
-                'Mancanza della denuncia in caso di furto/smarrimento'
-            ],
-            officialLinks: ['https://www.cartaidentita.interno.gov.it/'],
-            
-            // Backward compatibility
-            question: 'Quali sono i passaggi per ottenere la nuova CIE?',
-            whatIsHappening: 'La Carta di Identità Elettronica (CIE) è l\'evoluzione della vecchia carta d\'identità cartacea, dotata di un microchip che memorizza i dati del titolare e permette l\'accesso ai servizi online.',
-            warningSigns: [],
-            doNow: [
-                'Prenota l\'appuntamento sul portale Agenda CIE',
-                'Recati presso l\'Ufficio Anagrafe del tuo Comune',
-                'Fornisci i dati e le impronte digitali',
-                'Ricevi la CIE all\'indirizzo indicato entro 6 giorni lavorativi'
+                'Dimenticare di inserire i dati catastali',
+                'Non inserire tutti i familiari coinvolti',
+                'Indirizzo incompleto (manca interno o scala)'
             ],
             dontDo: [
-                'Non presentarsi all\'appuntamento senza la documentazione necessaria',
-                'Non utilizzare foto scattate in modo non professionale o non conformi'
+                'Non fare la richiesta se non hai ancora le chiavi della nuova casa'
             ],
-            preserveEvidence: [],
-            askHelpWhen: [
-                'In caso di smarrimento del PIN/PUK consegnati con la carta',
-                'Se il documento non arriva entro i tempi previsti'
+            ifYouHaveProblems: [
+                'Contatta l\'ufficio anagrafe del Comune di destinazione'
             ],
-            whoCanHelp: ['Ufficio Anagrafe del proprio Comune di residenza o dimora'],
             checklist: [
-                'Fototessera recente',
-                'Carta d\'identità precedente o denuncia di smarrimento',
-                'Codice fiscale o tessera sanitaria',
-                'Ricevuta del pagamento del contributo previsto'
+                'Ho effettuato l\'accesso ad ANPR',
+                'Ho inserito l\'indirizzo preciso',
+                'Ho indicato il titolo di occupazione casa',
+                'Ho aggiunto i familiari',
+                'Ho inviato la pratica e salvato la ricevuta'
             ],
             sources: [
                 {
-                    title: 'Portale ufficiale CIE',
+                    title: 'Portale ANPR - Cambio Residenza',
                     organization: 'Ministero dell\'Interno',
-                    url: 'https://www.cartaidentita.interno.gov.it/',
+                    url: 'https://www.anagrafenazionale.interno.it/area-cittadino/cambio-di-residenza/',
                     type: 'official',
-                    usedFor: 'Prenotazione appuntamenti e informazioni sul rilascio',
-                    lastCheckedAt: '2024-05-13'
+                    usedFor: 'Procedura ufficiale online',
+                    lastCheckedAt: '2026-05-14'
                 }
             ]
         },
         {
-            id: 'tessera-sanitaria-renewal',
-            slug: 'come-rinnovare-la-tessera-sanitaria',
-            title: 'Come rinnovare la Tessera Sanitaria',
+            id: 'cie-puk-recovery',
+            slug: 'recuperare-pin-puk-cie',
+            title: 'Come recuperare PIN/PUK della CIE',
             category: 'documenti',
             audience: ['cittadini'],
             level: 'base',
-            estimatedMinutes: 10,
-            mainEntity: 'Agenzia delle Entrate / Regione',
-            summary: 'Cosa fare quando la Tessera Sanitaria scade o viene smarrita.',
+            estimatedMinutes: 5,
+            mainEntity: 'Ministero dell\'Interno',
+            summary: 'Se hai smarrito i codici della tua Carta d\'Identità Elettronica, puoi recuperarli online o in Comune.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2024-05-13',
-            scenario: 'La tua Tessera Sanitaria - Carta Nazionale dei Servizi (TS-CNS) è scaduta o non è più leggibile.',
-            whenToDo: 'Alla scadenza del documento o in caso di furto, smarrimento o deterioramento.',
-            whatYouNeed: [
-                'Codice fiscale',
-                'Documento di identità valido',
-                'Eventuale denuncia in caso di furto o smarrimento'
+            lastReviewedAt: '2026-05-14',
+            prerequisites: ['CIE fisica', 'Accesso all\'app CieID o portale CIE'],
+            whatToPrepare: [
+                'Numero della CIE',
+                'Email o numero di cellulare forniti al momento della richiesta'
             ],
-            whereToDo: 'Online sul sito dell\'Agenzia delle Entrate o presso gli sportelli della propria ASL',
+            estimatedCosts: 'Gratis',
+            timeToComplete: '5 minuti (online) o tempo di attesa allo sportello',
             steps: [
-                'Verifica la scadenza sulla tessera',
-                'Se scaduta, la nuova tessera viene spedita automaticamente all\'indirizzo di residenza',
-                'In caso di mancato recapito o smarrimento, richiedi il duplicato online o presso la ASL',
-                'Attiva la nuova tessera presso gli sportelli abilitati se vuoi usarla come CNS'
+                'Se hai fornito email/cellulare in fase di richiesta, usa la funzione "Recupero PUK" sul sito CIE',
+                'Inserisci il numero della carta e i tuoi dati',
+                'Riceverai il PUK via email o SMS',
+                'Se non hai fornito contatti, devi recarti fisicamente all\'ufficio anagrafe del Comune',
+                'Una volta ottenuto il PUK, puoi generare un nuovo PIN tramite l\'app CieID'
             ],
-            estimatedCosts: 'Gratuito',
+            officialLinksV2: [
+                {
+                    sourceId: 'cieRecuperoPuk',
+                    useWhen: 'Per recuperare il codice PUK via web.',
+                    beforeOpening: ['Numero carta CIE', 'Codice fiscale']
+                }
+            ],
             commonErrors: [
-                'Indirizzo di residenza non aggiornato in anagrafe tributaria',
-                'Non attivare il PIN per l\'uso come CNS'
-            ],
-            officialLinks: ['https://sistemats1.sanita.finanze.it/portale/tessera-sanitaria'],
-            
-            // Backward compatibility
-            question: 'Cosa devo fare se la mia tessera sanitaria è scaduta?',
-            whatIsHappening: 'La Tessera Sanitaria (TS) è il documento personale che permette di accedere alle prestazioni del Servizio Sanitario Nazionale e di certificare il proprio Codice Fiscale.',
-            warningSigns: [],
-            doNow: [
-                'Verifica la scadenza sulla tessera',
-                'Se scaduta, la nuova tessera viene spedita automaticamente all\'indirizzo di residenza',
-                'In caso di mancato recapito o smarrimento, richiedi il duplicato online o presso la ASL',
-                'Attiva la nuova tessera presso gli sportelli abilitati se vuoi usarla come CNS'
+                'Confondere il PIN con il PUK',
+                'Inserire troppe volte il PIN sbagliato bloccando la carta'
             ],
             dontDo: [
-                'Non buttare la vecchia tessera finché non ricevi la nuova',
-                'Non dimenticare di aggiornare la residenza se hai traslocato'
+                'Non buttare il foglio ricevuto con la CIE: lì ci sono le prime metà dei codici'
             ],
-            preserveEvidence: [],
-            askHelpWhen: [
-                'Se la nuova tessera non arriva dopo la scadenza della vecchia',
-                'In caso di errori nei dati anagrafici riportati sulla tessera'
+            ifYouHaveProblems: [
+                'Vai all\'ufficio anagrafe del tuo Comune'
             ],
-            whoCanHelp: ['Online sul sito dell\'Agenzia delle Entrate o presso gli sportelli della propria ASL'],
             checklist: [
-                'Codice fiscale',
-                'Documento di identità valido',
-                'Eventuale denuncia in caso di furto o smarrimento'
+                'Ho trovato il numero della mia carta',
+                'Ho provato la procedura di recupero online',
+                'Ho ricevuto il PUK',
+                'Ho resettato il PIN tramite app CieID'
             ],
             sources: [
                 {
-                    title: 'Portale Tessera Sanitaria',
-                    organization: 'Ministero dell\'Economia e delle Finanze',
-                    url: 'https://sistemats1.sanita.finanze.it/portale/tessera-sanitaria',
+                    title: 'Recupero codici CIE',
+                    organization: 'Ministero dell\'Interno',
+                    url: 'https://www.cartaidentita.interno.gov.it/cittadini/recupero-puk/',
                     type: 'official',
-                    usedFor: 'Richiesta duplicati e informazioni sul servizio',
-                    lastCheckedAt: '2024-05-13'
+                    usedFor: 'Procedura di recupero codici',
+                    lastCheckedAt: '2026-05-14'
+                }
+            ]
+        },
+        {
+            id: 'pagopa-payment',
+            slug: 'come-pagare-avviso-pagopa',
+            title: 'Come pagare un avviso pagoPA',
+            category: 'documenti',
+            audience: ['cittadini', 'famiglie', 'studenti'],
+            level: 'base',
+            estimatedMinutes: 3,
+            mainEntity: 'pagoPA S.p.A.',
+            summary: 'Pagare multe, tasse scolastiche o tributi verso lo Stato in modo sicuro e tracciabile.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-14',
+            prerequisites: ['Avviso di pagamento (cartaceo o digitale)', 'Strumento di pagamento (carta, conto, app)'],
+            whatToPrepare: [
+                'Codice IUV (Codice Avviso) di 18 cifre',
+                'Codice fiscale dell\'ente creditore'
+            ],
+            estimatedCosts: 'Costo commissione variabile (da 0€ a circa 2€)',
+            timeToComplete: '2 minuti',
+            steps: [
+                'Inquadra il QR code dell\'avviso con l\'app IO o con l\'app della tua banca',
+                'In alternativa, inserisci manualmente il codice IUV sul sito del creditore o del tuo home banking',
+                'Verifica l\'importo e l\'ente destinatario',
+                'Scegli il metodo di pagamento preferito',
+                'Conferma l\'operazione e scarica la ricevuta telematica',
+                'Puoi pagare anche fisicamente in tabaccheria, posta o banca mostrando l\'avviso'
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'pagopaComePagare',
+                    useWhen: 'Per conoscere tutti i canali di pagamento disponibili.',
+                    beforeOpening: ['Nessuno']
+                },
+                {
+                    sourceId: 'pagopaPhishing',
+                    useWhen: 'Per capire se l\'avviso che hai ricevuto è vero o una truffa.',
+                    beforeOpening: ['L\'avviso ricevuto']
+                }
+            ],
+            commonErrors: [
+                'Dimenticare di scaricare la ricevuta',
+                'Pagare due volte lo stesso avviso (pagoPA impedisce i doppi pagamenti se usi i canali digitali)'
+            ],
+            dontDo: [
+                'Non cliccare su link di pagamento ricevuti via SMS sospetti'
+            ],
+            ifYouHaveProblems: [
+                'Consulta l\'assistenza ufficiale pagoPA'
+            ],
+            checklist: [
+                'Ho l\'avviso sottomano',
+                'Ho scansionato il QR code',
+                'Ho verificato l\'importo',
+                'Ho effettuato il pagamento',
+                'Ho salvato la ricevuta'
+            ],
+            sources: [
+                {
+                    title: 'Come pagare con pagoPA',
+                    organization: 'pagoPA S.p.A.',
+                    url: 'https://www.pagopa.gov.it/it/cittadini/dove-pagare/',
+                    type: 'official',
+                    usedFor: 'Metodi di pagamento e canali',
+                    lastCheckedAt: '2026-05-14'
                 }
             ]
         }
