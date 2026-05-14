@@ -7,19 +7,23 @@ Busssola è una piattaforma civica pensata per aiutare cittadini, famiglie, stud
 ## Obiettivo del Progetto
 Rendere accessibili a tutti le informazioni su come esercitare i propri diritti e gestire i propri doveri, eliminando il gergo burocratico e fornendo protocolli operativi chiari.
 
-## Aree di Intervento
-- **Documenti e Identità**: SPID, CIE, Passaporto, Tessera Sanitaria.
-- **Lavoro e Diritti**: NASpI, dimissioni telematiche, agevolazioni INPS.
-- **Diritti Digitali**: Sicurezza account, privacy, truffe, cyberbullismo.
-- **Famiglia e Bonus**: Agevolazioni e servizi territoriali.
-- **Casa e Residenza**: Procedure comunali e contratti.
+## Aree di Intervento (18 Macro-aree)
+- **Documenti e Identità**: SPID, CIE, Passaporto, ANPR, PEC.
+- **Lavoro**: NASpI, dimissioni, contratti, stage.
+- **Casa**: Affitto, residenza, utenze, TARI.
+- **Sicurezza e Privacy**: Account, passkey, truffe, phishing, malware.
+- **Sanità**: Medico base, fascicolo elettronico, CPS, consultori.
+- **Scuola e Famiglia**: Cyberbullismo, patti digitali, sharenting.
+- **Altro**: Immigrazione, Consumatori, Mobilità, Università, Anziani.
 
-## Stato del Progetto (MVP v1)
-- **Moduli Totali**: 18
-- **Guide Pubblicate**: 57+ (tutte verificate tramite Quality Gate)
-- **Organizzazioni Fonti**: 15+ (AgID, INPS, Agenzia delle Entrate, Ministeri, Polizia Postale, ecc.)
-- **Stato**: Public MVP — Production Ready
-- **Ultimo Aggiornamento**: Maggio 2024
+## Stato del Progetto (Public Resource Hub v2)
+- **Moduli Totali**: 30+
+- **Guide Pubblicate**: 125+ (tutte verificate tramite Quality Gate)
+- **Checklist Operative**: 40+
+- **Termini Glossario**: 130+
+- **Organizzazioni Fonti**: 40+ (INPS, AgID, Polizia Postale, Garante Privacy, ecc.)
+- **Stato**: Public Resource Hub v2 — Production Ready
+- **Ultimo Aggiornamento**: Maggio 2026
 
 ## Principi Editoriali
 Per garantire l'affidabilità delle informazioni, ogni guida su Busssola segue criteri rigidi:

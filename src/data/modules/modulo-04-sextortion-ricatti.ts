@@ -5,7 +5,7 @@ export const modulo_04_sextortion_ricatti: Module = {
     lastUpdated: '2024-05-13',
     title: 'Modulo 4: Sextortion e Ricatti Sessuali',
     description: 'Protocolli rigorosi per gestire estorsioni basate su immagini intime, blocco tecnico della diffusione e tutele legali del Garante Privacy.',
-    category: 'diritti-digitali',
+    category: 'emergenze',
     difficulty: 'intermedia',
     icon: 'AlertCircle',
     themeColor: 'accent-red',
@@ -14,7 +14,8 @@ export const modulo_04_sextortion_ricatti: Module = {
             id: 'sextortion-what-is',
             slug: 'sextortion-riconoscere-il-ricatto',
             title: 'Sextortion: Riconoscere il ricatto',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'emergenze',
             audience: ['adults', 'minors', 'victims'],
             level: 'base',
             estimatedMinutes: 5,
@@ -31,6 +32,12 @@ export const modulo_04_sextortion_ricatti: Module = {
                 'Minacce di "rovinarti la vita" o "distruggere la tua carriera".'
             ],
             doNow: [
+                'Mantieni la calma. Il panico ti spinge a pagare, che è l\'errore più grave.',
+                'INTERROMPI OGNI CONTATTO. Non rispondere, non supplicare, non giustificarti.',
+                'Metti i tuoi profili social in modalità privata e cambia lo username se possibile.',
+                'Fai screenshot di tutto: la chat, il profilo del ricattatore, le prove che ha del materiale.'
+            ],
+            steps: [
                 'Mantieni la calma. Il panico ti spinge a pagare, che è l\'errore più grave.',
                 'INTERROMPI OGNI CONTATTO. Non rispondere, non supplicare, non giustificarti.',
                 'Metti i tuoi profili social in modalità privata e cambia lo username se possibile.',
@@ -87,7 +94,8 @@ export const modulo_04_sextortion_ricatti: Module = {
             id: 'revenge-porn-legal',
             slug: 'revenge-porn-diritti-legali-rimozione',
             title: 'Revenge Porn: I tuoi diritti legali',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'emergenze',
             audience: ['adults', 'victims'],
             level: 'medio',
             estimatedMinutes: 6,
@@ -103,6 +111,12 @@ export const modulo_04_sextortion_ricatti: Module = {
                 'Ricevi link che portano a contenuti che ti ritraggono in situazioni intime.'
             ],
             doNow: [
+                'Segnala il contenuto al Garante Privacy tramite il modulo online dedicato.',
+                'Segnala il contenuto direttamente alla piattaforma (es. "Segnala per nudità o atti sessuali").',
+                'Se il contenuto è su Google, usa lo strumento di rimozione per "Informazioni personali non consensuali".',
+                'Fai screenshot degli URL esatti dove si trova il materiale.'
+            ],
+            steps: [
                 'Segnala il contenuto al Garante Privacy tramite il modulo online dedicato.',
                 'Segnala il contenuto direttamente alla piattaforma (es. "Segnala per nudità o atti sessuali").',
                 'Se il contenuto è su Google, usa lo strumento di rimozione per "Informazioni personali non consensuali".',
@@ -158,7 +172,8 @@ export const modulo_04_sextortion_ricatti: Module = {
             id: 'stopncii-technical',
             slug: 'stopncii-bloccare-foto-intime-online',
             title: 'StopNCII: Bloccare la diffusione tecnica',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'emergenze',
             audience: ['adults', 'minors', 'victims'],
             level: 'base',
             estimatedMinutes: 5,
@@ -173,6 +188,12 @@ export const modulo_04_sextortion_ricatti: Module = {
                 'Temi che un ex partner possa caricare materiale intimo per vendetta.'
             ],
             doNow: [
+                'Vai su StopNCII.org dal tuo browser privato.',
+                'Seleziona i file che vuoi proteggere (foto o video).',
+                'Il sito genererà l\'Hash localmente. Segnati il "Case Number" e il PIN generati: sono gli unici modi per gestire la tua segnalazione in futuro.',
+                'Invia gli Hash alle piattaforme partecipanti tramite il portale.'
+            ],
+            steps: [
                 'Vai su StopNCII.org dal tuo browser privato.',
                 'Seleziona i file che vuoi proteggere (foto o video).',
                 'Il sito genererà l\'Hash localmente. Segnati il "Case Number" e il PIN generati: sono gli unici modi per gestire la tua segnalazione in futuro.',
@@ -226,7 +247,8 @@ export const modulo_04_sextortion_ricatti: Module = {
             id: 'paying-blackmail-risks',
             slug: 'perche-non-pagare-mai-ricatto-sextortion',
             title: 'Perché pagare un ricatto quasi sempre peggiora la situazione',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'emergenze',
             audience: ['victims', 'adults'],
             level: 'medio',
             estimatedMinutes: 5,
@@ -242,6 +264,12 @@ export const modulo_04_sextortion_ricatti: Module = {
                 'Ti chiede pagamenti in criptovalute o carte regalo (Apple/Amazon) per essere anonimo.'
             ],
             doNow: [
+                'Interrompi immediatamente ogni comunicazione. Non rispondere più a nessun messaggio.',
+                'Non pagare nulla. Se hai già pagato, fermati subito e non inviare altro denaro.',
+                'Salva le prove del ricatto (screenshot dei messaggi e delle richieste di soldi).',
+                'Denuncia il fatto alla Polizia Postale: hanno protocolli specifici per questi criminali internazionali.'
+            ],
+            steps: [
                 'Interrompi immediatamente ogni comunicazione. Non rispondere più a nessun messaggio.',
                 'Non pagare nulla. Se hai già pagato, fermati subito e non inviare altro denaro.',
                 'Salva le prove del ricatto (screenshot dei messaggi e delle richieste di soldi).',

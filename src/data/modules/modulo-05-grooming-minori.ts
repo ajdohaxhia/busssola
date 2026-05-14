@@ -5,7 +5,7 @@ export const modulo_05_grooming_minori: Module = {
     lastUpdated: '2024-05-13',
     title: 'Modulo 5: Grooming e Protezione Minori',
     description: 'Riconosci le fasi dell\'adescamento online, i segnali di allarme nei minori e i protocolli di intervento di Polizia Postale e Save the Children.',
-    category: 'diritti-digitali',
+    category: 'famiglia',
     difficulty: 'intermedia',
     icon: 'UserCheck',
     themeColor: 'accent-yellow',
@@ -14,7 +14,8 @@ export const modulo_05_grooming_minori: Module = {
             id: 'grooming-phases',
             slug: 'fasi-adescamento-online-grooming',
             title: 'Le fasi dell\'adescamento online',
-            category: 'diritti-digitali',
+            mainEntity: 'Telefono Azzurro / Polizia Postale',
+            category: 'famiglia',
             audience: ['parents', 'teachers', 'adults'],
             level: 'base',
             estimatedMinutes: 6,
@@ -31,6 +32,12 @@ export const modulo_05_grooming_minori: Module = {
                 'Curiosità eccessiva sulla vita privata, orari dei genitori e se il minore è solo in camera.'
             ],
             doNow: [
+                'Se sospetti un adescamento, non affrontare l\'adescatore: potrebbe sparire e cancellare le prove.',
+                'Inizia a monitorare (senza allarmare il minore) le chat e i profili coinvolti.',
+                'Prendi il controllo dei dispositivi e fai screenshot di tutte le conversazioni.',
+                'Contatta immediatamente la Polizia Postale per una consulenza.'
+            ],
+            steps: [
                 'Se sospetti un adescamento, non affrontare l\'adescatore: potrebbe sparire e cancellare le prove.',
                 'Inizia a monitorare (senza allarmare il minore) le chat e i profili coinvolti.',
                 'Prendi il controllo dei dispositivi e fai screenshot di tutte le conversazioni.',
@@ -87,7 +94,8 @@ export const modulo_05_grooming_minori: Module = {
             id: 'gaming-grooming-safety',
             slug: 'grooming-nel-gaming-e-chat-vocali',
             title: 'Pericolo Gaming: Più che un gioco',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'famiglia',
             audience: ['parents', 'minors'],
             level: 'base',
             estimatedMinutes: 6,
@@ -104,6 +112,12 @@ export const modulo_05_grooming_minori: Module = {
                 'Richiesta di fare "sfide" in videochiamata per ottenere premi nel gioco.'
             ],
             doNow: [
+                'Disabilita la chat vocale con estranei nelle impostazioni del gioco (Parental Control).',
+                'Spiega al minore che gli oggetti virtuali hanno un valore reale e non vanno accettati da chi non si conosce offline.',
+                'Mantieni la console o il PC in una stanza comune della casa.',
+                'Controlla periodicamente le amicizie nelle app di chat collegate (es. Discord).'
+            ],
+            steps: [
                 'Disabilita la chat vocale con estranei nelle impostazioni del gioco (Parental Control).',
                 'Spiega al minore che gli oggetti virtuali hanno un valore reale e non vanno accettati da chi non si conosce offline.',
                 'Mantieni la console o il PC in una stanza comune della casa.',

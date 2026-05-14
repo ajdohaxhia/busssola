@@ -5,7 +5,7 @@ export const modulo_08_scuola_famiglia: Module = {
     lastUpdated: '2024-05-13',
     title: 'Modulo 8: Scuola e Famiglia',
     description: 'Protocolli istituzionali per la gestione del cyberbullismo, il ruolo del docente referente e le tutele della Legge 71/2017.',
-    category: 'diritti-digitali',
+    category: 'famiglia',
     difficulty: 'base',
     icon: 'GraduationCap',
     themeColor: 'accent-yellow',
@@ -14,7 +14,8 @@ export const modulo_08_scuola_famiglia: Module = {
             id: 'cyberbullying-law',
             slug: 'legge-71-2017-cyberbullismo-spiegata',
             title: 'Cyberbullismo: Cosa dice la Legge 71/2017',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'famiglia',
             audience: ['parents', 'teachers', 'minors'],
             level: 'base',
             estimatedMinutes: 5,
@@ -31,6 +32,12 @@ export const modulo_08_scuola_famiglia: Module = {
                 'Cambiamento repentino del rendimento scolastico.'
             ],
             doNow: [
+                'Invia una richiesta di oscuramento/cancellazione al gestore del social network.',
+                'Se il gestore non risponde entro 24 ore o non provvede entro 48, scrivi al Garante Privacy.',
+                'Informa il Docente Referente per il Cyberbullismo della scuola.',
+                'Raccogli le prove (screenshot) senza rispondere alle provocazioni.'
+            ],
+            steps: [
                 'Invia una richiesta di oscuramento/cancellazione al gestore del social network.',
                 'Se il gestore non risponde entro 24 ore o non provvede entro 48, scrivi al Garante Privacy.',
                 'Informa il Docente Referente per il Cyberbullismo della scuola.',
@@ -89,7 +96,8 @@ export const modulo_08_scuola_famiglia: Module = {
             id: 'teacher-first-24h',
             slug: 'docenti-cyberbullismo-prime-24-ore-protocollo',
             title: 'Docenti: Le prime 24 ore dal segnale',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'famiglia',
             audience: ['teachers'],
             level: 'medio',
             estimatedMinutes: 6,
@@ -106,6 +114,13 @@ export const modulo_08_scuola_famiglia: Module = {
                 'Segnalazioni da parte di altri genitori o compagni.'
             ],
             doNow: [
+                'Informa immediatamente il Dirigente Scolastico e il Docente Referente per il Cyberbullismo.',
+                'Accogli lo studente in un luogo protetto e ascoltalo senza giudicare. Assicuragli che la scuola interverrà.',
+                'Se l\'episodio è grave, la scuola deve convocare i genitori (sia della vittima che dei responsabili) entro 24 ore.',
+                'Ricorda agli studenti che anche "guardare e ridere" senza intervenire alimenta il bullismo.',
+                'Non cancellare eventuali prove se ti vengono mostrate: scatta una foto allo schermo se necessario.'
+            ],
+            steps: [
                 'Informa immediatamente il Dirigente Scolastico e il Docente Referente per il Cyberbullismo.',
                 'Accogli lo studente in un luogo protetto e ascoltalo senza giudicare. Assicuragli che la scuola interverrà.',
                 'Se l\'episodio è grave, la scuola deve convocare i genitori (sia della vittima che dei responsabili) entro 24 ore.',
@@ -150,7 +165,8 @@ export const modulo_08_scuola_famiglia: Module = {
             id: 'parent-first-24h',
             slug: 'genitori-cyberbullismo-scoperta-cosa-fare',
             title: 'Genitori: Le prime 24 ore dalla scoperta',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'famiglia',
             audience: ['parents'],
             level: 'base',
             estimatedMinutes: 6,
@@ -166,6 +182,13 @@ export const modulo_08_scuola_famiglia: Module = {
                 'Rifiuto di frequentare i compagni di classe fuori da scuola.'
             ],
             doNow: [
+                'Mantieni la calma. Non urlare e non sequestrare il telefono immediatamente.',
+                'Dì: "Ho visto cosa sta succedendo. Sono qui per aiutarti a risolvere, non per punirti".',
+                'Salva tutte le prove (screenshot) prima che vengano cancellate.',
+                'Contatta la scuola (Docente Referente) per segnalare l\'accaduto: la collaborazione scuola-famiglia è l\'arma più forte.',
+                'Se la situazione è grave (minacce, estorsioni), contatta la Polizia Postale.'
+            ],
+            steps: [
                 'Mantieni la calma. Non urlare e non sequestrare il telefono immediatamente.',
                 'Dì: "Ho visto cosa sta succedendo. Sono qui per aiutarti a risolvere, non per punirti".',
                 'Salva tutte le prove (screenshot) prima che vengano cancellate.',

@@ -5,7 +5,7 @@ export const modulo_04b_sextortion_ricatti: Module = {
     lastUpdated: '2024-05-13',
     title: 'Modulo 4b: Sextortion (Protocolli Avanzati)',
     description: 'Analisi dei profili Catfish e realtà statistica sulla diffusione dei contenuti: dati per mantenere la calma.',
-    category: 'diritti-digitali',
+    category: 'emergenze',
     difficulty: 'intermedia',
     icon: 'AlertCircle',
     themeColor: 'accent-red',
@@ -14,7 +14,8 @@ export const modulo_04b_sextortion_ricatti: Module = {
             id: 'catfishing-indicators',
             slug: 'catfishing-come-riconoscere-profili-falsi',
             title: 'Catfishing: Riconoscere le "Esche"',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'emergenze',
             audience: ['adults', 'minors', 'prevention'],
             level: 'base',
             estimatedMinutes: 5,
@@ -31,6 +32,11 @@ export const modulo_04b_sextortion_ricatti: Module = {
                 'Le foto sembrano "troppo perfette" o professionali.'
             ],
             doNow: [
+                'Esegui una "Ricerca inversa delle immagini" su Google con la sua foto profilo.',
+                'Chiedi una videochiamata breve per conferma: se rifiuta, interrompi ogni scambio di materiale sensibile.',
+                'Non fornire mai dati reali (cognome, indirizzo, posto di lavoro) prima di aver verificato l\'identità.'
+            ],
+            steps: [
                 'Esegui una "Ricerca inversa delle immagini" su Google con la sua foto profilo.',
                 'Chiedi una videochiamata breve per conferma: se rifiuta, interrompi ogni scambio di materiale sensibile.',
                 'Non fornire mai dati reali (cognome, indirizzo, posto di lavoro) prima di aver verificato l\'identità.'
@@ -76,7 +82,8 @@ export const modulo_04b_sextortion_ricatti: Module = {
             id: 'preserving-digital-evidence',
             slug: 'come-salvare-prove-digitali-valore-legale',
             title: 'Come salvare prove con valore legale',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'emergenze',
             audience: ['victims', 'adults'],
             level: 'medio',
             estimatedMinutes: 8,
@@ -91,6 +98,12 @@ export const modulo_04b_sextortion_ricatti: Module = {
                 'Usi app che prevedono messaggi a scomparsa (Snapchat, segrete di Telegram).'
             ],
             doNow: [
+                'Usa la funzione "Esporta Chat" di WhatsApp (senza allegati o con allegati a seconda della dimensione) e inviatela via mail.',
+                'Non cancellare mai la conversazione originale dal telefono: il dispositivo stesso è la prova principale.',
+                'Fai video-registrazioni dello schermo mentre scorri la chat, mostrando chiaramente il numero di telefono del mittente e le date.',
+                'Se il contenuto è su una pagina web, usa servizi di "Web Snapshot" certificati o salva la pagina completa (file .html) sul PC.'
+            ],
+            steps: [
                 'Usa la funzione "Esporta Chat" di WhatsApp (senza allegati o con allegati a seconda della dimensione) e inviatela via mail.',
                 'Non cancellare mai la conversazione originale dal telefono: il dispositivo stesso è la prova principale.',
                 'Fai video-registrazioni dello schermo mentre scorri la chat, mostrando chiaramente il numero di telefono del mittente e le date.',

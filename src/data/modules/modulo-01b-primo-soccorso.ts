@@ -5,7 +5,7 @@ export const modulo_01b_primo_soccorso: Module = {
     lastUpdated: '2024-05-13',
     title: 'Modulo 1b: Primo Soccorso (Casi Specifici)',
     description: 'Procedure per emergenze meno comuni ma gravissime: doxxing, sim-swapping e truffe bancarie mirate.',
-    category: 'diritti-digitali',
+    category: 'emergenze',
     difficulty: 'intermedia',
     icon: 'ShieldAlert',
     themeColor: 'accent-red',
@@ -14,7 +14,8 @@ export const modulo_01b_primo_soccorso: Module = {
             id: 'doxxing-sos',
             slug: 'doxxing-rimuovere-indirizzo-telefono-online',
             title: 'Doxxing: Rimuovere indirizzo e telefono online',
-            category: 'diritti-digitali',
+            mainEntity: 'Garante Privacy',
+            category: 'emergenze',
             audience: ['adults', 'victims'],
             level: 'base',
             estimatedMinutes: 5,
@@ -30,6 +31,12 @@ export const modulo_01b_primo_soccorso: Module = {
                 'Presenza di tue informazioni personali in thread di forum ostili.'
             ],
             doNow: [
+                'Usa lo strumento "Risultati che ti riguardano" di Google per chiedere la rimozione dei tuoi dati dai risultati di ricerca.',
+                'Segnala il post alla piattaforma (es. Twitter/X, Facebook, Telegram) come "Molestia" o "Condivisione di informazioni private".',
+                'Cambia le impostazioni di privacy dei tuoi social in "Massima Protezione".',
+                'Se temi per la tua incolumità fisica, recati immediatamente alla stazione di Polizia più vicina.'
+            ],
+            steps: [
                 'Usa lo strumento "Risultati che ti riguardano" di Google per chiedere la rimozione dei tuoi dati dai risultati di ricerca.',
                 'Segnala il post alla piattaforma (es. Twitter/X, Facebook, Telegram) come "Molestia" o "Condivisione di informazioni private".',
                 'Cambia le impostazioni di privacy dei tuoi social in "Massima Protezione".',
@@ -85,7 +92,8 @@ export const modulo_01b_primo_soccorso: Module = {
             id: 'sim-swap-sos',
             slug: 'sim-swapping-cosa-fare-emergenza',
             title: 'SIM Swapping: Se il telefono "muore" all\'improvviso',
-            category: 'diritti-digitali',
+            mainEntity: 'Operatore Telefonico',
+            category: 'emergenze',
             audience: ['adults', 'victims'],
             level: 'medio',
             estimatedMinutes: 6,
@@ -101,6 +109,12 @@ export const modulo_01b_primo_soccorso: Module = {
                 'L\'impossibilità di ricevere o effettuare chiamate/SMS.'
             ],
             doNow: [
+                'Chiama subito il tuo operatore (da un altro telefono) e chiedi il blocco immediato della SIM.',
+                'Accedi immediatamente alla tua App Bancaria e blocca l\'accesso o contatta il numero verde blocchi.',
+                'Cambia la password della tua EMAIL principale (e disattiva temporaneamente il recupero via SMS se possibile).',
+                'Recati presso un punto vendita del tuo operatore per richiedere una nuova SIM fisica.'
+            ],
+            steps: [
                 'Chiama subito il tuo operatore (da un altro telefono) e chiedi il blocco immediato della SIM.',
                 'Accedi immediatamente alla tua App Bancaria e blocca l\'accesso o contatta il numero verde blocchi.',
                 'Cambia la password della tua EMAIL principale (e disattiva temporaneamente il recupero via SMS se possibile).',
@@ -147,7 +161,8 @@ export const modulo_01b_primo_soccorso: Module = {
             id: 'email-hacked-sos',
             slug: 'email-compromessa-cosa-fare-subito',
             title: 'Email compromessa: Primi 30 minuti',
-            category: 'diritti-digitali',
+            mainEntity: 'Google / Apple',
+            category: 'emergenze',
             audience: ['adults', 'victims'],
             level: 'medio',
             estimatedMinutes: 8,
@@ -164,6 +179,13 @@ export const modulo_01b_primo_soccorso: Module = {
                 'Cartella "Cestino" piena di mail di reset password che non hai mai visto (l\'hacker le cancella subito per non farsi scoprire).'
             ],
             doNow: [
+                'Cambia la password dell\'email usando un dispositivo pulito (es. uno smartphone sicuro, non il PC che potrebbe essere infetto).',
+                'Controlla le "Regole di Inoltro" o "Filtri": gli hacker spesso impostano l\'inoltro automatico di tutte le tue mail a un loro indirizzo.',
+                'Esegui il log-out da tutti i dispositivi (Sessioni attive).',
+                'Verifica che le informazioni di recupero (numero di telefono e mail secondaria) non siano state modificate.',
+                'Controlla la cartella "Inviata" per vedere se sono state inviate mail truffaldine ai tuoi contatti.'
+            ],
+            steps: [
                 'Cambia la password dell\'email usando un dispositivo pulito (es. uno smartphone sicuro, non il PC che potrebbe essere infetto).',
                 'Controlla le "Regole di Inoltro" o "Filtri": gli hacker spesso impostano l\'inoltro automatico di tutte le tue mail a un loro indirizzo.',
                 'Esegui il log-out da tutti i dispositivi (Sessioni attive).',

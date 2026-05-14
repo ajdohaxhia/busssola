@@ -5,7 +5,7 @@ export const modulo_08b_scuola_famiglia: Module = {
     lastUpdated: '2024-05-13',
     title: 'Modulo 8b: Scuola e Famiglia (Approfondimento)',
     description: 'Approfondimento sui rischi dello Sharenting e sulle conseguenze legali del sexting tra minori.',
-    category: 'diritti-digitali',
+    category: 'famiglia',
     difficulty: 'intermedia',
     icon: 'GraduationCap',
     themeColor: 'accent-yellow',
@@ -14,7 +14,8 @@ export const modulo_08b_scuola_famiglia: Module = {
             id: 'sharenting-risks',
             slug: 'sharenting-rischi-pubblicare-foto-figli-online',
             title: 'Sharenting: I rischi dell\'orgoglio',
-            category: 'diritti-digitali',
+            mainEntity: 'Garante Privacy',
+            category: 'famiglia',
             audience: ['parents', 'teachers'],
             level: 'base',
             estimatedMinutes: 5,
@@ -30,6 +31,12 @@ export const modulo_08b_scuola_famiglia: Module = {
                 'Il profilo social su cui pubblichi è "Pubblico" e chiunque può scaricare le immagini.'
             ],
             doNow: [
+                'Imposta i tuoi profili social su "Privato" e consenti la vista solo ad amici stretti.',
+                'Evita di pubblicare foto dove il viso del minore è chiaramente visibile (usa emoticon o inquadrature di spalle).',
+                'Non pubblicare mai foto del minore in situazioni intime (bagnetto, spiaggia, abbigliamento succinto).',
+                'Chiedi il permesso al co-genitore prima di pubblicare (è un obbligo legale in Italia).'
+            ],
+            steps: [
                 'Imposta i tuoi profili social su "Privato" e consenti la vista solo ad amici stretti.',
                 'Evita di pubblicare foto dove il viso del minore è chiaramente visibile (usa emoticon o inquadrature di spalle).',
                 'Non pubblicare mai foto del minore in situazioni intime (bagnetto, spiaggia, abbigliamento succinto).',
@@ -75,7 +82,8 @@ export const modulo_08b_scuola_famiglia: Module = {
             id: 'family-digital-agreement',
             slug: 'patto-digitale-famiglia-regole-condivise',
             title: 'Patto digitale di famiglia',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'famiglia',
             audience: ['parents', 'minors'],
             level: 'base',
             estimatedMinutes: 8,
@@ -91,6 +99,13 @@ export const modulo_08b_scuola_famiglia: Module = {
                 'Reazioni aggressive se il tempo d\'uso viene limitato.'
             ],
             doNow: [
+                'Scarica o scrivi un "Patto di Famiglia" (trovi modelli su Save the Children o Internet Matters).',
+                'Stabilite insieme gli "orari offline" (es: niente telefoni a tavola, niente telefoni dopo le 21:00).',
+                'Definite le "Zone Bianche" della casa (es: la camera da letto è una zona senza smartphone di notte).',
+                'Chiarisci che il genitore ha il diritto/dovere di conoscere le password finché il minore non dimostra piena maturità.',
+                'Stabilite le conseguenze per la violazione del patto (es: riduzione del tempo d\'uso).'
+            ],
+            steps: [
                 'Scarica o scrivi un "Patto di Famiglia" (trovi modelli su Save the Children o Internet Matters).',
                 'Stabilite insieme gli "orari offline" (es: niente telefoni a tavola, niente telefoni dopo le 21:00).',
                 'Definite le "Zone Bianche" della casa (es: la camera da letto è una zona senza smartphone di notte).',

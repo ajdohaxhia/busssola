@@ -13,7 +13,7 @@ export const DEFAULT_OG_IMAGE = '/og-image.png'
 const TOTAL_LESSONS = ALL_MODULES.reduce((acc, module) => acc + module.lessons.length, 0)
 
 export const SITE_DESCRIPTION =
-    `Busssola è una piattaforma civica gratuita per orientarsi tra documenti, diritti e procedure in Italia: ${ALL_MODULES.length} guide pratiche su SPID, CIE, NASpI, bonus, sicurezza digitale e tutele del cittadino.`
+    `Busssola è l'hub pubblico di risorse civiche gratuite per orientarsi tra documenti, diritti e procedure in Italia: oltre 120 guide pratiche su SPID, CIE, NASpI, bonus, sicurezza digitale e tutele del cittadino.`
 
 export const TOTAL_MODULES = ALL_MODULES.length
 export { TOTAL_LESSONS }

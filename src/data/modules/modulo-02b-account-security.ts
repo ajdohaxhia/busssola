@@ -5,7 +5,7 @@ export const modulo_02b_account_security: Module = {
     lastUpdated: '2024-05-13',
     title: 'Modulo 2b: Checkup Privacy & Sicurezza',
     description: 'Procedure guidate per controllare cosa sanno di te Google, Facebook e Instagram, e come blindare i tuoi dati.',
-    category: 'diritti-digitali',
+    category: 'sicurezza',
     difficulty: 'intermedia',
     icon: 'Key',
     themeColor: 'accent-cyan',
@@ -14,7 +14,8 @@ export const modulo_02b_account_security: Module = {
             id: 'google-privacy-audit',
             slug: 'google-privacy-checkup-guida-completa',
             title: 'Checkup Google: Pulizia totale dei dati',
-            category: 'diritti-digitali',
+            mainEntity: 'Google',
+            category: 'sicurezza',
             audience: ['adults', 'minors', 'prevention'],
             level: 'base',
             estimatedMinutes: 6,
@@ -30,6 +31,12 @@ export const modulo_02b_account_security: Module = {
                 'Il tuo account risulta collegato a decine di app o siti che non usi più.'
             ],
             doNow: [
+                'Accedi a "Dati e privacy" nel tuo Account Google.',
+                'Esegui il "Controllo privacy" guidato.',
+                'Attiva l\'"Eliminazione automatica" per la Cronologia delle posizioni e l\'Attività web e app (consigliato: 3 mesi).',
+                'Controlla "Le tue connessioni con app e servizi di terze parti" e rimuovi quelle inutilizzate.'
+            ],
+            steps: [
                 'Accedi a "Dati e privacy" nel tuo Account Google.',
                 'Esegui il "Controllo privacy" guidato.',
                 'Attiva l\'"Eliminazione automatica" per la Cronologia delle posizioni e l\'Attività web e app (consigliato: 3 mesi).',
@@ -83,7 +90,8 @@ export const modulo_02b_account_security: Module = {
             id: 'data-breach-response',
             slug: 'data-breach-violazione-dati-cosa-fare',
             title: 'Data Breach: Se i tuoi dati sono stati rubati',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'sicurezza',
             audience: ['adults', 'victims'],
             level: 'medio',
             estimatedMinutes: 6,
@@ -100,6 +108,13 @@ export const modulo_02b_account_security: Module = {
                 'Notifiche di tentativi di accesso ai tuoi account da altri paesi.'
             ],
             doNow: [
+                'Cambia immediatamente la password del sito coinvolto.',
+                'Se usavi la stessa password su altri siti, cambiala OVUNQUE (e usa un password manager per non farlo mai più).',
+                'Attiva la 2FA (Autenticazione a due fattori) su tutti gli account sensibili.',
+                'Monitora il tuo conto bancario se il sito coinvolto conteneva dati di pagamento.',
+                'Sii estremamente sospettoso verso mail o SMS che riceverai nei prossimi giorni: l\'hacker conosce i tuoi dati e li userà per farti cliccare su link falsi.'
+            ],
+            steps: [
                 'Cambia immediatamente la password del sito coinvolto.',
                 'Se usavi la stessa password su altri siti, cambiala OVUNQUE (e usa un password manager per non farlo mai più).',
                 'Attiva la 2FA (Autenticazione a due fattori) su tutti gli account sensibili.',
@@ -155,7 +170,8 @@ export const modulo_02b_account_security: Module = {
             id: 'digital-inheritance-setup',
             slug: 'eredita-digitale-contatto-erede-dati',
             title: 'Eredità Digitale: Prepara il tuo lascito',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'sicurezza',
             audience: ['adults'],
             level: 'medio',
             estimatedMinutes: 7,
@@ -169,6 +185,11 @@ export const modulo_02b_account_security: Module = {
                 'N/A - Si tratta di pianificazione preventiva.'
             ],
             doNow: [
+                'Su iPhone: Vai in Impostazioni > [Nome] > Accesso e sicurezza > Contatto erede e aggiungi una persona di fiducia.',
+                'Su Google: Cerca "Gestione account inattivo" e imposta dopo quanti mesi di inattività inviare i tuoi dati ai tuoi cari.',
+                'Comunica alla persona scelta che riceverà una "chiave di accesso" digitale: senza quella, non potrà fare nulla.'
+            ],
+            steps: [
                 'Su iPhone: Vai in Impostazioni > [Nome] > Accesso e sicurezza > Contatto erede e aggiungi una persona di fiducia.',
                 'Su Google: Cerca "Gestione account inattivo" e imposta dopo quanti mesi di inattività inviare i tuoi dati ai tuoi cari.',
                 'Comunica alla persona scelta che riceverà una "chiave di accesso" digitale: senza quella, non potrà fare nulla.'

@@ -5,7 +5,7 @@ export const modulo_03b_truffe_phishing: Module = {
     lastUpdated: '2024-05-13',
     title: 'Modulo 3b: Casi Specifici di Truffa',
     description: 'Analisi profonda delle truffe più recenti su Vinted, Marketplace e piattaforme di annunci.',
-    category: 'diritti-digitali',
+    category: 'truffe',
     difficulty: 'intermedia',
     icon: 'Target',
     themeColor: 'accent-orange',
@@ -14,7 +14,8 @@ export const modulo_03b_truffe_phishing: Module = {
             id: 'vinted-wallet-scam',
             slug: 'truffa-vinted-finto-supporto-link-sms',
             title: 'Vinted: La truffa del "Finto Supporto"',
-            category: 'diritti-digitali',
+            mainEntity: 'Vinted',
+            category: 'truffe',
             audience: ['adults', 'victims'],
             level: 'base',
             estimatedMinutes: 5,
@@ -31,6 +32,12 @@ export const modulo_03b_truffe_phishing: Module = {
                 'L\'acquirente insiste per avere la tua mail o il tuo numero di telefono.'
             ],
             doNow: [
+                'Chiudi immediatamente il link e non inserire alcun dato.',
+                'Controlla lo stato dell\'ordine solo all\'interno dell\'App ufficiale di Vinted.',
+                'Segnala l\'utente che ti ha contattato e bloccalo.',
+                'Se hai già inserito i dati della carta, contatta subito la banca per il blocco.'
+            ],
+            steps: [
                 'Chiudi immediatamente il link e non inserire alcun dato.',
                 'Controlla lo stato dell\'ordine solo all\'interno dell\'App ufficiale di Vinted.',
                 'Segnala l\'utente che ti ha contattato e bloccalo.',
@@ -77,7 +84,8 @@ export const modulo_03b_truffe_phishing: Module = {
             id: 'smishing-fake-courier',
             slug: 'truffa-sms-finto-corriere-pacco-giacenza',
             title: 'Finto Corriere: SMS e pacchi in giacenza',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'truffe',
             audience: ['adults', 'parents'],
             level: 'base',
             estimatedMinutes: 5,
@@ -94,6 +102,12 @@ export const modulo_03b_truffe_phishing: Module = {
                 'Il messaggio arriva anche se non stai aspettando alcun pacco.'
             ],
             doNow: [
+                'Non cliccare sul link.',
+                'Se stai aspettando un pacco, vai sul sito ufficiale del venditore o del corriere e inserisci il codice di tracciamento (tracking) a mano.',
+                'Blocca il numero mittente (anche se spesso sono numeri "spoofati" o generati automaticamente).',
+                'Se hai già cliccato e inserito dati della carta, segui il protocollo "Dati carta compromessi".'
+            ],
+            steps: [
                 'Non cliccare sul link.',
                 'Se stai aspettando un pacco, vai sul sito ufficiale del venditore o del corriere e inserisci il codice di tracciamento (tracking) a mano.',
                 'Blocca il numero mittente (anche se spesso sono numeri "spoofati" o generati automaticamente).',
@@ -138,7 +152,8 @@ export const modulo_03b_truffe_phishing: Module = {
             id: 'marketplace-buyer-protection',
             slug: 'truffa-marketplace-acquisto-non-ricevuto',
             title: 'Truffa Marketplace: Lato Acquirente',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'truffe',
             audience: ['adults', 'victims'],
             level: 'base',
             estimatedMinutes: 6,
@@ -155,6 +170,12 @@ export const modulo_03b_truffe_phishing: Module = {
                 'Ti invia foto di documenti (spesso rubati ad altre vittime) per "dimostrare" la sua identità.'
             ],
             doNow: [
+                'Contatta subito l\'assistenza della piattaforma (Vinted, eBay, ecc.) per segnalare il profilo.',
+                'Se hai pagato con PayPal (Acquisti), apri subito una contestazione.',
+                'Se hai pagato con bonifico, contatta la tua banca per vedere se è possibile annullarlo (raro se sono passate più di 24h).',
+                'Raccogli tutti i dati: screenshot della chat, numero di carta/IBAN del truffatore, link al profilo.'
+            ],
+            steps: [
                 'Contatta subito l\'assistenza della piattaforma (Vinted, eBay, ecc.) per segnalare il profilo.',
                 'Se hai pagato con PayPal (Acquisti), apri subito una contestazione.',
                 'Se hai pagato con bonifico, contatta la tua banca per vedere se è possibile annullarlo (raro se sono passate più di 24h).',

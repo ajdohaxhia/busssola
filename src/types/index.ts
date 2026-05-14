@@ -9,8 +9,29 @@ export interface Source {
   lastCheckedAt: string; // YYYY-MM-DD
 }
 
+export type CategoryID = 
+  | 'documenti' 
+  | 'lavoro' 
+  | 'casa' 
+  | 'soldi' 
+  | 'bonus' 
+  | 'sanita' 
+  | 'famiglia' 
+  | 'scuola' 
+  | 'sicurezza' 
+  | 'truffe' 
+  | 'privacy' 
+  | 'emergenze' 
+  | 'immigrazione' 
+  | 'consumatori' 
+  | 'mobilita' 
+  | 'universita' 
+  | 'anziani' 
+  | 'disabilita' 
+  | 'casa-digitale';
+
 /**
- * Lesson (Lezione o Scheda Pratica)
+ * Lesson (Scheda Pratica o Guida)
  * The atomic unit of content in Busssola.
  */
 export interface Lesson {
@@ -18,7 +39,7 @@ export interface Lesson {
   slug?: string;
   title: string;
   category: string;
-  audience: ('adults' | 'minors' | 'parents' | 'teachers' | 'victims' | 'prevention' | 'school' | 'cittadini' | 'lavoratori' | 'famiglie' | 'studenti' | 'avanzata')[];
+  audience: ('adults' | 'minors' | 'parents' | 'teachers' | 'victims' | 'prevention' | 'school' | 'cittadini' | 'lavoratori' | 'famiglie' | 'studenti' | 'avanzata' | 'stranieri' | 'anziani' | 'disabili' | 'caregiver')[];
   level: Difficulty;
   estimatedMinutes: number;
   estimatedCosts?: string;
@@ -28,7 +49,7 @@ export interface Lesson {
   tags?: string[];
   
   // Synthesis & Context
-  synthesis?: string; // Sintesi operativa
+  synthesis?: string; // Sintesi operativa (5 righe)
   scenario?: string; // Cosa sta succedendo / Contesto
   question?: string; // La domanda a cui risponde
   
@@ -39,7 +60,8 @@ export interface Lesson {
   
   // Actionable Content
   whenToDo?: string; // Quando serve
-  doNow: string[]; // Cosa fare subito
+  prerequisites?: string[]; // Prerequisiti
+  doNow: string[]; // Cosa fare subito / Passo dopo passo
   dontDo: string[]; // Cosa NON fare
   whatToPrepare?: string[]; // Documenti o cose da preparare
   whatYouNeed?: string[]; // Legacy
@@ -57,12 +79,15 @@ export interface Lesson {
   lastReviewedAt: string; // YYYY-MM-DD
   qualityGatePassed: boolean;
   relatedLessons?: string[];
+  relatedGlossaryTerms?: string[];
   mainEntity?: string; // Ente principale di riferimento
   whereToDo?: string; // Dove si fa (online, ufficio, ecc)
+  timeToComplete?: string; // Tempi indicativi (es. "10 minuti", "3 giorni")
+  practicalDisclaimer?: string; // Disclaimer pratico
 }
 
 /**
- * Module (Modulo)
+ * Module (Modulo o Area Tematica)
  * A collection of lessons on a macro-topic.
  */
 export interface ModuleMetadata {
@@ -74,7 +99,7 @@ export interface ModuleMetadata {
     difficulty: Difficulty;
     themeColor?: string;
     icon?: string;
-    category?: 'documenti' | 'lavoro' | 'casa' | 'soldi' | 'sicurezza' | 'famiglia' | 'scuola' | 'diritti-digitali' | 'emergenze' | 'documenti-identita' | 'lavoro-disoccupazione';
+    category?: CategoryID;
     progress?: number;
     lessonCount: number;
     featuredType?: 'start' | 'curated' | 'situational' | 'none';
@@ -103,6 +128,8 @@ export interface LearningPath {
     estimatedDuration: string;
     cta: string;
     relatedPathIds: string[];
-    type: 'onboarding' | 'security' | 'relational' | 'emergency' | 'audience' | 'citizen' | 'worker' | 'parent' | 'student';
+    type: 'onboarding' | 'security' | 'relational' | 'emergency' | 'audience' | 'citizen' | 'worker' | 'parent' | 'student' | 'stranger' | 'caregiver';
     level: Difficulty;
+    goals?: string[];
+    steps?: { title: string; description: string; guideId: string }[];
 }

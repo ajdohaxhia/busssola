@@ -5,7 +5,7 @@ export const modulo_02_account_security: Module = {
     lastUpdated: '2024-05-13',
     title: 'Modulo 2: Account e Sicurezza Accessi',
     description: 'Procedure e buone pratiche verificate per blindare i tuoi profili: password robuste, 2FA e gestione sessioni.',
-    category: 'diritti-digitali',
+    category: 'sicurezza',
     difficulty: 'base',
     icon: 'Key',
     themeColor: 'accent-cyan',
@@ -14,7 +14,8 @@ export const modulo_02_account_security: Module = {
             id: 'password-strategy',
             slug: 'creare-password-robuste-passphrase',
             title: 'Password: La fine dell\'era "123456"',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID / ACN',
+            category: 'sicurezza',
             audience: ['adults', 'minors', 'prevention'],
             level: 'base',
             estimatedMinutes: 4,
@@ -31,6 +32,12 @@ export const modulo_02_account_security: Module = {
                 'La password contiene dati personali (nomi, compleanni, animali).'
             ],
             doNow: [
+                'Usa una "Passphrase": una frase lunga invece di una parola (es: "IlMioGattoBluBallaSulTetto2024!").',
+                'Assicurati che la password sia lunga almeno 14-16 caratteri.',
+                'Cambia immediatamente la password della tua EMAIL principale: è il centro della tua vita digitale.',
+                'Usa un Password Manager per non dover ricordare tutto.'
+            ],
+            steps: [
                 'Usa una "Passphrase": una frase lunga invece di una parola (es: "IlMioGattoBluBallaSulTetto2024!").',
                 'Assicurati che la password sia lunga almeno 14-16 caratteri.',
                 'Cambia immediatamente la password della tua EMAIL principale: è il centro della tua vita digitale.',
@@ -86,7 +93,8 @@ export const modulo_02_account_security: Module = {
             id: '2fa-shield',
             slug: 'autenticazione-due-fattori-2fa-guida',
             title: '2FA: Il tuo scudo più forte',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'sicurezza',
             audience: ['adults', 'minors', 'prevention'],
             level: 'base',
             estimatedMinutes: 5,
@@ -102,6 +110,12 @@ export const modulo_02_account_security: Module = {
                 'Il servizio che usi ti suggerisce continuamente di attivare la protezione extra.'
             ],
             doNow: [
+                'Attiva il 2FA su Email, Social e App Bancarie.',
+                'Preferisci le App di Autenticazione (Google Authenticator, Microsoft Authenticator) rispetto agli SMS.',
+                'Salva i "Codici di Backup" in un luogo sicuro e offline (es: stampati su carta).',
+                'Controlla periodicamente i "Dispositivi collegati" nelle impostazioni.'
+            ],
+            steps: [
                 'Attiva il 2FA su Email, Social e App Bancarie.',
                 'Preferisci le App di Autenticazione (Google Authenticator, Microsoft Authenticator) rispetto agli SMS.',
                 'Salva i "Codici di Backup" in un luogo sicuro e offline (es: stampati su carta).',
@@ -156,7 +170,8 @@ export const modulo_02_account_security: Module = {
             id: 'password-managers',
             slug: 'gestori-password-migliori-password-manager',
             title: 'Gestori Password: Perché usarli e quali scegliere',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'sicurezza',
             audience: ['adults', 'prevention'],
             level: 'base',
             estimatedMinutes: 5,
@@ -172,6 +187,12 @@ export const modulo_02_account_security: Module = {
                 'Usi la stessa password per la banca e per un sito di e-commerce poco noto.'
             ],
             doNow: [
+                'Scegli un Password Manager affidabile (es. Bitwarden, KeePass o 1Password).',
+                'Crea una Master Password lunghissima (almeno 20 caratteri) che non dimenticherai mai.',
+                'Inizia a spostare le tue password più importanti (Email, Banca) nel gestore.',
+                'Attiva l\'autenticazione a due fattori (2FA) anche sull\'account del Password Manager.'
+            ],
+            steps: [
                 'Scegli un Password Manager affidabile (es. Bitwarden, KeePass o 1Password).',
                 'Crea una Master Password lunghissima (almeno 20 caratteri) che non dimenticherai mai.',
                 'Inizia a spostare le tue password più importanti (Email, Banca) nel gestore.',
@@ -225,7 +246,8 @@ export const modulo_02_account_security: Module = {
             id: '2fa-backup-codes-guide',
             slug: 'codici-backup-2fa-guida-sopravvivenza',
             title: 'Codici Backup 2FA: La tua ancora di salvezza',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'sicurezza',
             audience: ['adults', 'parents'],
             level: 'medio',
             estimatedMinutes: 5,
@@ -240,6 +262,12 @@ export const modulo_02_account_security: Module = {
                 'L\'unica opzione di backup è un numero di telefono che potresti perdere insieme al device.'
             ],
             doNow: [
+                'Vai nelle impostazioni di sicurezza del tuo account (Google, Apple, Microsoft).',
+                'Trova la sezione "Autenticazione a due fattori" -> "Codici di backup" o "Codici di recupero".',
+                'Genera i codici e stampali oppure scrivili a mano su un foglio da conservare in un luogo sicuro (fisico).',
+                'Se usi un gestore di password (es. Bitwarden), salva i codici all\'interno della nota protetta dell\'account.'
+            ],
+            steps: [
                 'Vai nelle impostazioni di sicurezza del tuo account (Google, Apple, Microsoft).',
                 'Trova la sezione "Autenticazione a due fattori" -> "Codici di backup" o "Codici di recupero".',
                 'Genera i codici e stampali oppure scrivili a mano su un foglio da conservare in un luogo sicuro (fisico).',

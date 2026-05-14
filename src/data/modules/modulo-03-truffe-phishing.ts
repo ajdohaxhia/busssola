@@ -5,7 +5,7 @@ export const modulo_03_truffe_phishing: Module = {
     lastUpdated: '2024-05-13',
     title: 'Modulo 3: Frodi, Truffe e Phishing',
     description: 'Riconosci le tecniche di manipolazione digitale e impara a proteggere i tuoi soldi e i tuoi dati da smishing, vishing e truffe marketplace.',
-    category: 'diritti-digitali',
+    category: 'truffe',
     difficulty: 'base',
     icon: 'Target',
     themeColor: 'accent-orange',
@@ -14,7 +14,8 @@ export const modulo_03_truffe_phishing: Module = {
             id: 'phishing-basics',
             slug: 'phishing-come-riconoscerlo',
             title: 'Phishing: L\'amo via email',
-            category: 'diritti-digitali',
+            mainEntity: 'Polizia Postale',
+            category: 'truffe',
             audience: ['adults', 'minors', 'prevention'],
             level: 'base',
             estimatedMinutes: 5,
@@ -31,6 +32,12 @@ export const modulo_03_truffe_phishing: Module = {
                 'Ti viene chiesto di inserire dati sensibili (PIN, password) direttamente dopo un clic.'
             ],
             doNow: [
+                'Non cliccare su alcun link nell\'email.',
+                'Passa il mouse sopra il link (senza cliccare) per vedere l\'indirizzo reale in basso a sinistra nel browser.',
+                'Se hai dubbi, accedi al servizio scrivendo l\'indirizzo ufficiale direttamente nella barra del browser.',
+                'Segnala l\'email come spam o phishing.'
+            ],
+            steps: [
                 'Non cliccare su alcun link nell\'email.',
                 'Passa il mouse sopra il link (senza cliccare) per vedere l\'indirizzo reale in basso a sinistra nel browser.',
                 'Se hai dubbi, accedi al servizio scrivendo l\'indirizzo ufficiale direttamente nella barra del browser.',
@@ -85,7 +92,8 @@ export const modulo_03_truffe_phishing: Module = {
             id: 'smishing-vishing',
             slug: 'smishing-vishing-truffe-telefono',
             title: 'Smishing e Vishing: Truffe via SMS e Telefono',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'truffe',
             audience: ['adults', 'parents', 'victims'],
             level: 'base',
             estimatedMinutes: 5,
@@ -102,6 +110,12 @@ export const modulo_03_truffe_phishing: Module = {
                 'Ti viene chiesto di fare un bonifico verso un IBAN "tecnico" o "di sicurezza".'
             ],
             doNow: [
+                'Riaggancia immediatamente se ti chiedono dati o bonifici.',
+                'Chiama tu la banca usando il numero che trovi dietro la tua carta di debito/credito.',
+                'Blocca il numero che ti ha inviato l\'SMS sospetto.',
+                'Non cliccare sui link negli SMS, anche se sembrano nella chat ufficiale.'
+            ],
+            steps: [
                 'Riaggancia immediatamente se ti chiedono dati o bonifici.',
                 'Chiama tu la banca usando il numero che trovi dietro la tua carta di debito/credito.',
                 'Blocca il numero che ti ha inviato l\'SMS sospetto.',
@@ -156,7 +170,8 @@ export const modulo_03_truffe_phishing: Module = {
             id: 'marketplace-safe-selling',
             slug: 'vendere-online-sicurezza-marketplace',
             title: 'Vendere online in sicurezza',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'truffe',
             audience: ['adults', 'victims'],
             level: 'base',
             estimatedMinutes: 5,
@@ -173,6 +188,12 @@ export const modulo_03_truffe_phishing: Module = {
                 'Ti invia un link a un sito che imita perfettamente quello del corriere o del marketplace.'
             ],
             doNow: [
+                'Interrompi la conversazione se ti chiedono di uscire dalla piattaforma ufficiale.',
+                'Usa esclusivamente i sistemi di pagamento integrati nel marketplace (es. Sistema Vinted).',
+                'Segnala il profilo dell\'acquirente alla piattaforma.',
+                'Non fornire mai il tuo numero di telefono o la tua mail se non è strettamente necessario.'
+            ],
+            steps: [
                 'Interrompi la conversazione se ti chiedono di uscire dalla piattaforma ufficiale.',
                 'Usa esclusivamente i sistemi di pagamento integrati nel marketplace (es. Sistema Vinted).',
                 'Segnala il profilo dell\'acquirente alla piattaforma.',
@@ -219,7 +240,8 @@ export const modulo_03_truffe_phishing: Module = {
             id: 'phishing-remediation',
             slug: 'ho-inserito-password-sito-falso-phishing',
             title: 'Ho inserito la password su un sito falso',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'truffe',
             audience: ['adults', 'victims'],
             level: 'base',
             estimatedMinutes: 6,
@@ -236,6 +258,13 @@ export const modulo_03_truffe_phishing: Module = {
                 'Dopo il login, il sito "si blocca" o ti rimanda alla homepage reale.'
             ],
             doNow: [
+                'Vai immediatamente sul sito UFFICIALE (digitando l\'indirizzo a mano) e cambia la password.',
+                'Se il sito supporta la funzione "Disconnetti tutti i dispositivi", usala subito.',
+                'Verifica che le tue informazioni di recupero (telefono/mail) non siano state modificate.',
+                'Se usi la stessa password su altri siti, cambiala anche lì immediatamente.',
+                'Attiva la 2FA (Autenticazione a due fattori) se non era attiva.'
+            ],
+            steps: [
                 'Vai immediatamente sul sito UFFICIALE (digitando l\'indirizzo a mano) e cambia la password.',
                 'Se il sito supporta la funzione "Disconnetti tutti i dispositivi", usala subito.',
                 'Verifica che le tue informazioni di recupero (telefono/mail) non siano state modificate.',
@@ -282,7 +311,8 @@ export const modulo_03_truffe_phishing: Module = {
             id: 'bank-card-breach',
             slug: 'ho-inserito-dati-carta-sito-falso',
             title: 'Ho inserito i dati della carta: Cosa fare',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'truffe',
             audience: ['adults', 'victims'],
             level: 'base',
             estimatedMinutes: 5,
@@ -298,6 +328,13 @@ export const modulo_03_truffe_phishing: Module = {
                 'Ti è stato chiesto il codice OTP ricevuto via SMS per "verificare la carta" invece che per un acquisto specifico.'
             ],
             doNow: [
+                'Apri l\'app della tua banca e usa la funzione "Blocca Carta" o "Freeze" immediatamente.',
+                'Chiama il numero verde per il blocco carte del tuo istituto (disponibile 24/7).',
+                'Verifica l\'estratto conto e segnati le transazioni non autorizzate.',
+                'Disconosci le transazioni tramite la procedura ufficiale della banca (chargeback).',
+                'Sporgi denuncia presso la Polizia o i Carabinieri: è obbligatoria per molte banche per procedere al rimborso.'
+            ],
+            steps: [
                 'Apri l\'app della tua banca e usa la funzione "Blocca Carta" o "Freeze" immediatamente.',
                 'Chiama il numero verde per il blocco carte del tuo istituto (disponibile 24/7).',
                 'Verifica l\'estratto conto e segnati le transazioni non autorizzate.',

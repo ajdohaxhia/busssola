@@ -9,7 +9,8 @@ import { Module, Lesson } from '@/types'
 import { 
   ChevronLeft, ChevronRight, Zap, AlertTriangle, 
   BookOpen, CheckCircle2, Clock, ShieldCheck, 
-  HelpCircle, Info, ExternalLink, Calendar, Users, Landmark
+  HelpCircle, Info, ExternalLink, Calendar, Users, Landmark,
+  LockKeyhole, Book, Search
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { useGameStore } from '@/store/useGameStore'
@@ -37,9 +38,8 @@ export default function LessonReaderClient({ currentModule, lessonIndex }: Lesso
 
     const currentLesson = currentModule.lessons[lessonIndex] as Lesson
     const isLastLesson = lessonIndex === currentModule.lessons.length - 1
-    const isCivic = currentModule.category && !['diritti-digitali', 'first-aid', 'sextortion'].includes(currentModule.category)
+    const isCivic = currentModule.category && !['emergenze', 'first-aid', 'sextortion'].includes(currentModule.category)
 
-    // If lesson is not published, show a placeholder (though routing should prevent this)
     if (currentLesson.status !== 'published' || !currentLesson.qualityGatePassed) {
         return (
             <div className="min-h-screen flex items-center justify-center bg-background p-6">
@@ -118,12 +118,29 @@ export default function LessonReaderClient({ currentModule, lessonIndex }: Lesso
                         {currentLesson.title}
                     </h1>
 
+                    {/* Prerequisites */}
+                    {currentLesson.prerequisites && currentLesson.prerequisites.length > 0 && (
+                        <div className="flex flex-wrap justify-center gap-2 pt-2">
+                            <span className="text-[10px] font-black uppercase text-secondary/60 w-full mb-1">Prerequisiti:</span>
+                            {currentLesson.prerequisites.map((p, i) => (
+                                <Badge key={i} variant="secondary" className="bg-amber-50 text-amber-700 border-amber-100/50 text-[10px] font-bold">
+                                    <LockKeyhole className="w-3 h-3 mr-1" /> {p}
+                                </Badge>
+                            ))}
+                        </div>
+                    )}
+
                     <div className="bg-surface border border-border p-6 rounded-3xl shadow-sm max-w-3xl mx-auto relative overflow-hidden group">
                         <div className="absolute top-0 left-0 w-1 h-full bg-primary" />
                         <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3 text-left">Sintesi Operativa</h3>
                         <p className="text-xl text-foreground text-left leading-relaxed font-medium italic">
                             "{currentLesson.summary}"
                         </p>
+                        {currentLesson.practicalDisclaimer && (
+                            <p className="text-xs text-sos font-bold mt-4 text-left border-t border-sos/10 pt-4 italic">
+                                ⚠️ {currentLesson.practicalDisclaimer}
+                            </p>
+                        )}
                     </div>
 
                     <div className="flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-secondary pt-4">
@@ -161,7 +178,7 @@ export default function LessonReaderClient({ currentModule, lessonIndex }: Lesso
                               <ReactMarkdown>{isCivic ? (currentLesson.whenToDo || currentLesson.scenario) : currentLesson.scenario}</ReactMarkdown>
                           </div>
 
-                          {!isCivic && (
+                          {!isCivic && currentLesson.question && (
                               <div className="bg-surface-muted border border-border p-6 rounded-2xl">
                                   <h4 className="text-xs font-bold uppercase tracking-widest text-secondary mb-3 flex items-center gap-2">
                                     <Info className="w-4 h-4" /> Domanda pratica
@@ -322,6 +339,24 @@ export default function LessonReaderClient({ currentModule, lessonIndex }: Lesso
                       )}
                     </div>
 
+                    {/* Related Glossary */}
+                    {currentLesson.relatedGlossaryTerms && currentLesson.relatedGlossaryTerms.length > 0 && (
+                        <section className="bg-surface border border-border p-8 rounded-[2rem] space-y-6">
+                            <h3 className="text-xl font-bold text-foreground flex items-center gap-3">
+                                <Book className="w-6 h-6 text-primary" /> Termini da conoscere
+                            </h3>
+                            <div className="flex flex-wrap gap-2">
+                                {currentLesson.relatedGlossaryTerms.map((term, i) => (
+                                    <Link href={`/glossario?query=${term}`} key={i}>
+                                        <Badge variant="outline" className="px-4 py-1.5 rounded-xl border-border hover:border-primary/40 hover:bg-primary/5 transition-all cursor-pointer font-bold">
+                                            {term} <Search className="w-3 h-3 ml-1.5 opacity-40" />
+                                        </Badge>
+                                    </Link>
+                                ))}
+                            </div>
+                        </section>
+                    )}
+
                     {/* Checklist / What you need */}
                     <div className="bg-surface border-2 border-primary/20 p-8 md:p-14 rounded-[3rem] shadow-2xl space-y-10 relative overflow-hidden">
                         <div className="absolute top-0 right-0 p-12 opacity-[0.03] pointer-events-none">
@@ -338,7 +373,7 @@ export default function LessonReaderClient({ currentModule, lessonIndex }: Lesso
                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 m-0 p-0 list-none relative z-10">
                             {(currentLesson.whatYouNeed || currentLesson.checklist || []).map((item, i) => (
                                 <li key={i} className="flex items-center gap-4 p-5 rounded-3xl bg-background border border-border shadow-sm group hover:border-primary/30 transition-all">
-                                    <div className="w-6 h-6 rounded-lg border-2 border-primary/30 flex items-center justify-center shrink-0 group-hover:bg-primary/5 transition-colors">
+                                    <div className="w-6 h-6 rounded-lg border-2 border-primary/20 flex items-center justify-center shrink-0 group-hover:border-primary transition-colors">
                                         <div className="w-2 h-2 rounded-sm bg-primary/40" />
                                     </div>
                                     <span className="text-base font-bold text-foreground leading-tight">{item}</span>

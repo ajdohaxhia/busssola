@@ -45,8 +45,8 @@ export default function ModuleDetailClient({ currentModule }: ModuleDetailClient
 
     const progressPercent = moduleProgress.completed ? 100 : Math.min(100, (moduleProgress.lessonsViewed?.filter(id => publishedLessons.some(pl => pl.id === id)).length || 0) / publishedLessons.length * 100)
     
-    const isSos = currentModule.category === 'emergenze' || currentModule.category === 'diritti-digitali'
-    const isCivic = currentModule.category && !['diritti-digitali', 'first-aid', 'sextortion'].includes(currentModule.category)
+    const isSos = currentModule.category === 'emergenze'
+    const isCivic = currentModule.category && !['emergenze'].includes(currentModule.category)
     const totalMinutes = publishedLessons.reduce((acc, l) => acc + (l.estimatedMinutes || 5), 0)
     const moduleDifficulty = currentModule.difficulty ?? 'base'
     const displayTitle = currentModule.title.replace(/Modulo \d+[b]?:\s*/i, '')

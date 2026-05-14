@@ -13,7 +13,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 8,
     "difficulty": "base",
     "icon": "ShieldAlert",
-    "category": "diritti-digitali",
+    "category": "emergenze",
     "lastUpdated": "2024-05-13",
     "featuredType": "none"
   },
@@ -25,7 +25,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 3,
     "difficulty": "intermedia",
     "icon": "ShieldAlert",
-    "category": "diritti-digitali",
+    "category": "emergenze",
     "lastUpdated": "2024-05-13",
     "featuredType": "none"
   },
@@ -37,7 +37,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 4,
     "difficulty": "base",
     "icon": "Key",
-    "category": "diritti-digitali",
+    "category": "sicurezza",
     "lastUpdated": "2024-05-13",
     "featuredType": "none"
   },
@@ -49,7 +49,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 3,
     "difficulty": "intermedia",
     "icon": "Key",
-    "category": "diritti-digitali",
+    "category": "sicurezza",
     "lastUpdated": "2024-05-13",
     "featuredType": "none"
   },
@@ -61,7 +61,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 5,
     "difficulty": "base",
     "icon": "Target",
-    "category": "diritti-digitali",
+    "category": "truffe",
     "lastUpdated": "2024-05-13",
     "featuredType": "none"
   },
@@ -73,7 +73,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 3,
     "difficulty": "intermedia",
     "icon": "Target",
-    "category": "diritti-digitali",
+    "category": "truffe",
     "lastUpdated": "2024-05-13",
     "featuredType": "none"
   },
@@ -85,7 +85,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 4,
     "difficulty": "intermedia",
     "icon": "AlertCircle",
-    "category": "diritti-digitali",
+    "category": "emergenze",
     "lastUpdated": "2024-05-13",
     "featuredType": "none"
   },
@@ -97,7 +97,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 2,
     "difficulty": "intermedia",
     "icon": "AlertCircle",
-    "category": "diritti-digitali",
+    "category": "emergenze",
     "lastUpdated": "2024-05-13",
     "featuredType": "none"
   },
@@ -109,7 +109,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 2,
     "difficulty": "intermedia",
     "icon": "UserCheck",
-    "category": "diritti-digitali",
+    "category": "famiglia",
     "lastUpdated": "2024-05-13",
     "featuredType": "none"
   },
@@ -121,7 +121,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 2,
     "difficulty": "intermedia",
     "icon": "UserCheck",
-    "category": "diritti-digitali",
+    "category": "famiglia",
     "lastUpdated": "2024-05-13",
     "featuredType": "none"
   },
@@ -133,7 +133,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 3,
     "difficulty": "intermedia",
     "icon": "Eye",
-    "category": "diritti-digitali",
+    "category": "privacy",
     "lastUpdated": "2024-05-13",
     "featuredType": "none"
   },
@@ -145,7 +145,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 3,
     "difficulty": "intermedia",
     "icon": "Eye",
-    "category": "diritti-digitali",
+    "category": "privacy",
     "lastUpdated": "2024-05-13",
     "featuredType": "none"
   },
@@ -157,7 +157,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 2,
     "difficulty": "base",
     "icon": "Smartphone",
-    "category": "diritti-digitali",
+    "category": "privacy",
     "lastUpdated": "2024-05-13",
     "featuredType": "none"
   },
@@ -169,7 +169,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 3,
     "difficulty": "avanzata",
     "icon": "Smartphone",
-    "category": "diritti-digitali",
+    "category": "privacy",
     "lastUpdated": "2024-05-13",
     "featuredType": "none"
   },
@@ -181,7 +181,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 3,
     "difficulty": "base",
     "icon": "GraduationCap",
-    "category": "diritti-digitali",
+    "category": "famiglia",
     "lastUpdated": "2024-05-13",
     "featuredType": "none"
   },
@@ -193,7 +193,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 2,
     "difficulty": "intermedia",
     "icon": "GraduationCap",
-    "category": "diritti-digitali",
+    "category": "famiglia",
     "lastUpdated": "2024-05-13",
     "featuredType": "none"
   },
@@ -205,7 +205,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 3,
     "difficulty": "base",
     "icon": "IdCard",
-    "category": "documenti-identita",
+    "category": "documenti",
     "lastUpdated": "2024-05-13",
     "featuredType": "none"
   },
@@ -217,7 +217,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "lessonCount": 2,
     "difficulty": "base",
     "icon": "Briefcase",
-    "category": "lavoro-disoccupazione",
+    "category": "lavoro",
     "lastUpdated": "2024-05-13",
     "featuredType": "none"
   },
@@ -291,6 +291,72 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "icon": "Users",
     "category": "famiglia",
     "lastUpdated": "2026-05-14",
+    "featuredType": "none"
+  },
+  {
+    "id": "modulo-17-immigrazione",
+    "number": 0,
+    "title": "Immigrazione e Soggiorno",
+    "description": "Guida pratica per orientarsi tra permessi di soggiorno, rinnovi e documenti essenziali per cittadini stranieri in Italia.",
+    "lessonCount": 4,
+    "difficulty": "base",
+    "icon": "Globe",
+    "category": "immigrazione",
+    "featuredType": "none"
+  },
+  {
+    "id": "modulo-18-consumatori",
+    "number": 0,
+    "title": "Diritti dei Consumatori",
+    "description": "Conosci i tuoi diritti quando acquisti online o in negozio: resi, garanzie e rimborsi spiegati in modo semplice.",
+    "lessonCount": 4,
+    "difficulty": "base",
+    "icon": "ShoppingBag",
+    "category": "consumatori",
+    "featuredType": "none"
+  },
+  {
+    "id": "modulo-19-mobilita",
+    "number": 0,
+    "title": "Mobilità e Veicoli",
+    "description": "Gestisci le scadenze e gli adempimenti legati all'auto e alla guida: multe, bollo e patente senza stress.",
+    "lessonCount": 4,
+    "difficulty": "base",
+    "icon": "Car",
+    "category": "mobilita",
+    "featuredType": "none"
+  },
+  {
+    "id": "modulo-20-sanita-territoriale",
+    "number": 0,
+    "title": "Sanità Territoriale",
+    "description": "Guida ai servizi sanitari di base e specialistici vicini a te: dal medico di famiglia ai centri di salute mentale.",
+    "lessonCount": 4,
+    "difficulty": "base",
+    "icon": "Stethoscope",
+    "category": "sanita",
+    "featuredType": "none"
+  },
+  {
+    "id": "modulo-21-anziani-caregiver",
+    "number": 0,
+    "title": "Anziani e Caregiver",
+    "description": "Strumenti e tutele per assistere i propri cari anziani: supporto digitale, deleghe e protezione dalle truffe.",
+    "lessonCount": 4,
+    "difficulty": "base",
+    "icon": "HeartHandshake",
+    "category": "anziani",
+    "featuredType": "none"
+  },
+  {
+    "id": "modulo-22-universita-giovani",
+    "number": 0,
+    "title": "Università e Giovani",
+    "description": "Orientamento per studenti universitari e giovani in cerca della prima occupazione: agevolazioni, borse e carriera.",
+    "lessonCount": 4,
+    "difficulty": "base",
+    "icon": "GraduationCap",
+    "category": "universita",
     "featuredType": "none"
   }
 ];

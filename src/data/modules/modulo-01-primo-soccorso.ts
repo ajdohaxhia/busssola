@@ -5,7 +5,7 @@ export const modulo_01_primo_soccorso: Module = {
     lastUpdated: '2024-05-13',
     title: 'Modulo 1: Primo Soccorso Digitale',
     description: 'Procedure rapide e verificate per gestire emergenze in corso: sextortion, furto account e smarrimento device.',
-    category: 'diritti-digitali',
+    category: 'emergenze',
     difficulty: 'base',
     icon: 'ShieldAlert',
     themeColor: 'accent-red',
@@ -14,7 +14,8 @@ export const modulo_01_primo_soccorso: Module = {
             id: 'emergency-intro',
             slug: 'emergenza-digitale-generale',
             title: 'Cosa fare se sei in emergenza (Generale)',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'emergenze',
             audience: ['adults', 'minors', 'victims'],
             level: 'base',
             estimatedMinutes: 3,
@@ -31,6 +32,12 @@ export const modulo_01_primo_soccorso: Module = {
                 'Messaggi strani inviati dal tuo profilo.'
             ],
             doNow: [
+                'Se sospetti un malware, disconnetti il dispositivo dalla rete (Wi-Fi e Dati).',
+                'Fai screenshot di ogni minaccia o prova prima che sparisca.',
+                'Non rispondere a provocazioni o minacce.',
+                'Se il pericolo riguarda l\'incolumità fisica, chiama il 112.'
+            ],
+            steps: [
                 'Se sospetti un malware, disconnetti il dispositivo dalla rete (Wi-Fi e Dati).',
                 'Fai screenshot di ogni minaccia o prova prima che sparisca.',
                 'Non rispondere a provocazioni o minacce.',
@@ -88,7 +95,8 @@ export const modulo_01_primo_soccorso: Module = {
             id: 'sextortion-emergency',
             slug: 'sextortion-le-prime-due-ore',
             title: 'Sextortion: Le prime 2 ore',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'emergenze',
             audience: ['adults', 'minors', 'victims'],
             level: 'base',
             estimatedMinutes: 5,
@@ -105,6 +113,12 @@ export const modulo_01_primo_soccorso: Module = {
                 'Il ricattatore usa messaggi tradotti male o pre-impostati.'
             ],
             doNow: [
+                'Interrompi ogni comunicazione immediatamente. Non rispondere a ulteriori minacce.',
+                'Fai screenshot di: chat, profilo del ricattatore, prove dell\'invio del video.',
+                'Segnala il contenuto su StopNCII.org per bloccarne la diffusione.',
+                'Metti i tuoi profili social in modalità privata.'
+            ],
+            steps: [
                 'Interrompi ogni comunicazione immediatamente. Non rispondere a ulteriori minacce.',
                 'Fai screenshot di: chat, profilo del ricattatore, prove dell\'invio del video.',
                 'Segnala il contenuto su StopNCII.org per bloccarne la diffusione.',
@@ -162,7 +176,8 @@ export const modulo_01_primo_soccorso: Module = {
             id: 'hacked-emergency',
             slug: 'account-hackerato-recupero-immediato',
             title: 'Account hackerato: Blocco immediato',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'emergenze',
             audience: ['adults', 'minors', 'victims'],
             level: 'base',
             estimatedMinutes: 5,
@@ -178,6 +193,12 @@ export const modulo_01_primo_soccorso: Module = {
                 'Sessioni attive da luoghi sconosciuti nelle impostazioni.'
             ],
             doNow: [
+                'Controlla la mail: clicca su "Annulla modifica" se ricevi l\'avviso di cambio indirizzo.',
+                'Visita il portale ufficiale: facebook.com/hacked o instagram.com/hacked.',
+                'Avvisa i contatti stretti: "Account rubato, non aprite link da parte mia".',
+                'Se l\'account è collegato a carte di credito, monitora i movimenti bancari.'
+            ],
+            steps: [
                 'Controlla la mail: clicca su "Annulla modifica" se ricevi l\'avviso di cambio indirizzo.',
                 'Visita il portale ufficiale: facebook.com/hacked o instagram.com/hacked.',
                 'Avvisa i contatti stretti: "Account rubato, non aprite link da parte mia".',
@@ -232,7 +253,8 @@ export const modulo_01_primo_soccorso: Module = {
             id: 'lost-device',
             slug: 'smartphone-rubato-perso-cosa-fare',
             title: 'Device perso o rubato: Cosa fare in 10 minuti',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'emergenze',
             audience: ['adults', 'minors', 'victims'],
             level: 'base',
             estimatedMinutes: 5,
@@ -248,6 +270,12 @@ export const modulo_01_primo_soccorso: Module = {
                 'Il dispositivo risulta "Offline" quando provi a chiamarlo.'
             ],
             doNow: [
+                'Usa un altro dispositivo per localizzarlo: icloud.com/find (Apple) o google.com/android/find (Android).',
+                'Attiva la "Modalità Smarrito" per bloccare lo schermo con un messaggio.',
+                'Chiama il tuo operatore telefonico e chiedi il blocco immediato della SIM.',
+                'Se il recupero è impossibile, avvia il "Ripristino dati di fabbrica remoto" (Wipe) per cancellare tutto.'
+            ],
+            steps: [
                 'Usa un altro dispositivo per localizzarlo: icloud.com/find (Apple) o google.com/android/find (Android).',
                 'Attiva la "Modalità Smarrito" per bloccare lo schermo con un messaggio.',
                 'Chiama il tuo operatore telefonico e chiedi il blocco immediato della SIM.',
@@ -302,7 +330,8 @@ export const modulo_01_primo_soccorso: Module = {
             id: 'whatsapp-stolen-sos',
             slug: 'whatsapp-rubato-recupero-immediato',
             title: 'WhatsApp rubato: Recupero immediato',
-            category: 'diritti-digitali',
+            mainEntity: 'WhatsApp',
+            category: 'emergenze',
             audience: ['adults', 'victims'],
             level: 'base',
             estimatedMinutes: 5,
@@ -318,6 +347,12 @@ export const modulo_01_primo_soccorso: Module = {
                 'Messaggio di sistema che dice che l\'account è registrato su un altro dispositivo.'
             ],
             doNow: [
+                'Accedi nuovamente a WhatsApp inserendo il tuo numero di telefono.',
+                'Verifica il numero inserendo il codice a 6 cifre che riceverai via SMS: questo disconnetterà automaticamente l\'hacker.',
+                'Se l\'hacker ha attivato la "Verifica in due passaggi" e non conosci il PIN, dovrai attendere 7 giorni per accedere senza PIN, ma l\'hacker verrà comunque espulso subito.',
+                'Avvisa i tuoi contatti (SMS, chiamate, altri social) che il tuo account è stato rubato e di non inviare soldi o dati.'
+            ],
+            steps: [
                 'Accedi nuovamente a WhatsApp inserendo il tuo numero di telefono.',
                 'Verifica il numero inserendo il codice a 6 cifre che riceverai via SMS: questo disconnetterà automaticamente l\'hacker.',
                 'Se l\'hacker ha attivato la "Verifica in due passaggi" e non conosci il PIN, dovrai attendere 7 giorni per accedere senza PIN, ma l\'hacker verrà comunque espulso subito.',
@@ -363,7 +398,8 @@ export const modulo_01_primo_soccorso: Module = {
             id: 'instagram-stolen-sos',
             slug: 'instagram-rubato-hackerato-cosa-fare',
             title: 'Instagram rubato: Procedura di recupero',
-            category: 'diritti-digitali',
+            mainEntity: 'Instagram',
+            category: 'emergenze',
             audience: ['adults', 'victims'],
             level: 'base',
             estimatedMinutes: 7,
@@ -379,6 +415,12 @@ export const modulo_01_primo_soccorso: Module = {
                 'I tuoi amici segnalano che il tuo profilo sta pubblicando storie su criptovalute o investimenti.'
             ],
             doNow: [
+                'Cerca nella tua mail il messaggio di Instagram e clicca su "Proteggi il mio account" o "Annulla modifica" se disponibile.',
+                'Dall\'app Instagram, inserisci il tuo username, clicca su "Password dimenticata?" -> "Hai bisogno di ulteriore assistenza?".',
+                'Segui la procedura di verifica identità: Instagram potrebbe chiederti un "Video Selfie" per confrontarlo con le tue foto.',
+                'Segnala l\'account hackerato tramite il portale dedicato instagram.com/hacked.'
+            ],
+            steps: [
                 'Cerca nella tua mail il messaggio di Instagram e clicca su "Proteggi il mio account" o "Annulla modifica" se disponibile.',
                 'Dall\'app Instagram, inserisci il tuo username, clicca su "Password dimenticata?" -> "Hai bisogno di ulteriore assistenza?".',
                 'Segui la procedura di verifica identità: Instagram potrebbe chiederti un "Video Selfie" per confrontarlo con le tue foto.',
@@ -424,7 +466,8 @@ export const modulo_01_primo_soccorso: Module = {
             id: 'facebook-recovery-sos',
             slug: 'sos-facebook-hackerato-recupero-account',
             title: 'SOS Facebook hackerato',
-            category: 'diritti-digitali',
+            mainEntity: 'Facebook',
+            category: 'emergenze',
             audience: ['adults', 'victims'],
             level: 'base',
             estimatedMinutes: 6,
@@ -440,6 +483,12 @@ export const modulo_01_primo_soccorso: Module = {
                 'Post o messaggi inviati dal tuo profilo che non hai scritto tu.'
             ],
             doNow: [
+                'Vai subito su facebook.com/hacked.',
+                'Seleziona "Il mio account è compromesso" e segui le istruzioni.',
+                'Se l\'email è stata cambiata, usa l\'opzione "Non ho più accesso a questi indirizzi" per caricare un documento d\'identità.',
+                'Avvisa i tuoi amici (tramite altri canali) di non cliccare su nessun link inviato dal tuo profilo Facebook.'
+            ],
+            steps: [
                 'Vai subito su facebook.com/hacked.',
                 'Seleziona "Il mio account è compromesso" e segui le istruzioni.',
                 'Se l\'email è stata cambiata, usa l\'opzione "Non ho più accesso a questi indirizzi" per caricare un documento d\'identità.',
@@ -482,7 +531,8 @@ export const modulo_01_primo_soccorso: Module = {
             id: 'tiktok-recovery-sos',
             slug: 'sos-tiktok-hackerato-recupero-account',
             title: 'SOS TikTok hackerato',
-            category: 'diritti-digitali',
+            mainEntity: 'TikTok',
+            category: 'emergenze',
             audience: ['minors', 'adults'],
             level: 'base',
             estimatedMinutes: 6,
@@ -498,6 +548,12 @@ export const modulo_01_primo_soccorso: Module = {
                 'Video cancellati o nuovi video caricati senza il tuo permesso.'
             ],
             doNow: [
+                'Nella schermata di login, tocca il "?" in alto a destra e seleziona "Account violato".',
+                'Se non hai accesso all\'app, usa il modulo di feedback ufficiale: tiktok.com/legal/report/feedback.',
+                'Cambia subito la password dell\'email collegata a TikTok.',
+                'Se rientri, vai in "Sicurezza > I tuoi dispositivi" e rimuovi quelli sospetti.'
+            ],
+            steps: [
                 'Nella schermata di login, tocca il "?" in alto a destra e seleziona "Account violato".',
                 'Se non hai accesso all\'app, usa il modulo di feedback ufficiale: tiktok.com/legal/report/feedback.',
                 'Cambia subito la password dell\'email collegata a TikTok.',

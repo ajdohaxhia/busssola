@@ -22,6 +22,12 @@ import { modulo_13_casa_residenza } from './modulo-13-casa-residenza';
 import { modulo_14_soldi_banche_truffe } from './modulo-14-soldi-banche-truffe';
 import { modulo_15_sicurezza_avanzata } from './modulo-15-sicurezza-avanzata';
 import { modulo_16_famiglia_minori } from './modulo-16-famiglia-minori';
+import { modulo_17_immigrazione } from './modulo-17-immigrazione';
+import { modulo_18_consumatori } from './modulo-18-consumatori';
+import { modulo_19_mobilita } from './modulo-19-mobilita';
+import { modulo_20_sanita_territoriale } from './modulo-20-sanita-territoriale';
+import { modulo_21_anziani_caregiver } from './modulo-21-anziani-caregiver';
+import { modulo_22_universita_giovani } from './modulo-22-universita-giovani';
 
 export const ALL_MODULES = [
     modulo_01_primo_soccorso,
@@ -48,6 +54,12 @@ export const ALL_MODULES = [
     modulo_14_soldi_banche_truffe,
     modulo_15_sicurezza_avanzata,
     modulo_16_famiglia_minori,
+    modulo_17_immigrazione,
+    modulo_18_consumatori,
+    modulo_19_mobilita,
+    modulo_20_sanita_territoriale,
+    modulo_21_anziani_caregiver,
+    modulo_22_universita_giovani,
 ];
 
 export function getModuleById(id: string) {

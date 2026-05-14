@@ -5,7 +5,7 @@ export const modulo_05b_grooming_minori: Module = {
     lastUpdated: '2024-05-13',
     title: 'Modulo 5b: Grooming (Educazione e Gaming)',
     description: 'Come spiegare l\'adescamento ai bambini e come proteggerli durante le sessioni di gioco online.',
-    category: 'diritti-digitali',
+    category: 'famiglia',
     difficulty: 'intermedia',
     icon: 'UserCheck',
     themeColor: 'accent-purple',
@@ -14,7 +14,8 @@ export const modulo_05b_grooming_minori: Module = {
             id: 'grooming-indicators-kids',
             slug: 'grooming-regola-segreto-brutto-bambini',
             title: 'La regola del "Segreto Brutto"',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'famiglia',
             audience: ['parents', 'teachers', 'minors'],
             level: 'base',
             estimatedMinutes: 5,
@@ -31,6 +32,12 @@ export const modulo_05b_grooming_minori: Module = {
                 'L\'adulto fa domande sulla vita privata del bambino o chiede foto.'
             ],
             doNow: [
+                'Insegna la regola: "Se qualcuno ti chiede un segreto che ti fa sentire strano, dimmelo subito: non sarai mai sgridato".',
+                'Attiva il Parental Control sui dispositivi del minore.',
+                'Controlla periodicamente le chat dei giochi preferiti di tuo figlio.',
+                'Stabilite che i videogiochi si usano solo in spazi comuni (es. salotto), non chiusi in cameretta.'
+            ],
+            steps: [
                 'Insegna la regola: "Se qualcuno ti chiede un segreto che ti fa sentire strano, dimmelo subito: non sarai mai sgridato".',
                 'Attiva il Parental Control sui dispositivi del minore.',
                 'Controlla periodicamente le chat dei giochi preferiti di tuo figlio.',
@@ -76,7 +83,8 @@ export const modulo_05b_grooming_minori: Module = {
             id: 'child-fear-silent-crisis',
             slug: 'cosa-fare-se-minore-ha-paura-e-tace',
             title: 'Se il minore ha paura e tace',
-            category: 'diritti-digitali',
+            mainEntity: 'AgID',
+            category: 'famiglia',
             audience: ['parents', 'teachers'],
             level: 'medio',
             estimatedMinutes: 7,
@@ -93,6 +101,12 @@ export const modulo_05b_grooming_minori: Module = {
                 'Richiesta improvvisa di denaro o carte regalo (per pagare piccoli ricatti).'
             ],
             doNow: [
+                'Non sequestrare il telefono: per il minore è l\'unico legame col problema e toglierlo aumenterebbe il panico.',
+                'Dì chiaramente: "Qualunque cosa sia successa, non sei nei guai e io sono qui per risolvere il problema con te, non contro di te".',
+                'Contatta il 114 (Emergenza Infanzia) per avere una guida psicologica professionale su come gestire il colloquio.',
+                'Cerca segnali di "grooming" o "cyberbullismo" senza violare brutalmente la privacy, ma spiegando che la sicurezza viene prima del segreto.'
+            ],
+            steps: [
                 'Non sequestrare il telefono: per il minore è l\'unico legame col problema e toglierlo aumenterebbe il panico.',
                 'Dì chiaramente: "Qualunque cosa sia successa, non sei nei guai e io sono qui per risolvere il problema con te, non contro di te".',
                 'Contatta il 114 (Emergenza Infanzia) per avere una guida psicologica professionale su come gestire il colloquio.',
