@@ -12,6 +12,7 @@ import {
   FileText, Zap,
   GraduationCap, Banknote, Home as HomeIcon
 } from 'lucide-react'
+import { TOTAL_MODULES, TOTAL_LESSONS } from '@/lib/seo'
 import { LEARNING_PATHS } from '@/data/paths'
 
 export default function Home() {
@@ -25,7 +26,7 @@ export default function Home() {
       <section className="space-y-10 px-4">
         <div className="text-center space-y-3 max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-display font-black tracking-tight text-foreground text-center">
-            Da dove vuoi partire?
+            {TOTAL_MODULES} moduli e {TOTAL_LESSONS} guide pratiche per orientarsi in Italia.
           </h2>
           <p className="text-lg text-secondary font-medium text-center">
             Scegli l'area che ti interessa per trovare guide e percorsi passo-passo.

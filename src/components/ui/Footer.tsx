@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { Compass, Github, Mail, ShieldCheck, Heart, AlertTriangle } from 'lucide-react'
 import { Container } from './Container'
+import { TOTAL_MODULES, TOTAL_LESSONS } from '@/lib/seo'
 
 export function Footer() {
     const currentYear = new Date().getFullYear()
@@ -23,7 +24,7 @@ export function Footer() {
                             <span className="text-2xl font-display font-black tracking-tighter uppercase text-white">Busssola</span>
                         </Link>
                         <p className="text-white/50 text-sm leading-relaxed max-w-xs font-medium">
-                            La tua guida civica gratuita, open-source e privacy-friendly per orientarsi tra diritti e doveri in Italia.
+                            {TOTAL_MODULES} moduli e {TOTAL_LESSONS} guide pratiche per orientarsi tra diritti e doveri in Italia.
                         </p>
                         <div className="flex items-center gap-4 pt-2">
                             <a href="https://github.com/ajdohaxhia/busssola" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors border border-white/10">
