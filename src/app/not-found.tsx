@@ -1,7 +1,7 @@
 'use client'
 
 import { Container } from '@/components/ui/Container'
-import { Compass, Home, Search, ArrowRight } from 'lucide-react'
+import { Compass, Home, Search, ArrowRight, Zap, CheckSquare } from 'lucide-react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
@@ -31,25 +31,37 @@ export default function NotFound() {
                 </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-wrap justify-center gap-4 pt-4">
                 <Link 
                     href="/" 
-                    className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-primary/20 hover:bg-primary-hover transition-all"
+                    className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-bold shadow-lg shadow-primary/20 hover:bg-primary-hover transition-all"
                 >
-                    <Home size={20} /> Torna in Home
+                    <Home size={18} /> Home
                 </Link>
                 <Link 
                     href="/moduli" 
-                    className="inline-flex items-center gap-2 bg-surface border border-border text-foreground px-8 py-4 rounded-xl font-bold hover:bg-surface-muted transition-all"
+                    className="inline-flex items-center gap-2 bg-surface border border-border text-foreground px-6 py-3 rounded-xl font-bold hover:bg-surface-muted transition-all"
                 >
-                    <Search size={20} /> Cerca nel catalogo
+                    <Search size={18} /> Guide
+                </Link>
+                <Link 
+                    href="/checklist" 
+                    className="inline-flex items-center gap-2 bg-surface border border-border text-foreground px-6 py-3 rounded-xl font-bold hover:bg-surface-muted transition-all"
+                >
+                    <CheckSquare size={18} /> Checklist
+                </Link>
+                <Link 
+                    href="/tips" 
+                    className="inline-flex items-center gap-2 bg-surface border border-border text-foreground px-6 py-3 rounded-xl font-bold hover:bg-surface-muted transition-all"
+                >
+                    <Zap size={18} /> Life Hacks
                 </Link>
             </div>
 
-            <div className="pt-12 border-t border-border w-full max-w-xs">
-                <p className="text-sm text-muted mb-4 uppercase tracking-widest font-bold">Oppure prova</p>
-                <Link href="/sos" className="text-sos font-bold flex items-center justify-center gap-2 hover:underline">
-                    Centro Emergenze SOS <ArrowRight size={16} />
+            <div className="pt-12 border-t border-border w-full max-w-xs mx-auto">
+                <p className="text-sm text-secondary/60 mb-4 uppercase tracking-widest font-black">Emergenza?</p>
+                <Link href="/sos" className="text-sos font-black flex items-center justify-center gap-2 hover:underline tracking-widest uppercase">
+                    Centro SOS <ArrowRight size={16} />
                 </Link>
             </div>
         </Container>

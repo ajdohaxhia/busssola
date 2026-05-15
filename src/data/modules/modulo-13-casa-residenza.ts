@@ -67,6 +67,12 @@ export const modulo_13_casa_residenza: Module = {
                 'APE allegata',
                 'Verbale di consegna pronto'
             ],
+            faqs: [
+                { q: 'Quanto può essere al massimo il deposito cauzionale?', a: 'Per legge, il deposito cauzionale (spesso chiamato impropriamente caparra) non può superare le tre mensilità del canone.' },
+                { q: 'Chi paga le spese di registrazione del contratto?', a: 'Le spese di registrazione (imposta di registro e di bollo) sono divise al 50% tra proprietario (locatore) e inquilino (conduttore), a meno che non si scelga la cedolare secca.' },
+                { q: 'Posso andarmene prima della scadenza?', a: 'Sì, ma devi dare il preavviso stabilito nel contratto (generalmente 6 mesi) e avere un giustificato motivo (gravi motivi), a meno che non sia prevista una clausola di recesso libero.' }
+            ],
+            relatedLessons: ['registrazione-locazione', 'gestione-cauzione-non-restituita'],
             sources: [
                 {
                     title: 'Locazione immobili: guida alla registrazione',
