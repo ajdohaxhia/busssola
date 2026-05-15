@@ -31,6 +31,10 @@ export const modulo_07_privacy_smartphone: Module = {
                 'Il telefono scalda molto o consuma batteria in modo anomalo (possibile app malevola in background).',
                 'L\'app richiede di "accedere ai dati di altre app" o di "leggere le notifiche".'
             ],
+            steps: [
+                'Accedi alle Impostazioni Privacy del telefono.',
+                'Disabilita i permessi superflui per le app sospette.'
+            ],
             doNow: [
                 'Vai nelle Impostazioni -> Privacy -> Gestione Permessi.',
                 'Revoca l\'accesso a Microfono, Fotocamera e Posizione a tutte le app che non lo usano per una funzione specifica.',
@@ -38,16 +42,16 @@ export const modulo_07_privacy_smartphone: Module = {
                 'Disinstalla le app che non usi da più di 3 mesi.'
             ],
             dontDo: [
-                'Non installare app (file .APK su Android) al di fuori degli store ufficiali (Google Play / App Store).',
-                'Non accettare i termini di servizio senza aver controllato almeno la lista dei permessi richiesti.',
-                'Non lasciare il Bluetooth o la Posizione sempre attivi se non ti servono.'
+                'Non installare app (file .APK su Android) al di fuori degli store ufficiali.',
+                'Non accettare i termini di servizio senza aver controllato i permessi.',
+                'Non lasciare il Bluetooth o la Posizione sempre attivi.'
             ],
             preserveEvidence: [
                 'Se trovi un\'app che ti spia, fai uno screenshot dei permessi che ha ottenuto prima di disinstallarla.',
                 'Segnati il nome dell\'app e lo sviluppatore.'
             ],
             askHelpWhen: [
-                'Se noti che i permessi che hai revocato si riattivano da soli (possibile segno di compromissione del sistema operativo).',
+                'Se noti che i permessi che hai revocato si riattivano da soli (possibile segno di compromissione).',
                 'Se trovi app che non ricordi di aver installato.'
             ],
             whoCanHelp: [
@@ -69,17 +73,9 @@ export const modulo_07_privacy_smartphone: Module = {
                     type: 'official',
                     usedFor: 'Consigli sui permessi delle app e sulla protezione dei dati in mobilità.',
                     lastCheckedAt: '2026-05-14'
-                },
-                {
-                    title: 'Sicurezza delle App mobili',
-                    organization: 'CERT-AgID',
-                    url: 'https://cert-agid.gov.it/notizie/sicurezza-delle-app-mobili/',
-                    type: 'official',
-                    usedFor: 'Indicazioni sui rischi legati ad app malevole e malware.',
-                    lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2024-05-13',
+            lastReviewedAt: '2026-05-14',
             qualityGatePassed: true
         },
         {
@@ -94,13 +90,17 @@ export const modulo_07_privacy_smartphone: Module = {
             summary: 'La decisione più importante quando apri un social: chi può vedere i tuoi contenuti e chi può contattarti.',
             status: 'published',
             emergencyLevel: 'low',
-            scenario: 'Stai aprendo un nuovo account su Instagram o TikTok. Ti viene chiesto se vuoi un profilo pubblico o privato. Non sei sicuro di quale scegliere per bilanciare divertimento e sicurezza.',
+            scenario: 'Stai aprendo un nuovo account su Instagram o TikTok. Ti viene chiesto se vuoi un profilo pubblico o privato.',
             question: 'Perché un minore dovrebbe quasi sempre avere un profilo privato?',
-            whatIsHappening: 'Un profilo pubblico espone ogni tua foto, video e commento a chiunque nel mondo, inclusi malintenzionati che potrebbero usare le tue immagini per scopi impropri. Un profilo privato ti permette di controllare chi ti segue e chi può interagire con te.',
+            whatIsHappening: 'Un profilo pubblico espone ogni tua foto, video e commento a chiunque nel mondo, inclusi malintenzionati. Un profilo privato ti permette di controllare chi ti segue.',
             warningSigns: [
                 'Ricevi messaggi strani (DM) da persone che non conosci.',
                 'Le tue foto vengono ri-condivise da account sconosciuti.',
                 'Vedi commenti inappropriati sotto i tuoi video.'
+            ],
+            steps: [
+                'Vai nelle impostazioni di Privacy del social scelto.',
+                'Seleziona l\'opzione "Account Privato".'
             ],
             doNow: [
                 'Imposta il profilo su "Privato" nelle impostazioni di Privacy del social.',
@@ -110,7 +110,7 @@ export const modulo_07_privacy_smartphone: Module = {
             ],
             dontDo: [
                 'Non accettare richieste di amicizia solo per far salire il numero di follower.',
-                'Non pubblicare informazioni che indicano dove ti trovi o quale scuola frequenti (anche se il profilo è privato, è meglio evitare).'
+                'Non pubblicare informazioni che indicano dove ti trovi o quale scuola frequenti.'
             ],
             preserveEvidence: [
                 'N/A - Si tratta di prevenzione.'
@@ -139,7 +139,7 @@ export const modulo_07_privacy_smartphone: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2024-05-13',
+            lastReviewedAt: '2026-05-14',
             qualityGatePassed: true
         }
     ]

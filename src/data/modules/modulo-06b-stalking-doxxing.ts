@@ -30,6 +30,10 @@ export const modulo_06b_stalking_doxxing: Module = {
                 'Tentativi di accesso ai tuoi account o dispositivi.',
                 'Diffusione di commenti offensivi o dati privati su di te online.'
             ],
+            steps: [
+                'Raccogli le prove.',
+                'Recati presso una Questura o Carabinieri per l\'ammonimento.'
+            ],
             doNow: [
                 'Raccogli tutte le prove (screenshot, registrazioni, email) in ordine cronologico.',
                 'Recati presso una Questura o un Comando dei Carabinieri.',
@@ -71,7 +75,7 @@ export const modulo_06b_stalking_doxxing: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2024-05-13',
+            lastReviewedAt: '2026-05-14',
             qualityGatePassed: true
         },
         {
@@ -93,6 +97,10 @@ export const modulo_06b_stalking_doxxing: Module = {
                 'Notifica di "Tracker rilevato" sul telefono.',
                 'Senti un debole segnale acustico provenire dai tuoi oggetti o dall\'auto.',
                 'Il tuo smartphone ti mostra una mappa degli spostamenti fatti insieme al tracker sconosciuto.'
+            ],
+            steps: [
+                'Localizza il tracker tramite suono.',
+                'Disabilita il tracker rimuovendo la batteria.'
             ],
             doNow: [
                 'Usa l\'app "Dov\'è" (iPhone) o le impostazioni di sistema (Android) per far suonare il tracker e individuarlo fisicamente.',
@@ -140,7 +148,7 @@ export const modulo_06b_stalking_doxxing: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2024-05-13',
+            lastReviewedAt: '2026-05-14',
             qualityGatePassed: true
         },
         {
@@ -163,6 +171,10 @@ export const modulo_06b_stalking_doxxing: Module = {
                 'Consumo anomalo di dati mobili (lo spyware invia i tuoi dati all\'hacker).',
                 'Ricezione di SMS con stringhe di codice senza senso.',
                 'Su Android: Presenza di app con nomi generici come "System Service" o "Wi-Fi Update" che hanno permessi di amministratore.'
+            ],
+            steps: [
+                'Verifica app con privilegi amministratore.',
+                'Ripristina ai dati di fabbrica se necessario.'
             ],
             doNow: [
                 'Controlla la lista delle app con "Accesso speciale / Amministratori del dispositivo" nelle impostazioni.',
@@ -201,7 +213,7 @@ export const modulo_06b_stalking_doxxing: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2024-05-13',
+            lastReviewedAt: '2026-05-14',
             qualityGatePassed: true
         }
     ]

@@ -23,12 +23,16 @@ export const modulo_06_stalking_doxxing: Module = {
             emergencyLevel: 'high',
             scenario: 'Un ex partner, un conoscente o uno sconosciuto ti tempesta di messaggi su ogni piattaforma, crea profili falsi per spiarti, contatta i tuoi amici o pubblica post offensivi su di te in modo ossessivo.',
             question: 'Quando un comportamento online diventa "stalking" per la legge?',
-            whatIsHappening: 'Il cyberstalking non è solo fastidioso: è un reato se provoca un perdurante stato di ansia, paura per la propria incolumità o ti costringe a cambiare le tue abitudini (es. smettere di usare i social o cambiare numero). Lo stalker cerca il controllo totale sulla tua vita digitale ed emotiva.',
+            whatIsHappening: 'Il cyberstalking non è solo fastidioso: è un reato se provoca un perdurante stato di ansia, paura per la propria incolumità o ti costringe a cambiare le tue abitudini.',
             warningSigns: [
                 'Ricezione di decine di messaggi o chiamate al giorno da numeri diversi.',
                 'Commenti ossessivi o minacciosi su ogni tuo post.',
                 'Creazione di account "fake" che imitano il tuo o che ti seguono ovunque.',
                 'Lo stalker dimostra di sapere dove sei o cosa stai facendo in tempo reale.'
+            ],
+            steps: [
+                'Non rispondere mai: il silenzio è la migliore difesa.',
+                'Salva le prove e contatta le autorità.'
             ],
             doNow: [
                 'INTERROMPI OGNI RISPOSTA. Anche rispondere "lasciami in pace" dà allo stalker l\'attenzione che cerca.',
@@ -39,14 +43,14 @@ export const modulo_06_stalking_doxxing: Module = {
             dontDo: [
                 'Non cercare di "ragionare" con lo stalker: la sua logica è ossessiva, non razionale.',
                 'Non pubblicare post di sfida o insulti rivolti a lui.',
-                'Non cancellare il tuo account prima di aver esportato le chat (molti social permettono il download dei dati).',
-                'Non sottovalutare le minacce: il cyberstalking può degenerare in violenza fisica.'
+                'Non cancellare il tuo account prima di aver esportato le chat.',
+                'Non sottovalutare le minacce.'
             ],
             preserveEvidence: [
                 'Screenshot integrali (non ritagliati) di tutte le comunicazioni.',
                 'URL dei profili social del persecutore.',
                 'Registri delle chiamate e log dei messaggi.',
-                'Copia di eventuali mail ricevute (non cancellarle).'
+                'Copia di eventuali mail ricevute.'
             ],
             askHelpWhen: [
                 'Se senti ansia costante o hai paura di uscire di casa.',
@@ -56,8 +60,7 @@ export const modulo_06_stalking_doxxing: Module = {
             whoCanHelp: [
                 'Polizia Postale (commissariatodips.it)',
                 'Numero Nazionale Antiviolenza e Stalking 1522',
-                'Centri Antiviolenza locali',
-                'Il Questore (per la richiesta di Ammonimento)'
+                'Centri Antiviolenza locali'
             ],
             checklist: [
                 'Zero risposte',
@@ -73,17 +76,9 @@ export const modulo_06_stalking_doxxing: Module = {
                     type: 'official',
                     usedFor: 'Definizione del reato e consigli pratici di autodifesa.',
                     lastCheckedAt: '2026-05-14'
-                },
-                {
-                    title: 'Numero 1522: Supporto Stalking',
-                    organization: 'Dipartimento Pari Opportunità',
-                    url: 'https://www.1522.eu/',
-                    type: 'institutional',
-                    usedFor: 'Canale di supporto psicologico e orientamento legale.',
-                    lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2024-05-13',
+            lastReviewedAt: '2026-05-14',
             qualityGatePassed: true
         },
         {
@@ -100,11 +95,15 @@ export const modulo_06_stalking_doxxing: Module = {
             emergencyLevel: 'high',
             scenario: 'Sei vittima di stalking e sospetti che il persecutore possa accedere ai tuoi account o sapere dove ti trovi. Hai bisogno di un "reset" totale della tua impronta digitale per sicurezza.',
             question: 'Come posso sparire dal radar di uno stalker senza rinunciare alla tecnologia?',
-            whatIsHappening: 'Lo stalking digitale si nutre di informazioni. Ridurre la tua superficie di attacco significa chiudere ogni porta che lo stalker potrebbe usare per spiarti (posizioni, amici comuni, vecchie password).',
+            whatIsHappening: 'Lo stalking digitale si nutre di informazioni. Ridurre la tua superficie di attacco significa chiudere ogni porta che lo stalker potrebbe usare per spiarti.',
             warningSigns: [
                 'Lo stalker sa cose che hai detto solo in chat private.',
                 'Ricevi avvisi di login da dispositivi che non riconosci.',
                 'Le persone che frequenti vengono contattate dallo stalker.'
+            ],
+            steps: [
+                'Attiva l\'autenticazione a due fattori (2FA) su ogni account.',
+                'Rimuovi le autorizzazioni di posizione per app non necessarie.'
             ],
             doNow: [
                 'Cambia la password della tua Email e del Cloud (iCloud/Google) usando un dispositivo sicuro.',
@@ -115,18 +114,18 @@ export const modulo_06_stalking_doxxing: Module = {
             ],
             dontDo: [
                 'Non postare mai foto in tempo reale (fallo quando te ne sei già andato dal luogo).',
-                'Non accettare richieste di amicizia da profili nuovi o senza foto, anche se sembrano avere amici in comune.'
+                'Non accettare richieste di amicizia da profili nuovi o senza foto.'
             ],
             preserveEvidence: [
                 'Prima di rendere i profili privati, assicurati di aver salvato le prove delle molestie passate.'
             ],
             askHelpWhen: [
-                'Se sospetti che il tuo telefono sia stato infettato da uno "Stalkerware" (virus spia).',
+                'Se sospetti che il tuo telefono sia stato infettato da uno "Stalkerware".',
                 'Se lo stalker si presenta fisicamente nei luoghi che frequenti.'
             ],
             whoCanHelp: [
-                'Numero 1522',
-                'Esperti di sicurezza digitale (per bonifica dispositivi)',
+                '1522 - Numero Antiviolenza',
+                'Esperti di sicurezza digitale',
                 'Polizia Postale'
             ],
             checklist: [
@@ -146,7 +145,7 @@ export const modulo_06_stalking_doxxing: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2024-05-13',
+            lastReviewedAt: '2026-05-14',
             qualityGatePassed: true
         },
         {
@@ -163,11 +162,15 @@ export const modulo_06_stalking_doxxing: Module = {
             emergencyLevel: 'medium',
             scenario: 'Ti sei separato da poco. In passato avete condiviso password di Netflix, Spotify, ma anche account Amazon, l\'accesso al Cloud delle foto o il "In famiglia" di Apple/Google.',
             question: 'Come posso separare i miei dati da quelli di un ex senza perdere i miei contenuti?',
-            whatIsHappening: 'Gli account condivisi sono uno strumento comune di "Abuso Facilitato dalla Tecnologia". Un ex partner malintenzionato può usare questi accessi per spiare le tue foto, i tuoi acquisti, i tuoi spostamenti o persino cancellare i tuoi file per ritorsione.',
+            whatIsHappening: 'Gli account condivisi sono uno strumento comune di "Abuso Facilitato dalla Tecnologia". Un ex partner malintenzionato può usare questi accessi per spiare le tue foto.',
             warningSigns: [
                 'L\'ex partner fa commenti su acquisti che hai fatto online.',
                 'Ricevi notifiche che il tuo account è in uso su un altro dispositivo.',
                 'Trovi foto o contatti nuovi nel tuo cloud che non hai aggiunto tu.'
+            ],
+            steps: [
+                'Esci dai gruppi "In famiglia" (Apple/Google).',
+                'Cambia le password di tutti gli account condivisi.'
             ],
             doNow: [
                 'Esci dai gruppi "In famiglia" (Apple/Google) se non sei tu l\'organizzatore.',
@@ -183,7 +186,7 @@ export const modulo_06_stalking_doxxing: Module = {
                 'Se trovi segni di accesso abusivo (IP diversi nei log), fai uno screenshot prima di cambiare password.'
             ],
             askHelpWhen: [
-                'Se la rottura è legata a violenza domestica: contatta centri specializzati PRIMA di cambiare password, poiché l\'ex potrebbe reagire con violenza fisica vedendo revocati gli accessi.'
+                'Se la rottura è legata a violenza domestica: contatta centri specializzati PRIMA di cambiare password.'
             ],
             whoCanHelp: [
                 '1522 - Numero Antiviolenza',
@@ -206,7 +209,7 @@ export const modulo_06_stalking_doxxing: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2024-05-13',
+            lastReviewedAt: '2026-05-14',
             qualityGatePassed: true
         }
     ]

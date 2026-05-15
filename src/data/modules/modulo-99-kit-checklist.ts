@@ -38,7 +38,16 @@ export const modulo_99_kit_checklist: Module = {
                 "Codici PIN/PUK della CIE",
                 "Credenziali SPID (senza password)"
             ],
-            sources: []
+            sources: [
+                {
+                    title: 'ANPR - Area Cittadino',
+                    organization: 'Ministero dell\'Interno',
+                    url: 'https://www.anagrafenazionale.interno.it/',
+                    type: 'official',
+                    usedFor: 'Documenti digitali e certificati.',
+                    lastCheckedAt: '2026-05-14'
+                }
+            ]
         },
         {
             id: 'kit-sicurezza-account',
@@ -67,7 +76,16 @@ export const modulo_99_kit_checklist: Module = {
                 "Codici backup salvati offline",
                 "Email di recupero aggiornata"
             ],
-            sources: []
+            sources: [
+                {
+                    title: 'Cybersicurezza Nazionale',
+                    organization: 'ACN',
+                    url: 'https://www.acn.gov.it/',
+                    type: 'official',
+                    usedFor: 'Linee guida sicurezza.',
+                    lastCheckedAt: '2026-05-14'
+                }
+            ]
         },
         {
             id: 'kit-telefono-rubato',
@@ -97,7 +115,16 @@ export const modulo_99_kit_checklist: Module = {
                 "Password account principale cambiata",
                 "Denuncia sporta"
             ],
-            sources: []
+            sources: [
+                {
+                    title: 'Commissariato Online',
+                    organization: 'Polizia Postale',
+                    url: 'https://www.commissariatodips.it/',
+                    type: 'official',
+                    usedFor: 'Denuncia furto.',
+                    lastCheckedAt: '2026-05-14'
+                }
+            ]
         }
         // ... more kits can be added here
     ]
