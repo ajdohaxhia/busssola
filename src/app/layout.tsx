@@ -70,7 +70,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="it" className={cn(inter.variable, outfit.variable)}>
+    <html lang="it" className={cn(inter.variable, outfit.variable, "scroll-smooth")}>
       <head>
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="mobile-web-app-capable" content="yes" />
@@ -78,8 +78,15 @@ export default function RootLayout({
         <meta name="image" content={`${SITE_URL}${DEFAULT_OG_IMAGE}`} />
         <JsonLd data={siteStructuredData} />
       </head>
-      <body className="bg-background text-foreground min-h-dvh flex flex-col font-sans antialiased">
-        <AppShell>{children}</AppShell>
+      <body className="bg-background text-foreground min-h-screen flex flex-col font-sans antialiased selection:bg-primary/20 selection:text-primary-foreground">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg focus:font-bold shadow-xl">
+            Salta al contenuto principale
+        </a>
+        <AppShell>
+            <div id="main-content" className="flex-1 flex flex-col outline-none" tabIndex={-1}>
+                {children}
+            </div>
+        </AppShell>
       </body>
     </html>
   )

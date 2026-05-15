@@ -1,61 +1,48 @@
 'use client'
 
 import { motion } from 'framer-motion';
-import { ShieldCheck, ArrowRight, ShieldAlert, Lock } from 'lucide-react';
+import { Compass, Lock, ShieldCheck } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import Link from 'next/link';
-import Image from 'next/image';
-import { siteStats } from '@/data/siteStats';
 
 export function Hero() {
     return (
-        <section className="relative min-h-[480px] overflow-hidden rounded-[2rem] border border-border bg-surface md:min-h-[60vh]">
-            <Image
-                src="/images/hero-compass.png"
-                alt=""
-                fill
-                priority
-                sizes="(min-width: 1024px) 1200px, 100vw"
-                className="object-cover object-center"
-            />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--color-background)_0%,rgba(250,250,250,0.95)_42%,rgba(250,250,250,0.58)_62%,rgba(250,250,250,0)_88%)]" />
-            <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-background/70 to-transparent" />
+        <section className="relative overflow-hidden rounded-[2.5rem] bg-foreground text-background py-16 md:py-24 px-8 md:px-16 text-left">
+            <div className="absolute top-0 right-0 p-24 opacity-[0.05] pointer-events-none">
+                <Compass size={400} />
+            </div>
             
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="relative z-10 flex min-h-[480px] max-w-3xl flex-col items-start justify-center px-6 py-12 text-left md:min-h-[60vh] md:px-16 md:py-20"
+                className="relative z-10 max-w-3xl space-y-8"
             >
-                <h1 className="text-5xl font-display font-semibold leading-[0.98] tracking-tight text-foreground md:text-7xl">
-                    Orientarsi tra documenti, diritti e procedure in Italia non deve essere un labirinto.
+                <h1 className="text-5xl md:text-7xl font-display font-black leading-[1.1] tracking-tight text-white">
+                    Trova cosa fare, <br className="hidden md:block" /> passo dopo passo.
                 </h1>
                 
-                <p className="mt-5 max-w-2xl text-2xl font-display font-semibold leading-tight text-foreground md:text-4xl">
-                    Busssola è la tua guida civica: semplice, gratuita e verificata per cittadini, famiglie e studenti.
-                </p>
-
-                <p className="mt-6 max-w-2xl text-lg leading-relaxed text-secondary md:text-xl">
-                    {siteStats.totalModules} guide pratiche su documenti, lavoro, casa, bonus e sicurezza digitale. Senza registrazione, senza tracciamento, totalmente gratuito.
+                <p className="text-xl md:text-2xl text-white/80 leading-relaxed font-medium">
+                    Guide pratiche, checklist e link ufficiali per documenti, lavoro, casa, truffe, sicurezza digitale e servizi pubblici.
                 </p>
                 
-                <div className="mt-10 flex w-full flex-col items-stretch gap-4 sm:w-auto sm:flex-row">
-                    <Button asChild size="lg" className="rounded-xl w-full sm:w-auto text-base h-14 px-8">
-                        <Link href="/moduli">
-                            Trova una guida <ArrowRight className="w-5 h-5 ml-2" />
+                <div className="flex flex-wrap gap-4 pt-4">
+                    <Button asChild size="lg" variant="destructive" className="rounded-2xl h-16 px-10 text-lg font-black uppercase tracking-widest shadow-2xl shadow-sos/40 active:scale-95 transition-all">
+                        <Link href="/sos">
+                            Ho un'urgenza
                         </Link>
                     </Button>
-                    <Button asChild size="lg" variant="outline" className="rounded-xl w-full sm:w-auto text-base h-14 px-8 border-border hover:bg-surface-muted text-foreground">
-                        <Link href="/sos">
-                            Situazioni urgenti (SOS)
+                    <Button asChild size="lg" className="rounded-2xl h-16 px-10 text-lg font-bold bg-white text-foreground hover:bg-white/90 shadow-xl active:scale-95 transition-all">
+                        <Link href="/moduli">
+                            Cerca una guida
                         </Link>
                     </Button>
                 </div>
 
-                <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm font-medium text-secondary">
-                    <div className="flex items-center gap-2"><Lock className="w-4 h-4" /> Gratuito</div>
-                    <div className="flex items-center gap-2"><ShieldCheck className="w-4 h-4" /> Nessuna registrazione</div>
-                    <div className="flex items-center gap-2 text-sos"><ShieldAlert className="w-4 h-4" /> Pagina SOS per urgenze</div>
+                <div className="flex flex-wrap items-center gap-6 text-sm font-bold text-white/40 uppercase tracking-widest pt-8">
+                    <div className="flex items-center gap-2"><Lock className="w-4 h-4" /> 100% Gratuito</div>
+                    <div className="flex items-center gap-2"><ShieldCheck className="w-4 h-4" /> Open Source</div>
+                    <div className="flex items-center gap-2"><Compass className="w-4 h-4" /> Risorsa Civica</div>
                 </div>
             </motion.div>
         </section>

@@ -5,22 +5,24 @@ import Link from 'next/link'
 import { motion, Variants } from 'framer-motion'
 import { Module } from '@/types'
 import { 
-  ChevronLeft, Play, Search, Clock, 
+  Play, Clock, 
   ShieldAlert, Users, CheckCircle, 
-  ShieldCheck, AlertTriangle, Landmark
+  ShieldCheck, AlertTriangle, Landmark, Compass, ArrowRight, Search
 } from 'lucide-react'
 import { useGameStore } from '@/store/useGameStore'
 import { Container } from '@/components/ui/Container'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
+import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
+import { SearchBox } from '@/components/ui/SearchBox'
 
 const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
+    visible: { opacity: 1, transition: { staggerChildren: 0.05 } }
 }
 
 const itemVariants: Variants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 10, opacity: 0 },
     visible: { y: 0, opacity: 1, transition: { type: "spring", stiffness: 100, damping: 15 } }
 }
 
@@ -43,20 +45,26 @@ export default function ModuleDetailClient({ currentModule }: ModuleDetailClient
         l.title.toLowerCase().includes(lessonSearch.toLowerCase())
     )
 
-    const progressPercent = moduleProgress.completed ? 100 : Math.min(100, (moduleProgress.lessonsViewed?.filter(id => publishedLessons.some(pl => pl.id === id)).length || 0) / publishedLessons.length * 100)
+    const progressPercent = moduleProgress.completed ? 100 : Math.min(100, ((moduleProgress.lessonsViewed?.filter(id => publishedLessons.some(pl => pl.id === id)).length || 0) / publishedLessons.length) * 100)
     
     const isSos = currentModule.category === 'emergenze'
-    const isCivic = currentModule.category && !['emergenze'].includes(currentModule.category)
     const totalMinutes = publishedLessons.reduce((acc, l) => acc + (l.estimatedMinutes || 5), 0)
     const moduleDifficulty = currentModule.difficulty ?? 'base'
     const displayTitle = currentModule.title.replace(/Modulo \d+[b]?:\s*/i, '')
     
     const categoryLabels: Record<string, string> = {
-        'diritti-digitali': 'Diritti Digitali',
-        'documenti-identita': 'Documenti e Identità',
-        'lavoro-disoccupazione': 'Lavoro e Disoccupazione',
+        'documenti': 'Documenti e Identità',
+        'lavoro': 'Lavoro e INPS',
+        'casa': 'Casa e Residenza',
+        'soldi': 'Soldi e Banche',
+        'bonus': 'Bonus e ISEE',
+        'sanita': 'Sanità',
+        'famiglia': 'Scuola e Famiglia',
+        'sicurezza': 'Privacy e Account',
+        'truffe': 'Truffe e Phishing',
+        'emergenze': 'SOS Digitali',
     }
-    const categoryName = currentModule.category ? categoryLabels[currentModule.category] || currentModule.category : 'Guida'
+    const categoryName = currentModule.category ? categoryLabels[currentModule.category as string] || currentModule.category : 'Guida'
 
     const audience = moduleDifficulty === 'base'
         ? "Per tutti, inclusi ragazzi e principianti." 
@@ -65,148 +73,121 @@ export default function ModuleDetailClient({ currentModule }: ModuleDetailClient
         : "Utenti più esperti, educatori o chi cerca tutele avanzate."
 
     return (
-        <Container size="md" className="py-12 space-y-16 min-h-screen">
-            {/* Breadcrumbs */}
-            <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="flex items-center gap-2 text-sm font-medium text-secondary">
-                <Link href="/moduli" className="hover:text-foreground transition-colors flex items-center gap-1">
-                    Catalogo
-                </Link>
-                <span>/</span>
-                <span className="text-secondary">{categoryName}</span>
-                <span>/</span>
-                <span className="text-foreground line-clamp-1">{displayTitle}</span>
-            </motion.div>
+        <Container size="lg" className="py-12 space-y-12 min-h-screen">
+            <Breadcrumbs 
+                items={[
+                    { label: 'Catalogo', href: '/moduli' },
+                    { label: categoryName, href: `/moduli?cat=${currentModule.category}` },
+                    { label: displayTitle, href: '#' }
+                ]}
+            />
 
             {/* OVERVIEW HERO */}
             <motion.header 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12"
+                className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16"
             >
                 {/* Left Col: Main Info */}
-                <div className="lg:col-span-7 space-y-8 flex flex-col justify-center">
+                <div className="lg:col-span-7 space-y-10 flex flex-col justify-center text-left">
                     {isSos && (
-                        <div className="bg-sos-bg border border-sos-border rounded-2xl p-4 flex items-start gap-4">
-                            <div className="bg-sos/10 text-sos p-2 rounded-xl shrink-0 mt-0.5">
-                                <ShieldAlert className="w-5 h-5" />
+                        <div className="bg-sos text-white rounded-[2rem] p-8 flex items-start gap-6 shadow-xl shadow-sos/20">
+                            <div className="bg-white/20 p-4 rounded-2xl shrink-0">
+                                <ShieldAlert className="w-8 h-8" />
                             </div>
-                            <div className="space-y-1">
-                                <h4 className="font-semibold text-sos text-sm tracking-wide uppercase">Emergenza in corso?</h4>
-                                <p className="text-sm text-sos/80 font-medium">Queste guide sono prioritarie. Segui i protocolli con calma e non agire d'impulso.</p>
-                                <Link href="/sos" className="text-sos font-bold text-sm inline-flex items-center gap-1 mt-1 hover:underline">
-                                    Vai al Centro SOS <ChevronLeft className="w-4 h-4 rotate-180" />
+                            <div className="space-y-2">
+                                <h4 className="font-black uppercase tracking-widest text-xs opacity-70">Emergenza in corso?</h4>
+                                <p className="text-xl font-bold leading-tight">Segui i protocolli di reazione immediata con calma.</p>
+                                <Link href="/sos" className="inline-flex items-center gap-2 font-black uppercase tracking-widest text-xs bg-white text-sos px-4 py-2 rounded-xl mt-2 hover:bg-white/90 transition-all">
+                                    Vai al Centro SOS <ArrowRight className="w-4 h-4" />
                                 </Link>
                             </div>
                         </div>
                     )}
-
-                    {isCivic && (
-                        <div className="bg-primary/5 border border-primary/20 rounded-2xl p-4 flex items-start gap-4">
-                            <div className="bg-primary/10 text-primary p-2 rounded-xl shrink-0 mt-0.5">
-                                <ShieldCheck className="w-5 h-5" />
-                            </div>
-                            <div className="space-y-1">
-                                <h4 className="font-semibold text-primary text-sm tracking-wide uppercase">Guida Informativa</h4>
-                                <p className="text-sm text-primary/80 font-medium">Questa guida ti aiuta a orientarti tra le procedure ufficiali. Ricorda che solo le fonti istituzionali hanno valore legale.</p>
-                            </div>
-                        </div>
-                    )}
                     
-                    <div className="space-y-4">
+                    <div className="space-y-6">
                         <div className="flex flex-wrap items-center gap-3">
-                            <Badge variant="muted" className="capitalize px-3 py-1 font-bold">{moduleDifficulty}</Badge>
-                            <Badge variant="outline" className="text-primary border-primary/20 px-3 py-1 font-bold bg-primary/5 flex items-center gap-1">
-                              <ShieldCheck className="w-3.5 h-3.5" /> Contenuto Verificato
+                            <Badge variant="muted" className="px-3 py-1 font-black uppercase tracking-widest text-[10px]">{moduleDifficulty}</Badge>
+                            <Badge variant="outline" className="text-primary border-primary/20 px-3 py-1 font-black uppercase tracking-widest text-[10px] bg-primary/5 flex items-center gap-1.5 shadow-sm">
+                              <ShieldCheck className="w-3.5 h-3.5" /> Verificato
                             </Badge>
                         </div>
 
-                        <h1 className="text-4xl md:text-5xl font-display font-bold tracking-tight text-foreground leading-[1.1]">
+                        <h1 className="text-4xl md:text-7xl font-display font-black tracking-tight text-foreground leading-[1.05]">
                             {displayTitle}
                         </h1>
-                        <p className="text-xl text-secondary leading-relaxed max-w-2xl font-medium">
+                        <p className="text-xl md:text-2xl text-secondary leading-relaxed font-medium max-w-2xl">
                             {currentModule.description}
                         </p>
                     </div>
 
                     <div className="flex flex-wrap items-center gap-4 pt-4">
                         {publishedLessons.length > 0 ? (
-                          <Button asChild size="lg" className="rounded-xl h-14 px-8 text-base shadow-lg shadow-primary/20 font-bold">
+                          <Button asChild size="lg" className="rounded-2xl h-16 px-10 text-lg shadow-2xl shadow-primary/30 font-black uppercase tracking-widest active:scale-95 transition-all">
                               <Link href={`/moduli/${currentModule.id}/lezione/1`}>
-                                  <Play className="w-5 h-5 mr-2 fill-current" />
-                                  {moduleProgress.lessonsViewed?.length > 0 ? 'Riprendi percorso' : 'Inizia percorso'}
+                                  <Play className="w-5 h-5 mr-3 fill-current" />
+                                  {(moduleProgress.lessonsViewed?.length || 0) > 0 ? 'Riprendi' : 'Inizia Ora'}
                               </Link>
                           </Button>
                         ) : (
-                          <div className="bg-surface-muted border border-border p-4 rounded-xl text-secondary flex items-center gap-2">
-                            <AlertTriangle className="w-5 h-5" /> Modulo in fase di revisione fonti
+                          <div className="bg-surface-muted border-2 border-dashed border-border p-6 rounded-2xl text-secondary flex items-center gap-3 font-bold">
+                            <AlertTriangle className="w-6 h-6" /> Modulo in fase di revisione
                           </div>
                         )}
                         
                         {progressPercent > 0 && (
-                            <div className="flex items-center gap-3 bg-surface border border-border px-5 h-14 rounded-xl">
-                                <div className="text-sm font-medium text-secondary">Avanzamento:</div>
-                                <div className="text-base font-bold text-primary">{Math.round(progressPercent)}%</div>
+                            <div className="flex flex-col gap-1 px-6 py-3 bg-surface border border-border rounded-2xl shadow-sm">
+                                <span className="text-[10px] font-black uppercase tracking-widest text-secondary/40">Progresso</span>
+                                <div className="flex items-center gap-3">
+                                    <div className="w-32 h-2 bg-surface-muted rounded-full overflow-hidden text-left">
+                                        <div className="h-full bg-primary" style={{ width: `${progressPercent}%` }} />
+                                    </div>
+                                    <span className="text-sm font-black text-primary">{Math.round(progressPercent)}%</span>
+                                </div>
                             </div>
                         )}
                     </div>
                 </div>
                 
                 {/* Right Col: Practical Metadata Card */}
-                <div className="lg:col-span-5 flex items-center">
-                    <div className="w-full bg-surface border border-border rounded-[2.5rem] p-8 md:p-10 space-y-8 shadow-sm">
-                        <div>
-                            <h3 className="text-xs font-bold text-secondary uppercase tracking-[0.2em] mb-6">Qualità e Fiducia</h3>
-                            <ul className="space-y-6">
-                                <li className="flex items-start gap-4">
-                                    <div className="bg-primary/5 border border-primary/10 p-2.5 rounded-xl shrink-0">
-                                        <ShieldCheck className="w-5 h-5 text-primary" />
+                <div className="lg:col-span-5">
+                    <div className="w-full bg-surface border border-border rounded-[3rem] p-10 space-y-10 shadow-sm relative overflow-hidden group hover:shadow-xl transition-all">
+                        <div className="absolute top-0 right-0 p-12 opacity-[0.03] pointer-events-none group-hover:scale-110 transition-transform">
+                            <Compass size={200} />
+                        </div>
+                        <div className="relative z-10 space-y-8">
+                            <h3 className="text-xs font-black text-secondary/40 uppercase tracking-[0.3em] border-b border-border pb-4">Info Utili</h3>
+                            <ul className="space-y-8 m-0 p-0 list-none text-left">
+                                <li className="flex items-start gap-5">
+                                    <div className="bg-primary/5 border border-primary/10 p-3 rounded-2xl shrink-0 text-primary">
+                                        <Users className="w-6 h-6" strokeWidth={2.5} />
                                     </div>
-                                    <div className="space-y-1 mt-1">
-                                        <p className="text-sm font-bold text-foreground leading-none">Fonti Verificate</p>
-                                        <p className="text-xs text-secondary leading-relaxed">Solo procedure ufficiali e fonti istituzionali.</p>
-                                    </div>
-                                </li>
-                                <li className="flex items-start gap-4">
-                                    <div className="bg-background border border-border p-2.5 rounded-xl shrink-0">
-                                        <Users className="w-5 h-5 text-secondary" />
-                                    </div>
-                                    <div className="space-y-1 mt-1">
-                                        <p className="text-sm font-bold text-foreground leading-none">Target</p>
-                                        <p className="text-xs text-secondary leading-relaxed">{audience}</p>
+                                    <div className="space-y-1">
+                                        <p className="text-sm font-black text-foreground uppercase tracking-wider">Per chi è</p>
+                                        <p className="text-sm text-secondary leading-relaxed font-medium">{audience}</p>
                                     </div>
                                 </li>
                                 {currentModule.mainEntity && (
-                                    <li className="flex items-start gap-4">
-                                        <div className="bg-background border border-border p-2.5 rounded-xl shrink-0">
-                                            <Landmark className="w-5 h-5 text-secondary" />
+                                    <li className="flex items-start gap-5">
+                                        <div className="bg-primary/5 border border-primary/10 p-3 rounded-2xl shrink-0 text-primary">
+                                            <Landmark className="w-6 h-6" strokeWidth={2.5} />
                                         </div>
-                                        <div className="space-y-1 mt-1">
-                                            <p className="text-sm font-bold text-foreground leading-none">Ente Principale</p>
-                                            <p className="text-xs text-secondary leading-relaxed">{currentModule.mainEntity}</p>
+                                        <div className="space-y-1">
+                                            <p className="text-sm font-black text-foreground uppercase tracking-wider">Ente Principale</p>
+                                            <p className="text-sm text-secondary leading-relaxed font-medium">{currentModule.mainEntity}</p>
                                         </div>
                                     </li>
                                 )}
-                                <li className="flex items-start gap-4">
-                                    <div className="bg-background border border-border p-2.5 rounded-xl shrink-0">
-                                        <Clock className="w-5 h-5 text-secondary" />
+                                <li className="flex items-start gap-5">
+                                    <div className="bg-primary/5 border border-primary/10 p-3 rounded-2xl shrink-0 text-primary">
+                                        <Clock className="w-6 h-6" strokeWidth={2.5} />
                                     </div>
-                                    <div className="space-y-1 mt-1">
-                                        <p className="text-sm font-bold text-foreground leading-none">Impegno</p>
-                                        <p className="text-xs text-secondary leading-relaxed">~{totalMinutes} min ({publishedLessons.length} lezioni pubblicate).</p>
+                                    <div className="space-y-1">
+                                        <p className="text-sm font-black text-foreground uppercase tracking-wider">Tempo stimato</p>
+                                        <p className="text-sm text-secondary leading-relaxed font-medium">Circa {totalMinutes} minuti per completare le {publishedLessons.length} guide.</p>
                                     </div>
                                 </li>
-                                {currentModule.lastUpdated && (
-                                    <li className="flex items-start gap-4">
-                                        <div className="bg-background border border-border p-2.5 rounded-xl shrink-0">
-                                            <CheckCircle className="w-5 h-5 text-emerald-500" />
-                                        </div>
-                                        <div className="space-y-1 mt-1">
-                                            <p className="text-sm font-bold text-foreground leading-none">Aggiornato</p>
-                                            <p className="text-xs text-secondary leading-relaxed">{new Date(currentModule.lastUpdated).toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
-                                        </div>
-                                    </li>
-                                )}
                             </ul>
                         </div>
                     </div>
@@ -218,23 +199,16 @@ export default function ModuleDetailClient({ currentModule }: ModuleDetailClient
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="space-y-8"
+                className="space-y-10"
             >
-                <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-border">
-                    <div className="space-y-2">
-                        <h2 className="text-2xl font-display font-bold text-foreground tracking-tight">Piano di Studio</h2>
-                        <p className="text-secondary font-medium">Procedure verificate disponibili.</p>
+                <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b-2 border-border">
+                    <div className="space-y-2 text-left">
+                        <h2 className="text-3xl font-display font-black text-foreground tracking-tight uppercase tracking-tighter">Piano delle guide</h2>
+                        <p className="text-lg text-secondary font-medium">Segui l'ordine cronologico o cerca una scheda specifica.</p>
                     </div>
                     
-                    <div className="relative group w-full md:w-72">
-                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-secondary group-focus-within:text-primary transition-colors" />
-                        <input
-                            type="text"
-                            placeholder="Cerca argomento..."
-                            value={lessonSearch}
-                            onChange={(e) => setLessonSearch(e.target.value)}
-                            className="w-full bg-surface border border-border rounded-xl h-12 pl-11 pr-4 text-sm font-medium text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all shadow-sm"
-                        />
+                    <div className="w-full md:w-80">
+                        <SearchBox value={lessonSearch} onChange={setLessonSearch} placeholder="Cerca nella guida..." />
                     </div>
                 </div>
 
@@ -242,37 +216,36 @@ export default function ModuleDetailClient({ currentModule }: ModuleDetailClient
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"
-                    className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                    className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 >
                     {filteredLessons.length > 0 ? (
                         filteredLessons.map((lesson, idx) => {
-                            const isLessonCompleted = moduleProgress.lessonsViewed.includes(lesson.id);
+                            const isLessonCompleted = (moduleProgress.lessonsViewed || []).includes(lesson.id);
                             return (
                                 <motion.div variants={itemVariants} key={lesson.id}>
                                     <Link
                                         href={`/moduli/${currentModule.id}/lezione/${idx + 1}`}
-                                        className="group block overflow-hidden rounded-3xl bg-surface border border-border hover:border-primary/40 hover:shadow-xl transition-all p-6 h-full relative"
+                                        className="group block overflow-hidden rounded-[2.5rem] bg-surface border-2 border-border hover:border-primary/40 hover:shadow-2xl transition-all p-8 h-full relative"
                                     >
-                                        <div className="flex items-start gap-5">
-                                            <div className="w-10 h-10 shrink-0 rounded-xl bg-background border border-border flex items-center justify-center text-sm font-bold text-secondary group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all">
+                                        <div className="flex items-start gap-6 text-left">
+                                            <div className="w-12 h-12 shrink-0 rounded-2xl bg-surface-muted border-2 border-border flex items-center justify-center text-lg font-black text-secondary/40 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all shadow-inner">
                                                 {idx + 1}
                                             </div>
-                                            <div className="w-full space-y-2">
-                                                <div className="flex items-start justify-between gap-4">
-                                                    <h3 className="font-bold text-foreground group-hover:text-primary transition-colors leading-tight text-lg">{lesson.title}</h3>
+                                            <div className="w-full space-y-4">
+                                                <div className="flex items-start justify-between gap-4 text-left">
+                                                    <h3 className="font-display font-black text-foreground group-hover:text-primary transition-colors leading-tight text-xl tracking-tight">{lesson.title}</h3>
                                                     {isLessonCompleted && (
-                                                        <div className="bg-emerald-100 text-emerald-600 p-1 rounded-full shrink-0">
-                                                          <CheckCircle className="w-4 h-4" />
+                                                        <div className="bg-emerald-100 text-emerald-600 p-1.5 rounded-full shrink-0 shadow-sm border border-emerald-200">
+                                                          <CheckCircle className="w-4 h-4" strokeWidth={3} />
                                                         </div>
                                                     )}
                                                 </div>
-                                                <p className="text-sm text-secondary line-clamp-2 leading-relaxed font-medium opacity-80">
+                                                <p className="text-base text-secondary line-clamp-2 leading-relaxed font-medium opacity-80">
                                                   {lesson.summary}
                                                 </p>
-                                                <div className="flex items-center gap-3 text-xs font-bold text-secondary/60 pt-2 uppercase tracking-tighter">
-                                                    <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" /> {lesson.estimatedMinutes} MIN</span>
-                                                    <span className="w-1 h-1 rounded-full bg-border" />
-                                                    <span>{lesson.level}</span>
+                                                <div className="flex items-center gap-4 text-[10px] font-black text-secondary/40 pt-2 uppercase tracking-widest">
+                                                    <span className="flex items-center gap-1.5 bg-surface-muted px-2 py-1 rounded-md shadow-sm border border-border/60"><Clock className="w-3.5 h-3.5" /> {lesson.estimatedMinutes} MIN</span>
+                                                    <span className="flex items-center gap-1.5 bg-surface-muted px-2 py-1 rounded-md shadow-sm border border-border/60"><Compass className="w-3.5 h-3.5" /> {lesson.level}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -281,8 +254,12 @@ export default function ModuleDetailClient({ currentModule }: ModuleDetailClient
                             )
                         })
                     ) : (
-                        <div className="col-span-full py-16 text-center bg-surface-muted/30 rounded-[3rem] border border-border border-dashed">
-                            <p className="text-secondary font-semibold">Stiamo verificando nuove lezioni per questo modulo.</p>
+                        <div className="col-span-full py-24 text-center bg-surface border-4 border-dashed border-border rounded-[4rem]">
+                            <div className="w-20 h-20 bg-surface-muted flex items-center justify-center rounded-full mx-auto mb-6 text-secondary/20">
+                                <Search size={64} />
+                            </div>
+                            <h3 className="text-2xl font-bold text-foreground mb-2">Nessuna scheda trovata</h3>
+                            <p className="text-secondary font-medium">Prova a cambiare i termini della ricerca.</p>
                         </div>
                     )}
                 </motion.div>
@@ -290,9 +267,12 @@ export default function ModuleDetailClient({ currentModule }: ModuleDetailClient
 
             {/* REVISION FOOTER */}
             {publishedLessons.length < currentModule.lessons.length && (
-              <div className="bg-surface-muted/30 border border-border rounded-3xl p-6 text-center">
-                <p className="text-xs text-secondary/60 font-medium">
-                  Nota: Alcune lezioni di questo modulo sono attualmente in fase di revisione fonti (Quality Gate) e verranno pubblicate a breve.
+              <div className="bg-amber-50/50 border-2 border-amber-100 rounded-[2.5rem] p-8 text-center shadow-sm">
+                <p className="text-sm text-amber-900/60 font-bold uppercase tracking-widest flex items-center justify-center gap-3">
+                  <AlertTriangle className="w-5 h-5 text-amber-500" /> Nota sulla pubblicazione
+                </p>
+                <p className="text-sm text-amber-900/60 font-medium mt-2">
+                  Alcune lezioni di questo modulo sono attualmente in fase di revisione fonti (Quality Gate) e verranno pubblicate a breve.
                 </p>
               </div>
             )}

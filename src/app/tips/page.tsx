@@ -4,11 +4,15 @@ import { useState, useMemo, Suspense } from 'react'
 import { Container } from '@/components/ui/Container'
 import { Card } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
+import { Button } from '@/components/ui/Button'
 import { LIFE_HACKS } from '@/data/life-hacks'
 import { Search, Filter, ArrowRight, Zap, Info, RotateCcw } from 'lucide-react'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { CategoryID } from '@/types'
+import { PageHeader } from '@/components/ui/PageHeader'
+import { SearchBox } from '@/components/ui/SearchBox'
+import * as Icons from 'lucide-react'
 
 const CATEGORIES: { id: CategoryID | 'all', label: string }[] = [
     { id: 'all', label: 'Tutti i temi' },
@@ -38,7 +42,7 @@ function TipsContent() {
             const matchesSearch = hack.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                                  hack.summary.toLowerCase().includes(searchQuery.toLowerCase())
             const matchesCategory = selectedCategory === 'all' || hack.category === selectedCategory
-            const matchesBadge = selectedBadge === 'all' || hack.badges.includes(selectedBadge as typeof hack.badges[number])
+            const matchesBadge = selectedBadge === 'all' || (hack.badges as string[]).includes(selectedBadge)
             return matchesSearch && matchesCategory && matchesBadge
         })
     }, [searchQuery, selectedCategory, selectedBadge])
@@ -51,49 +55,38 @@ function TipsContent() {
 
     return (
         <Container size="lg" className="py-12 space-y-12 min-h-screen">
-            <header className="space-y-6 max-w-3xl">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-widest border border-primary/20">
-                    <Zap className="w-3 h-3" /> Scorciatoie Legali
+            <PageHeader 
+                badge="Life Hacks Civici"
+                icon={Zap}
+                title="Cose utili da sapere"
+                description="Consigli pratici e scorciatoie legali per risparmiare tempo, evitare errori e usare meglio i servizi pubblici e digitali."
+            />
+
+            <div className="p-6 bg-blue-50 border-2 border-blue-100 rounded-[2.5rem] flex gap-4 text-blue-800 font-medium italic shadow-inner text-left">
+                <div className="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center shrink-0">
+                    <Info className="w-6 h-6" />
                 </div>
-                <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground tracking-tight leading-tight">
-                    Life Hacks Civici
-                </h1>
-                <p className="text-xl text-secondary leading-relaxed font-medium">
-                    Consigli pratici e scorciatoie legali per risparmiare tempo, evitare errori e usare meglio i servizi pubblici e digitali.
-                </p>
-                <div className="p-4 bg-blue-50 border border-blue-100 rounded-2xl flex gap-3 text-sm text-blue-800 font-medium italic">
-                    <Info className="w-5 h-5 shrink-0" />
-                    <p>Tutti i consigli sono legali e informativi. Busssola non insegna scorciatoie illegali, evasione, frodi o aggiramenti.</p>
-                </div>
-            </header>
+                <p className="text-base leading-relaxed">Tutti i consigli sono legali e informativi. Busssola non insegna scorciatoie illegali, evasione, frodi o aggiramenti del sistema.</p>
+            </div>
 
             {/* Filters Dashboard */}
-            <div className="bg-surface border border-border rounded-[2.5rem] p-6 lg:p-8 shadow-sm space-y-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div className="space-y-3">
-                        <label className="text-[10px] font-bold text-secondary uppercase tracking-[0.2em] flex items-center gap-2">
+            <div className="bg-surface border-2 border-border rounded-[3rem] p-8 md:p-10 shadow-sm space-y-10 text-left">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div className="space-y-4">
+                        <label className="text-[10px] font-black uppercase tracking-[0.3em] text-secondary/40 flex items-center gap-2">
                             <Search className="w-3 h-3" /> Cerca un tip
                         </label>
-                        <div className="relative">
-                            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-secondary" />
-                            <input 
-                                type="text"
-                                placeholder="Esempio: ANPR, password, banca..."
-                                value={searchQuery}
-                                onChange={(e) => setSearchQuery(e.target.value)}
-                                className="w-full bg-background border border-border rounded-xl h-12 pl-12 pr-4 text-sm font-semibold text-foreground focus:outline-none focus:border-primary transition-all"
-                            />
-                        </div>
+                        <SearchBox value={searchQuery} onChange={setSearchQuery} placeholder="Es: ANPR, password, banca..." />
                     </div>
 
-                    <div className="space-y-3">
-                        <label className="text-[10px] font-bold text-secondary uppercase tracking-[0.2em] flex items-center gap-2">
+                    <div className="space-y-4">
+                        <label className="text-[10px] font-black uppercase tracking-[0.3em] text-secondary/40 flex items-center gap-2">
                             <Filter className="w-3 h-3" /> Argomento
                         </label>
                         <select 
                             value={selectedCategory}
                             onChange={(e) => setSelectedCategory(e.target.value as CategoryID | 'all')}
-                            className="w-full bg-background border border-border rounded-xl h-12 px-4 text-sm font-semibold text-foreground focus:outline-none focus:border-primary appearance-none cursor-pointer"
+                            className="w-full bg-background border-2 border-border rounded-2xl h-14 px-5 text-sm font-bold text-foreground focus:outline-none focus:border-primary shadow-sm appearance-none cursor-pointer"
                         >
                             {CATEGORIES.map(cat => (
                                 <option key={cat.id} value={cat.id}>{cat.label}</option>
@@ -101,30 +94,30 @@ function TipsContent() {
                         </select>
                     </div>
 
-                    <div className="space-y-3">
-                        <label className="text-[10px] font-bold text-secondary uppercase tracking-[0.2em] flex items-center gap-2">
+                    <div className="space-y-4">
+                        <label className="text-[10px] font-black uppercase tracking-[0.3em] text-secondary/40 flex items-center gap-2">
                             <Zap className="w-3 h-3" /> Tipo di beneficio
                         </label>
                         <div className="flex flex-wrap gap-2">
                             <button
                                 onClick={() => setSelectedBadge('all')}
                                 className={cn(
-                                    "px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all border",
+                                    "px-4 py-2 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all border-2",
                                     selectedBadge === 'all'
-                                        ? "bg-foreground text-background border-foreground"
+                                        ? "bg-foreground text-background border-foreground shadow-lg"
                                         : "bg-background text-secondary border-border hover:border-foreground/30"
                                 )}
                             >
                                 Tutti
                             </button>
-                            {BADGES.slice(0, 5).map(badge => (
+                            {BADGES.slice(0, 6).map(badge => (
                                 <button
                                     key={badge}
                                     onClick={() => setSelectedBadge(badge)}
                                     className={cn(
-                                        "px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all border",
+                                        "px-4 py-2 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all border-2",
                                         selectedBadge === badge
-                                            ? "bg-primary text-white border-primary"
+                                            ? "bg-primary text-white border-primary shadow-lg"
                                             : "bg-background text-secondary border-border hover:border-foreground/30"
                                     )}
                                 >
@@ -137,53 +130,57 @@ function TipsContent() {
             </div>
 
             {/* Grid */}
-            <div className="space-y-8">
-                <div className="flex items-center justify-between border-b border-border pb-4">
-                    <div className="flex items-center gap-4">
-                        <h2 className="text-xl font-display font-semibold tracking-tight text-foreground">
+            <div className="space-y-10">
+                <div className="flex items-center justify-between border-b-2 border-border pb-6">
+                    <div className="flex items-center gap-4 text-left">
+                        <h2 className="text-xl font-display font-black text-foreground tracking-tight uppercase tracking-widest opacity-60">
                             {filteredHacks.length} Consigli trovati
                         </h2>
                     </div>
                     {(searchQuery || selectedCategory !== 'all' || selectedBadge !== 'all') && (
                         <button
                             onClick={handleReset}
-                            className="text-[10px] font-bold text-primary hover:text-primary/80 flex items-center gap-1.5 uppercase tracking-widest transition-colors"
+                            className="text-[10px] font-black uppercase tracking-widest text-primary hover:text-primary-hover flex items-center gap-2 transition-colors"
                         >
-                            <RotateCcw className="w-3 h-3" /> Resetta Filtri
+                            <RotateCcw className="w-4 h-4" /> Reset Filtri
                         </button>
                     )}
                 </div>
 
                 {filteredHacks.length === 0 ? (
-                    <div className="py-24 flex flex-col items-center justify-center text-center bg-surface border border-dashed border-border rounded-[3rem]">
-                        <h3 className="text-xl font-semibold text-foreground mb-2">Nessun trucco trovato</h3>
-                        <p className="text-secondary max-w-sm">Prova a cambiare i filtri o i termini di ricerca.</p>
+                    <div className="py-32 flex flex-col items-center justify-center text-center bg-surface border-4 border-dashed border-border rounded-[4rem]">
+                        <div className="w-20 h-20 bg-surface-muted flex items-center justify-center rounded-full mb-6">
+                            <Icons.SearchX className="w-10 h-10 text-secondary/30" />
+                        </div>
+                        <h3 className="text-2xl font-display font-black text-foreground mb-2">Nessun trucco trovato</h3>
+                        <p className="text-lg text-secondary max-w-sm mb-10 font-medium">Prova a cambiare i filtri o i termini di ricerca.</p>
+                        <Button onClick={handleReset} variant="outline" size="lg" className="rounded-2xl font-black uppercase tracking-widest h-16 px-10">Mostra tutti i tips</Button>
                     </div>
                 ) : (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {filteredHacks.map((hack) => (
                             <Link href={`/tips/${hack.slug}`} key={hack.slug} className="group">
-                                <Card className="p-6 h-full flex flex-col justify-between border border-border bg-surface hover:shadow-xl hover:border-primary/20 transition-all rounded-[2rem]">
-                                    <div className="space-y-4">
+                                <Card className="p-8 h-full flex flex-col justify-between border-2 border-border bg-surface hover:shadow-2xl hover:border-primary/20 transition-all rounded-[2.5rem] relative overflow-hidden text-left">
+                                    <div className="space-y-6 relative z-10">
                                         <div className="flex flex-wrap gap-2">
                                             {hack.badges.map(badge => (
-                                                <Badge key={badge} variant="secondary" className="text-[9px] font-bold uppercase tracking-wider bg-primary/5 text-primary border-primary/10">
+                                                <Badge key={badge} variant="secondary" className="text-[9px] font-black uppercase tracking-widest bg-primary/5 text-primary border-primary/10">
                                                     {badge}
                                                 </Badge>
                                             ))}
                                         </div>
-                                        <h3 className="text-lg font-bold text-foreground leading-tight group-hover:text-primary transition-colors tracking-tight">
-                                            {hack.title}
-                                        </h3>
-                                        <p className="text-sm text-secondary leading-relaxed line-clamp-3">
+                                        <h3 className="text-2xl font-display font-black text-foreground leading-tight group-hover:text-primary transition-colors tracking-tight">{hack.title}</h3>
+                                        <p className="text-base text-secondary leading-relaxed line-clamp-3 font-medium opacity-80">
                                             {hack.summary}
                                         </p>
                                     </div>
-                                    <div className="pt-6 flex items-center justify-between mt-auto">
-                                        <div className="text-[10px] font-black text-secondary/40 uppercase tracking-widest">
+                                    <div className="pt-8 flex items-center justify-between mt-auto relative z-10 border-t border-border/40">
+                                        <div className="text-[10px] font-black text-secondary/40 uppercase tracking-[0.2em]">
                                             {hack.category.replace('-', ' ')}
                                         </div>
-                                        <ArrowRight className="w-4 h-4 text-primary transition-transform group-hover:translate-x-1" />
+                                        <div className="flex items-center gap-1 text-[10px] font-black uppercase tracking-widest text-primary">
+                                            Leggi tip <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                                        </div>
                                     </div>
                                 </Card>
                             </Link>
@@ -197,7 +194,7 @@ function TipsContent() {
 
 export default function TipsPage() {
     return (
-        <Suspense fallback={<div className="min-h-screen" />}>
+        <Suspense fallback={<div className="min-h-screen animate-pulse" />}>
             <TipsContent />
         </Suspense>
     )

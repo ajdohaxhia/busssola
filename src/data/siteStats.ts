@@ -1,6 +1,6 @@
 /**
  * AUTO-GENERATED FILE - DO NOT EDIT MANUALLY
- * Generated on: 2026-05-14T23:55:17.370Z
+ * Generated on: 2026-05-15T00:24:16.660Z
  */
 export const siteStats = {
   "totalModules": 31,
@@ -15,6 +15,6 @@ export const siteStats = {
   "totalSources": 184,
   "uniqueOrganizations": 85,
   "totalChecklistItems": 564,
-  "lastUpdatedAt": "2026-05-14",
+  "lastUpdatedAt": "2026-05-15",
   "projectStage": "Public Resource Hub v2 - Life Hacks"
 };

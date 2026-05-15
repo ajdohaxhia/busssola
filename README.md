@@ -1,73 +1,48 @@
-# Busssola 🧭
+# 🧭 Busssola v2: Public Resource Hub
 
-> **Guida pratica e gratuita tra documenti, diritti e procedure in Italia.**
+Busssola è l'hub civico per l'orientamento digitale e burocratico in Italia. Una risorsa gratuita, open-source e privacy-first progettata per cittadini, famiglie, studenti e docenti.
 
-Busssola è una piattaforma civica pensata per aiutare cittadini, famiglie, studenti e lavoratori a orientarsi nel labirinto della burocrazia italiana. Trasformiamo procedure complesse in guide semplici, verificate e pronte all'uso.
+### 🧭 Filosofia UX/UI v2
+L'overhaul v2 trasforma Busssola da catalogo a **servizio civico pratico**. La nuova interfaccia è basata sulle **intenzioni dell'utente** ("Ho un'emergenza", "Devo fare un documento", "Ho perso il lavoro") per ridurre il carico cognitivo e fornire risposte in massimo 3 click.
 
-## Obiettivo del Progetto
-Rendere accessibili a tutti le informazioni su come esercitare i propri diritti e gestire i propri doveri, eliminando il gergo burocratico e fornendo protocolli operativi chiari.
+- **Calma e Autorevolezza**: Design system pulito, colori civici e tipografia ad alta leggibilità.
+- **Mobile-First**: Ogni protocollo, checklist e guida è ottimizzato per l'uso immediato da smartphone.
+- **Accessibilità**: Rispetto degli standard WCAG, navigazione da tastiera, skip-links e contrasti verificati.
+- **Stampa-Ready**: Tutte le guide e le checklist sono ottimizzate per la stampa in bianco e nero (Ctrl+P) per supporto offline.
 
-## Aree di Intervento (18 Macro-aree)
-- **Documenti e Identità**: SPID, CIE, Passaporto, ANPR, PEC.
-- **Lavoro**: NASpI, dimissioni, contratti, stage.
-- **Casa**: Affitto, residenza, utenze, TARI.
-- **Sicurezza e Privacy**: Account, passkey, truffe, phishing, malware.
-- **Sanità**: Medico base, fascicolo elettronico, CPS, consultori.
-- **Scuola e Famiglia**: Cyberbullismo, patti digitali, sharenting.
-- **Life Hacks**: Scorciatoie legali, trucchi per risparmiare tempo e trucchi burocratici.
-- **Altro**: Immigrazione, Consumatori, Mobilità, Università, Anziani.
+### 🏗️ Architettura Informativa
+- **[SOS Digitali](/sos)**: Protocolli di primo soccorso per emergenze (furto account, ricatti, truffe).
+- **[Catalogo Guide](/moduli)**: 125+ guide procedurali step-by-step su documenti, lavoro, casa, bonus.
+- **[Percorsi Guidati](/percorsi)**: Raccolte tematiche per situazioni specifiche (es. "Inizia da qui", "Genitori e Famiglie").
+- **[Checklist Operative](/checklist)**: Liste di controllo rapide per non dimenticare nulla nelle procedure ufficiali.
+- **[Life Hacks Civici](/tips)**: 85+ consigli pratici e scorciatoie legali per risparmiare tempo e denaro.
+- **[Glossario Civico](/glossario)**: 158+ termini tecnici e burocratici spiegati in parole povere.
+- **[Hub Scuole](/scuole)**: Materiali didattici e piani di lezione pronti per docenti ed educatori.
+- **[Archivio Fonti](/fonti)**: Trasparenza totale su ogni fonte istituzionale e governativa utilizzata.
 
-## Stato del Progetto (Public Resource Hub v2 - Life Hacks Civici)
-- **Moduli Totali**: 30+
-- **Guide Pubblicate**: 125+ (tutte verificate tramite Quality Gate)
-- **Life Hacks (Tips)**: 85+
-- **Checklist Operative**: 45+
-- **Termini Glossario**: 150+
-- **Organizzazioni Fonti**: 40+ (INPS, AgID, Polizia Postale, Garante Privacy, ecc.)
-- **Stato**: Hub Completo — Production Ready
-- **Ultimo Aggiornamento**: Maggio 2026
+### 🛠️ Sviluppo e Contributi
+Busssola è un progetto **open-source**. Chiunque può contribuire migliorando le guide esistenti, aggiungendo nuovi temi o segnalando inesattezze burocratiche.
 
-## Principi Editoriali
-Per garantire l'affidabilità delle informazioni, ogni guida su Busssola segue criteri rigidi:
-- **Praticità**: non manuali teorici, ma passi concreti da compiere.
-- **Fonti Verificabili**: ogni lezione cita fonti istituzionali o ufficiali.
-- **Standardizzazione**: ogni procedura indica "A chi serve", "Cosa serve", "Dove si fa" e "Passaggi".
-- **Verifica Continua**: box di avviso sulla natura informativa delle guide e link diretti agli enti ufficiali.
+#### Comandi Rapidi
+- `npm run dev`: Avvia l'ambiente di sviluppo.
+- `npm run validate:content`: Controlla la validità di tutte le guide e le fonti.
+- `npm run update-stats`: Sincronizza i metadati del sito con i contenuti reali.
+- `npm run build`: Genera la versione statica ottimizzata (per Cloudflare Pages).
 
-## Tech Stack
-- **Framework**: Next.js 15+ (App Router)
-- **UI Engine**: React 19
-- **Styling**: Tailwind CSS v4
-- **Language**: TypeScript
-- **Deployment**: Static HTML Export (ottimizzato per Cloudflare Pages)
-
-## Comandi per Sviluppatori
-```bash
-# Avvio ambiente di sviluppo
-npm run dev
-
-# Validazione robusta dei contenuti (Quality Gate)
-npm run validate:content
-
-# Aggiornamento statistiche del sito e metadati
-npm run update-stats
-
-# Build di produzione (Static Export)
-npm run build
-```
-
-## Privacy e Trasparenza
-- **Zero Login**: non è richiesta alcuna registrazione.
-- **Zero Tracciamento**: nessun cookie di profilazione o tracciamento invasivo.
-- **Indipendenza**: Busssola non è un ente pubblico ma una risorsa civica indipendente.
-
-## Contribuisci
-Busssola è un progetto open-source e chiunque può contribuire proponendo nuove guide, correggendo errori o aggiornando le fonti.
-
-Leggi [CONTRIBUTING.md](CONTRIBUTING.md) per scoprire come partecipare.
-
-## Disclaimer
-Busssola non è un ente pubblico o governativo. Le informazioni fornite hanno scopo puramente informativo e non sostituiscono i siti ufficiali degli enti competenti, che hanno sempre la precedenza e valore legale. In caso di emergenza o pericolo immediato, contatta sempre il 112.
+#### Quality Gate
+Ogni contenuto deve superare il **Quality Gate**:
+1. Fonti governative o manuali ufficiali citati.
+2. Almeno 2 passaggi operativi chiari.
+3. Linguaggio accessibile (no gergo inutile).
+4. Metadata completi (tempo stimato, target, difficoltà).
 
 ---
-© 2026 Busssola — [busssola.com](https://busssola.com)
+
+### 🛡️ Privacy & Indipendenza
+- **Zero Cookie**: Non usiamo cookie di profilazione o marketing.
+- **Zero Tracking**: Non raccogliamo dati di navigazione o indirizzi IP.
+- **Indipendenza**: Nessuna sponsorizzazione da privati. Consigliamo software solo se standard di mercato o open-source.
+- **Statico**: Il sito è esportato come file statici per massima velocità e sicurezza.
+
+---
+Progetto ideato e mantenuto da [Adelajdo Haxhiaj](https://adelajdo.com) e dalla comunità open-source.

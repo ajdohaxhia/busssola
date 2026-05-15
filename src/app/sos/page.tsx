@@ -499,6 +499,8 @@ const SCENARIOS: Scenario[] = [
     }
 ]
 
+import { PageHeader } from '@/components/ui/PageHeader'
+
 export default function SOSPage() {
     const [selectedScenario, setSelectedScenario] = useState<Scenario | null>(null)
 
@@ -518,17 +520,13 @@ export default function SOSPage() {
 
     return (
         <Container size="lg" className="py-12 min-h-screen">
-            <header className="space-y-6 text-center pb-12">
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-sos/10 text-sos mb-4 border border-sos/20">
-                    <AlertTriangle size={40} />
-                </div>
-                <h1 className="text-4xl md:text-5xl font-display font-bold tracking-tight text-foreground leading-[1.1]">
-                    Centro di Primo Soccorso
-                </h1>
-                <p className="text-xl text-secondary max-w-2xl mx-auto leading-relaxed font-medium">
-                    Mantieni la calma. Se sei in pericolo di vita o vittima di violenza, chiama il <span className="text-sos font-bold">112</span>. Per emergenze digitali, scegli il tuo caso.
-                </p>
-            </header>
+            <PageHeader 
+                centered
+                badge="Se è urgente, parti da qui"
+                icon={AlertTriangle}
+                title="Centro di Primo Soccorso"
+                description="Azioni immediate per account rubati, ricatti, truffe, telefono perso, cyberstalking e altri problemi digitali."
+            />
 
             <AnimatePresence mode="wait">
                 {!selectedScenario ? (
@@ -540,24 +538,24 @@ export default function SOSPage() {
                         className="space-y-12"
                     >
                         {/* High Impact Physical Danger Alert */}
-                        <div className="bg-sos text-white p-8 rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl relative overflow-hidden ring-4 ring-sos/20 animate-in fade-in zoom-in duration-500">
+                        <div className="bg-sos text-white p-8 md:p-12 rounded-[3rem] flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl relative overflow-hidden ring-8 ring-sos/10 animate-pulse-subtle">
                             <div className="absolute top-0 right-0 p-12 opacity-10 pointer-events-none">
-                                <Phone size={160} />
+                                <Phone size={200} />
                             </div>
-                            <div className="space-y-3 relative z-10 text-center md:text-left">
-                                <div className="inline-flex items-center gap-2 bg-white/20 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2">
-                                    <ShieldAlert className="w-4 h-4" /> Urgenza Massima
+                            <div className="space-y-4 relative z-10 text-center md:text-left">
+                                <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-2">
+                                    <ShieldAlert className="w-5 h-5" /> Urgenza Massima
                                 </div>
-                                <h3 className="text-3xl font-bold tracking-tight">Pericolo imminente o violenza?</h3>
-                                <p className="text-white/90 font-medium text-lg max-w-xl leading-snug">Chiama immediatamente il Numero Unico Europeo per le Emergenze. È gratuito e attivo 24/7.</p>
+                                <h3 className="text-4xl md:text-6xl font-display font-black tracking-tight">Pericolo fisico?</h3>
+                                <p className="text-white/90 font-bold text-xl max-w-xl leading-tight">Se sei vittima di violenza o minaccia fisica, chiama subito il Numero Unico Europeo.</p>
                             </div>
-                            <a href="tel:112" className="bg-white text-sos font-bold text-4xl px-12 py-6 rounded-3xl shrink-0 hover:scale-105 active:scale-95 transition-all shadow-xl flex items-center gap-4 relative z-10 border-b-8 border-sos/10">
-                                <Phone className="w-8 h-8 fill-current" /> 112
+                            <a href="tel:112" className="bg-white text-sos font-black text-5xl md:text-7xl px-12 py-8 rounded-[2rem] shrink-0 hover:scale-105 active:scale-95 transition-all shadow-2xl flex items-center gap-6 relative z-10 border-b-[12px] border-sos/20">
+                                <Phone className="w-12 h-12 md:w-16 md:h-12 fill-current" /> 112
                             </a>
                         </div>
 
                         {/* Scenario Grid */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {SCENARIOS.map((scenario) => (
                                 <button
                                     key={scenario.id}
@@ -566,56 +564,56 @@ export default function SOSPage() {
                                         window.location.hash = scenario.id
                                     }}
                                     className={cn(
-                                        "w-full bg-surface border border-border p-6 rounded-[2rem] flex flex-col items-start gap-5 text-left hover:border-sos/50 hover:bg-sos/[0.02] hover:shadow-lg transition-all group relative overflow-hidden",
+                                        "w-full bg-surface border-2 border-border p-8 rounded-[2.5rem] flex flex-col items-start gap-6 text-left hover:border-sos hover:bg-sos/[0.02] hover:shadow-2xl transition-all group relative overflow-hidden",
                                         scenario.id === 'pericolo-fisico' ? "border-sos/30 bg-sos/[0.03]" : ""
                                     )}
                                 >
                                     <div className={cn(
-                                        "w-12 h-12 rounded-2xl flex items-center justify-center transition-colors shrink-0 border",
+                                        "w-16 h-16 rounded-2xl flex items-center justify-center transition-all shrink-0 border-2 shadow-inner",
                                         scenario.id === 'pericolo-fisico' 
                                             ? "bg-sos text-white border-sos" 
-                                            : "bg-surface-muted text-secondary border-border group-hover:bg-sos group-hover:text-white group-hover:border-sos"
+                                            : "bg-surface-muted text-secondary border-border group-hover:bg-sos group-hover:text-white group-hover:border-sos group-hover:rotate-3"
                                     )}>
-                                        <scenario.icon size={24} />
+                                        <scenario.icon size={32} strokeWidth={2.5} />
                                     </div>
-                                    <div className="space-y-1">
-                                        <h3 className="text-lg font-bold text-foreground group-hover:text-sos transition-colors tracking-tight leading-tight">
+                                    <div className="space-y-2">
+                                        <h3 className="text-2xl font-display font-black text-foreground group-hover:text-sos transition-colors tracking-tight leading-tight">
                                             {scenario.title}
                                         </h3>
-                                        <p className="text-xs text-secondary/70 font-bold uppercase tracking-widest pt-1">
-                                            {scenario.id === 'pericolo-fisico' ? 'Aiuto Fisico' : 'Aiuto Digitale'}
-                                        </p>
+                                        <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-secondary/60">
+                                            <Clock className="w-3 h-3" /> Azione Immediata
+                                        </div>
                                     </div>
-                                    <div className="absolute bottom-6 right-6">
-                                        <ChevronRight className="w-5 h-5 text-secondary/40 group-hover:text-sos group-hover:translate-x-1 transition-all" />
+                                    <div className="absolute bottom-8 right-8">
+                                        <ChevronRight className="w-6 h-6 text-secondary/20 group-hover:text-sos group-hover:translate-x-2 transition-all" />
                                     </div>
                                 </button>
                             ))}
                         </div>
                         
-                        <div className="p-8 rounded-[2.5rem] bg-surface border-2 border-dashed border-border text-center space-y-4">
-                            <h4 className="text-xl font-bold text-foreground">Non trovi il tuo caso?</h4>
-                            <p className="text-secondary max-w-lg mx-auto leading-relaxed">
-                                Se la tua situazione non è tra queste, vai al catalogo completo delle guide per trovare approfondimenti su privacy e sicurezza.
+                        <div className="p-12 rounded-[3.5rem] bg-surface border-4 border-dashed border-border text-center space-y-6">
+                            <h4 className="text-2xl font-display font-bold text-foreground">Non trovi il tuo caso tra questi?</h4>
+                            <p className="text-lg text-secondary max-w-xl mx-auto leading-relaxed font-medium">
+                                Se la tua situazione non è tra le emergenze critiche, esplora il catalogo completo per guide su privacy, account e sicurezza.
                             </p>
-                            <Button asChild variant="outline" className="rounded-xl font-bold mt-2">
-                                <Link href="/moduli">Vedi tutto il catalogo</Link>
+                            <Button asChild variant="outline" size="lg" className="rounded-2xl font-bold mt-4 h-16 px-10">
+                                <Link href="/moduli">Vedi tutte le guide</Link>
                             </Button>
                         </div>
                     </motion.div>
                 ) : (
                     <motion.div 
                         key="detail"
-                        initial={{ opacity: 0, scale: 0.98 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.98 }}
+                        exit={{ opacity: 0, scale: 0.95 }}
                         className="space-y-8"
                     >
                         <button 
                             onClick={handleBack}
-                            className="text-secondary font-bold text-xs uppercase tracking-widest hover:text-foreground transition-colors flex items-center gap-2 mb-4 group"
+                            className="text-secondary font-black text-xs uppercase tracking-widest hover:text-foreground transition-all flex items-center gap-2 mb-6 group"
                         >
-                            <ChevronLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Torna alla lista SOS
+                            <ChevronLeft className="w-5 h-5 group-hover:-translate-x-2 transition-transform" /> Torna alla lista SOS
                         </button>
 
                         <Card className={cn(
