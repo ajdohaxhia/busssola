@@ -29,6 +29,14 @@ Non accettiamo contenuti basati su "sentito dire" o memoria. Ogni contributo dev
 - Usare il registry centrale delle fonti in `src/data/officialSources.ts` quando possibile.
 - Indicare la data dell'ultima verifica.
 
+### 4. SEO e Trovabilità (Novità v2)
+Vogliamo che le guide siano trovate da chi ne ha bisogno su Google. Segui queste regole:
+- **Titoli**: devono rispondere a una domanda o un bisogno (es. "Come fare domanda NASpI" invece di "Indennità NASpI").
+- **Slug (URL)**: brevi, in minuscolo, parole separate da trattini (es. `cambio-residenza-online`).
+- **Sommario (Description)**: una o due frasi concrete che spiegano cosa imparerà l'utente. Evita testi generici.
+- **FAQ**: aggiungi 3-5 domande frequenti reali per ogni guida importante per intercettare le ricerche "long-tail".
+- **Link Interni**: collega la tua guida ad altre lezioni correlate o a termini del glossario.
+
 ## Workflow Tecnico
 
 ### Come aggiungere o modificare un contenuto
@@ -36,7 +44,7 @@ Non accettiamo contenuti basati su "sentito dire" o memoria. Ogni contributo dev
 2. **Life Hacks**: aggiungi un oggetto all'array `LIFE_HACKS` in `src/data/life-hacks.ts`.
 3. **Glossario**: aggiungi termini in `src/app/glossario/page.tsx`.
 4. **Fonti**: aggiungi entità in `src/data/officialSources.ts`.
-5. **Validazione**: esegui `npm run validate:content` per verificare che la struttura sia corretta.
+5. **Validazione**: esegui `npm run validate:content` per verificare che la struttura sia corretta (inclusi controlli SEO).
 6. **Statistiche**: esegui `npm run update-stats` per aggiornare i metadati del sito.
 7. **PR**: apri una Pull Request su GitHub spiegando le modifiche.
 

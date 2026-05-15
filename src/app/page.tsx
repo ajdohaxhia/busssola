@@ -38,50 +38,50 @@ export default function Home() {
             title="Emergenza digitale" 
             description="Account rubato, ricatto online, truffa bancaria o telefono perso." 
             icon={ShieldAlert} 
-            href="/sos"
+            href="/moduli/categoria/emergenze"
             color="sos"
           />
           <IntentionCard 
             title="Documenti e Identità" 
             description="Richiedere SPID, CIE, Passaporto o cambiare residenza." 
             icon={FileText} 
-            href="/moduli?cat=documenti"
+            href="/moduli/categoria/documenti"
           />
           <IntentionCard 
             title="Soldi e Truffe" 
             description="Riconoscere phishing, contestare pagamenti o carte clonate." 
             icon={Target} 
-            href="/moduli?cat=truffe"
+            href="/moduli/categoria/truffe"
           />
           <IntentionCard 
             title="Lavoro e INPS" 
             description="Domanda NASpI, dimissioni telematiche o busta paga." 
             icon={Briefcase} 
-            href="/moduli?cat=lavoro"
+            href="/moduli/categoria/lavoro"
           />
           <IntentionCard 
             title="Casa e Residenza" 
             description="Contratto affitto, voltura utenze, TARI e bonus casa." 
             icon={HomeIcon} 
-            href="/moduli?cat=casa"
+            href="/moduli/categoria/casa"
           />
           <IntentionCard 
             title="Scuola e Famiglia" 
             description="Cyberbullismo, patti digitali e tutele per i figli." 
             icon={Heart} 
-            href="/moduli?cat=famiglia"
+            href="/moduli/categoria/famiglia"
           />
           <IntentionCard 
             title="Privacy e Account" 
             description="Proteggere email, sessioni attive e dati personali." 
             icon={Lock} 
-            href="/moduli?cat=sicurezza"
+            href="/moduli/categoria/sicurezza"
           />
           <IntentionCard 
             title="Bonus e ISEE" 
             description="Preparare ISEE, richiedere bonus sociali e agevolazioni." 
             icon={Banknote} 
-            href="/moduli?cat=bonus"
+            href="/moduli/categoria/bonus"
           />
         </div>
       </section>
@@ -268,12 +268,6 @@ export default function Home() {
               <h4 className="font-black uppercase tracking-widest text-primary text-xs text-left">Open Source</h4>
               <p className="text-sm text-white/50 leading-relaxed text-left font-medium">Il codice e i contenuti sono su GitHub per tutti.</p>
             </div>
-          </div>
-
-          <div className="pt-8">
-            <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/20">
-              Versione {siteStats.projectStage} • Revisione {siteStats.lastUpdatedAt}
-            </p>
           </div>
         </div>
       </section>

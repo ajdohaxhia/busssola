@@ -14,6 +14,9 @@ import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { breadcrumbStructuredData } from '@/lib/seo'
+import { PageHeader } from '@/components/ui/PageHeader'
 
 type Scenario = {
     id: string
@@ -100,406 +103,229 @@ const SCENARIOS: Scenario[] = [
             'Richieste di "sfide" o azioni sessualizzate online'
         ],
         first10Min: [
-            'Rassicura il minore: non è colpa sua.',
-            'Interrompi il contatto senza cancellare nulla.',
-            'Metti via il dispositivo (senza resettarlo).'
+            'Rimani calmo e rassicura il minore: non è colpa sua.',
+            'NON cancellare nulla. NON affrontare il sospettato.',
+            'Metti il dispositivo in modalità aereo ma non spegnerlo.'
         ],
         nextHour: [
-            'Contatta il 114 Emergenza Infanzia.',
-            'Chiama la Polizia Postale.',
-            'Documenta i nomi utente e le piattaforme coinvolte.'
+            'Chiama il 114 (Emergenza Infanzia) per supporto psicologico.',
+            'Contatta la Polizia Postale o vai in caserma.',
+            'Contatta la scuola se l\'abuso coinvolge altri studenti.'
         ],
         doNot: [
-            'NON colpevolizzare il minore.',
-            'NON agire d\'impulso contattando l\'aggressore.',
-            'NON cancellare le prove per "pulire" il dispositivo.'
+            'NON punire il minore: lo faresti chiudere ancora di più.',
+            'NON cercare di risolvere la cosa "privatamente" con l\'abusante.'
         ],
         contactLabel: 'Emergenza Infanzia',
         contactNumber: '114',
         contactLink: 'tel:114',
         moduleLink: '/moduli/modulo-05-grooming-minori',
-        checklist: ['Minore rassicurato', 'Contatto 114', 'Prove intatte']
+        checklist: ['Minore rassicurato', 'Prove preservate', 'Segnalazione 114']
     },
     {
         id: 'instagram-rubato',
-        title: 'Account Instagram / Facebook rubato',
-        icon: UserX,
+        title: 'Account Instagram/Meta Rubato',
+        icon: Users,
         symptoms: [
-            'Non riesci più ad accedere al profilo',
-            'Ricevuta email di cambio indirizzo/password non richiesta',
-            'Amici segnalano che stai postando truffe (crypto, ecc.)'
+            'Non riesci più ad accedere con la tua password',
+            'La tua email o numero di telefono sono stati cambiati',
+            'I tuoi amici ricevono messaggi truffaldini da parte tua'
         ],
         first10Min: [
-            'Usa instagram.com/hacked o facebook.com/hacked subito.',
-            'Controlla la tua email: se hanno accesso lì, controlleranno tutto.',
-            'Avvisa i contatti stretti su WhatsApp/Storie di amici.'
+            'Controlla la tua email per avvisi di cambio password.',
+            'Usa la funzione "Hacked" ufficiale di Instagram.',
+            'Avvisa i tuoi contatti su altri canali della truffa.'
         ],
         nextHour: [
-            'Cambia password della mail e attiva la 2FA ovunque.',
-            'Revoca l\'accesso a tutte le app collegate all\'account.',
-            'Richiedi il recupero via video-selfie se disponibile.'
+            'Prova il video-riconoscimento se richiesto da Meta.',
+            'Cambia password a tutti gli account che usano la stessa mail.',
+            'Verifica che la tua mail principale non sia compromessa.'
         ],
         doNot: [
-            'NON pagare "hacker di recupero" che ti contattano: sono altre truffe.',
-            'NON cliccare su altri link in email sospette.'
+            'NON pagare "hacker" che promettono di recuperarlo su Telegram.',
+            'NON inserire i tuoi dati su siti di recupero non ufficiali.'
         ],
-        contactLabel: 'Centro Assistenza Meta',
-        contactNumber: 'Recupero Ufficiale',
-        contactLink: 'https://help.instagram.com/hacked',
-        moduleLink: '/moduli/modulo-01-primo-soccorso',
-        checklist: ['Hacked tool usato', 'Password email cambiata', 'Contatti avvisati']
+        contactLabel: 'Supporto Meta',
+        contactNumber: 'instagram.com/hacked',
+        contactLink: 'https://www.instagram.com/hacked',
+        moduleLink: '/moduli/modulo-02-account-security',
+        checklist: ['Email controllata', 'Richiesta ufficiale inviata', 'Amici avvisati']
     },
     {
         id: 'whatsapp-rubato',
-        title: 'Account WhatsApp rubato',
-        icon: Smartphone,
+        title: 'Account WhatsApp Rubato',
+        icon: Mail,
         symptoms: [
-            'WhatsApp si disconnette improvvisamente',
-            'Hai dato un codice SMS a qualcuno poco prima',
-            'Non riesci a ri-verificare il numero'
+            'WhatsApp si disconnette e chiede un nuovo codice',
+            'Hai dato un codice a 6 cifre a qualcuno via chat',
+            'Il tuo account è usato da altri su altri dispositivi'
         ],
         first10Min: [
-            'Prova a verificare di nuovo il numero tramite SMS.',
-            'Avvisa immediatamente amici e familiari: il ladro chiederà soldi a tuo nome.',
-            'Invia un\'email a support@whatsapp.com con oggetto "Perso/Rubato: Disattivazione del mio account".'
+            'Reinstalla WhatsApp e prova ad accedere col tuo numero.',
+            'Inserisci il codice SMS se riesci a riceverlo.',
+            'Avvisa immediatamente i tuoi gruppi principali.'
         ],
         nextHour: [
-            'Se il ladro ha messo la 2FA, dovrai aspettare 7 giorni per rientrare.',
-            'Monitora i tuoi conti bancari se avevi file sensibili su WhatsApp.',
-            'Pensa a quali segreti o documenti avevi in chat.'
+            'Se non ricevi il codice, scrivi a support@whatsapp.com.',
+            'Attiva la verifica in due passaggi (PIN) appena rientri.',
+            'Controlla le sessioni WhatsApp Web attive.'
         ],
         doNot: [
-            'NON dare mai a nessuno i codici ricevuti via SMS.',
-            'NON pagare riscatti per l\'account.'
+            'NON dare MAI codici ricevuti via SMS a nessuno.',
+            'NON disinstallare e reinstallare troppe volte (blocchi l\'SMS).'
         ],
-        contactLabel: 'Assistenza WhatsApp',
-        contactNumber: 'Invia Email Supporto',
-        contactLink: 'mailto:support@whatsapp.com?subject=Perso/Rubato: Disattivazione del mio account',
-        moduleLink: '/moduli/modulo-01-primo-soccorso',
-        checklist: ['SMS ri-verificato', 'Supporto contattato', 'Gruppi avvisati']
+        contactLabel: 'Email Supporto',
+        contactNumber: 'support@whatsapp.com',
+        contactLink: 'mailto:support@whatsapp.com',
+        moduleLink: '/moduli/modulo-02b-account-security',
+        checklist: ['Tentativo rientro', 'Supporto contattato', 'PIN attivato']
     },
     {
         id: 'email-compromessa',
-        title: 'Email compromessa (Hackerata)',
+        title: 'Email Compromessa (Hackerata)',
         icon: Mail,
         symptoms: [
-            'Email inviate che non hai scritto tu',
-            'Regole di inoltro automatico che non hai impostato',
-            'Password cambiata improvvisamente'
+            'Vedi email inviate che non hai scritto',
+            'Ricevi avvisi di accesso da posizioni insolite',
+            'Non ricevi più email importanti (filtri/inoltro attivati)'
         ],
         first10Min: [
-            'Cerca di cambiare la password immediatamente.',
-            'Attiva l\'Autenticazione a Due Fattori (2FA).',
-            'Verifica le sessioni attive e fai il logout da tutto.'
+            'Cambia la password immediatamente.',
+            'Disconnetti tutti i dispositivi attivi.',
+            'Controlla le regole di inoltro email.'
         ],
         nextHour: [
-            'Controlla le "Regole di posta": spesso gli hacker inoltrano le tue mail.',
-            'Controlla le mail inviate e il cestino.',
-            'Cambia password a tutti i siti importanti collegati a questa mail.'
+            'Verifica la cartella cestino per email eliminate dai ladri.',
+            'Cambia password a banche e social collegati.',
+            'Attiva subito la 2FA (codice sul telefono).'
         ],
         doNot: [
-            'NON usare la stessa vecchia password.',
-            'NON aspettare se vedi sessioni da paesi stranieri.'
+            'NON usare la vecchia password su altri siti.',
+            'NON ignorare gli avvisi di sicurezza di Google/Outlook.'
         ],
-        contactLabel: 'Sicurezza Google/Apple',
-        contactNumber: 'Gestione Account',
+        contactLabel: 'Account Google',
+        contactNumber: 'Sicurezza Google',
         contactLink: 'https://myaccount.google.com/security',
         moduleLink: '/moduli/modulo-02-account-security',
-        checklist: ['Nuova Password', '2FA attiva', 'Regole inoltro rimosse']
-    },
-    {
-        id: 'sim-swap',
-        title: 'SIM Swap (Niente segnale)',
-        icon: Smartphone,
-        symptoms: [
-            'Il telefono perde segnale all\'improvviso ("Solo chiamate emergenza")',
-            'Non ricevi più SMS o chiamate in zona coperta',
-            'Ricevuta notifica di "Sostituzione SIM" non richiesta'
-        ],
-        first10Min: [
-            'Chiama il tuo operatore telefonico da un altro telefono subito.',
-            'Blocca la SIM e verifica se è stata emessa una nuova.',
-            'Accedi subito all\'Home Banking e blocca gli accessi.'
-        ],
-        nextHour: [
-            'Controlla l\'email per tentativi di cambio password.',
-            'Vai fisicamente in un negozio dell\'operatore con documento.',
-            'Sposta la 2FA da SMS ad App Authenticator appena possibile.'
-        ],
-        doNot: [
-            'NON pensare che sia un semplice guasto tecnico.',
-            'NON aspettare il giorno dopo.'
-        ],
-        contactLabel: 'Tuo Operatore',
-        contactNumber: 'Blocca SIM',
-        contactLink: '#',
-        moduleLink: '/moduli/modulo-01b-primo-soccorso',
-        checklist: ['Operatore chiamato', 'SIM bloccata', 'Banca avvisata']
+        checklist: ['Password cambiata', 'Sessioni chiuse', 'Filtri controllati']
     },
     {
         id: 'banca-compromessa',
-        title: 'Carta o Banca compromessa',
+        title: 'Conto o Carta Compromessa',
         icon: CreditCard,
         symptoms: [
-            'Transazioni non riconosciute sull\'estratto conto',
-            'SMS dalla banca che chiede di verificare un acquisto',
-            'Hai inserito i dati della carta su un sito sospetto'
+            'Vedi addebiti che non riconosci',
+            'Ricevi codici OTP per acquisti non fatti',
+            'La banca ti avvisa di movimenti sospetti'
         ],
         first10Min: [
-            'Blocca la carta dall\'app o chiama il numero verde blocco carte.',
-            'Blocca l\'accesso all\'home banking se sospetti furto credenziali.',
-            'Fai uno screenshot della transazione sospetta.'
+            'Blocca la carta immediatamente tramite app o telefono.',
+            'Chiama il numero verde blocchi della tua banca.',
+            'Fai uno screenshot dei movimenti sospetti.'
         ],
         nextHour: [
-            'Contesta l\'operazione (Disconoscimento) via app o banca.',
-            'Cambia le password di accesso alla banca.',
-            'Sporgi denuncia alla Polizia o Carabinieri.'
+            'Disconosci le operazioni tramite modulo ufficiale banca.',
+            'Fai denuncia ai Carabinieri o Polizia.',
+            'Cambia le password del tuo home banking.'
         ],
         doNot: [
-            'NON aspettare di parlare con un operatore se puoi bloccare da solo.',
-            'NON cliccare su link in SMS che sembrano della banca.'
+            'NON aspettare il giorno dopo: il tempo è fondamentale.',
+            'NON dare MAI codici OTP al telefono a finti operatori.'
         ],
-        contactLabel: 'Numero Verde Blocchi',
-        contactNumber: '800 822 056 (Esempio)',
-        contactLink: 'tel:800822056',
-        moduleLink: '/moduli/modulo-03-truffe-phishing',
-        checklist: ['Carta bloccata', 'Transazione contestata', 'Password cambiata']
+        contactLabel: 'Numeri Blocchi',
+        contactNumber: 'Trova il numero',
+        contactLink: 'https://www.pagopa.gov.it/it/cittadini/dove-pagare/',
+        moduleLink: '/moduli/modulo-14-soldi-banche-truffe',
+        checklist: ['Carta bloccata', 'Banca avvisata', 'Denuncia sporta']
     },
     {
         id: 'smartphone-rubato',
-        title: 'Smartphone rubato o perso',
+        title: 'Smartphone Rubato o Perso',
         icon: Smartphone,
         symptoms: [
-            'Il telefono non è più con te',
-            'Vedi una posizione sconosciuta su "Trova il mio dispositivo"'
+            'Non trovi più il telefono',
+            'Ti è stato sottratto con la forza',
+            'Il telefono risulta offline su "Trova il mio"'
         ],
         first10Min: [
-            'Usa iCloud.com/find o google.com/android/find.',
-            'Attiva "Modalità smarrito" e avvia il "Wipe" (cancellazione dati).',
-            'Chiama l\'operatore per bloccare la SIM.'
+            'Usa "Trova il mio" (Apple) o "Find My Device" (Android).',
+            'Segna il dispositivo come smarrito/rubato.',
+            'Blocca la SIM chiamando l\'operatore.'
         ],
         nextHour: [
-            'Cambia password dell\'account Google/Apple e dei social.',
-            'Sporgi denuncia fornendo il codice IMEI.',
-            'Contatta la banca per disabilitare Apple/Google Pay.'
+            'Cambia password degli account principali sul telefono.',
+            'Recupera il codice IMEI per la denuncia.',
+            'Denuncia il furto per bloccare il codice IMEI a livello nazionale.'
         ],
         doNot: [
-            'NON andare da solo all\'indirizzo indicato dal GPS.',
-            'NON aspettare che la batteria si scarichi: agisci ora.'
+            'NON andare da solo a recuperarlo se vedi la posizione.',
+            'NON rimuovere il dispositivo dall\'account (perdi il blocco).'
         ],
-        contactLabel: 'Carabinieri / Polizia',
-        contactNumber: '112',
-        contactLink: 'tel:112',
-        moduleLink: '/moduli/modulo-01-primo-soccorso',
-        checklist: ['Reset remoto inviato', 'SIM bloccata', 'Denuncia con IMEI']
-    },
-    {
-        id: 'doxxing-emergenza',
-        title: 'Doxxing (Dati diffusi online)',
-        icon: Eye,
-        symptoms: [
-            'Hanno pubblicato il tuo indirizzo, telefono o dati privati',
-            'Ricevi decine di chiamate o messaggi da sconosciuti',
-            'Minacce basate sulla tua posizione reale'
-        ],
-        first10Min: [
-            'Rendi privati tutti i tuoi profili social.',
-            'Non rispondere a nessuno.',
-            'Documenta tutto con screenshot completi.'
-        ],
-        nextHour: [
-            'Segnala i contenuti alle piattaforme chiedendo la rimozione.',
-            'Cerca il tuo nome su Google e usa "Remove your personal results".',
-            'Valuta l\'ammonimento del Questore se sai chi è stato.'
-        ],
-        doNot: [
-            'NON cercare di vendicarti pubblicando dati dell\'attaccante.',
-            'NON rispondere alle provocazioni.'
-        ],
-        contactLabel: 'Garante Privacy',
-        contactNumber: 'Segnala violazione',
-        contactLink: 'https://www.garanteprivacy.it/',
-        moduleLink: '/moduli/modulo-06-stalking-doxxing',
-        checklist: ['Profili privati', 'Screenshot salvati', 'Richieste rimozione']
-    },
-    {
-        id: 'cyberstalking-emergenza',
-        title: 'Cyberstalking / Persecuzione',
-        icon: AlertTriangle,
-        symptoms: [
-            'Messaggi ossessivi da account multipli',
-            'Controllo costante dei tuoi spostamenti online',
-            'Creazione di finti profili a tuo nome per screditarti'
-        ],
-        first10Min: [
-            'Non rispondere mai: il silenzio è la tua difesa migliore.',
-            'Inizia a raccogliere un log cronologico delle molestie.',
-            'Blocca gli account ma solo DOPO aver fatto gli screenshot.'
-        ],
-        nextHour: [
-            'Contatta il 1522 (Anti Violenza e Stalking).',
-            'Parlane con una persona di fiducia o un centro antiviolenza.',
-            'Rafforza la privacy di tutti i tuoi account.'
-        ],
-        doNot: [
-            'NON cercare di "ragionare" con lo stalker.',
-            'NON isolarti per paura.'
-        ],
-        contactLabel: 'Anti-Stalking',
-        contactNumber: '1522',
-        contactLink: 'tel:1522',
-        moduleLink: '/moduli/modulo-06-stalking-doxxing',
-        checklist: ['Zero risposte', 'Log molestie iniziato', 'Chiamata 1522']
-    },
-    {
-        id: 'revenge-porn',
-        title: 'Revenge Porn (Diffusione illecita)',
-        icon: Lock,
-        symptoms: [
-            'Qualcuno ha pubblicato foto/video intimi senza consenso',
-            'Vedi materiale privato circolare su Telegram o gruppi chat',
-            'Minaccia di pubblicazione imminente'
-        ],
-        first10Min: [
-            'Usa il canale prioritario del Garante Privacy.',
-            'Segnala su StopNCII.org (per maggiorenni).',
-            'NON cancellare le chat: sono prove di reato penale.'
-        ],
-        nextHour: [
-            'Fai screenshot degli URL e dei post prima che vengano rimossi.',
-            'Contatta la Polizia Postale.',
-            'Chiedi ai siti host la rimozione immediata citando la legge.'
-        ],
-        doNot: [
-            'NON pagare ricatti.',
-            'NON supplicare l\'aggressore.',
-            'NON agire per vergogna: la legge ti tutela in modo specifico.'
-        ],
-        contactLabel: 'Garante Privacy',
-        contactNumber: 'Canale Urgente',
-        contactLink: 'https://www.gpdp.it/revengeporn',
-        moduleLink: '/moduli/modulo-04-sextortion-ricatti',
-        checklist: ['Segnalazione Garante', 'StopNCII inviato', 'Screenshot URL']
-    },
-    {
-        id: 'truffa-marketplace',
-        title: 'Truffa Marketplace (Vinted/eBay/Subito)',
-        icon: ShoppingBag,
-        symptoms: [
-            'Hai pagato fuori dalla piattaforma (es. Bonifico/Amici)',
-            'Il venditore è sparito dopo il pagamento',
-            'Hai ricevuto un pacco vuoto o diverso'
-        ],
-        first10Min: [
-            'Segnala l\'utente all\'assistenza ufficiale del sito.',
-            'Se hai usato PayPal "Beni e Servizi", apri una contestazione.',
-            'Salva l\'annuncio e le chat (spesso vengono cancellati).'
-        ],
-        nextHour: [
-            'Se hai pagato con carta, contatta la banca per il "Chargeback".',
-            'Fai denuncia online sul sito della Polizia Postale.',
-            'Controlla se l\'IBAN o la mail del truffatore sono già segnalati online.'
-        ],
-        doNot: [
-            'NON pagare mai fuori dal sistema di protezione ufficiale.',
-            'NON accettare "pagamenti per sbloccare la spedizione".'
-        ],
-        contactLabel: 'Polizia Postale',
-        contactNumber: 'Denuncia Online',
-        contactLink: 'https://www.commissariatodips.it/',
-        moduleLink: '/moduli/modulo-03b-truffe-phishing',
-        checklist: ['Segnalazione app', 'Contestazione PayPal', 'Screenshot annuncio']
-    },
-    {
-        id: 'link-falso',
-        title: 'Ho cliccato un link falso (Phishing)',
-        icon: MousePointer2,
-        symptoms: [
-            'Hai inserito password o dati su un sito strano',
-            'Hai scaricato un file dopo un SMS del corriere',
-            'Il sito della banca sembrava diverso dal solito'
-        ],
-        first10Min: [
-            'Cambia la password di quel servizio immediatamente.',
-            'Attiva la 2FA se non era presente.',
-            'Se hai inserito dati della carta, bloccala subito.'
-        ],
-        nextHour: [
-            'Cambia le password di altri siti se erano uguali.',
-            'Fai una scansione antivirus se hai scaricato un file.',
-            'Controlla le ultime transazioni e gli ultimi accessi.'
-        ],
-        doNot: [
-            'NON riutilizzare la vecchia password compromessa.',
-            'NON ignorare il segnale se il browser ti avvisa di sito non sicuro.'
-        ],
-        contactLabel: 'Sicurezza Web',
-        contactNumber: 'Controllo Credenziali',
-        contactLink: 'https://haveibeenpwned.com/',
-        moduleLink: '/moduli/modulo-03-truffe-phishing',
-        checklist: ['Nuova Password', '2FA attiva', 'Blocco carta (se inserita)']
+        contactLabel: 'Trova Dispositivo',
+        contactNumber: 'Accedi al Cloud',
+        contactLink: 'https://www.icloud.com/find',
+        moduleLink: '/moduli/modulo-07b-privacy-smartphone',
+        checklist: ['SIM bloccata', 'Account protetti', 'Denuncia IMEI']
     },
     {
         id: 'otp-condiviso',
-        title: 'Ho dato codici OTP a qualcuno',
+        title: 'Ho dato un codice OTP a terzi',
         icon: Lock,
         symptoms: [
-            'Un finto operatore ti ha chiesto un codice SMS',
-            'Qualcuno al telefono ti ha guidato in una procedura',
-            'Vedi operazioni che non hai fatto tu'
+            'Qualcuno ti ha chiesto un codice via SMS e glielo hai dato',
+            'Hai inserito un codice su un sito sospetto',
+            'Hai autorizzato un accesso che non hai richiesto'
         ],
         first10Min: [
-            'Riacciuffa il controllo dell\'account se possibile.',
-            'Cambia password e scarica i codici di backup.',
-            'Se era per la banca, blocca tutto ora.'
+            'Cambia subito la password dell\'account interessato.',
+            'Chiama la banca se il codice riguardava pagamenti.',
+            'Disconnetti ogni sessione attiva.'
         ],
         nextHour: [
-            'Verifica che non abbiano aggiunto email o telefoni di recupero.',
-            'Fai logout da tutte le sessioni attive.',
-            'Avvisa l\'assistenza ufficiale che hai subìto una manipolazione.'
+            'Verifica se sono stati cambiati dati di recupero (mail/tel).',
+            'Controlla se ci sono nuovi "dispositivi autorizzati".',
+            'Genera nuovi codici di backup.'
         ],
         doNot: [
-            'NON credere a chi ti chiede codici al telefono: NESSUNO lo fa.',
-            'NON riagganciare con la banca finché non sei sicuro del blocco.'
+            'NON sottovalutare la cosa: l\'OTP è la tua firma digitale.',
+            'NON credere a chi dice che "serve per sbloccare un pacco".'
         ],
-        contactLabel: 'Tua Banca / Servizio',
-        contactNumber: 'Assistenza Urgente',
-        contactLink: '#',
-        moduleLink: '/moduli/modulo-01b-primo-soccorso',
-        checklist: ['Sessioni rimosse', 'Nuovi recuperi rimossi', 'Blocco banca']
+        contactLabel: 'Centro Sicurezza',
+        contactNumber: 'Verifica Account',
+        contactLink: '/moduli/modulo-02-account-security',
+        moduleLink: '/moduli/modulo-03-truffe-phishing',
+        checklist: ['Password cambiata', 'Sessioni chiuse', 'Banca avvisata']
     },
     {
-        id: 'telefono-spiato',
-        title: 'Paura telefono spiato (Spyware)',
-        icon: Eye,
+        id: 'link-phishing',
+        title: 'Ho cliccato un link sospetto',
+        icon: MousePointer2,
         symptoms: [
-            'Batteria che si scarica velocemente e telefono caldo',
-            'App che si aprono da sole o strani rumori in chiamata',
-            'Qualcuno sa cose che potevi sapere solo leggendo le tue chat'
+            'Hai inserito password su un sito "strano"',
+            'Hai scaricato un file dopo aver cliccato',
+            'Il browser si comporta in modo anomalo'
         ],
         first10Min: [
-            'Metti il telefono in modalità aereo.',
-            'Controlla la lista delle app installate cercando nomi strani.',
-            'Verifica i permessi di accessibilità e geolocalizzazione.'
+            'Chiama la banca se hai inserito dati carta.',
+            'Cambia la password del sito "imitato".',
+            'Scansiona il dispositivo con un antivirus.'
         ],
         nextHour: [
-            'Esegui un backup dei soli file (foto, contatti) e non delle app.',
-            'Valuta il ripristino di fabbrica (Factory Reset).',
-            'Cambia tutte le password importanti da un altro dispositivo sicuro.'
+            'Controlla se sono comparsi addebiti o accessi.',
+            'Riavvia il router se eri su rete Wi-Fi.',
+            'Elimina file scaricati di recente.'
         ],
         doNot: [
-            'NON fare backup completi che includono il malware.',
-            'NON parlarne vicino al telefono se temi microfoni attivi.'
+            'NON inserire altri dati per "annullare" l\'operazione.',
+            'NON ignorare eventuali rallentamenti del sistema.'
         ],
-        contactLabel: 'Supporto Tecnico',
-        contactNumber: 'Checkup Sicurezza',
-        contactLink: '/moduli/modulo-07b-privacy-smartphone',
-        moduleLink: '/moduli/modulo-07b-privacy-smartphone',
-        checklist: ['Aereo attivo', 'Controllo app sospette', 'Password cambiate (esterno)']
+        contactLabel: 'Antivirus Online',
+        contactNumber: 'Scansione gratuita',
+        contactLink: 'https://www.virustotal.com',
+        moduleLink: '/moduli/modulo-03-truffe-phishing',
+        checklist: ['Dati banca bloccati', 'Password cambiata', 'Scansione virus']
     }
 ]
-
-import { PageHeader } from '@/components/ui/PageHeader'
 
 export default function SOSPage() {
     const [selectedScenario, setSelectedScenario] = useState<Scenario | null>(null)
@@ -520,6 +346,22 @@ export default function SOSPage() {
 
     return (
         <Container size="lg" className="py-12 min-h-screen">
+            <JsonLd data={breadcrumbStructuredData([
+                { name: 'SOS Emergenze', path: '/sos' }
+            ])} />
+            <JsonLd data={{
+                '@context': 'https://schema.org',
+                '@type': 'ItemList',
+                'name': 'Protocolli di Emergenza Digitale',
+                'description': 'Azioni immediate per gestire furti account, ricatti e truffe online.',
+                'itemListElement': SCENARIOS.map((s, i) => ({
+                    '@type': 'ListItem',
+                    'position': i + 1,
+                    'name': s.title,
+                    'url': `https://busssola.com/sos#${s.id}`
+                }))
+            } as any} />
+
             <PageHeader 
                 centered
                 badge="Se è urgente, parti da qui"
@@ -547,7 +389,7 @@ export default function SOSPage() {
                                     <ShieldAlert className="w-5 h-5" /> Urgenza Massima
                                 </div>
                                 <h3 className="text-4xl md:text-6xl font-display font-black tracking-tight">Pericolo fisico?</h3>
-                                <p className="text-white/90 font-bold text-xl max-w-xl leading-tight">Se sei vittima di violenza o minaccia fisica, chiama subito il Numero Unico Europeo.</p>
+                                <p className="text-white/90 font-bold text-xl max-w-xl leading-tight text-center md:text-left">Se sei vittima di violenza o minaccia fisica, chiama subito il Numero Unico Europeo.</p>
                             </div>
                             <a href="tel:112" className="bg-white text-sos font-black text-5xl md:text-7xl px-12 py-8 rounded-[2rem] shrink-0 hover:scale-105 active:scale-95 transition-all shadow-2xl flex items-center gap-6 relative z-10 border-b-[12px] border-sos/20">
                                 <Phone className="w-12 h-12 md:w-16 md:h-12 fill-current" /> 112
@@ -576,11 +418,11 @@ export default function SOSPage() {
                                     )}>
                                         <scenario.icon size={32} strokeWidth={2.5} />
                                     </div>
-                                    <div className="space-y-2">
+                                    <div className="space-y-2 text-left">
                                         <h3 className="text-2xl font-display font-black text-foreground group-hover:text-sos transition-colors tracking-tight leading-tight">
                                             {scenario.title}
                                         </h3>
-                                        <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-secondary/60">
+                                        <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-secondary/60 text-left">
                                             <Clock className="w-3 h-3" /> Azione Immediata
                                         </div>
                                     </div>
@@ -596,7 +438,7 @@ export default function SOSPage() {
                             <p className="text-lg text-secondary max-w-xl mx-auto leading-relaxed font-medium">
                                 Se la tua situazione non è tra le emergenze critiche, esplora il catalogo completo per guide su privacy, account e sicurezza.
                             </p>
-                            <Button asChild variant="outline" size="lg" className="rounded-2xl font-bold mt-4 h-16 px-10">
+                            <Button asChild variant="outline" size="lg" className="rounded-2xl font-black uppercase tracking-widest mt-4 h-16 px-10">
                                 <Link href="/moduli">Vedi tutte le guide</Link>
                             </Button>
                         </div>
@@ -620,159 +462,101 @@ export default function SOSPage() {
                             "bg-white p-8 md:p-12 shadow-2xl relative overflow-hidden rounded-[3rem] border-2",
                             selectedScenario.id === 'pericolo-fisico' ? "border-sos" : "border-border"
                         )}>
-                            <div className="absolute top-0 right-0 p-8 opacity-[0.03] pointer-events-none">
-                                <selectedScenario.icon size={400} className="text-sos" />
-                            </div>
-                            
-                            <div className="relative z-10 space-y-12">
-                                <div className="space-y-6">
-                                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                                        <div className="space-y-2">
-                                            <Badge className="bg-sos/10 text-sos border-sos/20 uppercase tracking-widest text-[10px] font-bold">Protocollo Urgente</Badge>
-                                            <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground tracking-tight leading-tight">
-                                                {selectedScenario.title}
-                                            </h2>
-                                        </div>
+                             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
+                                <div className="lg:col-span-8 space-y-12">
+                                    <div className="space-y-4 text-left">
                                         <div className={cn(
-                                            "w-20 h-20 rounded-3xl flex items-center justify-center shrink-0 border shadow-inner",
-                                            selectedScenario.id === 'pericolo-fisico' ? "bg-sos text-white border-sos" : "bg-surface-muted text-secondary border-border"
+                                            "w-20 h-20 rounded-[2rem] flex items-center justify-center mb-6 shadow-xl",
+                                            selectedScenario.id === 'pericolo-fisico' ? "bg-sos text-white" : "bg-primary text-white"
                                         )}>
-                                            <selectedScenario.icon size={40} />
+                                            <selectedScenario.icon size={40} strokeWidth={2.5} />
+                                        </div>
+                                        <h2 className="text-4xl md:text-6xl font-display font-black text-foreground tracking-tight leading-tight">{selectedScenario.title}</h2>
+                                    </div>
+
+                                    <div className="space-y-8 text-left">
+                                        <h3 className="text-xs font-black uppercase tracking-[0.3em] text-secondary/40 border-b border-border pb-4">Protocollo di Reazione</h3>
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                            <div className="space-y-6">
+                                                <h4 className="flex items-center gap-2 font-black text-emerald-600 uppercase text-xs tracking-widest">
+                                                    <CheckCircle2 size={18} /> Primi 10 Minuti
+                                                </h4>
+                                                <ul className="space-y-4 m-0 p-0 list-none">
+                                                    {selectedScenario.first10Min.map((step, i) => (
+                                                        <li key={i} className="flex gap-4 text-lg font-bold text-foreground leading-tight">
+                                                            <span className="shrink-0 w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center text-sm font-black">{i + 1}</span>
+                                                            {step}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                            <div className="space-y-6">
+                                                <h4 className="flex items-center gap-2 font-black text-sos uppercase text-xs tracking-widest">
+                                                    <XCircle size={18} /> Cosa NON fare
+                                                </h4>
+                                                <ul className="space-y-4 m-0 p-0 list-none">
+                                                    {selectedScenario.doNot.map((step, i) => (
+                                                        <li key={i} className="flex gap-4 text-lg font-bold text-sos leading-tight">
+                                                            <span className="shrink-0 w-8 h-8 rounded-full bg-sos/5 text-sos flex items-center justify-center text-sm font-black">!</span>
+                                                            {step}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
-                                    
-                                    <div className="space-y-4">
-                                        <h3 className="text-xs font-bold text-secondary uppercase tracking-[0.2em] flex items-center gap-2">
-                                            <Info className="w-4 h-4" /> Segnali e Sintomi
-                                        </h3>
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                            {selectedScenario.symptoms.map((s, i) => (
-                                                <div key={i} className="flex gap-4 text-foreground font-semibold bg-surface/50 p-4 rounded-2xl border border-border/40 leading-snug">
-                                                    <span className="text-sos font-bold">•</span> {s}
-                                                </div>
-                                            ))}
+
+                                    <div className="pt-8 border-t border-border space-y-6 text-left">
+                                        <h4 className="text-xs font-black uppercase tracking-[0.3em] text-secondary/40">Approfondimento</h4>
+                                        <div className="flex flex-wrap gap-4">
+                                            <Button asChild size="lg" className="rounded-2xl font-black uppercase tracking-widest h-16 px-10 active:scale-95 transition-all">
+                                                <Link href={selectedScenario.moduleLink}>Apri Guida Completa <ArrowRight className="ml-2 w-5 h-5" /></Link>
+                                            </Button>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                                    <div className="bg-emerald-50/50 rounded-[2rem] p-8 border border-emerald-100 space-y-6 relative overflow-hidden group">
-                                        <div className="absolute top-0 right-0 p-6 opacity-10">
-                                            <Clock className="w-12 h-12 text-emerald-600" />
+                                <aside className="lg:col-span-4 space-y-8 text-left">
+                                    <div className="bg-surface-muted p-8 rounded-[2.5rem] border-2 border-border space-y-6">
+                                        <h4 className="text-xs font-black uppercase tracking-widest text-secondary/40">Contatto Diretto</h4>
+                                        <div className="space-y-2">
+                                            <p className="text-sm font-black text-foreground uppercase tracking-widest">{selectedScenario.contactLabel}</p>
+                                            <a 
+                                                href={selectedScenario.contactLink} 
+                                                target={selectedScenario.contactLink.startsWith('http') ? '_blank' : undefined}
+                                                className="block text-3xl font-display font-black text-primary hover:text-primary-hover transition-colors break-words"
+                                            >
+                                                {selectedScenario.contactNumber}
+                                            </a>
                                         </div>
-                                        <div className="flex items-center gap-3 text-emerald-800 font-bold uppercase tracking-wider text-xs">
-                                            <CheckCircle2 className="w-5 h-5 text-emerald-600" /> Primi 10 minuti
-                                        </div>
+                                        <Button asChild variant="outline" className="w-full rounded-xl font-black uppercase tracking-widest h-12 bg-white border-border">
+                                            <a href={selectedScenario.contactLink}>Vai al servizio</a>
+                                        </Button>
+                                    </div>
+
+                                    <div className="p-8 space-y-6">
+                                        <h4 className="text-xs font-black uppercase tracking-widest text-secondary/40">Checklist Rapida</h4>
                                         <ul className="space-y-4 m-0 p-0 list-none">
-                                            {selectedScenario.first10Min.map((a, i) => (
-                                                <li key={i} className="text-foreground font-bold leading-relaxed flex gap-4 bg-white/40 p-4 rounded-xl border border-emerald-200/50 shadow-sm">
-                                                    <span className="text-emerald-500 font-black">{i + 1}</span> {a}
+                                            {selectedScenario.checklist.map((item, i) => (
+                                                <li key={i} className="flex items-center gap-3 text-sm font-bold text-secondary">
+                                                    <div className="w-5 h-5 rounded-md border-2 border-border flex items-center justify-center shrink-0">
+                                                        <CheckCircle2 size={12} className="text-transparent" />
+                                                    </div>
+                                                    {item}
                                                 </li>
                                             ))}
                                         </ul>
                                     </div>
-
-                                    <div className="bg-blue-50/50 rounded-[2rem] p-8 border border-blue-100 space-y-6 relative overflow-hidden">
-                                        <div className="absolute top-0 right-0 p-6 opacity-10">
-                                            <Clock className="w-12 h-12 text-blue-600" />
-                                        </div>
-                                        <div className="flex items-center gap-3 text-blue-800 font-bold uppercase tracking-wider text-xs">
-                                            <Info className="w-5 h-5 text-blue-600" /> Nella prossima ora
-                                        </div>
-                                        <ul className="space-y-4 m-0 p-0 list-none">
-                                            {selectedScenario.nextHour.map((a, i) => (
-                                                <li key={i} className="text-foreground font-bold leading-relaxed flex gap-4 bg-white/40 p-4 rounded-xl border border-blue-200/50 shadow-sm">
-                                                    <span className="text-blue-500 font-black">•</span> {a}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div className="bg-sos/[0.02] rounded-[2rem] p-8 border border-sos/10 space-y-6">
-                                    <div className="flex items-center gap-3 text-sos font-bold uppercase tracking-wider text-xs">
-                                        <XCircle className="w-5 h-5" /> Cosa NON fare assolutamente
-                                    </div>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                        {selectedScenario.doNot.map((d, i) => (
-                                            <div key={i} className="text-sos font-bold leading-relaxed flex gap-3 bg-white p-4 rounded-xl border border-sos/10 shadow-sm">
-                                                <span className="font-black text-xl leading-none">✕</span> {d}
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                                
-                                <div className="space-y-6">
-                                    <h3 className="text-sm font-bold text-foreground uppercase tracking-widest text-center">Contatto Istituzionale di Riferimento:</h3>
-                                    
-                                    {/* SITUATIONAL URGENT CALLS */}
-                                    {selectedScenario.id === 'pericolo-fisico' && (
-                                        <div className="p-6 bg-sos text-white rounded-3xl text-center space-y-2 mb-4 border-b-8 border-sos-border shadow-xl">
-                                            <p className="text-[10px] font-black uppercase tracking-[0.3em] opacity-70">Emergenza Reale</p>
-                                            <p className="text-3xl font-black">Chiama subito il 112</p>
-                                            <p className="text-sm font-medium">Non aspettare. La tua sicurezza fisica è la priorità.</p>
-                                        </div>
-                                    )}
-
-                                    {(selectedScenario.id === 'minore-ricatto' || selectedScenario.id === 'grooming') && (
-                                        <div className="p-6 bg-sos text-white rounded-3xl text-center space-y-2 mb-4 border-b-8 border-sos-border shadow-xl">
-                                            <p className="text-[10px] font-black uppercase tracking-[0.3em] opacity-70">Tutela Minori</p>
-                                            <p className="text-3xl font-black">Contatta subito il 114 o 112</p>
-                                            <p className="text-sm font-medium">Se un minore è in pericolo, le autorità devono essere avvisate immediatamente.</p>
-                                        </div>
-                                    )}
-
-                                    {(selectedScenario.id === 'cyberstalking-emergenza' || selectedScenario.id === 'stalking') && (
-                                        <div className="p-6 bg-sos text-white rounded-3xl text-center space-y-2 mb-4 border-b-8 border-sos-border shadow-xl">
-                                            <p className="text-[10px] font-black uppercase tracking-[0.3em] opacity-70">Violenza e Stalking</p>
-                                            <p className="text-3xl font-black">Chiama 112 o contatta 1522</p>
-                                            <p className="text-sm font-medium">Se c’è rischio immediato chiama 112. Per supporto antiviolenza usa il 1522.</p>
-                                        </div>
-                                    )}
-
-                                    <a 
-                                        href={selectedScenario.contactLink}
-                                        target={selectedScenario.contactLink.startsWith('http') ? '_blank' : '_self'}
-                                        className={cn(
-                                            "block p-8 rounded-[2rem] hover:scale-[1.01] active:scale-[0.99] transition-all shadow-2xl group border-b-8",
-                                            selectedScenario.id === 'pericolo-fisico' ? "bg-white text-sos border-sos/10" : "bg-foreground text-background border-secondary/20"
-                                        )}
-                                    >
-                                        <div className="flex justify-between items-center gap-8">
-                                            <div className="space-y-1">
-                                                <p className="opacity-70 font-black text-[10px] uppercase tracking-[0.3em] mb-1">{selectedScenario.contactLabel}</p>
-                                                <p className="text-2xl md:text-4xl font-bold tracking-tighter">{selectedScenario.contactNumber}</p>
-                                            </div>
-                                            <div className="bg-white/20 p-5 rounded-full shrink-0 group-hover:bg-white/30 transition-colors">
-                                                {selectedScenario.contactLink.startsWith('http') ? <ArrowRight className="w-8 h-8" /> : <Phone className="w-8 h-8" />}
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-8">
-                                    <div className="flex flex-wrap gap-2">
-                                        {selectedScenario.checklist.map((item, i) => (
-                                            <Badge key={i} variant="outline" className="rounded-full px-3 py-1 font-bold text-[10px] uppercase text-secondary border-secondary/20">
-                                                <CheckCircle2 className="w-3 h-3 mr-1 text-emerald-500" /> {item}
-                                            </Badge>
-                                        ))}
-                                    </div>
-                                    <Link 
-                                        href={selectedScenario.moduleLink} 
-                                        className="inline-flex items-center gap-2 bg-primary text-white font-bold px-8 py-4 rounded-2xl hover:bg-primary-hover transition-all shadow-lg group text-sm uppercase tracking-widest"
-                                    >
-                                        Guida Completa <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                                    </Link>
-                                </div>
+                                </aside>
+                             </div>
+                             
+                             <div className="mt-20 p-8 bg-surface-muted/30 border-2 border-border rounded-3xl text-center text-left">
+                                <p className="text-xs text-secondary/60 leading-relaxed max-w-3xl mx-auto italic">
+                                    <span className="font-black uppercase not-italic block mb-2 text-[10px]">Disclaimer SOS</span>
+                                    Questi protocolli sono a scopo informativo e non sostituiscono l'intervento delle autorità competenti. In caso di reati gravi, sporgi sempre denuncia formale presso le forze dell'ordine. Busssola non raccoglie dati sulle tue segnalazioni e non si assume responsabilità per l'esito delle procedure descritte.
+                                </p>
                             </div>
                         </Card>
-
-                        <div className="p-8 rounded-[2rem] bg-surface border border-border text-sm text-secondary/80 leading-relaxed italic text-center">
-                            <p>
-                                <strong>Disclaimer:</strong> Le informazioni fornite in questa pagina hanno scopo puramente informativo e di orientamento operativo immediato. Non sostituiscono il supporto di autorità, avvocati, medici o tecnici specializzati. Busssola non si assume responsabilità per l'esito delle procedure descritte.
-                            </p>
-                        </div>
                     </motion.div>
                 )}
             </AnimatePresence>

@@ -3,6 +3,9 @@ import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import LessonReaderClient from '@/components/lessons/LessonReaderClient'
+import { Metadata } from 'next'
+import { lessonMetadata, lessonStructuredData } from '@/lib/seo'
+import { JsonLd } from '@/components/seo/JsonLd'
 
 export function generateStaticParams() {
     const params: { id: string; lessonId: string }[] = []
@@ -17,6 +20,18 @@ export function generateStaticParams() {
     })
     
     return params
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string; lessonId: string }> }): Promise<Metadata> {
+    const { id, lessonId } = await params
+    const currentModule = getModuleById(id)
+    const lessonIndex = parseInt(lessonId) - 1
+
+    if (!currentModule || isNaN(lessonIndex) || !currentModule.lessons[lessonIndex]) {
+        return { title: 'Lezione non trovata' }
+    }
+
+    return lessonMetadata(currentModule, currentModule.lessons[lessonIndex], lessonIndex + 1)
 }
 
 export default async function LessonPage({ params }: { params: Promise<{ id: string; lessonId: string }> }) {
@@ -35,5 +50,12 @@ export default async function LessonPage({ params }: { params: Promise<{ id: str
         )
     }
 
-    return <LessonReaderClient currentModule={currentModule} lessonIndex={lessonIndex} />
+    const currentLesson = currentModule.lessons[lessonIndex]
+
+    return (
+        <>
+            <JsonLd data={lessonStructuredData(currentModule, currentLesson, lessonIndex + 1) as any} />
+            <LessonReaderClient currentModule={currentModule} lessonIndex={lessonIndex} />
+        </>
+    )
 }

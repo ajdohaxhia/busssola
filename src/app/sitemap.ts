@@ -37,21 +37,33 @@ function entry(path: string, priority: number, changeFrequency: MetadataRoute.Si
     }
 }
 
+const categories = [
+    'emergenze', 'documenti', 'lavoro', 'casa', 'soldi', 'bonus', 'sanita', 'famiglia',
+    'sicurezza', 'truffe', 'privacy', 'immigrazione', 'consumatori', 'mobilita',
+    'universita', 'anziani', 'disabilita', 'casa-digitale'
+].map(cat => entry(`/moduli/categoria/${cat}`, 0.8, 'monthly'))
+
 export default function sitemap(): MetadataRoute.Sitemap {
-    const modules = ALL_MODULES.map((module) => entry(`/moduli/${module.id}`, 0.75, 'monthly'))
+    const modules = ALL_MODULES.map((module) => entry(`/moduli/${module.id}`, 0.85, 'monthly'))
 
     const lessons = ALL_MODULES.flatMap((module) =>
         module.lessons
             .filter(l => l.status === 'published' && l.qualityGatePassed)
-            .map((_, index) => entry(`/moduli/${module.id}/lezione/${index + 1}`, 0.45, 'monthly'))
+            .map((_, index) => entry(`/moduli/${module.id}/lezione/${index + 1}`, 0.9, 'monthly'))
     )
 
-    const paths = LEARNING_PATHS.map((path) => entry(`/percorsi/${path.id}`, 0.7, 'monthly'))
+    const paths = LEARNING_PATHS.map((path) => entry(`/percorsi/${path.id}`, 0.8, 'monthly'))
+
+    const tips = LIFE_HACKS.map((hack) => entry(`/tips/${hack.slug}`, 0.75, 'monthly'))
 
     return [
-        ...staticRoutes.map((route) => entry(route, route === '' ? 1 : 0.65, 'monthly')),
+        ...staticRoutes.map((route) => entry(route, route === '' ? 1 : 0.7, 'weekly')),
+        ...categories,
         ...paths,
         ...modules,
         ...lessons,
+        ...tips,
     ]
 }
+
+import { LIFE_HACKS } from '@/data/life-hacks'

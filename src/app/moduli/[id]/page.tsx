@@ -3,11 +3,22 @@ import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import ModuleDetailClient from '@/components/modules/ModuleDetailClient'
+import { Metadata } from 'next'
+import { moduleMetadata, moduleStructuredData } from '@/lib/seo'
+import { JsonLd } from '@/components/seo/JsonLd'
 
 export function generateStaticParams() {
     return ALL_MODULES.map((module) => ({
         id: module.id,
     }))
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+    const { id } = await params
+    const currentModule = getModuleById(id)
+    if (!currentModule) return { title: 'Modulo non trovato' }
+
+    return moduleMetadata(currentModule)
 }
 
 export default async function ModulePage({ params }: { params: Promise<{ id: string }> }) {
@@ -26,5 +37,10 @@ export default async function ModulePage({ params }: { params: Promise<{ id: str
         )
     }
 
-    return <ModuleDetailClient currentModule={currentModule} />
+    return (
+        <>
+            <JsonLd data={moduleStructuredData(currentModule)} />
+            <ModuleDetailClient currentModule={currentModule} />
+        </>
+    )
 }

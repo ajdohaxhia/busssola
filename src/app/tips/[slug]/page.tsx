@@ -2,6 +2,8 @@ import { LIFE_HACKS } from '@/data/life-hacks'
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import TipDetailClient from './TipDetailClient'
+import { tipMetadata, tipStructuredData } from '@/lib/seo'
+import { JsonLd } from '@/components/seo/JsonLd'
 
 interface PageProps {
     params: Promise<{ slug: string }>
@@ -16,12 +18,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
     const { slug } = await params
     const hack = LIFE_HACKS.find(h => h.slug === slug)
-    if (!hack) return {}
+    if (!hack) return { title: 'Trucco non trovato' }
 
-    return {
-        title: `${hack.title} | Life Hacks Civici | Busssola`,
-        description: hack.summary,
-    }
+    return tipMetadata(hack)
 }
 
 export default async function TipDetailPage({ params }: PageProps) {
@@ -30,5 +29,10 @@ export default async function TipDetailPage({ params }: PageProps) {
 
     if (!hack) notFound()
 
-    return <TipDetailClient hack={hack} />
+    return (
+        <>
+            <JsonLd data={tipStructuredData(hack) as any} />
+            <TipDetailClient hack={hack} />
+        </>
+    )
 }

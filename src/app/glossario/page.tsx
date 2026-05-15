@@ -11,6 +11,8 @@ import { PageHeader } from '@/components/ui/PageHeader'
 import { SearchBox } from '@/components/ui/SearchBox'
 import { Button } from '@/components/ui/Button'
 import * as Icons from 'lucide-react'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { breadcrumbStructuredData, absoluteUrl } from '@/lib/seo'
 
 type Term = {
     term: string
@@ -89,6 +91,22 @@ export default function GlossaryPage() {
 
     return (
         <Container size="lg" className="py-12 space-y-12">
+            <JsonLd data={breadcrumbStructuredData([
+                { name: 'Glossario', path: '/glossario' }
+            ])} />
+            <JsonLd data={{
+                '@context': 'https://schema.org',
+                '@type': 'DefinedTermSet',
+                'name': 'Glossario Civico Busssola',
+                'description': 'Termini burocratici e tecnici spiegati in modo semplice per i cittadini.',
+                'hasDefinedTerm': filteredTerms.map(t => ({
+                    '@type': 'DefinedTerm',
+                    'name': t.term,
+                    'description': t.def,
+                    'url': absoluteUrl(`/glossario?query=${t.term}`)
+                }))
+            } as any} />
+
             <PageHeader 
                 badge="Dizionario Civico"
                 icon={Book}
@@ -100,16 +118,16 @@ export default function GlossaryPage() {
             <div className="bg-surface border border-border rounded-[2.5rem] p-6 lg:p-8 shadow-sm space-y-8 text-left">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-end">
                     <div className="space-y-3">
-                        <label className="text-[10px] font-black uppercase tracking-[0.2em] text-secondary/60 flex items-center gap-2">
+                        <label className="text-[10px] font-black uppercase tracking-[0.2em] text-secondary/60 flex items-center gap-2 text-left">
                             <Search className="w-3 h-3" /> Cerca un termine
                         </label>
                         <SearchBox value={searchQuery} onChange={setSearchQuery} placeholder="Es: SPID, Phishing, ISEE..." />
                     </div>
                     <div className="space-y-3">
-                        <label className="text-[10px] font-black uppercase tracking-[0.2em] text-secondary/60 flex items-center gap-2">
+                        <label className="text-[10px] font-black uppercase tracking-[0.2em] text-secondary/60 flex items-center gap-2 text-left">
                             <Filter className="w-3 h-3" /> Categoria
                         </label>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2 justify-start">
                             {CATEGORIES.slice(0, 10).map(cat => (
                                 <button
                                     key={cat.id}
@@ -149,7 +167,7 @@ export default function GlossaryPage() {
                         {filteredTerms.map((item, i) => (
                             <Card key={i} className="p-8 border border-border bg-surface hover:shadow-xl hover:border-primary/20 transition-all rounded-[2.5rem] flex flex-col gap-6 group text-left">
                                 <div className="flex items-start justify-between gap-4">
-                                    <div className="space-y-2">
+                                    <div className="space-y-2 text-left">
                                         <div className="flex items-center gap-2">
                                             <Badge variant="outline" className="text-[9px] uppercase font-black tracking-widest border-primary/20 bg-primary/5 text-primary">
                                                 {CATEGORIES.find(c => c.id === item.category)?.label || item.category}
@@ -162,16 +180,16 @@ export default function GlossaryPage() {
                                     </div>
                                 </div>
 
-                                <p className="text-lg text-secondary leading-relaxed font-medium">
+                                <p className="text-lg text-secondary leading-relaxed font-medium text-left">
                                     {item.def}
                                 </p>
 
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-border/40">
-                                    <div className="bg-surface-muted p-4 rounded-2xl space-y-1 border border-border/40">
+                                    <div className="bg-surface-muted p-4 rounded-2xl space-y-1 border border-border/40 text-left">
                                         <span className="text-[9px] font-black uppercase tracking-[0.2em] text-secondary/40">Esempio pratico</span>
                                         <p className="text-sm text-secondary italic leading-relaxed font-medium">"{item.example}"</p>
                                     </div>
-                                    <div className="bg-primary/[0.02] p-4 rounded-2xl space-y-1 border border-primary/10">
+                                    <div className="bg-primary/[0.02] p-4 rounded-2xl space-y-1 border border-primary/10 text-left">
                                         <span className="text-[9px] font-black uppercase tracking-[0.2em] text-primary">Consiglio</span>
                                         <p className="text-sm font-bold text-foreground leading-relaxed">{item.action}</p>
                                     </div>
@@ -195,7 +213,7 @@ export default function GlossaryPage() {
                 <div className="absolute top-0 right-0 p-24 opacity-[0.05] pointer-events-none">
                     <Book size={400} />
                 </div>
-                <div className="relative z-10 space-y-6">
+                <div className="relative z-10 space-y-6 text-center">
                     <h3 className="text-3xl md:text-5xl font-display font-bold">Vuoi stampare il glossario?</h3>
                     <p className="text-xl text-white/70 max-w-2xl mx-auto leading-relaxed font-medium">
                         Puoi stampare questa pagina per tenerla a portata di mano o consegnarla a chi ha difficoltà con il linguaggio digitale.

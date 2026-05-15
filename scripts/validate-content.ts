@@ -22,15 +22,26 @@ function validateLesson(lesson: any, moduleId: string) {
     if (typeof lesson.estimatedMinutes !== 'number') logError(`${context} Missing or invalid estimatedMinutes`);
     if (!lesson.summary) logError(`${context} Missing summary`);
     
+    // SEO Checks
+    if (lesson.summary && (lesson.summary.length < 30 || lesson.summary.length > 200)) {
+        console.warn(`  ⚠️ ${context} SEO: Summary length (${lesson.summary.length}) is outside recommended range (30-200)`);
+    }
+
+    if (lesson.title && lesson.title.length > 70) {
+        console.warn(`  ⚠️ ${context} SEO: Title is very long (${lesson.title.length} chars)`);
+    }
+
+    if (lesson.faqs) {
+        lesson.faqs.forEach((faq: any, idx: number) => {
+            if (!faq.q || !faq.a) logError(`${context} FAQ ${idx + 1} missing question or answer`);
+        });
+    }
+
     if (lesson.status === 'published') {
         const isEmergency = ['emergenze', 'first-aid', 'sextortion'].includes(lesson.category);
         
         if (lesson.qualityGatePassed !== true) logError(`${context} Published but qualityGatePassed is not true`);
         if (isEmergency && !lesson.emergencyLevel && !moduleId.includes('soccorso')) logError(`${context} Published emergency but missing emergencyLevel`);
-        
-        if (isEmergency && !lesson.scenario && !lesson.whenToDo) {
-             // logError(`${context} Published but missing scenario or whenToDo`);
-        }
         
         if (!isEmergency) {
             if (lesson.mainEntity && typeof lesson.mainEntity !== 'string') logError(`${context} Invalid mainEntity`);
@@ -110,7 +121,7 @@ function main() {
 
     if (errors.length > 0) {
         console.error(`\n🚨 VALIDATION FAILED: ${errors.length} errors found.`);
-        // process.exit(1); 
+        process.exit(1); 
     } else {
         console.log(`\n✅ ALL CONTENT VALIDATED SUCCESSFULLY.`);
     }

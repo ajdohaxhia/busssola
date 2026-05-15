@@ -20,6 +20,7 @@ import { ReadingWidth } from '@/components/ui/ReadingWidth'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 import { Card } from '@/components/ui/Card'
+import { ALL_MODULES } from '@/data/modules/index'
 import { OFFICIAL_SOURCES } from '@/data/officialSources'
 import { InfoBox, WarningBox, DontDoBox } from '@/components/ui/Boxes'
 
@@ -253,6 +254,66 @@ export default function LessonReaderClient({ currentModule, lessonIndex }: Lesso
                             </DontDoBox>
                         )}
                     </div>
+
+                    {/* Related Glossary */}
+                    {currentLesson.relatedGlossaryTerms && currentLesson.relatedGlossaryTerms.length > 0 && (
+                        <section className="bg-surface border-2 border-border p-8 rounded-[2rem] space-y-6 print:hidden text-left">
+                            <h3 className="text-xl font-display font-black text-foreground flex items-center gap-3 uppercase tracking-tighter">
+                                <ShieldCheck className="w-6 h-6 text-primary" /> Termini da conoscere
+                            </h3>
+                            <div className="flex flex-wrap gap-2">
+                                {currentLesson.relatedGlossaryTerms.map((term, i) => (
+                                    <Link href={`/glossario?query=${term}`} key={i}>
+                                        <Badge variant="outline" className="px-4 py-2 rounded-xl border-border hover:border-primary/40 hover:bg-primary/5 transition-all cursor-pointer font-bold">
+                                            {term} <ArrowRight className="w-3 h-3 ml-1.5 opacity-40" />
+                                        </Badge>
+                                    </Link>
+                                ))}
+                            </div>
+                        </section>
+                    )}
+
+                    {/* FAQs */}
+                    {currentLesson.faqs && currentLesson.faqs.length > 0 && (
+                        <section className="space-y-8 text-left">
+                            <h3 className="text-2xl font-display font-black text-foreground flex items-center gap-3 uppercase tracking-tighter">
+                                <AlertTriangle className="w-6 h-6 text-primary" /> Domande Frequenti
+                            </h3>
+                            <div className="grid gap-4">
+                                {currentLesson.faqs.map((faq, i) => (
+                                    <div key={i} className="p-6 rounded-3xl bg-surface border border-border space-y-2 group hover:border-primary/20 transition-colors">
+                                        <h4 className="font-bold text-foreground text-lg leading-tight group-hover:text-primary transition-colors">{faq.q}</h4>
+                                        <p className="text-secondary leading-relaxed font-medium">{faq.a}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    )}
+
+                    {/* Related Lessons / Next Steps */}
+                    {currentLesson.relatedLessons && currentLesson.relatedLessons.length > 0 && (
+                        <section className="space-y-8 text-left print:hidden">
+                            <h3 className="text-2xl font-display font-black text-foreground uppercase tracking-tighter">Potrebbe servirti anche</h3>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                {currentLesson.relatedLessons.map((relatedId) => {
+                                    const relatedModule = ALL_MODULES.find(m => m.lessons.some(l => l.id === relatedId))
+                                    const relatedLesson = relatedModule?.lessons.find(l => l.id === relatedId)
+                                    if (!relatedLesson || !relatedModule) return null
+                                    
+                                    return (
+                                        <Link href={`/moduli/${relatedModule.id}/lezione/${relatedModule.lessons.findIndex(l => l.id === relatedId) + 1}`} key={relatedId}>
+                                            <Card className="p-6 border border-border bg-surface hover:border-primary/40 hover:shadow-xl transition-all h-full group">
+                                                <div className="space-y-1">
+                                                    <span className="text-[10px] font-black uppercase text-secondary/40 tracking-widest">{relatedModule.title.replace(/Modulo \d+[b]?:\s*/i, '')}</span>
+                                                    <h4 className="font-bold text-foreground group-hover:text-primary transition-colors leading-tight">{relatedLesson.title}</h4>
+                                                </div>
+                                            </Card>
+                                        </Link>
+                                    )
+                                })}
+                            </div>
+                        </section>
+                    )}
 
                     {/* Checklist Finale */}
                     <section className="bg-foreground text-background p-10 md:p-16 rounded-[3.5rem] shadow-2xl relative overflow-hidden print:bg-transparent print:text-foreground print:p-0 print:border-t print:border-border text-left">

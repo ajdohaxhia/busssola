@@ -1,12 +1,11 @@
 import { buildSeoMetadata } from '@/lib/seo'
 
 export const metadata = buildSeoMetadata({
-    title: 'Domande frequenti',
-    description: 'Risposte rapide su Busssola, uso gratuito, privacy, scuole, moduli, progressi locali e sicurezza dei dati.',
+    title: 'Domande Frequenti (FAQ)',
+    description: 'Risposte alle domande più comuni su Busssola, privacy, fonti ufficiali e come utilizzare al meglio le nostre guide civiche.',
     path: '/faq/',
-    keywords: ['faq Busssola', 'domande frequenti sicurezza digitale', 'Busssola gratuito privacy'],
 })
 
-export default function FaqLayout({ children }: { children: React.ReactNode }) {
+export default function FAQLayout({ children }: { children: React.ReactNode }) {
     return <>{children}</>
 }

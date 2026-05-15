@@ -227,19 +227,29 @@ function ModulesContent() {
                         <h3 className="text-xs font-black uppercase tracking-[0.2em] text-secondary/40">Argomento</h3>
                         <div className="grid gap-1">
                             {CATEGORIES.map(cat => (
-                                <button
-                                    key={cat.id}
-                                    onClick={() => setSelectedCategory(cat.id)}
-                                    className={cn(
-                                        "flex items-center justify-between px-4 py-3 rounded-xl text-sm font-bold transition-all text-left",
-                                        selectedCategory === cat.id
-                                            ? "bg-primary text-white shadow-xl shadow-primary/20"
-                                            : "text-secondary hover:bg-surface-muted border border-transparent"
+                                <div key={cat.id} className="flex items-center gap-1 group/row">
+                                    <button
+                                        onClick={() => setSelectedCategory(cat.id)}
+                                        className={cn(
+                                            "flex-1 flex items-center justify-between px-4 py-3 rounded-xl text-sm font-bold transition-all text-left",
+                                            selectedCategory === cat.id
+                                                ? "bg-primary text-white shadow-xl shadow-primary/20"
+                                                : "text-secondary hover:bg-surface-muted border border-transparent"
+                                        )}
+                                    >
+                                        {cat.label}
+                                        {selectedCategory === cat.id && <Icons.Check className="w-4 h-4" />}
+                                    </button>
+                                    {cat.id !== 'all' && (
+                                        <Link 
+                                            href={`/moduli/categoria/${cat.id}`}
+                                            className="p-3 text-secondary/40 hover:text-primary transition-colors"
+                                            title={`Vedi pagina dedicata a ${cat.label}`}
+                                        >
+                                            <Icons.ExternalLink size={14} />
+                                        </Link>
                                     )}
-                                >
-                                    {cat.label}
-                                    {selectedCategory === cat.id && <Icons.Check className="w-4 h-4" />}
-                                </button>
+                                </div>
                             ))}
                         </div>
                     </div>

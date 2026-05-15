@@ -74,6 +74,12 @@ export const modulo_09_documenti_identita: Module = {
                 'Ho installato l\'app sul telefono',
                 'Ho verificato l\'accesso su un sito (es. INPS)'
             ],
+            faqs: [
+                { q: 'Quanto costa fare lo SPID?', a: 'Lo SPID è generalmente gratuito per i cittadini. Alcuni provider potrebbero chiedere un pagamento per il riconoscimento via webcam o di persona.' },
+                { q: 'Serve lo SPID per vedere la pensione?', a: 'Sì, lo SPID è uno dei metodi principali (insieme a CIE e CNS) per accedere al portale INPS e consultare la propria situazione previdenziale.' },
+                { q: 'Posso avere due account SPID?', a: 'Sì, puoi avere più identità SPID fornite da provider diversi, ma sono tutte collegate alla tua persona fisica tramite il codice fiscale.' }
+            ],
+            relatedLessons: ['spid-recovery', 'cie-puk-recovery'],
             sources: [
                 {
                     title: 'Linee guida SPID',

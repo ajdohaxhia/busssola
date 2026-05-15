@@ -92,6 +92,7 @@ export interface Lesson {
   qualityGatePassed: boolean;
   relatedLessons?: string[];
   relatedGlossaryTerms?: string[];
+  faqs?: { q: string; a: string }[];
   mainEntity?: string; // Ente principale di riferimento
   whereToDo?: string; // Dove si fa (online, ufficio, ecc)
   timeToComplete?: string; // Tempi indicativi (es. "10 minuti", "3 giorni")

@@ -76,6 +76,12 @@ export const modulo_10_lavoro_disoccupazione: Module = {
                 'Ho scaricato la ricevuta con il numero di protocollo',
                 'So che dovrò fare la DID entro 15 giorni'
             ],
+            faqs: [
+                { q: 'Entro quando va fatta la domanda NASpI?', a: 'Hai 68 giorni di tempo dalla data di cessazione del rapporto di lavoro. Se la fai entro 8 giorni, la disoccupazione parte subito; altrimenti parte dal giorno dopo la domanda.' },
+                { q: 'Cosa succede se trovo un nuovo lavoro?', a: 'Se il lavoro è breve (sotto i 6 mesi) la NASpI viene sospesa. Se superi certi limiti di reddito o durata, decade. Va sempre comunicato all\'INPS tramite NASpI-COM.' },
+                { q: 'La NASpI vale per i dipendenti pubblici?', a: 'No, la NASpI è per i lavoratori del settore privato con contratto subordinato. I dipendenti pubblici a tempo indeterminato non ne hanno diritto.' }
+            ],
+            relatedLessons: ['naspi-stato-controllo', 'naspi-com-variazioni', 'did-procedura-online'],
             sources: [
                 {
                     title: 'Circolare INPS sulla NASpI',

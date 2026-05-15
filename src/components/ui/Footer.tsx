@@ -83,7 +83,6 @@ export function Footer() {
                     <div className="flex flex-wrap justify-center gap-6 text-[10px] font-black uppercase tracking-[0.2em] text-white/20">
                         <span className="flex items-center gap-1.5"><ShieldCheck className="w-3 h-3" /> Zero Tracciamento</span>
                         <span className="flex items-center gap-1.5"><AlertTriangle className="w-3 h-3" /> Scopo Informativo</span>
-                        <span>v{siteStats.projectStage}</span>
                     </div>
                 </div>
             </Container>

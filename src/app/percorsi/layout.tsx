@@ -1,10 +1,9 @@
 import { buildSeoMetadata } from '@/lib/seo'
 
 export const metadata = buildSeoMetadata({
-    title: 'Percorsi guidati di educazione digitale',
-    description: 'Percorsi ordinati per imparare sicurezza online, protezione account, relazioni digitali, emergenze SOS, scuola e famiglia con Busssola.',
+    title: 'Percorsi Guidati per ogni situazione',
+    description: 'Collezioni curate di guide per aiutarti a risolvere problemi specifici: dalla perdita del lavoro alla messa in sicurezza dei tuoi account social.',
     path: '/percorsi/',
-    keywords: ['percorsi sicurezza digitale', 'educazione digitale ragazzi', 'sicurezza online famiglie scuole'],
 })
 
 export default function PercorsiLayout({ children }: { children: React.ReactNode }) {
