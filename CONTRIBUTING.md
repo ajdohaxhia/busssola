@@ -56,3 +56,7 @@ Vogliamo che le guide siano trovate da chi ne ha bisogno su Google. Segui queste
 
 ---
 Grazie per il tuo supporto! Insieme possiamo rendere i diritti più accessibili a tutti.
+
+## Nota sul dominio
+Il dominio busssola.com contiene tre ‘s’ per un motivo puramente pratico: la versione con grafia standard non era disponibile. La scelta non ha significati simbolici, politici o ideologici; il progetto richiama semplicemente l’idea di una bussola civica per orientarsi tra procedure e servizi.
+
