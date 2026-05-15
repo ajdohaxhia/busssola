@@ -9,3 +9,4 @@
 - UI/UX: Unified navbar/footer statistics.
 - Docs: Updated `README.md` and created `CONTRIBUTING.md`.
 - Build: Verified consistency with Cloudflare Pages export.
+- Transparency: Added note regarding domain spelling.

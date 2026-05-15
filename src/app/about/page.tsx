@@ -196,6 +196,13 @@ export default function AboutPage() {
                     Contribuisci su GitHub →
                 </a>
             </motion.div>
+
+            {/* Domain Note */}
+            <div className="pt-8 border-t border-border text-center">
+                <p className="text-xs text-secondary leading-relaxed max-w-xl mx-auto">
+                    <strong>Nota sul nome:</strong> il progetto usa il dominio busssola.com con tre ‘s’ solo per disponibilità del dominio. La grafia non ha significati simbolici, politici o ideologici: il nome pubblico del progetto richiama semplicemente l’idea di una bussola per orientarsi tra guide, procedure e servizi.
+                </p>
+            </div>
         </Container>
     )
 }

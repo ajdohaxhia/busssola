@@ -12,6 +12,10 @@ Busssola offre oggi:
 - **Glossario:** Dizionario dei termini burocratici spiegati semplici.
 - **Fonti:** Archivio trasparente di tutti i portali ufficiali utilizzati.
 
+## Nota sul dominio
+
+Il dominio busssola.com contiene tre ‘s’ per un motivo puramente pratico: la versione con grafia standard non era disponibile. La scelta non ha significati simbolici, politici o ideologici; il progetto richiama semplicemente l’idea di una bussola civica per orientarsi tra procedure e servizi.
+
 ## Stack Tecnico
 - Next.js 15 (App Router)
 - React 19
