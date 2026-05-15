@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'next/link'
 import { Compass, Github, Mail, ShieldCheck, Heart, AlertTriangle } from 'lucide-react'
 import { Container } from './Container'
-import { siteStats } from '@/data/siteStats'
 
 export function Footer() {
     const currentYear = new Date().getFullYear()

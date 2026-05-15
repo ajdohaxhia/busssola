@@ -86,7 +86,7 @@ export default function ChecklistPage() {
                     'name': c.title,
                     'url': `https://busssola.com/moduli/${c.moduleId}`
                 }))
-            } as any} />
+            } as Record<string, unknown>} />
 
             <PageHeader 
                 badge="Strumenti Operativi"

@@ -54,7 +54,7 @@ export default async function LessonPage({ params }: { params: Promise<{ id: str
 
     return (
         <>
-            <JsonLd data={lessonStructuredData(currentModule, currentLesson, lessonIndex + 1) as any} />
+            <JsonLd data={lessonStructuredData(currentModule, currentLesson, lessonIndex + 1) as Record<string, unknown>} />
             <LessonReaderClient currentModule={currentModule} lessonIndex={lessonIndex} />
         </>
     )

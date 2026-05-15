@@ -4,13 +4,12 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { 
     ShieldAlert, Phone, AlertTriangle, ChevronRight, ChevronLeft, 
-    XCircle, ArrowRight, CheckCircle2, ShieldCheck, Info, 
-    Smartphone, Lock, Mail, CreditCard, Eye, Heart, 
-    ShoppingBag, MousePointer2, UserX, Clock
+    XCircle, ArrowRight, CheckCircle2, ShieldCheck, 
+    Smartphone, Lock, Mail, CreditCard, Heart, 
+    MousePointer2, Clock, Users
 } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Card } from '@/components/ui/Card'
-import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
@@ -360,7 +359,7 @@ export default function SOSPage() {
                     'name': s.title,
                     'url': `https://busssola.com/sos#${s.id}`
                 }))
-            } as any} />
+            } as Record<string, unknown>} />
 
             <PageHeader 
                 centered

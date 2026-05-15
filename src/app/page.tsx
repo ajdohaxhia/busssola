@@ -13,7 +13,6 @@ import {
   GraduationCap, Banknote, Home as HomeIcon
 } from 'lucide-react'
 import { LEARNING_PATHS } from '@/data/paths'
-import { siteStats } from '@/data/siteStats'
 
 export default function Home() {
   return (

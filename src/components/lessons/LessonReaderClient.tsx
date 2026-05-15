@@ -10,7 +10,7 @@ import {
   ChevronLeft, ChevronRight, AlertTriangle, 
   CheckCircle2, Clock, ShieldCheck, 
   ExternalLink, Users, 
-  Printer, Copy
+  Printer, Copy, ArrowRight
 } from 'lucide-react'
 
 import { cn } from '@/lib/utils'

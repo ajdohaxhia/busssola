@@ -31,7 +31,7 @@ export default async function TipDetailPage({ params }: PageProps) {
 
     return (
         <>
-            <JsonLd data={tipStructuredData(hack) as any} />
+            <JsonLd data={tipStructuredData(hack) as Record<string, unknown>} />
             <TipDetailClient hack={hack} />
         </>
     )

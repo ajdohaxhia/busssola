@@ -306,7 +306,7 @@ export function lessonStructuredData(module: Module, lesson: Lesson, lessonNumbe
         isPartOf: { '@id': `${absoluteUrl(`/moduli/${module.id}/`)}#course` },
     }
 
-    const graph: any[] = [article]
+    const graph: Record<string, unknown>[] = [article]
 
     const howTo = howToStructuredData(lesson, path)
     if (howTo) graph.push(howTo)

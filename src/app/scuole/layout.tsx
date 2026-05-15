@@ -1,6 +1,6 @@
-import { buildSeoMetadata, HUB_METADATA } from '@/lib/seo'
+import { buildSeoMetadata, HUB_METADATA_BUILDER } from '@/lib/seo'
 
-export const metadata = buildSeoMetadata(HUB_METADATA.scuole)
+export const metadata = buildSeoMetadata(HUB_METADATA_BUILDER('scuole'))
 
 export default function ScuoleLayout({ children }: { children: React.ReactNode }) {
     return <>{children}</>

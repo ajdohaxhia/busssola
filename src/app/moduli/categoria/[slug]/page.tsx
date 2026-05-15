@@ -1,9 +1,9 @@
-import { ALL_MODULES } from '@/data/modules/index'
 import { MODULES_MAP } from '@/data/modules-meta'
 import { Container } from '@/components/ui/Container'
 import { PageHeader } from '@/components/ui/PageHeader'
 import { Card } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
+import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
@@ -11,7 +11,6 @@ import { clusterMetadata, breadcrumbStructuredData } from '@/lib/seo'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { CategoryID } from '@/types'
 import * as Icons from 'lucide-react'
-import { cn } from '@/lib/utils'
 
 const CATEGORIES: { id: CategoryID, label: string }[] = [
     { id: 'emergenze', label: 'SOS / Urgenze' },

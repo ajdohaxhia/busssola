@@ -105,7 +105,7 @@ export default function GlossaryPage() {
                     'description': t.def,
                     'url': absoluteUrl(`/glossario?query=${t.term}`)
                 }))
-            } as any} />
+            } as Record<string, unknown>} />
 
             <PageHeader 
                 badge="Dizionario Civico"
