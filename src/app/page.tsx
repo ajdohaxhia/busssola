@@ -1,8 +1,5 @@
-'use client'
-
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { Hero } from '@/components/ui/Hero'
 import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { SituationCard } from '@/components/ui/Cards'
@@ -16,7 +13,7 @@ import {
   Sparkles, TrendingUp, Globe, Stethoscope,
   Plane, UserCheck, Github, Clock, Info
 } from 'lucide-react'
-import { TOTAL_LESSONS } from '@/lib/seo'
+import { siteStats } from '@/config/siteStats'
 import { cn } from '@/lib/utils'
 
 export default function Home() {
@@ -30,26 +27,32 @@ export default function Home() {
     }
   }
 
-  const searchExamples = [
-    { label: 'fare ISEE', query: 'ISEE' },
-    { label: 'recuperare SPID', query: 'SPID' },
-    { label: 'telefono rubato', query: 'telefono rubato' },
-    { label: 'NASpI', query: 'NASpI' },
-    { label: 'cambio residenza', query: 'residenza' },
-    { label: 'bonus bollette', query: 'bonus' }
-  ]
-
   return (
     <div className="space-y-32 pb-32 pt-4">
       
       {/* SECTION 1: Hero + Search */}
-      <section className="space-y-12 px-4">
-        <Hero />
+      <section className="space-y-12 px-4 pt-12 md:pt-24">
+        <div className="text-center space-y-8 max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-8xl font-display font-black tracking-tighter text-foreground leading-[0.9]">
+            Trova cosa fare,<br /> passo dopo passo.
+          </h1>
+          <p className="text-xl md:text-2xl text-secondary font-medium leading-relaxed max-w-2xl mx-auto">
+            Guide semplici, checklist e link ufficiali per documenti, bonus, lavoro, casa, truffe, sanità e servizi pubblici in Italia.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 pt-4">
+              <Button asChild size="lg" className="rounded-2xl h-16 px-10 text-lg font-black uppercase tracking-widest shadow-xl">
+                  <Link href="#search">Cerca una guida</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="rounded-2xl h-16 px-10 text-lg font-black uppercase tracking-widest border-2">
+                  <Link href="/sos">Ho un'urgenza</Link>
+              </Button>
+          </div>
+        </div>
         
-        <div className="max-w-4xl mx-auto space-y-6">
+        <div id="search" className="max-w-4xl mx-auto space-y-6 pt-12">
           <div className="text-center space-y-2">
-            <h2 className="text-2xl md:text-3xl font-display font-black text-foreground">Cosa devi fare oggi?</h2>
-            <p className="text-secondary font-medium">Cerca tra {TOTAL_LESSONS} guide pratiche e procedure ufficiali.</p>
+            <h2 className="text-2xl md:text-3xl font-display font-black text-foreground">Non sai da dove partire?</h2>
+            <p className="text-secondary font-medium">Cerca tra {siteStats.guidesCount} guide pratiche e procedure ufficiali.</p>
           </div>
           
           <form onSubmit={handleSearch} className="relative group">
@@ -66,16 +69,24 @@ export default function Home() {
             </Button>
           </form>
           
-          <div className="flex flex-wrap justify-center gap-3">
-            <span className="text-xs font-black uppercase tracking-widest text-secondary/40 py-2">Esempi:</span>
-            {searchExamples.map((ex) => (
-              <button
-                key={ex.label}
-                onClick={() => router.push(`/moduli?q=${encodeURIComponent(ex.query)}`)}
-                className="px-4 py-2 rounded-full bg-surface border border-border text-xs font-bold text-secondary hover:border-primary hover:text-primary transition-all shadow-sm"
-              >
-                {ex.label}
-              </button>
+          <div className="flex flex-wrap justify-center gap-3 pt-6">
+            {[
+              { label: "Ho perso documenti", href: "/moduli/modulo-09-documenti-identita" },
+              { label: "Devo fare ISEE", href: "/moduli/modulo-23-bonus-isee" },
+              { label: "Problemi SPID/CIE", href: "/moduli/modulo-09-documenti-identita" },
+              { label: "Mi hanno truffato", href: "/sos" },
+              { label: "NASpI", href: "/moduli/modulo-10-lavoro-disoccupazione" },
+              { label: "Cambio residenza", href: "/moduli/modulo-13-casa-residenza" },
+              { label: "Passaporto", href: "/moduli/modulo-11-documenti-identita-avanzata" },
+              { label: "Bonus", href: "/moduli/categoria/bonus" },
+            ].map((item) => (
+                <Link 
+                    href={item.href} 
+                    key={item.label}
+                    className="px-5 py-3 rounded-full bg-white border border-border text-sm font-bold text-foreground hover:border-primary hover:text-primary transition-all shadow-sm hover:shadow-md"
+                >
+                    {item.label}
+                </Link>
             ))}
           </div>
         </div>
