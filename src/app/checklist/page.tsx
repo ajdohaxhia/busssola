@@ -45,7 +45,7 @@ export default function ChecklistPage() {
                 .map(l => ({
                     id: l.id,
                     title: l.title,
-                    items: l.checklist,
+                    items: l.checklist || [],
                     moduleId: m.id,
                     moduleTitle: m.title.replace(/Modulo \d+[b]?:\s*/i, ''),
                     category: l.category as CategoryID

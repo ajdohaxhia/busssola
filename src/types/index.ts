@@ -84,7 +84,7 @@ export interface Lesson {
   whoCanHelp?: string[]; // Enti o figure che possono aiutare
   officialLinks?: string[]; // Legacy string links
   officialLinksV2?: OfficialLinkV2[]; // New detailed links referencing registry
-  checklist: string[]; // Checklist finale
+  checklist?: string[]; // Checklist finale
   
   // Metadata & Verification
   sources: Source[];

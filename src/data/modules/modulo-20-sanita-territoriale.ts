@@ -2,6 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_20_sanita_territoriale: Module = {
     id: 'modulo-20-sanita-territoriale',
+    lastUpdated: '2026-05-16',
     title: 'Modulo 20: Sanità Territoriale',
     description: 'Guida ai servizi sanitari di base e specialistici vicini a te: dal medico di famiglia ai centri di salute mentale.',
     category: 'sanita',
@@ -21,7 +22,7 @@ export const modulo_20_sanita_territoriale: Module = {
             summary: 'Come scegliere o cambiare il Medico di Medicina Generale o il Pediatra.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-05-16',
             synthesis: 'Il Medico di Medicina Generale (MMG) è il primo punto di contatto con il Servizio Sanitario Nazionale. Ogni cittadino ha diritto a sceglierne uno tra quelli disponibili nel proprio distretto di residenza. La scelta può essere fatta online o agli sportelli ASL.',
             prerequisites: ['Iscrizione al Servizio Sanitario Nazionale', 'Tessera Sanitaria valida'],
             whenToDo: 'Quando ti trasferisci, quando il tuo medico va in pensione o quando vuoi cambiarlo per motivi personali.',
@@ -100,7 +101,7 @@ export const modulo_20_sanita_territoriale: Module = {
             summary: 'Accedere alla tua storia clinica, referti e ricette direttamente dallo smartphone.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-05-16',
             synthesis: 'Il Fascicolo Sanitario Elettronico (FSE) è lo strumento che raccoglie in sicurezza tutta la tua documentazione sanitaria prodotta da strutture pubbliche. Permette di vedere referti, ricette farmaceutiche, verbali di pronto soccorso e certificati vaccinali.',
             prerequisites: ['Identità digitale (SPID o CIE)', 'Codice Fiscale'],
             whenToDo: 'Per controllare l\'esito di un esame, scaricare una ricetta per la farmacia o vedere lo storico delle tue cure.',
@@ -147,7 +148,7 @@ export const modulo_20_sanita_territoriale: Module = {
                     url: 'https://www.fascicolosanitario.gov.it/',
                     type: 'official',
                     usedFor: 'Informazioni sul progetto nazionale.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-05-16'
                 },
                 {
                     title: 'Privacy e Fascicolo Sanitario',
@@ -155,7 +156,7 @@ export const modulo_20_sanita_territoriale: Module = {
                     url: 'https://www.garanteprivacy.it/',
                     type: 'official',
                     usedFor: 'Dettagli sulla protezione dei dati sensibili.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-05-16'
                 }
             ],
             checklist: [
@@ -166,6 +167,152 @@ export const modulo_20_sanita_territoriale: Module = {
                 'Notifiche ricette attivate'
             ],
             relatedGlossaryTerms: ['NRE (Numero Ricetta Elettronica)', 'Referto', 'Consenso informato']
+        },
+        {
+            id: 'ricetta-elettronica',
+            slug: 'ricetta-elettronica-come-funziona',
+            title: 'Ricetta elettronica',
+            category: 'sanita',
+            audience: ['cittadini'],
+            level: 'base',
+            estimatedMinutes: 5,
+            summary: 'Come ricevere e utilizzare le prescrizioni mediche digitali senza bisogno del foglio cartaceo.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'Ministero della Salute',
+            synthesis: 'La ricetta dematerializzata identifica la prescrizione tramite un codice (NRE) associato al codice fiscale.',
+            steps: [
+                'Il medico emette la ricetta e ti comunica il codice NRE (via SMS, email o app)',
+                'Recati in farmacia con la tessera sanitaria',
+                'Mostra il codice NRE o lascia che il farmacista lo recuperi tramite tessera sanitaria',
+                'Ritira il farmaco pagando l\'eventuale ticket'
+            ],
+            checklist: [
+                'Codice NRE ricevuto',
+                'Tessera sanitaria disponibile',
+                'Farmacia raggiunta'
+            ],
+            sources: [
+                {
+                    title: 'La ricetta elettronica',
+                    organization: 'Ministero della Salute',
+                    url: 'https://www.salute.gov.it/',
+                    type: 'official',
+                    usedFor: 'Normativa ricette',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'esenzioni-ticket',
+            slug: 'esenzioni-ticket-sanitario-guida',
+            title: 'Esenzioni ticket',
+            category: 'sanita',
+            audience: ['cittadini', 'anziani', 'disabili'],
+            level: 'base',
+            estimatedMinutes: 10,
+            summary: 'Chi ha diritto a non pagare il ticket sanitario per reddito, età o patologia.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'Ministero della Salute / ASL',
+            synthesis: 'Agevolazioni per l\'accesso gratuito a visite ed esami basate su criteri specifici.',
+            steps: [
+                'Verifica se rientri nelle categorie per reddito (E01, E02, E03, E04)',
+                'Controlla se hai diritto per patologia cronica o rara',
+                'Recati allo sportello ASL o usa il portale regionale per l\'autocertificazione',
+                'Assicurati che il medico inserisca il codice esenzione sulla ricetta'
+            ],
+            checklist: [
+                'Requisiti verificati',
+                'Codice esenzione ottenuto',
+                'Certificato conservato'
+            ],
+            sources: [
+                {
+                    title: 'Esenzioni dal ticket',
+                    organization: 'Ministero della Salute',
+                    url: 'https://www.salute.gov.it/',
+                    type: 'official',
+                    usedFor: 'Elenco esenzioni',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'prenotare-visite-cup',
+            slug: 'come-prenotare-visite-cup',
+            title: 'Prenotare visite CUP',
+            category: 'sanita',
+            audience: ['cittadini'],
+            level: 'base',
+            estimatedMinutes: 8,
+            summary: 'Guida all\'uso del Centro Unico di Prenotazione per esami e visite specialistiche.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'Regione / ASL',
+            synthesis: 'Il CUP è il sistema centralizzato per prenotare prestazioni sanitarie nel SSN.',
+            steps: [
+                'Ottieni l\'impegnativa dal medico di base',
+                'Chiama il numero verde CUP o usa il portale online della tua regione',
+                'Fornisci il numero della ricetta (NRE) e il codice fiscale',
+                'Scegli tra le date e le sedi proposte (puoi chiedere la prima disponibilità in tutta la provincia)',
+                'Segna il codice di prenotazione e le istruzioni per il pagamento del ticket'
+            ],
+            checklist: [
+                'Ricetta medica ottenuta',
+                'Prenotazione effettuata',
+                'Luogo e data segnati'
+            ],
+            sources: [
+                {
+                    title: 'Prenotazioni CUP',
+                    organization: 'Ministero della Salute',
+                    url: 'https://www.salute.gov.it/',
+                    type: 'official',
+                    usedFor: 'Modalità di accesso',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'guardia-medica',
+            slug: 'guardia-medica-continuita-assistenziale',
+            title: 'Guardia medica / continuità assistenziale',
+            category: 'sanita',
+            audience: ['cittadini'],
+            level: 'base',
+            estimatedMinutes: 5,
+            summary: 'A chi rivolgersi di notte o nei festivi quando il medico di base non c\'è.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'ASL',
+            synthesis: 'Servizio di assistenza medica per casi non urgenti fuori dagli orari ambulatoriali.',
+            whenToDo: 'Dalle 20:00 alle 8:00 nei giorni feriali e 24h/24 nei prefestivi e festivi.',
+            steps: [
+                'Chiama il numero della Guardia Medica del tuo territorio (o il 116117 se attivo)',
+                'Descrivi i sintomi al medico che risponde',
+                'Attendi il consiglio telefonico, l\'invito a recarti in ambulatorio o la visita a domicilio',
+                'Ricorda che la guardia medica può fare ricette solo per terapie urgenti'
+            ],
+            checklist: [
+                'Numero telefonico trovato',
+                'Sintomi chiari da riferire',
+                'Tessera sanitaria a portata di mano'
+            ],
+            sources: [
+                {
+                    title: 'Continuità assistenziale',
+                    organization: 'Ministero della Salute',
+                    url: 'https://www.salute.gov.it/',
+                    type: 'official',
+                    usedFor: 'Descrizione servizio',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
         },
         {
             id: 'consultorio-servizi',
@@ -179,7 +326,7 @@ export const modulo_20_sanita_territoriale: Module = {
             summary: 'Assistenza gratuita per la salute della donna, della coppia e dei giovani.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-05-16',
             synthesis: 'I consultori familiari sono servizi territoriali ad accesso libero e gratuito (o con ticket). Offrono supporto ginecologico, psicologico, sociale e legale. Sono luoghi protetti dove la privacy e l\'accoglienza sono prioritari.',
             prerequisites: ['Nessuna impegnativa del medico necessaria per molti servizi'],
             whenToDo: 'Per contraccezione, gravidanza, prevenzione, difficoltà di coppia o supporto psicologico agli adolescenti.',
@@ -227,7 +374,7 @@ export const modulo_20_sanita_territoriale: Module = {
                     url: 'https://www.iss.it/consultori-familiari',
                     type: 'official',
                     usedFor: 'Mappatura e funzioni dei consultori.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-05-16'
                 },
                 {
                     title: 'Salute della donna',
@@ -235,7 +382,7 @@ export const modulo_20_sanita_territoriale: Module = {
                     url: 'https://www.salute.gov.it/',
                     type: 'official',
                     usedFor: 'Informazioni su screening e prevenzione.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-05-16'
                 }
             ],
             checklist: [
@@ -259,7 +406,7 @@ export const modulo_20_sanita_territoriale: Module = {
             summary: 'Capire come funzionano i Centri Psico-Sociali per il benessere mentale.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-05-16',
             synthesis: 'Il CPS (Centro Psico-Sociale) o CSM (Centro Salute Mentale) è il presidio pubblico che si occupa della diagnosi, cura e riabilitazione del disagio psichico. È un servizio accogliente che lavora per garantire il diritto alla salute mentale sul territorio.',
             prerequisites: ['Impegnativa del medico di base (solitamente richiesta per la prima visita)'],
             whenToDo: 'Quando senti un disagio psicologico che interferisce con la tua vita quotidiana o per disturbi ansiosi, depressivi o più complessi.',
@@ -307,7 +454,7 @@ export const modulo_20_sanita_territoriale: Module = {
                     url: 'https://www.salute.gov.it/portale/saluteMentale/homeSaluteMentale.jsp',
                     type: 'official',
                     usedFor: 'Descrizione dei servizi territoriali.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-05-16'
                 },
                 {
                     title: 'Salute Mentale: guida ai servizi',
@@ -315,17 +462,129 @@ export const modulo_20_sanita_territoriale: Module = {
                     url: 'https://www.airsam.it/',
                     type: 'nonprofit',
                     usedFor: 'Orientamento e diritti del paziente.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-05-16'
                 }
             ],
             checklist: [
-                'Impegnativa del medico ottenuta',
+                'Impegnativa del medico ottenuca',
                 'Indirizzo del CPS trovato',
                 'Primo colloquio prenotato',
                 'Tessera sanitaria pronta',
                 'Documentazione clinica precedente raccolta'
             ],
             relatedGlossaryTerms: ['Psichiatria', 'Psicoterapia', 'TSO (Trattamento Sanitario Obbligatorio)']
+        },
+        {
+            id: 'numero-116117',
+            slug: 'numero-116117-quando-chiamare',
+            title: 'Numero 116117: dove attivo',
+            category: 'sanita',
+            audience: ['cittadini'],
+            level: 'base',
+            estimatedMinutes: 3,
+            summary: 'Il numero europeo armonizzato per le cure mediche non urgenti.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'Regione',
+            synthesis: 'Numero unico per continuità assistenziale e altre prestazioni sanitarie non in emergenza.',
+            steps: [
+                'Verifica se il numero è attivo nella tua regione (es. Lombardia, Piemonte)',
+                'Componi il 116117 da telefono fisso o mobile',
+                'Parla con l\'operatore per ricevere assistenza medica non urgente',
+                'Usa questo numero per trovare la guardia medica o per informazioni sanitarie'
+            ],
+            checklist: [
+                'Numero composto',
+                'Regione coperta',
+                'Assistenza ricevuta'
+            ],
+            sources: [
+                {
+                    title: 'Numero Europeo 116117',
+                    organization: 'Ministero della Salute',
+                    url: 'https://www.salute.gov.it/',
+                    type: 'official',
+                    usedFor: 'Informazioni nazionali',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'tessera-sanitaria-smarrita',
+            slug: 'tessera-sanitaria-smarrita-cosa-fare',
+            title: 'Tessera sanitaria smarrita',
+            category: 'sanita',
+            audience: ['cittadini'],
+            level: 'base',
+            estimatedMinutes: 5,
+            summary: 'Come richiedere il duplicato della tessera sanitaria o del tesserino del codice fiscale.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'Agenzia delle Entrate',
+            synthesis: 'Procedura per ottenere una nuova tessera in caso di furto, smarrimento o deterioramento.',
+            steps: [
+                'Accedi al sito dell\'Agenzia delle Entrate con SPID/CIE',
+                'Cerca il servizio "Richiesta duplicato della Tessera Sanitaria"',
+                'Inserisci il codice fiscale e conferma i dati',
+                'In alternativa, recati presso uno sportello della tua ASL o dell\'Agenzia delle Entrate',
+                'La nuova tessera verrà spedita all\'indirizzo di residenza registrato'
+            ],
+            checklist: [
+                'Accesso effettuato',
+                'Richiesta inviata',
+                'Indirizzo verificato'
+            ],
+            sources: [
+                {
+                    title: 'Duplicato Tessera Sanitaria',
+                    organization: 'Agenzia delle Entrate',
+                    url: 'https://www.agenziaentrate.gov.it/',
+                    type: 'official',
+                    usedFor: 'Procedura duplicato',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'invalidita-civile-orientamento',
+            slug: 'invalidita-civile-orientamento-sanitario',
+            title: 'Invalidità civile: orientamento sanitario',
+            category: 'sanita',
+            audience: ['cittadini', 'disabili', 'anziani'],
+            level: 'intermedia',
+            estimatedMinutes: 12,
+            summary: 'Primi passi per il riconoscimento dell\'invalidità civile e dei benefici sanitari correlati.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'INPS',
+            synthesis: 'Percorso per il riconoscimento dello stato di invalido civile, cieco o sordo.',
+            steps: [
+                'Recati dal tuo medico curante per il "certificato medico introduttivo" telematico',
+                'Fatti consegnare la ricevuta con il numero di certificato',
+                'Presenta la domanda online sul sito INPS o tramite patronato entro 90 giorni',
+                'Attendi la convocazione per la visita presso la Commissione Medica Integrata (ASL-INPS)',
+                'Ricevi il verbale definitivo a casa o via PEC'
+            ],
+            checklist: [
+                'Certificato medico fatto',
+                'Domanda INPS inviata',
+                'Visita effettuata',
+                'Verbale ricevuto'
+            ],
+            sources: [
+                {
+                    title: 'Invalidità civile',
+                    organization: 'INPS',
+                    url: 'https://www.inps.it/',
+                    type: 'official',
+                    usedFor: 'Domanda e benefici',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
         }
     ]
 };
+

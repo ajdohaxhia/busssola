@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { ALL_MODULES } from '@/data/modules/index'
 import { LEARNING_PATHS } from '@/data/paths'
+import { siteStats } from '@/lib/stats'
 import type { Lesson, Module, LifeHack, CategoryID } from '@/types'
 
 export const SITE_URL = 'https://busssola.com'
@@ -10,13 +11,10 @@ export const CREATOR_PATH = '/adelajdo-haxhiaj'
 export const CREATOR_URL = `${SITE_URL}${CREATOR_PATH}`
 export const DEFAULT_OG_IMAGE = '/og-image.png'
 
-const TOTAL_LESSONS = ALL_MODULES.reduce((acc, module) => acc + module.lessons.length, 0)
+export const TOTAL_MODULES = siteStats.totalModules
+export const TOTAL_LESSONS = siteStats.totalLessons
 
-export const SITE_DESCRIPTION =
-    `Busssola è l'hub pubblico di risorse civiche gratuite per orientarsi tra documenti, diritti e procedure in Italia: oltre 120 guide pratiche su SPID, CIE, NASpI, bonus, sicurezza digitale e tutele del cittadino.`
-
-export const TOTAL_MODULES = ALL_MODULES.length
-export { TOTAL_LESSONS }
+export const SITE_DESCRIPTION = `Busssola è l'hub pubblico di risorse civiche gratuite per orientarsi tra documenti, diritti e procedure in Italia: ${siteStats.totalLessons} guide pratiche su SPID, CIE, NASpI, bonus, sicurezza digitale e tutele del cittadino.`
 
 const baseKeywords = [
     'Busssola',

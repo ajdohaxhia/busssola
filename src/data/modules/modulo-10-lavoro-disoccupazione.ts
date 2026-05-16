@@ -436,6 +436,274 @@ export const modulo_10_lavoro_disoccupazione: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ]
+        },
+        {
+            id: 'patto-servizio-personalizzato',
+            slug: 'patto-di-servizio-personalizzato-psp',
+            title: 'Patto di servizio',
+            category: 'lavoro',
+            audience: ['lavoratori'],
+            level: 'base',
+            estimatedMinutes: 10,
+            summary: 'L\'accordo tra cittadino e Centro per l\'Impiego che definisce le attività da svolgere per trovare lavoro.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'Centro per l\'Impiego',
+            steps: [
+                'Vieni convocato dal CPI dopo aver rilasciato la DID',
+                'Svolgi un colloquio di profilazione con un operatore',
+                'Sottoscrivi il Patto di Servizio Personalizzato (PSP)',
+                'Rispetta gli impegni presi (corsi, colloqui, ricerca attiva) per non perdere i sussidi'
+            ],
+            checklist: [
+                'Ho firmato il PSP',
+                'Ho una copia dell\'accordo',
+                'Conosco i miei obblighi per mantenere la NASpI/ADI'
+            ],
+            sources: [
+                {
+                    title: 'Politiche attive del lavoro',
+                    organization: 'Ministero del Lavoro',
+                    url: 'https://www.lavoro.gov.it/',
+                    type: 'official',
+                    usedFor: 'Descrizione PSP',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'busta-paga-lettura',
+            slug: 'come-leggere-la-busta-paga',
+            title: 'Busta paga: come leggerla',
+            category: 'lavoro',
+            audience: ['lavoratori'],
+            level: 'base',
+            estimatedMinutes: 15,
+            summary: 'Comprendere le voci principali della busta paga: lordo, netto, contributi e ferie residue.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            steps: [
+                'Controlla la parte alta: dati anagrafici, inquadramento e CCNL',
+                'Analizza il corpo centrale: paga base, scatti di anzianità, ore lavorate, festività',
+                'Verifica le trattenute: contributi INPS (a carico lavoratore) e IRPEF (tasse)',
+                'Guarda il "piede" della busta: ferie e permessi maturati/goduti, TFR e netto in tasca'
+            ],
+            checklist: [
+                'Il netto corrisponde a quanto ricevuto in banca',
+                'Le ferie maturate sono aggiornate',
+                'Il livello di inquadramento è corretto'
+            ],
+            sources: [
+                {
+                    title: 'Guida alla lettura del prospetto paga',
+                    organization: 'CNEL',
+                    url: 'https://www.cnel.it/',
+                    type: 'official',
+                    usedFor: 'Orientamento voci paga',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'tfr-orientamento',
+            slug: 'tfr-trattamento-fine-rapporto-come-funziona',
+            title: 'TFR: orientamento base',
+            category: 'lavoro',
+            audience: ['lavoratori'],
+            level: 'base',
+            estimatedMinutes: 10,
+            summary: 'Cos\'è la "liquidazione", come viene accantonata e quando si può chiedere un anticipo.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'INPS',
+            steps: [
+                'Scegli se lasciare il TFR in azienda o destinarlo a un fondo pensione entro 6 mesi dall\'assunzione',
+                'Verifica ogni anno l\'accantonamento nella busta paga di dicembre',
+                'In caso di necessità (salute, acquisto prima casa) e dopo 8 anni, puoi chiedere un anticipo del 70%',
+                'Ricevi l\'intera somma al termine del rapporto di lavoro'
+            ],
+            sources: [
+                {
+                    title: 'Trattamento di fine rapporto',
+                    organization: 'INPS',
+                    url: 'https://www.inps.it/',
+                    type: 'official',
+                    usedFor: 'Normativa TFR',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'contratti-lavoro-tipologie',
+            slug: 'differenza-contratto-determinato-indeterminato',
+            title: 'Contratto determinato/indeterminato',
+            category: 'lavoro',
+            audience: ['lavoratori'],
+            level: 'base',
+            estimatedMinutes: 12,
+            summary: 'Le differenze tra le principali forme contrattuali in Italia e le tutele previste.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            steps: [
+                'Indeterminato: stabilità, tutele crescenti, senza scadenza',
+                'Determinato: ha una data di fine, massimo 24 mesi (salvo deroghe)',
+                'Apprendistato: per giovani, include formazione obbligatoria',
+                'Somministrazione: assunto da agenzia per lavorare in altra azienda'
+            ],
+            sources: [
+                {
+                    title: 'Tipologie contrattuali',
+                    organization: 'Ministero del Lavoro',
+                    url: 'https://www.lavoro.gov.it/',
+                    type: 'official',
+                    usedFor: 'Quadro normativo',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'malattia-certificato-telematico',
+            slug: 'malattia-lavoro-certificato-medico-inps',
+            title: 'Malattia e certificato telematico',
+            category: 'lavoro',
+            audience: ['lavoratori'],
+            level: 'base',
+            estimatedMinutes: 8,
+            summary: 'Cosa fare se ti ammali: dal medico alla comunicazione al datore di lavoro.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'INPS',
+            steps: [
+                'Vai dal medico il primo giorno di malattia',
+                'Il medico invia il certificato telematico all\'INPS',
+                'Comunica subito al datore di lavoro il numero di protocollo (PUC)',
+                'Rispetta le fasce di reperibilità per le visite fiscali'
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'inpsCertificatiMalattia',
+                    useWhen: 'Per consultare i tuoi certificati inviati',
+                    beforeOpening: ['Tieni pronto il codice fiscale']
+                }
+            ],
+            sources: [
+                {
+                    title: 'Certificati di malattia telematici',
+                    organization: 'INPS',
+                    url: 'https://www.inps.it/',
+                    type: 'official',
+                    usedFor: 'Procedura malattia',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'maternita-paternita-base',
+            slug: 'congedo-maternita-paternita-guida-base',
+            title: 'Maternità/paternità base',
+            category: 'lavoro',
+            audience: ['parents'],
+            level: 'base',
+            estimatedMinutes: 15,
+            summary: 'Diritti e congedi per i nuovi genitori: obbligatori, facoltativi e indennità INPS.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'INPS',
+            steps: [
+                'Maternità obbligatoria: 5 mesi (solitamente 2 prima e 3 dopo il parto)',
+                'Paternità obbligatoria: 10 giorni lavorativi per il padre dipendente',
+                'Congedo parentale: mesi facoltativi indennizzati in percentuale',
+                'Presenta domanda online all\'INPS prima dell\'inizio del congedo'
+            ],
+            sources: [
+                {
+                    title: 'Maternità e paternità',
+                    organization: 'INPS',
+                    url: 'https://www.inps.it/',
+                    type: 'official',
+                    usedFor: 'Dettagli congedi',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'lavoro-nero-tutele',
+            slug: 'lavoro-nero-cosa-rischiano-aziende-tutele-lavoratori',
+            title: 'Lavoro nero: orientamento e tutele',
+            category: 'lavoro',
+            audience: ['lavoratori'],
+            level: 'intermedia',
+            estimatedMinutes: 15,
+            summary: 'Perché il lavoro "in nero" è un rischio per te e come puoi tutelarti o denunciare.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'Ispettorato Nazionale del Lavoro',
+            steps: [
+                'Il lavoro nero non ti dà contributi pensione, assicurazione INAIL e tutele in caso di licenziamento',
+                'Se lavori in nero, puoi richiedere la regolarizzazione tramite i sindacati',
+                'Puoi inviare una segnalazione (esposto) all\'Ispettorato Nazionale del Lavoro (INL)',
+                'Conserva prove del lavoro svolto (messaggi, testimoni, foto)'
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'inlRichiestaIntervento',
+                    useWhen: 'Per segnalare irregolarità lavorative',
+                    beforeOpening: ['Valuta di farti assistere da un sindacato']
+                }
+            ],
+            sources: [
+                {
+                    title: 'Tutela del lavoro',
+                    organization: 'INL',
+                    url: 'https://www.ispettorato.gov.it/',
+                    type: 'official',
+                    usedFor: 'Esposti e denunce',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'ccnl-contratto-ricerca',
+            slug: 'come-trovare-ccnl-nel-contratto-di-lavoro',
+            title: 'Come trovare CCNL nel contratto',
+            category: 'lavoro',
+            audience: ['lavoratori'],
+            level: 'base',
+            estimatedMinutes: 10,
+            summary: 'Il Contratto Collettivo Nazionale di Lavoro (CCNL) stabilisce i tuoi diritti minimi. Ecco come capire quale si applica a te.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            steps: [
+                'Leggi la prima pagina del tuo contratto di assunzione',
+                'Cerca diciture come "si applica il CCNL Commercio" o "Metalmeccanici"',
+                'Se non lo trovi nel contratto, controlla la parte alta della busta paga',
+                'Usa il nome del CCNL per cercare online i minimi tabellari e le ore di ferie previste'
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'cnelArchivioContratti',
+                    useWhen: 'Per consultare il testo integrale di un CCNL',
+                    beforeOpening: ['Devi conoscere il nome esatto del contratto']
+                }
+            ],
+            sources: [
+                {
+                    title: 'Archivio Contratti',
+                    organization: 'CNEL',
+                    url: 'https://www.cnel.it/Archivio-Contratti',
+                    type: 'official',
+                    usedFor: 'Consultazione CCNL',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
         }
     ]
 };

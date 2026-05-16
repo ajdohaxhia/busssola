@@ -258,7 +258,7 @@ export const modulo_22_universita_giovani: Module = {
             summary: 'Come valorizzare le tue competenze anche se non hai ancora esperienza lavorativa specifica.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-05-16',
             synthesis: 'Il primo CV deve puntare sulla formazione, sulle "soft skills" e sulle esperienze extra-curriculari (volontariato, sport, piccoli lavori). Deve essere pulito, chiaro e personalizzato per l\'azienda a cui lo invii.',
             prerequisites: ['Un indirizzo email professionale (es. nome.cognome@mail.com)'],
             whenToDo: 'Già durante l\'ultimo anno di studi o subito dopo la laurea/diploma.',
@@ -324,6 +324,353 @@ export const modulo_22_universita_giovani: Module = {
                 'Clausola GDPR inserita'
             ],
             relatedGlossaryTerms: ['Soft Skills', 'Hard Skills', 'Europass']
+        },
+        {
+            id: 'tasse-universitarie-guida',
+            slug: 'tasse-universitarie-scadenze-e-rate',
+            title: 'Tasse universitarie',
+            mainEntity: 'Università',
+            category: 'universita',
+            audience: ['studenti'],
+            level: 'base',
+            estimatedMinutes: 5,
+            summary: 'Come funzionano le rate, la "no tax area" e i rimborsi per merito.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            synthesis: 'Le tasse universitarie sono divise in tre parti: l\'imposta di bollo, la tassa regionale per il diritto allo studio e il contributo onnicomprensivo annuale dell\'ateneo (calcolato in base all\'ISEE).',
+            prerequisites: ['ISEE universitario in corso di validità'],
+            whenToDo: 'Solitamente tre scadenze: ottobre (iscrizione), gennaio (seconda rata) e maggio (terza rata).',
+            doNow: [
+                'Verifica se rientri nella "No Tax Area" (ISEE sotto i 22.000€, variabile per ateneo).',
+                'Controlla sul portale studenti l\'avviso di pagamento PagoPA per la prima rata.',
+                'Autorizza l\'università ad acquisire l\'ISEE dalla banca dati INPS.',
+                'Paga le rate entro le scadenze per evitare le morose (multe per ritardo).',
+                'Verifica se hai diritto a rimborsi per merito (es. media alta o laurea in corso).'
+            ],
+            steps: [
+                'Verifica se rientri nella "No Tax Area" (ISEE sotto i 22.000€, variabile per ateneo).',
+                'Controlla sul portale studenti l\'avviso di pagamento PagoPA per la prima rata.',
+                'Autorizza l\'università ad acquisire l\'ISEE dalla banca dati INPS.',
+                'Paga le rate entro le scadenze per evitare le morose (multe per ritardo).',
+                'Verifica se hai diritto a rimborsi per merito (es. media alta o laurea in corso).'
+            ],
+            dontDo: [
+                'Non dimenticare di pagare la tassa regionale: senza quella non puoi dare esami, anche se hai pagato il resto.',
+                'Non aspettare l\'ultimo giorno: il sistema PagoPA può metterci 24h a comunicare il pagamento all\'ateneo.'
+            ],
+            commonErrors: [
+                'Dimenticare di inserire l\'ISEE, pagando così la fascia massima (anche oltre 3000€).',
+                'Pensare che la borsa di studio paghi tutto automaticamente (spesso serve comunque pagare il bollo da 16€).'
+            ],
+            askHelpWhen: [
+                'Se il calcolo delle tasse sul portale ti sembra errato rispetto al tuo ISEE.',
+                'Se hai difficoltà economiche improvvise (chiedi rateizzazioni extra o bonus disagio).'
+            ],
+            whoCanHelp: [
+                'Ufficio Tasse dell\'Università',
+                'Segreteria Studenti',
+                'CAF (per errori ISEE)'
+            ],
+            whereToDo: 'Portale studenti dell\'università.',
+            timeToComplete: '5 minuti per il pagamento.',
+            practicalDisclaimer: 'Molte università rimborsano la tassa regionale agli studenti che vincono la borsa di studio.',
+            sources: [
+                {
+                    title: 'Contribuzione studentesca',
+                    organization: 'Ministero dell\'Università',
+                    url: 'https://www.mur.gov.it/',
+                    type: 'official',
+                    usedFor: 'Quadro normativo No Tax Area.',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ],
+            checklist: [
+                'ISEE universitario acquisito',
+                'Fascia di reddito corretta',
+                'Prima rata/bollo pagato',
+                'Scadenze successive in calendario',
+                'Tassa regionale verificata'
+            ],
+            relatedGlossaryTerms: ['No Tax Area', 'Mora', 'Contributo onnicomprensivo']
+        },
+        {
+            id: 'rinuncia-sospensione-studi',
+            slug: 'rinuncia-o-sospensione-studi-universitari',
+            title: 'Rinuncia/sospensione studi',
+            mainEntity: 'Università',
+            category: 'universita',
+            audience: ['studenti'],
+            level: 'intermedia',
+            estimatedMinutes: 7,
+            summary: 'Cosa fare se decidi di interrompere il percorso universitario temporaneamente o per sempre.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            synthesis: 'La rinuncia agli studi è un atto irrevocabile che chiude la carriera scolastica. La sospensione (o interruzione) permette invece di "congelare" gli studi per motivi di salute, maternità o lavoro, evitando di pagare le tasse per quel periodo.',
+            prerequisites: ['Regolarità con i pagamenti degli anni precedenti'],
+            whenToDo: 'Quando non si è più in grado di seguire o si vuole cambiare totalmente facoltà.',
+            doNow: [
+                'Valuta se ti conviene la "Sospensione" (temporanea) o la "Rinuncia" (definitiva).',
+                'Scarica il modulo di rinuncia dal sito dell\'ateneo.',
+                'Paga l\'imposta di bollo richiesta per la chiusura della pratica.',
+                'Riconsegna il libretto universitario (se ancora cartaceo).',
+                'Se vuoi ricominciare altrove, richiedi il "Trasferimento" invece della rinuncia (per non perdere gli esami dati).'
+            ],
+            steps: [
+                'Valuta se ti conviene la "Sospensione" (temporanea) o la "Rinuncia" (definitiva).',
+                'Scarica il modulo di rinuncia dal sito dell\'ateneo.',
+                'Paga l\'imposta di bollo richiesta per la chiusura della pratica.',
+                'Riconsegna il libretto universitario (se ancora cartaceo).',
+                'Se vuoi ricominciare altrove, richiedi il "Trasferimento" invece della rinuncia (per non perdere gli esami dati).'
+            ],
+            dontDo: [
+                'Non smettere semplicemente di pagare le tasse: rimarresti "in sospeso" e accumuleresti debiti e more per anni.',
+                'Non fare la rinuncia se hai intenzione di riprendere lo stesso corso tra un anno: usa la sospensione.'
+            ],
+            commonErrors: [
+                'Pensare che la rinuncia cancelli i debiti pregressi (vanno pagati comunque).',
+                'Perdere i diritti sulla borsa di studio (la rinuncia comporta spesso la restituzione della borsa dell\'anno in corso).'
+            ],
+            askHelpWhen: [
+                'Se vuoi sapere quanti esami ti verrebbero riconosciuti in un nuovo corso.',
+                'Se la sospensione è dovuta a gravi motivi di salute (hai diritto a tutele speciali).'
+            ],
+            whoCanHelp: [
+                'Segreteria Studenti',
+                'Ufficio Orientamento (per riorientamento)',
+                'Rappresentanti degli studenti'
+            ],
+            whereToDo: 'Segreteria studenti o sportello online.',
+            timeToComplete: '30 minuti per la pratica, tempi amministrativi per la chiusura.',
+            practicalDisclaimer: 'La rinuncia agli studi non impedisce una futura nuova immatricolazione, anche allo stesso corso.',
+            sources: [
+                {
+                    title: 'Guida amministrativa studenti',
+                    organization: 'Università degli Studi',
+                    url: 'https://www.istruzione.it/',
+                    type: 'institutional',
+                    usedFor: 'Esempi di procedure di rinuncia.',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ],
+            checklist: [
+                'Modulo scaricato',
+                'Debiti pregressi saldati',
+                'Bollo pagato',
+                'Richiesta certificato esami dati (prima della rinuncia)',
+                'Libretto riconsegnato'
+            ],
+            relatedGlossaryTerms: ['Rinuncia irrevocabile', 'Carriera alias', 'Ricongiunzione di carriera']
+        },
+        {
+            id: 'stage-tirocini-guida',
+            slug: 'stage-e-tirocini-come-funzionano',
+            title: 'Stage/tirocini',
+            mainEntity: 'Ministero del Lavoro',
+            category: 'lavoro',
+            audience: ['studenti', 'lavoratori'],
+            level: 'base',
+            estimatedMinutes: 8,
+            summary: 'Diritti, doveri e differenze tra stage curriculare (per l\'università) ed extracurriculare (per il lavoro).',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            synthesis: 'Lo stage non è un contratto di lavoro ma un percorso formativo. Il tirocinio curriculare è parte del piano di studi e spesso non è retribuito. Quello extracurriculare è per neolaureati/disoccupati e prevede obbligatoriamente un rimborso spese minimo.',
+            prerequisites: ['Convenzione tra ente promotore (es. Università) e azienda ospitante'],
+            whenToDo: 'Durante gli studi per acquisire CFU o dopo la laurea per entrare nel mondo del lavoro.',
+            doNow: [
+                'Verifica che ci sia un "Progetto Formativo" firmato da te, dall\'azienda e dal tutor.',
+                'Controlla il limite massimo di ore settimanali (solitamente 40).',
+                'Assicurati di essere coperto dall\'assicurazione INAIL (a carico dell\'ente promotore).',
+                'Richiedi l\'attestazione delle competenze a fine tirocinio.',
+                'Se extracurriculare, verifica che il rimborso spese rispetti il minimo regionale (es. 600-800€).'
+            ],
+            steps: [
+                'Verifica che ci sia un "Progetto Formativo" firmato da te, dall\'azienda e dal tutor.',
+                'Controlla il limite massimo di ore settimanali (solitamente 40).',
+                'Assicurati di essere coperto dall\'assicurazione INAIL (a carico dell\'ente promotore).',
+                'Richiedi l\'attestazione delle competenze a fine tirocinio.',
+                'Se extracurriculare, verifica che il rimborso spese rispetti il minimo regionale (es. 600-800€).'
+            ],
+            dontDo: [
+                'Non farti sostituire a un lavoratore dipendente: lo stagista deve imparare, non coprire carenze di organico.',
+                'Non accettare stage extracurriculari senza alcun rimborso spese: è illegale.'
+            ],
+            commonErrors: [
+                'Non avere un tutor aziendale di riferimento.',
+                'Svolgere mansioni pericolose o non previste nel progetto formativo.',
+                'Pensare che lo stage dia diritto a ferie pagate o malattia (esistono solo permessi concordati).'
+            ],
+            askHelpWhen: [
+                'Se l\'azienda ti chiede di lavorare da solo o con responsabilità eccessive.',
+                'Se il rimborso spese non viene pagato.'
+            ],
+            whoCanHelp: [
+                'Ufficio Stage dell\'Università',
+                'Centro per l\'Impiego',
+                'Ispettorato Nazionale del Lavoro (per abusi)'
+            ],
+            whereToDo: 'Aziende, Enti Pubblici o Studi Professionali.',
+            timeToComplete: 'Dai 2 ai 6 mesi.',
+            practicalDisclaimer: 'Lo stage non dà diritto a contributi pensionistici, ma vale come esperienza nel CV.',
+            sources: [
+                {
+                    title: 'Linee guida tirocini',
+                    organization: 'Ministero del Lavoro',
+                    url: 'https://www.lavoro.gov.it/temi-e-priorita/politiche-attive-del-lavoro/Pagine/Tirocini.aspx',
+                    type: 'official',
+                    usedFor: 'Normativa nazionale stage.',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ],
+            checklist: [
+                'Progetto formativo firmato',
+                'Tutor individuato',
+                'Copertura INAIL attiva',
+                'Rimborso spese concordato',
+                'Registro presenze compilato'
+            ],
+            relatedGlossaryTerms: ['Ente Promotore', 'Ente Ospitante', 'Indennità di partecipazione']
+        },
+        {
+            id: 'garanzia-giovani-orientamento',
+            slug: 'garanzia-giovani-come-iscriversi',
+            title: 'Garanzia Giovani',
+            mainEntity: 'ANPAL',
+            category: 'lavoro',
+            audience: ['studenti', 'lavoratori'],
+            level: 'base',
+            estimatedMinutes: 6,
+            summary: 'Il programma europeo per favorire l\'occupazione dei giovani sotto i 30 (o 35) anni.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            synthesis: 'Garanzia Giovani (Youth Guarantee) offre corsi di formazione, tirocini retribuiti e incentivi per l\'assunzione. Si rivolge ai NEET (giovani che non studiano e non lavorano).',
+            prerequisites: ['Età tra 15 e 29 anni (esteso a 34 in alcune regioni)', 'Essere disoccupati o non frequentare corsi di studio'],
+            whenToDo: 'Subito dopo aver terminato gli studi se non si trova occupazione.',
+            doNow: [
+                'Iscriviti online sul portale nazionale MyANPAL o sul sito regionale dedicato.',
+                'Recati al Centro per l\'Impiego per il "colloquio di profilazione".',
+                'Firma il "Patto di Servizio Personalizzato".',
+                'Scegli tra le misure disponibili: formazione, tirocinio, supporto all\'autoimprenditorialità.',
+                'Monitora le offerte di lavoro dedicate nel portale.'
+            ],
+            steps: [
+                'Iscriviti online sul portale nazionale MyANPAL o sul sito regionale dedicato.',
+                'Recati al Centro per l\'Impiego per il "colloquio di profilazione".',
+                'Firma il "Patto di Servizio Personalizzato".',
+                'Scegli tra le misure disponibili: formazione, tirocinio, supporto all\'autoimprenditorialità.',
+                'Monitora le offerte di lavoro dedicate nel portale.'
+            ],
+            dontDo: [
+                'Non rifiutare più di un\'offerta congrua: potresti perdere lo status di beneficiario del programma.',
+                'Non dimenticare di aggiornare i tuoi recapiti sul portale.'
+            ],
+            commonErrors: [
+                'Pensare che sia un sussidio economico diretto (è un pacchetto di servizi, non un assegno).',
+                'Iscriversi mentre si è ancora studenti (verresti scartato automaticamente dai controlli).'
+            ],
+            askHelpWhen: [
+                'Se dopo 4 mesi dall\'iscrizione non sei ancora stato contattato per il primo colloquio.',
+                'Se hai problemi con l\'accesso al portale MyANPAL.'
+            ],
+            whoCanHelp: [
+                'Centro per l\'Impiego (CPI)',
+                'Agenzie per il lavoro accreditate',
+                'Informagiovani'
+            ],
+            whereToDo: 'Online (MyANPAL) e Centro per l\'Impiego territoriale.',
+            timeToComplete: '15 minuti per l\'iscrizione online.',
+            practicalDisclaimer: 'Il programma è finanziato dall\'Unione Europea e gestito dalle singole Regioni.',
+            sources: [
+                {
+                    title: 'Garanzia Giovani Italia',
+                    organization: 'ANPAL',
+                    url: 'https://www.anpal.gov.it/garanzia-giovani',
+                    type: 'official',
+                    usedFor: 'Accesso al programma e regole.',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ],
+            checklist: [
+                'Iscrizione MyANPAL fatta',
+                'Colloquio CPI effettuato',
+                'Patto di servizio firmato',
+                'Profilazione ottenuta',
+                'Corso o tirocinio scelto'
+            ],
+            relatedGlossaryTerms: ['NEET', 'DID (Dichiarazione di Immediata Disponibilità)', 'MyANPAL']
+        },
+        {
+            id: 'erasmus-documenti-base',
+            slug: 'erasmus-documenti-e-preparazione',
+            title: 'Erasmus documenti base',
+            mainEntity: 'Università / Unione Europea',
+            category: 'universita',
+            audience: ['studenti'],
+            level: 'base',
+            estimatedMinutes: 8,
+            summary: 'Tutto quello che serve preparare prima di partire per uno studio all\'estero.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            synthesis: 'L\'Erasmus+ permette di studiare in un\'altra università europea. La parte più complessa è la burocrazia: il Learning Agreement deve essere approvato prima della partenza per garantire il riconoscimento degli esami.',
+            prerequisites: ['Vincita del bando Erasmus del proprio ateneo', 'Conoscenza linguistica certificata'],
+            whenToDo: 'Almeno 3-6 mesi prima della partenza (appena pubblicate le graduatorie).',
+            doNow: [
+                'Compila il Learning Agreement (LA) inserendo gli esami esteri e i corrispondenti italiani.',
+                'Firma l\'Accordo di Mobilità finanziaria per ricevere la borsa di studio.',
+                'Richiedi la Tessera Sanitaria Europea (TEAM) valida per tutto il periodo.',
+                'Verifica la validità della Carta d\'Identità per l\'espatrio.',
+                'Effettua il test linguistico OLS (Online Linguistic Support) richiesto dalla UE.'
+            ],
+            steps: [
+                'Compila il Learning Agreement (LA) inserendo gli esami esteri e i corrispondenti italiani.',
+                'Firma l\'Accordo di Mobilità finanziaria per ricevere la borsa di studio.',
+                'Richiedi la Tessera Sanitaria Europea (TEAM) valida per tutto il periodo.',
+                'Verifica la validità della Carta d\'Identità per l\'espatrio.',
+                'Effettua il test linguistico OLS (Online Linguistic Support) richiesto dalla UE.'
+            ],
+            dontDo: [
+                'Non partire senza il LA firmato da ENTRAMBE le università: rischi che gli esami non vengano riconosciuti.',
+                'Non dimenticare di stipulare un\'assicurazione sanitaria integrativa se il paese di destinazione lo richiede.'
+            ],
+            commonErrors: [
+                'Sbagliare il calcolo dei CFU: controlla sempre le tabelle di conversione (ECTS).',
+                'Dimenticare di fare il "Certificate of Arrival" appena arrivati (blocca il pagamento della borsa).',
+                'Non controllare la scadenza del documento d\'identità.'
+            ],
+            askHelpWhen: [
+                'Se l\'università ospitante non risponde alle email.',
+                'Se devi cambiare gli esami scelti dopo l\'arrivo (procedura "Changes to LA").'
+            ],
+            whoCanHelp: [
+                'Ufficio Relazioni Internazionali / Erasmus',
+                'Coordinatore didattico del corso di laurea',
+                'ESN (Erasmus Student Network) locale'
+            ],
+            whereToDo: 'Ufficio Erasmus della propria università e portali online.',
+            timeToComplete: 'Diverse ore per la compilazione dei piani di studio.',
+            practicalDisclaimer: 'La borsa Erasmus è un contributo, non copre quasi mai il 100% delle spese vive all\'estero.',
+            sources: [
+                {
+                    title: 'Programma Erasmus+',
+                    organization: 'Commissione Europea',
+                    url: 'https://erasmus-plus.ec.europa.eu/',
+                    type: 'official',
+                    usedFor: 'Regole generali del programma.',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ],
+            checklist: [
+                'Learning Agreement approvato',
+                'Accordo finanziario firmato',
+                'TEAM controllata',
+                'Documento identità valido',
+                'Test OLS completato'
+            ],
+            relatedGlossaryTerms: ['Learning Agreement', 'ECTS', 'TEAM (Tessera Europea Assicurazione Malattia)']
         }
     ]
 };

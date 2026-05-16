@@ -155,8 +155,8 @@ export default function AboutPage() {
                 className="grid grid-cols-2 md:grid-cols-4 gap-4"
             >
                 {[
-                    { number: siteStats.totalModules.toString(), label: 'Argomenti disponibili' },
-                    { number: siteStats.publishedLessons.toString(), label: 'Schede pratiche' },
+                    { number: siteStats.totalModules.toString(), label: 'Moduli Civici' },
+                    { number: siteStats.publishedLessons.toString(), label: 'Guide Pratiche' },
                     { number: '24/7', label: 'Accesso gratuito' },
                     { number: '0', label: 'Dati raccolti' },
                 ].map((stat, i) => (
@@ -168,8 +168,8 @@ export default function AboutPage() {
                         transition={{ delay: i * 0.1 }}
                         className="text-center p-6 sm:p-8 rounded-2xl border border-border bg-surface shadow-sm"
                     >
-                        <div className="text-3xl sm:text-4xl font-display font-bold text-primary mb-3">{stat.number}</div>
-                        <div className="text-xs sm:text-sm font-semibold text-secondary uppercase tracking-wider">{stat.label}</div>
+                        <div className="text-3xl sm:text-4xl font-display font-black text-primary mb-3">{stat.number}</div>
+                        <div className="text-xs sm:text-sm font-black text-secondary/40 uppercase tracking-widest">{stat.label}</div>
                     </motion.div>
                 ))}
             </motion.div>

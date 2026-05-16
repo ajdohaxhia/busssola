@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "validate:content": "tsx scripts/validate-content.ts",
+    "validate:rendered-pages": "tsx scripts/validate-rendered-pages.ts",
+    "validate:seo": "tsx scripts/validate-seo.ts",
     "update-stats": "tsx src/scripts/update-stats.ts",
     "prebuild": "npm run validate:content && npm run update-stats",
     "build": "next build",

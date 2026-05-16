@@ -21,7 +21,7 @@ const stats = {
     categories: [...new Set(modules.map(m => m.category))].length,
     totalSources: lessons.reduce((acc, l) => acc + l.sources.length, 0),
     uniqueOrganizations: [...new Set(lessons.flatMap(l => l.sources.map(s => s.organization)))].length,
-    totalChecklistItems: lessons.reduce((acc, l) => acc + l.checklist.length, 0),
+    totalChecklistItems: lessons.reduce((acc, l) => acc + (l.checklist?.length || 0), 0),
     lastUpdatedAt: new Date().toISOString().split('T')[0],
     projectStage: "Public Resource Hub v2 - Life Hacks"
 };

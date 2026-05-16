@@ -652,6 +652,156 @@ export const modulo_11_documenti_identita_avanzata: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ]
+        },
+        {
+            id: 'passaporto-minori',
+            slug: 'passaporto-per-minori-come-richiederlo',
+            title: 'Passaporto per minori',
+            category: 'documenti',
+            audience: ['parents'],
+            level: 'base',
+            estimatedMinutes: 15,
+            summary: 'Tutti i minori devono avere un passaporto individuale. Ecco come richiederlo e l\'importanza dell\'assenso di entrambi i genitori.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'Polizia di Stato',
+            prerequisites: ['Assenso di entrambi i genitori (firmato davanti al pubblico ufficiale o con copia documento)'],
+            steps: [
+                'Prenota l\'appuntamento online a nome del minore',
+                'Prepara l\'atto di assenso firmato dall\'altro genitore (se non presente)',
+                'Porta il minore in Questura (obbligatorio per le impronte dai 12 anni in su)',
+                'Consegna 2 foto tessera conformi e ricevute dei pagamenti (stessi importi dell\'adulto)'
+            ],
+            dontDo: [
+                'Non pensare che basti l\'iscrizione sul passaporto dei genitori (non è più valida)',
+                'Non dimenticare l\'originale del documento dell\'altro genitore se non è presente'
+            ],
+            checklist: [
+                'Atto di assenso firmato',
+                'Bollettino da 42,50€ pagato a nome del minore',
+                'Marca da bollo da 73,50€',
+                'Foto tessera recenti del minore'
+            ],
+            sources: [
+                {
+                    title: 'Passaporto per minori',
+                    organization: 'Polizia di Stato',
+                    url: 'https://www.poliziadistato.it/articolo/191',
+                    type: 'official',
+                    usedFor: 'Procedura minori',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'documento-smarrito-rubato',
+            slug: 'cosa-fare-documento-identita-smarrito-rubato',
+            title: 'Documento smarrito o rubato',
+            category: 'documenti',
+            audience: ['cittadini'],
+            level: 'base',
+            estimatedMinutes: 10,
+            summary: 'Cosa fare immediatamente se perdi o ti rubano la carta d\'identità, il passaporto o la patente.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'Carabinieri / Polizia',
+            steps: [
+                'Fai subito denuncia presso il comando di Polizia o Carabinieri più vicino',
+                'Chiedi una copia della denuncia (fondamentale per richiedere il duplicato)',
+                'Per la Carta d\'Identità: recati in Comune con la denuncia e 3 foto',
+                'Per la Patente: la denuncia vale come permesso provvisorio di guida se l\'organo di polizia può emettere il duplicato'
+            ],
+            doNow: [
+                'Recati in una caserma o commissariato per la denuncia',
+                'Blocca eventuali carte di credito se erano nello stesso portafoglio'
+            ],
+            checklist: [
+                'Denuncia effettuata',
+                'Copia denuncia ottenuta',
+                'Appuntamento in Comune/Questura preso per il duplicato'
+            ],
+            sources: [
+                {
+                    title: 'Denuncia di smarrimento',
+                    organization: 'Carabinieri',
+                    url: 'https://www.carabinieri.it/',
+                    type: 'official',
+                    usedFor: 'Linee guida denuncia',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'codice-fiscale-stranieri',
+            slug: 'richiesta-codice-fiscale-per-stranieri',
+            title: 'Codice fiscale per stranieri',
+            category: 'documenti',
+            audience: ['stranieri'],
+            level: 'base',
+            estimatedMinutes: 12,
+            summary: 'Come ottenere il codice fiscale se sei un cittadino straniero appena arrivato in Italia o residente all\'estero.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'Agenzia delle Entrate',
+            steps: [
+                'Se hai un visto per motivi di lavoro o famiglia, il codice fiscale viene spesso attribuito dallo Sportello Unico per l’Immigrazione',
+                'Se sei già in Italia regolarmente, vai in un ufficio dell\'Agenzia delle Entrate con il passaporto o permesso di soggiorno',
+                'Compila il modello AA4/8',
+                'Se sei all\'estero, richiedilo al Consolato italiano competente per il tuo territorio'
+            ],
+            whatToPrepare: [
+                'Passaporto valido con eventuale visto',
+                'Permesso di soggiorno o ricevuta della richiesta',
+                'Modello AA4/8 compilato'
+            ],
+            sources: [
+                {
+                    title: 'Codice fiscale per cittadini stranieri',
+                    organization: 'Agenzia delle Entrate',
+                    url: 'https://www.agenziaentrate.gov.it/portale/web/guest/schede/istanze/richiesta-ts-o-cf/cf-per-cittadini-stranieri',
+                    type: 'official',
+                    usedFor: 'Procedura stranieri',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'spid-scelta-provider',
+            slug: 'come-scegliere-provider-spid',
+            title: 'SPID: scelta del provider',
+            category: 'documenti',
+            audience: ['cittadini'],
+            level: 'base',
+            estimatedMinutes: 10,
+            summary: 'Non tutti i provider SPID sono uguali. Ecco come scegliere quello più adatto alle tue esigenze (gratis, a pagamento, con riconoscimento via webcam).',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'AgID',
+            steps: [
+                'Vai sul sito ufficiale spid.gov.it e confronta i "Identity Provider"',
+                'Verifica quali offrono il riconoscimento gratuito (es. di persona alle Poste o con CIE/CNS)',
+                'Controlla i costi per il riconoscimento via webcam se non vuoi uscire di casa',
+                'Scegli in base alla facilità d\'uso dell\'app (leggi le recensioni sugli store)'
+            ],
+            checklist: [
+                'Ho controllato se ho una CIE per il riconoscimento gratis online',
+                'Ho verificato se c\'è un ufficio vicino per il riconoscimento di persona',
+                'Ho confrontato i livelli di sicurezza offerti (1, 2 e 3)'
+            ],
+            sources: [
+                {
+                    title: 'Scegli il tuo Identity Provider',
+                    organization: 'AgID',
+                    url: 'https://www.spid.gov.it/cos-e-spid/come-scegliere-tra-gli-idp/',
+                    type: 'official',
+                    usedFor: 'Confronto provider',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
         }
     ]
 };

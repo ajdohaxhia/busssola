@@ -11,7 +11,6 @@ import { Library } from 'lucide-react'
 export default function ModulesPage() {
     return (
         <Container size="lg" className="py-12 space-y-12 min-h-screen text-left">
-            <h1 className="text-4xl font-display font-black tracking-tight text-foreground text-left">Catalogo Guide</h1>
             <PageHeader 
                 badge="Catalogo Guide"
                 icon={Library}

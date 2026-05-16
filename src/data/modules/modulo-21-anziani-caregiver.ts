@@ -21,7 +21,7 @@ export const modulo_21_anziani_caregiver: Module = {
             summary: 'Come aiutare un anziano a ottenere l\'identità digitale indispensabile per INPS e Sanità.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-05-16',
             synthesis: 'L\'identità digitale (SPID o CIE) è obbligatoria per accedere ai servizi della Pubblica Amministrazione. Per un anziano non tecnologico, il caregiver può fare da supporto operativo per la creazione e la gestione delle credenziali, nel rispetto della titolarità dell\'identità.',
             prerequisites: ['Smartphone dell\'anziano (o con SIM dedicata)', 'Documento d\'identità valido', 'Email'],
             whenToDo: 'Quando l\'anziano deve consultare il cedolino della pensione o accedere al fascicolo sanitario.',
@@ -100,7 +100,7 @@ export const modulo_21_anziani_caregiver: Module = {
             summary: 'Gestire legalmente i servizi online per conto di un familiare tramite la "delega dell\'identità digitale".',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-05-16',
             synthesis: 'La delega digitale permette a un caregiver di accedere ai portali della PA (INPS, Agenzia Entrate) usando il PROPRIO SPID/CIE per conto del familiare delegante. È lo strumento legale corretto per chi non può usare gli strumenti tecnologici.',
             prerequisites: ['SPID/CIE sia per il delegante che per il delegato (o presenza fisica allo sportello)'],
             whenToDo: 'Quando un anziano vuole che un figlio gestisca la sua pensione o le sue tasse online in modo ufficiale.',
@@ -147,15 +147,7 @@ export const modulo_21_anziani_caregiver: Module = {
                     url: 'https://www.inps.it/it/it/dettaglio-approfondimento.schede-informative.55214.delega-dell-identit-digitale.html',
                     type: 'official',
                     usedFor: 'Guida ufficiale INPS alla delega.',
-                    lastCheckedAt: '2026-05-14'
-                },
-                {
-                    title: 'Abilitazione all\'uso dei servizi online per conto di terzi',
-                    organization: 'Agenzia delle Entrate',
-                    url: 'https://www.agenziaentrate.gov.it/',
-                    type: 'official',
-                    usedFor: 'Specifiche per i servizi fiscali.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-05-16'
                 }
             ],
             checklist: [
@@ -179,7 +171,7 @@ export const modulo_21_anziani_caregiver: Module = {
             summary: 'I primi passi per ottenere il riconoscimento dell\'invalidità e le relative agevolazioni.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-05-16',
             synthesis: 'L\'invalidità civile è il riconoscimento di una difficoltà nello svolgere le attività della vita quotidiana. È il presupposto per ottenere benefici come l\'indennità di accompagnamento, le esenzioni ticket e i permessi Legge 104.',
             prerequisites: ['Certificato medico telematico (rilasciato dal medico di base)'],
             whenToDo: 'Quando le condizioni di salute riducono sensibilmente l\'autonomia della persona.',
@@ -226,15 +218,7 @@ export const modulo_21_anziani_caregiver: Module = {
                     url: 'https://www.inps.it/it/it/dettaglio-approfondimento.schede-informative.50022.invalidit-civile.html',
                     type: 'official',
                     usedFor: 'Iter procedurale e benefici.',
-                    lastCheckedAt: '2026-05-14'
-                },
-                {
-                    title: 'Guida all\'invalidità',
-                    organization: 'Handicap on line',
-                    url: 'https://www.handylex.org/',
-                    type: 'nonprofit',
-                    usedFor: 'Dettagli su Legge 104 e agevolazioni.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-05-16'
                 }
             ],
             checklist: [
@@ -245,6 +229,216 @@ export const modulo_21_anziani_caregiver: Module = {
                 'Verbale ricevuto e controllato'
             ],
             relatedGlossaryTerms: ['Legge 104', 'Accompagnamento', 'Commissione Medica']
+        },
+        {
+            id: 'accompagnamento-orientamento',
+            slug: 'indennita-di-accompagnamento-guida',
+            title: 'Accompagnamento: orientamento',
+            mainEntity: 'INPS',
+            category: 'anziani',
+            audience: ['caregiver', 'anziani', 'disabili'],
+            level: 'base',
+            estimatedMinutes: 6,
+            summary: 'Cos\'è l\'indennità di accompagnamento e come richiederla per chi non è autosufficiente.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            synthesis: 'L\'indennità di accompagnamento è un sostegno economico erogato dall\'INPS a chi è impossibilitato a deambulare senza l\'aiuto di un accompagnatore o non è in grado di compiere gli atti quotidiani della vita. Non dipende dal reddito.',
+            prerequisites: ['Certificato medico telematico con richiesta di accompagnamento'],
+            whenToDo: 'Quando la persona anziana perde l\'autonomia fisica o cognitiva di base.',
+            doNow: [
+                'Verifica col medico se ci sono i presupposti per la richiesta nel certificato introduttivo.',
+                'Presenta la domanda all\'INPS (contestualmente a quella di invalidità se non ancora fatta).',
+                'Prepara la documentazione che attesti la necessità di assistenza continua.',
+                'Dopo la visita, se l\'esito è positivo, inserisci il modello AP70 sul sito INPS per i dati di pagamento.',
+                'Controlla l\'accredito mensile (importo fisso annuale rivalutato).'
+            ],
+            steps: [
+                'Verifica col medico se ci sono i presupposti per la richiesta nel certificato introduttivo.',
+                'Presenta la domanda all\'INPS (contestualmente a quella di invalidità se non ancora fatta).',
+                'Prepara la documentazione che attesti la necessità di assistenza continua.',
+                'Dopo la visita, se l\'esito è positivo, inserisci il modello AP70 sul sito INPS per i dati di pagamento.',
+                'Controlla l\'accredito mensile (importo fisso annuale rivalutato).'
+            ],
+            dontDo: [
+                'Non pensare che basti essere "vecchi" per averla: serve una patologia invalidante certificata.',
+                'Non dimenticare che l\'indennità viene sospesa in caso di ricovero gratuito in istituto per più di 29 giorni.'
+            ],
+            commonErrors: [
+                'Confondere l\'accompagnamento con la pensione di invalidità (che invece ha limiti di reddito).',
+                'Non comunicare i periodi di ricovero all\'INPS, rischiando di dover restituire le somme.'
+            ],
+            askHelpWhen: [
+                'Se la domanda viene respinta nonostante la palese non autosufficienza.',
+                'Se hai dubbi sulla compilazione del modello AP70.'
+            ],
+            whoCanHelp: [
+                'Patronati',
+                'Associazioni anziani',
+                'Medico Legale privato (per consulenza pre-visita)'
+            ],
+            whereToDo: 'Online (Sito INPS) o tramite Patronato.',
+            timeToComplete: '30 minuti per la domanda, attesa verbale 3-6 mesi.',
+            practicalDisclaimer: 'L\'importo dell\'indennità è uguale per tutti ed è esente da IRPEF.',
+            sources: [
+                {
+                    title: 'Indennità di accompagnamento',
+                    organization: 'INPS',
+                    url: 'https://www.inps.it/it/it/dettaglio-approfondimento.schede-informative.50021.indennit-di-accompagnamento.html',
+                    type: 'official',
+                    usedFor: 'Requisiti e modalità di domanda.',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ],
+            checklist: [
+                'Certificato medico con spunta accompagnamento',
+                'Domanda INPS inviata',
+                'Visita effettuata',
+                'Verbale positivo ricevuto',
+                'Modello AP70 inviato'
+            ],
+            relatedGlossaryTerms: ['Non autosufficienza', 'Modello AP70', 'Requisito sanitario']
+        },
+        {
+            id: 'legge-104-orientamento',
+            slug: 'legge-104-permessi-e-agevolazioni',
+            title: 'Legge 104: orientamento',
+            mainEntity: 'INPS',
+            category: 'anziani',
+            audience: ['caregiver', 'lavoratori', 'disabili'],
+            level: 'base',
+            estimatedMinutes: 7,
+            summary: 'Come funzionano i permessi lavorativi e le agevolazioni fiscali per chi assiste un familiare con disabilità grave.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            synthesis: 'La Legge 104/92 tutela le persone con disabilità e chi le assiste. L\'articolo 3 comma 3 (handicap grave) dà diritto a 3 giorni di permesso mensile retribuito e al congedo straordinario fino a 2 anni per il caregiver lavoratore dipendente.',
+            prerequisites: ['Verbale di handicap con riconoscimento dell\'art. 3 comma 3'],
+            whenToDo: 'Appena ottenuto il verbale che riconosce la gravità dell\'handicap.',
+            doNow: [
+                'Invia la domanda di "Permessi Legge 104" all\'INPS tramite il portale online o patronato.',
+                'Comunica al datore di lavoro l\'intenzione di fruire dei permessi (allegando la ricevuta INPS).',
+                'Verifica le agevolazioni fiscali (IVA al 4% per auto e sussidi tecnici, detrazioni IRPEF).',
+                'Se necessario, richiedi il congedo straordinario (per assistere il familiare convivente).',
+                'Conserva copia del verbale per l\'acquisto di beni con IVA agevolata.'
+            ],
+            steps: [
+                'Invia la domanda di "Permessi Legge 104" all\'INPS tramite il portale online o patronato.',
+                'Comunica al datore di lavoro l\'intenzione di fruire dei permessi (allegando la ricevuta INPS).',
+                'Verifica le agevolazioni fiscali (IVA al 4% per auto e sussidi tecnici, detrazioni IRPEF).',
+                'Se necessario, richiedi il congedo straordinario (per assistere il familiare convivente).',
+                'Conserva copia del verbale per l\'acquisto di beni con IVA agevolata.'
+            ],
+            dontDo: [
+                'Non usare i permessi 104 per scopi personali diversi dall\'assistenza: è causa di licenziamento per giusta causa.',
+                'Non pensare che l\'invalidità civile e la Legge 104 siano la stessa cosa: servono due riconoscimenti distinti (anche se richiesti con la stessa visita).'
+            ],
+            commonErrors: [
+                'Non presentare la domanda all\'INPS pensando che basti dare il verbale al datore di lavoro.',
+                'Dimenticare che per il congedo straordinario serve la convivenza (residenza nello stesso immobile).',
+                'Sbagliare il calcolo dell\'IVA agevolata sugli acquisti online.'
+            ],
+            askHelpWhen: [
+                'Se il datore di lavoro ostacola la fruizione dei permessi.',
+                'Se devi cambiare il familiare assistito (referente unico).'
+            ],
+            whoCanHelp: [
+                'Ufficio Personale / HR',
+                'Patronati',
+                'Associazioni per la tutela dei disabili'
+            ],
+            whereToDo: 'Sito INPS e comunicazione al Datore di Lavoro.',
+            timeToComplete: '20 minuti per la domanda online.',
+            practicalDisclaimer: 'Dal 2022 è stato abolito il "referente unico": più familiari possono assistere la stessa persona, ma i giorni totali rimangono 3 al mese.',
+            sources: [
+                {
+                    title: 'Permessi Legge 104',
+                    organization: 'INPS',
+                    url: 'https://www.inps.it/it/it/dettaglio-approfondimento.schede-informative.49964.permessi-legge-104.html',
+                    type: 'official',
+                    usedFor: 'Guida ai permessi lavorativi.',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ],
+            checklist: [
+                'Verbale Art. 3 comma 3 ottenuto',
+                'Domanda permessi inviata all\'INPS',
+                'Comunicazione al datore fatta',
+                'IVA agevolata verificata per acquisti',
+                'Residenza verificata (per congedo)'
+            ],
+            relatedGlossaryTerms: ['Handicap grave', 'Congedo straordinario', 'IVA 4%']
+        },
+        {
+            id: 'amministratore-sostegno-orientamento',
+            slug: 'amministratore-di-sostegno-come-funziona',
+            title: 'Amministratore di sostegno',
+            mainEntity: 'Tribunale',
+            category: 'anziani',
+            audience: ['caregiver', 'famiglie'],
+            level: 'intermedia',
+            estimatedMinutes: 8,
+            summary: 'Come tutelare una persona non più autonoma nelle decisioni legali e patrimoniali.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            synthesis: 'L\'Amministratore di Sostegno (AdS) è una figura nominata dal Giudice Tutelare per affiancare o sostituire una persona che, per infermità o menomazione, non può provvedere ai propri interessi. È uno strumento meno rigido dell\'interdizione.',
+            prerequisites: ['Stato di fragilità o incapacità del familiare', 'Certificazione medica che attesti la condizione'],
+            whenToDo: 'Quando l\'anziano non è più in grado di gestire il conto in banca, firmare contratti o prendere decisioni sanitarie consapevoli.',
+            doNow: [
+                'Presenta un ricorso al Giudice Tutelare presso il Tribunale di residenza del familiare.',
+                'Il ricorso può essere presentato anche senza avvocato dai familiari stretti.',
+                'Indica nel ricorso i motivi e gli atti per i quali è necessaria l\'assistenza.',
+                'Partecipa all\'udienza in cui il Giudice incontra l\'interessato (anche a domicilio se necessario).',
+                'Dopo il giuramento, l\'AdS deve presentare ogni anno un rendiconto delle attività e delle spese al Tribunale.'
+            ],
+            steps: [
+                'Presenta un ricorso al Giudice Tutelare presso il Tribunale di residenza del familiare.',
+                'Il ricorso può essere presentato anche senza avvocato dai familiari stretti.',
+                'Indica nel ricorso i motivi e gli atti per i quali è necessaria l\'assistenza.',
+                'Partecipa all\'udienza in cui il Giudice incontra l\'interessato (anche a domicilio se necessario).',
+                'Dopo il giuramento, l\'AdS deve presentare ogni anno un rendiconto delle attività e delle spese al Tribunale.'
+            ],
+            dontDo: [
+                'Non usare i soldi dell\'assistito per spese personali dell\'amministratore: ogni spesa deve essere nell\'interesse del beneficiario.',
+                'Non compiere atti di "straordinaria amministrazione" (es. vendere casa) senza l\'autorizzazione scritta del Giudice.',
+                'Non pensare che l\'AdS tolga tutti i diritti: la persona mantiene la capacità per gli atti della vita quotidiana non indicati nel decreto.'
+            ],
+            commonErrors: [
+                'Dimenticare di allegare i documenti medici al ricorso.',
+                'Non tenere traccia di scontrini e fatture per il rendiconto annuale.',
+                'Agire d\'impulso senza consultare il decreto di nomina.'
+            ],
+            askHelpWhen: [
+                'Se ci sono conflitti tra fratelli/parenti sulla scelta dell\'amministratore.',
+                'Se la gestione del patrimonio diventa molto complessa (es. eredità, debiti).'
+            ],
+            whoCanHelp: [
+                'Ufficio del Giudice Tutelare (Volontaria Giurisdizione)',
+                'Servizi Sociali del Comune',
+                'Associazioni per i diritti degli anziani'
+            ],
+            whereToDo: 'Tribunale (Ufficio Volontaria Giurisdizione).',
+            timeToComplete: '30-60 minuti per la domanda, 3-6 mesi per la nomina.',
+            practicalDisclaimer: 'L\'incarico è solitamente gratuito, salvo il rimborso delle spese documentate o un\'equa indennità decisa dal Giudice.',
+            sources: [
+                {
+                    title: 'Amministratore di Sostegno',
+                    organization: 'Ministero della Giustizia',
+                    url: 'https://www.giustizia.it/',
+                    type: 'official',
+                    usedFor: 'Informazioni legali e modulistica.',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ],
+            checklist: [
+                'Ricorso compilato',
+                'Certificati medici allegati',
+                'Udienza fissata',
+                'Decreto di nomina ricevuto',
+                'Rendiconto annuale segnato'
+            ],
+            relatedGlossaryTerms: ['Giudice Tutelare', 'Rendiconto', 'Capacità di agire']
         },
         {
             id: 'truffe-anziani-protezione',
@@ -258,7 +452,7 @@ export const modulo_21_anziani_caregiver: Module = {
             summary: 'Come riconoscere e prevenire i raggiri più comuni, sia fisici che telefonici.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-05-16',
             synthesis: 'Le truffe agli anziani sfruttano spesso l\'emotività o la gentilezza. Conoscere le tecniche dei truffatori (finto tecnico, finto incidente, finto nipote) è la prima barriera difensiva. La regola d\'oro è: diffidare e verificare sempre con una persona di fiducia.',
             prerequisites: ['Sospetto di una richiesta anomala'],
             whenToDo: 'Sempre, come prevenzione, o immediatamente se si riceve una visita o chiamata sospetta.',
@@ -305,15 +499,7 @@ export const modulo_21_anziani_caregiver: Module = {
                     url: 'https://www.poliziadistato.it/articolo/16574f9d2a632a6111116632',
                     type: 'official',
                     usedFor: 'Vademecum antitruffa.',
-                    lastCheckedAt: '2026-05-14'
-                },
-                {
-                    title: 'Campagna contro le truffe',
-                    organization: 'Arma dei Carabinieri',
-                    url: 'https://www.carabinieri.it/in-vostro-aiuto/consigli/Cose-di-tutti-i-giorni/contro-le-truffe/',
-                    type: 'official',
-                    usedFor: 'Esempi di tecniche di raggiro.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-05-16'
                 }
             ],
             checklist: [
@@ -324,6 +510,216 @@ export const modulo_21_anziani_caregiver: Module = {
                 'Numero 112 memorizzato'
             ],
             relatedGlossaryTerms: ['Ingegneria Sociale', 'Finto tecnico', 'Riconoscimento chiamante']
+        },
+        {
+            id: 'farmaci-fascicolo-sanitario',
+            slug: 'fascicolo-sanitario-e-farmaci-anziani',
+            title: 'Farmaci e fascicolo sanitario',
+            mainEntity: 'Regione',
+            category: 'anziani',
+            audience: ['caregiver', 'anziani'],
+            level: 'base',
+            estimatedMinutes: 6,
+            summary: 'Come gestire le ricette elettroniche, consultare i referti e monitorare le terapie online.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            synthesis: 'Il Fascicolo Sanitario Elettronico (FSE) raccoglie tutta la storia clinica del paziente. Per un anziano, il caregiver può accedere (tramite delega) per scaricare ricette, prenotare visite e controllare l\'esito degli esami senza spostarsi da casa.',
+            prerequisites: ['Delega al Fascicolo Sanitario attivata', 'SPID/CIE del caregiver'],
+            whenToDo: 'Dopo una visita medica o quando serve una ricetta ripetitiva per farmaci cronici.',
+            doNow: [
+                'Accedi al portale FSE della tua Regione.',
+                'Verifica nella sezione "Ricette" la presenza del NRE (Numero Ricetta Elettronica).',
+                'Mostra il codice a barre della ricetta in farmacia direttamente dallo smartphone.',
+                'Consulta la sezione "Referti" per scaricare i risultati delle analisi in PDF.',
+                'Attiva le notifiche via SMS o email per essere avvisato quando viene caricato un nuovo documento.'
+            ],
+            steps: [
+                'Accedi al portale FSE della tua Regione.',
+                'Verifica nella sezione "Ricette" la presenza del NRE (Numero Ricetta Elettronica).',
+                'Mostra il codice a barre della ricetta in farmacia direttamente dallo smartphone.',
+                'Consulta la sezione "Referti" per scaricare i risultati delle analisi in PDF.',
+                'Attiva le notifiche via SMS o email per essere avvisato quando viene caricato un nuovo documento.'
+            ],
+            dontDo: [
+                'Non dimenticare che per alcuni farmaci (es. stupefacenti o particolari terapie) serve ancora la ricetta cartacea rossa o bianca.',
+                'Non ignorare il consenso alla consultazione: se non lo presti, i medici del pronto soccorso non potranno vedere la storia clinica in emergenza.'
+            ],
+            commonErrors: [
+                'Cercare referti di strutture private non convenzionate (spesso non caricano i dati sul FSE).',
+                'Confondere il FSE nazionale con quello regionale (bisogna usare quello della Regione di residenza).',
+                'Non aggiornare il numero di telefono per gli avvisi.'
+            ],
+            askHelpWhen: [
+                'Se la delega non risulta attiva nonostante la procedura fatta.',
+                'Se mancano referti importanti di strutture pubbliche.'
+            ],
+            whoCanHelp: [
+                'Ufficio Scelta e Revoca della ASL',
+                'Medico di Medicina Generale',
+                'Assistenza tecnica portale regionale'
+            ],
+            whereToDo: 'Online sul portale sanitario regionale o app dedicata (es. Salute Lazio, Fascicolo Sanitario Lombardia).',
+            timeToComplete: '10 minuti.',
+            practicalDisclaimer: 'Il FSE è un diritto gratuito di ogni cittadino assistito dal Servizio Sanitario Nazionale.',
+            sources: [
+                {
+                    title: 'Fascicolo Sanitario Elettronico',
+                    organization: 'Ministero della Salute',
+                    url: 'https://www.fascicolosanitario.gov.it/',
+                    type: 'official',
+                    usedFor: 'Informazioni generali e collegamenti regionali.',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ],
+            checklist: [
+                'Accesso portale regionale fatto',
+                'Consenso consultazione prestato',
+                'Delega caregiver verificata',
+                'Ricetta elettronica individuata',
+                'Notifiche referti attivate'
+            ],
+            relatedGlossaryTerms: ['NRE (Numero Ricetta Elettronica)', 'FSE', 'Consenso informato']
+        },
+        {
+            id: 'organizzare-documenti-familiare',
+            slug: 'come-organizzare-documenti-familiare-fragile',
+            title: 'Come organizzare documenti di un familiare fragile',
+            mainEntity: 'Busssola',
+            category: 'anziani',
+            audience: ['caregiver'],
+            level: 'base',
+            estimatedMinutes: 10,
+            summary: 'Consigli pratici per creare un archivio ordinato di documenti medici, legali e amministrativi.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            synthesis: 'Gestire un familiare anziano comporta una mole enorme di carta e dati digitali. Organizzare tutto in modo logico permette di risparmiare tempo nelle emergenze e di non perdere scadenze importanti per bonus o tutele.',
+            prerequisites: ['Cartelle fisiche o spazio cloud sicuro'],
+            whenToDo: 'Appena si inizia il percorso di assistenza o in un momento di calma.',
+            doNow: [
+                'Crea tre sezioni principali: Salute (referti, esenzioni), Amministrazione (pensione, utenze, tasse), Legale (documenti identità, deleghe, AdS).',
+                'Digitalizza i documenti più importanti (es. verbali invalidità) e caricali su un cloud protetto.',
+                'Prepara una "Scheda di Emergenza" con patologie, allergie e farmaci assunti da tenere sempre nel portafoglio dell\'anziano.',
+                'Segna in un calendario condiviso tutte le scadenze (rinnovo documenti, visite, bollo auto, scadenze bonus).',
+                'Crea un elenco dei contatti utili (medico, farmacia, numeri emergenza) da appendere in casa.'
+            ],
+            steps: [
+                'Crea tre sezioni principali: Salute (referti, esenzioni), Amministrazione (pensione, utenze, tasse), Legale (documenti identità, deleghe, AdS).',
+                'Digitalizza i documenti più importanti (es. verbali invalidità) e caricali su un cloud protetto.',
+                'Prepara una "Scheda di Emergenza" con patologie, allergie e farmaci assunti da tenere sempre nel portafoglio dell\'anziano.',
+                'Segna in un calendario condiviso tutte le scadenze (rinnovo documenti, visite, bollo auto, scadenze bonus).',
+                'Crea un elenco dei contatti utili (medico, farmacia, numeri emergenza) da appendere in casa.'
+            ],
+            dontDo: [
+                'Non tenere solo copie digitali: alcuni uffici richiedono ancora gli originali (specialmente i verbali cartacei vecchi).',
+                'Non condividere password o documenti sensibili su gruppi WhatsApp non sicuri.',
+                'Non buttare via documenti senza aver controllato i tempi di prescrizione.'
+            ],
+            commonErrors: [
+                'Dimenticare dove si è messo l\'originale del verbale di invalidità (fondamentale per ogni pratica).',
+                'Non aggiornare la lista dei farmaci dopo un cambio di terapia.',
+                'Tenere i documenti in luoghi umidi o poco accessibili.'
+            ],
+            askHelpWhen: [
+                'Se la mole di documenti diventa ingestibile.',
+                'Se devi ricostruire la storia contributiva per la pensione.'
+            ],
+            whoCanHelp: [
+                'Associazioni di caregiver',
+                'Servizi di assistenza domiciliare',
+                'Patronati (per la parte previdenziale)'
+            ],
+            whereToDo: 'A casa, in un angolo dedicato all\'ufficio familiare.',
+            timeToComplete: '2-3 ore per l\'impostazione iniziale.',
+            practicalDisclaimer: 'Un archivio ordinato riduce drasticamente lo stress del caregiver nei momenti critici.',
+            sources: [
+                {
+                    title: 'Guida per i Caregiver Familiari',
+                    organization: 'Ministero della Salute',
+                    url: 'https://www.salute.gov.it/',
+                    type: 'official',
+                    usedFor: 'Suggerimenti organizzativi.',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ],
+            checklist: [
+                'Cartelle per argomenti create',
+                'Scheda emergenza compilata',
+                'Verbali invalidità digitalizzati',
+                'Calendario scadenze attivo',
+                'Numeri utili appesi in cucina'
+            ],
+            relatedGlossaryTerms: ['Caregiver', 'Digitalizzazione', 'Scheda di emergenza']
+        },
+        {
+            id: 'servizi-sociali-comunali-anziani',
+            slug: 'numeri-utili-e-servizi-sociali-anziani',
+            title: 'Numeri utili e servizi sociali comunali',
+            mainEntity: 'Comune',
+            category: 'anziani',
+            audience: ['caregiver', 'anziani'],
+            level: 'base',
+            estimatedMinutes: 5,
+            summary: 'Quali aiuti puoi chiedere al tuo Comune e come contattare gli assistenti sociali.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            synthesis: 'I Servizi Sociali comunali offrono supporto concreto alle persone anziane: assistenza domiciliare (SAD), consegna pasti, trasporto sociale e telesoccorso. L\'accesso avviene solitamente tramite colloquio con l\'assistente sociale di zona.',
+            prerequisites: ['Residenza nel Comune', 'ISEE ordinario (spesso richiesto per le tariffe)'],
+            whenToDo: 'Quando l\'anziano vive solo e ha bisogno di aiuto per le pulizie, i pasti o il trasporto per visite mediche.',
+            doNow: [
+                'Cerca sul sito del tuo Comune la sezione "Servizi Sociali" o "Politiche Sociali".',
+                'Individua il numero del PUA (Punto Unico di Accesso) o del Segretariato Sociale.',
+                'Prenota un colloquio conoscitivo con l\'assistente sociale di riferimento per il tuo quartiere.',
+                'Informati sui bandi per i "Contributi Caregiver" o "Bonus Caregiver" regionali.',
+                'Attiva il Telesoccorso (il pulsante da tenere al collo per chiamare aiuto in caso di caduta).'
+            ],
+            steps: [
+                'Cerca sul sito del tuo Comune la sezione "Servizi Sociali" o "Politiche Sociali".',
+                'Individua il numero del PUA (Punto Unico di Accesso) o del Segretariato Sociale.',
+                'Prenota un colloquio conoscitivo con l\'assistente sociale di riferimento per il tuo quartiere.',
+                'Informati sui bandi per i "Contributi Caregiver" o "Bonus Caregiver" regionali.',
+                'Attiva il Telesoccorso (il pulsante da tenere al collo per chiamare aiuto in caso di caduta).'
+            ],
+            dontDo: [
+                'Non vergognarti di chiedere aiuto: i servizi sociali sono un diritto e una risorsa della comunità.',
+                'Non aspettare l\'emergenza assoluta: le graduatorie per l\'assistenza domiciliare possono essere lunghe.'
+            ],
+            commonErrors: [
+                'Pensare che i servizi siano solo per chi è in povertà estrema (molti servizi sono aperti a tutti con tariffe legate all\'ISEE).',
+                'Non sapere che esiste il "Pronto Intervento Sociale" per le emergenze fuori orario ufficio.'
+            ],
+            askHelpWhen: [
+                'Se l\'anziano è a rischio isolamento sociale.',
+                'Se il caregiver è sull\'orlo del burnout e ha bisogno di un sollievo.'
+            ],
+            whoCanHelp: [
+                'Assistente Sociale del Comune',
+                'PUA (Punto Unico di Accesso) presso l\'ASL',
+                'Centri Anziani'
+            ],
+            whereToDo: 'Municipio o sportello sociale territoriale.',
+            timeToComplete: '15 minuti per la ricerca contatti, 1 ora per il colloquio.',
+            practicalDisclaimer: 'Ogni Comune ha un proprio regolamento e tipi di servizi differenti.',
+            sources: [
+                {
+                    title: 'Servizi sociali per anziani',
+                    organization: 'Ministero del Lavoro e delle Politiche Sociali',
+                    url: 'https://www.lavoro.gov.it/',
+                    type: 'official',
+                    usedFor: 'Quadro nazionale dei servizi sociali.',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ],
+            checklist: [
+                'Numero assistente sociale trovato',
+                'ISEE aggiornato pronto',
+                'Servizio SAD verificato',
+                'Telesoccorso informato',
+                'Mensa/Pasti a domicilio controllati'
+            ],
+            relatedGlossaryTerms: ['SAD (Servizio Assistenza Domiciliare)', 'PUA', 'Telesoccorso']
         }
     ]
 };

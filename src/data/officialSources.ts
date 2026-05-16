@@ -3,7 +3,7 @@ export interface OfficialSource {
   name: string;
   ente: string;
   url: string;
-  category: 'identita-digitale' | 'lavoro' | 'casa' | 'soldi' | 'sicurezza' | 'sanita' | 'scuola' | 'famiglia' | 'consumatori' | 'immigrazione' | 'mobilita' | 'privacy' | 'emergenze' | 'altro';
+  category: 'identita-digitale' | 'lavoro' | 'casa' | 'soldi' | 'sicurezza' | 'sanita' | 'scuola' | 'famiglia' | 'consumatori' | 'immigrazione' | 'mobilita' | 'privacy' | 'emergenze' | 'altro' | 'bonus' | 'universita' | 'disabilita' | 'casa-digitale';
   type: 'servizio ufficiale' | 'assistenza ufficiale' | 'ente istituzionale' | 'supporto tecnico';
 }
 
@@ -105,6 +105,38 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     category: "identita-digitale",
     type: "servizio ufficiale"
   },
+  adeHome: {
+    id: 'adeHome',
+    name: "Agenzia delle Entrate Home",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  ade730: {
+    id: 'ade730',
+    name: "730 Precompilato",
+    ente: "Agenzia delle Entrate",
+    url: "https://infoprecompilata.agenziaentrate.gov.it/",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  adeCassettoFiscale: {
+    id: 'adeCassettoFiscale',
+    name: "Cassetto Fiscale",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/web/guest/area-riservata/cassetto-fiscale",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  adePrenotazione: {
+    id: 'adePrenotazione',
+    name: "Prenotazione appuntamenti Agenzia Entrate",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/contatti/assistenza-fiscale/in-ufficio/prenotazione-appuntamenti",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
 
   // LAVORO / INPS
   inpsHome: {
@@ -113,6 +145,38 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     ente: "INPS",
     url: "https://www.inps.it/",
     category: "lavoro",
+    type: "servizio ufficiale"
+  },
+  inpsIsee: {
+    id: 'inpsIsee',
+    name: "ISEE Precompilato",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/dettaglio-scheda.schede-servizio-strumento.schede-servizi.50088.isee-precompilato.html",
+    category: "bonus",
+    type: "servizio ufficiale"
+  },
+  inpsAdi: {
+    id: 'inpsAdi',
+    name: "Assegno di Inclusione (ADI)",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/dettaglio-scheda.schede-servizio-strumento.schede-servizi.56942.assegno-di-inclusione-adi.html",
+    category: "bonus",
+    type: "servizio ufficiale"
+  },
+  inpsSfl: {
+    id: 'inpsSfl',
+    name: "Supporto per la Formazione e il Lavoro (SFL)",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/dettaglio-scheda.schede-servizio-strumento.schede-servizi.56846.supporto-per-la-formazione-e-il-lavoro-sfl.html",
+    category: "lavoro",
+    type: "servizio ufficiale"
+  },
+  inpsCartaAcquisti: {
+    id: 'inpsCartaAcquisti',
+    name: "Carta Acquisti",
+    ente: "INPS / Ministero dell'Economia",
+    url: "https://www.inps.it/it/it/dettaglio-scheda.schede-servizio-strumento.schede-servizi.49714.carta-acquisti.html",
+    category: "bonus",
     type: "servizio ufficiale"
   },
   naspiServizio: {

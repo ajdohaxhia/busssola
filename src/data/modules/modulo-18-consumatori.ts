@@ -2,6 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_18_consumatori: Module = {
     id: 'modulo-18-consumatori',
+    lastUpdated: '2026-05-16',
     title: 'Modulo 18: Diritti dei Consumatori',
     description: 'Conosci i tuoi diritti quando acquisti online o in negozio: resi, garanzie e rimborsi spiegati in modo semplice.',
     category: 'consumatori',
@@ -21,7 +22,7 @@ export const modulo_18_consumatori: Module = {
             summary: 'Come restituire un prodotto acquistato su internet e ottenere il rimborso.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-05-16',
             synthesis: 'Il reso online è un diritto garantito dal Codice del Consumo. Permette di restituire un bene acquistato a distanza senza dover fornire spiegazioni. Il venditore deve rimborsare il prezzo pagato, solitamente entro 14 giorni dalla comunicazione.',
             prerequisites: ['Acquisto effettuato online or fuori dai locali commerciali', 'Prodotto integro (per quanto possibile)'],
             whenToDo: 'Quando ricevi un prodotto che non ti piace o non risponde alle tue aspettative.',
@@ -100,20 +101,20 @@ export const modulo_18_consumatori: Module = {
             summary: 'Tutto quello che devi sapere sulla protezione obbligatoria di 24 mesi su ogni acquisto.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-05-16',
             synthesis: 'In Italia e in UE, ogni bene di consumo ha una garanzia legale di 2 anni. Il responsabile è il venditore, non il produttore. Copre i difetti di conformità esistenti al momento della consegna.',
             prerequisites: ['Scontrino, fattura o prova di acquisto', 'Bene acquistato da un venditore professionista'],
             whenToDo: 'Quando un prodotto smette di funzionare correttamente o mostra difetti non causati da te entro 2 anni.',
             doNow: [
                 'Recupera la prova d\'acquisto (scontrino o transazione bancaria).',
-                'Contatta il venditore (non il centro assistenza del produttore, se preferisci esercitare la legale).',
+                'Contatta the venditore (non il centro assistenza del produttore, se preferisci esercitare la legale).',
                 'Descrivi il difetto e richiedi la riparazione o la sostituzione gratuita.',
                 'Se la riparazione è impossibile o troppo costosa, richiedi una riduzione del prezzo o il rimborso.',
                 'Consegna il prodotto e fatti rilasciare una ricevuta di presa in carico.'
             ],
             steps: [
                 'Recupera la prova d\'acquisto (scontrino o transazione bancaria).',
-                'Contatta il venditore (non il centro assistenza del produttore, se preferisci esercitare la legale).',
+                'Contatta the venditore (non il centro assistenza del produttore, se preferisci esercitare la legale).',
                 'Descrivi il difetto e richiedi la riparazione o la sostituzione gratuita.',
                 'Se la riparazione è impossibile o troppo costosa, richiedi una riduzione del prezzo o il rimborso.',
                 'Consegna il prodotto e fatti rilasciare una ricevuta di presa in carico.'
@@ -147,7 +148,7 @@ export const modulo_18_consumatori: Module = {
                     url: 'https://www.agcm.it/consumatore/diritti-del-consumatore/garanzia-legale',
                     type: 'official',
                     usedFor: 'Definizione e obblighi del venditore.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-05-16'
                 },
                 {
                     title: 'Your Europe: Garanzie e resi',
@@ -155,7 +156,7 @@ export const modulo_18_consumatori: Module = {
                     url: 'https://europa.eu/youreurope/citizens/consumers/shopping/guarantees-returns/index_it.htm',
                     type: 'institutional',
                     usedFor: 'Quadro normativo europeo.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-05-16'
                 }
             ],
             checklist: [
@@ -166,6 +167,42 @@ export const modulo_18_consumatori: Module = {
                 'Ricevuta di consegna ottenuta'
             ],
             relatedGlossaryTerms: ['Difetto di conformità', 'Venditore', 'Onere della prova']
+        },
+        {
+            id: 'pacco-smarrito',
+            slug: 'pacco-smarrito-o-danneggiato-cosa-fare',
+            title: 'Pacco smarrito o danneggiato',
+            category: 'consumatori',
+            audience: ['cittadini'],
+            level: 'base',
+            estimatedMinutes: 5,
+            summary: 'Cosa fare se il tuo acquisto online non arriva o arriva rotto.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'Venditore / Corriere',
+            synthesis: 'Il venditore è responsabile della consegna fino a quando non ricevi il pacco.',
+            steps: [
+                'Controlla il tracking per vedere dove si trova il pacco',
+                'Se risulta consegnato ma non lo hai, contatta subito il venditore',
+                'Se arriva danneggiato, firma "con riserva" se possibile o fai foto subito',
+                'Invia un reclamo scritto al venditore chiedendo rispedizione o rimborso'
+            ],
+            checklist: [
+                'Tracking verificato',
+                'Foto del danno fatte',
+                'Reclamo inviato'
+            ],
+            sources: [
+                {
+                    title: 'E-commerce: i diritti in caso di mancata consegna',
+                    organization: 'Altroconsumo',
+                    url: 'https://www.altroconsumo.it/',
+                    type: 'nonprofit',
+                    usedFor: 'Consigli pratici',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
         },
         {
             id: 'prodotto-difettoso',
@@ -179,7 +216,7 @@ export const modulo_18_consumatori: Module = {
             summary: 'Passaggi pratici per gestire un oggetto che arriva rotto o non conforme.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-05-16',
             synthesis: 'Un prodotto è difettoso se non funziona come promesso o se presenta danni strutturali. Hai diritto al ripristino della conformità senza spese. Se il difetto si manifesta entro 1 anno, si presume esistesse già al momento dell\'acquisto.',
             prerequisites: ['Il prodotto non è conforme alla descrizione o all\'uso previsto'],
             whenToDo: 'Appena ti accorgi del malfunzionamento.',
@@ -226,7 +263,7 @@ export const modulo_18_consumatori: Module = {
                     url: 'https://ec.europa.eu/info/law/law-topic/consumer-protection-law_it',
                     type: 'institutional',
                     usedFor: 'Informazioni sulla sicurezza prodotti.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-05-16'
                 },
                 {
                     title: 'Guida pratica reclami',
@@ -234,7 +271,7 @@ export const modulo_18_consumatori: Module = {
                     url: 'https://www.consumatori.it/',
                     type: 'nonprofit',
                     usedFor: 'Modulistica reclami.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-05-16'
                 }
             ],
             checklist: [
@@ -245,6 +282,116 @@ export const modulo_18_consumatori: Module = {
                 'Scadenza 2 anni controllata'
             ],
             relatedGlossaryTerms: ['Messa in mora', 'Conformità', 'Vizio occulto']
+        },
+        {
+            id: 'chargeback-pagamento',
+            slug: 'chargeback-contestare-pagamento-carta',
+            title: 'Contestare pagamento carta / Chargeback',
+            category: 'consumatori',
+            audience: ['cittadini'],
+            level: 'intermedia',
+            estimatedMinutes: 10,
+            summary: 'Come chiedere alla banca di annullare un pagamento fatto con carta in caso di truffa o mancata consegna.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'Banca / Circuito Carta',
+            synthesis: 'Il chargeback è una procedura per stornare transazioni non autorizzate o irregolari.',
+            steps: [
+                'Contatta il venditore per provare a risolvere bonariamente',
+                'Se non risolvi, contatta la tua banca (entro 60-120 giorni)',
+                'Compila il modulo di contestazione transazione',
+                'Allega prove (mail, screenshot, ricevuta ordine non evaso)',
+                'Attendi l\'esito della procedura di storno'
+            ],
+            checklist: [
+                'Tentativo contatto venditore fatto',
+                'Modulo contestazione inviato',
+                'Prove allegate'
+            ],
+            sources: [
+                {
+                    title: 'Come contestare un addebito sulla carta',
+                    organization: 'Altroconsumo',
+                    url: 'https://www.altroconsumo.it/',
+                    type: 'nonprofit',
+                    usedFor: 'Guida chargeback',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'paypal-reclamo',
+            slug: 'come-fare-reclamo-paypal',
+            title: 'PayPal reclamo',
+            category: 'consumatori',
+            audience: ['cittadini'],
+            level: 'base',
+            estimatedMinutes: 5,
+            summary: 'Come usare la protezione acquisti di PayPal per riavere i tuoi soldi.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'PayPal',
+            synthesis: 'Protezione per prodotti non ricevuti o notevolmente diversi dalla descrizione.',
+            steps: [
+                'Accedi al tuo conto PayPal e vai nel Centro Risoluzioni',
+                'Apri una "Contestazione" per la transazione specifica',
+                'Comunica con il venditore tramite PayPal',
+                'Se non risolvi, converti la contestazione in "Reclamo" entro 20 giorni',
+                'Lascia che PayPal decida dopo aver esaminato le prove'
+            ],
+            checklist: [
+                'Contestazione aperta',
+                'Termini rispettati',
+                'Conversione in reclamo effettuata'
+            ],
+            sources: [
+                {
+                    title: 'Protezione acquisti PayPal',
+                    organization: 'PayPal',
+                    url: 'https://www.paypal.it/',
+                    type: 'platform',
+                    usedFor: 'Regole protezione',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'truffa-marketplace',
+            slug: 'vinted-subito-marketplace-evitare-truffe',
+            title: 'Vinted/Subito/Marketplace: truffe',
+            category: 'consumatori',
+            audience: ['cittadini'],
+            level: 'base',
+            estimatedMinutes: 8,
+            summary: 'Come riconoscere e difendersi dai raggiri sui siti di compravendita tra privati.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'Forze dell\'ordine / Piattaforme',
+            synthesis: 'Consigli per acquistare e vendere in sicurezza sull\'usato.',
+            steps: [
+                'Diffida da chi vuole spostare la conversazione fuori dalla piattaforma (es. su WhatsApp)',
+                'Non pagare mai con metodi non tracciati (es. ricarica Postepay, "amici e familiari" PayPal)',
+                'Controlla le recensioni del venditore e la data di creazione del profilo',
+                'Se vendi, non spedire prima di aver ricevuto conferma del pagamento nel tuo wallet ufficiale'
+            ],
+            checklist: [
+                'Pagamento sicuro usato',
+                'Conversione rimasta in app',
+                'Feedback controllati'
+            ],
+            sources: [
+                {
+                    title: 'Truffe sui siti di annunci',
+                    organization: 'Polizia Postale',
+                    url: 'https://www.commissariatodips.it/',
+                    type: 'official',
+                    usedFor: 'Prevenzione truffe',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
         },
         {
             id: 'recesso-14-giorni',
@@ -258,7 +405,7 @@ export const modulo_18_consumatori: Module = {
             summary: 'Il "diritto di ripensamento": come annullare un contratto senza penali.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-05-16',
             synthesis: 'Il diritto di recesso (o ripensamento) si applica ai contratti conclusi fuori dai locali commerciali (online, telefono, per strada). Hai 14 giorni di tempo dalla consegna del bene o dalla firma del contratto per annullare tutto.',
             prerequisites: ['Contratto firmato a distanza o fuori negozio'],
             whenToDo: 'Quando ti penti di un acquisto o di un cambio fornitore (luce, gas, telefonia) fatto via telefono o porta a porta.',
@@ -305,7 +452,7 @@ export const modulo_18_consumatori: Module = {
                     url: 'https://www.consumatori.it/recesso-ripensamento/',
                     type: 'nonprofit',
                     usedFor: 'Dettagli sul diritto di ripensamento.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-05-16'
                 },
                 {
                     title: 'Codice del Consumo',
@@ -313,7 +460,7 @@ export const modulo_18_consumatori: Module = {
                     url: 'https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2005-10-08&atto.codiceRedazionale=005G0232',
                     type: 'official',
                     usedFor: 'Testo di legge.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-05-16'
                 }
             ],
             checklist: [
@@ -324,6 +471,152 @@ export const modulo_18_consumatori: Module = {
                 'Ricevuta di spedizione conservata'
             ],
             relatedGlossaryTerms: ['Ripensamento', 'PEC', 'Locali commerciali']
+        },
+        {
+            id: 'reclamo-telefonico-agcom',
+            slug: 'reclamo-operatore-telefonico-conciliaweb-agcom',
+            title: 'Reclamo telefonia e Conciliaweb',
+            category: 'consumatori',
+            audience: ['cittadini'],
+            level: 'intermedia',
+            estimatedMinutes: 15,
+            summary: 'Come risolvere controversie con operatori telefonici tramite l\'Autorità Garante.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'AGCOM',
+            synthesis: 'Conciliaweb è la piattaforma obbligatoria per risolvere liti con gestori di telefonia e pay-tv.',
+            steps: [
+                'Invia un reclamo formale al tuo operatore (PEC o raccomandata)',
+                'Attendi 45 giorni per la risposta',
+                'Se la risposta è negativa o manca, accedi a Conciliaweb con SPID',
+                'Inserisci i dati della controversia e chiedi un indennizzo',
+                'Partecipa all\'udienza di conciliazione online'
+            ],
+            checklist: [
+                'Reclamo formale inviato',
+                'Accesso Conciliaweb effettuato',
+                'Prove (fatture, contratti) allegate'
+            ],
+            sources: [
+                {
+                    title: 'Conciliaweb',
+                    organization: 'AGCOM',
+                    url: 'https://conciliaweb.agcom.it/',
+                    type: 'official',
+                    usedFor: 'Piattaforma conciliazione',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'bollette-contestate',
+            slug: 'bollette-luce-gas-contestate-cosa-fare',
+            title: 'Bollette contestate',
+            category: 'consumatori',
+            audience: ['cittadini'],
+            level: 'base',
+            estimatedMinutes: 10,
+            summary: 'Cosa fare se ricevi una bolletta energetica troppo alta o con consumi stimati errati.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'ARERA / Sportello Consumatore',
+            synthesis: 'Procedura per contestare importi non dovuti e chiedere la rettifica.',
+            steps: [
+                'Verifica l\'autolettura e confrontala con i dati in bolletta',
+                'Invia un reclamo scritto al fornitore contestando l\'importo',
+                'Non sospendere il pagamento (paga almeno la quota non contestata se possibile)',
+                'Se il reclamo non basta, attiva la conciliazione presso lo Sportello per il Consumatore ARERA'
+            ],
+            checklist: [
+                'Autolettura fatta',
+                'Reclamo inviato',
+                'Richiesta rettifica inoltrata'
+            ],
+            sources: [
+                {
+                    title: 'Reclami e conciliazione',
+                    organization: 'ARERA',
+                    url: 'https://www.arera.it/',
+                    type: 'official',
+                    usedFor: 'Tutela consumatori energia',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'abbonamenti-non-richiesti',
+            slug: 'disattivare-abbonamenti-non-richiesti-smartphone',
+            title: 'Abbonamenti non richiesti',
+            category: 'consumatori',
+            audience: ['cittadini'],
+            level: 'base',
+            estimatedMinutes: 5,
+            summary: 'Come bloccare i servizi a sovrapprezzo (VAS) che prosciugano il credito dello smartphone.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'Operatore Telefonico / AGCOM',
+            synthesis: 'I servizi a sovrapprezzo possono essere bloccati definitivamente chiedendo il "blacklisting" al proprio operatore.',
+            steps: [
+                'Chiama il servizio clienti o usa l\'app del tuo operatore',
+                'Chiedi il blocco (barring) dei servizi VAS a sovrapprezzo',
+                'Se ti sono già stati scalati soldi, chiedi il rimborso per attivazione non richiesta',
+                'Il rimborso deve essere erogato entro pochi giorni'
+            ],
+            checklist: [
+                'Blocco attivato',
+                'Richiesta rimborso fatta',
+                'Credito verificato'
+            ],
+            sources: [
+                {
+                    title: 'Servizi a sovrapprezzo',
+                    organization: 'AGCOM',
+                    url: 'https://www.agcom.it/',
+                    type: 'official',
+                    usedFor: 'Regole blocco',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'salvare-prove-acquisto',
+            slug: 'come-salvare-prove-acquisto-scontrini',
+            title: 'Come salvare prove di acquisto',
+            category: 'consumatori',
+            audience: ['cittadini'],
+            level: 'base',
+            estimatedMinutes: 5,
+            summary: 'Metodi efficaci per non perdere gli scontrini e far valere la garanzia.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'Esperto Consumi',
+            synthesis: 'La prova d\'acquisto è l\'unico modo per far valere i propri diritti; ecco come conservarla.',
+            steps: [
+                'Fai una foto allo scontrino appena emesso (la carta termica sbiadisce col calore)',
+                'Salva le conferme d\'ordine email in una cartella specifica',
+                'Usa app per la gestione degli scontrini o caricali su un cloud',
+                'Conserva anche le transazioni bancarie come prova supplementare'
+            ],
+            checklist: [
+                'Foto fatte',
+                'Email archiviate',
+                'Cloud aggiornato'
+            ],
+            sources: [
+                {
+                    title: 'Garanzia legale: scontrino smarrito',
+                    organization: 'Altroconsumo',
+                    url: 'https://www.altroconsumo.it/',
+                    type: 'nonprofit',
+                    usedFor: 'Consigli conservazione',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
         }
     ]
 };
+

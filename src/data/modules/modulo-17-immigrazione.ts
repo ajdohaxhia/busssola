@@ -2,6 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_17_immigrazione: Module = {
     id: 'modulo-17-immigrazione',
+    lastUpdated: '2026-05-16',
     title: 'Modulo 17: Immigrazione e Soggiorno',
     description: 'Guida pratica per orientarsi tra permessi di soggiorno, rinnovi e documenti essenziali per cittadini stranieri in Italia.',
     category: 'immigrazione',
@@ -21,7 +22,7 @@ export const modulo_17_immigrazione: Module = {
             summary: 'Cos\'è il permesso di soggiorno, a chi serve e quali sono i tipi principali per risiedere regolarmente in Italia.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-05-16',
             synthesis: 'Il permesso di soggiorno è il documento che permette ai cittadini non UE di vivere in Italia. Esistono diverse tipologie (lavoro, famiglia, studio) con durate differenti. È fondamentale richiederlo entro 8 giorni dall\'ingresso in Italia.',
             prerequisites: ['Visto d\'ingresso (se richiesto)', 'Passaporto in corso di validità'],
             whenToDo: 'Quando entri in Italia con un visto di lunga durata o quando devi regolarizzare la tua posizione.',
@@ -100,7 +101,7 @@ export const modulo_17_immigrazione: Module = {
             summary: 'Elenco dei documenti necessari per rinnovare il permesso di soggiorno prima della scadenza.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-05-16',
             synthesis: 'Per rinnovare il permesso servono prove della continuità dei requisiti (lavoro, reddito, alloggio). La domanda va presentata tra 60 e 90 giorni prima della scadenza, a seconda della durata del permesso attuale.',
             prerequisites: ['Permesso di soggiorno in scadenza', 'Documentazione reddituale (CUD, buste paga)'],
             whenToDo: 'Almeno 60 giorni prima della scadenza del permesso attuale.',
@@ -147,7 +148,7 @@ export const modulo_17_immigrazione: Module = {
                     url: 'https://www.poliziadistato.it/articolo/rinnovo-del-permesso-di-soggiorno',
                     type: 'official',
                     usedFor: 'Tempistiche e requisiti di rinnovo.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-05-16'
                 },
                 {
                     title: 'Linee guida rinnovo',
@@ -155,7 +156,7 @@ export const modulo_17_immigrazione: Module = {
                     url: 'https://www.patronato.acli.it/',
                     type: 'nonprofit',
                     usedFor: 'Dettaglio documenti necessari.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-05-16'
                 }
             ],
             checklist: [
@@ -179,7 +180,7 @@ export const modulo_17_immigrazione: Module = {
             summary: 'Guida alla compilazione dei moduli (Modello 1 e 2) contenuti nel kit giallo di Poste Italiane.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-05-16',
             synthesis: 'Il "kit giallo" è il pacchetto di moduli da compilare per la maggior parte delle richieste di soggiorno. Include il Modulo 1 (dati anagrafici) e il Modulo 2 (dati lavorativi). Va spedito tramite Sportello Amico di Poste Italiane.',
             prerequisites: ['Kit ritirato in posta', 'Penna nera', 'Codice Fiscale'],
             whenToDo: 'Ogni volta che devi richiedere o rinnovare un permesso tramite Poste.',
@@ -226,7 +227,7 @@ export const modulo_17_immigrazione: Module = {
                     url: 'https://www.poste.it/prodotti/permesso-di-soggiorno.html',
                     type: 'official',
                     usedFor: 'Specifiche tecniche di spedizione.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-05-16'
                 },
                 {
                     title: 'Guida al Kit',
@@ -234,7 +235,7 @@ export const modulo_17_immigrazione: Module = {
                     url: 'https://www.cinformi.it/',
                     type: 'nonprofit',
                     usedFor: 'Esempi di compilazione moduli.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-05-16'
                 }
             ],
             checklist: [
@@ -247,7 +248,7 @@ export const modulo_17_immigrazione: Module = {
             relatedGlossaryTerms: ['Sportello Amico', 'Ricevuta assicurata', 'Marca da bollo']
         },
         {
-            id: 'codice-fiscale-stranieri',
+            id: 'codice-fiscale-stranieri-immigrazione',
             slug: 'codice-fiscale-per-stranieri',
             title: 'Codice fiscale per stranieri',
             mainEntity: 'Ministero dell\'Interno',
@@ -258,7 +259,7 @@ export const modulo_17_immigrazione: Module = {
             summary: 'Come ottenere il codice fiscale, indispensabile per lavorare, affittare casa e aprire un conto corrente.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-05-16',
             synthesis: 'Il codice fiscale è un codice alfanumerico che identifica il cittadino nei rapporti con la Pubblica Amministrazione. Per gli stranieri viene rilasciato dall\'Agenzia delle Entrate o dallo Sportello Unico per l\'Immigrazione.',
             prerequisites: ['Passaporto o permesso di soggiorno', 'Visto d\'ingresso'],
             whenToDo: 'Subito dopo l\'arrivo in Italia, è prioritario per qualsiasi contratto.',
@@ -304,7 +305,7 @@ export const modulo_17_immigrazione: Module = {
                     url: 'https://www.agenziaentrate.gov.it/portale/web/guest/schede/istanze/richiesta-ts_cf/cf-cittadini-stranieri',
                     type: 'official',
                     usedFor: 'Modalità di richiesta e modulistica.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-05-16'
                 },
                 {
                     title: 'Attribuzione codice fiscale',
@@ -312,7 +313,7 @@ export const modulo_17_immigrazione: Module = {
                     url: 'https://www.esteri.it/',
                     type: 'official',
                     usedFor: 'Richiesta tramite consolati all\'estero.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-05-16'
                 }
             ],
             checklist: [
@@ -323,6 +324,226 @@ export const modulo_17_immigrazione: Module = {
                 'Visto d\'ingresso'
             ],
             relatedGlossaryTerms: ['Agenzia delle Entrate', 'Omocodia', 'Tessera Sanitaria']
+        },
+        {
+            id: 'residenza-stranieri',
+            slug: 'residenza-per-cittadini-stranieri',
+            title: 'Residenza per cittadini stranieri',
+            category: 'immigrazione',
+            audience: ['stranieri'],
+            level: 'base',
+            estimatedMinutes: 10,
+            summary: 'Come richiedere l\'iscrizione anagrafica al Comune per chi ha un permesso di soggiorno.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'Comune',
+            synthesis: 'La residenza è fondamentale per l\'accesso ai servizi sociali, sanitari e per la cittadinanza.',
+            steps: [
+                'Recati all\'Ufficio Anagrafe del Comune dove dimori',
+                'Presenta il passaporto e il permesso di soggiorno valido (o la ricevuta di rinnovo)',
+                'Dimostra il titolo di occupazione dell\'alloggio (contratto affitto o dichiarazione ospitalità)',
+                'Attendi l\'accertamento dei vigili urbani entro 45 giorni'
+            ],
+            checklist: [
+                'Permesso di soggiorno originale',
+                'Contratto di affitto',
+                'Modulo di richiesta compilato'
+            ],
+            sources: [
+                {
+                    title: 'Iscrizione anagrafica stranieri',
+                    organization: 'Ministero dell\'Interno',
+                    url: 'https://www.interno.gov.it/',
+                    type: 'official',
+                    usedFor: 'Normativa anagrafe',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'tessera-sanitaria-ssn',
+            slug: 'tessera-sanitaria-iscrizione-ssn-stranieri',
+            title: 'Tessera sanitaria / iscrizione SSN',
+            category: 'immigrazione',
+            audience: ['stranieri'],
+            level: 'base',
+            estimatedMinutes: 8,
+            summary: 'Come iscriversi al Servizio Sanitario Nazionale e ottenere il medico di base per cittadini stranieri.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'ASL / Ministero della Salute',
+            synthesis: 'L\'iscrizione può essere obbligatoria (per chi lavora) o volontaria.',
+            steps: [
+                'Recati allo sportello scelta e revoca della ASL territoriale',
+                'Presenta il permesso di soggiorno e il codice fiscale',
+                'Scegli il medico di medicina generale tra quelli disponibili',
+                'Ritira il certificato d\'iscrizione e attendi la tessera sanitaria plastificata'
+            ],
+            checklist: [
+                'Codice fiscale ottenuto',
+                'Permesso di soggiorno pronto',
+                'Certificato residenza o ospitalità'
+            ],
+            sources: [
+                {
+                    title: 'Assistenza sanitaria cittadini stranieri',
+                    organization: 'Ministero della Salute',
+                    url: 'https://www.salute.gov.it/',
+                    type: 'official',
+                    usedFor: 'Diritto alla salute',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'ricongiungimento-familiare',
+            slug: 'ricongiungimento-familiare-orientamento',
+            title: 'Ricongiungimento familiare orientamento',
+            category: 'immigrazione',
+            audience: ['stranieri'],
+            level: 'intermedia',
+            estimatedMinutes: 15,
+            summary: 'La procedura per portare in Italia i propri familiari (coniuge, figli, genitori).',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'Sportello Unico per l\'Immigrazione (Prefettura)',
+            synthesis: 'Richiede il Nulla Osta della Prefettura dimostrando reddito e alloggio idoneo.',
+            steps: [
+                'Verifica di avere i requisiti di reddito annuo (parametro assegno sociale)',
+                'Ottieni il certificato di idoneità alloggiativa dal Comune',
+                'Invia la domanda telematicamente allo Sportello Unico (Nulla Osta)',
+                'Una volta ottenuto il Nulla Osta, il familiare può chiedere il visto al consolato italiano all\'estero'
+            ],
+            checklist: [
+                'Reddito minimo verificato',
+                'Idoneità alloggiativa ottenuta',
+                'Documenti familiari tradotti e legalizzati'
+            ],
+            sources: [
+                {
+                    title: 'Ricongiungimento familiare',
+                    organization: 'Ministero dell\'Interno',
+                    url: 'https://www.interno.gov.it/',
+                    type: 'official',
+                    usedFor: 'Procedura Nulla Osta',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'permesso-ue-lungo-periodo',
+            slug: 'permesso-soggiorno-ue-lungo-periodo-ex-carta',
+            title: 'Permesso UE lungo periodo',
+            category: 'immigrazione',
+            audience: ['stranieri'],
+            level: 'intermedia',
+            estimatedMinutes: 10,
+            summary: 'Come ottenere il permesso di soggiorno a tempo indeterminato dopo 5 anni di residenza.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'Questura',
+            synthesis: 'Permesso che non scade, garantisce diritti quasi pari ai cittadini UE.',
+            prerequisites: ['Soggiorno regolare da almeno 5 anni', 'Reddito non inferiore all\'assegno sociale', 'Superamento test di lingua italiana (livello A2)'],
+            steps: [
+                'Prenota e supera il test di lingua italiana presso i centri abilitati',
+                'Raccogli i CUD/Unico degli ultimi anni',
+                'Presenta la domanda tramite kit postale specifico',
+                'Attendi la convocazione per il fotosegnalamento'
+            ],
+            checklist: [
+                '5 anni di residenza compiuti',
+                'Test A2 superato',
+                'Certificato casellario giudiziale'
+            ],
+            sources: [
+                {
+                    title: 'Permesso di soggiorno UE per soggiornanti di lungo periodo',
+                    organization: 'Polizia di Stato',
+                    url: 'https://www.poliziadistato.it/',
+                    type: 'official',
+                    usedFor: 'Requisiti e test lingua',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'conversione-permesso',
+            slug: 'conversione-permesso-soggiorno-orientamento',
+            title: 'Conversione permesso orientamento',
+            category: 'immigrazione',
+            audience: ['stranieri'],
+            level: 'intermedia',
+            estimatedMinutes: 10,
+            summary: 'Come cambiare il motivo del proprio soggiorno (es. da studio a lavoro).',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'Questura / Sportello Unico',
+            synthesis: 'Trasformazione del titolo di soggiorno in presenza di nuovi requisiti.',
+            steps: [
+                'Verifica se la conversione è soggetta a quote (Decreto Flussi) o fuori quota',
+                'Presenta domanda di conversione prima della scadenza del permesso attuale',
+                'Se da studio a lavoro, dimostra di avere un contratto di lavoro o partita IVA',
+                'Completa la procedura in Questura dopo il Nulla Osta'
+            ],
+            checklist: [
+                'Contratto di lavoro firmato',
+                'Permesso attuale valido',
+                'Domanda telematica inviata'
+            ],
+            sources: [
+                {
+                    title: 'Conversione del permesso di soggiorno',
+                    organization: 'Ministero dell\'Interno',
+                    url: 'https://www.interno.gov.it/',
+                    type: 'official',
+                    usedFor: 'Casi di conversione',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'cittadinanza-base',
+            slug: 'cittadinanza-italiana-orientamento-base',
+            title: 'Cittadinanza: orientamento base',
+            category: 'immigrazione',
+            audience: ['stranieri'],
+            level: 'avanzata',
+            estimatedMinutes: 20,
+            summary: 'Le vie principali per diventare cittadini italiani: per residenza o per matrimonio.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-05-16',
+            mainEntity: 'Ministero dell\'Interno (Prefettura)',
+            synthesis: 'Processo lungo e complesso che richiede fedina penale pulita, reddito e conoscenza della lingua.',
+            steps: [
+                'Verifica gli anni di residenza ininterrotta (10 anni per extracomunitari, 4 per comunitari)',
+                'Oppure verifica i termini se sposato con cittadino italiano (2 anni se residenti in Italia)',
+                'Ottieni il certificato di conoscenza della lingua italiana (livello B1)',
+                'Recupera i certificati penali dal paese d\'origine (legalizzati e tradotti)',
+                'Invia la domanda online sul portale del Ministero dell\'Interno'
+            ],
+            checklist: [
+                'Residenza ininterrotta verificata',
+                'Test lingua B1 superato',
+                'Certificati originali esteri pronti',
+                'Reddito ultimi 3 anni dimostrabile'
+            ],
+            sources: [
+                {
+                    title: 'Cittadinanza italiana',
+                    organization: 'Ministero dell\'Interno',
+                    url: 'https://www.interno.gov.it/it/temi/cittadinanza',
+                    type: 'official',
+                    usedFor: 'Requisiti e portale domande',
+                    lastCheckedAt: '2026-05-16'
+                }
+            ]
         }
     ]
 };
+

@@ -40,8 +40,14 @@ export default function LessonReaderClient({ currentModule, lessonIndex }: Lesso
         restDelta: 0.001
     })
 
+    const publishedLessons = currentModule.lessons.filter(l => l.status === 'published' && l.qualityGatePassed)
     const currentLesson = currentModule.lessons[lessonIndex] as Lesson
-    const isLastLesson = lessonIndex === currentModule.lessons.length - 1
+    
+    // Find the 1-based index in the published list
+    const publishedIndex = publishedLessons.findIndex(l => l.id === currentLesson.id) + 1
+    const totalPublished = publishedLessons.length
+
+    const isLastLesson = publishedIndex === totalPublished
 
     if (currentLesson.status !== 'published' || !currentLesson.qualityGatePassed) {
         return (
@@ -76,7 +82,9 @@ export default function LessonReaderClient({ currentModule, lessonIndex }: Lesso
             triggerConfetti()
             router.push(`/moduli/${currentModule.id}`)
         } else {
-            router.push(`/moduli/${currentModule.id}/lezione/${lessonIndex + 2}`)
+            const nextPublished = publishedLessons[publishedIndex]
+            const nextFullIndex = currentModule.lessons.findIndex(l => l.id === nextPublished.id)
+            router.push(`/moduli/${currentModule.id}/lezione/${nextFullIndex + 1}`)
         }
     }
 
@@ -122,7 +130,7 @@ export default function LessonReaderClient({ currentModule, lessonIndex }: Lesso
                            {currentModule.category?.replace('-', ' ')}
                         </Badge>
                         <Badge variant="muted" className="text-[10px] font-bold">
-                            Guida {lessonIndex + 1} di {currentModule.lessons.length}
+                            Guida {publishedIndex} di {totalPublished}
                         </Badge>
                     </div>
 
@@ -357,9 +365,13 @@ export default function LessonReaderClient({ currentModule, lessonIndex }: Lesso
                         <Button
                             variant="ghost"
                             onClick={() => {
-                                if (lessonIndex > 0) router.push(`/moduli/${currentModule.id}/lezione/${lessonIndex}`)
+                                if (publishedIndex > 1) {
+                                    const prevPublished = publishedLessons[publishedIndex - 2]
+                                    const prevFullIndex = currentModule.lessons.findIndex(l => l.id === prevPublished.id)
+                                    router.push(`/moduli/${currentModule.id}/lezione/${prevFullIndex + 1}`)
+                                }
                             }}
-                            disabled={lessonIndex === 0}
+                            disabled={publishedIndex === 1}
                             className="w-full sm:w-auto h-14 rounded-2xl font-black uppercase tracking-widest"
                         >
                             <ChevronLeft className="w-5 h-5 mr-2" /> Precedente

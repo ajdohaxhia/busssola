@@ -34,7 +34,7 @@ const LESSON_PLANS = [
         type: "Laboratorio"
     },
     {
-        title: "Account Sicuri",
+        title: "Password e 2FA",
         duration: "45 min",
         target: "Tutti i gradi",
         objectives: ["Creare password robuste", "Usare Password Manager", "Importanza delle Passkey"],
@@ -42,7 +42,7 @@ const LESSON_PLANS = [
         type: "Laboratorio"
     },
     {
-        title: "Social & Relazioni",
+        title: "Social e Relazioni",
         duration: "45 min",
         target: "Secondaria II Grado",
         objectives: ["Rischi del grooming", "Sextortion e tutele", "Sharenting e consenso"],
@@ -56,6 +56,38 @@ const LESSON_PLANS = [
         objectives: ["Diritti e doveri online", "Uso critico delle fonti", "Burocrazia digitale (SPID/CIE)"],
         moduleLink: "/moduli/modulo-09-documenti-identita",
         type: "Percorso Civico"
+    },
+    {
+        title: "Truffe Marketplace",
+        duration: "45 min",
+        target: "Secondaria II Grado",
+        objectives: ["Riconoscere truffe Vinted/Marketplace", "Pagamenti sicuri online", "Gestire il pacco smarrito"],
+        moduleLink: "/moduli/modulo-18-consumatori",
+        type: "Discussione"
+    },
+    {
+        title: "AI e Deepfake",
+        duration: "60 min",
+        target: "Secondaria II Grado",
+        objectives: ["Riconoscere immagini generate", "Rischi dei Deepfake intimi", "Uso etico dell'AI generativa"],
+        moduleLink: "/moduli/modulo-15-sicurezza-avanzata",
+        type: "Laboratorio Critico"
+    },
+    {
+        title: "Fonti e Fact-checking",
+        duration: "45 min",
+        target: "Secondaria I Grado",
+        objectives: ["Verificare una notizia online", "Riconoscere siti governativi ufficiali", "Evitare le echo-chambers"],
+        moduleLink: "/fonti",
+        type: "Discussione Guidata"
+    },
+    {
+        title: "Documenti SPID/CIE",
+        duration: "45 min",
+        target: "Classi terminali",
+        objectives: ["Cos'è l'identità digitale", "App IO e servizi pubblici", "Vantaggi della digitalizzazione"],
+        moduleLink: "/moduli/modulo-11-documenti-identita-avanzata",
+        type: "Laboratorio Civico"
     }
 ]
 

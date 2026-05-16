@@ -28,6 +28,10 @@ import { modulo_19_mobilita } from './modulo-19-mobilita';
 import { modulo_20_sanita_territoriale } from './modulo-20-sanita-territoriale';
 import { modulo_21_anziani_caregiver } from './modulo-21-anziani-caregiver';
 import { modulo_22_universita_giovani } from './modulo-22-universita-giovani';
+import { modulo_23_bonus_isee } from './modulo-23-bonus-isee';
+import { modulo_24_casa_digitale } from './modulo-24-casa-digitale';
+import { modulo_25_fisco_cittadini } from './modulo-25-fisco-cittadini';
+import { modulo_26_poste_pagamenti } from './modulo-26-poste-pagamenti';
 import { modulo_99_kit_checklist } from './modulo-99-kit-checklist';
 
 export const ALL_MODULES = [
@@ -61,6 +65,10 @@ export const ALL_MODULES = [
     modulo_20_sanita_territoriale,
     modulo_21_anziani_caregiver,
     modulo_22_universita_giovani,
+    modulo_23_bonus_isee,
+    modulo_24_casa_digitale,
+    modulo_25_fisco_cittadini,
+    modulo_26_poste_pagamenti,
     modulo_99_kit_checklist,
 ];
 
