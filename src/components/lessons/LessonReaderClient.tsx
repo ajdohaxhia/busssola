@@ -346,6 +346,11 @@ export default function LessonReaderClient({ currentModule, lessonIndex }: Lesso
                         </div>
                     </section>
 
+                    {/* Disclaimer Footer */}
+                    <Card className="p-8 border border-border bg-surface text-secondary/60 text-[10px] font-bold uppercase tracking-widest text-center">
+                        <p>Busssola non è un sito ufficiale della Pubblica Amministrazione. Questa guida ha scopo informativo. Verifica sempre le procedure sui portali ufficiali prima di intraprendere azioni legali, fiscali o amministrative.</p>
+                    </Card>
+
                     {/* Sources & Metadata */}
                     <footer className="pt-12 border-t border-border flex flex-col md:flex-row items-center justify-between gap-8 print:pt-4 text-left">
                         <div className="flex flex-wrap justify-center md:justify-start gap-3">
