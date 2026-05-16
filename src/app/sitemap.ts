@@ -1,10 +1,12 @@
 import type { MetadataRoute } from 'next'
 import { ALL_MODULES } from '@/data/modules/index'
 import { LEARNING_PATHS } from '@/data/paths'
+import { LIFE_HACKS } from '@/data/life-hacks'
+import { siteStats } from '@/config/siteStats'
 
 export const dynamic = 'force-static'
 
-const baseUrl = 'https://busssola.com'
+const baseUrl = 'https://busssola.it'
 
 const staticRoutes = [
     '',
@@ -26,7 +28,7 @@ const staticRoutes = [
     '/trasparenza',
 ]
 
-const lastModified = new Date()
+const lastModified = new Date(siteStats.lastContentUpdate)
 
 function entry(path: string, priority: number, changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency']) {
     return {
@@ -65,5 +67,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
         ...tips,
     ]
 }
-
-import { LIFE_HACKS } from '@/data/life-hacks'
