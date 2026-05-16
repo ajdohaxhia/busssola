@@ -4,7 +4,7 @@ import { LEARNING_PATHS } from '@/data/paths'
 import { siteStats } from '@/lib/stats'
 import type { Lesson, Module, LifeHack, CategoryID } from '@/types'
 
-export const SITE_URL = 'https://busssola.com'
+export const SITE_URL = 'https://busssola.it'
 export const SITE_NAME = 'Busssola'
 export const CREATOR_NAME = 'Adelajdo Haxhiaj'
 export const CREATOR_PATH = '/adelajdo-haxhiaj'
@@ -15,6 +15,7 @@ export const TOTAL_MODULES = siteStats.totalModules
 export const TOTAL_LESSONS = siteStats.totalLessons
 
 export const SITE_DESCRIPTION = `Busssola è l'hub pubblico di risorse civiche gratuite per orientarsi tra documenti, diritti e procedure in Italia: ${siteStats.totalLessons} guide pratiche su SPID, CIE, NASpI, bonus, sicurezza digitale e tutele del cittadino.`
+
 
 const baseKeywords = [
     'Busssola',
