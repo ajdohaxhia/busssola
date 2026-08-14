@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_10_lavoro_disoccupazione: Module = {
     id: 'modulo-10-lavoro-disoccupazione',
-    lastUpdated: '2026-05-14',
+    lastUpdated: '2026-08-14',
     title: 'Lavoro e Disoccupazione',
     description: 'Guida ai principali servizi digitali legati al mondo del lavoro, al sostegno al reddito e alla cessazione dei rapporti lavorativi.',
     category: 'lavoro',
@@ -712,6 +712,56 @@ export const modulo_10_lavoro_disoccupazione: Module = {
                     lastCheckedAt: '2026-05-16'
                 }
             ]
+        },
+        {
+            id: 'dis-coll-domanda',
+            slug: 'come-fare-domanda-dis-coll',
+            title: 'Come fare domanda DIS-COLL',
+            category: 'lavoro',
+            audience: ['lavoratori'],
+            level: 'base',
+            estimatedMinutes: 15,
+            mainEntity: 'INPS',
+            summary: 'La DIS-COLL è l’indennità di disoccupazione per collaboratori. Requisiti, termini e domanda sono sulla scheda INPS: non copiare le regole della NASpI.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-08-14',
+            steps: [
+                'Apri la scheda INPS della DIS-COLL e verifica di rientrare tra i destinatari (collaborazioni, non lavoro subordinato).',
+                'Non usare la domanda NASpI: è un servizio diverso.',
+                'Presenta la domanda telematica con SPID, CIE o CNS, oppure tramite patronato.',
+                'Comunica variazioni di reddito o nuovi rapporti secondo le istruzioni della scheda.',
+                'Controlla lo stato nel Fascicolo previdenziale.',
+            ],
+            commonErrors: ['Inviare una NASpI da collaboratore', 'Copiare i 68 giorni NASpI senza leggere la DIS-COLL'],
+            dontDo: ['Non inventare settimane di contribuzione: valgono solo quelle della scheda INPS'],
+            checklist: ['Scheda DIS-COLL letta', 'Domanda inviata sul servizio corretto', 'IBAN verificato'],
+            faqs: [
+                { q: 'È la NASpI dei co.co.co.?', a: 'È l’indennità per collaboratori, con requisiti propri. Leggi solo la scheda DIS-COLL.' },
+                { q: 'Posso chiedere entrambe?', a: 'Dipende dai rapporti cessati. L’INPS liquida secondo la prestazione spettante: non inviare doppie domande «per sicurezza» senza leggere le schede.' },
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'inpsDisColl',
+                    useWhen: 'Scheda e domanda DIS-COLL',
+                    beforeOpening: ['SPID, CIE o CNS'],
+                },
+                {
+                    sourceId: 'inpsFascicoloPrevidenziale',
+                    useWhen: 'Stato della pratica',
+                    beforeOpening: ['SPID, CIE o CNS'],
+                },
+            ],
+            sources: [
+                {
+                    title: 'DIS-COLL — indennità di disoccupazione per collaboratori',
+                    organization: 'INPS',
+                    url: 'https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.dis-coll-indennit-mensile-di-disoccupazione.html',
+                    type: 'official',
+                    usedFor: 'Destinatari e domanda',
+                    lastCheckedAt: '2026-08-14',
+                },
+            ],
         }
     ]
 };

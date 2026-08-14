@@ -28,7 +28,8 @@ export type CategoryID =
   | 'universita' 
   | 'anziani' 
   | 'disabilita' 
-  | 'casa-digitale';
+  | 'casa-digitale'
+  | 'giustizia';
 
 export interface OfficialLinkV2 {
   sourceId: string; // Reference to OFFICIAL_SOURCES

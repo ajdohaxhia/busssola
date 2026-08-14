@@ -12,7 +12,7 @@ import { SearchBox } from '@/components/ui/SearchBox'
 import { Button } from '@/components/ui/Button'
 import * as Icons from 'lucide-react'
 import { JsonLd } from '@/components/seo/JsonLd'
-import { breadcrumbStructuredData, absoluteUrl } from '@/lib/seo'
+import { breadcrumbStructuredData, absoluteUrl } from '@/lib/seo-core'
 
 type Term = {
     term: string
@@ -122,7 +122,7 @@ export default function GlossaryPage() {
     return (
         <Container size="lg" className="py-12 space-y-12">
             <JsonLd data={breadcrumbStructuredData([
-                { name: 'Glossario', path: '/glossario' }
+                { name: 'Glossario', path: '/glossario/' }
             ])} />
             <JsonLd data={{
                 '@context': 'https://schema.org',
@@ -133,7 +133,7 @@ export default function GlossaryPage() {
                     '@type': 'DefinedTerm',
                     'name': t.term,
                     'description': t.def,
-                    'url': absoluteUrl(`/glossario?query=${t.term}`)
+                    'url': absoluteUrl(`/glossario/?query=${encodeURIComponent(t.term)}`)
                 }))
             } as Record<string, unknown>} />
 

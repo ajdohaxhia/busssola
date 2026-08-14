@@ -1,11 +1,12 @@
 {
     "name": "Busssola",
     "short_name": "Busssola",
-    "description": "Educazione civica digitale gratuita creata da Adelajdo Haxhiaj",
+    "description": "Guide civiche gratuite per SPID, CIE, ISEE, 730, NASpI e le procedure pubbliche in Italia. Create da Adelajdo Haxhiaj.",
+    "lang": "it",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#FAFAFA",
-    "theme_color": "#2563EB",
+    "theme_color": "#0A0A0A",
     "orientation": "portrait-primary",
     "scope": "/",
     "icons": [

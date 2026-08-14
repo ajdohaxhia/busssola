@@ -18,7 +18,7 @@ import { PageHeader } from '@/components/ui/PageHeader'
 import { SearchBox } from '@/components/ui/SearchBox'
 import * as Icons from 'lucide-react'
 import { JsonLd } from '@/components/seo/JsonLd'
-import { breadcrumbStructuredData } from '@/lib/seo'
+import { breadcrumbStructuredData, absoluteUrl } from '@/lib/seo-core'
 
 const CATEGORIES: { id: CategoryID | 'all', label: string }[] = [
     { id: 'all', label: 'Tutte' },
@@ -30,7 +30,9 @@ const CATEGORIES: { id: CategoryID | 'all', label: string }[] = [
     { id: 'scuola', label: 'Scuola' },
     { id: 'famiglia', label: 'Famiglia' },
     { id: 'casa', label: 'Casa' },
-    { id: 'bonus', label: 'Bonus / ISEE' }
+    { id: 'bonus', label: 'Bonus / ISEE' },
+    { id: 'giustizia', label: 'Giustizia' },
+    { id: 'disabilita', label: 'Disabilità' },
 ]
 
 export default function ChecklistPage() {
@@ -73,7 +75,7 @@ export default function ChecklistPage() {
     return (
         <Container size="lg" className="py-12 space-y-12">
             <JsonLd data={breadcrumbStructuredData([
-                { name: 'Checklist', path: '/checklist' }
+                { name: 'Checklist', path: '/checklist/' }
             ])} />
             <JsonLd data={{
                 '@context': 'https://schema.org',
@@ -84,7 +86,7 @@ export default function ChecklistPage() {
                     '@type': 'ListItem',
                     'position': i + 1,
                     'name': c.title,
-                    'url': `https://busssola.com/moduli/${c.moduleId}`
+                    'url': absoluteUrl(`/moduli/${c.moduleId}/`)
                 }))
             } as Record<string, unknown>} />
 

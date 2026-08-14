@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { CIVIC_NEWS } from '@/data/news'
-import { newsMetadata } from '@/lib/seo'
+import { newsMetadata, newsStructuredData } from '@/lib/seo'
+import { JsonLd } from '@/components/seo/JsonLd'
 import NewsDetailClient from './NewsDetailClient'
 
 export function generateStaticParams() {
@@ -18,5 +19,10 @@ export default async function NewsPage({ params }: { params: Promise<{ slug: str
     const { slug } = await params
     const item = CIVIC_NEWS.find((n) => n.slug === slug)
     if (!item) notFound()
-    return <NewsDetailClient item={item} />
+    return (
+        <>
+            <JsonLd data={newsStructuredData(item) as Record<string, unknown>} />
+            <NewsDetailClient item={item} />
+        </>
+    )
 }

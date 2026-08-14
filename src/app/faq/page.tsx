@@ -6,8 +6,7 @@ import Link from 'next/link'
 import { PageHeader } from '@/components/ui/PageHeader'
 import { FaqAccordionClient } from '@/components/faq/FaqAccordionClient'
 import { JsonLd } from '@/components/seo/JsonLd'
-import { faqPageStructuredData, buildSeoMetadata } from '@/lib/seo'
-import type { Metadata } from 'next'
+import { faqPageStructuredData } from '@/lib/seo'
 
 const FAQS = [
   {
@@ -59,15 +58,6 @@ const FAQS = [
     a: "Perché non siamo professionisti abilitati (avvocati, commercialisti, medici). Busssola descrive le procedure burocratiche e tecniche standard. Per casi complessi che richiedono assistenza specifica, consigliamo sempre di rivolgersi agli enti competenti, a un professionista o a un patronato."
   }
 ]
-
-export function generateMetadata(): Metadata {
-  return buildSeoMetadata({
-    title: 'Domande Frequenti su Busssola',
-    description: 'Risposte alle domande più comuni su Busssola: è gratuita? è ufficiale? come funzionano i progressi? Scopri tutto sulla piattaforma civica.',
-    path: '/faq/',
-    keywords: ['FAQ Busssola', 'domande frequenti', 'guida gratuita', 'privacy piattaforma'],
-  })
-}
 
 export default function FAQPage() {
   const faqStructuredData = faqPageStructuredData(FAQS)

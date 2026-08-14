@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_18_consumatori: Module = {
     id: 'modulo-18-consumatori',
-    lastUpdated: '2026-05-16',
+    lastUpdated: '2026-08-14',
     title: 'Modulo 18: Diritti dei Consumatori',
     description: 'Conosci i tuoi diritti quando acquisti online o in negozio: resi, garanzie e rimborsi spiegati in modo semplice.',
     category: 'consumatori',
@@ -616,6 +616,99 @@ export const modulo_18_consumatori: Module = {
                     lastCheckedAt: '2026-05-16'
                 }
             ]
+        },
+        {
+            id: 'switching-fornitore-arera',
+            slug: 'come-cambiare-fornitore-luce-o-gas-arera',
+            title: 'Come cambiare fornitore di luce o gas',
+            category: 'consumatori',
+            audience: ['cittadini'],
+            level: 'base',
+            estimatedMinutes: 12,
+            mainEntity: 'ARERA',
+            summary: 'Si stipula il nuovo contratto: il venditore entrante attiva lo switching e recede dal vecchio. Per i domestici ARERA indica che il cambio non ha costi di disdetta, salvi bollo e oneri di legge.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-08-14',
+            steps: [
+                'Apri le pagine ARERA «single digital gateway» elettricità e gas: spiegano voltura e cambio fornitore.',
+                'Confronta le offerte; quando scegli, firmi solo il nuovo contratto. Il nuovo venditore gestisce recesso e switching.',
+                'Non disdire da solo il vecchio contratto se stai solo cambiando venditore: lo fa il nuovo, secondo ARERA.',
+                'Se ti trasferisci e l’utenza è già attiva, chiedi una voltura (eventualmente con cambio fornitore contestuale, dove previsto).',
+                'In caso di problemi: reclamo scritto al venditore, poi Servizio Conciliazione ARERA.',
+            ],
+            commonErrors: ['Disdire il vecchio contratto e restare senza fornitura', 'Confondere voltura e switching'],
+            dontDo: ['Non firmare a un venditore porta a porta senza leggere le condizioni ARERA e il contratto'],
+            checklist: ['POD/PDR a portata di mano', 'Nuovo contratto conservato', 'Niente doppia disdetta'],
+            faqs: [
+                { q: 'Il cambio è a pagamento?', a: 'ARERA: per i clienti del servizio elettrico/gas il cambio fornitore non ha costi, salvi quelli legati alla stipula (es. bollo se dovuto). Verifica la pagina aggiornata.' },
+                { q: 'Perdo il bonus sociale?', a: 'I bonus economici sono automatici con ISEE, non si «domandano» al venditore. Dopo uno switching resta la DSU: vedi ARERA bonus.' },
+            ],
+            officialLinksV2: [
+                { sourceId: 'areraSwitchingElettricita', useWhen: 'Cambio fornitore e voltura luce', beforeOpening: [] },
+                { sourceId: 'areraSwitchingGas', useWhen: 'Cambio fornitore e voltura gas', beforeOpening: [] },
+                { sourceId: 'areraBonusCome', useWhen: 'Bonus sociale automatico con ISEE', beforeOpening: [] },
+            ],
+            sources: [
+                {
+                    title: 'ARERA — servizio elettrico, cambiare fornitore',
+                    organization: 'ARERA',
+                    url: 'https://www.arera.it/single-digital-gateway-elettricita',
+                    type: 'official',
+                    usedFor: 'Switching e voltura luce',
+                    lastCheckedAt: '2026-08-14',
+                },
+                {
+                    title: 'ARERA — servizio gas, cambiare fornitore',
+                    organization: 'ARERA',
+                    url: 'https://www.arera.it/single-digital-gateway-gas',
+                    type: 'official',
+                    usedFor: 'Switching e voltura gas',
+                    lastCheckedAt: '2026-08-14',
+                },
+            ],
+        },
+        {
+            id: 'reclamo-conciliazione-arera',
+            slug: 'reclamo-e-conciliazione-arera',
+            title: 'Reclamo e conciliazione ARERA',
+            category: 'consumatori',
+            audience: ['cittadini'],
+            level: 'intermedia',
+            estimatedMinutes: 12,
+            mainEntity: 'ARERA',
+            summary: 'Prima il reclamo al venditore. Poi il Servizio Conciliazione ARERA, gratuito, è il tentativo obbligatorio prima della causa per energia, gas, idrico e teleriscaldamento (rifiuti: disciplina diversa).',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-08-14',
+            steps: [
+                'Invio reclamo scritto al venditore (o al distributore solo per allacci/misura, secondo ARERA).',
+                'Attendi i termini indicati da ARERA (la FAQ conciliazione cita, tra l’altro, 40 giorni per l’energia; verifica la pagina per idrico e rifiuti).',
+                'Se non si risolve, attiva il Servizio Conciliazione ARERA (web o call conference con conciliatore).',
+                'Il tentativo è condizione per andare in giudizio nelle materie indicate dal TICO (delibera 209/2016/E/com), salvo eccezioni (es. rifiuti).',
+                'Conserva reclamo, risposte e verbale di conciliazione.',
+            ],
+            commonErrors: ['Saltare il reclamo e aprire subito la conciliazione', 'Usare il form reclami AdeR per una bolletta luce'],
+            dontDo: ['Non sospendere del tutto i pagamenti senza aver letto le tutele ARERA sulla morosità'],
+            checklist: ['Reclamo inviato e protocollato', 'Termini scaduti o risposta insoddisfacente', 'Domanda di conciliazione presentata'],
+            faqs: [
+                { q: 'Costa?', a: 'ARERA descrive il Servizio Conciliazione come gratuito per i clienti finali.' },
+                { q: 'Posso usare un organismo ADR?', a: 'Sì, per i consumatori domestici ARERA cita anche organismi ADR iscritti e Camere di commercio aderenti alla convenzione.' },
+            ],
+            officialLinksV2: [
+                { sourceId: 'areraConciliazione', useWhen: 'FAQ e accesso al Servizio Conciliazione', beforeOpening: [] },
+                { sourceId: 'areraSwitchingElettricita', useWhen: 'A chi fare reclamo (venditore vs distributore)', beforeOpening: [] },
+            ],
+            sources: [
+                {
+                    title: 'Servizio Conciliazione ARERA',
+                    organization: 'ARERA',
+                    url: 'https://www.arera.it/consumatori/conciliazione/servizio-conciliazione-domande-e-risposte',
+                    type: 'official',
+                    usedFor: 'Tentativo obbligatorio e tempi',
+                    lastCheckedAt: '2026-08-14',
+                },
+            ],
         }
     ]
 };

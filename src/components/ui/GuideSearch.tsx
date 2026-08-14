@@ -17,7 +17,7 @@ export function GuideSearch({ initialQuery = '', variant = 'hero' }: { initialQu
 
     return (
         <form onSubmit={onSubmit} className="relative">
-            <Search className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-muted" />
+            <Search className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-muted" aria-hidden="true" />
             <input
                 type="search"
                 value={q}

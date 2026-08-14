@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_13_casa_residenza: Module = {
     id: 'modulo-13-casa-residenza',
-    lastUpdated: '2026-05-16',
+    lastUpdated: '2026-08-14',
     title: 'Casa e Residenza',
     description: 'Gestione del contratto di affitto, utenze domestiche, agevolazioni fiscali e diritti abitativi.',
     category: 'casa',
@@ -770,6 +770,56 @@ export const modulo_13_casa_residenza: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ]
+        },
+        {
+            id: 'imu-e-visura-dopo-trasloco',
+            slug: 'imu-e-visura-catastale-dopo-trasloco',
+            title: 'IMU e visura dopo un trasloco o un atto',
+            category: 'casa',
+            audience: ['cittadini'],
+            level: 'base',
+            estimatedMinutes: 12,
+            mainEntity: 'Comune / Agenzia delle Entrate',
+            summary: 'Dopo compravendita, successione o cambio di abitazione principale verifica visura Ade, voltura e IMU sul Comune. Le volture utenze (luce/gas) non spostano l’IMU.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-08-14',
+            steps: [
+                'Scarica la visura catastale dei tuoi immobili in area riservata Ade (gratuita se sei titolare).',
+                'Se l’intestazione non è aggiornata dopo una successione, usa Voltura catastale Web (dal 12 gennaio 2026 non esiste più Voltura 2.0).',
+                'Apri il sito del Comune per aliquote IMU e scadenze dell’anno in corso; il quadro nazionale è sul MEF.',
+                'Le volture luce/gas si fanno col venditore (ARERA): sono un contratto, non il catasto.',
+            ],
+            commonErrors: ['Credere che il cambio residenza ANPR aggiorni da solo il catasto'],
+            dontDo: ['Non pagare l’IMU con l’aliquota di un altro Comune'],
+            checklist: ['Visura aggiornata', 'Aliquote comunali lette', 'Utenze e IMU trattate come adempimenti distinti'],
+            faqs: [
+                { q: 'La residenza toglie l’IMU?', a: 'L’abitazione principale ha regole proprie (categoria catastale e Comune). Verifica MEF e regolamento comunale, non l’ANPR da sola.' },
+                { q: 'Chi paga l’IMU in affitto?', a: 'Di regola il proprietario. Il contratto può regolare i rapporti interni, ma il tributo segue titolarità e legge.' },
+            ],
+            officialLinksV2: [
+                { sourceId: 'adeVisuraCatastale', useWhen: 'Visura dei propri immobili', beforeOpening: ['SPID, CIE o CNS'] },
+                { sourceId: 'mefImu', useWhen: 'Quadro nazionale IMU', beforeOpening: [] },
+                { sourceId: 'adeVolturaCatastale', useWhen: 'Voltura Web dopo successione o atto', beforeOpening: ['SPID, CIE o CNS'] },
+            ],
+            sources: [
+                {
+                    title: 'Visura catastale online',
+                    organization: 'Agenzia delle Entrate',
+                    url: 'https://www.agenziaentrate.gov.it/portale/schede/fabbricatiterreni/visura-catastale/visura-catastale-online',
+                    type: 'official',
+                    usedFor: 'Dati catastali',
+                    lastCheckedAt: '2026-08-14',
+                },
+                {
+                    title: 'IMU — fiscalità locale',
+                    organization: 'Ministero dell’Economia e delle Finanze',
+                    url: 'https://www.finanze.gov.it/it/Fiscalita-locale/IMU/',
+                    type: 'official',
+                    usedFor: 'Quadro IMU',
+                    lastCheckedAt: '2026-08-14',
+                },
+            ],
         }
     ]
 };

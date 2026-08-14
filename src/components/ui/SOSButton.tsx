@@ -14,7 +14,7 @@ export function SOSButton() {
                 onClick={() => setIsOpen(true)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-sos rounded-full flex items-center justify-center text-white print:hidden"
+                className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-sos text-sos-foreground rounded-full flex items-center justify-center ring-4 ring-background print:hidden"
                 aria-label="Apri emergenza: chiama 112 se sei in pericolo"
             >
                 <LifeBuoy size={28} />
@@ -28,23 +28,23 @@ export function SOSButton() {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setIsOpen(false)}
-                            className="absolute inset-0 bg-foreground/40 backdrop-blur-sm"
+                            className="absolute inset-0 bg-foreground/50"
                         />
 
                         <motion.div
                             initial={{ scale: 0.95, opacity: 0, y: 10 }}
                             animate={{ scale: 1, opacity: 1, y: 0 }}
                             exit={{ scale: 0.95, opacity: 0, y: 10 }}
-                            className="relative w-full max-w-lg bg-surface border border-border rounded-2xl overflow-hidden"
+                            className="relative w-full max-w-lg bg-surface border border-border rounded-xl overflow-hidden"
                             role="dialog"
                             aria-modal="true"
                             aria-labelledby="sos-dialog-title"
                         >
-                            <div className="bg-sos text-white p-6 relative">
+                            <div className="bg-sos text-sos-foreground p-6 relative">
                                 <button
                                     type="button"
                                     onClick={() => setIsOpen(false)}
-                                    className="absolute top-4 right-4 p-2 hover:bg-white/10 rounded-full"
+                                    className="absolute top-4 right-4 p-2 hover:bg-white/10 rounded-md"
                                     aria-label="Chiudi"
                                 >
                                     <X size={20} />
@@ -60,7 +60,7 @@ export function SOSButton() {
                                 </p>
                                 <a
                                     href="tel:112"
-                                    className="mt-5 flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-white text-sos font-semibold text-lg"
+                                    className="mt-5 flex items-center justify-center gap-2 w-full py-4 rounded-lg bg-white text-sos font-semibold text-lg"
                                 >
                                     <Phone size={20} /> Chiama 112
                                 </a>
@@ -68,14 +68,14 @@ export function SOSButton() {
 
                             <div className="p-6 space-y-3 bg-surface">
                                 <p className="text-xs font-semibold uppercase tracking-wide text-muted">Altri numeri, solo se non c&apos;è pericolo immediato</p>
-                                <a href="tel:1522" className="flex items-center justify-between p-4 border border-border rounded-xl hover:bg-surface-muted">
+                                <a href="tel:1522" className="flex items-center justify-between p-4 border border-border rounded-lg hover:bg-surface-muted">
                                     <span>
                                         <span className="block font-semibold text-foreground">1522</span>
                                         <span className="text-sm text-muted">Antiviolenza e stalking</span>
                                     </span>
                                     <Phone size={16} className="text-sos" />
                                 </a>
-                                <a href="tel:114" className="flex items-center justify-between p-4 border border-border rounded-xl hover:bg-surface-muted">
+                                <a href="tel:114" className="flex items-center justify-between p-4 border border-border rounded-lg hover:bg-surface-muted">
                                     <span>
                                         <span className="block font-semibold text-foreground">114</span>
                                         <span className="text-sm text-muted">Emergenza infanzia</span>
@@ -85,7 +85,7 @@ export function SOSButton() {
                                 <Link
                                     href="/sos"
                                     onClick={() => setIsOpen(false)}
-                                    className="flex items-center justify-center gap-2 w-full py-4 text-sm font-medium text-primary border border-border rounded-xl hover:bg-surface-hover"
+                                    className="flex items-center justify-center gap-2 w-full py-4 text-sm font-medium text-accent border border-border rounded-lg hover:bg-surface-hover"
                                 >
                                     Protocolli digitali e altre urgenze <ExternalLink size={14} />
                                 </Link>

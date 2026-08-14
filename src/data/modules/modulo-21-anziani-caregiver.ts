@@ -2,6 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_21_anziani_caregiver: Module = {
     id: 'modulo-21-anziani-caregiver',
+    lastUpdated: '2026-08-14',
     title: 'Modulo 21: Anziani e Caregiver',
     description: 'Strumenti e tutele per assistere i propri cari anziani: supporto digitale, deleghe e protezione dalle truffe.',
     category: 'anziani',
@@ -720,6 +721,47 @@ export const modulo_21_anziani_caregiver: Module = {
                 'Mensa/Pasti a domicilio controllati'
             ],
             relatedGlossaryTerms: ['SAD (Servizio Assistenza Domiciliare)', 'PUA', 'Telesoccorso']
+        },
+        {
+            id: 'cedolino-pensione-inps-anziani',
+            slug: 'come-leggere-il-cedolino-pensione-inps',
+            title: 'Come leggere il cedolino pensione INPS',
+            category: 'anziani',
+            audience: ['anziani', 'caregiver'],
+            level: 'base',
+            estimatedMinutes: 10,
+            mainEntity: 'INPS',
+            summary: 'Il cedolino mensile e i servizi «cambiare le coordinate di accredito» stanno nel Fascicolo previdenziale. Non comunicare l’IBAN a chi si finge INPS al telefono.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-08-14',
+            steps: [
+                'Accedi al Fascicolo previdenziale o all’app INPS Mobile con SPID/CIE, o usa una delega INPS.',
+                'Apri il cedolino della pensione e confronta l’importo accreditato con l’IBAN.',
+                'Per cambiare le coordinate usa solo il servizio INPS indicato nel Fascicolo, mai un link arrivato via SMS.',
+                'La CU annuale per il 730 si recupera da INPS o dal cassetto fiscale Ade.',
+            ],
+            commonErrors: ['Confondere cedolino e Certificazione Unica'],
+            dontDo: ['Non dettare PIN SPID a un «operatore INPS» che chiama sul cellulare'],
+            checklist: ['Cedolino aperto dal sito/app ufficiale', 'IBAN verificato'],
+            faqs: [
+                { q: 'Il caregiver può vederlo?', a: 'Sì, con delega INPS, non con le tue credenziali.' },
+                { q: 'Serve per il 730?', a: 'Per la dichiarazione serve la CU, non il solo cedolino. Calendario 730/2026 sul sito Ade.' },
+            ],
+            officialLinksV2: [
+                { sourceId: 'inpsFascicoloPrevidenziale', useWhen: 'Cedolino e accredito', beforeOpening: ['SPID, CIE o delega INPS'] },
+                { sourceId: 'delegaInps', useWhen: 'Se opera un familiare', beforeOpening: [] },
+            ],
+            sources: [
+                {
+                    title: 'Fascicolo previdenziale del cittadino',
+                    organization: 'INPS',
+                    url: 'https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.fascicolo-previdenziale-del-cittadino-50865.fascicolo-previdenziale-del-cittadino.html',
+                    type: 'official',
+                    usedFor: 'Cedolino e servizi del pensionato',
+                    lastCheckedAt: '2026-08-14',
+                },
+            ],
         }
     ]
 };

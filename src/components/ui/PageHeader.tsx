@@ -14,23 +14,23 @@ interface PageHeaderProps {
 export function PageHeader({ badge, title, description, icon: Icon, className, centered = false }: PageHeaderProps) {
     return (
         <header className={cn(
-            "space-y-6 pb-12",
+            "space-y-8 pb-16",
             centered ? "text-center max-w-3xl mx-auto" : "max-w-4xl text-left",
             className
         )}>
             {badge && (
                 <div className={cn(
-                    "inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[11px] font-semibold uppercase tracking-widest",
+                    "inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-accent-bg text-accent border border-accent-border text-[11px] font-semibold uppercase tracking-widest",
                     centered && "mx-auto"
                 )}>
                     {Icon && <Icon className="w-3 h-3" />} {badge}
                 </div>
             )}
-            <h1 className="text-4xl md:text-6xl font-display font-semibold tracking-tight text-foreground leading-[1.1]">
+            <h1 className="text-5xl md:text-7xl font-display font-semibold tracking-tight text-foreground leading-[1.05]">
                 {title}
             </h1>
             {description && (
-                <p className="text-xl md:text-2xl text-secondary leading-relaxed font-medium">
+                <p className="text-lg md:text-xl text-secondary leading-relaxed max-w-[42rem]">
                     {description}
                 </p>
             )}

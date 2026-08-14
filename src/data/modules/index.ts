@@ -32,6 +32,17 @@ import { modulo_23_bonus_isee } from './modulo-23-bonus-isee';
 import { modulo_24_casa_digitale } from './modulo-24-casa-digitale';
 import { modulo_25_fisco_cittadini } from './modulo-25-fisco-cittadini';
 import { modulo_26_poste_pagamenti } from './modulo-26-poste-pagamenti';
+import { modulo_27_pensioni_previdenza } from './modulo-27-pensioni-previdenza';
+import { modulo_28_cartelle_riscossione } from './modulo-28-cartelle-riscossione';
+import { modulo_29_partita_iva_forfettario } from './modulo-29-partita-iva-forfettario';
+import { modulo_30_catasto_imu_successioni } from './modulo-30-catasto-imu-successioni';
+import { modulo_31_disabilita_legge_104 } from './modulo-31-disabilita-legge-104';
+import { modulo_32_famiglia_avanzata } from './modulo-32-famiglia-avanzata';
+import { modulo_33_concorsi_pa } from './modulo-33-concorsi-pa';
+import { modulo_34_aire_esteri } from './modulo-34-aire-esteri';
+import { modulo_35_giustizia_cittadino } from './modulo-35-giustizia-cittadino';
+import { modulo_36_animali_affezione } from './modulo-36-animali-affezione';
+import { modulo_37_impresa_camerale } from './modulo-37-impresa-camerale';
 import { modulo_99_kit_checklist } from './modulo-99-kit-checklist';
 import { cambio_residenza } from './casa/cambio-residenza';
 import { cie_richiesta } from './documenti/cie-richiesta';
@@ -74,6 +85,17 @@ export const ALL_MODULES = [
     modulo_24_casa_digitale,
     modulo_25_fisco_cittadini,
     modulo_26_poste_pagamenti,
+    modulo_27_pensioni_previdenza,
+    modulo_28_cartelle_riscossione,
+    modulo_29_partita_iva_forfettario,
+    modulo_30_catasto_imu_successioni,
+    modulo_31_disabilita_legge_104,
+    modulo_32_famiglia_avanzata,
+    modulo_33_concorsi_pa,
+    modulo_34_aire_esteri,
+    modulo_35_giustizia_cittadino,
+    modulo_36_animali_affezione,
+    modulo_37_impresa_camerale,
     modulo_99_kit_checklist,
     cambio_residenza,
     cie_richiesta,

@@ -7,13 +7,13 @@ export function Footer() {
     const currentYear = new Date().getFullYear()
 
     return (
-        <footer className="bg-foreground text-background py-16 print:hidden">
+        <footer className="bg-foreground text-background py-16 print:hidden border-t-2 border-accent">
             <Container size="lg">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                     <div className="space-y-4">
-                        <Link href="/" className="flex items-center gap-2">
-                            <span className="w-9 h-9 flex items-center justify-center bg-primary text-white rounded-lg">
-                                <Compass className="w-5 h-5" />
+                        <Link href="/" className="flex items-center gap-2" aria-label="Busssola, pagina iniziale">
+                            <span className="w-9 h-9 flex items-center justify-center bg-background text-foreground rounded-md">
+                                <Compass className="w-5 h-5" aria-hidden="true" />
                             </span>
                             <span className="font-display text-xl font-semibold">Busssola</span>
                         </Link>
@@ -21,16 +21,16 @@ export function Footer() {
                             {siteStats.guidesCount} guide, {siteStats.templatesCount} modelli e {siteStats.newsCount} novità verificate. Se sei in pericolo, chiama il 112.
                         </p>
                         <div className="flex gap-3">
-                            <a href={siteStats.githubUrl} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="p-2 rounded-full border border-white/10 hover:bg-white/10">
+                            <a href={siteStats.githubUrl} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="p-2 rounded-md border border-white/10 hover:bg-white/10">
                                 <Github className="w-4 h-4" />
                             </a>
-                            <a href={`mailto:${siteStats.contactEmail}`} aria-label="Email" className="p-2 rounded-full border border-white/10 hover:bg-white/10">
+                            <a href={`mailto:${siteStats.contactEmail}`} aria-label="Email" className="p-2 rounded-md border border-white/10 hover:bg-white/10">
                                 <Mail className="w-4 h-4" />
                             </a>
                         </div>
                     </div>
                     <div className="space-y-3">
-                        <h4 className="text-xs font-semibold uppercase tracking-widest text-primary">Strumenti</h4>
+                        <h4 className="text-xs font-semibold uppercase tracking-widest text-accent-light">Strumenti</h4>
                         <nav className="grid gap-2 text-sm text-white/70">
                             <Link href="/moduli">Guide</Link>
                             <Link href="/modelli">Modelli</Link>
@@ -42,7 +42,7 @@ export function Footer() {
                         </nav>
                     </div>
                     <div className="space-y-3">
-                        <h4 className="text-xs font-semibold uppercase tracking-widest text-primary">Progetto</h4>
+                        <h4 className="text-xs font-semibold uppercase tracking-widest text-accent-light">Progetto</h4>
                         <nav className="grid gap-2 text-sm text-white/70">
                             <Link href="/about">Cos&apos;è Busssola</Link>
                             <Link href="/fonti">Fonti</Link>
@@ -52,7 +52,7 @@ export function Footer() {
                         </nav>
                     </div>
                     <div className="space-y-3">
-                        <h4 className="text-xs font-semibold uppercase tracking-widest text-primary">Supporto</h4>
+                        <h4 className="text-xs font-semibold uppercase tracking-widest text-accent-light">Supporto</h4>
                         <nav className="grid gap-2 text-sm text-white/70">
                             <Link href="/contact">Contatti</Link>
                             <Link href="/faq">FAQ</Link>

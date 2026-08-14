@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_20_sanita_territoriale: Module = {
     id: 'modulo-20-sanita-territoriale',
-    lastUpdated: '2026-05-16',
+    lastUpdated: '2026-08-14',
     title: 'Modulo 20: Sanità Territoriale',
     description: 'Guida ai servizi sanitari di base e specialistici vicini a te: dal medico di famiglia ai centri di salute mentale.',
     category: 'sanita',
@@ -584,6 +584,47 @@ export const modulo_20_sanita_territoriale: Module = {
                     lastCheckedAt: '2026-05-16'
                 }
             ]
+        },
+        {
+            id: 'scelta-pediatra-ssn',
+            slug: 'come-scegliere-o-cambiare-il-pediatra',
+            title: 'Come scegliere o cambiare il pediatra',
+            category: 'sanita',
+            audience: ['famiglie'],
+            level: 'base',
+            estimatedMinutes: 10,
+            mainEntity: 'Regione / ASL',
+            summary: 'Il pediatra di libera scelta si richiede all’ASL/Regione, con gli stessi canali della scelta del medico di base. Tessera sanitaria e residenza sanitaria devono essere in regola.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-08-14',
+            steps: [
+                'Verifica che il minore sia iscritto al SSN (tessera sanitaria).',
+                'Usa i servizi online della Regione/ASL per scelta e revoca del pediatra, oppure lo sportello.',
+                'Se cambi Comune, aggiorna l’assistenza sanitaria: la residenza ANPR e l’iscrizione ASL vanno allineate.',
+                'Per il Fascicolo sanitario del minore valgono le regole regionali e il consenso dei genitori.',
+            ],
+            commonErrors: ['Andare al Pronto Soccorso per una scelta del pediatra'],
+            dontDo: ['Non lasciare il bambino senza medico di riferimento dopo un trasloco'],
+            checklist: ['Tessera sanitaria minore', 'Scelta/revoca effettuata sul canale regionale'],
+            faqs: [
+                { q: 'Fino a che età vale il pediatra?', a: 'Di regola fino ai 14 anni, con possibili proroghe previste dalle ASL. Conferma sul sito della tua Regione.' },
+                { q: 'Serve l’ISEE?', a: 'Per la scelta no. L’ISEE può servire per esenzioni ticket o altre prestazioni.' },
+            ],
+            officialLinksV2: [
+                { sourceId: 'fseSalute', useWhen: 'FSE e rinvio ai servizi regionali', beforeOpening: ['SPID o CIE'] },
+                { sourceId: 'anprHome', useWhen: 'Residenza da allineare all’ASL', beforeOpening: [] },
+            ],
+            sources: [
+                {
+                    title: 'Fascicolo Sanitario Elettronico',
+                    organization: 'Ministero della Salute',
+                    url: 'https://www.salute.gov.it/portale/fascicoloSanitarioElettronico/homeFascicoloSanitarioElettronico.jsp',
+                    type: 'official',
+                    usedFor: 'Accesso ai servizi sanitari digitali',
+                    lastCheckedAt: '2026-08-14',
+                },
+            ],
         }
     ]
 };

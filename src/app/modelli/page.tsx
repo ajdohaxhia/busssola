@@ -19,6 +19,10 @@ const CATS: { id: CategoryID | 'all'; label: string }[] = [
     { id: 'emergenze', label: 'Urgenze' },
     { id: 'immigrazione', label: 'Immigrazione' },
     { id: 'sanita', label: 'Sanità' },
+    { id: 'consumatori', label: 'Energia' },
+    { id: 'famiglia', label: 'Famiglia' },
+    { id: 'disabilita', label: 'Disabilità' },
+    { id: 'giustizia', label: 'Giustizia' },
 ]
 
 export default function ModelliPage() {

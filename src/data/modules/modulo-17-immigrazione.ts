@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_17_immigrazione: Module = {
     id: 'modulo-17-immigrazione',
-    lastUpdated: '2026-05-16',
+    lastUpdated: '2026-08-14',
     title: 'Modulo 17: Immigrazione e Soggiorno',
     description: 'Guida pratica per orientarsi tra permessi di soggiorno, rinnovi e documenti essenziali per cittadini stranieri in Italia.',
     category: 'immigrazione',
@@ -543,6 +543,47 @@ export const modulo_17_immigrazione: Module = {
                     lastCheckedAt: '2026-05-16'
                 }
             ]
+        },
+        {
+            id: 'titoli-soggiorno-sito-interno',
+            slug: 'titoli-di-soggiorno-dove-verificarli-interno',
+            title: 'Titoli di soggiorno: dove verificarli',
+            category: 'immigrazione',
+            audience: ['stranieri', 'cittadini'],
+            level: 'base',
+            estimatedMinutes: 10,
+            mainEntity: 'Ministero dell’Interno',
+            summary: 'Tipologie, rinnovo e kit si verificano sulle pagine Interno e Questura, non sui gruppi social. Il portale istituzionale è il punto di partenza prima di Poste o appuntamento.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-08-14',
+            steps: [
+                'Apri la pagina del Ministero dell’Interno «Titoli di soggiorno».',
+                'Identifica il titolo che hai o che chiedi (lavoro, famiglia, studio, UE lungo periodo, ecc.).',
+                'Segui solo i canali indicati (kit Poste, Questura, portali): scadenze e documenti cambiano per tipologia.',
+                'Per cittadinanza usa la scheda Interno dedicata, che è un procedimento diverso dal permesso.',
+            ],
+            commonErrors: ['Usare un elenco documenti trovato su un forum per un titolo diverso'],
+            dontDo: ['Non pagare «agenzie» che tengono il passaporto originale senza ricevuta Questura/Poste'],
+            checklist: ['Pagina Interno aperta', 'Tipologia titolo identificata', 'Scadenza annotata'],
+            faqs: [
+                { q: 'Il kit Poste vale per tutti i permessi?', a: 'No. Alcuni titoli seguono altri canali. La pagina Interno e la Questura lo specificano.' },
+                { q: 'Posso viaggiare con la ricevuta?', a: 'Dipende dal titolo e dagli accordi. Verifica Questura/Interno, non un post.' },
+            ],
+            officialLinksV2: [
+                { sourceId: 'permessoSoggiorno', useWhen: 'Scheda titoli di soggiorno', beforeOpening: [] },
+                { sourceId: 'cittadinanzaInterno', useWhen: 'Se valuti la cittadinanza', beforeOpening: [] },
+            ],
+            sources: [
+                {
+                    title: 'Titoli di soggiorno',
+                    organization: 'Ministero dell’Interno',
+                    url: 'https://www.interno.gov.it/it/temi/immigrazione-e-asilo/titoli-soggiorno',
+                    type: 'official',
+                    usedFor: 'Quadro ufficiale dei titoli',
+                    lastCheckedAt: '2026-08-14',
+                },
+            ],
         }
     ]
 };

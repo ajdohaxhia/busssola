@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_23_bonus_isee: Module = {
     id: 'modulo-23-bonus-isee',
-    lastUpdated: '2026-05-16',
+    lastUpdated: '2026-08-14',
     title: 'Bonus, ISEE e Agevolazioni',
     description: 'Guida pratica per preparare l\'ISEE, richiedere bonus sociali, assegno unico e altre agevolazioni economiche per famiglie e cittadini in Italia.',
     category: 'bonus',
@@ -594,6 +594,57 @@ export const modulo_23_bonus_isee: Module = {
                     lastCheckedAt: '2026-05-16'
                 }
             ]
+        },
+        {
+            id: 'isee-corrente-quando-servire',
+            slug: 'isee-corrente-quando-farlo-e-come',
+            title: 'ISEE corrente: quando farlo',
+            category: 'bonus',
+            audience: ['cittadini', 'famiglie', 'lavoratori'],
+            level: 'intermedia',
+            estimatedMinutes: 12,
+            mainEntity: 'INPS / Ministero del Lavoro',
+            summary: 'L’ISEE corrente aggiorna l’indicatore se il reddito è cambiato in modo rilevante rispetto alla DSU ordinaria. Requisiti e durata si verificano sul Portale ISEE e sulle pagine del Ministero del Lavoro.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-08-14',
+            steps: [
+                'Completa prima una DSU ordinaria (meglio precompilata) sul Portale ISEE.',
+                'Apri le istruzioni ISEE sul sito del Ministero del Lavoro e la scheda INPS: l’ISEE corrente si usa solo nei casi previsti (variazioni di lavoro/reddito indicate nei modelli).',
+                'Non inventare la soglia di calo reddituale: è nei modelli DSU 2026. Se non la trovi, ferma e leggi le istruzioni ufficiali.',
+                'Presenta l’ISEE corrente dallo stesso canale della DSU. Conserva l’attestazione: ha una validità limitata, indicata sul modello.',
+                'Per AUU, ADI, nido e prestazioni familiari 2026 resta il nuovo ISEE familiare: verifica quale indicatore chiede l’ente erogatore.',
+            ],
+            commonErrors: ['Fare solo l’ISEE corrente senza DSU ordinaria', 'Usarlo per una prestazione che chiede un altro tipo di ISEE'],
+            dontDo: ['Non copiare da un CAF i requisiti di un anno precedente senza aprire i modelli 2026'],
+            checklist: ['DSU ordinaria presente', 'Istruzioni MLPS/INPS lette', 'Attestazione corrente scaricata'],
+            faqs: [
+                { q: 'Sostituisce l’ISEE ordinario per sempre?', a: 'No. Ha durata limitata. Poi si torna all’ordinario o se ne fa uno nuovo, secondo le istruzioni.' },
+                { q: 'Serve dopo un licenziamento?', a: 'Può servire se ricorrono le condizioni dei modelli. Leggi INPS/MLPS: non è automatico con la sola NASpI.' },
+            ],
+            officialLinksV2: [
+                { sourceId: 'inpsIsee', useWhen: 'Portale ISEE / DSU', beforeOpening: ['SPID o CIE'] },
+                { sourceId: 'lavoroIseePagina', useWhen: 'Scheda istituzionale ISEE', beforeOpening: [] },
+                { sourceId: 'lavoroIseeDsu2026', useWhen: 'Modelli DSU 2026', beforeOpening: [] },
+            ],
+            sources: [
+                {
+                    title: 'ISEE precompilato',
+                    organization: 'INPS',
+                    url: 'https://www.inps.it/it/it/dettaglio-scheda.schede-servizio-strumento.schede-servizi.50088.isee-precompilato.html',
+                    type: 'official',
+                    usedFor: 'Canale DSU e ISEE corrente',
+                    lastCheckedAt: '2026-08-14',
+                },
+                {
+                    title: 'ISEE — scheda istituzionale',
+                    organization: 'Ministero del Lavoro',
+                    url: 'https://lavoro.gov.it/strumenti-e-servizi/isee/pagine/default',
+                    type: 'official',
+                    usedFor: 'Quadro ISEE',
+                    lastCheckedAt: '2026-08-14',
+                },
+            ],
         }
     ]
 };

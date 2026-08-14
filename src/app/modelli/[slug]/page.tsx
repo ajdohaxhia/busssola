@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { CIVIC_TEMPLATES } from '@/data/templates'
-import { templateMetadata } from '@/lib/seo'
+import { templateMetadata, templateStructuredData } from '@/lib/seo'
+import { JsonLd } from '@/components/seo/JsonLd'
 import TemplateDetailClient from './TemplateDetailClient'
 
 export function generateStaticParams() {
@@ -18,5 +19,10 @@ export default async function TemplatePage({ params }: { params: Promise<{ slug:
     const { slug } = await params
     const tpl = CIVIC_TEMPLATES.find((t) => t.slug === slug)
     if (!tpl) notFound()
-    return <TemplateDetailClient tpl={tpl} />
+    return (
+        <>
+            <JsonLd data={templateStructuredData(tpl) as Record<string, unknown>} />
+            <TemplateDetailClient tpl={tpl} />
+        </>
+    )
 }

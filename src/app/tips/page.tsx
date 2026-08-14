@@ -25,7 +25,10 @@ const CATEGORIES: { id: CategoryID | 'all', label: string }[] = [
     { id: 'truffe', label: 'Truffe' },
     { id: 'scuola', label: 'Scuola' },
     { id: 'consumatori', label: 'Consumatori' },
-    { id: 'casa-digitale', label: 'Casa Digitale' }
+    { id: 'casa-digitale', label: 'Casa Digitale' },
+    { id: 'giustizia', label: 'Giustizia' },
+    { id: 'disabilita', label: 'Disabilità' },
+    { id: 'famiglia', label: 'Famiglia' },
 ]
 
 const BADGES = [

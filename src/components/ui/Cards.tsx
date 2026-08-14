@@ -18,24 +18,21 @@ export function IntentionCard({ title, description, icon: Icon, href, color }: I
     return (
         <Link href={href} className="group">
             <Card className={cn(
-                "p-6 h-full border border-border bg-surface transition-all duration-300 hover:shadow-xl hover:border-primary/20 rounded-[2rem] flex flex-col gap-4",
+                "p-6 h-full border border-border bg-surface transition-colors hover:border-foreground rounded-xl flex flex-col gap-4",
                 color && `hover:bg-${color}/5`
             )}>
-                <div className={cn(
-                    "w-14 h-14 rounded-2xl flex items-center justify-center transition-colors",
-                    "bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white"
-                )}>
-                    <Icon className="w-7 h-7" strokeWidth={2} />
+                <div className="w-11 h-11 rounded-lg flex items-center justify-center bg-foreground text-background">
+                    <Icon className="w-5 h-5" strokeWidth={2} />
                 </div>
                 <div className="space-y-2">
-                    <h3 className="text-xl font-display font-bold tracking-tight text-foreground group-hover:text-primary transition-colors">
+                    <h3 className="text-xl font-display font-semibold tracking-tight text-foreground">
                         {title}
                     </h3>
                     <p className="text-sm text-secondary leading-relaxed">
                         {description}
                     </p>
                 </div>
-                <div className="pt-2 flex items-center text-xs font-bold text-primary uppercase tracking-widest mt-auto">
+                <div className="pt-2 flex items-center text-xs font-semibold text-accent uppercase tracking-widest mt-auto">
                     Inizia <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </div>
             </Card>
@@ -51,9 +48,9 @@ interface SituationCardProps {
 export function SituationCard({ title, href }: SituationCardProps) {
     return (
         <Link href={href} className="group">
-            <div className="flex items-center justify-between p-5 rounded-2xl border border-border bg-surface hover:border-primary/40 hover:shadow-md transition-all group">
-                <span className="font-semibold text-foreground group-hover:text-primary transition-colors">{title}</span>
-                <ArrowRight className="w-4 h-4 text-secondary group-hover:text-primary transition-transform group-hover:translate-x-1" />
+            <div className="flex items-center justify-between p-5 rounded-xl border border-border bg-surface hover:border-foreground transition-colors">
+                <span className="font-semibold text-foreground">{title}</span>
+                <ArrowRight className="w-4 h-4 text-secondary group-hover:text-foreground transition-transform group-hover:translate-x-1" />
             </div>
         </Link>
     )

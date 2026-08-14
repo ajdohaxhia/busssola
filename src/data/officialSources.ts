@@ -3,7 +3,7 @@ export interface OfficialSource {
   name: string;
   ente: string;
   url: string;
-  category: 'identita-digitale' | 'lavoro' | 'casa' | 'soldi' | 'sicurezza' | 'sanita' | 'scuola' | 'famiglia' | 'consumatori' | 'immigrazione' | 'mobilita' | 'privacy' | 'emergenze' | 'altro' | 'bonus' | 'universita' | 'disabilita' | 'casa-digitale';
+  category: 'identita-digitale' | 'lavoro' | 'casa' | 'soldi' | 'sicurezza' | 'sanita' | 'scuola' | 'famiglia' | 'consumatori' | 'immigrazione' | 'mobilita' | 'privacy' | 'emergenze' | 'altro' | 'bonus' | 'universita' | 'disabilita' | 'casa-digitale' | 'giustizia';
   type: 'servizio ufficiale' | 'assistenza ufficiale' | 'ente istituzionale' | 'supporto tecnico';
 }
 
@@ -612,5 +612,543 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     url: "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.invalidita-civile.html",
     category: "disabilita",
     type: "servizio ufficiale"
+  },
+
+  inpsPensioneVecchiaia: {
+    id: 'inpsPensioneVecchiaia',
+    name: "Pensione di vecchiaia",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.pensione-di-vecchiaia.html",
+    category: "lavoro",
+    type: "servizio ufficiale"
+  },
+  inpsPensioneAnticipata: {
+    id: 'inpsPensioneAnticipata',
+    name: "Pensione anticipata",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.pensione-anticipata-50308.pensione-anticipata.html",
+    category: "lavoro",
+    type: "servizio ufficiale"
+  },
+  inpsRicostituzione: {
+    id: 'inpsRicostituzione',
+    name: "Ricostituzione della pensione",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.ricostituzione-della-pensione-50309.ricostituzione-della-pensione.html",
+    category: "lavoro",
+    type: "servizio ufficiale"
+  },
+  inpsRiscatti: {
+    id: 'inpsRiscatti',
+    name: "Ricongiunzioni e riscatti",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/previdenza/ricongiunzioni-e-riscatti.html",
+    category: "lavoro",
+    type: "servizio ufficiale"
+  },
+  inpsApeSocialeCs2026: {
+    id: 'inpsApeSocialeCs2026',
+    name: "APE sociale: proroga 2026 e scadenze",
+    ente: "INPS",
+    url: "https://www.inps.it/content/dam/inps-site/it/scorporati/comunicati-stampa/2026/01/Allegati/3984_CS_Ape_Sociale_proroga_termini.pdf",
+    category: "lavoro",
+    type: "ente istituzionale"
+  },
+  inpsApeSocialeMsg128: {
+    id: 'inpsApeSocialeMsg128',
+    name: "Messaggio INPS n. 128/2026 — APE sociale",
+    ente: "INPS",
+    url: "https://www.inps.it/content/dam/inps-site/it/scorporati/circolari-e-messaggi/2026/01/Circolare_15135/Allegati/16522_Messaggio-numero-128-del-14-01-2026.pdf",
+    category: "lavoro",
+    type: "ente istituzionale"
+  },
+  inpsEstrattoConto: {
+    id: 'inpsEstrattoConto',
+    name: "Consultazione estratto conto contributivo/previdenziale",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.consultazione-estratto-conto-contributivo-previdenziale-50119.consultazione-estratto-conto-contributivo-previdenziale.html",
+    category: "lavoro",
+    type: "servizio ufficiale"
+  },
+  inpsFascicoloPrevidenziale: {
+    id: 'inpsFascicoloPrevidenziale',
+    name: "Fascicolo previdenziale del cittadino",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.fascicolo-previdenziale-del-cittadino-50865.fascicolo-previdenziale-del-cittadino.html",
+    category: "lavoro",
+    type: "servizio ufficiale"
+  },
+  inpsCongedoParentale: {
+    id: 'inpsCongedoParentale',
+    name: "Indennità di congedo parentale per dipendenti",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.50583.indennit-di-congedo-parentale-per-lavoratrici-e-lavoratori-dipendenti.html",
+    category: "famiglia",
+    type: "servizio ufficiale"
+  },
+  inpsCongedoPaternita: {
+    id: 'inpsCongedoPaternita',
+    name: "Congedo di paternità obbligatorio",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.congedo-di-paternit-obbligatorio-58988.congedo-di-paternit-obbligatorio.html",
+    category: "famiglia",
+    type: "servizio ufficiale"
+  },
+  inpsCartaEuropeaDisabilita: {
+    id: 'inpsCartaEuropeaDisabilita',
+    name: "Carta europea della disabilità — Disability Card",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.carta-europea-della-disabilit---disability-card-58828.carta-europea-della-disabilit---disability-card.html",
+    category: "disabilita",
+    type: "servizio ufficiale"
+  },
+  inpsDisabilitaProgetti: {
+    id: 'inpsDisabilitaProgetti',
+    name: "INPS — Disabilità e Disability Card",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/inps-comunica/inps--inclusione-e-innovazione/i-progetti-per-i-cittadini/disabilit.html",
+    category: "disabilita",
+    type: "ente istituzionale"
+  },
+  aderHome: {
+    id: 'aderHome',
+    name: "Agenzia delle entrate-Riscossione",
+    ente: "Agenzia delle entrate-Riscossione",
+    url: "https://www.agenziaentrateriscossione.gov.it/",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  aderAnnullamento: {
+    id: 'aderAnnullamento',
+    name: "Annullamento del debito (sgravio e autotutela)",
+    ente: "Agenzia delle entrate-Riscossione",
+    url: "https://www.agenziaentrateriscossione.gov.it/it/cittadini/AnnullamentoDelDebito/",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  aderGuidaCartella: {
+    id: 'aderGuidaCartella',
+    name: "Guida alla cartella di pagamento",
+    ente: "Agenzia delle entrate-Riscossione",
+    url: "https://www.agenziaentrateriscossione.gov.it/it/la-guida-alla-cartella-di-pagamento/la-cartella-di-pagamento/le-informazioni-di-ader-seconda-pagina/",
+    category: "soldi",
+    type: "ente istituzionale"
+  },
+  adeRateizzazione: {
+    id: 'adeRateizzazione',
+    name: "Come chiedere la rateizzazione",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/come-chiedere-la-rateizzazione",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  adeSitoAder: {
+    id: 'adeSitoAder',
+    name: "Servizi sul sito di Agenzia delle entrate-Riscossione",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/il-sito-www-agenziaentrate-riscossione-gov-it",
+    category: "soldi",
+    type: "ente istituzionale"
+  },
+  adeSituazioneDebitoria: {
+    id: 'adeSituazioneDebitoria',
+    name: "Richiedere documenti o informazioni su pagamenti e procedure",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/richiedere-documenti-o-informazioni-su-pagamenti-e-procedure",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  adeAa9Piva: {
+    id: 'adeAa9Piva',
+    name: "Partita IVA persone fisiche (modello AA9/12)",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/schede/istanze/aa9_11-apertura-variazione-chiusura-pf/scheda-informativa-aa9_11",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  adeAprirePiva: {
+    id: 'adeAprirePiva',
+    name: "Come aprire una partita IVA",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/schede/istanze/aa9_11-apertura-variazione-chiusura-pf/quando-utilizzare",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  adeIvaIscrizione: {
+    id: 'adeIvaIscrizione',
+    name: "Iscrizione IVA — dichiarazione di inizio attività",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/iva-regole-generali-aliquote-esenzioni-pagamento/infogen-iva-regole-generali-aliquote-esenzioni-pagamento-enti-e-pa",
+    category: "soldi",
+    type: "ente istituzionale"
+  },
+  adeForfettario: {
+    id: 'adeForfettario',
+    name: "Regime forfetario — requisiti",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/schede/agevolazioni/regime-agevolato-forfettario/requisiti-nuovo-regime-forfettario-agevolato",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  adeF24Versamenti: {
+    id: 'adeF24Versamenti',
+    name: "F24 — come effettuare i versamenti",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/schede/pagamenti/f24/come-effettuare-versamenti-f24-imprese",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  adeVisuraCatastale: {
+    id: 'adeVisuraCatastale',
+    name: "Visura catastale online",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/schede/fabbricatiterreni/visura-catastale/visura-catastale-online",
+    category: "casa",
+    type: "servizio ufficiale"
+  },
+  adeConsultazioneImmobili: {
+    id: 'adeConsultazioneImmobili',
+    name: "Visure, planimetrie e ispezioni ipotecarie dei propri immobili",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/schede/fabbricatiterreni/consultazione-personale/consultazione-personale-online",
+    category: "casa",
+    type: "servizio ufficiale"
+  },
+  adeVolturaCatastale: {
+    id: 'adeVolturaCatastale',
+    name: "Voltura catastale — come e dove richiederla",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/schede/fabbricatiterreni/voltura-catastale/come-e-dove-richiedere-la-voltura",
+    category: "casa",
+    type: "servizio ufficiale"
+  },
+  adeSuccessioneCome: {
+    id: 'adeSuccessioneCome',
+    name: "Dichiarazione di successione — come e quando",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/schede/dichiarazioni/dichiarazione-di-successione/come-quando-dichsucc",
+    category: "casa",
+    type: "servizio ufficiale"
+  },
+  adeSuccessioneImposte: {
+    id: 'adeSuccessioneImposte',
+    name: "Dichiarazione di successione — come pagare le imposte",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/schede/dichiarazioni/dichiarazione-di-successione/imposte-dichsucc-cittadini",
+    category: "casa",
+    type: "servizio ufficiale"
+  },
+  inpaHome: {
+    id: 'inpaHome',
+    name: "Portale unico del reclutamento inPA",
+    ente: "Dipartimento della Funzione Pubblica",
+    url: "https://www.inpa.gov.it/",
+    category: "lavoro",
+    type: "servizio ufficiale"
+  },
+  giustiziaPatrocinio: {
+    id: 'giustiziaPatrocinio',
+    name: "Patrocinio a spese dello Stato nei giudizi civili e amministrativi",
+    ente: "Ministero della Giustizia",
+    url: "https://www.giustizia.it/giustizia/page/it/patrocinio_a_spese_dello_stato_nei_giudizi_civili_e_amministrativi",
+    category: "giustizia",
+    type: "ente istituzionale"
+  },
+  giustiziaMediazione: {
+    id: 'giustiziaMediazione',
+    name: "Organismi di mediazione — registro e iscrizione",
+    ente: "Ministero della Giustizia",
+    url: "https://www.giustizia.it/giustizia/it/mg_3_4_15.page",
+    category: "giustizia",
+    type: "ente istituzionale"
+  },
+  giustiziaMediazionePortale: {
+    id: 'giustiziaMediazionePortale',
+    name: "Portale mediazione civile",
+    ente: "Ministero della Giustizia",
+    url: "https://mediazione.giustizia.it/",
+    category: "giustizia",
+    type: "servizio ufficiale"
+  },
+  giustiziaHome: {
+    id: 'giustiziaHome',
+    name: "Ministero della Giustizia",
+    ente: "Ministero della Giustizia",
+    url: "https://www.giustizia.it/",
+    category: "giustizia",
+    type: "ente istituzionale"
+  },
+  esteriAire: {
+    id: 'esteriAire',
+    name: "Anagrafe Italiani residenti all’estero (AIRE)",
+    ente: "Ministero degli Affari Esteri e della Cooperazione Internazionale",
+    url: "https://www.esteri.it/it/servizi-opportunita/italiani-all-estero/aire_0/",
+    category: "identita-digitale",
+    type: "ente istituzionale"
+  },
+  esteriVoto: {
+    id: 'esteriVoto',
+    name: "Voto all’estero — elezioni politiche e referendum",
+    ente: "Ministero degli Affari Esteri e della Cooperazione Internazionale",
+    url: "https://www.esteri.it/it/servizi-opportunita/italiani-all-estero/votoestero/elezionipolitiche/",
+    category: "identita-digitale",
+    type: "ente istituzionale"
+  },
+  daitAire: {
+    id: 'daitAire',
+    name: "Iscrizione AIRE e diritto di voto",
+    ente: "Ministero dell’Interno — DAIT",
+    url: "https://dait.interno.gov.it/servizi-demografici/documentazione/iscrizione-cancellazione-ed-esercizio-del-diritto-di-voto-dei-cittadini-italiani-residenti-allestero",
+    category: "identita-digitale",
+    type: "ente istituzionale"
+  },
+  areraSwitchingElettricita: {
+    id: 'areraSwitchingElettricita',
+    name: "ARERA — cambiare fornitore di energia elettrica",
+    ente: "ARERA",
+    url: "https://www.arera.it/single-digital-gateway-elettricita",
+    category: "consumatori",
+    type: "ente istituzionale"
+  },
+  areraSwitchingGas: {
+    id: 'areraSwitchingGas',
+    name: "ARERA — cambiare fornitore di gas",
+    ente: "ARERA",
+    url: "https://www.arera.it/single-digital-gateway-gas",
+    category: "consumatori",
+    type: "ente istituzionale"
+  },
+  areraConciliazione: {
+    id: 'areraConciliazione',
+    name: "Servizio Conciliazione ARERA",
+    ente: "ARERA",
+    url: "https://www.arera.it/consumatori/conciliazione/servizio-conciliazione-domande-e-risposte",
+    category: "consumatori",
+    type: "servizio ufficiale"
+  },
+  saluteDat: {
+    id: 'saluteDat',
+    name: "Disposizioni anticipate di trattamento (DAT)",
+    ente: "Ministero della Salute",
+    url: "https://www.salute.gov.it/new/it/tema/disposizioni-anticipate-di-trattamento-dat/disposizioni-anticipate-di-trattamento/",
+    category: "sanita",
+    type: "ente istituzionale"
+  },
+  saluteDatFaq: {
+    id: 'saluteDatFaq',
+    name: "FAQ — disposizioni anticipate di trattamento",
+    ente: "Ministero della Salute",
+    url: "https://www.salute.gov.it/new/it/faq/faq-disposizioni-anticipate-di-trattamento/",
+    category: "sanita",
+    type: "ente istituzionale"
+  },
+  saluteDatBanca: {
+    id: 'saluteDatBanca',
+    name: "Banca dati nazionale delle DAT",
+    ente: "Ministero della Salute",
+    url: "https://www.salute.gov.it/new/it/tema/disposizioni-anticipate-di-trattamento-dat/banca-dati-delle-dat/",
+    category: "sanita",
+    type: "servizio ufficiale"
+  },
+  saluteAnimaliIR: {
+    id: 'saluteAnimaliIR',
+    name: "Sistema di identificazione operatori, stabilimenti e animali (I&R)",
+    ente: "Ministero della Salute",
+    url: "https://www.salute.gov.it/new/it/tema/prevenzione-e-controllo-malattie-degli-animali/sistema-di-identificazione-degli-operatori/",
+    category: "sanita",
+    type: "ente istituzionale"
+  },
+  registroImpreseVisura: {
+    id: 'registroImpreseVisura',
+    name: "Visura camerale ordinaria e storica",
+    ente: "InfoCamere / Registro Imprese",
+    url: "https://registroimprese.infocamere.it/visura-camerale-ordinaria-storica-e-certificato",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  istruzioneIscrizioni: {
+    id: 'istruzioneIscrizioni',
+    name: "Iscrizioni online scuola",
+    ente: "Ministero dell’Istruzione e del Merito",
+    url: "https://www.istruzione.it/iscrizionionline/",
+    category: "scuola",
+    type: "servizio ufficiale"
+  },
+  mefImu: {
+    id: 'mefImu',
+    name: "IMU — Imposta municipale propria",
+    ente: "Ministero dell’Economia e delle Finanze",
+    url: "https://www.finanze.gov.it/it/Fiscalita-locale/IMU/",
+    category: "casa",
+    type: "ente istituzionale"
+  },
+  inpsDisColl: {
+    id: 'inpsDisColl',
+    name: "DIS-COLL — indennità di disoccupazione per collaboratori",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.dis-coll-indennit-mensile-di-disoccupazione.html",
+    category: "lavoro",
+    type: "servizio ufficiale"
+  },
+
+  adeRottamazioneQuinquies: {
+    id: 'adeRottamazioneQuinquies',
+    name: "Definizione agevolata — Rottamazione-quinquies",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/aree-tematiche/definizione-agevolata-rottamazione",
+    category: "soldi",
+    type: "ente istituzionale"
+  },
+  aderRottamazioneQuinquies: {
+    id: 'aderRottamazioneQuinquies',
+    name: "Rottamazione-quinquies — informazioni e scadenze",
+    ente: "Agenzia delle entrate-Riscossione",
+    url: "https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/definizione-agevolata-rottamazione-quinquies/",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  adeQuandoRateizzare: {
+    id: 'adeQuandoRateizzare',
+    name: "Quando è possibile rateizzare cartelle e avvisi",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/quando-%C3%A8-possibile-rateizzare",
+    category: "soldi",
+    type: "ente istituzionale"
+  },
+  aderRateizzazione: {
+    id: 'aderRateizzazione',
+    name: "Rateizzazione delle cartelle",
+    ente: "Agenzia delle entrate-Riscossione",
+    url: "https://www.agenziaentrateriscossione.gov.it/it/cittadini/Rateizzazione/index.html",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  gazzettaLegge11_2026: {
+    id: 'gazzettaLegge11_2026',
+    name: "Legge 19 gennaio 2026, n. 11 — servizi per i cittadini all’estero",
+    ente: "Gazzetta Ufficiale",
+    url: "https://www.gazzettaufficiale.it/eli/id/2026/02/04/26G00025/sg",
+    category: "identita-digitale",
+    type: "ente istituzionale"
+  },
+  daitCieAireCirc54: {
+    id: 'daitCieAireCirc54',
+    name: "Circolare DAIT n. 54/2026 — CIE per iscritti AIRE e Agenda CIE",
+    ente: "Ministero dell’Interno — DAIT",
+    url: "https://dait.interno.gov.it/documenti/circ-dait-054-servdemo-29-05-2026.pdf",
+    category: "identita-digitale",
+    type: "ente istituzionale"
+  },
+  mimIscrizioni202627: {
+    id: 'mimIscrizioni202627',
+    name: "Iscrizioni alle prime classi a.s. 2026/2027",
+    ente: "Ministero dell’Istruzione e del Merito",
+    url: "https://www.mim.gov.it/it/web/guest/-/scuola-aperte-le-iscrizioni-alle-prime-classi-per-l-anno-scolastico-2026-2027",
+    category: "scuola",
+    type: "ente istituzionale"
+  },
+  unicaIscrizioni: {
+    id: 'unicaIscrizioni',
+    name: "UNICA — iscrizioni on line",
+    ente: "Ministero dell’Istruzione e del Merito",
+    url: "https://unica.istruzione.gov.it/portale/it/orientamento/iscrizioni",
+    category: "scuola",
+    type: "servizio ufficiale"
+  },
+  garantePixelCs2026: {
+    id: 'garantePixelCs2026',
+    name: "Comunicato: linee guida sui tracking pixel nelle email",
+    ente: "Garante per la protezione dei dati personali",
+    url: "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10241977",
+    category: "privacy",
+    type: "ente istituzionale"
+  },
+  garantePixelLineeGuida: {
+    id: 'garantePixelLineeGuida',
+    name: "Provvedimento 17 aprile 2026 — Linee guida tracking pixel",
+    ente: "Garante per la protezione dei dati personali",
+    url: "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10241943",
+    category: "privacy",
+    type: "ente istituzionale"
+  },
+  agidSpidConvenzioni2027: {
+    id: 'agidSpidConvenzioni2027',
+    name: "SPID: convenzioni con gli Identity Provider fino al 2027",
+    ente: "AgID",
+    url: "https://www.agid.gov.it/it/notizie/spid-rinnovate-le-convenzioni-con-gli-identity-provider-fino-al-2027",
+    category: "identita-digitale",
+    type: "ente istituzionale"
+  },
+  inpsBonusNido: {
+    id: 'inpsBonusNido',
+    name: "Bonus asilo nido e forme di supporto presso la propria abitazione",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.bonus-asilo-nido-e-forme-di-supporto-presso-la-propria-abitazione-51105.bonus-asilo-nido-e-forme-di-supporto-presso-la-propria-abitazione.html",
+    category: "famiglia",
+    type: "servizio ufficiale"
+  },
+  fsePortale: {
+    id: 'fsePortale',
+    name: "Portale nazionale del Fascicolo Sanitario Elettronico",
+    ente: "Ministero della Salute / Dipartimento per la Trasformazione Digitale",
+    url: "https://www.fascicolosanitario.gov.it/portale",
+    category: "sanita",
+    type: "servizio ufficiale"
+  },
+  fsePssNote2026: {
+    id: 'fsePssNote2026',
+    name: "Note tecniche sul Profilo Sanitario Sintetico nel FSE 2.0",
+    ente: "Fascicolo Sanitario Elettronico",
+    url: "https://www.fascicolosanitario.gov.it/portale/w/pubblicate-le-note-tecniche-per-la-gestione-del-profilo-sanitario-sintetico-nel-fascicolo-sanitario-elettronico-2.0",
+    category: "sanita",
+    type: "ente istituzionale"
+  },
+  gazzettaDlPa25: {
+    id: 'gazzettaDlPa25',
+    name: "Decreto-legge 14 marzo 2025, n. 25 — reclutamento PA",
+    ente: "Gazzetta Ufficiale",
+    url: "https://www.gazzettaufficiale.it/eli/id/2025/03/14/25G00033/sg",
+    category: "lavoro",
+    type: "ente istituzionale"
+  },
+  inpsDisabilityCs2026: {
+    id: 'inpsDisabilityCs2026',
+    name: "Comunicato INPS 23 gennaio 2026 — Disability Card",
+    ente: "INPS",
+    url: "https://www.inps.it/content/dam/inps-site/it/scorporati/comunicati-stampa/2026/01/Allegati/3994_Cs_disability_2301.pdf",
+    category: "disabilita",
+    type: "ente istituzionale"
+  },
+  inpsRiformaDisabilitaBrochure: {
+    id: 'inpsRiformaDisabilitaBrochure',
+    name: "INPS per la Disabilità — riforma e valutazione di base",
+    ente: "INPS",
+    url: "https://www.inps.it/content/dam/inps-site/pdf/schede-servizio/documents/Brochure_Riforma_Disabilit%C3%A0.pdf",
+    category: "disabilita",
+    type: "ente istituzionale"
+  },
+  inpsValutazioneBaseMsg1377: {
+    id: 'inpsValutazioneBaseMsg1377',
+    name: "Messaggio INPS n. 1377/2026 — province in sperimentazione",
+    ente: "INPS",
+    url: "https://www.inps.it/content/dam/inps-site/it/scorporati/circolari-e-messaggi/2026/04/Circolare_15247/Allegati/16739_Messaggio-numero-1377-del-23-04-2026.pdf",
+    category: "disabilita",
+    type: "ente istituzionale"
+  },
+  internoFlussiCirc2025: {
+    id: 'internoFlussiCirc2025',
+    name: "Circolare 16 ottobre 2025 — flussi d’ingresso 2026-2028",
+    ente: "Ministero dell’Interno",
+    url: "https://www.interno.gov.it/it/amministrazione-trasparente/disposizioni-generali/atti-generali/atti-amministrativi-generali/circolari/circolare-16102025-programmazione-dei-flussi-dingresso-dei-lavoratori-non-comunitari-nel-territorio-stato-triennio-2026-2028",
+    category: "immigrazione",
+    type: "ente istituzionale"
+  },
+  areraMaggiorTutelaQ32026: {
+    id: 'areraMaggiorTutelaQ32026',
+    name: "Maggior Tutela +4,6% nel III trimestre 2026 per i clienti vulnerabili",
+    ente: "ARERA",
+    url: "https://www.arera.it/comunicati-stampa/dettaglio/elettricita-maggior-tutela-46-nel-iii-trimestre-2026-per-i-clienti-vulnerabili",
+    category: "consumatori",
+    type: "ente istituzionale"
   }
 };

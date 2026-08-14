@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_25_fisco_cittadini: Module = {
     id: 'modulo-25-fisco-cittadini',
-    lastUpdated: '2026-05-16',
+    lastUpdated: '2026-08-14',
     title: 'Fisco e Cittadini',
     description: 'Guida ai servizi dell\'Agenzia delle Entrate, dichiarazione dei redditi e gestione delle scadenze fiscali.',
     category: 'soldi',
@@ -335,6 +335,55 @@ export const modulo_25_fisco_cittadini: Module = {
                     lastCheckedAt: '2026-05-16'
                 }
             ]
+        },
+        {
+            id: 'ravvedimento-operoso-orientamento',
+            slug: 'ravvedimento-operoso-orientamento-agenzia-entrate',
+            title: 'Ravvedimento operoso: orientamento',
+            category: 'soldi',
+            audience: ['cittadini'],
+            level: 'intermedia',
+            estimatedMinutes: 10,
+            mainEntity: 'Agenzia delle Entrate',
+            summary: 'Se hai omesso o versato in ritardo un tributo Ade, il ravvedimento consente di sanare con sanzioni ridotte. Importi e codici si calcolano solo con le istruzioni Ade, non a mano da un blog.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-08-14',
+            steps: [
+                'Cerca sul sito Ade la scheda «ravvedimento operoso» e le istruzioni F24 dell’anno.',
+                'Verifica che il tributo sia ancora ravvedibile (non già accertato nei modi che escludono il ravvedimento: leggi Ade).',
+                'Versa con F24 (telematico se hai P.IVA) imposta, interessi e sanzione ridotta secondo le misure Ade.',
+                'Conserva la ricevuta. Per IMU e tributi comunali il ravvedimento segue il Comune, non Ade.',
+            ],
+            commonErrors: ['Usare codici tributo sbagliati', 'Ravvedere un tributo comunale con le regole IRPEF'],
+            dontDo: ['Non pagare «sanzioni» a privati che si offrono di ravvedere per te senza mandato'],
+            checklist: ['Scheda Ade aperta', 'F24 inviato', 'Ricevuta salvata'],
+            faqs: [
+                { q: 'Quanto si risparmia?', a: 'Le percentuali dipendono dal ritardo e dalla norma vigente. Solo Ade le elenca. Busssola non pubblica una tabella non verificata per il 2026.' },
+                { q: 'Serve un CAF?', a: 'Non è obbligatorio. Per F24 con molti codici un intermediario riduce gli errori.' },
+            ],
+            officialLinksV2: [
+                { sourceId: 'adeHome', useWhen: 'Cerca ravvedimento operoso sul portale Ade', beforeOpening: [] },
+                { sourceId: 'adeF24Versamenti', useWhen: 'Versamento F24', beforeOpening: ['SPID o CIE se usi F24 web'] },
+            ],
+            sources: [
+                {
+                    title: 'Agenzia delle Entrate — home (schede pagamenti)',
+                    organization: 'Agenzia delle Entrate',
+                    url: 'https://www.agenziaentrate.gov.it/',
+                    type: 'official',
+                    usedFor: 'Ravvedimento e versamenti',
+                    lastCheckedAt: '2026-08-14',
+                },
+                {
+                    title: 'F24 — come effettuare i versamenti',
+                    organization: 'Agenzia delle Entrate',
+                    url: 'https://www.agenziaentrate.gov.it/portale/schede/pagamenti/f24/come-effettuare-versamenti-f24-imprese',
+                    type: 'official',
+                    usedFor: 'Canale di versamento',
+                    lastCheckedAt: '2026-08-14',
+                },
+            ],
         }
     ]
 };

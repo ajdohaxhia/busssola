@@ -6,16 +6,17 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-    "inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:pointer-events-none disabled:opacity-50",
+    "inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50",
     {
         variants: {
             variant: {
-                default: "bg-primary text-white hover:bg-primary-hover shadow-sm",
-                secondary: "bg-surface-hover text-foreground hover:bg-border border border-transparent shadow-sm",
-                outline: "border border-border bg-transparent hover:bg-surface-hover text-foreground shadow-sm",
+                default: "bg-foreground text-background hover:bg-primary-hover",
+                accent: "bg-accent text-accent-foreground hover:bg-accent-hover",
+                secondary: "bg-surface-hover text-foreground hover:bg-border border border-transparent",
+                outline: "border border-border bg-surface hover:bg-surface-hover text-foreground",
                 ghost: "hover:bg-surface-hover text-secondary hover:text-foreground",
-                link: "text-primary underline-offset-4 hover:underline",
-                destructive: "bg-sos text-white hover:bg-sos-hover shadow-sm",
+                link: "text-accent underline-offset-4 hover:underline",
+                destructive: "bg-sos text-sos-foreground hover:bg-sos-hover",
             },
             size: {
                 default: "h-11 px-6 py-2",
