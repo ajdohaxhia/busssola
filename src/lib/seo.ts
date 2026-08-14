@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { ALL_MODULES } from '@/data/modules/index'
 import { LEARNING_PATHS } from '@/data/paths'
 import { siteStats } from '@/lib/stats'
-import type { Lesson, Module, LifeHack, CategoryID } from '@/types'
+import type { Lesson, Module, LifeHack, CategoryID, CivicTemplate, NewsItem } from '@/types'
 
-export const SITE_URL = 'https://busssola.it'
+export const SITE_URL = 'https://busssola.com'
 export const SITE_NAME = 'Busssola'
 export const CREATOR_NAME = 'Adelajdo Haxhiaj'
 export const CREATOR_PATH = '/adelajdo-haxhiaj'
@@ -442,10 +442,10 @@ export function tipStructuredData(hack: LifeHack) {
 export function HUB_METADATA_BUILDER(key: string): SeoMetadataOptions {
     const map: Record<string, SeoMetadataOptions> = {
         'sos': {
-            title: 'SOS Emergenze Digitali: cosa fare subito',
-            description: 'Protocolli di primo soccorso per account rubati, ricatti (sextortion), truffe bancarie e cyberstalking. Reazioni immediate nei primi 10 minuti.',
+            title: 'SOS: in pericolo chiama 112. Poi i protocolli',
+            description: 'Se sei in pericolo fisico chiama subito il 112. Busssola non è un servizio di emergenza. Qui trovi protocolli per stalking, sextortion, furto account, truffe e altre urgenze, con fonti ufficiali.',
             path: '/sos/',
-            keywords: ['sos digitale', 'sextortion cosa fare', 'account rubato', 'truffa bancaria', 'ricatto foto'],
+            keywords: ['chiama 112', 'sos digitale', 'stalking 1522', 'sextortion', 'account rubato', 'truffa bancaria'],
         },
         'checklist': {
             title: 'Checklist Operative per procedure e sicurezza',
@@ -465,6 +465,18 @@ export function HUB_METADATA_BUILDER(key: string): SeoMetadataOptions {
             path: '/tips/',
             keywords: ['life hacks civici', 'trucchi burocrazia', 'risparmiare tempo pa', 'consigli digitali'],
         },
+        'modelli': {
+            title: 'Modelli e kit documentali per procedure italiane',
+            description: 'Pacchetti stampabili e verificabili per 730, ISEE, NASpI, SPID, CIE, residenza, permesso di soggiorno e altre pratiche. Non sono moduli ufficiali: sono liste di documenti e passi con fonti istituzionali.',
+            path: '/modelli/',
+            keywords: ['modello 730 documenti', 'kit ISEE DSU', 'checklist NASpI', 'documenti cambio residenza'],
+        },
+        'novita': {
+            title: 'Novità civiche 2026: scadenze e cambiamenti verificati',
+            description: 'Cosa è cambiato nelle procedure pubbliche italiane, con fonti INPS, Agenzia delle Entrate, Ministero del Lavoro e ARERA. Aggiornato al 14 agosto 2026.',
+            path: '/novita/',
+            keywords: ['novità ISEE 2026', '730 precompilato 2026 scadenze', 'NASpI 2026', 'Assegno Unico 30 giugno 2026'],
+        },
         'fonti': {
             title: 'Archivio Fonti Ufficiali e Istituzionali',
             description: 'Trasparenza totale: l\'elenco di tutti i portali governativi (.gov.it) e manuali tecnici utilizzati per validare le nostre guide.',
@@ -479,6 +491,26 @@ export function HUB_METADATA_BUILDER(key: string): SeoMetadataOptions {
         }
     }
     return map[key] || { title: SITE_NAME }
+}
+
+export function templateMetadata(tpl: CivicTemplate): Metadata {
+    return buildSeoMetadata({
+        title: `${tpl.title} | Modelli`,
+        description: tpl.summary,
+        path: `/modelli/${tpl.slug}/`,
+        type: 'article',
+        keywords: [tpl.title, tpl.shortTitle, tpl.officialEntity, tpl.category],
+    })
+}
+
+export function newsMetadata(item: NewsItem): Metadata {
+    return buildSeoMetadata({
+        title: `${item.title} | Novità`,
+        description: item.summary,
+        path: `/novita/${item.slug}/`,
+        type: 'article',
+        keywords: [item.title, 'novità 2026', item.whoIsAffected],
+    })
 }
 
 export function getModule(id: string) {

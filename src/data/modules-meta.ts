@@ -431,5 +431,65 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "category": "documenti",
     "lastUpdated": "2026-05-14",
     "featuredType": "none"
+  },
+  {
+    "id": "cambio-residenza",
+    "number": 0,
+    "title": "Cambio di Residenza",
+    "description": "Guida completa alla dichiarazione di cambio residenza online o allo sportello.",
+    "lessonCount": 1,
+    "difficulty": "base",
+    "icon": "Home",
+    "category": "casa",
+    "lastUpdated": "2026-05-16",
+    "featuredType": "none"
+  },
+  {
+    "id": "cie-richiesta",
+    "number": 0,
+    "title": "Carta d'Identità Elettronica (CIE)",
+    "description": "Guida completa alla richiesta, rinnovo e smarrimento della CIE.",
+    "lessonCount": 1,
+    "difficulty": "base",
+    "icon": "IdCard",
+    "category": "documenti",
+    "lastUpdated": "2026-05-16",
+    "featuredType": "none"
+  },
+  {
+    "id": "telefono-rubato",
+    "number": 0,
+    "title": "Emergenza: Telefono Rubato o Smarrito",
+    "description": "Cosa fare subito per bloccare tutto, proteggere i dati e tentare il recupero.",
+    "lessonCount": 1,
+    "difficulty": "base",
+    "icon": "ShieldAlert",
+    "category": "emergenze",
+    "lastUpdated": "2026-05-16",
+    "featuredType": "none"
+  },
+  {
+    "id": "busta-paga",
+    "number": 0,
+    "title": "Capire la Busta Paga",
+    "description": "Guida essenziale per leggere le voci principali della tua retribuzione.",
+    "lessonCount": 1,
+    "difficulty": "base",
+    "icon": "Receipt",
+    "category": "soldi",
+    "lastUpdated": "2026-05-16",
+    "featuredType": "none"
+  },
+  {
+    "id": "phishing-bancario",
+    "number": 0,
+    "title": "Difesa dal Phishing Bancario",
+    "description": "Come riconoscere gli SMS e le email false che chiedono dati bancari.",
+    "lessonCount": 1,
+    "difficulty": "base",
+    "icon": "AlertTriangle",
+    "category": "truffe",
+    "lastUpdated": "2026-05-16",
+    "featuredType": "none"
   }
 ];

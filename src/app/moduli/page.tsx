@@ -1,44 +1,66 @@
 'use client'
 
-import { MODULES_MAP } from '@/data/modules-meta'
-import { Container } from '@/components/ui/Container'
-import { Card } from '@/components/ui/Card'
+import { Suspense, useMemo } from 'react'
+import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import * as Icons from 'lucide-react'
-import { PageHeader } from '@/components/ui/PageHeader'
 import { Library } from 'lucide-react'
+import { MODULES_MAP } from '@/data/modules-meta'
+import { ALL_MODULES } from '@/data/modules/index'
+import { Card } from '@/components/ui/Card'
+import { PageHeader } from '@/components/ui/PageHeader'
+import { GuideSearch } from '@/components/ui/GuideSearch'
 
-export default function ModulesPage() {
+function Catalog() {
+    const params = useSearchParams()
+    const q = (params.get('q') || '').trim().toLowerCase()
+
+    const modules = useMemo(() => {
+        if (!q) return MODULES_MAP
+        return MODULES_MAP.filter((mod) => {
+            const full = ALL_MODULES.find((m) => m.id === mod.id)
+            const lessonText = full?.lessons.map((l) => `${l.title} ${l.summary} ${l.tags?.join(' ') ?? ''}`).join(' ') ?? ''
+            const hay = `${mod.title} ${mod.description} ${mod.tags?.join(' ') ?? ''} ${lessonText}`.toLowerCase()
+            return hay.includes(q)
+        })
+    }, [q])
+
     return (
-        <Container size="lg" className="py-12 space-y-12 min-h-screen text-left">
-            <PageHeader 
-                badge="Catalogo Guide"
+        <div className="space-y-8 py-8">
+            <PageHeader
+                badge="Catalogo"
                 icon={Library}
                 title="Tutte le guide pratiche"
-                description="Esplora l'hub delle risorse civiche."
+                description={q ? `${modules.length} risultati per “${q}”.` : 'Procedure italiane, passo dopo passo, con fonti ufficiali.'}
             />
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {MODULES_MAP.map((module) => {
+            <GuideSearch initialQuery={q} variant="bar" />
+            <div className="grid md:grid-cols-2 gap-4">
+                {modules.map((module) => {
                     const iconName = (module.icon || 'HelpCircle') as keyof typeof Icons
-                    const Icon = Icons[iconName] as React.ElementType || Icons.HelpCircle
+                    const Icon = (Icons[iconName] as React.ElementType) || Icons.HelpCircle
                     return (
-                        <Link key={module.id} href={`/moduli/${module.id}`} className="group">
-                            <Card className="h-full p-8 flex flex-col gap-6 border-2 border-border rounded-[2.5rem] hover:shadow-xl transition-all">
-                                <div className="w-14 h-14 rounded-2xl bg-surface-muted flex items-center justify-center text-primary">
-                                    <Icon className="w-7 h-7" />
-                                </div>
-                                <h2 className="text-2xl font-black text-foreground group-hover:text-primary">{module.title}</h2>
-                                <p className="text-secondary line-clamp-2">{module.description}</p>
-                                <div className="flex gap-4 text-xs font-black uppercase text-secondary/50 pt-4 border-t border-border">
-                                    <span>{module.lessonCount} Guide</span>
-                                    <span>{Math.ceil(module.lessonCount * 5)} Min</span>
-                                </div>
+                        <Link key={module.id} href={`/moduli/${module.id}`}>
+                            <Card className="h-full p-6 space-y-3">
+                                <Icon className="w-6 h-6 text-primary" />
+                                <h2 className="text-xl font-display font-semibold">{module.title}</h2>
+                                <p className="text-sm text-secondary line-clamp-2">{module.description}</p>
+                                <p className="text-xs text-muted">{module.lessonCount} schede</p>
                             </Card>
                         </Link>
                     )
                 })}
             </div>
-        </Container>
+            {modules.length === 0 && (
+                <p className="text-secondary">Nessuna guida trovata. Prova ISEE, 730, NASpI o SPID.</p>
+            )}
+        </div>
+    )
+}
+
+export default function ModulesPage() {
+    return (
+        <Suspense fallback={<p className="py-12 text-secondary">Caricamento catalogo…</p>}>
+            <Catalog />
+        </Suspense>
     )
 }

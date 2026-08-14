@@ -22,7 +22,7 @@ export const modulo_10_lavoro_disoccupazione: Module = {
             summary: 'Guida passo dopo passo per richiedere l\'indennità di disoccupazione all\'INPS dopo la perdita del lavoro.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-08-14',
             prerequisites: [
                 'Perdita involontaria del lavoro (licenziamento o scadenza contratto)',
                 'Almeno 13 settimane di contributi negli ultimi 4 anni',
@@ -43,7 +43,7 @@ export const modulo_10_lavoro_disoccupazione: Module = {
                 'Compila i campi relativi all\'ultimo rapporto di lavoro',
                 'Inserisci l\'IBAN per ricevere il pagamento',
                 'Dichiara se percepisci altre indennità o redditi',
-                'Invia la domanda e scarica la ricevuta di protocollo'
+                'Invia la domanda e scarica la ricevuta di protocollo. Dal 2026, se chiedi l’anticipo per avvio attività, l’erogazione è in due rate (70% e 30%) secondo la legge di Bilancio 2026.',
             ],
             officialLinksV2: [
                 {
@@ -84,13 +84,21 @@ export const modulo_10_lavoro_disoccupazione: Module = {
             relatedLessons: ['naspi-stato-controllo', 'naspi-com-variazioni', 'did-procedura-online'],
             sources: [
                 {
-                    title: 'Circolare INPS sulla NASpI',
+                    title: 'NASpI: indennità mensile di disoccupazione',
                     organization: 'INPS',
-                    url: 'https://www.inps.it/',
+                    url: 'https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.50593.naspi-indennit-mensile-di-disoccupazione.html',
                     type: 'official',
-                    usedFor: 'Requisiti e procedure',
-                    lastCheckedAt: '2026-05-14'
-                }
+                    usedFor: 'Requisiti, 13 settimane, 68 giorni, DID',
+                    lastCheckedAt: '2026-08-14',
+                },
+                {
+                    title: 'NASpI — scheda istituzionale',
+                    organization: 'Ministero del Lavoro',
+                    url: 'https://lavoro.gov.it/temi-e-priorita/ammortizzatori-sociali/focus-on/indennita-disoccupazione/naspi/pagine/naspi',
+                    type: 'official',
+                    usedFor: 'Requisiti e misura dell’indennità',
+                    lastCheckedAt: '2026-08-14',
+                },
             ]
         },
         {

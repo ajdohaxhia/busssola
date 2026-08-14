@@ -22,8 +22,8 @@ const stats = {
     totalSources: lessons.reduce((acc, l) => acc + l.sources.length, 0),
     uniqueOrganizations: [...new Set(lessons.flatMap(l => l.sources.map(s => s.organization)))].length,
     totalChecklistItems: lessons.reduce((acc, l) => acc + (l.checklist?.length || 0), 0),
-    lastUpdatedAt: new Date().toISOString().split('T')[0],
-    projectStage: "Public Resource Hub v2 - Life Hacks"
+    lastUpdatedAt: '2026-08-14',
+    projectStage: "Public Resource Hub 2026"
 };
 
 // Update siteStats.ts

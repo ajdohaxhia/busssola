@@ -174,3 +174,48 @@ export interface LifeHack {
     lastReviewedAt: string; // YYYY-MM-DD
     badges: ('Risparmia tempo' | 'Evita errore' | 'Privacy' | 'Soldi' | 'Documenti' | 'Sicurezza' | 'Scuola' | 'Casa' | 'Lavoro' | 'Urgente')[];
 }
+
+/**
+ * CivicTemplate (Kit documentale)
+ * A printable, checkable pack for a real Italian public procedure.
+ * Not an official PDF form.
+ */
+export interface CivicTemplate {
+    slug: string;
+    title: string;
+    shortTitle: string;
+    category: CategoryID;
+    summary: string;
+    whenToUse: string;
+    estimatedMinutes: number;
+    officialEntity: string;
+    documents: string[];
+    steps: string[];
+    dontForget: string[];
+    officialLinks: string[];
+    relatedGuide?: string;
+    relatedNews?: string[];
+    sources: Source[];
+    lastReviewedAt: string;
+    disclaimer: string;
+}
+
+/**
+ * NewsItem (Novità civica)
+ * A dated change in Italian public procedures, always sourced.
+ */
+export interface NewsItem {
+    slug: string;
+    title: string;
+    date: string;
+    summary: string;
+    body: string[];
+    whatChanged: string[];
+    whoIsAffected: string;
+    whatToDo: string[];
+    sourceIds: string[];
+    sources: Source[];
+    relatedGuides: string[];
+    relatedTemplates: string[];
+    lastReviewedAt: string;
+}

@@ -434,5 +434,183 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     url: "tel:114",
     category: "emergenze",
     type: "assistenza ufficiale"
+  },
+
+  // 2026 CIVIC UPDATES
+  lavoroIseeFamiglie: {
+    id: 'lavoroIseeFamiglie',
+    name: "Nuovo ISEE per specifiche prestazioni familiari e per l’inclusione",
+    ente: "Ministero del Lavoro e delle Politiche Sociali",
+    url: "https://www.lavoro.gov.it/notizie/pagine/nuovo-isee-specifiche-prestazioni-familiari-e-linclusione",
+    category: "bonus",
+    type: "ente istituzionale"
+  },
+  lavoroIseePagina: {
+    id: 'lavoroIseePagina',
+    name: "ISEE — scheda istituzionale 2026",
+    ente: "Ministero del Lavoro e delle Politiche Sociali",
+    url: "https://lavoro.gov.it/strumenti-e-servizi/isee/pagine/default",
+    category: "bonus",
+    type: "ente istituzionale"
+  },
+  lavoroIseeDsu2026: {
+    id: 'lavoroIseeDsu2026',
+    name: "ISEE DSU 2026 — modelli e istruzioni",
+    ente: "Ministero del Lavoro e delle Politiche Sociali",
+    url: "https://www.lavoro.gov.it/strumenti-e-servizi/isee-dsu-2026",
+    category: "bonus",
+    type: "servizio ufficiale"
+  },
+  inpsIseeValoreCs: {
+    id: 'inpsIseeValoreCs',
+    name: "Comunicato INPS: nuovo valore ISEE 2026",
+    ente: "INPS",
+    url: "https://www.inps.it/content/dam/inps-site/it/scorporati/comunicati-stampa/2026/01/Allegati/3980_CS_Nuovo_valore_Isee.pdf",
+    category: "bonus",
+    type: "ente istituzionale"
+  },
+  inpsIseeModelliCs: {
+    id: 'inpsIseeModelliCs',
+    name: "Comunicato INPS: nuovi modelli DSU e ISEE 2026 (messaggio 799/2026)",
+    ente: "INPS",
+    url: "https://www.inps.it/content/dam/inps-site/it/scorporati/comunicati-stampa/2026/03/Allegati/4030_CS_Nuovi_modelli_ISEE_.pdf",
+    category: "bonus",
+    type: "ente istituzionale"
+  },
+  inpsAuuNews2026: {
+    id: 'inpsAuuNews2026',
+    name: "Assegno unico 2026: domanda in continuità e aggiornamento importi",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2026.02.assegno-unico-2026-presentazione-domanda-e-aggiornamento-importi.html",
+    category: "bonus",
+    type: "ente istituzionale"
+  },
+  inpsAuuScheda: {
+    id: 'inpsAuuScheda',
+    name: "Assegno unico e universale per i figli a carico",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.assegno-unico-e-universale-per-i-figli-a-carico-55984.assegno-unico-e-universale-per-i-figli-a-carico.html",
+    category: "bonus",
+    type: "servizio ufficiale"
+  },
+  areraBonusSoglia2026: {
+    id: 'areraBonusSoglia2026',
+    name: "Bonus sociali: soglia ISEE 9.796 euro dal 1° gennaio 2026",
+    ente: "ARERA",
+    url: "https://www.arera.it/comunicati-stampa/dettaglio/bonus-sociali-arera-alza-a-9796-euro-la-soglia-isee-per-laccesso-alle-agevolazioni-per-acqua-luce-gas-e-rifiuti",
+    category: "bonus",
+    type: "ente istituzionale"
+  },
+  areraBonusCome: {
+    id: 'areraBonusCome',
+    name: "Come si ottengono i bonus sociali",
+    ente: "ARERA",
+    url: "https://www.arera.it/consumatori/bonus-sociale/bonus-sociale-per-disagio-economico/come-si-ottengono-i-bonus",
+    category: "bonus",
+    type: "servizio ufficiale"
+  },
+  lavoroNaspi: {
+    id: 'lavoroNaspi',
+    name: "NASpI — scheda Ministero del Lavoro",
+    ente: "Ministero del Lavoro e delle Politiche Sociali",
+    url: "https://lavoro.gov.it/temi-e-priorita/ammortizzatori-sociali/focus-on/indennita-disoccupazione/naspi/pagine/naspi",
+    category: "lavoro",
+    type: "ente istituzionale"
+  },
+  ade730Calendario: {
+    id: 'ade730Calendario',
+    name: "Calendario dichiarazione precompilata 2026",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/info-assistenza-e-calendario2",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  ade730Quando: {
+    id: 'ade730Quando',
+    name: "Quando e come presentare il 730 2026",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/quando-e-come-presentare-il-730-2026-cittadini",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  adePrecompilata2026: {
+    id: 'adePrecompilata2026',
+    name: "La dichiarazione precompilata 2026",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/la-dichiarazione-precompilata-20261",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  passaportoPolizia: {
+    id: 'passaportoPolizia',
+    name: "Passaporto — Polizia di Stato",
+    ente: "Polizia di Stato",
+    url: "https://www.poliziadistato.it/articolo/passaporto",
+    category: "identita-digitale",
+    type: "servizio ufficiale"
+  },
+  pecAgid: {
+    id: 'pecAgid',
+    name: "Posta Elettronica Certificata",
+    ente: "AgID",
+    url: "https://www.agid.gov.it/it/piattaforme/posta-elettronica-certificata",
+    category: "identita-digitale",
+    type: "ente istituzionale"
+  },
+  fseSalute: {
+    id: 'fseSalute',
+    name: "Fascicolo Sanitario Elettronico",
+    ente: "Ministero della Salute",
+    url: "https://www.salute.gov.it/portale/fascicoloSanitarioElettronico/homeFascicoloSanitarioElettronico.jsp",
+    category: "sanita",
+    type: "servizio ufficiale"
+  },
+  permessoSoggiorno: {
+    id: 'permessoSoggiorno',
+    name: "Titoli di soggiorno",
+    ente: "Ministero dell’Interno",
+    url: "https://www.interno.gov.it/it/temi/immigrazione-e-asilo/titoli-soggiorno",
+    category: "immigrazione",
+    type: "ente istituzionale"
+  },
+  cittadinanzaInterno: {
+    id: 'cittadinanzaInterno',
+    name: "Cittadinanza",
+    ente: "Ministero dell’Interno",
+    url: "https://www.interno.gov.it/it/temi/cittadinanza-e-altri-diritti-civili/cittadinanza",
+    category: "immigrazione",
+    type: "ente istituzionale"
+  },
+  dimissioniLavoro: {
+    id: 'dimissioniLavoro',
+    name: "Servizi per il lavoro — dimissioni e rapporti di lavoro",
+    ente: "Ministero del Lavoro e delle Politiche Sociali",
+    url: "https://www.lavoro.gov.it/",
+    category: "lavoro",
+    type: "ente istituzionale"
+  },
+  cedolareSeccaAde: {
+    id: 'cedolareSeccaAde',
+    name: "Cedolare secca sugli affitti",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/web/guest/schede/agevolazioni/cedolare-secca-affitti/infogen-cedolare-secca-affitti-agevolazioni",
+    category: "casa",
+    type: "servizio ufficiale"
+  },
+  delegaInps: {
+    id: 'delegaInps',
+    name: "Delega identità digitale INPS",
+    ente: "INPS",
+    url: "https://www.inps.it/",
+    category: "altro",
+    type: "servizio ufficiale"
+  },
+  invaliditaInps: {
+    id: 'invaliditaInps',
+    name: "Invalidità civile — prestazioni INPS",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.invalidita-civile.html",
+    category: "disabilita",
+    type: "servizio ufficiale"
   }
 };

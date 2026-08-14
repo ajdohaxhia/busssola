@@ -19,20 +19,19 @@ export const modulo_23_bonus_isee: Module = {
             level: 'base',
             estimatedMinutes: 10,
             mainEntity: 'INPS',
-            summary: 'L\'ISEE (Indicatore Situazione Economica Equivalente) è un parametro che misura la ricchezza economica della famiglia per accedere a bonus e agevolazioni.',
+            summary: 'L’ISEE 2026 si ottiene con la DSU. Per AUU, nido, ADI, SFL e bonus nuovi nati vale l’ISEE per prestazioni familiari (franchigia casa 91.500 euro, 120.000 in capoluoghi di Città metropolitane).',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-16',
-            prerequisites: ['Documenti familiari', 'Accesso al sito INPS'],
-            whatToPrepare: ['Carta d\'identità', 'Codice fiscale di tutti i componenti della famiglia', 'Redditi dell\'anno precedente'],
+            lastReviewedAt: '2026-08-14',
+            prerequisites: ['SPID, CIE o CNS', 'Dati del nucleo'],
+            whatToPrepare: ['Codici fiscali del nucleo', 'Dati sulla casa di abitazione', 'Eventuali saldi se non usi la precompilata'],
             estimatedCosts: 'Gratuito',
-            timeToComplete: '10 minuti di lettura',
+            timeToComplete: 'Da pochi minuti in precompilata a diversi giorni se autodichiarata',
             steps: [
-                'Accedi al sito INPS con SPID o CIE',
-                'Seleziona la sezione \'Prestazioni e servizi\'',
-                'Cerca \'Presentazione DSU per ISEE\'',
-                'Segui la procedura guidata',
-                ' scarica il documento ISEE in PDF'
+                'Accedi al Portale ISEE INPS o all’app INPS Mobile.',
+                'Scegli la DSU precompilata se possibile: INPS e Ade precaricano redditi e patrimoni (anno d’imposta 2024).',
+                'Verifica nucleo, casa e patrimoni. Titoli di Stato, BFP e libretti postali fino a 50.000 euro sono esclusi in automatico in precompilata.',
+                'Invia e scarica l’attestazione. L’INPS ha ricalcolato d’ufficio le DSU 2026 dopo i nuovi modelli (messaggio 799/2026).',
             ],
             commonErrors: [
                 'Dimenticare di dichiarare tutti i componenti della famiglia',
@@ -53,18 +52,26 @@ export const modulo_23_bonus_isee: Module = {
                 'Ho scaricato l\'ISEE in PDF'
             ],
             faqs: [
-                { q: 'Quanto dura l\'ISEE?', a: 'L\'ISEE ha validità annuale e va rinnovato con i redditi dell\'anno precedente.' },
-                { q: 'Posso fare l\'ISEE per un familiare?', a: 'Sì, puoi fare l\'ISEE per un familiare se hai i dati necessari e una delega.' }
+                { q: 'Quanto dura l\'ISEE 2026?', a: 'L’attestazione ISEE 2026 vale fino al 31 dicembre 2026 e va rinnovata ogni anno, presentando una nuova DSU.' },
+                { q: 'Posso fare l\'ISEE per un familiare?', a: 'Puoi presentare la DSU per il nucleo secondo le regole INPS; per deleghe usa i canali ufficiali, non condividere lo SPID.' }
             ],
             sources: [
                 {
-                    title: 'ISEE - Informazioni generali',
-                    organization: 'INPS',
-                    url: 'https://www.inps.it/it/it/dettaglio-scheda/21760.html',
+                    title: 'Nuovo ISEE per prestazioni familiari',
+                    organization: 'Ministero del Lavoro',
+                    url: 'https://www.lavoro.gov.it/notizie/pagine/nuovo-isee-specifiche-prestazioni-familiari-e-linclusione',
                     type: 'official',
-                    usedFor: 'Informazioni generali su ISEE',
-                    lastCheckedAt: '2026-05-16'
-                }
+                    usedFor: 'Ambito di applicazione e franchigia casa',
+                    lastCheckedAt: '2026-08-14',
+                },
+                {
+                    title: 'Comunicato INPS nuovi modelli DSU 2026',
+                    organization: 'INPS',
+                    url: 'https://www.inps.it/content/dam/inps-site/it/scorporati/comunicati-stampa/2026/03/Allegati/4030_CS_Nuovi_modelli_ISEE_.pdf',
+                    type: 'official',
+                    usedFor: 'Messaggio 799/2026 e decreto 3/2026',
+                    lastCheckedAt: '2026-08-14',
+                },
             ]
         },
         {
@@ -76,52 +83,56 @@ export const modulo_23_bonus_isee: Module = {
             level: 'base',
             estimatedMinutes: 15,
             mainEntity: 'ARERA',
-            summary: 'Il bonus sociale è uno sconto sulla bolletta di luce, gas o acqua per le famiglie in difficoltà economica o con condizioni di disagio.',
+            summary: 'Sconto automatico in bolletta se l’ISEE è sotto soglia. Dal 1° gennaio 2026 la soglia è 9.796 euro (20.000 euro con almeno 4 figli a carico). Non si domanda al venditore: basta la DSU.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-16',
-            prerequisites: ['ISEE in corso di validità', 'Contratto luce/gas/acqua intestato a componente della famiglia'],
-            whatToPrepare: ['ISEE', 'Copia della bolletta più recente', 'Documento d\'identità'],
+            lastReviewedAt: '2026-08-14',
+            prerequisites: ['DSU/ISEE in corso di validità', 'Forniture ammissibili intestate a un componente'],
+            whatToPrepare: ['ISEE 2026', 'Codici utenza se vuoi verificare la bolletta'],
             estimatedCosts: 'Gratuito',
-            timeToComplete: '15 minuti',
+            timeToComplete: 'Il riconoscimento è automatico dopo la DSU',
             steps: [
-                'Verifica di avere l\'ISEE in regola (valore ISEE non superiore alla soglia prevista)',
-                'Accedi al sito del proprio Comune o alla piattaforma ARERA',
-                'Compila la domanda di richiesta bonus',
-                'Allega l\'ISEE e la bolletta',
-                'Attendi la conferma e lo sconto sulla prossima bolletta'
+                'Presenta la DSU all’INPS e ottieni ISEE sotto soglia.',
+                'Non compilare una domanda al venditore: ARERA spiega che il SII verifica le utenze.',
+                'Lo sconto dura 12 mesi; ogni anno serve una nuova DSU.',
             ],
             commonErrors: [
-                'Non aggiornare l\'indirizzo di residenza',
-                'Dimenticare di rinnovare la domanda ogni anno'
+                'Cercare un modulo di domanda dal fornitore',
+                'Non rinnovare la DSU l’anno dopo',
             ],
             dontDo: [
-                'NON avviare nuove pratiche se hai già un bonus attivo',
-                'NON fornire copie della bolletta a soggetti non autorizzati'
+                'NON pagare intermediari per “attivare” un bonus che è automatico',
             ],
             ifYouHaveProblems: [
-                'Contatta il servizio clienti del tuo fornitore di energia',
-                'Richiedi assistenza al Comune o al CAF'
+                'Verifica l’ISEE sul sito INPS',
+                'Consulta le pagine ARERA sui bonus sociali',
             ],
             checklist: [
-                'Ho verificato l\'ISEE',
-                'Ho raccolto le bollette recenti',
-                'Ho presentato la domanda',
-                'Ho ricevuto conferma'
+                'Ho presentato la DSU 2026',
+                'L’ISEE è sotto 9.796 euro (o 20.000 con 4+ figli)',
+                'Le utenze sono nel nucleo',
             ],
             faqs: [
-                { q: 'Chi può richiedere il bonus sociale?', a: 'Famiglie con ISEE fino a una certa soglia, famiglie numerose, persone con disabilità o inserite in strutture residenziali.' },
-                { q: 'Quanto dura il bonus?', a: 'Il bonus ha durata annuale e va richiesto ogni anno tramite nuova presentazione della DSU ISEE.' }
+                { q: 'Chi può ottenere il bonus sociale nel 2026?', a: 'Nuclei con ISEE fino a 9.796 euro, oppure fino a 20.000 euro se hanno almeno 4 figli a carico, con utenze ammissibili. Fonte: comunicato ARERA 23 gennaio 2026 e delibera 2/2026/R/com.' },
+                { q: 'Quanto dura?', a: '12 mesi. Va presentata una nuova DSU ogni anno.' }
             ],
             sources: [
                 {
-                    title: 'Bonus sociale luce e gas',
+                    title: 'Bonus sociali: soglia ISEE 9.796 euro',
                     organization: 'ARERA',
-                    url: 'https://www.arera.it/it/consumatori/bonus-sociale.htm',
+                    url: 'https://www.arera.it/comunicati-stampa/dettaglio/bonus-sociali-arera-alza-a-9796-euro-la-soglia-isee-per-laccesso-alle-agevolazioni-per-acqua-luce-gas-e-rifiuti',
                     type: 'official',
-                    usedFor: 'Informazioni su bonus sociale',
-                    lastCheckedAt: '2026-05-16'
-                }
+                    usedFor: 'Soglia 2026',
+                    lastCheckedAt: '2026-08-14',
+                },
+                {
+                    title: 'Come si ottengono i bonus',
+                    organization: 'ARERA',
+                    url: 'https://www.arera.it/consumatori/bonus-sociale/bonus-sociale-per-disagio-economico/come-si-ottengono-i-bonus',
+                    type: 'official',
+                    usedFor: 'Riconoscimento automatico tramite DSU',
+                    lastCheckedAt: '2026-08-14',
+                },
             ]
         },
         {
@@ -133,20 +144,19 @@ export const modulo_23_bonus_isee: Module = {
             level: 'base',
             estimatedMinutes: 12,
             mainEntity: 'INPS',
-            summary: 'L\'Assegno Unico è un contributo economico mensile per le famiglie con figli fino ai 21 anni, richiedibile online tramite INPS o patronato.',
+            summary: 'Contributo mensile INPS per i figli. Nel 2026 la domanda accolta continua d’ufficio. Senza ISEE da marzo: importi minimi. DSU entro il 30 giugno 2026 per gli arretrati da marzo.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-16',
+            lastReviewedAt: '2026-08-14',
             prerequisites: ['Residenza in Italia', 'Figlio/a di età compresa tra 0 e 21 anni', 'Codice fiscale del figlio'],
             whatToPrepare: ['Codice fiscale componenti famiglia', 'IBAN per accredito', 'Eventuale ISEE'],
             estimatedCosts: 'Gratuito',
             timeToComplete: '15 minuti',
             steps: [
-                'Accedi al sito INPS o all\'app IO',
-                'Cerca \'Assegno Unico\' e apri il servizio',
-                'Compila i dati del bambino o del giovane',
-                'Inserisci il tuo IBAN per l\'accredito',
-                'Invia la domanda e salva la ricevuta'
+                'Se hai già una domanda in stato accolta, non presentarla di nuovo: l’INPS eroga in continuità (circolare n. 7/2026).',
+                'Presenta la DSU 2026. Da marzo l’importo usa l’ISEE per prestazioni familiari.',
+                'Se la DSU arriva entro il 30 giugno 2026, gli importi da marzo vengono ricalcolati con arretrati.',
+                'Controlla IBAN e composizione del nucleo sul servizio INPS.',
             ],
             commonErrors: [
                 'Inserire un IBAN errato',
@@ -168,13 +178,21 @@ export const modulo_23_bonus_isee: Module = {
             ],
             sources: [
                 {
-                    title: 'Assegno Unico Universale',
+                    title: 'Assegno unico 2026: domanda e importi',
                     organization: 'INPS',
-                    url: 'https://www.inps.it/it/it/dettaglio-scheda/24118.html',
+                    url: 'https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2026.02.assegno-unico-2026-presentazione-domanda-e-aggiornamento-importi.html',
                     type: 'official',
-                    usedFor: 'Procedura richiesta Assegno Unico',
-                    lastCheckedAt: '2026-05-16'
-                }
+                    usedFor: 'Continuità domanda, rivalutazione 1,4%, termine 30 giugno',
+                    lastCheckedAt: '2026-08-14',
+                },
+                {
+                    title: 'Scheda Assegno unico e universale',
+                    organization: 'INPS',
+                    url: 'https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.assegno-unico-e-universale-per-i-figli-a-carico-55984.assegno-unico-e-universale-per-i-figli-a-carico.html',
+                    type: 'official',
+                    usedFor: 'Regole di decorrenza e arretrati',
+                    lastCheckedAt: '2026-08-14',
+                },
             ]
         },
         {

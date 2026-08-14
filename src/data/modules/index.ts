@@ -33,6 +33,11 @@ import { modulo_24_casa_digitale } from './modulo-24-casa-digitale';
 import { modulo_25_fisco_cittadini } from './modulo-25-fisco-cittadini';
 import { modulo_26_poste_pagamenti } from './modulo-26-poste-pagamenti';
 import { modulo_99_kit_checklist } from './modulo-99-kit-checklist';
+import { cambio_residenza } from './casa/cambio-residenza';
+import { cie_richiesta } from './documenti/cie-richiesta';
+import { telefono_rubato } from './emergenze/telefono-rubato';
+import { busta_paga } from './soldi/busta-paga';
+import { phishing_bancario } from './truffe/phishing-bancario';
 
 export const ALL_MODULES = [
     modulo_01_primo_soccorso,
@@ -70,6 +75,11 @@ export const ALL_MODULES = [
     modulo_25_fisco_cittadini,
     modulo_26_poste_pagamenti,
     modulo_99_kit_checklist,
+    cambio_residenza,
+    cie_richiesta,
+    telefono_rubato,
+    busta_paga,
+    phishing_bancario,
 ];
 
 export function getModuleById(id: string) {

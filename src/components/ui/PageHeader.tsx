@@ -20,13 +20,13 @@ export function PageHeader({ badge, title, description, icon: Icon, className, c
         )}>
             {badge && (
                 <div className={cn(
-                    "inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-black uppercase tracking-widest border border-primary/20",
+                    "inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[11px] font-semibold uppercase tracking-widest",
                     centered && "mx-auto"
                 )}>
                     {Icon && <Icon className="w-3 h-3" />} {badge}
                 </div>
             )}
-            <h1 className="text-4xl md:text-7xl font-display font-black tracking-tight text-foreground leading-[1.05]">
+            <h1 className="text-4xl md:text-6xl font-display font-semibold tracking-tight text-foreground leading-[1.1]">
                 {title}
             </h1>
             {description && (

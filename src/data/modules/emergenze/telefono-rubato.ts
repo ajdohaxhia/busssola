@@ -18,10 +18,11 @@ export const telefono_rubato: Module = {
             level: 'base',
             estimatedMinutes: 10,
             mainEntity: 'Polizia di Stato',
-            summary: 'Il panico è il tuo peggior nemico. Ecco la sequenza operativa per blindare la tua identità.',
+            summary: 'Il panico è il tuo peggior nemico. Ecco la sequenza operativa per blindare la tua identità. Se c’è violenza in corso chiama il 112.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-16',
+            lastReviewedAt: '2026-08-14',
+            emergencyLevel: 'sos',
             prerequisites: ['Conoscenza delle credenziali email principale'],
             whatToPrepare: [
                 'IMEI del telefono (se segnato)',
@@ -39,7 +40,7 @@ export const telefono_rubato: Module = {
             ],
             officialLinksV2: [
                 {
-                    sourceId: 'poliziaPostaleSegnalazioni',
+                    sourceId: 'psDenunceWeb',
                     useWhen: 'Per sporgere denuncia.',
                     beforeOpening: ['Documento identità']
                 }

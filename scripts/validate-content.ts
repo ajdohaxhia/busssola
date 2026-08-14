@@ -2,6 +2,9 @@
 import { ALL_MODULES } from '../src/data/modules/index';
 import { LEARNING_PATHS } from '../src/data/paths';
 import { OFFICIAL_SOURCES } from '../src/data/officialSources';
+import { CIVIC_TEMPLATES } from '../src/data/templates';
+import { CIVIC_NEWS } from '../src/data/news';
+import { SOS_CASES } from '../src/data/sos-cases';
 
 let errors: string[] = [];
 
@@ -61,7 +64,7 @@ function validateLesson(lesson: any, moduleId: string) {
         }
         
         if (!Array.isArray(lesson.sources) || lesson.sources.length === 0) {
-            // logError(`${context} Published but missing sources`);
+            logError(`${context} Published but missing official sources`);
         } else {
             const urls = new Set();
             lesson.sources.forEach((source: any, idx: number) => {
@@ -117,6 +120,27 @@ function main() {
                 validModules++;
             }
         });
+    });
+
+    console.log('\n📋 Validating templates and news...');
+    const templateSlugs = new Set<string>();
+    CIVIC_TEMPLATES.forEach((tpl) => {
+        if (!tpl.slug) logError('Template missing slug');
+        if (templateSlugs.has(tpl.slug)) logError(`Duplicate template slug: ${tpl.slug}`);
+        templateSlugs.add(tpl.slug);
+        if (!tpl.sources?.length) logError(`Template ${tpl.slug} missing official sources`);
+        tpl.officialLinks?.forEach((id) => {
+            if (!OFFICIAL_SOURCES[id]) logError(`Template ${tpl.slug} invalid sourceId ${id}`);
+        });
+    });
+    CIVIC_NEWS.forEach((n) => {
+        if (!n.sources?.length) logError(`News ${n.slug} missing official sources`);
+        n.sourceIds.forEach((id) => {
+            if (!OFFICIAL_SOURCES[id]) logError(`News ${n.slug} invalid sourceId ${id}`);
+        });
+    });
+    SOS_CASES.forEach((c) => {
+        if (!c.sources?.length) logError(`SOS case ${c.id} missing official sources`);
     });
 
     if (errors.length > 0) {

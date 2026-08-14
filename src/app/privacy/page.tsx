@@ -1,5 +1,5 @@
 import { Container } from '@/components/ui/Container'
-import { siteStats } from '@/data/siteStats'
+import { siteStats } from '@/config/siteStats'
 
 export default function PrivacyPage() {
     return (

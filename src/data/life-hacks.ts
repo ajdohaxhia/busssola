@@ -1073,7 +1073,7 @@ export const LIFE_HACKS: LifeHack[] = [
             {
                 title: "Produttività digitale",
                 organization: "Busssola",
-                url: "https://busssola.it/",
+                url: "https://busssola.com/",
                 type: "expert",
                 usedFor: "Metodologia",
                 lastCheckedAt: "2024-05-20"

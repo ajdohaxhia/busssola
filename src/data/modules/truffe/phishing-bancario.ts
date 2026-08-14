@@ -35,7 +35,7 @@ export const phishing_bancario: Module = {
             ],
             officialLinksV2: [
                 {
-                    sourceId: 'poliziaPostalePhishing',
+                    sourceId: 'commissariatoPs',
                     useWhen: 'Per segnalare o informarti sulle truffe attuali.',
                     beforeOpening: ['Nessuno']
                 }

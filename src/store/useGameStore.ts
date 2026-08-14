@@ -106,8 +106,20 @@ export const useGameStore = create<GameState>()(
 
             importProgress: (json: string) => {
                 try {
-                    const imported = JSON.parse(json)
-                    set(imported)
+                    const imported = JSON.parse(json) as Partial<GameState>
+                    if (!imported || typeof imported !== 'object' || Array.isArray(imported)) {
+                        throw new Error('Invalid shape')
+                    }
+                    const theme = imported.theme === 'dark' ? 'dark' : 'light'
+                    const modules = imported.modules && typeof imported.modules === 'object' && !Array.isArray(imported.modules)
+                        ? imported.modules
+                        : {}
+                    set({
+                        userId: typeof imported.userId === 'string' ? imported.userId : createUserId(),
+                        createdAt: typeof imported.createdAt === 'string' ? imported.createdAt : new Date().toISOString(),
+                        modules,
+                        theme,
+                    })
                 } catch {
                     console.error('Invalid progress file')
                 }

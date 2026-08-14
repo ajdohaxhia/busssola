@@ -35,7 +35,7 @@ export const busta_paga: Module = {
             ],
             officialLinksV2: [
                 {
-                    sourceId: 'inpsBustaPaga',
+                    sourceId: 'inpsHome',
                     useWhen: 'Per approfondire la previdenza.',
                     beforeOpening: ['Codice Fiscale']
                 }

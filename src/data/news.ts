@@ -1,0 +1,135 @@
+import type { NewsItem, Source } from '@/types'
+
+const D = '2026-08-14'
+
+const src = (title: string, organization: string, url: string): Source => ({
+    title,
+    organization,
+    url,
+    type: 'official',
+    usedFor: 'Novità normativa 2026',
+    lastCheckedAt: D,
+})
+
+export const CIVIC_NEWS: NewsItem[] = [
+    {
+        slug: 'isee-dsu-2026',
+        title: 'ISEE 2026: nuovi modelli DSU e ISEE per prestazioni familiari',
+        date: '2026-03-06',
+        summary: 'L’INPS, con messaggio n. 799 del 6 marzo 2026, ha pubblicato i nuovi modelli DSU e ha aggiornato le attestazioni presentate dal 1° gennaio 2026, in attuazione del decreto n. 3/2026 e della legge di Bilancio 2026.',
+        body: [
+            'Dal 1° gennaio 2026 esiste un ISEE “per specifiche prestazioni familiari e per l’inclusione”, più favorevole per nuclei con figli o casa di abitazione di proprietà. Si applica ad ADI, SFL, Assegno unico, bonus asilo nido e bonus nuovi nati. Per le altre prestazioni restano gli indicatori già in uso.',
+            'Secondo il Ministero del Lavoro e il comunicato INPS del 13 gennaio 2026, la franchigia sulla casa di abitazione è 91.500 euro, 120.000 euro nei Comuni capoluogo delle Città metropolitane, più 2.500 euro per ogni figlio convivente successivo al primo. Cambiano anche le maggiorazioni della scala di equivalenza.',
+            'Resta l’esclusione dal patrimonio mobiliare, fino a 50.000 euro per nucleo, di titoli di Stato, buoni fruttiferi postali e libretti postali: automatica in DSU precompilata, da indicare se la DSU è autodichiarata.',
+        ],
+        whatChanged: [
+            'Nuovi modelli DSU approvati con decreto MLPS/MEF n. 3 del 2 marzo 2026',
+            'Attestazioni 2026 ricalcolate d’ufficio (messaggio INPS 799/2026)',
+            'Franchigia abitazione e scale di equivalenza per l’ISEE familiare',
+            'Dati fiscali di riferimento: anno d’imposta 2024',
+        ],
+        whoIsAffected: 'Famiglie che chiedono AUU, nido, ADI, SFL, bonus nuovi nati; chi presenta DSU nel 2026.',
+        whatToDo: [
+            'Controlla l’attestazione aggiornata sul sito INPS.',
+            'Preferisci la DSU precompilata.',
+            'Per l’Assegno unico, presenta la DSU entro il 30 giugno 2026 se vuoi gli arretrati da marzo.',
+        ],
+        sourceIds: ['lavoroIseeFamiglie', 'lavoroIseePagina', 'inpsIseeModelliCs', 'inpsIseeValoreCs'],
+        sources: [
+            src('Nuovo ISEE familiare', 'Ministero del Lavoro', 'https://www.lavoro.gov.it/notizie/pagine/nuovo-isee-specifiche-prestazioni-familiari-e-linclusione'),
+            src('Scheda ISEE', 'Ministero del Lavoro', 'https://lavoro.gov.it/strumenti-e-servizi/isee/pagine/default'),
+            src('CS modelli DSU 2026', 'INPS', 'https://www.inps.it/content/dam/inps-site/it/scorporati/comunicati-stampa/2026/03/Allegati/4030_CS_Nuovi_modelli_ISEE_.pdf'),
+            src('CS nuovo valore ISEE', 'INPS', 'https://www.inps.it/content/dam/inps-site/it/scorporati/comunicati-stampa/2026/01/Allegati/3980_CS_Nuovo_valore_Isee.pdf'),
+        ],
+        relatedGuides: ['/moduli/modulo-23-bonus-isee'],
+        relatedTemplates: ['isee-dsu-mini', 'assegno-unico'],
+        lastReviewedAt: D,
+    },
+    {
+        slug: '730-precompilato-2026',
+        title: '730/2026 precompilato: calendario e limite detrazioni over 75.000 euro',
+        date: '2026-04-30',
+        summary: 'L’Agenzia delle Entrate mette a disposizione il 730/2026 dal 30 aprile. Invio dal 14 maggio al 30 settembre 2026. Per redditi sopra 75.000 euro il sistema calcola il tetto alle detrazioni.',
+        body: [
+            'Consultazione 730: dal 30 aprile 2026. Accettazione, modifica e invio dal 14 maggio al 30 settembre 2026, dal web o tramite sostituto/CAF/professionista.',
+            'Redditi PF precompilato: consultazione dal 20 maggio; invio dal 27 maggio al 2 novembre 2026.',
+            'Tra i dati nuovi 2026: contributi per elettrodomestici efficienti e proventi GSE. Per redditi complessivi superiori a 75.000 euro opera il riordino delle detrazioni (legge di bilancio 2025), calcolato in automatico in base a reddito e figli a carico.',
+        ],
+        whatChanged: ['Calendario 2026', 'Nuove informazioni in precompilata', 'Calcolo automatico limite detrazioni sopra 75.000 euro'],
+        whoIsAffected: 'Lavoratori dipendenti, pensionati e chi presenta Redditi PF.',
+        whatToDo: ['Consulta dal 30 aprile', 'Verifica CU e spese', 'Invia entro il 30 settembre se usi il 730'],
+        sourceIds: ['adePrecompilata2026', 'ade730Calendario', 'ade730Quando'],
+        sources: [
+            src('Precompilata 2026', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/la-dichiarazione-precompilata-20261'),
+            src('Calendario', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/info-assistenza-e-calendario2'),
+            src('730 2026 cittadini', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/quando-e-come-presentare-il-730-2026-cittadini'),
+        ],
+        relatedGuides: ['/moduli/modulo-25-fisco-cittadini'],
+        relatedTemplates: ['730-precompilato', 'redditi-pf', '730-1-otto-cinque-due'],
+        lastReviewedAt: D,
+    },
+    {
+        slug: 'naspi-2026',
+        title: 'NASpI 2026: restano 13 settimane e 68 giorni; anticipo in due rate',
+        date: '2026-01-01',
+        summary: 'I requisiti INPS restano: disoccupazione involontaria, 13 settimane di contribuzione in 4 anni, domanda entro 68 giorni. L’anticipo per autoimprenditorialità, dalla legge di Bilancio 2026, è erogato 70% + 30%.',
+        body: [
+            'La scheda INPS conferma stato di disoccupazione, 13 settimane nei 4 anni e domanda telematica a pena di decadenza entro 68 giorni. La domanda equivale a DID; nei 15 giorni successivi si va al CPI.',
+            'Il Ministero del Lavoro descrive misura, décalage e casi di dimissioni per giusta causa / conciliazione.',
+            'Dal 1° gennaio 2026 l’anticipazione NASpI per avvio di attività non è più in un’unica soluzione: 70% all’accoglimento e 30% a fine durata teorica o comunque entro sei mesi, secondo la legge di bilancio 2026.',
+        ],
+        whatChanged: ['Anticipo NASpI in due tranche 70/30', 'Requisiti base invariati (13 settimane, 68 giorni)'],
+        whoIsAffected: 'Lavoratori subordinati che perdono il lavoro e chi chiede l’anticipo per impresa.',
+        whatToDo: ['Invia la domanda dopo la cessazione e entro 68 giorni', 'Prepara IBAN e dati del rapporto', 'Se chiedi l’anticipo, leggi la circolare INPS aggiornata'],
+        sourceIds: ['naspiServizio', 'lavoroNaspi'],
+        sources: [
+            src('NASpI INPS', 'INPS', 'https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.50593.naspi-indennit-mensile-di-disoccupazione.html'),
+            src('NASpI MLPS', 'Ministero del Lavoro', 'https://lavoro.gov.it/temi-e-priorita/ammortizzatori-sociali/focus-on/indennita-disoccupazione/naspi/pagine/naspi'),
+        ],
+        relatedGuides: ['/moduli/modulo-10-lavoro-disoccupazione'],
+        relatedTemplates: ['naspi', 'naspi-com', 'did-cpi'],
+        lastReviewedAt: D,
+    },
+    {
+        slug: 'assegno-unico-2026',
+        title: 'Assegno unico 2026: continuità della domanda e ISEE entro il 30 giugno',
+        date: '2026-02-02',
+        summary: 'Chi ha una domanda accolta non la rifà. Senza ISEE da marzo si prendono i minimi. DSU entro il 30 giugno 2026: arretrati da marzo. Importi rivalutati dell’1,4%.',
+        body: [
+            'Circolare INPS n. 7 del 30 gennaio 2026: domande accolte restano valide in continuità, salvo decadenza/revoca/rigetto.',
+            'Da marzo 2026 l’importo usa il nuovo ISEE familiare. Gennaio-febbraio usano l’ISEE valido al 31 dicembre 2025.',
+            'Senza ISEE da marzo: importi minimi. DSU entro 30 giugno 2026: ricalcolo da marzo con arretrati.',
+        ],
+        whatChanged: ['Continuità domande', 'ISEE familiare da marzo', 'Termine arretrati 30 giugno 2026', 'Rivalutazione 1,4%'],
+        whoIsAffected: 'Nuclei con figli che percepiscono o chiedono l’AUU.',
+        whatToDo: ['Non rifare la domanda se è accolta', 'Fai la DSU 2026 prima del 30 giugno', 'Controlla IBAN e nucleo su INPS'],
+        sourceIds: ['inpsAuuNews2026', 'inpsAuuScheda'],
+        sources: [
+            src('News AUU 2026', 'INPS', 'https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2026.02.assegno-unico-2026-presentazione-domanda-e-aggiornamento-importi.html'),
+            src('Scheda AUU', 'INPS', 'https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.assegno-unico-e-universale-per-i-figli-a-carico-55984.assegno-unico-e-universale-per-i-figli-a-carico.html'),
+        ],
+        relatedGuides: ['/moduli/modulo-23-bonus-isee'],
+        relatedTemplates: ['assegno-unico', 'isee-dsu-mini'],
+        lastReviewedAt: D,
+    },
+    {
+        slug: 'bonus-sociali-2026',
+        title: 'Bonus sociali: soglia ISEE a 9.796 euro dal 1° gennaio 2026',
+        date: '2026-01-23',
+        summary: 'ARERA (delibera 2/2026/R/com) alza la soglia per i bonus luce, gas, idrico e rifiuti a 9.796 euro. Resta 20.000 euro per nuclei con almeno 4 figli a carico. Riconoscimento automatico con DSU.',
+        body: [
+            'Non si presenta domanda al venditore: basta ISEE sotto soglia e utenze ammissibili. Lo sconto dura 12 mesi; ogni anno serve una nuova DSU.',
+        ],
+        whatChanged: ['Soglia 9.530 → 9.796 euro', 'Invariata soglia 20.000 euro per 4+ figli'],
+        whoIsAffected: 'Nuclei in disagio economico con utenze intestate a un componente.',
+        whatToDo: ['Presenta la DSU 2026', 'Verifica che le utenze siano nel nucleo'],
+        sourceIds: ['areraBonusSoglia2026', 'areraBonusCome'],
+        sources: [
+            src('CS soglia ISEE', 'ARERA', 'https://www.arera.it/comunicati-stampa/dettaglio/bonus-sociali-arera-alza-a-9796-euro-la-soglia-isee-per-laccesso-alle-agevolazioni-per-acqua-luce-gas-e-rifiuti'),
+            src('Come si ottengono i bonus', 'ARERA', 'https://www.arera.it/consumatori/bonus-sociale/bonus-sociale-per-disagio-economico/come-si-ottengono-i-bonus'),
+        ],
+        relatedGuides: ['/moduli/modulo-23-bonus-isee'],
+        relatedTemplates: ['bonus-sociali', 'isee-dsu-mini'],
+        lastReviewedAt: D,
+    },
+]

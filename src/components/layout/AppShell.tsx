@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import { Toaster } from 'sonner'
 import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
+import { SOSButton } from '@/components/ui/SOSButton'
 import { cn } from '@/lib/utils'
 
 function isLessonPath(pathname: string | null) {
@@ -20,7 +21,7 @@ export function AppShell({ children }: { children: ReactNode }) {
             <Toaster position="top-center" richColors />
             <main className={cn(
                 "flex-1 relative flex flex-col",
-                !lessonMode && "pt-24 md:pt-32"
+                !lessonMode && "pt-20"
             )}>
                 <div
                     className={cn(
@@ -34,6 +35,7 @@ export function AppShell({ children }: { children: ReactNode }) {
                 </div>
             </main>
             {!lessonMode && <Footer />}
+            {!lessonMode && <SOSButton />}
         </div>
     )
 }

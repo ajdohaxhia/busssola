@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Outfit } from 'next/font/google'
+import { Inter, Fraunces } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
 import { AppShell } from '@/components/layout/AppShell'
@@ -20,7 +20,7 @@ const inter = Inter({
   display: 'swap',
 })
 
-const outfit = Outfit({
+const fraunces = Fraunces({
   subsets: ['latin'],
   variable: '--font-display',
   display: 'swap',
@@ -28,7 +28,7 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   ...buildSeoMetadata({
-    title: 'Orientamento tra documenti, diritti e procedure in Italia',
+    title: 'Dal dubbio alla pratica ufficiale',
     description: SITE_DESCRIPTION,
     path: '/',
     keywords: [
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   }),
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} | Orientamento tra documenti, diritti e procedure in Italia`,
+    default: `${SITE_NAME} | Dal dubbio alla pratica ufficiale`,
     template: `%s | ${SITE_NAME}`
   },
   authors: [{ name: CREATOR_NAME, url: `${SITE_URL}/adelajdo-haxhiaj` }],
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#FAFAFA',
+  themeColor: '#F4F1EA',
   width: 'device-width',
   initialScale: 1,
 }
@@ -70,7 +70,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="it" className={cn(inter.variable, outfit.variable, "scroll-smooth")}>
+    <html lang="it" className={cn(inter.variable, fraunces.variable, "scroll-smooth")}>
       <head>
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="mobile-web-app-capable" content="yes" />

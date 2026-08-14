@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { Shield, Users, LineChart, Globe, Zap } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
-import { siteStats } from '@/data/siteStats'
+import { siteStats } from '@/lib/stats'
 import Link from 'next/link'
 
 const values = [
@@ -156,7 +156,7 @@ export default function AboutPage() {
             >
                 {[
                     { number: siteStats.totalModules.toString(), label: 'Moduli Civici' },
-                    { number: siteStats.publishedLessons.toString(), label: 'Guide Pratiche' },
+                    { number: siteStats.totalLessons.toString(), label: 'Guide Pratiche' },
                     { number: '24/7', label: 'Accesso gratuito' },
                     { number: '0', label: 'Dati raccolti' },
                 ].map((stat, i) => (

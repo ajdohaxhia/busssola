@@ -13,47 +13,72 @@ export const modulo_25_fisco_cittadini: Module = {
         {
             id: '730-precompilato-base',
             slug: '730-precompilato-orientamento-base',
-            title: '730 precompilato: orientamento base',
+            title: '730 precompilato 2026: calendario e invio',
             category: 'soldi',
             audience: ['cittadini', 'lavoratori'],
             level: 'base',
             estimatedMinutes: 15,
             mainEntity: 'Agenzia delle Entrate',
-            summary: 'Come visualizzare, modificare e inviare la dichiarazione dei redditi già predisposta dall\'Agenzia delle Entrate.',
+            summary: 'Il 730/2026 si consulta dal 30 aprile. Accettazione e invio dal 14 maggio al 30 settembre 2026, dal web Ade o tramite CAF/sostituto.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-16',
-            prerequisites: ['SPID, CIE o CNS', 'Essere lavoratori dipendenti o pensionati'],
-            whatToPrepare: ['Certificazione Unica (CU)', 'Scontrini farmacia e spese mediche (per controllo)', 'Dati su interessi mutuo, spese istruzione, ristrutturazioni'],
+            lastReviewedAt: '2026-08-14',
+            prerequisites: ['SPID, CIE o CNS', 'Essere lavoratori dipendenti o pensionati, se usi il 730'],
+            whatToPrepare: ['Certificazione Unica', 'IBAN', 'Spese da confrontare con la precompilata'],
             steps: [
-                'Accedi all\'area riservata sul sito dell\'Agenzia delle Entrate tra maggio e settembre',
-                'Entra nella sezione "La tua dichiarazione precompilata"',
-                'Visualizza i dati inseriti (spese mediche, contributi, ecc.)',
-                'Se i dati sono corretti e completi, accetta e invia senza modifiche (eviterai controlli sulle spese)',
-                'Se mancano dati, modifica il modello e invia',
-                'Scarica la ricevuta dell\'invio'
+                'Dal 30 aprile 2026 accedi all’area riservata dell’Agenzia delle Entrate e apri il 730 precompilato (modalità semplificata o ordinaria).',
+                'Dal 14 maggio 2026 puoi accettare, modificare e inviare. Il termine è il 30 settembre 2026.',
+                'Se il reddito complessivo supera 75.000 euro, la procedura calcola il limite alle detrazioni in base a reddito e figli a carico.',
+                'Puoi presentare anche a sostituto, CAF o professionista; il termine è lo stesso.',
+                'Scarica ricevuta e modello 730-3.',
             ],
             commonErrors: [
-                'Non controllare se la CU è stata caricata correttamente',
-                'Dimenticare di inserire l\'IBAN per ricevere l\'eventuale rimborso'
+                'Confondere la data di consultazione (30 aprile) con quella di invio (dal 14 maggio)',
+                'Usare link arrivati via SMS invece del sito istituzionale',
             ],
             officialLinksV2: [
                 {
-                    sourceId: 'ade730',
-                    useWhen: 'Per accedere alla tua dichiarazione precompilata',
-                    beforeOpening: ['Tieni pronto lo SPID']
-                }
+                    sourceId: 'adePrecompilata2026',
+                    useWhen: 'Per le novità e i dati presenti in precompilata 2026',
+                    beforeOpening: ['SPID o CIE'],
+                },
+                {
+                    sourceId: 'ade730Calendario',
+                    useWhen: 'Per il calendario ufficiale',
+                    beforeOpening: [],
+                },
+                {
+                    sourceId: 'ade730Quando',
+                    useWhen: 'Per come e dove presentare il 730',
+                    beforeOpening: [],
+                },
             ],
             sources: [
                 {
-                    title: 'Dichiarazione precompilata Info e assistenza',
+                    title: 'La dichiarazione precompilata 2026',
                     organization: 'Agenzia delle Entrate',
-                    url: 'https://infoprecompilata.agenziaentrate.gov.it/',
+                    url: 'https://www.agenziaentrate.gov.it/portale/la-dichiarazione-precompilata-20261',
                     type: 'official',
-                    usedFor: 'Procedura ufficiale',
-                    lastCheckedAt: '2026-05-16'
-                }
-            ]
+                    usedFor: 'Novità e disponibilità del 730/2026',
+                    lastCheckedAt: '2026-08-14',
+                },
+                {
+                    title: 'Calendario precompilata 2026',
+                    organization: 'Agenzia delle Entrate',
+                    url: 'https://www.agenziaentrate.gov.it/portale/info-assistenza-e-calendario2',
+                    type: 'official',
+                    usedFor: 'Date di consultazione e invio',
+                    lastCheckedAt: '2026-08-14',
+                },
+                {
+                    title: 'Quando e come presentare il 730 2026',
+                    organization: 'Agenzia delle Entrate',
+                    url: 'https://www.agenziaentrate.gov.it/portale/quando-e-come-presentare-il-730-2026-cittadini',
+                    type: 'official',
+                    usedFor: 'Canali di presentazione e scheda 730-1',
+                    lastCheckedAt: '2026-08-14',
+                },
+            ],
         },
         {
             id: 'cu-dove-trovarla',
