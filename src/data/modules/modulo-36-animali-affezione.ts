@@ -3,7 +3,7 @@ import { published, src, ol } from './civicPublished';
 
 export const modulo_36_animali_affezione: Module = {
     id: 'modulo-36-animali-affezione',
-    lastUpdated: '2026-08-14',
+    lastUpdated: '2026-08-27',
     title: 'Animali d’affezione',
     description: 'Identificazione e registrazione degli animali da compagnia nel sistema nazionale del Ministero della Salute (I&R / SINAC). Microchip e anagrafe si fanno con il veterinario e l’ASL, non da soli.',
     category: 'famiglia',

@@ -3,7 +3,7 @@ import { published, src, ol } from './civicPublished';
 
 export const modulo_31_disabilita_legge_104: Module = {
     id: 'modulo-31-disabilita-legge-104',
-    lastUpdated: '2026-08-14',
+    lastUpdated: '2026-08-27',
     title: 'Disabilità e legge 104',
     description: 'Domanda di invalidità civile INPS, orientamento alla legge 104, Carta europea della disabilità e deleghe per caregiver. Sempre sulle schede INPS, senza inventare percentuali o importi.',
     category: 'disabilita',

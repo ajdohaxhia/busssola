@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_21_anziani_caregiver: Module = {
     id: 'modulo-21-anziani-caregiver',
-    lastUpdated: '2026-08-14',
+    lastUpdated: '2026-08-27',
     title: 'Modulo 21: Anziani e Caregiver',
     description: 'Strumenti e tutele per assistere i propri cari anziani: supporto digitale, deleghe e protezione dalle truffe.',
     category: 'anziani',

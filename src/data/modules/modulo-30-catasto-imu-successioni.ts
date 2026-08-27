@@ -3,7 +3,7 @@ import { published, src, ol } from './civicPublished';
 
 export const modulo_30_catasto_imu_successioni: Module = {
     id: 'modulo-30-catasto-imu-successioni',
-    lastUpdated: '2026-08-14',
+    lastUpdated: '2026-08-27',
     title: 'Catasto, IMU e successioni',
     description: 'Visure catastali gratuite per i titolari, IMU comunale, dichiarazione di successione telematica e voltura catastale web (dal 12 gennaio 2026 non si usa più Voltura 2.0).',
     category: 'casa',

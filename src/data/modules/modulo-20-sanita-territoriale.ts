@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_20_sanita_territoriale: Module = {
     id: 'modulo-20-sanita-territoriale',
-    lastUpdated: '2026-08-14',
+    lastUpdated: '2026-08-27',
     title: 'Modulo 20: Sanità Territoriale',
     description: 'Guida ai servizi sanitari di base e specialistici vicini a te: dal medico di famiglia ai centri di salute mentale.',
     category: 'sanita',

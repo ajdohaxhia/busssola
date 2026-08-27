@@ -2,6 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_19_mobilita: Module = {
     id: 'modulo-19-mobilita',
+    lastUpdated: '2026-08-27',
     title: 'Modulo 19: Mobilità e Veicoli',
     description: 'Gestisci le scadenze e gli adempimenti legati all\'auto e alla guida: multe, bollo e patente senza stress.',
     category: 'mobilita',

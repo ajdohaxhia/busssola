@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_10_lavoro_disoccupazione: Module = {
     id: 'modulo-10-lavoro-disoccupazione',
-    lastUpdated: '2026-08-14',
+    lastUpdated: '2026-08-27',
     title: 'Lavoro e Disoccupazione',
     description: 'Guida ai principali servizi digitali legati al mondo del lavoro, al sostegno al reddito e alla cessazione dei rapporti lavorativi.',
     category: 'lavoro',

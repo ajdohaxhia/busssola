@@ -2,14 +2,14 @@ import { Module } from '@/types';
 
 export const modulo_09_documenti_identita: Module = {
     id: 'modulo-09-documenti-identita',
-    lastUpdated: '2026-05-14',
+    lastUpdated: '2026-08-27',
     title: 'Documenti e Identità',
-    description: 'Guida pratica ai principali documenti di identità e strumenti di accesso digitale ai servizi pubblici.',
+    description: 'Guida pratica ai principali documenti di identità, IT-Wallet e strumenti di accesso digitale ai servizi pubblici.',
     category: 'documenti',
     difficulty: 'base',
     icon: 'IdCard',
     themeColor: 'accent-blue',
-    topProcedures: ['Richiesta SPID', 'Cambio Residenza', 'Recupero PUK CIE', 'Pagamento pagoPA'],
+    topProcedures: ['Richiesta SPID', 'IT-Wallet su App IO', 'Cambio Residenza', 'Recupero PUK CIE', 'Pagamento pagoPA'],
     relatedChecklists: ['Richiesta Passaporto', 'Cambio Residenza'],
     lessons: [
         {
@@ -345,7 +345,81 @@ export const modulo_09_documenti_identita: Module = {
                     url: 'https://www.pagopa.gov.it/it/cittadini/dove-pagare/',
                     type: 'official',
                     usedFor: 'Metodi di pagamento e canali',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-08-27'
+                }
+            ]
+        },
+        {
+            id: 'it-wallet-documenti-digitali',
+            slug: 'come-usare-it-wallet-app-io',
+            title: 'Come usare IT-Wallet su App IO',
+            category: 'documenti',
+            audience: ['cittadini', 'lavoratori', 'studenti'],
+            level: 'base',
+            estimatedMinutes: 5,
+            mainEntity: 'Dipartimento per la trasformazione digitale / PagoPA S.p.A.',
+            summary: 'Come attivare e mostrare patente di guida e tessera sanitaria con valore legale direttamente dall’App IO.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-08-27',
+            prerequisites: ['SPID o CIE attiva', 'Smartphone con App IO aggiornata'],
+            whatToPrepare: [
+                'Credenziali SPID o PIN CIE',
+                'Smartphone connesso a internet'
+            ],
+            estimatedCosts: 'Gratuito',
+            timeToComplete: '3-5 minuti',
+            steps: [
+                'Apri l’App IO sul tuo smartphone ed esegui l’accesso con SPID o CIE',
+                'Tocca la voce "Portafoglio" nel menu in basso e seleziona "Aggiungi al Portafoglio"',
+                'Scegli "Documenti su IO" e seleziona la patente di guida o la tessera sanitaria',
+                'Attendi la sincronizzazione crittografata con le banche dati della PA',
+                'In caso di controllo, tocca il documento per mostrare il QR code ufficiale'
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'innovazioneItWallet',
+                    useWhen: 'Per approfondire il quadro normativo e il valore legale dei documenti.',
+                    beforeOpening: ['Nessuno']
+                },
+                {
+                    sourceId: 'appIoDocumenti',
+                    useWhen: 'Per scaricare o aggiornare l’applicazione ufficiale.',
+                    beforeOpening: ['SPID o CIE']
+                }
+            ],
+            commonErrors: [
+                'Pensare che basti una foto o screenshot del documento fisico',
+                'Dimenticare di aggiornare l’app prima di mettersi in viaggio'
+            ],
+            dontDo: [
+                'Non utilizzare versioni non ufficiali dell’App IO o link ricevuti via SMS'
+            ],
+            ifYouHaveProblems: [
+                'Consulta l’assistenza integrata nell’App IO o il portale io.italia.it'
+            ],
+            checklist: [
+                'Ho aggiornato l’App IO',
+                'Ho effettuato l’accesso con SPID o CIE',
+                'Ho aggiunto la patente e la tessera sanitaria',
+                'Ho verificato la correttezza dei dati'
+            ],
+            sources: [
+                {
+                    title: 'IT-Wallet su App IO',
+                    organization: 'Dipartimento per la trasformazione digitale',
+                    url: 'https://innovazione.gov.it/notizie/articoli/it-wallet-il-portafoglio-digitale-degli-italiani/',
+                    type: 'official',
+                    usedFor: 'Quadro normativo e valore legale',
+                    lastCheckedAt: '2026-08-27'
+                },
+                {
+                    title: 'Documenti digitali App IO',
+                    organization: 'PagoPA',
+                    url: 'https://io.italia.it/',
+                    type: 'official',
+                    usedFor: 'Funzionalità applicativa',
+                    lastCheckedAt: '2026-08-27'
                 }
             ]
         }

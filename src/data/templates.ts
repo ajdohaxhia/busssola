@@ -1,6 +1,6 @@
 import type { CivicTemplate, Source } from '@/types'
 
-const D = '2026-08-14'
+const D = '2026-08-27'
 const DISCLAIMER =
     'Questo kit non è un modulo ufficiale. Non sostituisce i modelli di INPS, Agenzia delle Entrate o altri enti. Serve a preparare documenti e passi, con fonti istituzionali.'
 
@@ -18,6 +18,112 @@ function pack(partial: Omit<CivicTemplate, 'disclaimer' | 'lastReviewedAt'>): Ci
 }
 
 export const CIVIC_TEMPLATES: CivicTemplate[] = [
+    pack({
+        slug: 'it-wallet',
+        title: 'Kit IT-Wallet e Documenti Digitali su App IO',
+        shortTitle: 'IT-Wallet',
+        category: 'documenti',
+        summary: 'Come attivare e mostrare patente, tessera sanitaria e Disability Card con valore legale su App IO.',
+        whenToUse: 'Vuoi avere i tuoi documenti ufficiali sempre disponibili su smartphone con pieno valore di legge.',
+        estimatedMinutes: 10,
+        officialEntity: 'Dipartimento per la trasformazione digitale / PagoPA',
+        documents: ['Smartphone compatibile (iOS o Android)', 'SPID (livello 2) o CIE 3.0 con PIN', 'App IO aggiornata'],
+        steps: [
+            'Scarica o aggiorna l’App IO all’ultima versione ufficiale.',
+            'Effettua l’accesso con SPID o CIE.',
+            'Accedi alla sezione Portafoglio > Documenti.',
+            'Aggiungi la Patente di Guida, la Tessera Sanitaria (TEAM) e la Carta Europea della Disabilità.',
+            'Verifica che i dati e la data di scadenza corrispondano a quelli registrati nelle banche dati statali.',
+            'In caso di controllo, genera e mostra il codice digitale/QR protetto direttamente dall’app.',
+        ],
+        dontForget: ['I documenti su IT-Wallet hanno valore legale in Italia; per l’espatrio fuori UE serve il passaporto fisico'],
+        officialLinks: ['innovazioneItWallet', 'appIoDocumenti'],
+        relatedGuide: '/moduli/modulo-09-documenti-identita',
+        relatedNews: ['it-wallet-app-io-2026'],
+        sources: [
+            src('IT-Wallet su App IO', 'Dipartimento per la trasformazione digitale', 'https://innovazione.gov.it/notizie/articoli/it-wallet-il-portafoglio-digitale-degli-italiani/'),
+            src('Documenti digitali App IO', 'PagoPA', 'https://io.italia.it/'),
+        ],
+    }),
+    pack({
+        slug: 'carta-dedicata-a-te',
+        title: 'Kit Carta Dedicata a Te 2026',
+        shortTitle: 'Dedicata a Te',
+        category: 'bonus',
+        summary: 'Requisiti (ISEE fino a 15.000 euro), assegnazione automatica e ritiro della carta da 500 euro per la spesa alimentare.',
+        whenToUse: 'Il tuo nucleo ha un ISEE entro 15.000 euro e non percepisce altri sussidi (ADI, NASpI, CIG).',
+        estimatedMinutes: 10,
+        officialEntity: 'MASAF / INPS / Comuni',
+        documents: ['Attestazione ISEE 2026 ordinaria valida', 'Documento d’identità e codice fiscale del beneficiario', 'Lettera/comunicazione del Comune con codice carta'],
+        steps: [
+            'Verifica di avere una DSU 2026 valida con ISEE sotto i 15.000 euro.',
+            'Non inviare alcuna domanda: l’INPS stila le graduatorie e le invia ai Comuni.',
+            'Attendi la lettera o la notifica ufficiale del tuo Comune di residenza.',
+            'Recati presso qualsiasi ufficio postale con documento, codice fiscale e lettera del Comune per ritirare la Postepay precaricata con 500 euro.',
+            'Utilizza la carta per acquistare beni alimentari di prima necessità nei negozi convenzionati.',
+        ],
+        dontForget: ['Non cliccare link SMS che chiedono dati bancari per sbloccare la carta: è phishing'],
+        officialLinks: ['masafDedicataATe', 'inpsIsee'],
+        relatedGuide: '/moduli/modulo-23-bonus-isee',
+        relatedNews: ['carta-dedicata-a-te-2026'],
+        sources: [
+            src('Focus Carta Dedicata a Te', 'MASAF', 'https://www.masaf.gov.it/focus-carta-dedicata-a-te'),
+            src('Scheda ISEE', 'INPS', 'https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.come-compilare-dsu-e-richiedere-isee-50125.come-compilare-la-dsu-e-richiedere-l-isee.html'),
+        ],
+    }),
+    pack({
+        slug: 'assegno-inclusione',
+        title: 'Kit Assegno di Inclusione (ADI) e Rinnovo',
+        shortTitle: 'ADI',
+        category: 'bonus',
+        summary: 'Domanda telematica, Patto di Attivazione Digitale su SIISL, convocazione servizi sociali e regole di rinnovo dopo 18 mesi.',
+        whenToUse: 'Nuclei con componenti minorenni, over 60, con disabilità o in condizione di svantaggio certificato (e ISEE familiare entro soglia).',
+        estimatedMinutes: 30,
+        officialEntity: 'INPS / Ministero del Lavoro',
+        documents: ['SPID, CIE o CNS', 'DSU e ISEE 2026 per prestazioni familiari', 'Certificazioni mediche per disabilità o svantaggio', 'Documento d’identità e permesso di soggiorno se stranieri'],
+        steps: [
+            'Presenta la domanda online sul sito INPS o tramite patronato.',
+            'Iscriviti alla piattaforma SIISL e sottoscrivi il Patto di Attivazione Digitale (PAD) per il nucleo.',
+            'Presentati entro 120 giorni al primo incontro presso i servizi sociali del tuo Comune.',
+            'Ritira la Carta di Inclusione presso gli uffici postali dopo la conferma di accoglimento.',
+            'In caso di rinnovo (dopo 18 mensilità erogate), presenta la nuova domanda nel mese successivo all’ultimo accredito.',
+        ],
+        dontForget: ['La mancata presentazione ai servizi sociali entro i termini comporta la sospensione del beneficio'],
+        officialLinks: ['inpsAdiScheda', 'inpsAdiRinnovoMsg2437', 'inpsAdiCasiSpecialiCirc58'],
+        relatedGuide: '/moduli/modulo-23-bonus-isee',
+        relatedNews: ['assegno-inclusione-rinnovo-2026'],
+        sources: [
+            src('Assegno di Inclusione INPS', 'INPS', 'https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.assegno-di-inclusione-adi-58474.assegno-di-inclusione-adi.html'),
+            src('Messaggio INPS 2437/2026', 'INPS', 'https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.circolari-e-messaggi.2026.07.messaggio-numero-2437-del-22-07-2026.html'),
+        ],
+    }),
+    pack({
+        slug: 'patente-crediti-cantieri',
+        title: 'Kit Patente a Crediti INL per Cantieri Edili',
+        shortTitle: 'Patente Cantieri',
+        category: 'lavoro',
+        summary: 'Procedura di rilascio, verifica dei 30 crediti base e gestione deleghe sul portale servizi dell’Ispettorato Nazionale del Lavoro.',
+        whenToUse: 'Sei titolare di un’impresa o lavoratore autonomo che opera fisicamente nei cantieri temporanei o mobili.',
+        estimatedMinutes: 20,
+        officialEntity: 'Ispettorato Nazionale del Lavoro',
+        documents: ['SPID livello 2 o CIE del legale rappresentante', 'Iscrizione alla Camera di Commercio (CCIAA)', 'DURC online in corso di validità', 'DURF (se previsto)', 'DVR e avvenuta designazione RSPP (per datori di lavoro)'],
+        steps: [
+            'Accedi al Portale Servizi INL (servizi.ispettorato.gov.it) con SPID o CIE.',
+            'Effettua l’attestazione come legale rappresentante o lavoratore autonomo.',
+            'Dichiara il possesso dei requisiti di sicurezza e regolarità contributiva/fiscale.',
+            'Ottieni il codice identificativo della patente con i 30 crediti iniziali attribuiti.',
+            'Comunica il codice patente al committente o coordinatore della sicurezza prima di accedere al cantiere.',
+            'Monitora periodicamente il saldo crediti (obbligo di rimanere sopra la soglia minima di 15 crediti per lavorare).',
+        ],
+        dontForget: ['Lavorare con meno di 15 crediti comporta l’allontanamento dal cantiere e sanzioni amministrative'],
+        officialLinks: ['inlPatenteCrediti', 'inlPortaleServizi'],
+        relatedGuide: '/moduli/modulo-12-lavoro-diritti',
+        relatedNews: ['patente-crediti-cantieri-2026'],
+        sources: [
+            src('Focus Patente a crediti', 'Ispettorato Nazionale del Lavoro', 'https://www.ispettorato.gov.it/focus-patente-a-crediti/'),
+            src('Portale Servizi INL', 'Ispettorato Nazionale del Lavoro', 'https://servizi.ispettorato.gov.it/'),
+        ],
+    }),
     pack({
         slug: '730-precompilato',
         title: 'Kit 730 precompilato 2026',

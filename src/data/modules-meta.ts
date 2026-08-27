@@ -201,15 +201,16 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "id": "modulo-09-documenti-identita",
     "number": 0,
     "title": "Documenti e Identità",
-    "description": "Guida pratica ai principali documenti di identità e strumenti di accesso digitale ai servizi pubblici.",
-    "lessonCount": 5,
+    "description": "Guida pratica ai principali documenti di identità, IT-Wallet e strumenti di accesso digitale ai servizi pubblici.",
+    "lessonCount": 6,
     "difficulty": "base",
     "icon": "IdCard",
     "category": "documenti",
-    "lastUpdated": "2026-05-14",
+    "lastUpdated": "2026-08-27",
     "featuredType": "none",
     "topProcedures": [
       "Richiesta SPID",
+      "IT-Wallet su App IO",
       "Cambio Residenza",
       "Recupero PUK CIE",
       "Pagamento pagoPA"
@@ -228,7 +229,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "base",
     "icon": "Briefcase",
     "category": "lavoro",
-    "lastUpdated": "2026-08-14",
+    "lastUpdated": "2026-08-27",
     "featuredType": "none"
   },
   {
@@ -264,7 +265,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "base",
     "icon": "Home",
     "category": "casa",
-    "lastUpdated": "2026-08-14",
+    "lastUpdated": "2026-08-27",
     "featuredType": "none"
   },
   {
@@ -312,7 +313,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "base",
     "icon": "Globe",
     "category": "immigrazione",
-    "lastUpdated": "2026-08-14",
+    "lastUpdated": "2026-08-27",
     "featuredType": "none"
   },
   {
@@ -324,7 +325,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "base",
     "icon": "ShoppingBag",
     "category": "consumatori",
-    "lastUpdated": "2026-08-14",
+    "lastUpdated": "2026-08-27",
     "featuredType": "none"
   },
   {
@@ -336,6 +337,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "base",
     "icon": "Car",
     "category": "mobilita",
+    "lastUpdated": "2026-08-27",
     "featuredType": "none"
   },
   {
@@ -347,7 +349,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "base",
     "icon": "Stethoscope",
     "category": "sanita",
-    "lastUpdated": "2026-08-14",
+    "lastUpdated": "2026-08-27",
     "featuredType": "none"
   },
   {
@@ -359,7 +361,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "base",
     "icon": "HeartHandshake",
     "category": "anziani",
-    "lastUpdated": "2026-08-14",
+    "lastUpdated": "2026-08-27",
     "featuredType": "none"
   },
   {
@@ -382,7 +384,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "base",
     "icon": "Banknote",
     "category": "bonus",
-    "lastUpdated": "2026-08-14",
+    "lastUpdated": "2026-08-27",
     "featuredType": "none"
   },
   {
@@ -406,7 +408,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "base",
     "icon": "Receipt",
     "category": "soldi",
-    "lastUpdated": "2026-08-14",
+    "lastUpdated": "2026-08-27",
     "featuredType": "none"
   },
   {
@@ -430,7 +432,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "intermedia",
     "icon": "Landmark",
     "category": "lavoro",
-    "lastUpdated": "2026-08-14",
+    "lastUpdated": "2026-08-27",
     "featuredType": "none",
     "mainEntity": "INPS"
   },
@@ -443,7 +445,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "intermedia",
     "icon": "FileWarning",
     "category": "soldi",
-    "lastUpdated": "2026-08-14",
+    "lastUpdated": "2026-08-27",
     "featuredType": "none",
     "mainEntity": "Agenzia delle entrate-Riscossione"
   },
@@ -456,7 +458,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "intermedia",
     "icon": "Briefcase",
     "category": "soldi",
-    "lastUpdated": "2026-08-14",
+    "lastUpdated": "2026-08-27",
     "featuredType": "none",
     "mainEntity": "Agenzia delle Entrate"
   },
@@ -469,7 +471,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "intermedia",
     "icon": "Home",
     "category": "casa",
-    "lastUpdated": "2026-08-14",
+    "lastUpdated": "2026-08-27",
     "featuredType": "none",
     "mainEntity": "Agenzia delle Entrate"
   },
@@ -482,7 +484,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "intermedia",
     "icon": "HeartHandshake",
     "category": "disabilita",
-    "lastUpdated": "2026-08-14",
+    "lastUpdated": "2026-08-27",
     "featuredType": "none",
     "mainEntity": "INPS"
   },
@@ -495,7 +497,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "intermedia",
     "icon": "Users",
     "category": "famiglia",
-    "lastUpdated": "2026-08-14",
+    "lastUpdated": "2026-08-27",
     "featuredType": "none",
     "mainEntity": "INPS"
   },
@@ -508,7 +510,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "base",
     "icon": "Landmark",
     "category": "lavoro",
-    "lastUpdated": "2026-08-14",
+    "lastUpdated": "2026-08-27",
     "featuredType": "none",
     "mainEntity": "inPA"
   },
@@ -521,7 +523,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "base",
     "icon": "Globe",
     "category": "documenti",
-    "lastUpdated": "2026-08-14",
+    "lastUpdated": "2026-08-27",
     "featuredType": "none",
     "mainEntity": "MAECI"
   },
@@ -534,7 +536,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "intermedia",
     "icon": "Scale",
     "category": "giustizia",
-    "lastUpdated": "2026-08-14",
+    "lastUpdated": "2026-08-27",
     "featuredType": "none",
     "mainEntity": "Ministero della Giustizia"
   },
@@ -547,7 +549,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "base",
     "icon": "PawPrint",
     "category": "famiglia",
-    "lastUpdated": "2026-08-14",
+    "lastUpdated": "2026-08-27",
     "featuredType": "none",
     "mainEntity": "Ministero della Salute"
   },
@@ -560,7 +562,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "base",
     "icon": "Building2",
     "category": "soldi",
-    "lastUpdated": "2026-08-14",
+    "lastUpdated": "2026-08-27",
     "featuredType": "none",
     "mainEntity": "Registro Imprese"
   },

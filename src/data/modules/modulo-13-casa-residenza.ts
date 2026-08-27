@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_13_casa_residenza: Module = {
     id: 'modulo-13-casa-residenza',
-    lastUpdated: '2026-08-14',
+    lastUpdated: '2026-08-27',
     title: 'Casa e Residenza',
     description: 'Gestione del contratto di affitto, utenze domestiche, agevolazioni fiscali e diritti abitativi.',
     category: 'casa',

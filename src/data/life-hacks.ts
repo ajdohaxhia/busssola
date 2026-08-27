@@ -3243,5 +3243,122 @@ export const LIFE_HACKS: LifeHack[] = [
         ],
         lastReviewedAt: "2024-05-20",
         badges: ["Lavoro", "Soldi"]
+    },
+    {
+        title: "Attivare patente e tessera sanitaria su IT-Wallet (App IO)",
+        slug: "attivazione-it-wallet-app-io",
+        category: "documenti",
+        target: ["cittadini", "lavoratori"],
+        difficulty: "facile",
+        time: "5 minuti",
+        benefit: "Documenti con valore legale sempre su smartphone",
+        summary: "Attiva la patente di guida, la tessera sanitaria e la Disability Card all'interno della sezione Portafoglio di App IO.",
+        whyUseful: "Dal 2026 i documenti digitali su App IO hanno pieno valore legale in Italia e possono essere mostrati durante i controlli delle forze dell'ordine o negli uffici pubblici.",
+        steps: [
+            "Apri l'App IO e accedi con SPID o CIE",
+            "Vai nella scheda 'Portafoglio' e tocca 'Aggiungi al Portafoglio'",
+            "Seleziona 'Documenti su IO' e scegli Patente o Tessera Sanitaria",
+            "Attendi il caricamento crittografato e verifica i tuoi dati",
+            "Mostra il codice QR o il documento digitale in caso di richiesta ufficiale"
+        ],
+        whatYouNeed: ["Smartphone con App IO aggiornata", "SPID o CIE attiva"],
+        officialLinks: ["innovazioneItWallet", "appIoDocumenti"],
+        commonErrors: [
+            "Confondere la versione digitale con un semplice screenshot o foto",
+            "Mostrare l'app disconnessa o senza connettività durante i controlli"
+        ],
+        limitations: [
+            "Valido per controlli e servizi in Italia; per viaggi fuori UE serve il documento fisico"
+        ],
+        sources: [
+            {
+                title: "IT-Wallet su App IO",
+                organization: "Dipartimento per la trasformazione digitale",
+                url: "https://innovazione.gov.it/notizie/articoli/it-wallet-il-portafoglio-digitale-degli-italiani/",
+                type: "official",
+                usedFor: "Guida attivazione e valore legale",
+                lastCheckedAt: "2026-08-27"
+            }
+        ],
+        lastReviewedAt: "2026-08-27",
+        badges: ["Risparmia tempo", "Documenti", "Novità 2026"]
+    },
+    {
+        title: "Verificare la Carta Dedicata a Te senza cadere in truffe",
+        slug: "controllare-carta-dedicata-a-te",
+        category: "bonus",
+        target: ["famiglie", "cittadini"],
+        difficulty: "facile",
+        time: "5 minuti",
+        benefit: "Eviti truffe phishing e sai esattamente se ti spetta",
+        summary: "Scopri come controllare se il tuo nucleo è nella graduatoria della Carta Dedicata a Te (500 euro) senza compilare moduli falsi.",
+        whyUseful: "Non esiste alcun modulo di domanda online. Chi ti invia SMS chiedendo di cliccare per sbloccare i 500 euro sta tentando una truffa bancaria.",
+        steps: [
+            "Verifica che il tuo ISEE 2026 ordinario sia inferiore a 15.000 euro",
+            "Controlla l'albo pretorio o la pagina servizi sociali del tuo Comune di residenza",
+            "Cerca il tuo numero di protocollo DSU nella graduatoria anonimizzata del Comune",
+            "Se ammesso, attendi la lettera del Comune o ritira la comunicazione allo sportello",
+            "Ritira la Postepay all'ufficio postale esibendo la lettera e il documento"
+        ],
+        whatYouNeed: ["Attestazione ISEE 2026", "Protocollo DSU INPS-ISEE-XXXX"],
+        officialLinks: ["masafDedicataATe", "inpsIsee"],
+        commonErrors: [
+            "Cliccare su SMS o email che promettono l'attivazione immediata",
+            "Cercare di fare domanda sul portale INPS (l'assegnazione è automatica)"
+        ],
+        limitations: [
+            "I fondi sono ripartiti per Comune: a parità di ISEE hanno priorità i nuclei con più figli minori"
+        ],
+        sources: [
+            {
+                title: "Decreto Carta Dedicata a Te",
+                organization: "MASAF",
+                url: "https://www.masaf.gov.it/focus-carta-dedicata-a-te",
+                type: "official",
+                usedFor: "Criteri e modalità di assegnazione",
+                lastCheckedAt: "2026-08-27"
+            }
+        ],
+        lastReviewedAt: "2026-08-27",
+        badges: ["Bonus", "Anti-truffa", "Famiglia"]
+    },
+    {
+        title: "Controllare il punteggio della patente a crediti per cantieri",
+        slug: "gestire-patente-crediti-inl",
+        category: "lavoro",
+        target: ["lavoratori", "imprese"],
+        difficulty: "media",
+        time: "10 minuti",
+        benefit: "Mantieni l'abilitazione a lavorare nei cantieri edili",
+        summary: "Come consultare il saldo punti della patente edilizia e richiedere crediti aggiuntivi sul portale INL.",
+        whyUseful: "Per lavorare nei cantieri edili è obbligatorio avere almeno 15 crediti. Sotto questa soglia non è consentito operare fisicamente nel cantiere.",
+        steps: [
+            "Accedi al portale servizi.ispettorato.gov.it con SPID o CIE",
+            "Seleziona 'Patente a crediti' dal cruscotto",
+            "Verifica lo stato della patente e il saldo punti attuale (partenza da 30 crediti)",
+            "Consulta lo storico di eventuali decurtazioni o attribuzioni",
+            "Se hai svolto formazione asseverata o investimenti sulla sicurezza, inoltra istanza per crediti extra"
+        ],
+        whatYouNeed: ["SPID o CIE del legale rappresentante o autonomo", "Dati dell'impresa"],
+        officialLinks: ["inlPatenteCrediti", "inlPortaleServizi"],
+        commonErrors: [
+            "Accedere con credenziali non intestate al legale rappresentante registrato in CCIAA",
+            "Dimenticare di trasmettere il codice patente al coordinatore per la sicurezza"
+        ],
+        limitations: [
+            "Si applica a chi opera fisicamente in cantiere; sono escluse le mere forniture o prestazioni intellettuali"
+        ],
+        sources: [
+            {
+                title: "Portale Servizi INL",
+                organization: "Ispettorato Nazionale del Lavoro",
+                url: "https://servizi.ispettorato.gov.it/",
+                type: "official",
+                usedFor: "Accesso e gestione crediti",
+                lastCheckedAt: "2026-08-27"
+            }
+        ],
+        lastReviewedAt: "2026-08-27",
+        badges: ["Lavoro", "Sicurezza", "Impresa"]
     }
 ];

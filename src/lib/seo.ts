@@ -646,7 +646,7 @@ export function HUB_METADATA_BUILDER(key: string): SeoMetadataOptions {
         },
         novita: {
             title: 'Novità civiche 2026: scadenze e cambiamenti verificati',
-            description: 'Cosa è cambiato nelle procedure pubbliche italiane, con fonti INPS, Agenzia delle Entrate, Ministero del Lavoro e ARERA. Aggiornato al 14 agosto 2026.',
+            description: 'Cosa è cambiato nelle procedure pubbliche italiane, con fonti INPS, Agenzia delle Entrate, Ministero del Lavoro, MIT e ARERA. Aggiornato al 27 agosto 2026.',
             path: '/novita/',
             keywords: ['novità ISEE 2026', '730 precompilato 2026 scadenze', 'NASpI 2026', 'Assegno Unico 30 giugno 2026'],
         },

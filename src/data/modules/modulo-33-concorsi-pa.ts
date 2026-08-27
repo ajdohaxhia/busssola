@@ -3,7 +3,7 @@ import { published, src, ol } from './civicPublished';
 
 export const modulo_33_concorsi_pa: Module = {
     id: 'modulo-33-concorsi-pa',
-    lastUpdated: '2026-08-14',
+    lastUpdated: '2026-08-27',
     title: 'Concorsi e pubblica amministrazione',
     description: 'Come registrarsi su inPA, compilare la domanda di concorso e il curriculum nel format del portale. Niente PDF allegati al posto del format, se il bando lo vieta.',
     category: 'lavoro',

@@ -1150,5 +1150,133 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     url: "https://www.arera.it/comunicati-stampa/dettaglio/elettricita-maggior-tutela-46-nel-iii-trimestre-2026-per-i-clienti-vulnerabili",
     category: "consumatori",
     type: "ente istituzionale"
+  },
+  innovazioneItWallet: {
+    id: 'innovazioneItWallet',
+    name: "Dipartimento per la trasformazione digitale — IT-Wallet su App IO",
+    ente: "Presidenza del Consiglio dei Ministri",
+    url: "https://innovazione.gov.it/notizie/articoli/it-wallet-il-portafoglio-digitale-degli-italiani/",
+    category: "identita-digitale",
+    type: "servizio ufficiale"
+  },
+  appIoDocumenti: {
+    id: 'appIoDocumenti',
+    name: "App IO — Portafoglio e Documenti Digitali",
+    ente: "PagoPA S.p.A.",
+    url: "https://io.italia.it/",
+    category: "identita-digitale",
+    type: "servizio ufficiale"
+  },
+  masafDedicataATe: {
+    id: 'masafDedicataATe',
+    name: "MASAF — Carta Dedicata a Te 2026-2027",
+    ente: "Ministero dell'Agricoltura, Sovranità Alimentare e Foreste",
+    url: "https://www.masaf.gov.it/focus-carta-dedicata-a-te",
+    category: "bonus",
+    type: "servizio ufficiale"
+  },
+  inlPatenteCrediti: {
+    id: 'inlPatenteCrediti',
+    name: "INL — Patente a crediti per l'edilizia",
+    ente: "Ispettorato Nazionale del Lavoro",
+    url: "https://www.ispettorato.gov.it/focus-patente-a-crediti/",
+    category: "lavoro",
+    type: "ente istituzionale"
+  },
+  inlPortaleServizi: {
+    id: 'inlPortaleServizi',
+    name: "Portale Servizi INL — Gestione Patente a Crediti",
+    ente: "Ispettorato Nazionale del Lavoro",
+    url: "https://servizi.ispettorato.gov.it/",
+    category: "lavoro",
+    type: "servizio ufficiale"
+  },
+  mitCodiceStrada: {
+    id: 'mitCodiceStrada',
+    name: "Ministero delle Infrastrutture e dei Trasporti — Norme di circolazione e sicurezza stradale",
+    ente: "Ministero delle Infrastrutture e dei Trasporti",
+    url: "https://www.mit.gov.it/temi/mobilita-e-sicurezza-stradale",
+    category: "mobilita",
+    type: "ente istituzionale"
+  },
+  inpsAdiScheda: {
+    id: 'inpsAdiScheda',
+    name: "INPS — Assegno di Inclusione (ADI)",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.assegno-di-inclusione-adi-58474.assegno-di-inclusione-adi.html",
+    category: "bonus",
+    type: "servizio ufficiale"
+  },
+  inpsAdiRinnovoMsg2437: {
+    id: 'inpsAdiRinnovoMsg2437',
+    name: "Messaggio INPS n. 2437 del 22 luglio 2026 — Rinnovo Assegno di Inclusione",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.circolari-e-messaggi.2026.07.messaggio-numero-2437-del-22-07-2026.html",
+    category: "bonus",
+    type: "ente istituzionale"
+  },
+  inpsAdiCasiSpecialiCirc58: {
+    id: 'inpsAdiCasiSpecialiCirc58',
+    name: "Circolare INPS n. 58 del 20 maggio 2026 — ADI e permessi di soggiorno per casi speciali",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.circolari-e-messaggi.2026.05.circolare-numero-58-del-20-05-2026.html",
+    category: "immigrazione",
+    type: "ente istituzionale"
+  },
+  portaleAutomobilista: {
+    id: 'portaleAutomobilista',
+    name: "Il Portale dell’Automobilista — Servizi Patente e Veicoli",
+    ente: "Ministero delle Infrastrutture e dei Trasporti",
+    url: "https://www.ilportaledellautomobilista.it/",
+    category: "mobilita",
+    type: "servizio ufficiale"
+  },
+  adeFringeBenefit: {
+    id: 'adeFringeBenefit',
+    name: "Agenzia delle Entrate — Welfare aziendale e fringe benefit",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/web/guest/area-tematica-fringe-benefit",
+    category: "lavoro",
+    type: "ente istituzionale"
+  },
+  inpsBonusPsicologo: {
+    id: 'inpsBonusPsicologo',
+    name: "INPS — Contributo sessioni di psicoterapia",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.contributo-sessioni-psicoterapia-58830.contributo-sessioni-psicoterapia.html",
+    category: "bonus",
+    type: "servizio ufficiale"
+  },
+  inpsBonusMammeCirc82: {
+    id: 'inpsBonusMammeCirc82',
+    name: "Circolare INPS n. 82 del 29 luglio 2026 — Sostegno madri lavoratrici e decontribuzione",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.circolari-e-messaggi.2026.07.circolare-numero-82-del-29-07-2026.html",
+    category: "famiglia",
+    type: "ente istituzionale"
+  },
+  murBorseStudio2026: {
+    id: 'murBorseStudio2026',
+    name: "MUR — Diritto allo Studio Universitario e limiti ISEE/ISPE",
+    ente: "Ministero dell'Università e della Ricerca",
+    url: "https://www.mur.gov.it/it/aree-tematiche/universita/diritto-allo-studio-universitario",
+    category: "universita",
+    type: "ente istituzionale"
+  },
+  culturaCarteGiovani: {
+    id: 'culturaCarteGiovani',
+    name: "Ministero della Cultura — Carta della Cultura Giovani e del Merito",
+    ente: "Ministero della Cultura",
+    url: "https://cartegiovani.cultura.gov.it/",
+    category: "bonus",
+    type: "servizio ufficiale"
+  },
+  mitSalvaCasa: {
+    id: 'mitSalvaCasa',
+    name: "Ministero delle Infrastrutture e dei Trasporti — Disposizioni urgenti in materia di semplificazione edilizia (Salva Casa)",
+    ente: "Ministero delle Infrastrutture e dei Trasporti",
+    url: "https://www.mit.gov.it/temi/edilizia-e-casa",
+    category: "casa",
+    type: "ente istituzionale"
   }
 };

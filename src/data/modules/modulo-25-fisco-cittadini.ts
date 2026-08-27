@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_25_fisco_cittadini: Module = {
     id: 'modulo-25-fisco-cittadini',
-    lastUpdated: '2026-08-14',
+    lastUpdated: '2026-08-27',
     title: 'Fisco e Cittadini',
     description: 'Guida ai servizi dell\'Agenzia delle Entrate, dichiarazione dei redditi e gestione delle scadenze fiscali.',
     category: 'soldi',

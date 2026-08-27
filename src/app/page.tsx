@@ -26,14 +26,17 @@ function hrefIfTemplate(slugs: string[], fallback: string) {
 }
 
 const STARTERS = [
+    { label: 'IT-Wallet', href: '/modelli/it-wallet', blurb: 'Patente e tessera sanitaria su App IO con valore legale.', entity: 'Dipartimento Trasformazione Digitale' },
     { label: 'SPID', href: '/modelli/spid', blurb: 'Identità digitale per INPS, Ade e Comune.', entity: 'AgID' },
     { label: 'CIE', href: '/moduli/cie-richiesta', blurb: 'Richiesta, rinnovo e uso della carta elettronica.', entity: 'Comune' },
     { label: 'ISEE', href: '/modelli/isee-dsu-mini', blurb: 'DSU e attestazione per bonus e prestazioni.', entity: 'INPS' },
+    { label: 'Dedicata a Te', href: '/modelli/carta-dedicata-a-te', blurb: 'Contributo 500 euro spesa per ISEE fino a 15.000 euro.', entity: 'MASAF / INPS' },
     { label: '730', href: '/modelli/730-precompilato', blurb: 'Precompilato 2026: consultare, correggere, inviare.', entity: 'Agenzia delle Entrate' },
     { label: 'NASpI', href: '/modelli/naspi', blurb: 'Disoccupazione: domanda entro 68 giorni.', entity: 'INPS' },
     { label: 'Residenza', href: '/moduli/cambio-residenza', blurb: 'Dichiarazione di cambio residenza, online o allo sportello.', entity: 'ANPR' },
     { label: 'Passaporto', href: '/modelli/passaporto', blurb: 'Prenotazione in questura e documenti da portare.', entity: 'Polizia di Stato' },
     { label: 'Bonus', href: '/modelli/bonus-sociali', blurb: 'Bonus sociali luce e gas e altre agevolazioni ISEE.', entity: 'ARERA / INPS' },
+    { label: 'ADI', href: '/modelli/assegno-inclusione', blurb: 'Assegno di Inclusione: requisiti, PAD e rinnovo 18 mesi.', entity: 'INPS' },
     { label: 'Truffa', href: '/moduli/modulo-03-truffe-phishing', blurb: 'Phishing, SMS falsi, cosa fare dopo un clic.', entity: 'Polizia Postale' },
     { label: 'Scuola', href: '/moduli/modulo-08-scuola-famiglia', blurb: 'Iscrizioni, registro e tutele per famiglie.', entity: 'Ministero Istruzione' },
     { label: 'Pensione', href: hrefIfModule(['modulo-27-pensioni-previdenza'], '/moduli/categoria/lavoro'), blurb: 'Domanda INPS, estratto contributivo, vecchiaia e anticipata.', entity: 'INPS' },
@@ -44,13 +47,13 @@ const STARTERS = [
 ]
 
 const FIRST_STEPS = [
-    { n: '01', title: 'SPID', text: 'La chiave per i servizi pubblici. Confronta i provider e fai il riconoscimento.', href: '/modelli/spid' },
-    { n: '02', title: 'CIE', text: 'Carta d’identità elettronica: richiesta al Comune e PIN/PUK.', href: '/moduli/cie-richiesta' },
+    { n: '01', title: 'SPID e CIE', text: 'La chiave per i servizi pubblici. Confronta i provider e usa IT-Wallet.', href: '/modelli/spid' },
+    { n: '02', title: 'IT-Wallet', text: 'Patente di guida e tessera sanitaria su App IO con valore legale.', href: '/modelli/it-wallet' },
     { n: '03', title: 'pagoPA e App IO', text: 'Pagamenti alla PA e avvisi sul canale ufficiale, non via SMS.', href: '/modelli/pagopa' },
     { n: '04', title: 'Kit documenti', text: 'Cosa tenere in ordine: identità, sanitario, fiscale, casa.', href: '/moduli/modulo-99-kit-checklist' },
 ]
 
-const FEATURED_TEMPLATE_SLUGS = ['730-precompilato', 'isee-dsu-mini', 'naspi', 'spid', 'passaporto', 'cambio-residenza']
+const FEATURED_TEMPLATE_SLUGS = ['730-precompilato', 'it-wallet', 'isee-dsu-mini', 'carta-dedicata-a-te', 'naspi', 'spid', 'passaporto', 'cambio-residenza']
 
 const HOME_PATH_IDS = ['inizia-da-qui', 'documenti-essenziali', 'lavoro-e-diritti', 'genitori-famiglie']
 
@@ -60,8 +63,9 @@ const AUDIENCES = [
         icon: Heart,
         links: [
             { label: 'ISEE e DSU 2026', href: '/modelli/isee-dsu-mini' },
-            { label: 'Assegno unico', href: '/modelli/assegno-unico' },
-            { label: 'Scuola e registro', href: '/moduli/modulo-08-scuola-famiglia' },
+            { label: 'Carta Dedicata a Te', href: '/modelli/carta-dedicata-a-te' },
+            { label: 'Assegno Unico', href: '/modelli/assegno-unico' },
+            { label: 'Assegno Inclusione', href: '/modelli/assegno-inclusione' },
         ],
     },
     {
@@ -70,6 +74,7 @@ const AUDIENCES = [
         links: [
             { label: '730 precompilato', href: '/modelli/730-precompilato' },
             { label: 'NASpI', href: '/modelli/naspi' },
+            { label: 'Patente Cantieri', href: '/modelli/patente-crediti-cantieri' },
             { label: 'Busta paga', href: hrefIfModule(['busta-paga'], '/moduli/modulo-12-lavoro-diritti') },
         ],
     },

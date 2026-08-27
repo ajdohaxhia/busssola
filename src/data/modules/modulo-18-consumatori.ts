@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_18_consumatori: Module = {
     id: 'modulo-18-consumatori',
-    lastUpdated: '2026-08-14',
+    lastUpdated: '2026-08-27',
     title: 'Modulo 18: Diritti dei Consumatori',
     description: 'Conosci i tuoi diritti quando acquisti online o in negozio: resi, garanzie e rimborsi spiegati in modo semplice.',
     category: 'consumatori',

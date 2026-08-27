@@ -3,7 +3,7 @@ import { published, src, ol } from './civicPublished';
 
 export const modulo_28_cartelle_riscossione: Module = {
     id: 'modulo-28-cartelle-riscossione',
-    lastUpdated: '2026-08-14',
+    lastUpdated: '2026-08-27',
     title: 'Cartelle e riscossione',
     description: 'Come consultare cartelle e avvisi, pagare, rateizzare e chiedere sgravio o autotutela sul sito di Agenzia delle entrate-Riscossione.',
     category: 'soldi',

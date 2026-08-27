@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_17_immigrazione: Module = {
     id: 'modulo-17-immigrazione',
-    lastUpdated: '2026-08-14',
+    lastUpdated: '2026-08-27',
     title: 'Modulo 17: Immigrazione e Soggiorno',
     description: 'Guida pratica per orientarsi tra permessi di soggiorno, rinnovi e documenti essenziali per cittadini stranieri in Italia.',
     category: 'immigrazione',

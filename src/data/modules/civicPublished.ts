@@ -1,6 +1,6 @@
 import type { Lesson, OfficialLinkV2, Source } from '@/types';
 
-export const REVIEW = '2026-08-14';
+export const REVIEW = '2026-08-27';
 
 export const src = (
     title: string,

@@ -3,7 +3,7 @@ import { published, src, ol } from './civicPublished';
 
 export const modulo_37_impresa_camerale: Module = {
     id: 'modulo-37-impresa-camerale',
-    lastUpdated: '2026-08-14',
+    lastUpdated: '2026-08-27',
     title: 'Impresa individuale e visura camerale',
     description: 'Visura del Registro imprese, impresa Italia per il titolare e rinvio alla Comunicazione Unica. Fonti InfoCamere / Registro imprese e Agenzia delle Entrate.',
     category: 'soldi',

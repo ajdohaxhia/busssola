@@ -3,7 +3,7 @@ import { published, src, ol } from './civicPublished';
 
 export const modulo_29_partita_iva_forfettario: Module = {
     id: 'modulo-29-partita-iva-forfettario',
-    lastUpdated: '2026-08-14',
+    lastUpdated: '2026-08-27',
     title: 'Partita IVA e forfettario',
     description: 'Apertura, variazione e chiusura della partita IVA, orientamento al regime forfetario, F24 telematico e iscrizione alla Gestione separata INPS. Procedure da completare sui siti Ade e INPS.',
     category: 'soldi',

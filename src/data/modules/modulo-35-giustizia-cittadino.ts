@@ -3,7 +3,7 @@ import { published, src, ol } from './civicPublished';
 
 export const modulo_35_giustizia_cittadino: Module = {
     id: 'modulo-35-giustizia-cittadino',
-    lastUpdated: '2026-08-14',
+    lastUpdated: '2026-08-27',
     title: 'Giustizia del cittadino',
     description: 'Patrocinio a spese dello Stato, mediazione civile e orientamento al giudice di pace: solo fonti giustizia.it. Non sostituisce un avvocato.',
     category: 'giustizia',

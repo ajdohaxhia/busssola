@@ -3,7 +3,7 @@ import { published, src, ol } from './civicPublished';
 
 export const modulo_32_famiglia_avanzata: Module = {
     id: 'modulo-32-famiglia-avanzata',
-    lastUpdated: '2026-08-14',
+    lastUpdated: '2026-08-27',
     title: 'Famiglia: congedi, DAT e separazione',
     description: 'Congedo parentale e di paternità INPS, disposizioni anticipate di trattamento sul sito del Ministero della Salute, orientamento alla separazione consensuale sul sito della Giustizia.',
     category: 'famiglia',

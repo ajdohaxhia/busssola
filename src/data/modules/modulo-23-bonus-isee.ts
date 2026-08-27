@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_23_bonus_isee: Module = {
     id: 'modulo-23-bonus-isee',
-    lastUpdated: '2026-08-14',
+    lastUpdated: '2026-08-27',
     title: 'Bonus, ISEE e Agevolazioni',
     description: 'Guida pratica per preparare l\'ISEE, richiedere bonus sociali, assegno unico e altre agevolazioni economiche per famiglie e cittadini in Italia.',
     category: 'bonus',

@@ -12,7 +12,7 @@ export default function NovitaPage() {
                 badge="Novità"
                 icon={Newspaper}
                 title="Cosa è cambiato nel 2026"
-                description="Solo fatti verificati su pagine INPS, Agenzia delle Entrate, Ministero del Lavoro e ARERA. Ultimo controllo editoriale: 14 agosto 2026."
+                description="Solo fatti verificati su pagine INPS, Agenzia delle Entrate, Ministero del Lavoro, MIT e ARERA. Ultimo controllo editoriale: 27 agosto 2026."
             />
             <div className="grid gap-4">
                 {items.map((n) => (

@@ -3,7 +3,7 @@ import { published, src, ol } from './civicPublished';
 
 export const modulo_34_aire_esteri: Module = {
     id: 'modulo-34-aire-esteri',
-    lastUpdated: '2026-08-14',
+    lastUpdated: '2026-08-27',
     title: 'AIRE e italiani all’estero',
     description: 'Iscrizione all’Anagrafe degli italiani residenti all’estero tramite Fast-It, SPID da fuori Italia, orientamento al voto per corrispondenza.',
     category: 'documenti',

@@ -3,7 +3,7 @@ import { published, src, ol } from './civicPublished';
 
 export const modulo_27_pensioni_previdenza: Module = {
     id: 'modulo-27-pensioni-previdenza',
-    lastUpdated: '2026-08-14',
+    lastUpdated: '2026-08-27',
     title: 'Pensioni e previdenza',
     description: 'Domanda di pensione INPS, vecchiaia e anticipata, APE sociale, estratto contributivo, ricostituzione e riscatto laurea: orientamento sulle schede ufficiali.',
     category: 'lavoro',
