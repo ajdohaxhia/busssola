@@ -11,7 +11,15 @@ export default function NewsDetailClient({ item }: { item: NewsItem }) {
             <Link href="/novita" className="text-sm font-semibold text-primary print:hidden">← Tutte le novità</Link>
             <Breadcrumbs items={[{ label: 'Novità', href: '/novita' }, { label: item.title, href: '#' }]} className="print:hidden" />
             <header className="space-y-3">
-                <p className="text-sm text-muted">{item.date} · verificato {item.lastReviewedAt}</p>
+                <div className="flex flex-wrap items-center gap-3">
+                    <p className="text-sm text-muted">{item.date} · verificato {item.lastReviewedAt}</p>
+                    {item.sources[0] && (
+                        <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                            Fonte verificata: {item.sources[0].organization}
+                        </span>
+                    )}
+                </div>
                 <h1 className="text-4xl font-display font-semibold tracking-tight">{item.title}</h1>
                 <p className="text-lg text-secondary">{item.summary}</p>
             </header>
@@ -33,17 +41,37 @@ export default function NewsDetailClient({ item }: { item: NewsItem }) {
                     {item.whatToDo.map((x) => <li key={x}>{x}</li>)}
                 </ol>
             </section>
-            <section className="text-sm space-y-2">
-                <h2 className="text-xl font-display font-semibold">Fonti ufficiali</h2>
-                <ul className="space-y-1">
+            <section className="space-y-3 pt-6 border-t border-border">
+                <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                    <h2 className="text-xl font-display font-semibold">Fonti ufficiali e verificate</h2>
+                </div>
+                <div className="grid gap-3">
                     {item.sources.map((s) => (
-                        <li key={s.url}>
-                            <a href={s.url} target="_blank" rel="noopener noreferrer" className="text-primary underline inline-flex items-center gap-1">
-                                {s.title} — {s.organization} <ExternalLink className="w-3 h-3" />
-                            </a>
-                        </li>
+                        <a
+                            key={s.url}
+                            href={s.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-4 rounded-2xl border border-border bg-surface hover:border-primary/60 transition-all flex items-start justify-between gap-4 group"
+                        >
+                            <div className="space-y-1">
+                                <div className="flex items-center gap-2">
+                                    <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-md">
+                                        Fonte verificata: {s.organization} ↗
+                                    </span>
+                                </div>
+                                <p className="font-semibold text-foreground group-hover:text-primary transition-colors text-base">
+                                    {s.title}
+                                </p>
+                                <p className="text-xs text-muted font-mono break-all">
+                                    {s.url}
+                                </p>
+                            </div>
+                            <ExternalLink className="w-4 h-4 text-primary shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                        </a>
                     ))}
-                </ul>
+                </div>
             </section>
             <div className="flex flex-wrap gap-3 print:hidden">
                 {item.relatedGuides.map((href) => (

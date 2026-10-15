@@ -1,6 +1,6 @@
 import type { CivicTemplate, Source } from '@/types'
 
-const D = '2026-08-27'
+const D = '2026-10-16'
 const DISCLAIMER =
     'Questo kit non è un modulo ufficiale. Non sostituisce i modelli di INPS, Agenzia delle Entrate o altri enti. Serve a preparare documenti e passi, con fonti istituzionali.'
 
@@ -864,5 +864,57 @@ export const CIVIC_TEMPLATES: CivicTemplate[] = [
         officialLinks: ['areraSwitchingElettricita', 'areraSwitchingGas', 'areraConciliazione'],
         relatedGuide: '/moduli/modulo-18-consumatori',
         sources: [src('Cambio fornitore elettrico', 'ARERA', 'https://www.arera.it/single-digital-gateway-elettricita')],
+    }),
+    pack({
+        slug: 'segnalazione-truffa-polizia-postale',
+        title: 'Kit Segnalazione Truffe e Frodi Online (Polizia Postale)',
+        shortTitle: 'Segnalazione Truffe',
+        category: 'sicurezza',
+        summary: 'Come raccogliere prove informatiche e presentare segnalazione o denuncia al Commissariato di P.S. Online per phishing, furto account o truffe finanziarie.',
+        whenToUse: 'Sei stato bersaglio o vittima di un raggiro telematico (WhatsApp, email, finti SMS bancari o compravendite).',
+        estimatedMinutes: 15,
+        officialEntity: 'Polizia di Stato — Commissariato di P.S. Online',
+        documents: ['Documento di identità e codice fiscale', 'Screenshot di messaggi, chat e numeri telefonici con data e ora', 'Copia della contabile del bonifico o ricevuta di pagamento con CRO/TRN', 'Indirizzi web (URL) completi dei siti clone visitati'],
+        steps: [
+            'Fai subito screenshot completi delle conversazioni e delle pagine web prima che vengano cancellate.',
+            'Se hai inserito dati di pagamento, contatta immediatamente la banca o l’emittente della carta per il blocco.',
+            'Accedi al portale ufficiale commissariatodips.it e seleziona Segnala Online o Denunce Web.',
+            'Compila i campi descrivendo cronologicamente l’accaduto e allegando i dettagli tecnici.',
+            'Stampa o salva la ricevuta con il numero di protocollo rilasciato dal sistema.',
+            'Se richiesto, recati presso l’ufficio di Polizia o la caserma dei Carabinieri per la formalizzazione dell’atto.'
+        ],
+        dontForget: ['Non cancellare chat o messaggi per rabbia: sono le uniche prove digitali valide per le indagini.'],
+        officialLinks: ['commissariatoPs', 'psSegnalaOnline', 'psDenunceWeb'],
+        relatedGuide: '/moduli/modulo-03-truffe-phishing',
+        sources: [
+            src('Commissariato di P.S. Online', 'Polizia di Stato', 'https://www.commissariatodips.it/'),
+            src('Segnala online reati telematici', 'Polizia di Stato', 'https://www.commissariatodips.it/segnalazioni/segnala-online/index.html'),
+        ],
+    }),
+    pack({
+        slug: 'reclamo-garante-privacy-deepfake',
+        title: 'Kit Reclamo al Garante Privacy per Deepfake e Violazioni Digitali',
+        shortTitle: 'Reclamo Privacy & IA',
+        category: 'privacy',
+        summary: 'Istruzioni e documenti per attivare i canali d’urgenza del Garante contro la diffusione non consensuale di immagini create con IA (art. 612-quater c.p.) o furti d’identità.',
+        whenToUse: 'La tua immagine o voce è stata clonata o manipolata senza consenso, o i tuoi dati sono stati diffusi online.',
+        estimatedMinutes: 20,
+        officialEntity: 'Garante per la protezione dei dati personali',
+        documents: ['Documento di riconoscimento in corso di validità', 'Link/URL precisi delle pagine o profili dove è pubblicato il deepfake', 'Screenshot e registrazioni che attestano la lesione dell’identità', 'Eventuale copia della diffida inviata al gestore della piattaforma'],
+        steps: [
+            'Accedi alla sezione Modulistica e servizi online del portale garanteprivacy.it.',
+            'Seleziona il modulo per Reclamo o per Segnalazione d’urgenza per contenuti intimi/manipolati.',
+            'Indica con precisione i link di diffusione e il titolare del trattamento o la piattaforma social.',
+            'Allega le prove e l’indicazione delle motivazioni a sostegno della violazione dei dati personali.',
+            'Invia il modulo firmato digitalmente o con copia del documento via PEC all’indirizzo del Garante.',
+            'Conserva la ricevuta di consegna PEC per monitorare i termini del procedimento.'
+        ],
+        dontForget: ['La diffusione illecita di contenuti generati con IA è punita dall’art. 612-quater c.p. con reclusione fino a 5 anni.'],
+        officialLinks: ['garanteModulistica', 'garanteRevengePorn', 'garanteReclamo'],
+        relatedGuide: '/moduli/modulo-04-sextortion-ricatti',
+        sources: [
+            src('Modulistica e servizi online', 'Garante Privacy', 'https://www.garanteprivacy.it/home/modulistica-e-servizi-online'),
+            src('Provvedimenti su Deepfake e IA', 'Garante Privacy', 'https://www.gpdp.it/garante/doc.jsp?ID=10306949'),
+        ],
     }),
 ]

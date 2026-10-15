@@ -367,6 +367,70 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     category: "sicurezza",
     type: "ente istituzionale"
   },
+  certAgidHome: {
+    id: 'certAgidHome',
+    name: "CERT-AGID - Notifiche e Allerte Sicurezza",
+    ente: "AgID",
+    url: "https://cert-agid.gov.it/",
+    category: "sicurezza",
+    type: "servizio ufficiale"
+  },
+  psAggiornamentoDispositivi2026: {
+    id: 'psAggiornamentoDispositivi2026',
+    name: "Polizia Postale - Allerta aggiornamento e sicurezza dispositivi",
+    ente: "Polizia di Stato",
+    url: "https://www.commissariatodips.it/notizie/articolo/aggiorna-i-tuoi-dispositivi-proteggi-i-tuoi-dati/index.html",
+    category: "sicurezza",
+    type: "servizio ufficiale"
+  },
+  psTruffaBallerina2026: {
+    id: 'psTruffaBallerina2026',
+    name: "Polizia Postale - Allerta furto account WhatsApp e falsi concorsi",
+    ente: "Polizia di Stato",
+    url: "https://www.commissariatodips.it/notizie/articolo/nuova-ondata-di-furti-di-account-whatsapp-attenzione-ai-falsi-concorsi-online/index.html",
+    category: "sicurezza",
+    type: "servizio ufficiale"
+  },
+  garanteDeepfake2026: {
+    id: 'garanteDeepfake2026',
+    name: "Garante Privacy - Provvedimenti su Deepfake e IA",
+    ente: "Garante per la protezione dei dati personali",
+    url: "https://www.gpdp.it/garante/doc.jsp?ID=10306949",
+    category: "privacy",
+    type: "ente istituzionale"
+  },
+  psSitiCloneIa2026: {
+    id: 'psSitiCloneIa2026',
+    name: "Polizia Postale - Allerta siti clone e frodi generate con IA",
+    ente: "Polizia di Stato",
+    url: "https://www.commissariatodips.it/notizie/articolo/siti-clone-e-intelligenza-artificiale-attenzione-alle-truffe/index.html",
+    category: "sicurezza",
+    type: "servizio ufficiale"
+  },
+  certAgidMalwareSsn2026: {
+    id: 'certAgidMalwareSsn2026',
+    name: "CERT-AGID - Allerta malware StreamRAT e XWorm su falso sito SSN",
+    ente: "AgID",
+    url: "https://cert-agid.gov.it/news/falso-sito-del-servizio-sanitario-nazionale-distribuisce-streamrat-su-android-e-xworm-su-windows/",
+    category: "sicurezza",
+    type: "servizio ufficiale"
+  },
+  certAgidPhishingAci2026: {
+    id: 'certAgidPhishingAci2026',
+    name: "CERT-AGID - Allerta phishing e smishing bollo auto ACI",
+    ente: "AgID",
+    url: "https://cert-agid.gov.it/news/in-corso-un-phishing-a-tema-bollo-auto-ai-danni-di-aci/",
+    category: "sicurezza",
+    type: "servizio ufficiale"
+  },
+  certAgidMintsloaderPec2026: {
+    id: 'certAgidMintsloaderPec2026',
+    name: "CERT-AGID - Allerta malware MintsLoader tramite PEC compromesse",
+    ente: "AgID",
+    url: "https://cert-agid.gov.it/news/mintsloader-via-pec-falsi-solleciti-di-pagamento-per-diffondere-malware/",
+    category: "sicurezza",
+    type: "servizio ufficiale"
+  },
 
   // BANCHE / FINANZA / TUTELA
   abfHome: {

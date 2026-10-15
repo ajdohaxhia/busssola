@@ -23,8 +23,8 @@ async function main() {
     
     // Check key pages
     const checks = [
-        { path: './out/moduli/index.html', expect: ['Catalogo Guide'] },
-        { path: './out/sos/index.html', expect: ['Pericolo Fisico'] },
+        { path: './out/moduli/index.html', expect: ['Catalogo', 'Tutte le guide pratiche'] },
+        { path: './out/sos/index.html', expect: ['chiama 112', 'SOS'] },
         { path: './out/faq/index.html', expect: ['Busssola è davvero gratuita?'] }
     ];
 

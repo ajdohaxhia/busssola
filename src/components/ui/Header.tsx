@@ -10,6 +10,7 @@ const navItems = [
     { href: '/moduli', label: 'Guide' },
     { href: '/modelli', label: 'Modelli' },
     { href: '/novita', label: 'Novità' },
+    { href: '/verifica-truffe', label: 'Verifica Truffe IA' },
     { href: '/percorsi', label: 'Percorsi' },
     { href: '/tips', label: 'Trucchi' },
 ];

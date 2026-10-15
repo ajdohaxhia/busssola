@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import {
-    AlertTriangle, ArrowRight, CheckCircle2, Clock, Copy, Database,
+    ArrowRight, CheckCircle2, Clock, Copy, Database,
     ExternalLink, Info, Phone, Printer, ShieldAlert, XCircle,
 } from 'lucide-react'
 import Link from 'next/link'
@@ -11,6 +11,7 @@ import { Container } from '@/components/ui/Container'
 import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { ImminentDangerBanner, PhysicalDangerCallout } from '@/components/sos/ImminentDangerBanner'
+import { SecurityAlertBanner } from '@/components/ui/SecurityAlertBanner'
 import { SOS_CASES, type SosCase } from '@/data/sos-cases'
 import { cn } from '@/lib/utils'
 
@@ -59,6 +60,8 @@ export default function SOSPage() {
                     Busssola non è Polizia, Carabinieri o Pronto Soccorso. Se c&apos;è pericolo per una persona, l&apos;unica cosa da fare è chiamare il 112. I protocolli sotto servono solo quando non c&apos;è un&apos;emergenza in corso.
                 </p>
             </header>
+
+            <SecurityAlertBanner variant="sos" />
 
             {!selected ? (
                 <div className="space-y-12 print:hidden">

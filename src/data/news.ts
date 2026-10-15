@@ -1,17 +1,221 @@
 import type { NewsItem, Source } from '@/types'
 
-const D = '2026-08-27'
+const D = '2026-10-16'
 
-const src = (title: string, organization: string, url: string): Source => ({
+const src = (title: string, organization: string, url: string, usedFor = 'Allerta e sicurezza 2026'): Source => ({
     title,
     organization,
     url,
     type: 'official',
-    usedFor: 'Novità normativa 2026',
+    usedFor,
     lastCheckedAt: D,
 })
 
 export const CIVIC_NEWS: NewsItem[] = [
+    {
+        slug: 'aggiornamento-dispositivi-sicurezza-2026',
+        title: 'Sicurezza dispositivi: la Polizia Postale raccomanda l’aggiornamento immediato di smartphone e PC',
+        date: '2026-10-12',
+        summary: 'La Polizia Postale richiama l’attenzione sui rischi derivanti da dispositivi non aggiornati: le vulnerabilità di sistema permettono l’accesso non autorizzato e il controllo da remoto. Backup sicuro, aggiornamenti e controllo delle sessioni attive.',
+        body: [
+            'Con un avviso del 12 ottobre 2026, il Commissariato di P.S. Online della Polizia Postale ha evidenziato come rimandare gli aggiornamenti di sistema su smartphone, tablet e computer esponga gli utenti a gravi falle di sicurezza note e già corrette dai produttori.',
+            'I malintenzionati sfruttano le vulnerabilità non sanate per sottrarre password, scavalcare l’autenticazione a due fattori e, in diversi casi, assumere il controllo invisibile del dispositivo tramite spyware e malware.',
+            'La Polizia Postale invita a non rinunciare agli aggiornamenti per mancanza di memoria: consiglia di eseguire un backup di foto e documenti su supporti esterni sicuri o cloud protetto, liberare lo spazio necessario e verificare periodicamente dalle impostazioni delle app (WhatsApp, Telegram, social) quali dispositivi risultano attualmente connessi.',
+        ],
+        whatChanged: [
+            'Allerta ufficiale del 12 ottobre 2026 del Commissariato di P.S. Online sulle vulnerabilità software',
+            'Raccomandazione di backup preventivo per consentire l’installazione degli aggiornamenti',
+            'Audit periodico delle sessioni attive nelle app di messaggistica e social per scovare accessi abusivi',
+        ],
+        whoIsAffected: 'Tutti i cittadini in possesso di smartphone, tablet e personal computer collegati a internet.',
+        whatToDo: [
+            'Attiva gli aggiornamenti automatici del sistema operativo (iOS, Android, Windows, macOS)',
+            'In caso di memoria insufficiente, effettua un backup sicuro e libera spazio senza rinviare l’update',
+            'Apri le impostazioni di sicurezza di WhatsApp e delle tue caselle email e disconnetti i dispositivi sconosciuti',
+        ],
+        sourceIds: ['psAggiornamentoDispositivi2026', 'commissariatoPs'],
+        sources: [
+            src('Aggiorna i tuoi dispositivi, proteggi i tuoi dati', 'Polizia Postale — Commissariato di P.S. Online', 'https://www.commissariatodips.it/notizie/articolo/aggiorna-i-tuoi-dispositivi-proteggi-i-tuoi-dati/index.html'),
+        ],
+        relatedGuides: ['/moduli/modulo-02-account-security', '/moduli/modulo-07-privacy-smartphone'],
+        relatedTemplates: ['denuncia-furto'],
+        lastReviewedAt: D,
+    },
+    {
+        slug: 'whatsapp-furto-account-falsi-concorsi-2026',
+        title: 'Furto account WhatsApp: allerta della Polizia Postale sulla "truffa della ballerina" e falsi concorsi',
+        date: '2026-10-10',
+        summary: 'Nuova massiccia ondata di messaggi WhatsApp inviati da contatti rubati che invitano a votare per un finto concorso. Il link sottrae il codice SMS a 6 cifre permettendo ai truffatori di rubare il profilo e richiedere denaro agli amici.',
+        body: [
+            'La Polizia Postale e il CERT-AgID hanno rilevato una nuova ondata della cosiddetta "truffa della ballerina" su WhatsApp. Gli utenti ricevono messaggi da numeri già presenti nella propria rubrica (a loro volta compromessi) con la foto di un minore e l’invito a votare per una presunta gara artistica o scolastica.',
+            'Il link conduce a un sito civetta che richiede l’inserimento del proprio numero telefonico e, subito dopo, del codice numerico a 6 cifre ricevuto via SMS da WhatsApp.',
+            'Inserendo quel codice, la vittima consegna l’autorizzazione per registrare il proprio account WhatsApp sullo smartphone dei truffatori. Il profilo viene immediatamente sottratto e usato per contattare la rubrica con richieste urgenti di bonifico o ricariche Postepay.',
+        ],
+        whatChanged: [
+            'Intensificazione delle campagne di social engineering su WhatsApp a tema finti contest scolastici',
+            'Furto immediato della sessione tramite cessione del codice di verifica OTP',
+            'Uso dell’account violato per estorsioni e truffe di identità a danno dei contatti in rubrica',
+        ],
+        whoIsAffected: 'Utenti di WhatsApp e delle principali piattaforme di messaggistica istantanea.',
+        whatToDo: [
+            'Non condividere mai e con nessuno il codice a 6 cifre ricevuto via SMS, anche se richiesto da un contatto fidato',
+            'Attiva subito la verifica in due passaggi (PIN a 6 cifre e email di recupero) nelle impostazioni di WhatsApp',
+            'Se l’account è stato sottratto, reinstalla subito WhatsApp, inserisci il tuo numero e richiedi il nuovo codice OTP per disconnettere l’intruso',
+        ],
+        sourceIds: ['psTruffaBallerina2026', 'certAgidHome'],
+        sources: [
+            src('Nuova ondata di furti di account WhatsApp: attenzione ai falsi concorsi online', 'Polizia Postale — Commissariato di P.S. Online', 'https://www.commissariatodips.it/notizie/articolo/nuova-ondata-di-furti-di-account-whatsapp-attenzione-ai-falsi-concorsi-online/index.html'),
+            src('Torna la "truffa della ballerina": falsi concorsi su WhatsApp per sottrarre gli account', 'CERT-AGID', 'https://cert-agid.gov.it/news/torna-la-truffa-della-ballerina-falsi-concorsi-su-whatsapp-per-sottrarre-gli-account/'),
+        ],
+        relatedGuides: ['/moduli/modulo-02-account-security', '/moduli/modulo-03-truffe-phishing'],
+        relatedTemplates: ['denuncia-furto'],
+        lastReviewedAt: D,
+    },
+    {
+        slug: 'garante-privacy-deepfake-ia-2026',
+        title: 'Deepfake e intelligenza artificiale: il Garante Privacy rafforza le tutele contro la manipolazione digitale',
+        date: '2026-10-08',
+        summary: 'Con il riepilogo dell’8 ottobre 2026, il Garante Privacy fa il punto sui provvedimenti contro i deepfake: stop ad app che generano immagini intime non consensuali, applicazione del nuovo reato (art. 612-quater c.p.) e vincoli di trasparenza.',
+        body: [
+            'Il Garante per la protezione dei dati personali ha pubblicato l’8 ottobre 2026 una dettagliata ricognizione dei provvedimenti adottati in materia di deepfake e intelligenza artificiale, alla luce della legge n. 132 che ha introdotto all’art. 612-quater c.p. il reato di "Illecita diffusione di contenuti generati o manipolati con intelligenza artificiale".',
+            'L’Autorità è intervenuta con provvedimenti restrittivi d’urgenza nei confronti di piattaforme (come Clothoff) che permettevano la generazione di nudità virtuali non consensuali a partire da foto ordinarie, e ha richiamato al rispetto della dignità anche le trasmissioni satiriche che impiegano cloni vocali e video di personaggi pubblici.',
+            'Il Garante ha ribadito che la diffusione di video o audio deepfake senza consenso costituisce violazione sia penale che della disciplina privacy europea (GDPR), con facoltà per i cittadini di presentare reclami d’urgenza e chiedere la rimozione tempestiva dei contenuti.',
+        ],
+        whatChanged: [
+            'Operatività dell’art. 612-quater c.p. per la punizione della diffusione di contenuti manipolati con IA',
+            'Stop e limitazione provvisoria dei trattamenti per app e bot che generano nudi non consensuali',
+            'Canali rapidi del Garante per segnalare furti di immagine e manipolazioni digitali',
+        ],
+        whoIsAffected: 'Cittadini, minori, donne e professionisti vittime di manipolazione di immagini o clonazione vocale.',
+        whatToDo: [
+            'In caso di diffusione di deepfake intimi, utilizza il canale d’urgenza del Garante Privacy per bloccare la propagazione online',
+            'Conserva prove digitali (URL, screenshot con data e orario, intestazioni) prima che i contenuti vengano modificati',
+            'Sporgi querela presso la Polizia Postale o le forze dell’ordine per il reato previsto dall’art. 612-quater c.p.',
+        ],
+        sourceIds: ['garanteDeepfake2026', 'garanteRevengePorn', 'garanteReclamo'],
+        sources: [
+            src('Deepfake, cosa ha fatto il Garante Privacy', 'Garante per la protezione dei dati personali', 'https://www.gpdp.it/garante/doc.jsp?ID=10306949'),
+        ],
+        relatedGuides: ['/moduli/modulo-04-sextortion-ricatti', '/moduli/modulo-06-stalking-doxxing'],
+        relatedTemplates: ['denuncia-furto'],
+        lastReviewedAt: D,
+    },
+    {
+        slug: 'siti-clone-ia-truffe-online-2026',
+        title: 'Siti clone e intelligenza artificiale: allarme Polizia Postale su portali civetta e clonazione vocale',
+        date: '2026-09-25',
+        summary: 'L’intelligenza artificiale generativa viene sfruttata per clonare portali di banche, enti pubblici e servizi di spedizione senza imperfezioni visive o grammaticali, spesso abbinata a chiamate con audio deepfake.',
+        body: [
+            'La Polizia Postale ha emesso un allarme il 25 settembre 2026 sulla crescente sofisticazione delle truffe digitali potenziate dall’Intelligenza Artificiale. I criminali informatici utilizzano modelli generativi per riprodurre siti web con layout, loghi e linguaggi perfettamente identici agli originali istituzionali o bancari.',
+            'A differenza delle vecchie truffe, i testi attuali sono privi di errori grammaticali o refusi ortografici e si adattano con precisione al contesto della vittima. Inoltre, cresce l’uso di messaggi vocali e telefonate create con voice cloning, capaci di imitare la voce di colleghi, direttori di banca o parenti.',
+            'I portali civetta vengono pubblicizzati tramite annunci sponsorizzati sui motori di ricerca o link in email e SMS. Il loro scopo è catturare credenziali SPID, numeri di carte di pagamento e codici autorizzativi OTP.',
+        ],
+        whatChanged: [
+            'Generazione automatizzata di portali civetta identici a banche e PA tramite IA generativa',
+            'Superamento dei tradizionali indicatori di phishing (assenza di errori di sintassi nei testi)',
+            'Integrazione con vishing avanzato e falsificazione vocale dei referenti',
+        ],
+        whoIsAffected: 'Cittadini, consumatori online e addetti contabili di aziende e professionisti.',
+        whatToDo: [
+            'Non affidarti all’aspetto grafico o alla correttezza del testo: controlla sempre il dominio nella barra degli indirizzi',
+            'Accedi ai servizi bancari e governativi digitando l’URL a mano o tramite app ufficiale, non da link di ricerca sponsorizzati',
+            'Se ricevi una richiesta urgente di denaro o credenziali a voce, riattacca e richiama il numero ufficiale del contatto',
+        ],
+        sourceIds: ['psSitiCloneIa2026', 'commissariatoPs'],
+        sources: [
+            src('Siti clone e intelligenza artificiale: attenzione alle truffe', 'Polizia Postale — Commissariato di P.S. Online', 'https://www.commissariatodips.it/notizie/articolo/siti-clone-e-intelligenza-artificiale-attenzione-alle-truffe/index.html'),
+        ],
+        relatedGuides: ['/moduli/modulo-03-truffe-phishing', '/moduli/modulo-14-soldi-banche-truffe'],
+        relatedTemplates: ['denuncia-furto'],
+        lastReviewedAt: D,
+    },
+    {
+        slug: 'falso-ssn-malware-streamrat-xworm-2026',
+        title: 'Malware a tema Sanità: falso sito del Servizio Sanitario Nazionale diffonde StreamRAT e XWorm',
+        date: '2026-09-24',
+        summary: 'Il CERT-AgID ha individuato una campagna malevola che clona il portale del Servizio Sanitario Nazionale: il server riconosce il dispositivo della vittima e scarica StreamRAT su Android o il trojan XWorm su Windows.',
+        body: [
+            'Il 24 settembre 2026 il CERT-AgID ha pubblicato l’analisi di una pericolosa campagna informatica che sfrutta il brand e la fiducia nel Servizio Sanitario Nazionale (SSN) per infettare smartphone e PC.',
+            'La particolarità della minaccia risiede nel meccanismo dinamico di distribuzione: la pagina web fraudolenta analizza lo User-Agent del visitatore. Se l’utente si collega da smartphone Android, viene proposto il download di un’applicazione malevola contenente il trojan StreamRAT (capace di registrare lo schermo e intercettare credenziali). Se la visita avviene da PC Windows, viene invece recapitato l’infostealer XWorm.',
+            'Il CERT-AgID ha tempestivamente diramato gli Indicatori di Compromissione (IoC) alle Pubbliche Amministrazioni e attivato le procedure di oscuramento dei domini civetta.',
+        ],
+        whatChanged: [
+            'Uso mirato dell’identità del Servizio Sanitario Nazionale come esca malevola',
+            'Distribuzione multi-piattaforma condizionale (StreamRAT per Android, XWorm per Windows)',
+            'Rilevamento e pubblicazione IoC da parte del CERT-AgID',
+        ],
+        whoIsAffected: 'Cittadini che cercano certificati medici, referti sanitari o prenotazioni sanitarie online.',
+        whatToDo: [
+            'Non installare mai file APK scaricati direttamente dal browser su smartphone Android: usa solo Google Play Store',
+            'Verifica che i siti sanitari appartengano al dominio istituzionale regionale o a gov.it / salute.gov.it',
+            'In caso di download accidentale, disconnetti il dispositivo dalla rete Wi-Fi ed esegui una scansione antivirus approfondita',
+        ],
+        sourceIds: ['certAgidMalwareSsn2026', 'certAgidHome'],
+        sources: [
+            src('Falso sito del Servizio Sanitario Nazionale distribuisce StreamRat su Android e XWorm su Windows', 'CERT-AGID', 'https://cert-agid.gov.it/news/falso-sito-del-servizio-sanitario-nazionale-distribuisce-streamrat-su-android-e-xworm-su-windows/'),
+        ],
+        relatedGuides: ['/moduli/modulo-20-sanita-territoriale', '/moduli/modulo-07-privacy-smartphone'],
+        relatedTemplates: ['fse-scelta-medico'],
+        lastReviewedAt: D,
+    },
+    {
+        slug: 'mintsloader-pec-falsi-solleciti-2026',
+        title: 'MintsLoader via PEC: allarme CERT-AgID su falsi solleciti di pagamento da caselle compromesse',
+        date: '2026-09-24',
+        summary: 'Il CERT-AgID segnala una massiccia diffusione del malware MintsLoader inviato tramite caselle di Posta Elettronica Certificata (PEC) violate, con allegati ZIP che simulano fatture o solleciti scaduti.',
+        body: [
+            'Il CERT-AgID ha lanciato il 24 settembre 2026 un allarme sulla diffusione del malware MintsLoader attraverso caselle PEC legalmente registrate ma precedentemente compromesse dai criminali informatici.',
+            'Poiché i messaggi provengono da indirizzi PEC autentici, superano le difese antispam convenzionali e inducono le aziende e i professionisti ad aprire allegati compressi (.zip) credendo si tratti di regolari fatture o solleciti di pagamento.',
+            'Una volta eseguito l’allegato, il loader malevolo MintsLoader stabilisce una connessione cifrata con server di comando e controllo (C2) e provvede al caricamento di payload aggiuntivi (come ransomware e strumenti di esfiltrazione dati aziendali).',
+        ],
+        whatChanged: [
+            'Sfruttamento di caselle PEC reali per aggirare i controlli di reputazione del traffico email',
+            'Campagna mirata contro studi professionali, PMI ed enti locali',
+            'Diffusione del downloader MintsLoader predisposto al furto di credenziali',
+        ],
+        whoIsAffected: 'Aziende, titolari di Partita IVA, liberi professionisti e uffici amministrativi della PA.',
+        whatToDo: [
+            'Non aprire file compressi (.zip, .7z) ricevuti via PEC se contengono presunte fatture: le fatture elettroniche ufficiali transitano solo in formato XML/p7m tramite SDI',
+            'Abilita l’autenticazione a due fattori su tutte le caselle PEC aziendali e cambia password regolarmente',
+            'In caso di dubbio, contatta il mittente tramite un canale telefonico verificato prima di aprire gli allegati',
+        ],
+        sourceIds: ['certAgidMintsloaderPec2026', 'certAgidHome'],
+        sources: [
+            src('MintsLoader via PEC: falsi solleciti di pagamento per diffondere malware', 'CERT-AGID', 'https://cert-agid.gov.it/news/mintsloader-via-pec-falsi-solleciti-di-pagamento-per-diffondere-malware/'),
+        ],
+        relatedGuides: ['/moduli/modulo-15-sicurezza-avanzata', '/moduli/modulo-29-partita-iva-forfettario'],
+        relatedTemplates: ['pec'],
+        lastReviewedAt: D,
+    },
+    {
+        slug: 'phishing-bollo-auto-aci-2026',
+        title: 'Phishing bollo auto: falsi portali ACI richiedono pagamenti immediati con carte di credito',
+        date: '2026-09-23',
+        summary: 'Campagna di smishing e phishing con l’uso abusivo del logo dell’Automobile Club d’Italia (ACI): false comunicazioni di morosità invitano a saldare il bollo auto su domini clone per sottrarre dati personali e bancari.',
+        body: [
+            'Il CERT-AgID ha individuato il 23 settembre 2026 una nuova campagna di phishing che sfrutta indebitamente il nome, il logo e la grafica dell’Automobile Club d’Italia (ACI).',
+            'Le vittime ricevono messaggi SMS o email che notificano il mancato pagamento del bollo auto annuale e avvertono di imminenti sanzioni per mora o fermi amministrativi. Il collegamento rimanda a siti fraudolenti registrati su domini ingannevoli (come acitalia[.]info e acitalia[.]click).',
+            'Nel portale contraffatto viene richiesto dapprima l’inserimento del codice fiscale e della targa del veicolo, mostrando un importo fittizio da saldare, e successivamente viene presentata una finta pagina di pagamento per carpire numero di carta, scadenza e codice CVV.',
+        ],
+        whatChanged: [
+            'Registrazione di nuovi domini ingannevoli a imitazione dell’Automobile Club d’Italia',
+            'Simulazione del calcolo bollo auto con schermate di pagamento fraudolente',
+            'Tentativo di sottrazione massiva di dati anagrafici e credenziali di carte di credito',
+        ],
+        whoIsAffected: 'Tutti i proprietari di autoveicoli e motocicli tenuti al versamento della tassa automobilistica.',
+        whatToDo: [
+            'Verifica la regolarità del bollo auto unicamente sul portale ufficiale aci.it o tramite la funzione dedicata su App IO',
+            'Non inserire mai targa e carta di credito su siti raggiunti tramite link in SMS o messaggi istantanei',
+            'Se hai inserito i dati della carta, contatta immediatamente la tua banca per bloccarla e contestare eventuali addebiti',
+        ],
+        sourceIds: ['certAgidPhishingAci2026', 'certAgidHome'],
+        sources: [
+            src('In corso un phishing a tema "bollo auto" ai danni di ACI', 'CERT-AGID', 'https://cert-agid.gov.it/news/in-corso-un-phishing-a-tema-bollo-auto-ai-danni-di-aci/'),
+        ],
+        relatedGuides: ['/moduli/modulo-19-mobilita', '/moduli/modulo-03-truffe-phishing'],
+        relatedTemplates: ['pagopa'],
+        lastReviewedAt: D,
+    },
     {
         slug: 'fringe-benefit-soglie-2026',
         title: 'Fringe benefit 2026: soglie esenti a 1.000 euro e 2.000 euro con figli a carico',

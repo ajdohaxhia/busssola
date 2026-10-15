@@ -10,6 +10,7 @@ import { CIVIC_NEWS } from '@/data/news'
 import { CIVIC_TEMPLATES } from '@/data/templates'
 import { LEARNING_PATHS } from '@/data/paths'
 import { getModuleById } from '@/data/modules/index'
+import { SecurityAlertBanner } from '@/components/ui/SecurityAlertBanner'
 
 function hrefIfModule(ids: string[], fallback: string) {
     for (const id of ids) {
@@ -38,6 +39,7 @@ const STARTERS = [
     { label: 'Bonus', href: '/modelli/bonus-sociali', blurb: 'Bonus sociali luce e gas e altre agevolazioni ISEE.', entity: 'ARERA / INPS' },
     { label: 'ADI', href: '/modelli/assegno-inclusione', blurb: 'Assegno di Inclusione: requisiti, PAD e rinnovo 18 mesi.', entity: 'INPS' },
     { label: 'Truffa', href: '/moduli/modulo-03-truffe-phishing', blurb: 'Phishing, SMS falsi, cosa fare dopo un clic.', entity: 'Polizia Postale' },
+    { label: 'Verifica Truffe IA', href: '/verifica-truffe', blurb: 'Analizzatore interattivo per SMS, WhatsApp e audio/video deepfake.', entity: 'Strumento Civico' },
     { label: 'Scuola', href: '/moduli/modulo-08-scuola-famiglia', blurb: 'Iscrizioni, registro e tutele per famiglie.', entity: 'Ministero Istruzione' },
     { label: 'Pensione', href: hrefIfModule(['modulo-27-pensioni-previdenza'], '/moduli/categoria/lavoro'), blurb: 'Domanda INPS, estratto contributivo, vecchiaia e anticipata.', entity: 'INPS' },
     { label: 'P.IVA', href: hrefIfModule(['modulo-29-partita-iva-forfettario'], '/moduli/modulo-25-fisco-cittadini'), blurb: 'Apertura e adempimenti di base per chi lavora in proprio.', entity: 'Agenzia delle Entrate' },
@@ -172,6 +174,8 @@ export default function Home() {
                 </p>
             </section>
 
+            <SecurityAlertBanner variant="home" />
+
             <section className="space-y-6">
                 <SectionHead title="Inizia da qui" href="/percorsi/inizia-da-qui" linkLabel="Percorso completo" />
                 <p className="text-secondary max-w-2xl">
@@ -228,12 +232,28 @@ export default function Home() {
                 <div className="grid md:grid-cols-3 gap-4">
                     {latestNews.map((n) => (
                         <Link key={n.slug} href={`/novita/${n.slug}`}>
-                            <Card className="p-6 h-full space-y-2 hover:border-primary">
-                                <p className="text-xs text-muted flex items-center gap-2">
-                                    <Newspaper className="w-3 h-3" />{n.date}
-                                </p>
-                                <h3 className="font-display font-semibold text-lg leading-snug">{n.title}</h3>
-                                <p className="text-sm text-secondary line-clamp-3">{n.summary}</p>
+                            <Card className="p-6 h-full flex flex-col justify-between space-y-3 hover:border-primary transition-all">
+                                <div className="space-y-2">
+                                    <div className="flex items-center justify-between gap-2">
+                                        <p className="text-xs text-muted flex items-center gap-1.5">
+                                            <Newspaper className="w-3.5 h-3.5 text-primary" />{n.date}
+                                        </p>
+                                        {n.sources[0] && (
+                                            <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full">
+                                                {n.sources[0].organization}
+                                            </span>
+                                        )}
+                                    </div>
+                                    <h3 className="font-display font-semibold text-lg leading-snug">{n.title}</h3>
+                                    <p className="text-sm text-secondary line-clamp-3">{n.summary}</p>
+                                </div>
+                                <div className="pt-3 border-t border-border/40 text-xs flex items-center justify-between text-primary font-medium">
+                                    <span className="inline-flex items-center gap-1.5">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                                        Fonte verificata: {n.sources[0]?.organization || 'Ufficiale'}
+                                    </span>
+                                    <span>↗</span>
+                                </div>
                             </Card>
                         </Link>
                     ))}

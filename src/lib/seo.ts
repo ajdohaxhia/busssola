@@ -645,10 +645,10 @@ export function HUB_METADATA_BUILDER(key: string): SeoMetadataOptions {
             keywords: ['modello 730 documenti', 'kit ISEE DSU', 'checklist NASpI', 'documenti cambio residenza', 'come richiedere SPID'],
         },
         novita: {
-            title: 'Novità civiche 2026: scadenze e cambiamenti verificati',
-            description: 'Cosa è cambiato nelle procedure pubbliche italiane, con fonti INPS, Agenzia delle Entrate, Ministero del Lavoro, MIT e ARERA. Aggiornato al 27 agosto 2026.',
+            title: 'Novità civiche e sicurezza 2026: scadenze e allarmi verificati',
+            description: 'Cosa è cambiato nelle procedure pubbliche e sicurezza digitale in Italia, con fonti Polizia Postale, CERT-AgID, Garante Privacy, INPS e Agenzia delle Entrate. Aggiornato al 16 ottobre 2026.',
             path: '/novita/',
-            keywords: ['novità ISEE 2026', '730 precompilato 2026 scadenze', 'NASpI 2026', 'Assegno Unico 30 giugno 2026'],
+            keywords: ['novità sicurezza 2026', 'truffe online polizia postale', 'allarmi cert-agid', 'novità ISEE 2026', '730 precompilato 2026'],
         },
         fonti: {
             title: 'Archivio fonti ufficiali e istituzionali',

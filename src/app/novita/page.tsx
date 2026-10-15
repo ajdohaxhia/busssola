@@ -12,15 +12,28 @@ export default function NovitaPage() {
                 badge="Novità"
                 icon={Newspaper}
                 title="Cosa è cambiato nel 2026"
-                description="Solo fatti verificati su pagine INPS, Agenzia delle Entrate, Ministero del Lavoro, MIT e ARERA. Ultimo controllo editoriale: 27 agosto 2026."
+                description="Solo fatti verificati su fonti istituzionali e bollettini ufficiali: Polizia Postale, CERT-AgID, Garante Privacy, INPS, Agenzia delle Entrate, Ministero del Lavoro, MIT e ARERA. Ultimo controllo editoriale: 16 ottobre 2026."
             />
             <div className="grid gap-4">
                 {items.map((n) => (
                     <Link key={n.slug} href={`/novita/${n.slug}`}>
-                        <Card className="p-6 space-y-2 hover:border-primary">
-                            <p className="text-xs text-muted">{n.date} · verificato {n.lastReviewedAt}</p>
+                        <Card className="p-6 space-y-3 hover:border-primary transition-all">
+                            <div className="flex flex-wrap items-center justify-between gap-2">
+                                <p className="text-xs text-muted">{n.date} · verificato {n.lastReviewedAt}</p>
+                                {n.sources[0] && (
+                                    <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                                        Fonte verificata: {n.sources[0].organization} ↗
+                                    </span>
+                                )}
+                            </div>
                             <h2 className="text-2xl font-display font-semibold">{n.title}</h2>
-                            <p className="text-secondary">{n.summary}</p>
+                            <p className="text-secondary leading-relaxed">{n.summary}</p>
+                            {n.sources[0]?.title && (
+                                <p className="text-xs text-muted pt-1 border-t border-border/30 font-mono truncate">
+                                    Rif: {n.sources[0].title}
+                                </p>
+                            )}
                         </Card>
                     </Link>
                 ))}

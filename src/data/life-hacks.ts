@@ -3281,7 +3281,7 @@ export const LIFE_HACKS: LifeHack[] = [
             }
         ],
         lastReviewedAt: "2026-08-27",
-        badges: ["Risparmia tempo", "Documenti", "Novità 2026"]
+        badges: ["Risparmia tempo", "Documenti"]
     },
     {
         title: "Verificare la Carta Dedicata a Te senza cadere in truffe",
@@ -3320,13 +3320,13 @@ export const LIFE_HACKS: LifeHack[] = [
             }
         ],
         lastReviewedAt: "2026-08-27",
-        badges: ["Bonus", "Anti-truffa", "Famiglia"]
+        badges: ["Soldi", "Sicurezza", "Evita errore"]
     },
     {
         title: "Controllare il punteggio della patente a crediti per cantieri",
         slug: "gestire-patente-crediti-inl",
         category: "lavoro",
-        target: ["lavoratori", "imprese"],
+        target: ["lavoratori", "cittadini"],
         difficulty: "media",
         time: "10 minuti",
         benefit: "Mantieni l'abilitazione a lavorare nei cantieri edili",
@@ -3359,6 +3359,162 @@ export const LIFE_HACKS: LifeHack[] = [
             }
         ],
         lastReviewedAt: "2026-08-27",
-        badges: ["Lavoro", "Sicurezza", "Impresa"]
+        badges: ["Lavoro", "Sicurezza", "Evita errore"]
+    },
+    {
+        title: "Proteggere e recuperare l'account WhatsApp da furti e truffe",
+        slug: "recupero-protezione-account-whatsapp",
+        category: "sicurezza",
+        target: ["cittadini", "famiglie", "lavoratori"],
+        difficulty: "facile",
+        time: "5 minuti",
+        benefit: "Blocchi accessi non autorizzati ed espelli subito i truffatori",
+        summary: "Come configurare la verifica in due passaggi su WhatsApp e come forzare la disconnessione dei criminali se il profilo è stato rubato.",
+        whyUseful: "Le truffe che invitano a votare finti concorsi mirano a sottrarre il codice SMS a 6 cifre per rubare l'account e chiedere soldi ai tuoi familiari.",
+        steps: [
+            "Apri WhatsApp > Impostazioni > Account > Verifica in due passaggi e imposta un PIN segreto",
+            "Aggiungi un indirizzo email di recupero per ripristinare il PIN in caso di dimenticanza",
+            "Controlla periodicamente Impostazioni > Dispositivi collegati e disconnetti qualsiasi sessione sconosciuta",
+            "Non condividere mai con nessuno il codice a 6 cifre ricevuto via SMS, anche se richiesto da un contatto della rubrica",
+            "Se l'account è stato rubato: reinstalla WhatsApp, inserisci il tuo numero e richiedi il codice SMS. L'accesso simultaneo espellerà subito il truffatore"
+        ],
+        whatYouNeed: ["Smartphone con SIM attiva", "Accesso alle impostazioni di WhatsApp"],
+        officialLinks: ["psTruffaBallerina2026", "commissariatoPs"],
+        commonErrors: [
+            "Inviare il codice di verifica via chat credendo a una richiesta urgente di un amico",
+            "Dimenticare di impostare l'email di sicurezza nella verifica in due passaggi"
+        ],
+        limitations: [
+            "Se il truffatore ha attivato a sua volta la verifica in due passaggi, potresti dover attendere 7 giorni per il reset completo del PIN"
+        ],
+        sources: [
+            {
+                title: "Allerta furto account WhatsApp e falsi concorsi",
+                organization: "Polizia Postale — Commissariato di P.S. Online",
+                url: "https://www.commissariatodips.it/notizie/articolo/nuova-ondata-di-furti-di-account-whatsapp-attenzione-ai-falsi-concorsi-online/index.html",
+                type: "official",
+                usedFor: "Protocollo di sicurezza e recupero",
+                lastCheckedAt: "2026-10-16"
+            }
+        ],
+        lastReviewedAt: "2026-10-16",
+        badges: ["Sicurezza", "Evita errore", "Urgente"]
+    },
+    {
+        title: "Verificare e pagare il bollo auto evitando truffe e finti SMS",
+        slug: "pagare-verificare-bollo-auto-senza-truffe",
+        category: "mobilita",
+        target: ["cittadini", "lavoratori"],
+        difficulty: "facile",
+        time: "5 minuti",
+        benefit: "Paghi solo l'importo certificato senza rischiare il furto della carta di credito",
+        summary: "Come consultare la reale posizione del bollo auto e saldare via pagoPA evitando i domini clone segnalati dal CERT-AgID.",
+        whyUseful: "I messaggi SMS che minacciano fermi amministrativi immediati rimandano a siti clone dell'ACI per rubare i dati della carta di credito.",
+        steps: [
+            "Non cliccare su alcun link ricevuto via SMS o messaggio istantaneo che parla di bollo auto scaduto",
+            "Apri il browser e digita direttamente aci.it oppure apri l'App IO",
+            "Accedi con SPID o CIE alla sezione 'Bollo Auto' per verificare lo stato dei versamenti",
+            "Inserisci la targa e la regione di residenza per calcolare l'importo esatto al centesimo",
+            "Completa il pagamento unicamente tramite la piattaforma ufficiale pagoPA con ricevuta telematica RT"
+        ],
+        whatYouNeed: ["Targa del veicolo", "Codice fiscale del proprietario", "SPID o CIE"],
+        officialLinks: ["certAgidPhishingAci2026", "pagopaHome"],
+        commonErrors: [
+            "Inserire il numero di carta di credito su siti con domini .info, .click o privi del dominio aci.it",
+            "Pagare due volte senza verificare lo storico pagamenti su App IO"
+        ],
+        limitations: [
+            "Il servizio di calcolo online ACI è attivo per le Regioni e Province autonome convenzionate"
+        ],
+        sources: [
+            {
+                title: "Phishing a tema bollo auto ai danni di ACI",
+                organization: "CERT-AGID",
+                url: "https://cert-agid.gov.it/news/in-corso-un-phishing-a-tema-bollo-auto-ai-danni-di-aci/",
+                type: "official",
+                usedFor: "Analisi domini contraffatti e prevenzione",
+                lastCheckedAt: "2026-10-16"
+            }
+        ],
+        lastReviewedAt: "2026-10-16",
+        badges: ["Soldi", "Sicurezza", "Evita errore"]
+    },
+    {
+        title: "Riconoscere e segnalare deepfake, clonazione vocale e truffe IA",
+        slug: "riconoscere-segnalare-deepfake-ia",
+        category: "privacy",
+        target: ["cittadini", "famiglie", "anziani"],
+        difficulty: "facile",
+        time: "5 minuti",
+        benefit: "Neutralizzi raggiri emotivi e sai come richiedere la rimozione legale",
+        summary: "Come individuare telefonate e video creati con intelligenza artificiale e come attivare la tutela del Garante Privacy.",
+        whyUseful: "L'art. 612-quater c.p. punisce la diffusione illecita di contenuti manipolati con IA. Conoscere i segnali ti protegge da estorsioni e finte emergenze familiari.",
+        steps: [
+            "Ascolta attentamente la voce: nei cloni IA mancano i rumori di respiro spontanei e la cadenza è metallica",
+            "Fai una domanda personale su un ricordo noto solo a voi: l'interlocutore o il bot non saprà rispondere",
+            "Stabilisci preventivamente una 'parola d'ordine familiare' da pronunciare in caso di vere urgenze economiche",
+            "Se ricevi una richiesta di bonifico urgente per un presunto incidente, riaggancia e chiama il numero salvato in rubrica",
+            "In caso di video intimi o manipolati senza consenso, inoltra subito reclamo d'urgenza al Garante Privacy (garanteprivacy.it)"
+        ],
+        whatYouNeed: ["Consapevolezza dei segnali di allarme", "Parola d'ordine familiare"],
+        officialLinks: ["garanteDeepfake2026", "garanteRevengePorn"],
+        commonErrors: [
+            "Farsi prendere dal panico e inviare denaro immediato tramite ricariche o bonifici istantanei",
+            "Cancellare le registrazioni vocali o i messaggi ricevuti anziché conservarli come prova"
+        ],
+        limitations: [
+            "I modelli IA migliorano costantemente; la verifica vocale diretta su canale separato resta la difesa più sicura"
+        ],
+        sources: [
+            {
+                title: "Deepfake, cosa ha fatto il Garante Privacy",
+                organization: "Garante per la protezione dei dati personali",
+                url: "https://www.gpdp.it/garante/doc.jsp?ID=10306949",
+                type: "official",
+                usedFor: "Quadro sanzionatorio e tutele d'urgenza",
+                lastCheckedAt: "2026-10-16"
+            }
+        ],
+        lastReviewedAt: "2026-10-16",
+        badges: ["Privacy", "Sicurezza", "Urgente"]
+    },
+    {
+        title: "Riconoscere false fatture e allegati malevoli ricevuti via PEC",
+        slug: "difesa-false-fatture-pec-mintsloader",
+        category: "sicurezza",
+        target: ["lavoratori", "cittadini"],
+        difficulty: "media",
+        time: "5 minuti",
+        benefit: "Eviti infezioni da ransomware e furti di credenziali aziendali",
+        summary: "Istruzioni per riconoscere le email PEC contraffatte che diffondono il malware MintsLoader tramite allegati ZIP.",
+        whyUseful: "Una casella PEC compromessa può inviare messaggi autenticati che superano l'antispam ma contengono virus distruttivi.",
+        steps: [
+            "Ricorda la regola base: le fatture elettroniche non viaggiano mai come archivio .ZIP via PEC, ma in formato .xml/.xml.p7m tramite SDI",
+            "Verifica che l'indirizzo PEC del mittente corrisponda esattamente a quello registrato nell'indice INI-PEC (inipec.gov.it)",
+            "Non cliccare su link che invitano a scaricare fatture o solleciti da servizi di cloud storage esterni",
+            "Nel sistema operativo attiva l'opzione 'Mostra estensioni nomi file' per individuare file eseguibili nascosti",
+            "Se un allegato risulta sospetto, invia la segnalazione al CERT-AgID a malware@cert-agid.gov.it"
+        ],
+        whatYouNeed: ["Client di posta o webmail PEC", "Antivirus aggiornato"],
+        officialLinks: ["certAgidMintsloaderPec2026", "certAgidHome"],
+        commonErrors: [
+            "Ritenere una mail sicura solo perché inviata da una casella con suffisso @pec",
+            "Estrarre ed eseguire file con estensione .exe, .js o .vbs mascherati da documenti contabili"
+        ],
+        limitations: [
+            "Le caselle PEC violate appaiono legittime nei registri finché il titolare non ne riprende il controllo"
+        ],
+        sources: [
+            {
+                title: "Allerta malware MintsLoader via PEC",
+                organization: "CERT-AGID",
+                url: "https://cert-agid.gov.it/news/mintsloader-via-pec-falsi-solleciti-di-pagamento-per-diffondere-malware/",
+                type: "official",
+                usedFor: "Identificazione minacce e vettori PEC",
+                lastCheckedAt: "2026-10-16"
+            }
+        ],
+        lastReviewedAt: "2026-10-16",
+        badges: ["Sicurezza", "Lavoro", "Evita errore"]
     }
 ];
