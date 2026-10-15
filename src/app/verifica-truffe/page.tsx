@@ -55,6 +55,13 @@ const PRESETS: PresetExample[] = [
         text: 'La tua identità SPID verrà sospesa entro 24 ore per mancato rinnovo del canone di sicurezza. Clicca su spid-aggiornamento.info e inserisci credenziali e documento.',
         threatLevel: 'critico',
         explanation: 'Lo SPID per i cittadini privati è gratuito e non richiede canoni di rinnovo via link. Il sito mira a sottrarre le credenziali di accesso ai portali della Pubblica Amministrazione.'
+    },
+    {
+        title: 'Falso Avviso Multa / Parcometro (Quishing QR)',
+        category: 'Quishing / QR Phishing',
+        text: 'Polizia Locale / Notifica Infrazione: Pagamento immediato verbale per divieto di sosta con sconto del 30%. Inquadra il codice QR o visita https://comune-multe-pagopa.me/paga per evitare la decurtazione punti patente.',
+        threatLevel: 'critico',
+        explanation: 'Tipico attacco di Quishing (adesivo QR contraffatto incollato su parchimetri o parabrezza). Il dominio .me non è un canale istituzionale e mira a sottrarre i dati della carta di credito.'
     }
 ]
 
@@ -176,6 +183,15 @@ export default function VerificaTruffePage() {
                 title: 'Esca del concorso online / contest infantile',
                 desc: 'Esca emotiva usata nella "truffa della ballerina" per farti abbassare la guardia su WhatsApp.',
                 severity: 'medio'
+            })
+        }
+
+        // Rule 7: Quishing / QR Code sospetti
+        if (lower.includes('qr') || lower.includes('inquadra') || lower.includes('parcometro') || lower.includes('parcheggio') || (lower.includes('multa') && lower.includes('sconto'))) {
+            redFlags.push({
+                title: 'Possibile attacco Quishing / QR code malevolo',
+                desc: 'Attenzione a codici QR stampati su adesivi o notifiche di sosta. Disattiva l\'apertura automatica e verifica sempre che il dominio appartenga ai circuiti certificati (.gov.it o pagoPA).',
+                severity: 'alto'
             })
         }
 

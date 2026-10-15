@@ -1342,5 +1342,29 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     url: "https://www.mit.gov.it/temi/edilizia-e-casa",
     category: "casa",
     type: "ente istituzionale"
+  },
+  registroOpposizioni: {
+    id: 'registroOpposizioni',
+    name: "Registro Pubblico delle Opposizioni — Blocco telemarketing indesiderato",
+    ente: "Ministero delle Imprese e del Made in Italy",
+    url: "https://registrodelleopposizioni.it/",
+    category: "privacy",
+    type: "servizio ufficiale"
+  },
+  areraReclami: {
+    id: 'areraReclami',
+    name: "Sportello per il Consumatore di Energia e Ambiente — Reclami e conciliazione",
+    ente: "ARERA",
+    url: "https://www.sportelloperilconsumatore.it/",
+    category: "consumatori",
+    type: "assistenza ufficiale"
+  },
+  bancaItaliaArbitroBancario: {
+    id: 'bancaItaliaArbitroBancario',
+    name: "Arbitro Bancario Finanziario — Risoluzione controversie bancarie e frodi",
+    ente: "Banca d'Italia",
+    url: "https://www.arbitrobancariofinanziario.it/",
+    category: "soldi",
+    type: "servizio ufficiale"
   }
 };

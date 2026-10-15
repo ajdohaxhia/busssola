@@ -19,6 +19,74 @@ function pack(partial: Omit<CivicTemplate, 'disclaimer' | 'lastReviewedAt'>): Ci
 
 export const CIVIC_TEMPLATES: CivicTemplate[] = [
     pack({
+        slug: 'disconoscimento-operazioni-bancarie-frode',
+        title: 'Kit Disconoscimento Operazioni Bancarie e Rimborso Frode',
+        shortTitle: 'Disconoscimento Frode Bancaria',
+        category: 'soldi',
+        summary: 'Procedura e modulo di disconoscimento bonifici o addebiti carta per phishing, smishing o clonazione, con istanza all’Arbitro Bancario Finanziario (ABF).',
+        whenToUse: 'Hai subito addebiti non autorizzati sul conto o sulla carta di credito/debito a seguito di una frode online o furto di credenziali.',
+        estimatedMinutes: 25,
+        officialEntity: 'Banca d\'Italia / Arbitro Bancario Finanziario (ABF)',
+        documents: [
+            'Estratto conto con evidenza delle transazioni contestate',
+            'Copia della denuncia presentata alla Polizia Postale o ai Carabinieri',
+            'SMS, email o messaggi ingannevoli ricevuti (screenshot integrali)',
+            'Documento di identità e codice fiscale del titolare'
+        ],
+        steps: [
+            'Blocca immediatamente carte e accesso home banking chiamando il numero verde emergenza del tuo istituto.',
+            'Sporgi denuncia dettagliata presso la Polizia Postale o i Carabinieri indicando date, orari e importi fraudolenti.',
+            'Invia il modulo formale di contestazione e disconoscimento alla banca via PEC o raccomandata A/R entro 13 mesi dall\'addebito (art. 9 D.Lgs. 11/2010).',
+            'Richiedi il riaccredito immediato delle somme sottratte ai sensi dell\'art. 11 D.Lgs. 11/2010 (la banca deve rimborsare entro il giorno lavorativo successivo, salvo colpa grave).',
+            'In caso di rifiuto o mancata risposta entro 15 giorni lavorativi, presenta ricorso online all\'Arbitro Bancario Finanziario (ABF) di Banca d\'Italia.'
+        ],
+        dontForget: [
+            'La legge (D.Lgs. 11/2010) pone l\'onere della prova a carico della banca: è la banca a dover dimostrare l\'eventuale colpa grave del cliente',
+            'Conserva traccia di ogni PEC, protocollo di reclamo e telefonata con la banca'
+        ],
+        officialLinks: ['bancaItaliaArbitroBancario', 'psDenunceWeb'],
+        relatedGuide: '/moduli/modulo-03-truffe-phishing',
+        relatedNews: ['certagid-aci-bollo-auto-phishing-2026', 'polizia-postale-siti-clone-ia-2026'],
+        sources: [
+            src('Arbitro Bancario Finanziario — Guida ai ricorsi per frodi', 'Banca d\'Italia', 'https://www.arbitrobancariofinanziario.it/'),
+            src('Commissariato di P.S. Online — Denuncia e segnalazione frodi', 'Polizia Postale', 'https://www.commissariatodips.it/')
+        ]
+    }),
+    pack({
+        slug: 'blocco-telemarketing-registro-opposizioni',
+        title: 'Kit Iscrizione Registro Opposizioni e Diffida Telemarketing Aggressivo',
+        shortTitle: 'Blocco Telemarketing',
+        category: 'privacy',
+        summary: 'Come iscrivere numeri fissi e cellulari al Registro Pubblico delle Opposizioni e inviare diffida formale con reclamo al Garante Privacy in caso di chiamate moleste.',
+        whenToUse: 'Ricevi continue telefonate commerciali indesiderate o chiamate da call-center automatizzati (robocall).',
+        estimatedMinutes: 10,
+        officialEntity: 'Ministero delle Imprese e del Made in Italy / Garante Privacy',
+        documents: [
+            'Numero di telefono (fisso o cellulare) da tutelare',
+            'SPID o CIE per l\'accesso all\'area riservata del Registro',
+            'Data, orario e numero del chiamante in caso di violazione successiva'
+        ],
+        steps: [
+            'Accedi al portale ufficiale registrodelleopposizioni.it tramite SPID o CIE (oppure telefona al numero verde 800.265.265).',
+            'Inserisci i tuoi numeri di telefono da proteggere e conferma l\'iscrizione.',
+            'L\'efficacia è attiva entro 1 giorno lavorativo per gli elenchi cartacei e 15 giorni per il telemarketing verso cellulari.',
+            'Tutti i consensi commerciali precedentemente rilasciati vengono azzerati per legge.',
+            'Se continui a ricevere chiamate promozionali, annota data, ora, società promossa e numero chiamante.',
+            'Invia il modello di reclamo formale al Garante per la Protezione dei Dati Personali o segnala tramite il portale del Registro.'
+        ],
+        dontForget: [
+            'L\'iscrizione revoca tutti i consensi commerciali pregressi tranne quelli per contratti attualmente attivi (es. il tuo attuale fornitore luce o internet)',
+            'Se fornisci un nuovo consenso dopo l\'iscrizione al Registro, le chiamate di quella specifica azienda torneranno lecite'
+        ],
+        officialLinks: ['registroOpposizioni', 'garanteReclamo'],
+        relatedGuide: '/moduli/modulo-02-account-security',
+        relatedNews: ['garante-privacy-deepfake-ia-2026'],
+        sources: [
+            src('Registro Pubblico delle Opposizioni', 'Ministero delle Imprese e del Made in Italy', 'https://registrodelleopposizioni.it/'),
+            src('Garante Privacy — Telemarketing e diritti del cittadino', 'Garante per la Protezione dei Dati Personali', 'https://www.gpdp.it/')
+        ]
+    }),
+    pack({
         slug: 'it-wallet',
         title: 'Kit IT-Wallet e Documenti Digitali su App IO',
         shortTitle: 'IT-Wallet',

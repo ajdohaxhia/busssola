@@ -1,3 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <text y=".9em" font-size="90">🧭</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <!-- Deep Navy Background with subtle rounded corners -->
+  <rect width="512" height="512" rx="112" fill="#0b1325"/>
+  
+  <!-- Outer Compass Ring -->
+  <circle cx="256" cy="256" r="186" stroke="#10b981" stroke-width="14" stroke-opacity="0.9" />
+  <circle cx="256" cy="256" r="150" stroke="#06b6d4" stroke-width="3" stroke-dasharray="8 8" stroke-opacity="0.4" />
+
+  <!-- Cardinal Tick Marks -->
+  <line x1="256" y1="70" x2="256" y2="96" stroke="#10b981" stroke-width="12" stroke-linecap="round" />
+  <line x1="256" y1="416" x2="256" y2="442" stroke="#06b6d4" stroke-width="12" stroke-linecap="round" />
+  <line x1="70" y1="256" x2="96" y2="256" stroke="#10b981" stroke-width="12" stroke-linecap="round" />
+  <line x1="416" y1="256" x2="442" y2="256" stroke="#06b6d4" stroke-width="12" stroke-linecap="round" />
+
+  <!-- Diagonal Sub-ticks -->
+  <line x1="125" y1="125" x2="142" y2="142" stroke="#34d399" stroke-width="6" stroke-linecap="round" stroke-opacity="0.6"/>
+  <line x1="387" y1="125" x2="370" y2="142" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-opacity="0.6"/>
+  <line x1="125" y1="387" x2="142" y2="370" stroke="#34d399" stroke-width="6" stroke-linecap="round" stroke-opacity="0.6"/>
+  <line x1="387" y1="387" x2="370" y2="370" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-opacity="0.6"/>
+
+  <!-- Compass Star / Background Needle -->
+  <polygon points="256,120 286,226 392,256 286,286 256,392 226,286 120,256 226,226" fill="#0f172a" stroke="#1e293b" stroke-width="4"/>
+  <polygon points="256,150 274,238 362,256 274,274 256,362 238,274 150,256 238,238" fill="#1e293b" />
+
+  <!-- Main Dynamic Needle (Pointing North-East with Facets) -->
+  <!-- North-East Emerald Facet -->
+  <polygon points="256,256 370,142 278,222" fill="#10b981"/>
+  <!-- North-East Cyan Facet -->
+  <polygon points="256,256 370,142 222,278" fill="#06b6d4"/>
+  <!-- Highlight Crest -->
+  <polygon points="256,256 370,142 250,230" fill="#34d399"/>
+
+  <!-- South-West Opposite Needle -->
+  <polygon points="256,256 142,370 234,290" fill="#f8fafc"/>
+  <polygon points="256,256 142,370 290,234" fill="#94a3b8"/>
+
+  <!-- Central Pivot Point -->
+  <circle cx="256" cy="256" r="22" fill="#0b1325" stroke="#38bdf8" stroke-width="6"/>
+  <circle cx="256" cy="256" r="8" fill="#10b981"/>
 </svg>

@@ -31,6 +31,43 @@ const createUserId = () => {
     return `local-${Date.now()}-${Math.random().toString(16).slice(2)}`
 }
 
+const memoryFallback: Record<string, string> = {}
+
+const safeStorage = {
+    getItem: (key: string): string | null => {
+        try {
+            if (typeof window !== 'undefined' && window.localStorage) {
+                return window.localStorage.getItem(key)
+            }
+        } catch {
+            // storage blocked or private browsing
+        }
+        return memoryFallback[key] ?? null
+    },
+    setItem: (key: string, value: string): void => {
+        try {
+            if (typeof window !== 'undefined' && window.localStorage) {
+                window.localStorage.setItem(key, value)
+                return
+            }
+        } catch {
+            // storage blocked or private browsing
+        }
+        memoryFallback[key] = value
+    },
+    removeItem: (key: string): void => {
+        try {
+            if (typeof window !== 'undefined' && window.localStorage) {
+                window.localStorage.removeItem(key)
+                return
+            }
+        } catch {
+            // storage blocked or private browsing
+        }
+        delete memoryFallback[key]
+    },
+}
+
 const initialState = {
     userId: '',
     createdAt: '',
@@ -127,7 +164,7 @@ export const useGameStore = create<GameState>()(
         }),
         {
             name: 'bussola-progress',
-            storage: createJSONStorage(() => localStorage),
+            storage: createJSONStorage(() => safeStorage),
         }
     )
 )

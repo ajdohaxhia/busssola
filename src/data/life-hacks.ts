@@ -2,6 +2,126 @@ import { LifeHack } from '@/types';
 
 export const LIFE_HACKS: LifeHack[] = [
     {
+        title: "Richiedere la patente a crediti per la sicurezza nei cantieri (INL)",
+        slug: "richiesta-patente-crediti-cantieri-inl",
+        category: "lavoro",
+        target: ["lavoratori", "cittadini"],
+        difficulty: "media",
+        time: "15 minuti",
+        benefit: "Operare a norma di legge nei cantieri temporanei o mobili evitando sanzioni fino a 12.000€",
+        summary: "Guida per imprese e lavoratori autonomi per richiedere la patente a crediti obbligatoria per operare nei cantieri edili sul portale dell'Ispettorato Nazionale del Lavoro (INL).",
+        whyUseful: "Dall'autunno 2026 è obbligatorio possedere la patente digitale con almeno 15 crediti per accedere ai cantieri edili in tutta Italia.",
+        steps: [
+            "Accedi al portale dei servizi dell'Ispettorato Nazionale del Lavoro (servizi.ispettorato.gov.it) con SPID o CIE.",
+            "Seleziona la sezione 'Patente a crediti' per imprese o lavoratori autonomi.",
+            "Dichiara il possesso dell'iscrizione alla Camera di Commercio (CCIAA), del DURC valido, del DVF e del Documento di Valutazione dei Rischi (DVR).",
+            "Indica l'avvenuta designazione del Responsabile del Servizio di Prevenzione e Protezione (RSPP).",
+            "Invia l'autocertificazione telematica: il sistema assegna un punteggio iniziale di 30 crediti.",
+            "Conserva e scarica la ricevuta telematica con il codice identificativo della patente da esibire al coordinatore per la sicurezza."
+        ],
+        whatYouNeed: ["SPID o CIE del legale rappresentante o autonomo", "Partita IVA attiva e iscrizione CCIAA", "DURC in corso di validità"],
+        officialLinks: ["inlPatenteCrediti"],
+        commonErrors: [
+            "Operare nei cantieri senza aver completato l'istanza o con punteggio inferiore a 15 crediti",
+            "Fornire autocertificazioni non veritiere sui corsi di formazione dei lavoratori (comporta sospensione e sanzioni penali)"
+        ],
+        limitations: [
+            "Sono esentati coloro che effettuano mere forniture o prestazioni di natura intellettuale",
+            "Sono esentate le imprese in possesso dell'attestazione di qualificazione SOA di classifica pari o superiore alla III"
+        ],
+        sources: [
+            {
+                title: "Ispettorato Nazionale del Lavoro — Portale Patente a Crediti",
+                organization: "INL",
+                url: "https://www.ispettorato.gov.it/focus/patente-a-crediti/",
+                type: "official",
+                usedFor: "Normativa e requisiti",
+                lastCheckedAt: "2026-10-16"
+            }
+        ],
+        lastReviewedAt: "2026-10-16",
+        badges: ["Lavoro", "Evita errore", "Sicurezza"]
+    },
+    {
+        title: "Riconoscere e difendersi dai falsi codici QR (Quishing)",
+        slug: "difesa-truffe-qr-code-quishing",
+        category: "sicurezza",
+        target: ["cittadini", "adults"],
+        difficulty: "facile",
+        time: "3 minuti",
+        benefit: "Eviti di consegnare credenziali o dati di carte bancarie su falsi adesivi applicati su parcometri e avvisi",
+        summary: "Tecniche pratiche raccomandate da CERT-AgID e Polizia Postale per riconoscere adesivi QR contraffatti sovrapposti a parchimetri, multe, menù o finti bollettini di pagamento.",
+        whyUseful: "Il quishing (QR phishing) sfrutta la fiducia visiva: la fotocamera apre un portale clonato identico all'originale per rubare dati della carta di credito.",
+        steps: [
+            "Controlla fisicamente il QR code: se è un adesivo attaccato sopra un cartello stampato o su un parcometro, non inquadrarlo.",
+            "Nelle impostazioni della fotocamera dello smartphone, disattiva l'apertura automatica dei link per visualizzare l'anteprima dell'URL prima di cliccare.",
+            "Controlla sempre il dominio mostrato nell'anteprima: i pagamenti comunali e della sosta avvengono solo tramite circuiti certificati (.gov.it, EasyPark, Telepass, Mooney, pagoPA).",
+            "Se un QR ti chiede di scaricare un file .apk su Android o un profilo di configurazione su iPhone, rifiuta e chiudi immediatamente.",
+            "In caso di multa sul parabrezza, effettua il pagamento unicamente digitando il codice IUV sul portale del tuo Comune o nell'app della tua banca/App IO."
+        ],
+        whatYouNeed: ["Smartphone con fotocamera", "Attenzione visiva prima di scansionare"],
+        officialLinks: ["certAgidHome", "psSegnalaOnline"],
+        commonErrors: [
+            "Inquadrare e confermare pagamenti senza leggere il dominio nella barra del browser",
+            "Inserire il codice CVV della carta su una pagina aperta da QR per pagare una tariffa di pochi centesimi"
+        ],
+        limitations: [
+            "Molti servizi legittimi usano QR code: la regola chiave è verificare l'URL e l'integrità fisica del supporto"
+        ],
+        sources: [
+            {
+                title: "CERT-AgID — Allerta sulla minaccia del Quishing",
+                organization: "CERT-AgID",
+                url: "https://cert-agid.gov.it/",
+                type: "official",
+                usedFor: "Consigli di sicurezza",
+                lastCheckedAt: "2026-10-16"
+            }
+        ],
+        lastReviewedAt: "2026-10-16",
+        badges: ["Sicurezza", "Evita errore", "Soldi"]
+    },
+    {
+        title: "Contestare bollette luce/gas gonfiate e contratti non richiesti con ARERA",
+        slug: "contestazione-bollette-luce-gas-arera",
+        category: "casa",
+        target: ["famiglie", "cittadini"],
+        difficulty: "media",
+        time: "20 minuti",
+        benefit: "Ottieni lo storno di addebiti ingiustificati, il ripristino delle condizioni precedenti e indennizzi automatici",
+        summary: "Come avviare un reclamo formale al fornitore di energia e accedere gratuitamente alla conciliazione dello Sportello del Consumatore ARERA in caso di mancata risposta o rifiuto.",
+        whyUseful: "La procedura di conciliazione ARERA è obbligatoria per legge, totalmente gratuita e sospende i distacchi della fornitura durante l'esame della pratica.",
+        steps: [
+            "Invia un reclamo scritto formale al fornitore via PEC o raccomandata A/R descrivendo l'errore di fatturazione o il disconoscimento del contratto.",
+            "Il venditore ha l'obbligo di rispondere motivatamente entro 30 giorni solari dal ricevimento del reclamo.",
+            "Se il venditore risponde in ritardo, hai diritto a un indennizzo automatico accreditato in bolletta (da 25€ fino a 75€).",
+            "Se la risposta è insoddisfacente o assente dopo 40 giorni, accedi alla piattaforma telematica 'ConciliaWeb' dell'ARERA (conciliaweb.arera.it) con SPID o CIE.",
+            "Apri l'istanza di conciliazione allegando bolletta e reclamo: l'incontro si svolge online con un conciliatore imparziale.",
+            "Il verbale di accordo raggiunto in conciliazione ha efficacia di titolo esecutivo."
+        ],
+        whatYouNeed: ["SPID o CIE", "Codice POD (luce) o PDR (gas) reperibile in prima pagina di bolletta", "Copia del reclamo inviato e ricevuta di consegna"],
+        officialLinks: ["areraReclami"],
+        commonErrors: [
+            "Reclamare solo verbalmente al call center senza inviare traccia scritta tracciabile",
+            "Smettere di pagare l'intera bolletta senza aver contestato formalmente la quota indebita (rischio sospensione fornitura)"
+        ],
+        limitations: [
+            "La conciliazione non copre controversie fiscali (come imposte e IVA di competenza statale)"
+        ],
+        sources: [
+            {
+                title: "ARERA — Sportello per il Consumatore di Energia",
+                organization: "ARERA",
+                url: "https://www.sportelloperilconsumatore.it/",
+                type: "official",
+                usedFor: "Procedura reclamo e conciliazione",
+                lastCheckedAt: "2026-10-16"
+            }
+        ],
+        lastReviewedAt: "2026-10-16",
+        badges: ["Casa", "Soldi", "Risparmia tempo"]
+    },
+    {
         title: "Scaricare certificati anagrafici online da ANPR",
         slug: "certificati-anagrafici-online-anpr",
         category: "documenti",

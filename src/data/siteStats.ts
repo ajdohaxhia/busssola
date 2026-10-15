@@ -1,12 +1,12 @@
 /**
  * AUTO-GENERATED FILE - DO NOT EDIT MANUALLY
- * Generated on: 2026-10-15T23:23:53.626Z
+ * Generated on: 2026-10-15T23:42:29.645Z
  */
 export const siteStats = {
   "totalModules": 51,
   "totalLessons": 311,
   "publishedLessons": 311,
-  "totalTips": 92,
+  "totalTips": 95,
   "draftLessons": 0,
   "needsSourcesLessons": 0,
   "needsReviewLessons": 0,
