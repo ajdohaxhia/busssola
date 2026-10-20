@@ -1,6 +1,6 @@
 /**
  * AUTO-GENERATED FILE - DO NOT EDIT MANUALLY
- * Generated on: 2026-10-15T23:42:29.645Z
+ * Generated on: 2026-10-20T10:39:21.431Z
  */
 export const siteStats = {
   "totalModules": 51,
@@ -15,6 +15,6 @@ export const siteStats = {
   "totalSources": 401,
   "uniqueOrganizations": 108,
   "totalChecklistItems": 1147,
-  "lastUpdatedAt": "2026-10-16",
+  "lastUpdatedAt": "2026-10-20",
   "projectStage": "Public Resource Hub 2026"
 };

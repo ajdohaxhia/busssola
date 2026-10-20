@@ -56,3 +56,5 @@ tsc_errors*.txt
 log.txt
 out.txt
 .aider*
+.freebuff/
+screenshots/

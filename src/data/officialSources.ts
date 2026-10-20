@@ -335,6 +335,160 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     category: "sicurezza",
     type: "servizio ufficiale"
   },
+
+  // SICUREZZA URBANA / TERRITORIO
+  questuraLodiRissa2026: {
+    id: 'questuraLodiRissa2026',
+    name: "Rissa tra minorenni al Terminal Bus: sei denunciati (12 gennaio 2026)",
+    ente: "Polizia di Stato — Questura di Lodi",
+    url: "https://questure.poliziadistato.it/it/Lodi/articolo/3139696509c480ed9887262340",
+    category: "sicurezza",
+    type: "ente istituzionale"
+  },
+  questuraLodiDacur2026: {
+    id: 'questuraLodiDacur2026',
+    name: "Rissa in un esercizio pubblico: 12 Daspo Willy emessi dal Questore (14 marzo 2026)",
+    ente: "Polizia di Stato — Questura di Lodi",
+    url: "https://questure.poliziadistato.it/it/Lodi/articolo/313969b515129f01a527396539",
+    category: "sicurezza",
+    type: "ente istituzionale"
+  },
+  prefMilanoCosp2026: {
+    id: 'prefMilanoCosp2026',
+    name: "Comitato provinciale per l'ordine e la sicurezza pubblica — 21 gennaio 2026",
+    ente: "Prefettura — U.T.G. di Milano",
+    url: "https://prefettura.interno.gov.it/it/prefetture/milano/comunicazioni/comitato-provinciale-lordine-e-sicurezza-pubblica-21012026",
+    category: "sicurezza",
+    type: "ente istituzionale"
+  },
+  prefMilanoRicorsi: {
+    id: 'prefMilanoRicorsi',
+    name: "Ricorsi avverso i provvedimenti del Questore (Daspo urbano, ammonimenti)",
+    ente: "Prefettura — U.T.G. di Milano",
+    url: "https://prefettura.interno.gov.it/it/prefetture/milano/ricorsi",
+    category: "sicurezza",
+    type: "servizio ufficiale"
+  },
+  internoOmicidi2025: {
+    id: 'internoOmicidi2025',
+    name: "Sicurezza: nel 2025 in diminuzione omicidi e femminicidi",
+    ente: "Ministero dell'Interno",
+    url: "https://www.interno.gov.it/it/notizie/sicurezza-nel-2025-diminuzione-omicidi-e-femminicidi",
+    category: "sicurezza",
+    type: "ente istituzionale"
+  },
+  internoGangGiovanili: {
+    id: 'internoGangGiovanili',
+    name: "Criminalità minorile e gang giovanili: il report del Servizio analisi criminale (dati 2023)",
+    ente: "Ministero dell'Interno — Servizio analisi criminale",
+    url: "https://www.interno.gov.it/it/notizie/criminalita-minorile-e-gang-giovanili-online-report-servizio-analisi-criminale-dcpc-2023",
+    category: "sicurezza",
+    type: "ente istituzionale"
+  },
+  internoManifestazioni2026: {
+    id: 'internoManifestazioni2026',
+    name: "Manifestazioni di protesta nel Paese e operato Forze di Polizia. Dichiarazione del ministro Piantedosi (16 ottobre 2026)",
+    ente: "Ministero dell'Interno",
+    url: "https://www.interno.gov.it/it/stampa-e-comunicazione/comunicati-stampa/manifestazioni-protesta-nel-paese-e-operato-forze-polizia-dichiarazione-ministro-piantedosi",
+    category: "sicurezza",
+    type: "ente istituzionale"
+  },
+  psPreavvisoManifestazione: {
+    id: 'psPreavvisoManifestazione',
+    name: "Preavviso di pubblica manifestazione",
+    ente: "Polizia di Stato",
+    url: "https://www.poliziadistato.it/articolo/preavviso-di-pubblica-manifestazione",
+    category: "sicurezza",
+    type: "servizio ufficiale"
+  },
+  prefLeccoCposp2026: {
+    id: 'prefLeccoCposp2026',
+    name: "C.P.O.S.P. del 19 ottobre 2026 — monitoraggio rafforzato sul territorio lecchese",
+    ente: "Prefettura — U.T.G. di Lecco",
+    url: "https://prefettura.interno.gov.it/it/prefetture/lecco/notizie/cposp-19-ottobre-2026",
+    category: "sicurezza",
+    type: "ente istituzionale"
+  },
+  costituzioneArt17: {
+    id: 'costituzioneArt17',
+    name: "Articolo 17 della Costituzione — Diritto di riunione pacifica e senz'armi",
+    ente: "Senato della Repubblica — Normattiva",
+    url: "https://www.senato.it/istituzione/la-costituzione/parte-i/titolo-i/articolo-17",
+    category: "giustizia",
+    type: "ente istituzionale"
+  },
+  normattivaTulps: {
+    id: 'normattivaTulps',
+    name: "Testo Unico delle Leggi di Pubblica Sicurezza (R.D. 773/1931 - artt. 18 e 4)",
+    ente: "Normattiva — Presidenza del Consiglio dei Ministri",
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1931-06-18;773",
+    category: "sicurezza",
+    type: "servizio ufficiale"
+  },
+  normattivaIdentificazione: {
+    id: 'normattivaIdentificazione',
+    name: "Codice di Procedura Penale — art. 349 (Accompagnamento per identificazione)",
+    ente: "Normattiva — Ministero della Giustizia",
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:1988-09-22;447~art349",
+    category: "giustizia",
+    type: "servizio ufficiale"
+  },
+  normattivaProcessoMinorile: {
+    id: 'normattivaProcessoMinorile',
+    name: "Processo penale a carico di minorenni (d.P.R. 448/1988 — garanzie e avviso genitori)",
+    ente: "Normattiva — Ministero della Giustizia",
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:1988-09-22;448",
+    category: "giustizia",
+    type: "servizio ufficiale"
+  },
+  poliziaStatoDanneggiamento: {
+    id: 'poliziaStatoDanneggiamento',
+    name: "Polizia di Stato — Guida alle denunce e querele per danneggiamenti e reati patrimoniali",
+    ente: "Polizia di Stato",
+    url: "https://www.poliziadistato.it/articolo/denuncia-o-querela",
+    category: "sicurezza",
+    type: "servizio ufficiale"
+  },
+  cgsCommissioneSciopero: {
+    id: 'cgsCommissioneSciopero',
+    name: "Commissione di Garanzia Sciopero — Calendario scioperi e fasce garantite L. 146/1990",
+    ente: "Commissione di Garanzia Sciopero Servizi Pubblici Essenziali",
+    url: "https://www.cgsse.it/",
+    category: "lavoro",
+    type: "ente istituzionale"
+  },
+  comuneMilanoRiscaldamento: {
+    id: 'comuneMilanoRiscaldamento',
+    name: "Comune di Milano — Ordinanza accensione impianti termici, orari e temperature",
+    ente: "Comune di Milano — Area Ambiente ed Energia",
+    url: "https://www.comune.milano.it/aree-tematiche/ambiente/energia/impianti-termici",
+    category: "casa",
+    type: "ente istituzionale"
+  },
+  comuneMilanoAreaB: {
+    id: 'comuneMilanoAreaB',
+    name: "Comune di Milano — Disciplina Area B e Area C, orari, varchi e deroghe",
+    ente: "Comune di Milano — Area Mobilità",
+    url: "https://www.comune.milano.it/aree-tematiche/mobilita/area-b",
+    category: "mobilita",
+    type: "servizio ufficiale"
+  },
+  comuneTariSaldo: {
+    id: 'comuneTariSaldo',
+    name: "Comune di Milano e Comuni italiani — Tassa Rifiuti (TARI) saldo, conguaglio e scadenze",
+    ente: "Comune di Milano — Direzione Tributi",
+    url: "https://www.comune.milano.it/servizi/tari-tassa-rifiuti",
+    category: "casa",
+    type: "servizio ufficiale"
+  },
+  mitFondoMorositaIncolpevole: {
+    id: 'mitFondoMorositaIncolpevole',
+    name: "Ministero Infrastrutture e Trasporti — Fondo nazionale morosità incolpevole e bandi comunali",
+    ente: "Ministero delle Infrastrutture e dei Trasporti",
+    url: "https://www.mit.gov.it/temi/casa-e-abitare/politiche-abitative/fondo-morosita-incolpevole",
+    category: "casa",
+    type: "ente istituzionale"
+  },
   garanteModulistica: {
     id: 'garanteModulistica',
     name: "Garante Privacy - Modulistica e servizi online",
