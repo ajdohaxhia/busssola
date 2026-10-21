@@ -39,7 +39,6 @@ const STARTERS = [
     { label: 'Bonus', href: '/modelli/bonus-sociali', blurb: 'Bonus sociali luce e gas e altre agevolazioni ISEE.', entity: 'ARERA / INPS' },
     { label: 'ADI', href: '/modelli/assegno-inclusione', blurb: 'Assegno di Inclusione: requisiti, PAD e rinnovo 18 mesi.', entity: 'INPS' },
     { label: 'Truffa', href: '/moduli/modulo-03-truffe-phishing', blurb: 'Phishing, SMS falsi, cosa fare dopo un clic.', entity: 'Polizia Postale' },
-    { label: 'Verifica Truffe IA', href: '/verifica-truffe', blurb: 'Analizzatore interattivo per SMS, WhatsApp e audio/video deepfake.', entity: 'Strumento Civico' },
     { label: 'Scuola', href: '/moduli/modulo-08-scuola-famiglia', blurb: 'Iscrizioni, registro e tutele per famiglie.', entity: 'Ministero Istruzione' },
     { label: 'Pensione', href: hrefIfModule(['modulo-27-pensioni-previdenza'], '/moduli/categoria/lavoro'), blurb: 'Domanda INPS, estratto contributivo, vecchiaia e anticipata.', entity: 'INPS' },
     { label: 'P.IVA', href: hrefIfModule(['modulo-29-partita-iva-forfettario'], '/moduli/modulo-25-fisco-cittadini'), blurb: 'Apertura e adempimenti di base per chi lavora in proprio.', entity: 'Agenzia delle Entrate' },

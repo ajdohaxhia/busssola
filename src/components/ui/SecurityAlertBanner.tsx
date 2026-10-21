@@ -32,11 +32,11 @@ export function SecurityAlertBanner({ variant = 'home' }: SecurityAlertBannerPro
 
                 <div className="flex flex-wrap items-center gap-3 shrink-0">
                     <Link
-                        href="/verifica-truffe"
+                        href="/moduli/modulo-03-truffe-phishing"
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-foreground text-background text-xs md:text-sm font-bold shadow hover:bg-foreground/90 transition-all"
                     >
-                        <Bot className="w-4 h-4 text-amber-400" />
-                        Analizzatore Truffe & IA ↗
+                        <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                        Guida anti-truffa e phishing ↗
                     </Link>
                     <Link
                         href="/novita"

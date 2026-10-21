@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_03_truffe_phishing: Module = {
     id: 'modulo-03-truffe-phishing',
-    lastUpdated: '2026-05-14',
+    lastUpdated: '2026-10-21',
     title: 'Truffe e Phishing',
     description: 'Come riconoscere i tentativi di truffa online, proteggere i propri dati e reagire in caso di errore.',
     category: 'truffe',
@@ -122,6 +122,69 @@ export const modulo_03_truffe_phishing: Module = {
                     type: 'official',
                     usedFor: 'Indicatori di frode',
                     lastCheckedAt: '2026-05-14'
+                }
+            ]
+        },
+        {
+            id: 'falsi-rilevatori-truffe-ia',
+            slug: 'perche-non-fidarsi-falsi-rilevatori-truffe-ia',
+            title: 'Perché non fidarsi di finti "Rilevatori di truffe IA"',
+            mainEntity: 'Polizia Postale',
+            category: 'truffe',
+            audience: ['adults', 'prevention', 'cittadini'],
+            level: 'base',
+            estimatedMinutes: 6,
+            summary: 'I siti che promettono di "analizzare truffe con l’IA" spesso sono inaffidabili o raccolgono dati privati. Ecco il metodo ufficiale per verificare un messaggio sospetto.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-10-21',
+            prerequisites: ['Ricezione di un messaggio, email o SMS sospetto'],
+            whatToPrepare: ['Indirizzo web (URL) o mittente del messaggio da esaminare'],
+            estimatedCosts: 'Gratis',
+            timeToComplete: '1 minuto',
+            steps: [
+                'Non incollare testi privati o screenshot contenenti dati sensibili in presunti "scanner IA online": molti di questi siti sono non ufficiali e potrebbero archiviare le tue informazioni.',
+                'Controlla il dominio reale: la Pubblica Amministrazione italiana usa solo domini che terminano con .gov.it, .inps.it, .agenziaentrate.gov.it, .carabinieri.it, .poliziadistato.it. Tutto ciò che ha suffissi diversi (es. .cc, .top, .online, .info-inps) è una frode.',
+                'Verifica la regola del contatto diretto: né le banche né gli enti pubblici chiedono mai password, PIN dispositivi, codici OTP ricevuti via SMS o autorizzazioni di bonifico per messaggio.',
+                'Usa esclusivamente l’applicazione ufficiale scaricata dagli store certificati (App Store o Google Play) o digita manualmente l’indirizzo web ufficiale dell’istituto.',
+                'In caso di persistente dubbio o tentativo di estorsione, effettua una segnalazione sul portale ufficiale del Commissariato di P.S. Online della Polizia Postale.'
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'commissariatoPs',
+                    useWhen: 'Per segnalare alla Polizia Postale una truffa o un finto sito istituzionale',
+                    beforeOpening: ['Non cliccare sui link contenuti nel messaggio truffaldino']
+                },
+                {
+                    sourceId: 'certAgidHome',
+                    useWhen: 'Per consultare il bollettino ufficiale CERT-AgID sulle campagne malevole in corso',
+                    beforeOpening: []
+                }
+            ],
+            commonErrors: [
+                'Credere che un algoritmo o un finto prompt IA possa certificare al 100% che un link sia sicuro',
+                'Inviare numeri di telefono, IBAN o codici fiscali a bot o strumenti online non istituzionali'
+            ],
+            dontDo: [
+                'Non fidarti mai di "bollini di sicurezza" inventati su siti terzi',
+                'Non rispondere all’SMS o al messaggio WhatsApp anche solo per insultare i truffatori (confermerebbe che il tuo numero è attivo)'
+            ],
+            ifYouHaveProblems: [
+                'Se hai già inserito credenziali su un sito clone, blocca immediatamente le carte e cambia le password dai canali ufficiali'
+            ],
+            checklist: [
+                'Non ho inserito dati sensibili su siti terzi',
+                'Ho verificato l\'indirizzo ufficiale sul browser',
+                'Ho segnalato il tentativo di phishing alla Polizia Postale se necessario'
+            ],
+            sources: [
+                {
+                    title: 'Come difendersi dal phishing e dalle truffe online',
+                    organization: 'Polizia Postale — Commissariato di P.S. Online',
+                    url: 'https://www.commissariatodips.it/consigli/per-i-cittadini/il-phishing/index.html',
+                    type: 'official',
+                    usedFor: 'Linee guida ufficiali di verifica',
+                    lastCheckedAt: '2026-10-21'
                 }
             ]
         }

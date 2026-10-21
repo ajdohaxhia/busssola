@@ -23,7 +23,6 @@ const KEY_HUBS = new Set([
     '/modelli/',
     '/novita/',
     '/faq/',
-    '/verifica-truffe/',
 ])
 
 const staticRoutes = [
@@ -39,7 +38,6 @@ const staticRoutes = [
     '/scuole/',
     '/modelli/',
     '/novita/',
-    '/verifica-truffe/',
     '/faq/',
     '/contact/',
     '/privacy/',

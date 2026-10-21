@@ -489,6 +489,30 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     category: "casa",
     type: "ente istituzionale"
   },
+  inpsBonusMamme2026: {
+    id: 'inpsBonusMamme2026',
+    name: "INPS — Circolare n. 106 del 16 ottobre 2026 e Messaggio n. 3343 del 20 ottobre 2026 (Bonus Mamme 2026)",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.circolari-e-messaggi.2026.10.circolare-numero-106-del-16-10-2026.html",
+    category: "famiglia",
+    type: "servizio ufficiale"
+  },
+  adeConcordatoPreventivo2026: {
+    id: 'adeConcordatoPreventivo2026',
+    name: "Agenzia delle Entrate — Concordato Preventivo Biennale (Circolare n. 8/E del 6 ottobre 2026)",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/concordato-preventivo-biennale",
+    category: "soldi",
+    type: "ente istituzionale"
+  },
+  inpsComplianceSanzioni2026: {
+    id: 'inpsComplianceSanzioni2026',
+    name: "INPS — Circolare n. 90 e n. 92 (Nuovo regime sanzionatorio contributivo e conformità spontanea)",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.circolari-e-messaggi.2024.10.circolare-numero-90-del-04-10-2024.html",
+    category: "lavoro",
+    type: "servizio ufficiale"
+  },
   garanteModulistica: {
     id: 'garanteModulistica',
     name: "Garante Privacy - Modulistica e servizi online",

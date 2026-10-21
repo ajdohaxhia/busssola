@@ -3,7 +3,7 @@ import { published, src, ol } from './civicPublished';
 
 export const modulo_29_partita_iva_forfettario: Module = {
     id: 'modulo-29-partita-iva-forfettario',
-    lastUpdated: '2026-08-27',
+    lastUpdated: '2026-10-21',
     title: 'Partita IVA e forfettario',
     description: 'Apertura, variazione e chiusura della partita IVA, orientamento al regime forfetario, F24 telematico e iscrizione alla Gestione separata INPS. Procedure da completare sui siti Ade e INPS.',
     category: 'soldi',
@@ -206,6 +206,47 @@ export const modulo_29_partita_iva_forfettario: Module = {
             sources: [
                 src('Iscrizione IVA e Comunicazione Unica', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/iva-regole-generali-aliquote-esenzioni-pagamento/infogen-iva-regole-generali-aliquote-esenzioni-pagamento-enti-e-pa'),
                 src('Visura camerale', 'Registro Imprese / InfoCamere', 'https://registroimprese.infocamere.it/visura-camerale-ordinaria-storica-e-certificato'),
+            ],
+        }),
+        published({
+            id: 'concordato-preventivo-biennale-cpb',
+            slug: 'concordato-preventivo-biennale-cpb-regole-scadenze',
+            title: 'Concordato Preventivo Biennale: regole e scadenza al 2 novembre',
+            category: 'soldi',
+            audience: ['lavoratori'],
+            level: 'intermedia',
+            estimatedMinutes: 14,
+            mainEntity: 'Agenzia delle Entrate',
+            summary: 'Patto biennale con il fisco per forfettari e partite IVA: reddito concordato detassato sulle eccedenze, stop visti di conformità, scadenza prorogata al 2 novembre 2026 e ravvedimento speciale.',
+            steps: [
+                'Accedi al tuo Cassetto Fiscale sul sito dell’Agenzia delle Entrate o consulta il tuo consulente per visualizzare la proposta di reddito concordato formulata per gli anni 2026 e 2027.',
+                'Verifica di non avere debiti tributari o previdenziali superiori a 5.000 euro (salvo rateizzazioni in regola, che consentono comunque l’accesso).',
+                'Valuta il vantaggio economico: se accetti, il reddito effettivo superiore a quello concordato non viene tassato né genera maggiori imposte.',
+                'Approfitta dei benefici premiali: esonero dal visto di conformità per compensazioni di crediti IVA (fino a 100.000€) e imposte dirette (fino a 70.000€), oltre a una riduzione di 2 anni dei termini per gli accertamenti tributari.',
+                'Invia l’adesione entro lunedì 2 novembre 2026 (il 31 ottobre cade di sabato, determinando lo slittamento automatico) tramite allegato al Modello Redditi 2026.',
+            ],
+            commonErrors: [
+                'Pensare che il CPB sia obbligatorio: è una facoltà facoltativa del contribuente',
+                'Dimenticare di verificare debiti fiscali pregressi non saldati prima dell’invio',
+            ],
+            dontDo: [
+                'Non aderire alla cieca senza aver stimato le entrate del prossimo biennio: il reddito concordato è dovuto anche in caso di calo del fatturato',
+            ],
+            checklist: [
+                'Proposta CPB scaricata dal Cassetto Fiscale',
+                'Debiti tributari inferiori a 5.000€ verificati',
+                'Adesione inviata telematicamente entro il 2 novembre',
+            ],
+            faqs: [
+                { q: 'Cosa succede se guadagno di più rispetto alla cifra concordata?', a: 'Il maggior reddito conseguito rispetto a quello concordato con l’Agenzia delle Entrate non è soggetto a ulteriori imposte sui redditi.' },
+                { q: 'Posso regolarizzare gli anni passati?', a: 'Sì: l’adesione al CPB permette di accedere al ravvedimento speciale con imposta sostitutiva agevolata per gli anni dal 2020 al 2023.' },
+            ],
+            officialLinksV2: [
+                ol('adeConcordatoPreventivo2026', 'Circolare e istruzioni Concordato Preventivo Biennale', []),
+                ol('adeForfettario', 'Requisiti forfettario e CPB', []),
+            ],
+            sources: [
+                src('Concordato Preventivo Biennale — Circolare n. 8/E', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/concordato-preventivo-biennale', 'Istruzioni operative e regole premiali'),
             ],
         }),
     ],

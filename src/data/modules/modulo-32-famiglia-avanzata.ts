@@ -3,7 +3,7 @@ import { published, src, ol } from './civicPublished';
 
 export const modulo_32_famiglia_avanzata: Module = {
     id: 'modulo-32-famiglia-avanzata',
-    lastUpdated: '2026-08-27',
+    lastUpdated: '2026-10-21',
     title: 'Famiglia: congedi, DAT e separazione',
     description: 'Congedo parentale e di paternità INPS, disposizioni anticipate di trattamento sul sito del Ministero della Salute, orientamento alla separazione consensuale sul sito della Giustizia.',
     category: 'famiglia',
@@ -171,6 +171,48 @@ export const modulo_32_famiglia_avanzata: Module = {
             sources: [
                 src('Assegno unico 2026', 'INPS', 'https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2026.02.assegno-unico-2026-presentazione-domanda-e-aggiornamento-importi.html'),
                 src('Scheda AUU', 'INPS', 'https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.assegno-unico-e-universale-per-i-figli-a-carico-55984.assegno-unico-e-universale-per-i-figli-a-carico.html'),
+            ],
+        }),
+        published({
+            id: 'nuovo-bonus-mamme-2026',
+            slug: 'nuovo-bonus-mamme-2026-requisiti-domanda-inps',
+            title: 'Nuovo Bonus Mamme 2026: requisiti e domanda INPS',
+            category: 'famiglia',
+            audience: ['famiglie', 'lavoratori'],
+            level: 'base',
+            estimatedMinutes: 10,
+            mainEntity: 'INPS',
+            summary: 'Contributo economico di 60€ al mese (fino a 720€ all’anno) per madri con almeno 2 figli, esteso ad autonome e Gestione Separata. Esente IRPEF e non rileva ISEE. Domande entro il 31 dicembre 2026.',
+            steps: [
+                'Verifica i requisiti soggettivi: essere lavoratrice madre con almeno 2 figli (fino al 10° anno di età del più piccolo, o 18° anno per 3 o più figli), dipendente, autonoma o iscritta alla Gestione Separata o Cassa professionale.',
+                'Accedi al portale telematico inps.it con le tue credenziali SPID livello 2, CIE o CNS.',
+                'Cerca il servizio «Bonus lavoratrici madri 2026» attivato con messaggio INPS n. 3343 del 20 ottobre 2026.',
+                'Inserisci i codici fiscali dei figli a carico (il sistema effettua la verifica automatica con l’Anagrafe Nazionale ANPR).',
+                'Invia la domanda entro il 31 dicembre 2026 (o entro il 31 gennaio 2027 per nascite ed eventi di dicembre 2026) per ottenere l’accredito mensile sul conto corrente bancario o postale.',
+            ],
+            commonErrors: [
+                'Pensare che sia riservato solo alle dipendenti a tempo indeterminato: l’edizione 2026 è aperta anche alle lavoratrici autonome e Gestione Separata',
+                'Credere che faccia aumentare il reddito ISEE: il bonus è totalmente neutro e non concorre al calcolo delle imposte',
+            ],
+            dontDo: [
+                'Non pagare agenzie esterne per inviare la domanda: la procedura sul sito INPS è gratuita e diretta',
+            ],
+            checklist: [
+                'Credenziali SPID o CIE attive',
+                'Codici fiscali dei figli sottomano',
+                'IBAN intestato o cointestato verificato',
+                'Ricevuta di trasmissione INPS salvata',
+            ],
+            faqs: [
+                { q: 'Quanto spetta al mese?', a: 'Il contributo è pari a 60 euro mensili erogati per 12 mensilità, fino a un massimo di 720 euro all’anno.' },
+                { q: 'Cosa succede se ho un solo figlio?', a: 'La misura richiede un minimo di due figli a carico. Per il primo figlio sono comunque attivi l’Assegno Unico Universale e il Bonus Asilo Nido.' },
+            ],
+            officialLinksV2: [
+                ol('inpsBonusMamme2026', 'Circolare n. 106 e Messaggio n. 3343 Bonus Mamme', []),
+                ol('inpsAuuScheda', 'Assegno Unico per i figli', []),
+            ],
+            sources: [
+                src('Circolare INPS n. 106 — Bonus Mamme 2026', 'INPS', 'https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.circolari-e-messaggi.2026.10.circolare-numero-106-del-16-10-2026.html', 'Istruzioni operative bonus lavoratrici madri'),
             ],
         }),
     ],

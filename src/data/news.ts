@@ -1,7 +1,7 @@
 import type { NewsItem, Source } from '@/types'
 
 const D = '2026-10-16'
-const CHECKED = '2026-10-20'
+const CHECKED = '2026-10-21'
 
 const src = (title: string, organization: string, url: string, usedFor = 'Allerta e sicurezza 2026', checkedAt = D): Source => ({
     title,
@@ -13,6 +13,102 @@ const src = (title: string, organization: string, url: string, usedFor = 'Allert
 })
 
 export const CIVIC_NEWS: NewsItem[] = [
+    {
+        slug: 'bonus-mamme-inps-apertura-domande-2026',
+        title: 'Nuovo Bonus Mamme 2026: INPS apre il portale per le domande, fino a 720 euro anche per autonome e professioniste',
+        date: '2026-10-21',
+        summary: 'Con il messaggio n. 3343 del 20 ottobre e la circolare n. 106, l’INPS ha attivato il servizio online per il bonus mamme da 60 euro mensili rivolto alle lavoratrici madri con almeno due figli. Domande aperte entro il 31 dicembre 2026.',
+        body: [
+            'L’INPS ha reso operativa la piattaforma per la presentazione delle domande del Nuovo Bonus Mamme 2026 (in attuazione dell’art. 1 della Legge n. 199/2025 e delle istruzioni fornite con la circolare n. 106 del 16 ottobre 2026 e il messaggio n. 3343 del 20 ottobre 2026).',
+            'La principale novità dell’edizione 2026 è l’ampliamento della platea: oltre alle lavoratrici dipendenti del settore pubblico e privato con contratto a tempo indeterminato o determinato, il contributo economico spetta ora anche alle lavoratrici autonome, libere professioniste iscritte alle Casse di previdenza di categoria e lavoratrici iscritte alla Gestione Separata INPS.',
+            'L’agevolazione prevede un contributo pari a 60 euro mensili per ciascuna lavoratrice madre di almeno due figli (fino al compimento del decimo anno di età del figlio più piccolo, elevato a diciotto anni per le madri con tre o più figli a carico), per un massimo di 720 euro annui su 12 mensilità. Il beneficio è completamente esente da imposizione fiscale IRPEF e non rileva ai fini del calcolo dell’ISEE familiare.',
+            'Le istanze vanno trasmesse online sul portale inps.it accedendo con SPID (livello 2), CIE o CNS tramite il servizio «Bonus lavoratrici madri 2026». Il termine perentorio di presentazione delle domande è fissato al 31 dicembre 2026, con possibilità di inoltro fino al 31 gennaio 2027 esclusivamente per coloro che maturano i requisiti di nascita o adozione nel corso del mese di dicembre 2026.',
+        ],
+        whatChanged: [
+            'Attivazione della procedura telematica INPS per l’invio delle domande del Bonus Mamme 2026',
+            'Estensione del contributo economico a lavoratrici autonome e professioniste iscritte a Casse e Gestione Separata',
+            'Importo di 60 euro al mese (fino a 720 euro/anno) totalmente esente da IRPEF e neutro rispetto all’ISEE',
+            'Scadenza di presentazione fissata al 31 dicembre 2026 (31 gennaio 2027 per requisiti perfezionati a dicembre)',
+        ],
+        whoIsAffected: 'Lavoratrici madri di due o più figli a carico, dipendenti a tempo indeterminato/determinato, libere professioniste e lavoratrici autonome.',
+        whatToDo: [
+            'Accedi al sito inps.it con le tue credenziali SPID, CIE o CNS e cerca il servizio «Bonus lavoratrici madri»',
+            'Verifica che i codici fiscali dei figli siano già registrati nell’Anagrafe Nazionale (ANPR) o associati all’Assegno Unico',
+            'Se sei lavoratrice autonoma o iscritta a Cassa professionale, allega la dichiarazione di iscrizione e regolarità contributiva',
+            'Invia la domanda entro il 31 dicembre 2026 per non perdere gli arretrati spettanti dall’inizio dell’anno',
+        ],
+        sourceIds: ['inpsBonusMamme2026'],
+        sources: [
+            src('INPS — Circolare n. 106 del 16 ottobre 2026 e Messaggio n. 3343 del 20 ottobre 2026 (Bonus Mamme 2026)', 'INPS', 'https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.circolari-e-messaggi.2026.10.circolare-numero-106-del-16-10-2026.html', 'Istruzioni operative e apertura delle domande telematiche', CHECKED),
+        ],
+        relatedGuides: ['/moduli/modulo-32-famiglia-avanzata', '/moduli/modulo-23-bonus-isee'],
+        relatedTemplates: [],
+        lastReviewedAt: CHECKED,
+    },
+    {
+        slug: 'concordato-preventivo-biennale-proroga-2-novembre-2026',
+        title: 'Concordato Preventivo Biennale (CPB): termine di adesione slitta al 2 novembre, chiarimenti delle Entrate',
+        date: '2026-10-21',
+        summary: 'La scadenza per aderire al patto con il fisco per il biennio 2026-2027 coincide con sabato 31 ottobre e slitta automaticamente a lunedì 2 novembre. I benefici premiali per forfettari e ISA, stop visti di conformità e ravvedimento speciale.',
+        body: [
+            'L’Agenzia delle Entrate, con la circolare n. 8/E e gli aggiornamenti operativi diffusi nella seconda metà di ottobre, ha fornito il quadro completo per l’adesione al Concordato Preventivo Biennale (CPB) per il periodo d’imposta 2026-2027. Poiché il termine ordinario del 31 ottobre cade di sabato, la scadenza ultima per la trasmissione telematica dell’adesione slitta a lunedì 2 novembre 2026.',
+            'Il concordato è accessibile ai titolari di partita IVA che applicano gli Indici Sintetici di Affidabilità (ISA) e ai contribuenti in regime forfetario. La proposta biennale formulata dall’amministrazione finanziaria cristallizza il reddito d’impresa o di lavoro autonomo imponibile: l’eventuale maggior reddito effettivamente conseguito negli anni 2026 e 2027 non sconterà alcuna imposta ulteriore, né contributi previdenziali integrativi (salvo opzione volontaria del contribuente).',
+            'L’adesione comporta importanti benefici premiali: esonero dal visto di conformità per compensazioni di crediti IVA fino a 100.000 euro e crediti da imposte dirette fino a 70.000 euro; anticipazione di due anni dei termini di decadenza per l’accertamento tributario; esclusione dagli accertamenti basati su presunzioni semplici.',
+            'È inoltre collegata all’adesione la facoltà di fruire del regime di "ravvedimento speciale" per le annualità dal 2020 al 2023, consentendo di chiudere le pendenze fiscali pregresse con il versamento di un’imposta sostitutiva calcolata con aliquote agevolate in base al punteggio ISA.',
+        ],
+        whatChanged: [
+            'Slittamento della scadenza di adesione al Concordato Preventivo Biennale a lunedì 2 novembre 2026',
+            'Fissazione del reddito concordato per il biennio 2026-2027 con detassazione degli incrementi effettivi',
+            'Esonero dal visto di conformità per compensazioni e riduzione di due anni dei termini di accertamento',
+            'Possibilità di regolarizzazione delle annualità 2020-2023 con ravvedimento speciale agevolato',
+        ],
+        whoIsAffected: 'Liberi professionisti, artigiani, commercianti e titolari di partita IVA in regime forfetario o soggetti a ISA.',
+        whatToDo: [
+            'Accedi al tuo Cassetto Fiscale sul sito dell’Agenzia delle Entrate o consulta il tuo commercialista per esaminare la proposta CPB',
+            'Verifica che non sussistano debiti tributari o contributivi superiori a 5.000 euro non rateizzati (causa ostativa all’accesso)',
+            'Valuta la convenienza economica confrontando il reddito concordato con le stime di fatturato del prossimo biennio',
+            'Invia il modello CPB in allegato al Modello Redditi 2026 entro lunedì 2 novembre 2026',
+        ],
+        sourceIds: ['adeConcordatoPreventivo2026', 'adeForfettario'],
+        sources: [
+            src('Agenzia delle Entrate — Concordato Preventivo Biennale (Circolare n. 8/E del 6 ottobre 2026)', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/concordato-preventivo-biennale', 'Istruzioni operative, requisiti e regime premiale CPB', CHECKED),
+        ],
+        relatedGuides: ['/moduli/modulo-29-partita-iva-forfettario', '/moduli/modulo-25-fisco-cittadini'],
+        relatedTemplates: [],
+        lastReviewedAt: CHECKED,
+    },
+    {
+        slug: 'inps-nuove-sanzioni-omissione-contributiva-120-giorni-2026',
+        title: 'Omissione contributiva e regolarizzazione spontanea: zero maggiorazioni civili se si paga entro 120 giorni',
+        date: '2026-10-21',
+        summary: 'L’INPS recepisce le nuove regole sulla compliance e sanzioni per datori di lavoro e partite IVA: chi sana i contributi omessi spontaneamente entro 120 giorni evita le sanzioni civili maggiorate (TUR + 5,5%).',
+        body: [
+            'Con le circolari n. 90 e n. 92, l’INPS ha illustrato le novità applicative in materia di sanzioni per omissione ed evasione contributiva (in attuazione del decreto-legge n. 19/2024), con l’obiettivo di favorire l’adempimento spontaneo e l’emersione dei ritardi prima dell’avvio di verifiche ispettive.',
+            'La disposizione più rilevante per datori di lavoro, artigiani, commercianti e committenti riguarda la regolarizzazione spontanea dell’omissione contributiva: qualora il pagamento dei contributi o premi dovuti avvenga spontaneamente entro 120 giorni dalla scadenza ordinaria in un’unica soluzione (e comunque prima di qualsiasi contestazione dell’Istituto o dell’Ispettorato Nazionale del Lavoro), non si applica la pesante maggiorazione della sanzione civile pari al TUR maggiorato di 5,5 punti percentuali.',
+            'In tal caso, il contribuente è tenuto esclusivamente al pagamento del debito contributivo originario con la sola maggiorazione degli interessi legali calcolati al Tasso Ufficiale di Riferimento (TUR), senza ulteriori aggravi punitivi.',
+            'L’Istituto ha potenziato i canali di comunicazione preventiva nel Cassetto Previdenziale: attraverso alert telematici dedicati, i datori di lavoro e i loro intermediari ricevono notifiche tempestive sulle anomalie riscontrate nei flussi Uniemens o nei versamenti F24, consentendo di intervenire prima dell’avvio delle procedure esecutive di recupero crediti.',
+        ],
+        whatChanged: [
+            'Regime di favore per regolarizzazioni contributive spontanee entro 120 giorni dalla scadenza',
+            'Azzeramento della maggiorazione delle sanzioni civili pari a 5,5 punti percentuali oltre il TUR',
+            'Potenziamento dei messaggi di compliance nel Cassetto Previdenziale INPS',
+            'Applicazione uniforme per datori di lavoro, committenti e gestioni autonome artigiani e commercianti',
+        ],
+        whoIsAffected: 'Imprese, datori di lavoro, professionisti con collaboratori, artigiani e commercianti iscritti all’INPS.',
+        whatToDo: [
+            'Controlla periodicamente la sezione «Messaggi e avvisi di conformità» nel Cassetto Previdenziale INPS',
+            'Se riscontri un mancato addebito F24 o un ritardo nel versamento, effettua il pagamento spontaneo entro 120 giorni',
+            'Calcola gli interessi legali al solo tasso TUR ordinario senza applicare le maggiorazioni civili',
+            'Conserva la quietanza telematica F24 per attestare la tempestività della regolarizzazione spontanea',
+        ],
+        sourceIds: ['inpsComplianceSanzioni2026'],
+        sources: [
+            src('INPS — Circolare n. 90 e n. 92 (Nuovo regime sanzionatorio contributivo e conformità spontanea)', 'INPS', 'https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.circolari-e-messaggi.2024.10.circolare-numero-90-del-04-10-2024.html', 'Istruzioni sul ravvedimento operoso contributivo e sanzioni entro 120 giorni', CHECKED),
+        ],
+        relatedGuides: ['/moduli/modulo-12-lavoro-diritti', '/moduli/modulo-29-partita-iva-forfettario'],
+        relatedTemplates: [],
+        lastReviewedAt: CHECKED,
+    },
     {
         slug: 'comuni-accensione-riscaldamento-ottobre-2026',
         title: 'Riscaldamento nei Comuni: regole di accensione, orari ridotti e limiti di temperatura per ottobre',
