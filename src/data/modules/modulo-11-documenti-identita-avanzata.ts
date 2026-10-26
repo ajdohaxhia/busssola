@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_11_documenti_identita_avanzata: Module = {
     id: 'modulo-11-documenti-identita-avanzata',
-    lastUpdated: '2026-05-14',
+    lastUpdated: '2026-10-26',
     title: 'Documenti e Identità Avanzata',
     description: 'Procedure digitali per passaporto, residenza, certificati e strumenti di firma elettronica.',
     category: 'documenti',
@@ -800,6 +800,85 @@ export const modulo_11_documenti_identita_avanzata: Module = {
                     type: 'official',
                     usedFor: 'Confronto provider',
                     lastCheckedAt: '2026-05-16'
+                }
+            ]
+        },
+        {
+            id: 'it-wallet-documenti-digitali-app-io',
+            slug: 'it-wallet-documenti-digitali-app-io',
+            title: 'IT-Wallet su App IO: patente e tessera sanitaria digitale',
+            category: 'documenti',
+            audience: ['cittadini', 'lavoratori'],
+            level: 'base',
+            estimatedMinutes: 15,
+            summary: 'Come attivare e utilizzare IT-Wallet su App IO: patente di guida, tessera sanitaria (TEAM) e disability card direttamente sullo smartphone con valore legale per posti di blocco e sanità.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-10-26',
+            mainEntity: 'Dipartimento per la trasformazione digitale',
+            synthesis: 'IT-Wallet è il portafoglio digitale pubblico italiano integrato nell’App IO (D.L. 19/2024). Consente di conservare la versione digitale della patente di guida e della tessera sanitaria con piena validità legale, verificabile offline tramite QR code dinamico dalle forze dell’ordine.',
+            whenToDo: 'Quando vuoi avere i tuoi documenti sempre disponibili sullo smartphone con valore legale o durante i controlli delle forze di polizia.',
+            scenario: 'Sei alla guida e hai dimenticato il portafoglio a casa, o devi recarti dal medico o in farmacia e ti serve la tessera sanitaria.',
+            steps: [
+                'Aggiorna l\'applicazione App IO dallo store ufficiale del tuo smartphone (iOS o Android)',
+                'Accedi all\'App IO utilizzando le tue credenziali SPID (livello 2) o CIE e imposta lo sblocco biometrico',
+                'Accedi alla sezione «Portafoglio» dell\'app e seleziona «Documenti su IT-Wallet»',
+                'Seleziona il documento da aggiungere: Patente di guida, Tessera Sanitaria / TEAM o Disability Card',
+                'Conferma la richiesta: il sistema verifica i dati con il Ministero delle Infrastrutture e dei Trasporti o Sogei',
+                'Al controllo di polizia, apri il documento su App IO e mostra il QR code crittografico dinamico per la scansione'
+            ],
+            doNow: [
+                'Verifica che il tuo smartphone abbia una schermata di blocco sicura (PIN o biometria)',
+                'Apri l\'App IO e controlla l\'abilitazione nella sezione Portafoglio'
+            ],
+            dontDo: [
+                'Non mostrare catture di schermata (screenshot): non hanno valore legale e vengono rifiutate dalle pattuglie',
+                'Non condividere mai le credenziali SPID o il codice sblocco con sconosciuti'
+            ],
+            whatToPrepare: [
+                'Identità digitale SPID o carta d\'identità elettronica CIE con PIN/PUK',
+                'Smartphone con sistema operativo aggiornato e fotocamera/biometria attiva',
+                'Numero della patente o codice fiscale'
+            ],
+            commonErrors: [
+                'Credere che basti salvare una foto della patente nella galleria del telefono',
+                'Dimenticare di abilitare la biometria (necessaria per conservare le chiavi nell\'enclave di sicurezza hardware)'
+            ],
+            askHelpWhen: [
+                'Se i dati del documento risultano disallineati rispetto alla patente fisica',
+                'Se l\'accesso su App IO segnala anomalie nel profilo SPID/CIE'
+            ],
+            whoCanHelp: [
+                'Assistenza in-app di App IO (PagoPA S.p.A.)',
+                'Motorizzazione Civile (per incongruenze sulla patente)',
+                'Agenzia delle Entrate / Sogei (per anomalie sulla tessera sanitaria)'
+            ],
+            officialLinks: [
+                'https://innovazione.gov.it/notizie/articoli/it-wallet-il-portafoglio-digitale-degli-italiani/',
+                'https://io.italia.it/'
+            ],
+            checklist: [
+                'Ho aggiornato l\'App IO all\'ultima versione',
+                'Ho effettuato l\'accesso con SPID o CIE',
+                'Ho caricato la patente di guida nel portafoglio digitale',
+                'Ho caricato la tessera sanitaria / TEAM'
+            ],
+            sources: [
+                {
+                    title: 'Dipartimento per la trasformazione digitale — IT-Wallet su App IO',
+                    organization: 'Presidenza del Consiglio dei Ministri',
+                    url: 'https://innovazione.gov.it/notizie/articoli/it-wallet-il-portafoglio-digitale-degli-italiani/',
+                    type: 'official',
+                    usedFor: 'Normativa e valore legale IT-Wallet',
+                    lastCheckedAt: '2026-10-26'
+                },
+                {
+                    title: 'App IO — Portafoglio e Documenti Digitali',
+                    organization: 'PagoPA S.p.A.',
+                    url: 'https://io.italia.it/',
+                    type: 'official',
+                    usedFor: 'Guida all\'attivazione e requisiti tecnici',
+                    lastCheckedAt: '2026-10-26'
                 }
             ]
         }

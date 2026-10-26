@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { AlertTriangle, ArrowRight, ShieldCheck, Smartphone, Car, Bot } from 'lucide-react'
+import { AlertTriangle, ArrowRight, ShieldCheck, Smartphone, Car, QrCode } from 'lucide-react'
 
 interface SecurityAlertBannerProps {
     variant?: 'home' | 'sos'
@@ -20,7 +20,7 @@ export function SecurityAlertBanner({ variant = 'home' }: SecurityAlertBannerPro
                     <div>
                         <div className="flex items-center gap-2">
                             <span className="text-[10px] font-black uppercase tracking-widest px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-700 dark:text-amber-300">
-                                Allerta attiva · Autunno 2026
+                                Allerta attiva · Fine Ottobre 2026
                             </span>
                             <span className="text-xs text-muted">Fonti: Polizia Postale & CERT-AgID</span>
                         </div>
@@ -50,19 +50,19 @@ export function SecurityAlertBanner({ variant = 'home' }: SecurityAlertBannerPro
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {/* Alert 1 */}
                 <Link
-                    href="/novita/whatsapp-furto-account-falsi-concorsi-2026"
+                    href="/novita/allerta-quishing-qr-code-truffa-multe-parcometri-2026"
                     className="p-4 rounded-2xl border border-border/80 bg-surface/80 hover:border-amber-500/60 hover:shadow-md transition-all group flex flex-col justify-between space-y-3"
                 >
                     <div className="space-y-2">
                         <div className="flex items-center gap-2 text-xs font-semibold text-amber-600 dark:text-amber-400">
-                            <Smartphone className="w-4 h-4" />
-                            <span>WhatsApp · Furto Account</span>
+                            <QrCode className="w-4 h-4" />
+                            <span>Quishing · QR Code fraudolenti</span>
                         </div>
                         <h3 className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors leading-snug">
-                            Truffa dei falsi concorsi ("La ballerina")
+                            Adesivi QR contraffatti su parcometri e multe
                         </h3>
                         <p className="text-xs text-secondary leading-relaxed line-clamp-3">
-                            Messaggi da contatti rubati chiedono voti per un concorso. Mai cedere il codice a 6 cifre via SMS. Attiva subito la verifica a due fattori.
+                            Adesivi sovrapposti su colonnine e preavvisi di sosta portano a falsi portali PagoPA. Controlla il dominio prima di pagare.
                         </p>
                     </div>
                     <span className="text-[11px] font-bold text-primary inline-flex items-center gap-1 pt-2 border-t border-border/40">
@@ -94,19 +94,19 @@ export function SecurityAlertBanner({ variant = 'home' }: SecurityAlertBannerPro
 
                 {/* Alert 3 */}
                 <Link
-                    href="/novita/siti-clone-ia-truffe-online-2026"
+                    href="/novita/whatsapp-furto-account-falsi-concorsi-2026"
                     className="p-4 rounded-2xl border border-border/80 bg-surface/80 hover:border-amber-500/60 hover:shadow-md transition-all group flex flex-col justify-between space-y-3"
                 >
                     <div className="space-y-2">
                         <div className="flex items-center gap-2 text-xs font-semibold text-amber-600 dark:text-amber-400">
-                            <Bot className="w-4 h-4" />
-                            <span>Intelligenza Artificiale · Voice Cloning</span>
+                            <Smartphone className="w-4 h-4" />
+                            <span>WhatsApp · Furto Account</span>
                         </div>
                         <h3 className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors leading-snug">
-                            Siti clone perfetti e audio deepfake
+                            Truffa dei falsi concorsi ("La ballerina")
                         </h3>
                         <p className="text-xs text-secondary leading-relaxed line-clamp-3">
-                            I modelli IA generano siti bancari privi di errori e clonano voci di parenti/colleghi. Istituisci una parola d'ordine familiare.
+                            Messaggi da contatti rubati chiedono voti per un concorso. Mai cedere il codice a 6 cifre via SMS. Attiva subito la verifica a due fattori.
                         </p>
                     </div>
                     <span className="text-[11px] font-bold text-primary inline-flex items-center gap-1 pt-2 border-t border-border/40">

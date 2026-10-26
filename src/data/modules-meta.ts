@@ -58,11 +58,11 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "number": 0,
     "title": "Truffe e Phishing",
     "description": "Come riconoscere i tentativi di truffa online, proteggere i propri dati e reagire in caso di errore.",
-    "lessonCount": 3,
+    "lessonCount": 4,
     "difficulty": "base",
     "icon": "AlertTriangle",
     "category": "truffe",
-    "lastUpdated": "2026-10-21",
+    "lastUpdated": "2026-10-26",
     "featuredType": "none"
   },
   {
@@ -237,11 +237,11 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "number": 0,
     "title": "Documenti e Identità Avanzata",
     "description": "Procedure digitali per passaporto, residenza, certificati e strumenti di firma elettronica.",
-    "lessonCount": 13,
+    "lessonCount": 14,
     "difficulty": "intermedia",
     "icon": "FileText",
     "category": "documenti",
-    "lastUpdated": "2026-05-14",
+    "lastUpdated": "2026-10-26",
     "featuredType": "none"
   },
   {
@@ -345,11 +345,11 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "number": 0,
     "title": "Sanità Territoriale",
     "description": "Guida ai servizi sanitari di base e specialistici vicini a te: dal medico di famiglia ai centri di salute mentale.",
-    "lessonCount": 12,
+    "lessonCount": 13,
     "difficulty": "base",
     "icon": "Stethoscope",
     "category": "sanita",
-    "lastUpdated": "2026-08-27",
+    "lastUpdated": "2026-10-26",
     "featuredType": "none"
   },
   {

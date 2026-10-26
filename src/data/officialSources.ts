@@ -1544,5 +1544,45 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     url: "https://www.arbitrobancariofinanziario.it/",
     category: "soldi",
     type: "servizio ufficiale"
+  },
+  governoItWalletRollout2026: {
+    id: 'governoItWalletRollout2026',
+    name: "Dipartimento per la trasformazione digitale — Estensione sperimentazione IT-Wallet su App IO",
+    ente: "Presidenza del Consiglio dei Ministri",
+    url: "https://innovazione.gov.it/notizie/articoli/it-wallet-fase-pilota-estensione-nazionale-2026/",
+    category: "identita-digitale",
+    type: "servizio ufficiale"
+  },
+  poliziaPostaleQuishing2026: {
+    id: 'poliziaPostaleQuishing2026',
+    name: "Polizia di Stato - Polizia Postale — Allarme Quishing e truffe tramite QR Code contraffatti",
+    ente: "Polizia Postale",
+    url: "https://www.commissariatodips.it/notizie/articolo/quishing-attenzione-ai-qr-code-contraffatti-su-parcometri-e-multe/index.html",
+    category: "sicurezza",
+    type: "ente istituzionale"
+  },
+  saluteVaccinazioneAutunno2026: {
+    id: 'saluteVaccinazioneAutunno2026',
+    name: "Ministero della Salute — Circolare avvio campagna di vaccinazione autunno-inverno 2026/2027",
+    ente: "Ministero della Salute",
+    url: "https://www.salute.gov.it/portale/influenza/dettaglioContenutiInfluenza.jsp?lingua=italiano&id=686",
+    category: "sanita",
+    type: "ente istituzionale"
+  },
+  inlControlliPatenteCreditiNov2026: {
+    id: 'inlControlliPatenteCreditiNov2026',
+    name: "INL — Circolare n. 5/2026: Controlli nei cantieri edili e revoca patente a crediti",
+    ente: "Ispettorato Nazionale del Lavoro",
+    url: "https://www.ispettorato.gov.it/normativa/circolari/circolare-numero-5-del-2026-controlli-patente-a-crediti/",
+    category: "lavoro",
+    type: "ente istituzionale"
+  },
+  cgsScioperoScuola31Ottobre2026: {
+    id: 'cgsScioperoScuola31Ottobre2026',
+    name: "Commissione di Garanzia Sciopero — Proclamazione sciopero comparto istruzione e ricerca 31 ottobre 2026",
+    ente: "Commissione di Garanzia Sciopero nei Servizi Pubblici Essenziali",
+    url: "https://www.commissionegaranziasciopero.it/dettaglio-sciopero/2026-10-31-scuola-ricerca",
+    category: "lavoro",
+    type: "ente istituzionale"
   }
 };

@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_20_sanita_territoriale: Module = {
     id: 'modulo-20-sanita-territoriale',
-    lastUpdated: '2026-08-27',
+    lastUpdated: '2026-10-26',
     title: 'Modulo 20: Sanità Territoriale',
     description: 'Guida ai servizi sanitari di base e specialistici vicini a te: dal medico di famiglia ai centri di salute mentale.',
     category: 'sanita',
@@ -625,6 +625,88 @@ export const modulo_20_sanita_territoriale: Module = {
                     lastCheckedAt: '2026-08-14',
                 },
             ],
+        },
+        {
+            id: 'vaccinazione-autunno-fse',
+            slug: 'vaccinazione-autunno-fse-prenotazione',
+            title: 'Vaccinazione autunno 2026: prenotazione antinfluenzale e Covid',
+            category: 'sanita',
+            audience: ['cittadini', 'anziani', 'caregiver', 'famiglie'],
+            level: 'base',
+            estimatedMinutes: 10,
+            summary: 'Come prenotare la vaccinazione congiunta antinfluenzale e richiamo Covid tramite Fascicolo Sanitario Elettronico FSE 2.0, farmacie di comunità e medici di medicina generale.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-10-26',
+            mainEntity: 'Ministero della Salute',
+            synthesis: 'La campagna vaccinale autunno 2026 offre gratuitamente la somministrazione congiunta di antinfluenzale e vaccino aggiornato Covid a over 60, fragili, donne incinte e caregiver. Si prenota su FSE 2.0 regionale, Cup o farmacie.',
+            whenToDo: 'Tra ottobre e dicembre per garantire la massima copertura immunitaria nella stagione invernale.',
+            scenario: 'Vuoi vaccinarti contro l\'influenza stagionale e ricevere il richiamo Covid gratuito per proteggere te o familiari vulnerabili.',
+            steps: [
+                'Accedi al portale regionale del Fascicolo Sanitario Elettronico (FSE 2.0) con SPID, CIE o TS-CNS',
+                'Accedi alla sezione dedicata «Campagna vaccinale autunno 2026»',
+                'Scegli il punto di somministrazione più comodo tra studio del Medico di Medicina Generale, centro vaccinale ASL o farmacia aderente',
+                'Seleziona data e orario tra quelli disponibili e scarica il promemoria di prenotazione con codice a barre',
+                'Presentati all\'appuntamento con Tessera Sanitaria ed eventuale documentazione su patologie o terapie in corso',
+                'Verifica che la vaccinazione sia stata registrata nel taccuino vaccinale del tuo FSE entro 24-48 ore'
+            ],
+            doNow: [
+                'Verifica se rientri nelle categorie con diritto alla gratuità (over 60, patologie croniche, caregiver)',
+                'Accedi al FSE regionale o chiama la farmacia di fiducia per verificare le date disponibili'
+            ],
+            dontDo: [
+                'Non attendere il picco influenzale di dicembre/gennaio: l\'efficacia protettiva richiede circa due settimane dalla puntura',
+                'Non temere la co-somministrazione: le linee guida del Ministero della Salute attestano la piena sicurezza della doppia iniezione'
+            ],
+            whatToPrepare: [
+                'Tessera Sanitaria (TS-CNS) in corso di validità',
+                'Elenco dei farmaci assunti quotidianamente per l\'anamnesi preliminare',
+                'Eventuale certificato di esenzione per patologia (se under 60)'
+            ],
+            commonErrors: [
+                'Dimenticare la tessera sanitaria all\'appuntamento',
+                'Pensare che serva la prescrizione del medico di base per fare il vaccino in farmacia (per gli aventi diritto è ad accesso diretto)'
+            ],
+            askHelpWhen: [
+                'Se la persona da vaccinare non è trasportabile ed è necessaria la somministrazione a domicilio dal medico curante',
+                'Se il sistema FSE non riconosce la categoria di priorità pur avendone diritto'
+            ],
+            whoCanHelp: [
+                'Medico di Medicina Generale (MMG) o Pediatra (PLS)',
+                'Farmacie di comunità convenzionate con il SSN',
+                'Sportello CUP o Ufficio Relazioni con il Pubblico (URP) della ASL'
+            ],
+            officialLinks: [
+                'https://www.salute.gov.it/portale/influenza/dettaglioContenutiInfluenza.jsp?lingua=italiano&id=686'
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'saluteVaccinazioneAutunno2026',
+                    useWhen: 'Per consultare la circolare ufficiale del Ministero della Salute',
+                    beforeOpening: []
+                },
+                {
+                    sourceId: 'fseSalute',
+                    useWhen: 'Per accedere al portale nazionale del Fascicolo Sanitario Elettronico',
+                    beforeOpening: ['SPID o CIE']
+                }
+            ],
+            checklist: [
+                'Ho verificato i requisiti di gratuità o prenotazione',
+                'Ho prenotato la data su FSE o in farmacia',
+                'Ho portato la Tessera Sanitaria alla seduta',
+                'Ho controllato la registrazione nel fascicolo elettronico'
+            ],
+            sources: [
+                {
+                    title: 'Ministero della Salute — Circolare avvio campagna di vaccinazione autunno-inverno 2026/2027',
+                    organization: 'Ministero della Salute',
+                    url: 'https://www.salute.gov.it/portale/influenza/dettaglioContenutiInfluenza.jsp?lingua=italiano&id=686',
+                    type: 'official',
+                    usedFor: 'Requisiti, co-somministrazione e canali di accesso',
+                    lastCheckedAt: '2026-10-26'
+                }
+            ]
         }
     ]
 };

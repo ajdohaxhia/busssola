@@ -12,7 +12,7 @@ export default function NovitaPage() {
                 badge="Novità"
                 icon={Newspaper}
                 title="Cosa è cambiato nel 2026"
-                description="Solo fatti verificati su fonti istituzionali e bollettini ufficiali: Comuni, Questure, Prefetture, Ministero dell’Interno, Polizia Postale, CERT-AgID, Garante Privacy, INPS, Agenzia delle Entrate, MIT e ARERA. Ultimo aggiornamento redazionale: 21 ottobre 2026."
+                description="Solo fatti verificati su fonti istituzionali e bollettini ufficiali: Comuni, Questure, Prefetture, Ministero dell’Interno, Polizia Postale, CERT-AgID, Garante Privacy, INPS, Agenzia delle Entrate, MIT, Ministero della Salute e ARERA. Ultimo aggiornamento redazionale: 26 ottobre 2026."
             />
             <div className="grid gap-4">
                 {items.map((n) => (

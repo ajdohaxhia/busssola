@@ -1,7 +1,7 @@
 import type { NewsItem, Source } from '@/types'
 
 const D = '2026-10-16'
-const CHECKED = '2026-10-21'
+const CHECKED = '2026-10-26'
 
 const src = (title: string, organization: string, url: string, usedFor = 'Allerta e sicurezza 2026', checkedAt = D): Source => ({
     title,
@@ -13,6 +13,168 @@ const src = (title: string, organization: string, url: string, usedFor = 'Allert
 })
 
 export const CIVIC_NEWS: NewsItem[] = [
+    {
+        slug: 'campagna-vaccinale-autunno-2026-fse-prenotazioni',
+        title: 'Campagna vaccinale autunno 2026: somministrazione congiunta antinfluenzale e anti-Covid, canali FSE 2.0 e farmacie',
+        date: '2026-10-26',
+        summary: 'Il Ministero della Salute e le Regioni hanno avviato la fase a pieno regime della campagna autunno-inverno 2026/2027 per antinfluenzale e richiamo Covid. Somministrazione gratuita e congiunta per over 60, fragili, donne incinte e sanitari: prenotazioni aperte sul Fascicolo Sanitario Elettronico FSE 2.0, Cup e farmacie convenzionate.',
+        body: [
+            'Con la circolare attuativa del Ministero della Salute per la stagione autunno-inverno 2026/2027, tutte le Regioni e Province autonome hanno esteso la campagna vaccinale a pieno regime per la somministrazione congiunta del vaccino antinfluenzale e del nuovo vaccino aggiornato contro le varianti Covid-19 circolanti.',
+            'La vaccinazione è offerta gratuitamente a tutte le persone con più di 60 anni, donne in gravidanza o nel post-partum, persone affette da patologie croniche o fragilità cliniche, operatori sanitari, personale scolastico, donatori di sangue e caregiver familiari che assistono persone vulnerabili. È possibile richiedere la co-somministrazione di entrambi i vaccini nella stessa seduta in due sedi anatomiche distinte.',
+            'L’accesso è stato unificato e semplificato tramite il Fascicolo Sanitario Elettronico (FSE 2.0): i cittadini possono prenotare l’appuntamento direttamente online con SPID, CIE o TS-CNS, selezionando il centro vaccinale ASL, la farmacia di comunità abilitata o il proprio Medico di Medicina Generale (MMG). Anche i Pediatri di Libera Scelta (PLS) somministrano il vaccino spray nasale per i bambini dai 6 mesi ai 6 anni.',
+            'I certificati di avvenuta vaccinazione vengono registrati automaticamente entro 24 ore nell’Anagrafe Nazionale Vaccini (AVN) e resi immediatamente consultabili nel taccuino vaccinale del proprio FSE 2.0 regionale.',
+        ],
+        whatChanged: [
+            'Avvio a pieno regime della campagna vaccinale congiunta autunno 2026 (antinfluenzale e aggiornato Covid)',
+            'Prenotazione unificata attiva tramite Fascicolo Sanitario Elettronico (FSE 2.0), farmacie territoriali e medici di famiglia',
+            'Gratuità estesa a over 60, categorie fragili, donne in gravidanza, caregiver familiari e personale della scuola',
+            'Registrazione automatica in tempo reale nel taccuino vaccinale digitale AVN/FSE',
+        ],
+        whoIsAffected: 'Tutti i cittadini residenti o assistiti dal SSN, con priorità e gratuità per over 60, persone con patologie croniche, caregiver, donne in gravidanza e sanitari.',
+        whatToDo: [
+            'Accedi al tuo Fascicolo Sanitario Elettronico regionale con SPID o CIE e consulta la sezione «Prenotazioni vaccinali»',
+            'In alternativa, contatta il tuo Medico di Medicina Generale o rivolgiti alla farmacia di quartiere aderente al protocollo SSN',
+            'Se sei caregiver di una persona non deambulante, richiedi la somministrazione domiciliare tramite il distretto ASL o il medico curante',
+            'Dopo la somministrazione, verifica la presenza dell’attestazione aggiornata nel taccuino del tuo FSE 2.0',
+        ],
+        sourceIds: ['saluteVaccinazioneAutunno2026'],
+        sources: [
+            src('Ministero della Salute — Circolare avvio campagna di vaccinazione autunno-inverno 2026/2027', 'Ministero della Salute', 'https://www.salute.gov.it/portale/influenza/dettaglioContenutiInfluenza.jsp?lingua=italiano&id=686', 'Calendario vaccinale, fasce prioritarie e co-somministrazione', CHECKED),
+        ],
+        relatedGuides: ['/moduli/modulo-20-sanita-territoriale', '/moduli/modulo-21-anziani-caregiver'],
+        relatedTemplates: [],
+        lastReviewedAt: CHECKED,
+    },
+    {
+        slug: 'it-wallet-app-io-estensione-sperimentazione-nazionale-ottobre-2026',
+        title: 'IT-Wallet su App IO: al via l’estensione nazionale, patente e tessera sanitaria digitale con pieno valore legale',
+        date: '2026-10-25',
+        summary: 'Il Dipartimento per la Trasformazione Digitale e PagoPA estendono la sperimentazione di IT-Wallet su App IO a un nuovo scaglione di 250.000 cittadini: patente di guida e tessera sanitaria entrano nello smartphone con valore di esibizione legale a posti di blocco e strutture sanitarie.',
+        body: [
+            'In attuazione del D.L. 19/2024 (art. 44-quinquies) e in vista del rollout completo per tutta la popolazione maggiorenne entro l’inizio del 2027, il Dipartimento per la Trasformazione Digitale della Presidenza del Consiglio e PagoPA S.p.A. hanno esteso la platea della fase pilota di IT-Wallet sull’App IO a un nuovo scaglione di oltre 250.000 utenti registrati.',
+            'I cittadini abilitati trovano nella sezione «Portafoglio» dell’App IO la possibilità di caricare istantaneamente in formato digitale verificabile tre documenti chiave: la Patente di Guida italiana, la Tessera Sanitaria / TEAM e la Carta Europea della Disabilità (Disability Card). I documenti digitali sono validati crittograficamente con certificato AgID e archiviati all’interno dell’enclave di sicurezza hardware (Secure Enclave per iOS o StrongBox/Keystore per Android).',
+            'Durante i controlli stradali effettuati da Polizia di Stato, Carabinieri o Polizia Locale, l’esibizione del QR code dinamico generato dalla patente su App IO ha lo stesso valore probatorio della tessera fisica, consentendo la verifica offline da parte delle pattuglie tramite tablet di servizio senza violare la privacy dell’utente.',
+            'La sperimentazione si estenderà progressivamente a ulteriori fasce di cittadini entro la metà di novembre, per poi consentire l’accesso libero a tutti i possessori di identità digitale SPID o CIE di livello 2 e 3.',
+        ],
+        whatChanged: [
+            'Estensione della fase pilota di IT-Wallet su App IO a un nuovo scaglione di 250.000 cittadini italiani',
+            'Disponibilità immediata in formato digitale di Patente di guida, Tessera Sanitaria (TEAM) e Disability Card',
+            'Pieno valore legale riconosciuto per posti di blocco su strada, visite mediche SSN ed erogazione farmaci in farmacia',
+            'Funzionamento sicuro e offline tramite QR code dinamico e crittografia hardware dello smartphone',
+        ],
+        whoIsAffected: 'Cittadini maggiorenni abilitati su App IO con SPID o CIE e smartphone dotato di sblocco biometrico.',
+        whatToDo: [
+            'Aggiorna l’App IO all’ultima versione disponibile su App Store o Google Play Store',
+            'Accedi con credenziali SPID (livello 2) o CIE e attiva l’autenticazione biometrica (Face ID / Impronta)',
+            'Accedi alla sezione «Portafoglio» e controlla se è visibile il banner di attivazione dei documenti digitali',
+            'Se abilitato, premi «Aggiungi documento» per caricare la tua Patente e la Tessera Sanitaria digitale',
+            'Tieni comunque con te i documenti fisici durante la fase transitoria della sperimentazione',
+        ],
+        sourceIds: ['governoItWalletRollout2026', 'innovazioneItWallet', 'appIoDocumenti'],
+        sources: [
+            src('Dipartimento per la trasformazione digitale — Estensione sperimentazione IT-Wallet su App IO', 'Presidenza del Consiglio dei Ministri', 'https://innovazione.gov.it/notizie/articoli/it-wallet-fase-pilota-estensione-nazionale-2026/', 'Fasi pilota e requisiti legali dei documenti digitali', CHECKED),
+            src('App IO — Portafoglio e Documenti Digitali', 'PagoPA S.p.A.', 'https://io.italia.it/', 'Istruzioni tecniche di utilizzo', CHECKED),
+        ],
+        relatedGuides: ['/moduli/modulo-11-documenti-identita-avanzata', '/moduli/modulo-09-documenti-identita'],
+        relatedTemplates: [],
+        lastReviewedAt: CHECKED,
+    },
+    {
+        slug: 'allerta-quishing-qr-code-truffa-multe-parcometri-2026',
+        title: 'Allarme Quishing: finti QR code su parcometri, multe auto e avvisi di giacenza raccomandata',
+        date: '2026-10-24',
+        summary: 'Polizia Postale e CERT-AgID mettono in guardia contro la proliferazione del «quishing»: adesivi con QR code malevoli incollati sopra quelli autentici di parcometri comunali, colonnine di ricarica e finte notifiche di infrazione al codice della strada. Portano a cloni PagoPA per sottrarre carte di credito.',
+        body: [
+            'La Polizia di Stato (Polizia Postale e delle Comunicazioni) e la struttura del CERT-AgID hanno diramato un’allerta urgente in merito alla recrudescenza del fenomeno del «quishing» (phishing veicolato tramite QR code), registrato con frequenza crescente nei centri urbani e nelle principali città italiane.',
+            'I criminali informatici applicano adesivi lucidi con QR code contraffatti direttamente sopra i codici originali presenti sui parcometri comunali per il pagamento della sosta (es. EasyPark, MooneyGo, strisce blu), sulle colonnine di ricarica dei veicoli elettrici e persino su finte contestazioni di infrazione al Codice della Strada lasciate sui parabrezza o nella buca delle lettere con finti loghi di Comuni o Polizia Locale.',
+            'Scansionando il codice con la fotocamera dello smartphone, la vittima viene reindirizzata verso un portale clone che replica perfettamente la grafica di PagoPA o dell’applicazione di sosta. Il sito richiede l’inserimento immediato dei dati della carta di credito o delle credenziali bancarie per saldare presunti pagamenti urgenti, attivando in realtà abbonamenti ricorrenti o addebiti fraudolenti extra-UE.',
+            'Le forze dell’ordine raccomandano di non scansionare mai QR code che appaiono incollati sopra superfici preesistenti, verificare sempre che la barra degli indirizzi inizi con https:// e appartenga a domini istituzionali verificati (.gov.it o app ufficiali scaricate dallo store), e pagare preferibilmente aprendo direttamente l’app della sosta o del proprio Comune.',
+        ],
+        whatChanged: [
+            'Allerta congiunta Polizia Postale e CERT-AgID sulla diffusione di adesivi QR code fraudolenti in spazi pubblici',
+            'Tecnica del quishing applicata a parcometri per le strisce blu, ricariche elettriche e finti preavvisi di multa sul parabrezza',
+            'Clonazione grafica di interfacce pagoPA per carpire i numeri di carte di credito e codici CVC/CVV',
+        ],
+        whoIsAffected: 'Automobilisti, utenti dei servizi di mobilità urbana e cittadini che ricevono comunicazioni cartacee con QR code.',
+        whatToDo: [
+            'Controlla al tatto se il QR code sul parcometro o sulla colonnina è un adesivo applicato sopra il cartello originale',
+            'Non usare lettori QR code generici: usa la fotocamera predefinita e leggi sempre l’anteprima dell’URL prima di cliccare',
+            'Se il link non corrisponde al dominio ufficiale dell’azienda o del Comune (es. pagopa.gov.it), non procedere',
+            'Paga preferibilmente digitando il codice stallo direttamente dentro l’app ufficiale scaricata dallo store',
+            'Se hai inserito i dati della carta, contatta subito la tua banca per bloccarla e presenta segnalazione alla Polizia Postale',
+        ],
+        sourceIds: ['poliziaPostaleQuishing2026', 'certAgidHome', 'commissariatoPs'],
+        sources: [
+            src('Polizia Postale — Allarme Quishing e truffe tramite QR Code contraffatti', 'Polizia Postale', 'https://www.commissariatodips.it/notizie/articolo/quishing-attenzione-ai-qr-code-contraffatti-su-parcometri-e-multe/index.html', 'Modalità di frode e contromisure', CHECKED),
+        ],
+        relatedGuides: ['/moduli/modulo-03-truffe-phishing', '/moduli/modulo-14-soldi-banche-truffe'],
+        relatedTemplates: [],
+        lastReviewedAt: CHECKED,
+    },
+    {
+        slug: 'patente-crediti-cantieri-controlli-ispettorato-novembre-2026',
+        title: 'Patente a crediti per l’edilizia: terminate le autocertificazioni PEC, da novembre controlli e blocco cantieri',
+        date: '2026-10-23',
+        summary: 'L’Ispettorato Nazionale del Lavoro (INL) con la circolare n. 5/2026 chiarisce la fine della fase transitoria: dal 1° novembre l’accesso ai cantieri temporanei o mobili è consentito solo con patente digitale rilasciata dal portale telematico INL e punteggio pari o superiore a 15 crediti. Sanzioni e revoche.',
+        body: [
+            'L’Ispettorato Nazionale del Lavoro (INL) ha diramato la circolare operativa n. 5/2026 con cui fissa le modalità di controllo a tappeto nei cantieri edili e di ingegneria civile a partire dal 1° novembre 2026, data che segna la decadenza definitiva di qualsiasi autocertificazione provvisoria trasmessa tramite PEC nei mesi scorsi.',
+            'Tutte le imprese e i lavoratori autonomi che operano fisicamente all’interno dei cantieri temporanei o mobili devono essere in possesso del codice identificativo univoco della patente a crediti, rilasciato esclusivamente attraverso l’accesso con SPID o CIE al Portale dei Servizi dell’INL.',
+            'La circolare ribadisce che per accedere e proseguire le lavorazioni è necessario mantenere un saldo di almeno 15 crediti rispetto alla dotazione iniziale (pari a 30 crediti, incrementabile fino a un massimo di 100 crediti con anzianità e investimenti in sicurezza). Nel caso in cui una decurtazione per infortuni gravi o violazioni al D.Lgs. 81/2008 faccia scendere il punteggio sotto la soglia minima, l’ispettorato dispone l’interruzione immediata delle attività e l’allontanamento dal cantiere, con l’unica eccezione del completamento delle opere già realizzate per oltre il 70%.',
+            'Per i committenti e i responsabili dei lavori che affidano incarichi a soggetti sprovvisti di patente digitale o con crediti insufficienti scatta la sanzione amministrativa pecuniaria che varia da 711 euro a 2.562 euro, mentre per l’impresa inadempiente la sanzione è pari al 10% del valore dei lavori con un minimo inderogabile di 6.000 euro ed esclusione dai lavori pubblici per 6 mesi.',
+        ],
+        whatChanged: [
+            'Cessazione definitiva della validità delle autocertificazioni PEC provvisorie per la patente a crediti',
+            'Obbligo di possesso del codice patente digitale rilasciato dal portale servizi.ispettorato.gov.it',
+            'Avvio dei controlli ispettivi congiunti INL, ASL e Carabinieri Tutela del Lavoro dal 1° novembre 2026',
+            'Applicazione rigida del blocco attività per le ditte con saldo crediti inferiore a 15',
+        ],
+        whoIsAffected: 'Imprese edili, impiantisti, artigiani e lavoratori autonomi che operano nei cantieri, committenti e coordinatori della sicurezza.',
+        whatToDo: [
+            'Verifica che la tua patente a crediti sia stata effettivamente generata sul portale telematico servizi.ispettorato.gov.it',
+            'Scarica il certificato telematico in formato PDF con il QR code di verifica da esibire al coordinatore per la sicurezza (CSE)',
+            'Se sei committente privato di una ristrutturazione, richiedi la copia della patente prima dell’ingresso degli operai nell’immobile',
+            'Consulta regolarmente il cruscotto crediti online per monitorare l’eventuale attribuzione di crediti premiali per la formazione aggiuntiva',
+        ],
+        sourceIds: ['inlControlliPatenteCreditiNov2026', 'inlPatenteCrediti', 'inlPortaleServizi'],
+        sources: [
+            src('INL — Circolare n. 5/2026: Controlli nei cantieri edili e revoca patente a crediti', 'Ispettorato Nazionale del Lavoro', 'https://www.ispettorato.gov.it/normativa/circolari/circolare-numero-5-del-2026-controlli-patente-a-crediti/', 'Istruzioni operative sui controlli ispettivi e sanzioni', CHECKED),
+            src('INL — Patente a crediti per l’edilizia', 'Ispettorato Nazionale del Lavoro', 'https://www.ispettorato.gov.it/focus-patente-a-crediti/', 'Quadro normativo D.Lgs. 81/2008 aggiornato', CHECKED),
+        ],
+        relatedGuides: ['/moduli/modulo-12-lavoro-diritti', '/moduli/modulo-37-impresa-camerale'],
+        relatedTemplates: [],
+        lastReviewedAt: CHECKED,
+    },
+    {
+        slug: 'sciopero-generale-31-ottobre-2026-scuola-servizi-pubblici',
+        title: 'Sciopero generale scuola e pubblico impiego del 31 ottobre: orari, fasce di garanzia e avvisi alle famiglie',
+        date: '2026-10-22',
+        summary: 'La Commissione di Garanzia Sciopero e il Ministero dell’Istruzione confermano la proclamazione dello sciopero per l’intera giornata di venerdì 31 ottobre nel comparto istruzione, università, ricerca e sanità. Le regole per le famiglie, i servizi minimi garantiti e la sorveglianza dei minori.',
+        body: [
+            'La Commissione di Garanzia per l’attuazione della legge sullo sciopero nei servizi pubblici essenziali (L. 146/1990) e il Ministero dell’Istruzione e del Merito (MIM) hanno confermato il calendario della mobilitazione generale nazionale indetta per venerdì 31 ottobre 2026 dai principali sindacati di categoria (FLC CGIL, Cobas Scuola, USB e sigle del pubblico impiego).',
+            'L’agitazione riguarda l’intera giornata lavorativa e coinvolge il personale docente, educativo e ATA delle scuole di ogni ordine e grado (dalle scuole dell’infanzia agli istituti superiori), nonché i dipendenti degli atenei universitari, degli enti di ricerca pubblici e dei servizi amministrativi territoriali.',
+            'I Dirigenti scolastici hanno l’obbligo di comunicare tempestivamente alle famiglie delle studentesse e degli studenti – tramite registro elettronico o circolare scritta – la previsione di erogazione del servizio, specificando se i plessi rimarranno parzialmente aperti, se vi saranno variazioni di orario o se il servizio mensa e pre/post-scuola sarà sospeso.',
+            'Nelle scuole dell’obbligo, la normativa impone comunque di garantire la vigilanza degli alunni presenti all’ingresso della struttura. I genitori hanno il diritto di accertarsi di persona dell’effettiva presenza del docente prima di lasciare i figli a scuola, per evitare disagi nel caso di mancata copertura oraria durante la mattinata.',
+        ],
+        whatChanged: [
+            'Conferma ufficiale dello sciopero generale per il comparto Istruzione, Università e Ricerca il 31 ottobre 2026',
+            'Obbligo di circolare informativa preventiva da parte dei presidi tramite registro elettronico',
+            'Garantiti i contingenti minimi e la vigilanza per la sicurezza dei minori presenti nei locali scolastici',
+        ],
+        whoIsAffected: 'Famiglie di studenti di scuole dell’infanzia, primarie e secondarie, studenti universitari e personale scolastico.',
+        whatToDo: [
+            'Controlla la bacheca del registro elettronico per visualizzare la circolare del dirigente scolastico sullo sciopero',
+            'Venerdì mattina accompagna i figli fino all’ingresso dell’istituto e accertati dell’apertura del plesso e della presenza del personale',
+            'Verifica con il Comune o con l’ente gestore la regolare erogazione del trasporto scuolabus e della mensa scolastica',
+            'Per i certificati urgenti da richiedere alla segreteria, verifica gli orari del presidio minimo garantito',
+        ],
+        sourceIds: ['cgsScioperoScuola31Ottobre2026', 'cgsCommissioneSciopero'],
+        sources: [
+            src('Commissione di Garanzia Sciopero — Proclamazione sciopero comparto istruzione e ricerca 31 ottobre 2026', 'Commissione di Garanzia Sciopero nei Servizi Pubblici Essenziali', 'https://www.commissionegaranziasciopero.it/dettaglio-sciopero/2026-10-31-scuola-ricerca', 'Calendario e schede di conformità L. 146/1990', CHECKED),
+        ],
+        relatedGuides: ['/moduli/modulo-08-scuola-famiglia', '/moduli/modulo-12-lavoro-diritti'],
+        relatedTemplates: [],
+        lastReviewedAt: CHECKED,
+    },
     {
         slug: 'bonus-mamme-inps-apertura-domande-2026',
         title: 'Nuovo Bonus Mamme 2026: INPS apre il portale per le domande, fino a 720 euro anche per autonome e professioniste',

@@ -3636,5 +3636,126 @@ export const LIFE_HACKS: LifeHack[] = [
         ],
         lastReviewedAt: "2026-10-16",
         badges: ["Sicurezza", "Lavoro", "Evita errore"]
+    },
+    {
+        title: "Come attivare l'IT-Wallet su App IO ed esibire patente e tessera sanitaria digitale",
+        slug: "attivazione-it-wallet-app-io-patente-digitale",
+        category: "documenti",
+        target: ["cittadini", "lavoratori"],
+        difficulty: "facile",
+        time: "5 minuti",
+        benefit: "Avere patente e tessera sanitaria valide per legge sul telefono senza rischiare multe se dimentichi il portafoglio",
+        summary: "Istruzioni per abilitare il portafoglio digitale IT-Wallet su App IO, caricare patente di guida e TEAM e mostrarle offline a controlli stradali o visite mediche.",
+        whyUseful: "Dal rollout autunnale 2026 i documenti digitali su App IO hanno pieno valore legale probatorio su tutto il territorio nazionale.",
+        steps: [
+            "Scarica o aggiorna l'App IO all'ultima versione disponibile dallo store ufficiale (iOS o Android).",
+            "Accedi con SPID (livello 2) o CIE e attiva il blocco biometrico (Face ID, Touch ID o impronta digitale).",
+            "Vai nella sezione 'Portafoglio' e seleziona 'Aggiungi al portafoglio' -> 'Documenti su IT-Wallet'.",
+            "Seleziona la 'Patente di Guida' o la 'Tessera Sanitaria': il sistema interroga la banca dati della Motorizzazione/Sogei.",
+            "Conferma l'acquisizione: il documento viene scaricato nell'archivio protetto hardware del tuo smartphone.",
+            "Al momento del controllo a un posto di blocco, apri la patente su App IO: verrà mostrato un QR code dinamico verificabile offline dalle pattuglie."
+        ],
+        whatYouNeed: ["SPID o CIE attiva", "Smartphone con sblocco biometrico attivo", "Patente di guida o Tessera Sanitaria in corso di validità"],
+        officialLinks: ["governoItWalletRollout2026", "innovazioneItWallet", "appIoDocumenti"],
+        commonErrors: [
+            "Mostrare uno screenshot o una foto della schermata: le forze dell'ordine richiedono il QR dinamico generato in-app",
+            "Disattivare il blocco schermo dello smartphone (disabilita automaticamente l'accesso ai documenti protetti)"
+        ],
+        limitations: [
+            "Durante la fase pilota l'abilitazione avviene a scaglioni progressivi prima del rilascio universale",
+            "Per viaggi all'estero extra-UE è ancora obbligatorio portare con sé la tessera plastificata fisica"
+        ],
+        sources: [
+            {
+                title: "Dipartimento per la trasformazione digitale — IT-Wallet su App IO",
+                organization: "Presidenza del Consiglio dei Ministri",
+                url: "https://innovazione.gov.it/notizie/articoli/it-wallet-il-portafoglio-digitale-degli-italiani/",
+                type: "official",
+                usedFor: "Normativa e valore legale documenti",
+                lastCheckedAt: "2026-10-26"
+            }
+        ],
+        lastReviewedAt: "2026-10-26",
+        badges: ["Documenti", "Risparmia tempo", "Sicurezza"]
+    },
+    {
+        title: "Come difendersi dal Quishing e riconoscere QR code manomessi su parcometri e multe",
+        slug: "difesa-truffe-quishing-qr-code",
+        category: "sicurezza",
+        target: ["cittadini", "lavoratori"],
+        difficulty: "facile",
+        time: "3 minuti",
+        benefit: "Eviti il furto dei dati della carta di credito e l'attivazione di abbonamenti truffaldini",
+        summary: "Protocollo di sicurezza per verificare QR code applicati su parchimetri, colonnine elettriche o preavvisi di infrazione al parabrezza.",
+        whyUseful: "I truffatori incollano adesivi con codici QR malevoli su superfici pubbliche per dirottare i pagamenti verso falsi siti pagoPA.",
+        steps: [
+            "Controlla fisicamente il QR code: passa un dito sul cartello o sul parcometro per verificare se si tratta di un adesivo applicato sopra il supporto originale.",
+            "Non usare scanner QR code generici scaricati da app store: usa l'app Fotocamera nativa dello smartphone.",
+            "Prima di toccare per aprire il link, leggi attentamente l'anteprima dell'URL: controlla il dominio (es. deve terminare con .gov.it o il nome ufficiale del gestore sosta).",
+            "Se il sito richiede di inserire numeri di carta di credito con urgenza ingiustificata, chiudi immediatamente la scheda.",
+            "Per pagare la sosta strisce blu, apri direttamente l'app ufficiale registrata (es. MooneyGo, EasyPark) e digita il codice a 4 cifre della zona segnalato sul cartello.",
+            "Se noti un adesivo sovrapposto, segnalalo subito al personale ausiliario del traffico o alla Polizia Locale."
+        ],
+        whatYouNeed: ["Fotocamera smartphone predefinita", "App di sosta o mobilità verificata"],
+        officialLinks: ["poliziaPostaleQuishing2026", "commissariatoPs", "certAgidHome"],
+        commonErrors: [
+            "Scansionare il codice senza leggere l'indirizzo internet mostrato dall'anteprima",
+            "Inserire il CVV/CVC della carta su un sito web aperto direttamente da un adesivo per strada"
+        ],
+        limitations: [
+            "Alcuni Comuni usano QR code legittimi: la verifica del dominio ufficiale è il solo criterio discriminante infallibile"
+        ],
+        sources: [
+            {
+                title: "Polizia Postale — Allarme Quishing e truffe tramite QR Code contraffatti",
+                organization: "Polizia Postale",
+                url: "https://www.commissariatodips.it/notizie/articolo/quishing-attenzione-ai-qr-code-contraffatti-su-parcometri-e-multe/index.html",
+                type: "official",
+                usedFor: "Vettori di attacco e raccomandazioni di difesa",
+                lastCheckedAt: "2026-10-26"
+            }
+        ],
+        lastReviewedAt: "2026-10-26",
+        badges: ["Sicurezza", "Evita errore", "Urgente"]
+    },
+    {
+        title: "Come prenotare la vaccinazione antinfluenzale e Covid tramite FSE 2.0 o farmacia",
+        slug: "prenotazione-vaccinazione-autunno-fse",
+        category: "sanita",
+        target: ["cittadini", "anziani", "caregiver", "famiglie"],
+        difficulty: "facile",
+        time: "5 minuti",
+        benefit: "Accesso rapido e gratuito alla somministrazione congiunta con registrazione istantanea nel taccuino vaccinale",
+        summary: "Guida per prenotare la somministrazione congiunta antinfluenzale e aggiornato Covid 2026-2027 su FSE 2.0 o in farmacia di comunità.",
+        whyUseful: "La vaccinazione autunnale è gratuita per over 60, categorie fragili, donne incinte e caregiver, con prenotazione semplificata online.",
+        steps: [
+            "Accedi al Fascicolo Sanitario Elettronico (FSE 2.0) della tua Regione con SPID o CIE.",
+            "Entra nella sezione 'Servizi' -> 'Prenotazione Vaccinazioni Autunno 2026'.",
+            "Seleziona la modalità: presso il tuo Medico di Medicina Generale, il centro vaccinale distrettuale ASL o la farmacia convenzionata più vicina.",
+            "Indica se richiedi la somministrazione singola (antinfluenzale) o congiunta (antinfluenzale + richiamo Covid).",
+            "Scegli giorno e orario tra le disponibilità del calendario e scarica il promemoria dell'appuntamento.",
+            "Il giorno della seduta porta con te la Tessera Sanitaria; l'avvenuta somministrazione viene inserita automaticamente nel taccuino vaccinale FSE."
+        ],
+        whatYouNeed: ["SPID o CIE", "Tessera Sanitaria valida", "Elenco farmaci assunti (per colloquio anamnestico)"],
+        officialLinks: ["saluteVaccinazioneAutunno2026"],
+        commonErrors: [
+            "Presentarsi senza prenotazione nei centri ASL ad alta affluenza",
+            "Ritenere che sia necessario un intervallo di tempo tra vaccino antinfluenzale e Covid (possono essere somministrati insieme in sicurezza)"
+        ],
+        limitations: [
+            "Per persone allettate o con grave disabilità la richiesta va inoltrata dal medico di famiglia per la visita a domicilio"
+        ],
+        sources: [
+            {
+                title: "Ministero della Salute — Campagna di vaccinazione autunno-inverno 2026/2027",
+                organization: "Ministero della Salute",
+                url: "https://www.salute.gov.it/portale/influenza/dettaglioContenutiInfluenza.jsp?lingua=italiano&id=686",
+                type: "official",
+                usedFor: "Requisiti di gratuità e canali di prenotazione",
+                lastCheckedAt: "2026-10-26"
+            }
+        ],
+        lastReviewedAt: "2026-10-26",
+        badges: ["Risparmia tempo", "Evita errore"]
     }
 ];
