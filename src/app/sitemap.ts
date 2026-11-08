@@ -25,6 +25,8 @@ const KEY_HUBS = new Set([
     '/faq/',
     '/scadenze/',
     '/confronti/',
+    '/tool/',
+    '/ai/',
 ])
 
 const staticRoutes = [
@@ -50,6 +52,12 @@ const staticRoutes = [
     '/isee-2027/',
     '/pensioni-2027/',
     '/guide/f24-acconti/',
+    '/tool/',
+    '/tool/trova-bonus/',
+    '/tool/calcolo-stipendio-netto/',
+    '/tool/trova-procedura/',
+    '/tool/calcolo-consumo-elettrico/',
+    '/ai/',
     '/contact/',
     '/privacy/',
     '/termini/',

@@ -41,6 +41,45 @@ Questo documento mappa le principali query degli utenti agli indirizzi e agli in
 
 ---
 
+## 🛠️ Strumenti Interattivi & Simulatori
+| Pagina | Intent Principale | Query Principali | Schema |
+| :--- | :--- | :--- | :--- |
+| `/tool` | Directory calcolatori | simulatori burocrazia, strumenti gratuiti calcolo stipendio bonus | CollectionPage |
+| `/tool/calcolo-stipendio-netto` | Calcolo stipendio netto da RAL | calcolo stipendio netto, ral netto, da lordo a netto, stipendio netto mensile | SoftwareApplication |
+| `/tool/trova-bonus` | Trovare agevolazioni | quali bonus posso richiedere, trova bonus, agevolazioni isee 2027, bonus famiglia | SoftwareApplication |
+| `/tool/trova-procedura` | Trovare procedura e documenti | trova procedura, ho perso la carta identità cosa fare, rinnovo passaporto primo passo | SoftwareApplication |
+| `/tool/calcolo-consumo-elettrico` | Calcolo bolletta luce | calcolo consumo elettrico, quanto consuma condizionatore, costo kwh elettrodomestici | SoftwareApplication |
+
+---
+
+## ⚖️ Confronti & Tabelle Decisionali
+| Pagina | Intent Principale | Query Principali | Schema |
+| :--- | :--- | :--- | :--- |
+| `/confronti` | Scegliere tra alternative | confronti burocrazia, tabelle comparative civiche | CollectionPage |
+| `/confronti/spid-cie-it-wallet` | Confronto identità digitali | spid vs cie differenze, it wallet come funziona, cie senza nfc, quale scegliere | Article, FAQPage |
+| `/confronti/truffe-come-riconoscerle` | Riconoscimento frodi | come riconoscere sms truffa, falsa telefonata banca spoofing, phishing inps | Article, FAQPage |
+
+---
+
+## 🤖 Intelligenza Artificiale & Produttività
+| Pagina | Intent Principale | Query Principali | Schema |
+| :--- | :--- | :--- | :--- |
+| `/ai` | Orientamento AI e privacy | migliore intelligenza artificiale gratis, chatgpt vs gemini, ai per studiare, ai privacy | CollectionPage |
+
+---
+
+## 📅 Scadenzari & Guide Prioritarie
+| Pagina | Intent Principale | Query Principali | Schema |
+| :--- | :--- | :--- | :--- |
+| `/scadenze` | Calendario tasse e obblighi | scadenze fiscali 2026, scadenzario adempimenti inps | ItemList, FAQPage |
+| `/scadenze/2027` | Calendario anno 2027 | scadenze 2027, calendario fiscale 2027, iscrizioni scuola data, acconto imu 2027 | ItemList, FAQPage |
+| `/bonus-2027` | Guida completa agevolazioni | bonus 2027, guida bonus 2027, assegno unico 2027 importi, carta dedicata a te | Article, FAQPage |
+| `/isee-2027` | Guida rinnovo DSU | isee 2027, documenti isee 2027, dsu precompilata inps, esclusione btp 50000 euro | Article, FAQPage |
+| `/pensioni-2027` | Canali di uscita previdenziale | pensioni 2027, requisiti pensione vecchiaia 67 anni, quota 103, opzione donna | Article, FAQPage |
+| `/guide/f24-acconti` | Compilazione tributi F24 | modello f24 acconti, codice tributo 4034 1791, rateizzazione secondo acconto | HowTo, FAQPage |
+
+---
+
 ## 📈 Quality Gate SEO
 Ogni nuova pagina deve avere:
 1. **Title unico** (Template: Titolo | Busssola).

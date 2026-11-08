@@ -764,6 +764,18 @@ export function HUB_METADATA_BUILDER(key: string): SeoMetadataOptions {
             path: '/confronti/',
             keywords: ['confronti burocrazia', 'spid vs cie differenze', 'it-wallet o spid', 'riconoscere phishing o smishing', 'confronto opzioni civiche'],
         },
+        tool: {
+            title: 'Strumenti e Calcolatori Civici Gratuiti: Trova Bonus, Stipendio Netto e Consumi',
+            description: 'Calcolatori pratici ed educativi per cittadini: simulatore stipendio netto, questionario Trova-Bonus, motore di ricerca procedure e calcolo consumi energetici.',
+            path: '/tool/',
+            keywords: ['calcolatori civici', 'calcolo stipendio netto', 'trova bonus', 'trova procedura', 'calcolo consumo elettrico', 'strumenti online gratis'],
+        },
+        ai: {
+            title: 'Intelligenza Artificiale per Tutti: Guida Critica, Privacy e Confronti',
+            description: 'Guida indipendente agli strumenti di AI: ChatGPT, Gemini, Claude a confronto per studio e lavoro. Privacy, fact-checking e come usare l’IA senza perdere pensiero critico.',
+            path: '/ai/',
+            keywords: ['migliore intelligenza artificiale', 'chatgpt vs gemini', 'ai per studiare', 'ai per lavorare', 'privacy intelligenza artificiale', 'ai gratis'],
+        },
     }
     return map[key] || { title: SITE_NAME }
 }

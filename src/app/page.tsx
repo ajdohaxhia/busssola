@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import {
-    ArrowRight, Banknote, Briefcase, Calendar, FileText, GraduationCap, Heart,
-    Home as HomeIcon, Newspaper, Scale, Stethoscope, Users,
+    ArrowRight, Banknote, Briefcase, Calculator, Calendar, FileText,
+    Gift, GraduationCap, Heart, Home as HomeIcon, Newspaper, Scale,
+    Search, Stethoscope, Users, Zap,
 } from 'lucide-react'
 import { GuideSearch } from '@/components/ui/GuideSearch'
 import { Card } from '@/components/ui/Card'
@@ -192,6 +193,59 @@ export default function Home() {
                             </Card>
                         </Link>
                     ))}
+                </div>
+            </section>
+
+            <section className="space-y-6">
+                <SectionHead title="Simulatori e Strumenti Interattivi" href="/tool" linkLabel="Tutti gli strumenti" />
+                <p className="text-secondary max-w-2xl">
+                    Calcolatori pratici ed educativi eseguiti al 100% in locale nel tuo browser. Nessun dato personale viene salvato né inviato a server esterni.
+                </p>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <Link href="/tool/calcolo-stipendio-netto">
+                        <Card className="p-6 h-full space-y-3 hover:border-primary">
+                            <span className="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-lg">
+                                <Calculator className="w-5 h-5" />
+                            </span>
+                            <h3 className="font-display font-semibold text-xl">Stipendio Netto</h3>
+                            <p className="text-sm text-secondary leading-relaxed">
+                                Da RAL a netto mensile e annuo con le 3 aliquote IRPEF, contributi IVS e detrazioni TUIR.
+                            </p>
+                        </Card>
+                    </Link>
+                    <Link href="/tool/trova-bonus">
+                        <Card className="p-6 h-full space-y-3 hover:border-primary">
+                            <span className="w-10 h-10 flex items-center justify-center bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-lg">
+                                <Gift className="w-5 h-5" />
+                            </span>
+                            <h3 className="font-display font-semibold text-xl">Trova-Bonus</h3>
+                            <p className="text-sm text-secondary leading-relaxed">
+                                Questionario guidato in 5 passi per scoprire i sostegni pubblici compatibili con il tuo nucleo e ISEE.
+                            </p>
+                        </Card>
+                    </Link>
+                    <Link href="/tool/trova-procedura">
+                        <Card className="p-6 h-full space-y-3 hover:border-primary">
+                            <span className="w-10 h-10 flex items-center justify-center bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded-lg">
+                                <Search className="w-5 h-5" />
+                            </span>
+                            <h3 className="font-display font-semibold text-xl">Trova la Procedura</h3>
+                            <p className="text-sm text-secondary leading-relaxed">
+                                Carta d&apos;identità, passaporto, NASpI o dimissioni: primo passo, documenti e link ufficiale .gov.it.
+                            </p>
+                        </Card>
+                    </Link>
+                    <Link href="/tool/calcolo-consumo-elettrico">
+                        <Card className="p-6 h-full space-y-3 hover:border-primary">
+                            <span className="w-10 h-10 flex items-center justify-center bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-lg">
+                                <Zap className="w-5 h-5" />
+                            </span>
+                            <h3 className="font-display font-semibold text-xl">Consumi Elettrici</h3>
+                            <p className="text-sm text-secondary leading-relaxed">
+                                Calcola quanto spendi in bolletta per condizionatore, lavatrice e boiler con tariffa ARERA e consigli ENEA.
+                            </p>
+                        </Card>
+                    </Link>
                 </div>
             </section>
 

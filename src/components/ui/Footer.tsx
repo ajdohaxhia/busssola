@@ -30,21 +30,19 @@ export function Footer() {
                         </div>
                     </div>
                     <div className="space-y-3">
-                        <h4 className="text-xs font-semibold uppercase tracking-widest text-accent-light">Strumenti</h4>
+                        <h4 className="text-xs font-semibold uppercase tracking-widest text-accent-light">Strumenti e Calcolatori</h4>
                         <nav className="grid gap-2 text-sm text-white/70">
-                            <Link href="/moduli">Catalogo Guide</Link>
+                            <Link href="/tool">Tutti i Simulatori</Link>
+                            <Link href="/tool/calcolo-stipendio-netto">Calcolo Stipendio Netto</Link>
+                            <Link href="/tool/trova-bonus">Trova le tue Agevolazioni</Link>
+                            <Link href="/tool/trova-procedura">Trova la Procedura</Link>
+                            <Link href="/tool/calcolo-consumo-elettrico">Calcolo Consumo Elettrico</Link>
                             <Link href="/scadenze">Scadenzario 2026–2027</Link>
                             <Link href="/confronti">Tabelle di Confronto</Link>
-                            <Link href="/bonus-2027">Guida Bonus 2027</Link>
-                            <Link href="/isee-2027">Guida ISEE 2027</Link>
-                            <Link href="/pensioni-2027">Guida Pensioni 2027</Link>
+                            <Link href="/ai">Bussola AI & Privacy</Link>
                             <Link href="/modelli">Kit e Modelli</Link>
                             <Link href="/novita">Novità e Scadenze</Link>
-                            <Link href="/percorsi">Percorsi Guidati</Link>
-                            <Link href="/tips">Life Hacks Civici</Link>
-                            <Link href="/checklist">Checklist</Link>
                             <Link href="/sos">Centro SOS</Link>
-                            <a href="tel:112">Chiama 112</a>
                         </nav>
                     </div>
                     <div className="space-y-3">
