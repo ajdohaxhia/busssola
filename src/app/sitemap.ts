@@ -58,6 +58,7 @@ const staticRoutes = [
     '/tool/trova-procedura/',
     '/tool/calcolo-consumo-elettrico/',
     '/ai/',
+    '/mappa-del-sito/',
     '/contact/',
     '/privacy/',
     '/termini/',

@@ -1,5 +1,18 @@
 # Changelog
 
+## [Ricerca full-site, mappa e feed] - 2026-11-08
+### Added
+- **Ricerca full-site `/cerca/`**: indice statico di 629 elementi generato a build time (`scripts/build-site-artifacts.ts`), filtri per tipo di contenuto, navigazione da tastiera e conteggio accessibile dei risultati. La pagina è `noindex, follow` e non invia query a server.
+- **Mappa del sito `/mappa-del-sito/`**: indice HTML completo di aree tematiche, procedure, trucchi, modelli, novità e percorsi (670 URL interni).
+- **Feed RSS `/feed.xml`**: 50 novità più recenti, collegato in `<head>` e nella pagina `/novita/`.
+- **Test unitari della ricerca** (`npm test`): 7 casi su normalizzazione, stopword, filtri e pertinenza.
+- **Documentazione SEO**: `docs/seo/ricerca-domanda-2026-11.md` con metodo, copertura dei gruppi A–J e gap prioritari.
+
+### Changed
+- **SearchAction Schema.org** aggiornata a `/cerca/?q={search_term_string}`: prima puntava a una pagina senza ricerca.
+- **Header, footer e homepage** collegano ricerca e mappa del sito.
+- **`noindex`** ora imposta `follow: true`, così i link interni restano esplorabili.
+
 ## [Major Upgrade v2] - 2026-05-16
 ### Added
 - **Massive Content Expansion**: Added/expanded over 14 civic modules with hundreds of new guides.

@@ -88,3 +88,15 @@ Ogni nuova pagina deve avere:
 4. **Almeno un H1** descrittivo.
 5. **JSON-LD** corrispondente al tipo di contenuto.
 6. **Internal Link** verso altri contenuti correlati.
+
+---
+
+## 🔎 Ricerca interna, indici e feed
+
+| Pagina | Intent Principale | Query Principali | Schema / Note |
+| :--- | :--- | :--- | :--- |
+| `/cerca` | Trovare qualsiasi contenuto | cerca nel sito, cerca guida, trova pagina | `noindex, follow` — pagina di servizio, esclusa dalla sitemap |
+| `/mappa-del-sito` | Esplorare l'archivio completo | mappa del sito, indice completo, tutte le guide | BreadcrumbList, link interni a tutte le pagine pubblicate |
+| `/feed.xml` | Seguire gli aggiornamenti | feed rss novità, aggiornamenti procedure | RSS 2.0, 50 novità più recenti, collegato in `<head>` |
+
+**Nota tecnica:** l'indice di ricerca è generato a build time da `scripts/build-site-artifacts.ts` in `public/search-index.json` (629 elementi). Non contiene dati personali e non effettua chiamate di rete: la ricerca avviene interamente nel browser.

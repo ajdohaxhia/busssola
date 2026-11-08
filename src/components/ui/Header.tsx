@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Compass, Menu, X } from 'lucide-react';
+import { Compass, Menu, Search, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navItems = [
@@ -36,6 +36,14 @@ export function Header() {
                 </Link>
 
                 <nav className="hidden lg:flex items-center gap-1">
+                    <Link
+                        href="/cerca"
+                        aria-label="Cerca in tutto il sito"
+                        title="Cerca in tutto il sito"
+                        className="mr-1 inline-flex h-9 w-9 items-center justify-center rounded-md border border-border text-secondary transition-colors hover:border-foreground/30 hover:text-foreground"
+                    >
+                        <Search className="w-4 h-4" aria-hidden="true" />
+                    </Link>
                     {navItems.map((item) => {
                         const isActive = pathname === item.href || pathname?.startsWith(item.href);
                         return (
@@ -65,6 +73,13 @@ export function Header() {
                 </nav>
 
                 <div className="flex lg:hidden items-center gap-2">
+                    <Link
+                        href="/cerca"
+                        aria-label="Cerca in tutto il sito"
+                        className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-surface text-secondary"
+                    >
+                        <Search className="w-5 h-5" aria-hidden="true" />
+                    </Link>
                     <Link
                         href="/sos"
                         className="px-3 py-2 rounded-md text-xs font-semibold text-sos border border-sos/30"

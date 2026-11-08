@@ -151,7 +151,7 @@ export function buildSeoMetadata({
             canonical: url,
         },
         robots: noIndex
-            ? { index: false, follow: false }
+            ? { index: false, follow: true }
             : {
                 index: true,
                 follow: true,
@@ -267,7 +267,7 @@ export const websiteStructuredData = {
         '@type': 'SearchAction',
         target: {
             '@type': 'EntryPoint',
-            urlTemplate: `${SITE_URL}/moduli/?q={search_term_string}`,
+            urlTemplate: `${SITE_URL}/cerca/?q={search_term_string}`,
         },
         'query-input': 'required name=search_term_string',
     },

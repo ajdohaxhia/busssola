@@ -10,6 +10,9 @@ Tradurre la burocrazia in passi verificabili: guide, kit documentali stampabili 
 - **Modelli:** kit di documenti da riunire (non PDF ufficiali) per le pratiche più comuni.
 - **Novità:** cambiamenti 2026 citati da INPS, Agenzia delle Entrate, Ministero del Lavoro, ARERA.
 - **Centro SOS:** il 112 prima di tutto se c'è pericolo; poi protocolli per stalking, sextortion, truffe, account.
+- **Ricerca full-site (`/cerca`)**: indice statico di tutte le guide, procedure, modelli e novità, eseguito nel browser.
+- **Mappa del sito (`/mappa-del-sito`)**: indice completo e navigabile di tutte le pagine pubblicate.
+- **Feed RSS (`/feed.xml`)**: le 50 novità più recenti, con fonte e data di verifica.
 - **Hub Scuole, checklist, glossario.**
 
 ## Nota sul dominio
@@ -25,6 +28,8 @@ Il dominio `busssola.com` ha tre ‘s’ per disponibilità del nome. Non ha sig
 2. `npm run dev`
 - `npm run validate:content`
 - `npm run update-stats`
+- `npm run build:artifacts` (genera `public/search-index.json` e `public/feed.xml`)
+- `npm test` (test unitari della ricerca)
 - `npm run typecheck`
 
 ## Licenza

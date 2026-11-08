@@ -40,6 +40,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# generated site artifacts (rebuilt by prebuild / predev)
+public/search-index.json
+public/feed.xml
+
 # PWA
 public/sw.js
 public/workbox-*.js

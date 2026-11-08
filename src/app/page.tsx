@@ -157,6 +157,13 @@ export default function Home() {
                     verificate su INPS, Agenzia delle Entrate e Ministeri. Gratuito, senza login.
                 </p>
                 <GuideSearch />
+                <p className="text-sm text-muted">
+                    La ricerca copre guide, procedure, modelli e novità.{' '}
+                    <Link href="/mappa-del-sito" className="font-semibold text-primary hover:underline">
+                        Sfoglia la mappa completa del sito
+                    </Link>
+                    .
+                </p>
                 <div className="flex flex-wrap justify-center gap-2 pt-2">
                     {STARTERS.map((item) => (
                         <Link
@@ -313,6 +320,13 @@ export default function Home() {
                         </Link>
                     ))}
                 </div>
+                <p className="text-sm text-muted">
+                    Ogni notizia indica ente, fonte primaria e data di verifica.{' '}
+                    <a href="/feed.xml" className="font-semibold text-primary hover:underline">
+                        Segui il feed RSS delle novità
+                    </a>
+                    .
+                </p>
             </section>
 
             <section className="space-y-6">
@@ -395,6 +409,8 @@ export default function Home() {
                 <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
                     <Link href="/fonti" className="font-semibold text-primary hover:underline">Fonti</Link>
                     <Link href="/metodo-editoriale" className="font-semibold text-primary hover:underline">Metodo</Link>
+                    <Link href="/cerca" className="font-semibold text-primary hover:underline">Cerca nel sito</Link>
+                    <Link href="/mappa-del-sito" className="font-semibold text-primary hover:underline">Mappa del sito</Link>
                     <Link href="/about" className="font-semibold text-primary hover:underline">Cos&apos;è Busssola</Link>
                     <a href={siteStats.githubUrl} className="font-semibold text-primary hover:underline" target="_blank" rel="noopener noreferrer">
                         Codice su GitHub

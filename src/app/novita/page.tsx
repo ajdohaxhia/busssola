@@ -14,6 +14,19 @@ export default function NovitaPage() {
                 title="Cosa è cambiato nel 2026"
                 description="Solo fatti verificati su fonti istituzionali e bollettini ufficiali: Comuni, Questure, Prefetture, Ministero dell’Interno, Polizia Postale, CERT-AgID, Garante Privacy, INPS, Agenzia delle Entrate, MIT, Ministero della Salute, MASE, ENEA e ARERA. Ultimo aggiornamento redazionale: 8 novembre 2026."
             />
+            <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-border bg-surface px-5 py-4">
+                <p className="text-sm text-secondary">
+                    <strong className="font-semibold text-foreground">{items.length} novità</strong> ordinate dalla più
+                    recente. Ogni scheda riporta la fonte primaria e la data di verifica.
+                </p>
+                <a
+                    href="/feed.xml"
+                    className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm font-semibold text-primary hover:border-primary"
+                >
+                    Feed RSS
+                    <span aria-hidden="true">↗</span>
+                </a>
+            </div>
             <div className="grid gap-4">
                 {items.map((n) => (
                     <Link key={n.slug} href={`/novita/${n.slug}`}>

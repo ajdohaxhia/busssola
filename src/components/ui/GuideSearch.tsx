@@ -12,7 +12,7 @@ export function GuideSearch({ initialQuery = '', variant = 'hero' }: { initialQu
     const onSubmit = (e: FormEvent) => {
         e.preventDefault()
         const query = q.trim()
-        router.push(query ? `/moduli/?q=${encodeURIComponent(query)}` : '/moduli/')
+        router.push(query ? `/cerca/?q=${encodeURIComponent(query)}` : '/cerca/')
     }
 
     return (
@@ -27,7 +27,7 @@ export function GuideSearch({ initialQuery = '', variant = 'hero' }: { initialQu
                     ? 'w-full h-16 pl-14 pr-32 rounded-2xl border border-border bg-surface text-base'
                     : 'w-full h-12 pl-12 pr-24 rounded-xl border border-border bg-surface'
                 }
-                aria-label="Cerca una guida"
+                aria-label="Cerca guide, modelli, novità e strumenti"
             />
             <Button type="submit" className="absolute right-2 top-1/2 -translate-y-1/2 rounded-xl">
                 Cerca

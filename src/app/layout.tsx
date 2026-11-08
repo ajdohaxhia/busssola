@@ -88,6 +88,12 @@ export default function RootLayout({
         <meta name="geo.placename" content="Italia" />
         <meta name="language" content="Italian" />
         <meta name="format-detection" content="telephone=no, address=no, email=no" />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Busssola — Novità civiche verificate"
+          href={`${SITE_URL}/feed.xml`}
+        />
         <JsonLd data={siteStructuredData} />
       </head>
       <body className="bg-background text-foreground min-h-screen flex flex-col font-sans antialiased selection:bg-foreground selection:text-background">

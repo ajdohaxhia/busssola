@@ -64,6 +64,8 @@ export function Footer() {
                             <Link href="/fonti">Fonti Istituzionali</Link>
                             <Link href="/metodo-editoriale">Metodo Editoriale</Link>
                             <Link href="/scuole">Per Docenti e Scuole</Link>
+                            <Link href="/cerca">Cerca nel sito</Link>
+                            <Link href="/mappa-del-sito">Mappa del sito</Link>
                             <Link href="/trasparenza">Trasparenza</Link>
                         </nav>
                     </div>
