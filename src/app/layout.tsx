@@ -33,12 +33,17 @@ export const metadata: Metadata = {
     path: '/',
     keywords: [
       'come fare ISEE',
-      '730 2026',
-      'domanda NASpI',
-      'cambio residenza',
-      'come richiedere SPID',
+      '730 2026 precompilato',
+      'secondo acconto imposte 2026',
+      'rottamazione quater 2026',
+      'domanda NASpI INPS',
+      'cambio residenza online ANPR',
+      'come richiedere SPID gratis',
+      'IT-Wallet app IO',
       'CIE carta identità elettronica',
       'guida civica italia',
+      'riconoscere truffe phishing',
+      'riscaldamento orari e regole',
     ],
   }),
   metadataBase: new URL(SITE_URL),
@@ -79,6 +84,10 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="author" content={CREATOR_NAME} />
         <meta name="image" content={`${SITE_URL}${DEFAULT_OG_IMAGE}`} />
+        <meta name="geo.region" content="IT" />
+        <meta name="geo.placename" content="Italia" />
+        <meta name="language" content="Italian" />
+        <meta name="format-detection" content="telephone=no, address=no, email=no" />
         <JsonLd data={siteStructuredData} />
       </head>
       <body className="bg-background text-foreground min-h-screen flex flex-col font-sans antialiased selection:bg-foreground selection:text-background">

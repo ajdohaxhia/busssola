@@ -31,7 +31,7 @@ export {
 export const TOTAL_MODULES = siteStats.totalModules
 export const TOTAL_LESSONS = siteStats.totalLessons
 
-export const SITE_DESCRIPTION = `Busssola è l'hub pubblico di risorse civiche gratuite per orientarsi tra documenti, diritti e procedure in Italia: ${siteStats.totalLessons} guide pratiche su SPID, CIE, ISEE, 730, NASpI, bonus, sicurezza digitale e tutele del cittadino.`
+export const SITE_DESCRIPTION = `Busssola è l'hub pubblico di risorse civiche gratuite per orientarsi tra documenti, diritti e procedure in Italia: ${siteStats.totalLessons} guide pratiche su SPID, CIE, ISEE, 730, secondo acconto, rottamazione cartelle, NASpI, bonus, sicurezza digitale e tutele del cittadino.`
 
 const baseKeywords = [
     'Busssola',
@@ -39,6 +39,18 @@ const baseKeywords = [
     'guida civica italia',
     'procedure PA Italia',
     'diritti del cittadino',
+    'come fare ISEE',
+    '730 precompilato 2026',
+    'secondo acconto imposte',
+    'rottamazione quater scadenze',
+    'domanda NASpI INPS',
+    'richiedere SPID gratis',
+    'CIE Carta Identità Elettronica',
+    'IT-Wallet app IO',
+    'cambio residenza ANPR',
+    'rinnovo passaporto elettronico',
+    'prevenzione truffe e phishing',
+    'accensione riscaldamento regole',
     CREATOR_NAME,
     'Adelajdo Haxhiaj Busssola',
 ]
@@ -205,21 +217,45 @@ export const organizationStructuredData = {
     '@type': 'Organization',
     '@id': `${SITE_URL}/#organization`,
     name: SITE_NAME,
+    alternateName: ['Busssola Civica', 'Busssola Italia'],
     url: `${SITE_URL}/`,
-    logo: absoluteUrl('/icon-512.png'),
+    logo: {
+        '@type': 'ImageObject',
+        url: absoluteUrl('/icon.png'),
+        width: '512',
+        height: '512',
+    },
     email: CONTACT_EMAIL,
     founder: { '@id': `${CREATOR_URL}#person` },
     creator: { '@id': `${CREATOR_URL}#person` },
     description: SITE_DESCRIPTION,
     publishingPrinciples: absoluteUrl('/metodo-editoriale/'),
     sameAs: ['https://github.com/ajdohaxhia/busssola'],
+    knowsAbout: [
+        'Pubblica Amministrazione italiana',
+        'SPID e Carta Identità Elettronica CIE',
+        'IT-Wallet e documenti digitali',
+        'Dichiarazione dei redditi 730 e scadenze fiscali',
+        'ISEE e bonus sociali',
+        'NASpI e tutele del lavoro',
+        'Sicurezza informatica e prevenzione truffe',
+    ],
+    contactPoint: [
+        {
+            '@type': 'ContactPoint',
+            contactType: 'Civic Support and Inquiries',
+            email: CONTACT_EMAIL,
+            availableLanguage: ['Italian', 'English'],
+            url: absoluteUrl('/contact/'),
+        },
+    ],
 }
 
 export const websiteStructuredData = {
     '@type': 'WebSite',
     '@id': `${SITE_URL}/#website`,
     name: SITE_NAME,
-    alternateName: ['Busssola.com', 'Bussola civica'],
+    alternateName: ['Busssola.com', 'Bussola civica', 'Busssola Civica Italia'],
     url: `${SITE_URL}/`,
     inLanguage: 'it-IT',
     description: SITE_DESCRIPTION,
@@ -300,17 +336,34 @@ export function howToStructuredData(lesson: Lesson, path: string) {
         url: absoluteUrl(path),
         inLanguage: 'it-IT',
         isAccessibleForFree: true,
-        step: lesson.steps.map((step, index) => ({
-            '@type': 'HowToStep',
-            position: index + 1,
-            text: step,
-            name: `Passaggio ${index + 1}`,
-        })),
-        totalTime: `PT${lesson.estimatedMinutes}M`,
+        step: lesson.steps.map((step, index) => {
+            const match = step.match(/^([^:.—]{3,50})[:.—]/)
+            const stepName = match ? match[1].trim() : `Passaggio ${index + 1}`
+            return {
+                '@type': 'HowToStep',
+                position: index + 1,
+                name: stepName,
+                text: step,
+                url: `${absoluteUrl(path)}#step-${index + 1}`,
+            }
+        }),
+        tool: lesson.whatToPrepare && lesson.whatToPrepare.length > 0
+            ? lesson.whatToPrepare.map((item) => ({
+                '@type': 'HowToTool',
+                name: item,
+            }))
+            : undefined,
+        supply: lesson.prerequisites && lesson.prerequisites.length > 0
+            ? lesson.prerequisites.map((item) => ({
+                '@type': 'HowToSupply',
+                name: item,
+            }))
+            : undefined,
+        totalTime: lesson.estimatedMinutes ? `PT${lesson.estimatedMinutes}M` : undefined,
         estimatedCost: {
             '@type': 'MonetaryAmount',
             currency: 'EUR',
-            value: lesson.estimatedCosts?.includes('Gratis') ? '0' : 'unknown',
+            value: lesson.estimatedCosts?.toLowerCase().includes('gratis') ? '0' : 'unknown',
         },
     }
 }
@@ -481,12 +534,23 @@ export function tipStructuredData(hack: LifeHack) {
             url: absoluteUrl(path),
             inLanguage: 'it-IT',
             isAccessibleForFree: true,
-            step: hack.steps.map((step, index) => ({
-                '@type': 'HowToStep',
-                position: index + 1,
-                text: step,
-                name: `Passaggio ${index + 1}`,
-            })),
+            step: hack.steps.map((step, index) => {
+                const match = step.match(/^([^:.—]{3,50})[:.—]/)
+                const stepName = match ? match[1].trim() : `Passaggio ${index + 1}`
+                return {
+                    '@type': 'HowToStep',
+                    position: index + 1,
+                    name: stepName,
+                    text: step,
+                    url: `${absoluteUrl(path)}#step-${index + 1}`,
+                }
+            }),
+            tool: hack.whatYouNeed && hack.whatYouNeed.length > 0
+                ? hack.whatYouNeed.map((item) => ({
+                    '@type': 'HowToTool',
+                    name: item,
+                }))
+                : undefined,
             totalTime: hack.time.includes('min') ? `PT${hack.time.replace(/\D/g, '')}M` : undefined,
         })
     }
@@ -557,12 +621,23 @@ export function templateStructuredData(tpl: CivicTemplate) {
             inLanguage: 'it-IT',
             isAccessibleForFree: true,
             totalTime: `PT${tpl.estimatedMinutes}M`,
-            step: tpl.steps.map((step, index) => ({
-                '@type': 'HowToStep',
-                position: index + 1,
-                text: step,
-                name: `Passaggio ${index + 1}`,
-            })),
+            supply: tpl.documents && tpl.documents.length > 0
+                ? tpl.documents.map((item) => ({
+                    '@type': 'HowToSupply',
+                    name: item,
+                }))
+                : undefined,
+            step: tpl.steps.map((step, index) => {
+                const match = step.match(/^([^:.—]{3,50})[:.—]/)
+                const stepName = match ? match[1].trim() : `Passaggio ${index + 1}`
+                return {
+                    '@type': 'HowToStep',
+                    position: index + 1,
+                    name: stepName,
+                    text: step,
+                    url: `${absoluteUrl(path)}#step-${index + 1}`,
+                }
+            }),
         })
     }
 
@@ -596,7 +671,16 @@ export function newsStructuredData(item: NewsItem) {
                 author: { '@id': `${CREATOR_URL}#person` },
                 creator: { '@id': `${CREATOR_URL}#person` },
                 publisher: { '@id': `${SITE_URL}/#organization` },
+                mainEntityOfPage: {
+                    '@type': 'WebPage',
+                    '@id': absoluteUrl(path),
+                },
+                speakable: {
+                    '@type': 'SpeakableSpecification',
+                    cssSelector: ['h1', 'p'],
+                },
                 articleSection: 'Novità civiche',
+                keywords: [item.title, 'novità 2026', 'procedure ufficiali italia', item.whoIsAffected],
                 citation: item.sources.map((source) => ({
                     '@type': 'CreativeWork',
                     name: source.title,
@@ -614,11 +698,17 @@ export function newsStructuredData(item: NewsItem) {
 
 export function HUB_METADATA_BUILDER(key: string): SeoMetadataOptions {
     const map: Record<string, SeoMetadataOptions> = {
+        moduli: {
+            title: 'Catalogo guide pratiche e procedure ufficiali',
+            description: 'Guide passo-passo su SPID, CIE, ISEE, 730, secondo acconto, rottamazione, NASpI, cambio residenza, bonus e sicurezza digitale con fonti ufficiali.',
+            path: '/moduli/',
+            keywords: ['catalogo guide civiche', 'come fare ISEE', '730 2026', 'secondo acconto imposte', 'domanda NASpI', 'cambio residenza', 'come richiedere SPID', 'CIE carta identità'],
+        },
         sos: {
             title: 'SOS: in pericolo chiama 112. Poi i protocolli',
             description: 'Se sei in pericolo fisico chiama subito il 112. Busssola non è un servizio di emergenza. Qui trovi protocolli per stalking, sextortion, furto account, truffe e altre urgenze, con fonti ufficiali.',
             path: '/sos/',
-            keywords: ['chiama 112', 'sos digitale', 'stalking 1522', 'sextortion', 'account rubato', 'truffa bancaria'],
+            keywords: ['chiama 112', 'sos digitale', 'stalking 1522', 'sextortion cosa fare', 'account rubato instagram', 'truffa bancaria rimborso'],
         },
         checklist: {
             title: 'Checklist operative per procedure e sicurezza',
@@ -640,15 +730,15 @@ export function HUB_METADATA_BUILDER(key: string): SeoMetadataOptions {
         },
         modelli: {
             title: 'Modelli e kit documentali per procedure italiane',
-            description: 'Pacchetti stampabili e verificabili per 730, ISEE, NASpI, SPID, CIE, residenza, permesso di soggiorno e altre pratiche. Non sono moduli ufficiali: sono liste di documenti e passi con fonti istituzionali.',
+            description: 'Pacchetti stampabili e verificabili per 730, ISEE, NASpI, SPID, CIE, residenza, permesso di soggiorno e altre pratiche con fonti istituzionali.',
             path: '/modelli/',
             keywords: ['modello 730 documenti', 'kit ISEE DSU', 'checklist NASpI', 'documenti cambio residenza', 'come richiedere SPID'],
         },
         novita: {
             title: 'Novità civiche e sicurezza 2026: scadenze e allarmi verificati',
-            description: 'Cosa è cambiato nelle procedure pubbliche e sicurezza digitale in Italia, con fonti Polizia Postale, CERT-AgID, Garante Privacy, INPS e Agenzia delle Entrate. Aggiornato al 16 ottobre 2026.',
+            description: 'Cosa è cambiato nelle procedure pubbliche, bonus e sicurezza digitale in Italia: allarmi Polizia Postale, scadenze fiscali Agenzia delle Entrate, novità INPS, IT-Wallet e bollettini verificati a novembre 2026.',
             path: '/novita/',
-            keywords: ['novità sicurezza 2026', 'truffe online polizia postale', 'allarmi cert-agid', 'novità ISEE 2026', '730 precompilato 2026'],
+            keywords: ['novità sicurezza 2026', 'secondo acconto imposte 2026', 'rottamazione quater scadenza', 'it-wallet app io', 'truffe online polizia postale', 'allarmi cert-agid', 'novità ISEE 2026', 'accensione riscaldamento zona d'],
         },
         fonti: {
             title: 'Archivio fonti ufficiali e istituzionali',

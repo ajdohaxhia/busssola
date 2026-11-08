@@ -80,14 +80,14 @@ function entry(
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const categories = CATEGORY_IDS.map((cat) =>
-        entry(`/moduli/categoria/${cat}/`, 0.8, 'weekly', fallbackDate),
+        entry(`/moduli/categoria/${cat}/`, 0.85, 'weekly', fallbackDate),
     )
 
     const modules = ALL_MODULES.map((module) =>
         entry(
             `/moduli/${module.id}/`,
-            0.85,
-            'monthly',
+            0.9,
+            'weekly',
             latest(module.lastUpdated, ...module.lessons.map((l) => l.lastReviewedAt)),
         ),
     )
@@ -100,7 +100,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 entry(
                     `/moduli/${module.id}/lezione/${index + 1}/`,
                     0.85,
-                    'monthly',
+                    'weekly',
                     latest(lesson.lastReviewedAt, module.lastUpdated),
                 ),
             ),
@@ -109,15 +109,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const paths = LEARNING_PATHS.map((path) => entry(`/percorsi/${path.id}/`, 0.8, 'monthly'))
 
     const tips = LIFE_HACKS.map((hack) =>
-        entry(`/tips/${hack.slug}/`, 0.75, 'monthly', latest(hack.lastReviewedAt)),
+        entry(`/tips/${hack.slug}/`, 0.85, 'weekly', latest(hack.lastReviewedAt)),
     )
 
     const templates = CIVIC_TEMPLATES.map((tpl) =>
-        entry(`/modelli/${tpl.slug}/`, 0.8, 'monthly', latest(tpl.lastReviewedAt)),
+        entry(`/modelli/${tpl.slug}/`, 0.85, 'weekly', latest(tpl.lastReviewedAt)),
     )
 
     const news = CIVIC_NEWS.map((item) =>
-        entry(`/novita/${item.slug}/`, 0.8, 'weekly', latest(item.date, item.lastReviewedAt)),
+        entry(`/novita/${item.slug}/`, 0.85, 'weekly', latest(item.date, item.lastReviewedAt)),
     )
 
     const staticEntries = staticRoutes.map((route) =>

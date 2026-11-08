@@ -45,6 +45,12 @@ function main() {
         './out/sos/index.html',
         './out/faq/index.html',
         './out/about/index.html',
+        './out/novita/index.html',
+        './out/tips/index.html',
+        './out/modelli/index.html',
+        './out/scuole/index.html',
+        './out/checklist/index.html',
+        './out/glossario/index.html',
     ]
 
     let failed = false
