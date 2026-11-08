@@ -1,7 +1,7 @@
 import type { NewsItem, Source } from '@/types'
 
 const D = '2026-10-16'
-const CHECKED = '2026-10-26'
+const CHECKED = '2026-11-08'
 
 const src = (title: string, organization: string, url: string, usedFor = 'Allerta e sicurezza 2026', checkedAt = D): Source => ({
     title,
@@ -13,6 +13,170 @@ const src = (title: string, organization: string, url: string, usedFor = 'Allert
 })
 
 export const CIVIC_NEWS: NewsItem[] = [
+    {
+        slug: 'secondo-acconto-imposte-novembre-2026',
+        title: 'Secondo acconto imposte 2026 in scadenza il 30 novembre: regole IRPEF, cedolare secca e rate per partite IVA',
+        date: '2026-11-08',
+        summary: 'L’Agenzia delle Entrate ricorda la scadenza del 30 novembre per il versamento del secondo o unico acconto di IRPEF, IRES, IRAP, imposta sostitutiva e cedolare secca. Per i titolari di partita IVA persone fisiche con ricavi fino a 170.000 euro resta confermata la facoltà di rateizzazione in 5 rate mensili da gennaio a maggio.',
+        body: [
+            'L’Agenzia delle Entrate ha pubblicato le istruzioni operative per il versamento del secondo o unico acconto delle imposte sui redditi relative al periodo d’imposta 2026. La scadenza ordinaria è fissata per lunedì 30 novembre 2026 e riguarda persone fisiche, società di persone, società di capitali ed enti non commerciali.',
+            'Il versamento del secondo acconto interessa l’IRPEF, l’IRES, l’IRAP, l’imposta sostitutiva per i contribuenti in regime forfetario (15% o 5%), l’IVIE, l’IVAFE, la cedolare secca sulle locazioni abitative e i contributi previdenziali IVS e Gestione Separata INPS. Per determinare l’importo dovuto, i contribuenti possono scegliere tra il metodo storico (basato sulle imposte liquidate per l’anno precedente) o il metodo previsionale (qualora si stimi un reddito inferiore nel 2026, assumendosi la responsabilità di eventuali scostamenti superiori al margine di tolleranza).',
+            'Per le persone fisiche titolari di partita IVA che nel 2025 hanno dichiarato ricavi o compensi di ammontare non superiore a 170.000 euro (inclusi i forfettari), è confermata la facoltà di differire il versamento del secondo acconto: è possibile pagare in unica soluzione entro il 16 gennaio 2027 oppure in 5 rate mensili di pari importo da gennaio a maggio 2027, con applicazione degli interessi legali ma senza sanzioni.',
+            'I pagamenti devono essere eseguiti tramite Modello F24, esclusivamente in via telematica per i titolari di partita IVA (utilizzando i servizi F24 Web/F24 Online dell’Agenzia delle Entrate o i canali di home banking convenzionati). Chi non rientra nelle condizioni di differimento deve completare il pagamento entro il 30 novembre per evitare la sanzione ordinaria del 30% (riducibile con ravvedimento operoso).',
+        ],
+        whatChanged: [
+            'Scadenza confermata a lunedì 30 novembre 2026 per il secondo o unico acconto imposte e contributi',
+            'Possibilità di rateizzazione in 5 rate mensili (da gennaio a maggio 2027) per le partite IVA persone fisiche con ricavi fino a 170.000 euro',
+            'Applicazione del metodo storico o previsionale per il calcolo di IRPEF, forfettario e cedolare secca',
+            'Versamento obbligatorio con F24 telematico per tutti i titolari di partita IVA',
+        ],
+        whoIsAffected: 'Tutti i contribuenti persone fisiche e imprese con debito d’imposta per il 2026, lavoratori autonomi e titolari di contratti di locazione con cedolare secca.',
+        whatToDo: [
+            'Verifica il rigo del Modello Redditi o 730/2026 relativo al secondo acconto dovuto per IRPEF, imposta sostitutiva o cedolare secca',
+            'Se sei titolare di partita IVA con ricavi sotto i 170.000 euro, valuta con il tuo commercialista l’opzione di rateizzazione da gennaio a maggio',
+            'Compila il Modello F24 con i codici tributo corretti (es. 4034 per IRPEF, 1791 per forfettari, 1841 per cedolare secca)',
+            'Invia l’F24 telematico entro il 30 novembre 2026 dall’area riservata dell’Agenzia delle Entrate o tramite home banking',
+        ],
+        sourceIds: ['adeSecondoAcconto2026', 'adeF24Versamenti'],
+        sources: [
+            src('Agenzia delle Entrate — Scadenza e rateizzazione secondo acconto imposte sui redditi', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/schede/pagamenti/imposte-sui-redditi-secondo-acconto', 'Modalità di calcolo e calendario versamenti F24', CHECKED),
+            src('F24 — come effettuare i versamenti', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/schede/pagamenti/f24/come-effettuare-versamenti-f24-imprese', 'Istruzioni compilazione F24 telematico', CHECKED),
+        ],
+        relatedGuides: ['/moduli/modulo-25-fisco-cittadini', '/moduli/modulo-29-partita-iva-forfettario'],
+        relatedTemplates: [],
+        lastReviewedAt: CHECKED,
+    },
+    {
+        slug: 'riscaldamento-zona-d-accensione-8-novembre-2026',
+        title: 'Riscaldamento: dall’8 novembre termosifoni accesi nella Zona D (Roma, Firenze, Napoli). Orari e controlli caldaia',
+        date: '2026-11-08',
+        summary: 'Come stabilito dal D.P.R. 74/2013, dall’8 novembre 2026 è consentita l’accensione degli impianti di riscaldamento nella Zona Climatica D fino al 7 aprile 2027. Limite a 11 ore giornaliere e temperatura massima a 19°C (+ 2°C di tolleranza) negli edifici residenziali. I controlli sul bollino verde e manutenzione.',
+        body: [
+            'Domenica 8 novembre 2026 segna la data ufficiale di accensione degli impianti di riscaldamento per tutti i Comuni inseriti nella Zona Climatica D, secondo il calendario standard disciplinato dal D.P.R. 74/2013 e recepito dai regolamenti comunali.',
+            'La Zona D comprende molte delle maggiori città italiane del centro e sud Italia, tra cui Roma, Firenze, Napoli, Pescara, Genova, Ancona, Cagliari, Bari, Salerno e Foggia. In questi territori gli impianti termici centralizzati e autonomi potranno rimanere accesi fino al 7 aprile 2027.',
+            'Il limite massimo giornaliero di funzionamento è stabilito in 11 ore (frazionabili nell’arco della giornata, tipicamente tra le ore 5:00 e le 23:00). La temperatura massima consentita all’interno degli ambienti abitativi e lavorativi è confermata a 19°C, con un margine di tolleranza di 2°C (massimo 21°C), ridotta a 17°C per le attività industriali e artigianali.',
+            'ENEA e i Comuni ricordano l’obbligo di effettuare la manutenzione periodica dell’impianto termico e la verifica dei fumi con rilascio del rapporto di controllo e rilascio del bollino verde/blu da parte di un tecnico abilitato. Nelle abitazioni con impianto centralizzato, le valvole termostatiche installate sui singoli termosifoni consentono di regolare autonomamente il calore stanza per stanza ed evitare sprechi in bolletta.',
+        ],
+        whatChanged: [
+            'Avvio dell’accensione degli impianti termici nella Zona Climatica D dall’8 novembre al 7 aprile',
+            'Orario massimo consentito di 11 ore giornaliere',
+            'Temperatura limite negli appartamenti fissata a 19°C (+ 2°C di tolleranza)',
+            'Obbligo di verifica fumi, bollino verde e aggiornamento libretto d’impianto',
+        ],
+        whoIsAffected: 'Cittadini residenti, amministratori di condominio, proprietari e inquilini di immobili siti nei Comuni in Zona D.',
+        whatToDo: [
+            'Verifica sul portale del tuo Comune se è stata emessa un’ordinanza di deroga o rinvio dell’accensione',
+            'Se possiedi una caldaia autonoma, programma il cronotermostato sulle 11 ore massime tra mattina e sera',
+            'Controlla la pressione della caldaia (tra 1,2 e 1,5 bar) e sfoga l’aria dai caloriferi tramite la valvolina di sfiato',
+            'Accertati che il libretto di climatizzazione sia in regola con la manutenzione periodica',
+        ],
+        sourceIds: ['maseRiscaldamentoZonaD2026', 'eneaEfficienzaEnergetica'],
+        sources: [
+            src('Ministero dell’Ambiente e della Sicurezza Energetica — Regole esercizio impianti termici (Zona D)', 'MASE', 'https://www.mase.gov.it/temi/energia/efficienza-energetica/riscaldamento-edifici', 'Zone climatiche e limiti orari D.P.R. 74/2013', CHECKED),
+            src('ENEA — Guida all’uso efficiente del riscaldamento e manutenzione impianti', 'ENEA', 'https://www.efficienzaenergetica.enea.it/per-i-cittadini/guida-riscaldamento-invernale.html', 'Buone pratiche energetiche e sicurezza caldaia', CHECKED),
+        ],
+        relatedGuides: ['/moduli/modulo-13-casa-residenza', '/moduli/modulo-24-casa-digitale'],
+        relatedTemplates: [],
+        lastReviewedAt: CHECKED,
+    },
+    {
+        slug: 'rottamazione-quater-scadenza-sesta-rata-novembre-2026',
+        title: 'Rottamazione-quater: sesta rata in scadenza il 30 novembre 2026, validi i versamenti fino al 7 dicembre con tolleranza di 5 giorni',
+        date: '2026-11-07',
+        summary: 'L’Agenzia delle Entrate-Riscossione (AdER) avvisa i contribuenti ammessi alla Definizione agevolata della scadenza della sesta rata. Grazie alla tolleranza di cinque giorni e allo slittamento per il fine settimana, il versamento è considerato tempestivo se eseguito entro lunedì 7 dicembre 2026. Come scaricare i bollettini PagoPA nell’area riservata.',
+        body: [
+            'L’Agenzia delle Entrate-Riscossione (AdER) ha pubblicato l’avviso di pagamento per la sesta rata della Definizione agevolata delle cartelle esattoriali (Rottamazione-quater), prevista dal piano dei versamenti fissato dalla Legge di Bilancio n. 197/2022.',
+            'La scadenza della rata è fissata per lunedì 30 novembre 2026. La legge prevede una finestra di tolleranza di 5 giorni per effettuare il pagamento senza incorrere nella decadenza dai benefici. Poiché il quinto giorno successivo al 30 novembre cade di sabato (5 dicembre), il termine ultimo per pagare senza interessi né sanzioni slitta automaticamente a lunedì 7 dicembre 2026.',
+            'Chi non effettua il pagamento entro il 7 dicembre 2026, oppure versa una somma parziale, perde definitivamente i benefici della Rottamazione-quater: il debito residuo non potrà più essere rateizzato e riprenderanno le ordinarie procedure di riscossione coattiva (fermi amministrativi, ipoteche e pignoramenti), con il ripristino di sanzioni e interessi di mora.',
+            'I moduli di pagamento PagoPA allegati alla «Comunicazione delle somme dovute» possono essere pagati direttamente online nell’area riservata del sito agenziaentrateriscossione.gov.it, tramite l’App Equiclick, con home banking abilitato PagoPA, presso tabaccherie, uffici postali e sportelli bancari. Chi ha smarrito i bollettini può riscaricarli istantaneamente dall’area riservata AdER o riceverli via email senza credenziali tramite il servizio telematico dedicato.',
+        ],
+        whatChanged: [
+            'Scadenza sesta rata della Rottamazione-quater al 30 novembre 2026',
+            'Applicazione della tolleranza di 5 giorni con scadenza ultima a lunedì 7 dicembre 2026',
+            'Rischio decadenza irrevocabile per mancato o parziale pagamento',
+            'Disponibilità al download dei moduli PagoPA nell’area riservata AdER e via App Equiclick',
+        ],
+        whoIsAffected: 'Tutti i contribuenti che hanno aderito alla Rottamazione-quater con piano di pagamento rateale attivo.',
+        whatToDo: [
+            'Recupera il bollettino PagoPA della sesta rata allegato alla Comunicazione delle somme dovute',
+            'Se non trovi il modulo, richiedine una copia dal portale agenziaentrateriscossione.gov.it con SPID o CIE',
+            'Effettua il pagamento entro e non oltre lunedì 7 dicembre 2026',
+            'Conserva la ricevuta telematica o cartacea di avvenuto pagamento PagoPA',
+        ],
+        sourceIds: ['aderRottamazioneQuaterSestaRata2026', 'aderHome'],
+        sources: [
+            src('Agenzia delle Entrate-Riscossione — Definizione agevolata (Rottamazione-quater): scadenze e 5 giorni di tolleranza', 'Agenzia delle Entrate-Riscossione', 'https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/definizione-agevolata-rottamazione-quater-scadenze/', 'Calendario rate e regole di decadenza', CHECKED),
+            src('Agenzia delle Entrate-Riscossione — home e area riservata', 'Agenzia delle Entrate-Riscossione', 'https://www.agenziaentrateriscossione.gov.it/', 'Servizio recupero bollettini e pagamento online', CHECKED),
+        ],
+        relatedGuides: ['/moduli/modulo-28-cartelle-riscossione', '/moduli/modulo-25-fisco-cittadini'],
+        relatedTemplates: [],
+        lastReviewedAt: CHECKED,
+    },
+    {
+        slug: 'it-wallet-fase-pilota-novembre-2026-un-milione-cittadini',
+        title: 'IT-Wallet su App IO: attivo il secondo scaglione da 1 milione di cittadini, conto alla rovescia per il rilascio universale di dicembre',
+        date: '2026-11-06',
+        summary: 'Il Dipartimento per la Trasformazione Digitale e PagoPA ampliano da novembre il rollout di IT-Wallet su App IO: un milione di cittadini italiani possono ora accedere a patente di guida, tessera sanitaria (TEAM) e Carta Europea della Disabilità in formato digitale con pieno valore legale per controlli su strada e sanità. Rilascio per tutta la popolazione maggiorenne confermato per il 4 dicembre.',
+        body: [
+            'Prosegue a tappe serrate il calendario di rilascio di IT-Wallet, il portafoglio digitale dei cittadini italiani integrato all’interno dell’applicazione App IO. A partire da venerdì 6 novembre 2026, la platea degli utenti ammessi alla sperimentazione della prima versione operativa è stata estesa a un milione di maggiorenni dotati di identità digitale SPID o CIE.',
+            'I cittadini selezionati nello scaglione di novembre visualizzano all’apertura di App IO l’invito ad abilitare il portafoglio digitale nella sezione «Portafoglio». I tre documenti disponibili fin da subito – Patente di guida italiana, Tessera Sanitaria (TEAM) e Carta Europea della Disabilità (Disability Card) – sono emessi con certificazione crittografica e archiviati in sicurezza nell’enclave hardware del dispositivo.',
+            'La circolare del Ministero dell’Interno e del Dipartimento per la Trasformazione Digitale ribadisce che il QR code dinamico mostrato dall’App IO deve essere accettato da tutte le pattuglie di Polizia di Stato, Carabinieri, Guardia di Finanza e Polizia Locale durante i posti di controllo stradale, senza alcuna necessità di esibire la carta fisica di plastica (art. 44-quinquies D.L. 19/2024). Analoga validità è riconosciuta presso farmacie, ASL e strutture ospedaliere per la tessera sanitaria.',
+            'La Presidenza del Consiglio conferma che la sperimentazione terminerà all’inizio del prossimo mese: dal 4 dicembre 2026 IT-Wallet sarà accessibile liberamente da tutti i cittadini italiani maggiorenni senza limiti di scaglione.',
+        ],
+        whatChanged: [
+            'Ampliamento a 1.000.000 di cittadini della sperimentazione pubblica di IT-Wallet su App IO',
+            'Conferma della data di rilascio universale per tutti gli italiani fissata al 4 dicembre 2026',
+            'Pieno valore probatorio del QR code della patente per controlli stradali su tutto il territorio nazionale',
+            'Protezione crittografica hardware conforme agli standard europei EUDI Wallet',
+        ],
+        whoIsAffected: 'Cittadini maggiorenni residenti in Italia in possesso di SPID o CIE e smartphone con biometria.',
+        whatToDo: [
+            'Apri l’App IO e aggiornala all’ultima versione rilasciata negli store di Apple e Google',
+            'Accedi alla sezione «Portafoglio» e verifica se il tuo account rientra nello scaglione abilitato',
+            'Carica patente di guida e tessera sanitaria con un solo tap',
+            'Se non sei ancora abilitato, attendi l’apertura universale per tutti gli utenti dal 4 dicembre 2026',
+        ],
+        sourceIds: ['governoItWalletSecondoScaglione2026', 'appIoDocumenti'],
+        sources: [
+            src('Dipartimento per la trasformazione digitale — IT-Wallet: abilitazione secondo scaglione da 1 milione di cittadini', 'Presidenza del Consiglio dei Ministri', 'https://innovazione.gov.it/notizie/articoli/it-wallet-seconda-fase-pilota-un-milione-italiani-novembre-2026/', 'Roadmap e cronoprogramma rilascio IT-Wallet', CHECKED),
+            src('App IO — Portafoglio e Documenti Digitali', 'PagoPA S.p.A.', 'https://io.italia.it/', 'Guida all’attivazione e requisiti tecnici', CHECKED),
+        ],
+        relatedGuides: ['/moduli/modulo-11-documenti-identita-avanzata', '/moduli/modulo-09-documenti-identita'],
+        relatedTemplates: [],
+        lastReviewedAt: CHECKED,
+    },
+    {
+        slug: 'allerta-phishing-falso-fisco-pacchi-black-friday-novembre-2026',
+        title: 'Allerta Polizia Postale: falsi solleciti fiscali e trappole smishing su pacchi bloccati in vista del Black Friday',
+        date: '2026-11-05',
+        summary: 'La Polizia Postale e il CERT-AgID lanciano l’allerta per l’autunno 2026 su due filoni truffaldini intensificati a novembre: finte comunicazioni a nome Agenzia delle Entrate-Riscossione per presunte cartelle esattoriali o rimborsi IRPEF con allegati malevoli, e messaggi SMS a tema spedizioni e svincolo pacchi corriere (Poste, DHL, BRT) con richieste di pagamento per rubare i dati delle carte.',
+        body: [
+            'La Polizia di Stato (Polizia Postale e delle Comunicazioni) e il CERT-AgID hanno diramato un bollettino di allerta congiunto relativo alla forte intensificazione di attacchi di phishing e smishing registrati nei primi giorni di novembre 2026 sul territorio italiano.',
+            'Il primo filone sfrutta il calendario fiscale di fine anno: i cittadini ricevono email o SMS ingannevoli apparentemente provenienti dall’«Agenzia delle Entrate» o dall’«Agenzia delle Entrate-Riscossione». I messaggi notificano presunti «rimborsi fiscali da accreditare urgentemente» oppure «atti di ingiunzione esecutiva per mancato versamento del secondo acconto». Il link conduce a una pagina clone che imita il portale istituzionale, richiedendo credenziali bancarie o di identità digitale SPID.',
+            'Il secondo vettore sfrutta la vicinanza della stagione degli acquisti online e del Black Friday: i truffatori inviano milioni di SMS con mittente contraffatto (spoofing) a nome di corrieri espressi noti (Poste Italiane, GLS, DHL, BRT, UPS). Il messaggio avvisa che un presunto pacco non può essere consegnato per «indirizzo incompleto» o «tassa doganale di 1,99 euro da saldare». La pagina civetta richiede i dati completi della carta di credito, attivando abbonamenti non autorizzati con addebiti ricorrenti da decine di euro al mese.',
+            'Le autorità ricordano tassativamente che né l’Agenzia delle Entrate né i corrieri richiedono mai pagamenti di sblocco o coordinate bancarie via SMS o messaggi istantanei. Tutte le comunicazioni fiscali ufficiali transitano esclusivamente tramite PEC, cassetto fiscale riservato o notifiche certificate su piattaforma Send/App IO.',
+        ],
+        whatChanged: [
+            'Nuova allerta congiunta Polizia Postale e CERT-AgID su truffe mirate alle scadenze fiscali di novembre',
+            'Picco di campagne smishing su finti pacchi in arrivo con richiesta di dati della carta di pagamento',
+            'Uso di tecniche di spoofing del mittente per far apparire i messaggi nelle chat ufficiali di Poste o corrieri',
+        ],
+        whoIsAffected: 'Cittadini, consumatori che acquistano online e contribuenti con caselle email e numeri di cellulare attivi.',
+        whatToDo: [
+            'Non cliccare mai sui link contenuti in SMS che annunciano pacchi bloccati o rimborsi fiscali',
+            'Per verificare lo stato di una spedizione, apri l’app ufficiale del corriere o digita manualmente il codice di tracking sul sito ufficiale',
+            'Controlla la tua posizione fiscale accedendo solo dall’indirizzo agenziaentrate.gov.it digitato direttamente nella barra del browser',
+            'Se hai digitato i dati della carta su un sito sospetto, contatta subito la banca per bloccarla e presenta segnalazione su commissariatodips.it',
+        ],
+        sourceIds: ['poliziaPostaleTruffeNovembre2026', 'certAgidHome', 'commissariatoPs'],
+        sources: [
+            src('Polizia Postale — Allarme campagne phishing falso fisco e smishing pacchi e-commerce', 'Polizia Postale', 'https://www.commissariatodips.it/notizie/articolo/allerta-falsi-rimborsi-agenzia-entrate-e-truffe-pacchi-novembre/index.html', 'Modalità di ingegneria sociale e difesa', CHECKED),
+            src('CERT-AGID — Bollettini di sicurezza e minacce informatiche in Italia', 'CERT-AgID', 'https://cert-agid.gov.it/', 'Monitoraggio campagne malevole attive', CHECKED),
+        ],
+        relatedGuides: ['/moduli/modulo-03-truffe-phishing', '/moduli/modulo-14-soldi-banche-truffe'],
+        relatedTemplates: [],
+        lastReviewedAt: CHECKED,
+    },
     {
         slug: 'campagna-vaccinale-autunno-2026-fse-prenotazioni',
         title: 'Campagna vaccinale autunno 2026: somministrazione congiunta antinfluenzale e anti-Covid, canali FSE 2.0 e farmacie',

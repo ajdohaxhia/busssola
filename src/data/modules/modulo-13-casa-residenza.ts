@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_13_casa_residenza: Module = {
     id: 'modulo-13-casa-residenza',
-    lastUpdated: '2026-08-27',
+    lastUpdated: '2026-11-08',
     title: 'Casa e Residenza',
     description: 'Gestione del contratto di affitto, utenze domestiche, agevolazioni fiscali e diritti abitativi.',
     category: 'casa',
@@ -820,6 +820,79 @@ export const modulo_13_casa_residenza: Module = {
                     lastCheckedAt: '2026-08-14',
                 },
             ],
+        },
+        {
+            id: 'riscaldamento-zone-climatiche',
+            slug: 'accensione-riscaldamento-condominio-zone-climatiche',
+            title: 'Riscaldamento: regole di accensione, zone e controlli caldaia',
+            category: 'casa',
+            audience: ['cittadini', 'famiglie'],
+            level: 'base',
+            estimatedMinutes: 12,
+            mainEntity: 'MASE',
+            summary: 'Calendario nazionale di accensione degli impianti termici per zona climatica (A-F), orari massimi giornalieri, temperature consentite e manutenzione obbligatoria.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-11-08',
+            synthesis: 'Il D.P.R. 74/2013 disciplina le date e le ore massime di accensione del riscaldamento in base alle 6 zone climatiche italiane. In Zona D l’accensione è consentita dall’8 novembre al 7 aprile per massimo 11 ore al giorno a 19°C (+2°C di tolleranza).',
+            whenToDo: 'All’inizio della stagione autunno/inverno e prima di accendere l’impianto autonomo o centralizzato.',
+            scenario: 'Arriva l’autunno e vuoi sapere quando possono accendersi i termosifoni nel tuo Comune e quali verifiche fare sulla caldaia.',
+            steps: [
+                'Individua la zona climatica del tuo Comune (da Zona A per le isole calde a Zona F per le aree alpine)',
+                'Verifica le date di accensione e il numero massimo di ore giornaliere stabilite dalla legge o da ordinanze del Sindaco',
+                'Imposta il termostato di casa a 19°C (+2°C di margine di tolleranza) per non incorrere in sanzioni e contenere le bollette',
+                'Effettua la manutenzione ordinaria e il controllo fumi con un tecnico abilitato rilasciante il bollino verde',
+                'Controlla la pressione della caldaia e fai lo sfiato d’aria dai radiatori prima della prima accensione'
+            ],
+            doNow: [
+                'Controlla se il tuo Comune ha emanato un’ordinanza sindacale con orari o date ridotte',
+                'Verifica la data dell’ultima manutenzione riportata sul libretto di climatizzazione'
+            ],
+            dontDo: [
+                'Non superare le ore giornaliere consentite per la tua zona climatica',
+                'Non posizionare mobili o tende pesanti a ridosso dei caloriferi'
+            ],
+            whatToPrepare: [
+                'Libretto di impianto termico',
+                'Recapito del manutentore abilitato della caldaia',
+                'Chiavetta per la valvola di sfiato dei termosifoni'
+            ],
+            commonErrors: [
+                'Confondere la data della propria zona climatica (es. Zona E dal 15 ottobre, Zona D dall’8 novembre)',
+                'Dimenticare di registrare il rapporto di efficienza energetica al catasto regionale degli impianti termici'
+            ],
+            askHelpWhen: [
+                'Se la caldaia va in blocco o la pressione scende sotto 1 bar',
+                'Se in condominio i radiatori restano tiepidi per mancato bilanciamento della colonna termica'
+            ],
+            whoCanHelp: [
+                'Tecnico abilitato manutentore impianti termici',
+                'Amministratore di condominio',
+                'Sportello energia del Comune o della Regione'
+            ],
+            officialLinks: [
+                'https://www.mase.gov.it/temi/energia/efficienza-energetica/riscaldamento-edifici'
+            ],
+            officialLinksV2: [
+                { sourceId: 'maseRiscaldamentoZonaD2026', useWhen: 'Normativa nazionale zone climatiche e orari', beforeOpening: [] },
+                { sourceId: 'eneaEfficienzaEnergetica', useWhen: 'Guida all’efficienza energetica e risparmio gas', beforeOpening: [] }
+            ],
+            checklist: [
+                'Zona climatica e ordinanze comunali verificate',
+                'Manutenzione caldaia e bollino verde in regola',
+                'Cronotermostato programmato secondo i limiti orari',
+                'Caloriferi sfiatati e valvole termostatiche aperte'
+            ],
+            sources: [
+                {
+                    title: 'Ministero dell’Ambiente e della Sicurezza Energetica — Regole esercizio impianti termici',
+                    organization: 'MASE',
+                    url: 'https://www.mase.gov.it/temi/energia/efficienza-energetica/riscaldamento-edifici',
+                    type: 'official',
+                    usedFor: 'Quadro normativo D.P.R. 74/2013 e zone climatiche',
+                    lastCheckedAt: '2026-11-08'
+                }
+            ]
         }
     ]
 };

@@ -1584,5 +1584,53 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     url: "https://www.commissionegaranziasciopero.it/dettaglio-sciopero/2026-10-31-scuola-ricerca",
     category: "lavoro",
     type: "ente istituzionale"
+  },
+  adeSecondoAcconto2026: {
+    id: 'adeSecondoAcconto2026',
+    name: "Agenzia delle Entrate — Scadenza e rateizzazione secondo acconto imposte sui redditi",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/schede/pagamenti/imposte-sui-redditi-secondo-acconto",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  maseRiscaldamentoZonaD2026: {
+    id: 'maseRiscaldamentoZonaD2026',
+    name: "Ministero dell'Ambiente e della Sicurezza Energetica — Regole esercizio impianti termici (Zona D)",
+    ente: "MASE",
+    url: "https://www.mase.gov.it/temi/energia/efficienza-energetica/riscaldamento-edifici",
+    category: "casa",
+    type: "ente istituzionale"
+  },
+  eneaEfficienzaEnergetica: {
+    id: 'eneaEfficienzaEnergetica',
+    name: "ENEA — Guida all'uso efficiente del riscaldamento e manutenzione impianti",
+    ente: "ENEA",
+    url: "https://www.efficienzaenergetica.enea.it/per-i-cittadini/guida-riscaldamento-invernale.html",
+    category: "casa",
+    type: "ente istituzionale"
+  },
+  aderRottamazioneQuaterSestaRata2026: {
+    id: 'aderRottamazioneQuaterSestaRata2026',
+    name: "Agenzia delle Entrate-Riscossione — Definizione agevolata (Rottamazione-quater): scadenze e 5 giorni di tolleranza",
+    ente: "Agenzia delle Entrate-Riscossione",
+    url: "https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/definizione-agevolata-rottamazione-quater-scadenze/",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  governoItWalletSecondoScaglione2026: {
+    id: 'governoItWalletSecondoScaglione2026',
+    name: "Dipartimento per la trasformazione digitale — IT-Wallet: abilitazione secondo scaglione da 1 milione di cittadini",
+    ente: "Presidenza del Consiglio dei Ministri",
+    url: "https://innovazione.gov.it/notizie/articoli/it-wallet-seconda-fase-pilota-un-milione-italiani-novembre-2026/",
+    category: "identita-digitale",
+    type: "servizio ufficiale"
+  },
+  poliziaPostaleTruffeNovembre2026: {
+    id: 'poliziaPostaleTruffeNovembre2026',
+    name: "Polizia Postale — Allarme campagne phishing falso fisco e smishing pacchi e-commerce",
+    ente: "Polizia Postale",
+    url: "https://www.commissariatodips.it/notizie/articolo/allerta-falsi-rimborsi-agenzia-entrate-e-truffe-pacchi-novembre/index.html",
+    category: "sicurezza",
+    type: "ente istituzionale"
   }
 };

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { AlertTriangle, ArrowRight, ShieldCheck, Smartphone, Car, QrCode } from 'lucide-react'
+import { AlertTriangle, ArrowRight, ShieldCheck, Smartphone, QrCode, Package } from 'lucide-react'
 
 interface SecurityAlertBannerProps {
     variant?: 'home' | 'sos'
@@ -20,7 +20,7 @@ export function SecurityAlertBanner({ variant = 'home' }: SecurityAlertBannerPro
                     <div>
                         <div className="flex items-center gap-2">
                             <span className="text-[10px] font-black uppercase tracking-widest px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-700 dark:text-amber-300">
-                                Allerta attiva · Fine Ottobre 2026
+                                Allerta attiva · Novembre 2026
                             </span>
                             <span className="text-xs text-muted">Fonti: Polizia Postale & CERT-AgID</span>
                         </div>
@@ -50,6 +50,28 @@ export function SecurityAlertBanner({ variant = 'home' }: SecurityAlertBannerPro
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {/* Alert 1 */}
                 <Link
+                    href="/novita/allerta-phishing-falso-fisco-pacchi-black-friday-novembre-2026"
+                    className="p-4 rounded-2xl border border-border/80 bg-surface/80 hover:border-amber-500/60 hover:shadow-md transition-all group flex flex-col justify-between space-y-3"
+                >
+                    <div className="space-y-2">
+                        <div className="flex items-center gap-2 text-xs font-semibold text-amber-600 dark:text-amber-400">
+                            <Package className="w-4 h-4" />
+                            <span>Smishing · Falso Fisco & Black Friday</span>
+                        </div>
+                        <h3 className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors leading-snug">
+                            Finti SMS pacchi trattenuti e rimborsi fiscali
+                        </h3>
+                        <p className="text-xs text-secondary leading-relaxed line-clamp-3">
+                            Messaggi civetta su cartelle esattoriali e pacchi bloccati per rubare carte di credito e credenziali SPID. Non cliccare sui link.
+                        </p>
+                    </div>
+                    <span className="text-[11px] font-bold text-primary inline-flex items-center gap-1 pt-2 border-t border-border/40">
+                        Cosa fare e contromisure <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
+                    </span>
+                </Link>
+
+                {/* Alert 2 */}
+                <Link
                     href="/novita/allerta-quishing-qr-code-truffa-multe-parcometri-2026"
                     className="p-4 rounded-2xl border border-border/80 bg-surface/80 hover:border-amber-500/60 hover:shadow-md transition-all group flex flex-col justify-between space-y-3"
                 >
@@ -63,28 +85,6 @@ export function SecurityAlertBanner({ variant = 'home' }: SecurityAlertBannerPro
                         </h3>
                         <p className="text-xs text-secondary leading-relaxed line-clamp-3">
                             Adesivi sovrapposti su colonnine e preavvisi di sosta portano a falsi portali PagoPA. Controlla il dominio prima di pagare.
-                        </p>
-                    </div>
-                    <span className="text-[11px] font-bold text-primary inline-flex items-center gap-1 pt-2 border-t border-border/40">
-                        Cosa fare e contromisure <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
-                    </span>
-                </Link>
-
-                {/* Alert 2 */}
-                <Link
-                    href="/novita/phishing-bollo-auto-aci-2026"
-                    className="p-4 rounded-2xl border border-border/80 bg-surface/80 hover:border-amber-500/60 hover:shadow-md transition-all group flex flex-col justify-between space-y-3"
-                >
-                    <div className="space-y-2">
-                        <div className="flex items-center gap-2 text-xs font-semibold text-amber-600 dark:text-amber-400">
-                            <Car className="w-4 h-4" />
-                            <span>Smishing · Tassa Automobilistica</span>
-                        </div>
-                        <h3 className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors leading-snug">
-                            Finti SMS ACI per presunto mancato pagamento
-                        </h3>
-                        <p className="text-xs text-secondary leading-relaxed line-clamp-3">
-                            Link a portali civetta che chiedono dati della carta. Verifica il bollo solo su portale ufficiale aci.it o nell'area personale su App IO.
                         </p>
                     </div>
                     <span className="text-[11px] font-bold text-primary inline-flex items-center gap-1 pt-2 border-t border-border/40">

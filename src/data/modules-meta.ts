@@ -261,11 +261,11 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "number": 0,
     "title": "Casa e Residenza",
     "description": "Gestione del contratto di affitto, utenze domestiche, agevolazioni fiscali e diritti abitativi.",
-    "lessonCount": 13,
+    "lessonCount": 14,
     "difficulty": "base",
     "icon": "Home",
     "category": "casa",
-    "lastUpdated": "2026-08-27",
+    "lastUpdated": "2026-11-08",
     "featuredType": "none"
   },
   {
@@ -404,11 +404,11 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "number": 0,
     "title": "Fisco e Cittadini",
     "description": "Guida ai servizi dell'Agenzia delle Entrate, dichiarazione dei redditi e gestione delle scadenze fiscali.",
-    "lessonCount": 9,
+    "lessonCount": 10,
     "difficulty": "base",
     "icon": "Receipt",
     "category": "soldi",
-    "lastUpdated": "2026-08-27",
+    "lastUpdated": "2026-11-08",
     "featuredType": "none"
   },
   {
@@ -441,11 +441,11 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "number": 0,
     "title": "Cartelle e riscossione",
     "description": "Come consultare cartelle e avvisi, pagare, rateizzare e chiedere sgravio o autotutela sul sito di Agenzia delle entrate-Riscossione.",
-    "lessonCount": 7,
+    "lessonCount": 8,
     "difficulty": "intermedia",
     "icon": "FileWarning",
     "category": "soldi",
-    "lastUpdated": "2026-08-27",
+    "lastUpdated": "2026-11-08",
     "featuredType": "none",
     "mainEntity": "Agenzia delle entrate-Riscossione"
   },

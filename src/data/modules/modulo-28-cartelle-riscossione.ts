@@ -3,7 +3,7 @@ import { published, src, ol } from './civicPublished';
 
 export const modulo_28_cartelle_riscossione: Module = {
     id: 'modulo-28-cartelle-riscossione',
-    lastUpdated: '2026-08-27',
+    lastUpdated: '2026-11-08',
     title: 'Cartelle e riscossione',
     description: 'Come consultare cartelle e avvisi, pagare, rateizzare e chiedere sgravio o autotutela sul sito di Agenzia delle entrate-Riscossione.',
     category: 'soldi',
@@ -240,6 +240,47 @@ export const modulo_28_cartelle_riscossione: Module = {
             sources: [
                 src('Definizione agevolata', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/aree-tematiche/definizione-agevolata-rottamazione'),
                 src('Rottamazione-quinquies', 'Agenzia delle entrate-Riscossione', 'https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/definizione-agevolata-rottamazione-quinquies/'),
+            ],
+        }),
+        published({
+            id: 'rottamazione-quater-sesta-rata-tolleranza',
+            slug: 'rottamazione-quater-sesta-rata-tolleranza-versamenti',
+            title: 'Rottamazione-quater: sesta rata e tolleranza 5 giorni',
+            category: 'soldi',
+            audience: ['cittadini', 'lavoratori'],
+            level: 'intermedia',
+            estimatedMinutes: 10,
+            mainEntity: 'Agenzia delle entrate-Riscossione',
+            summary: 'Scadenza della sesta rata della Definizione agevolata al 30 novembre 2026. Versamenti validi fino al 7 dicembre con i 5 giorni di tolleranza.',
+            steps: [
+                'Verifica la scadenza della sesta rata fissata al 30 novembre 2026 nella Comunicazione delle somme dovute ricevuta da AdeR.',
+                'Sfrutta la tolleranza legale di 5 giorni: poiché il 5 dicembre cade di sabato, il versamento è tempestivo se eseguito entro lunedì 7 dicembre 2026.',
+                'Recupera il bollettino PagoPA della rata dall’area riservata del sito agenziaentrateriscossione.gov.it o tramite il servizio web pubblico senza credenziali.',
+                'Paga tramite home banking, app bancaria con circuito PagoPA/CBILL, tabaccherie o sportelli postali e bancari abilitati.',
+                'Conserva la ricevuta telematica con il codice IUV per attestare il tempestivo pagamento ed evitare la decadenza insanabile.',
+            ],
+            commonErrors: [
+                'Pagare oltre il 7 dicembre 2026: la decadenza dai benefici della rottamazione è immediata e non sanabile',
+                'Effettuare un versamento parziale della rata (la legge richiede l’integrale versamento)',
+            ],
+            dontDo: [
+                'Non usare link ricevuti via email o SMS che promettono sconti ulteriori sulla rottamazione',
+            ],
+            checklist: [
+                'Bollettino PagoPA della sesta rata scaricato',
+                'Pagamento effettuato entro il 7 dicembre 2026',
+                'Ricevuta con codice IUV salvata',
+            ],
+            faqs: [
+                { q: 'Cosa succede se pago l’8 dicembre o più tardi?', a: 'Si decade definitivamente dalla definizione agevolata: i pagamenti effettuati restano acquisiti come mero acconto e ripartono le procedure esecutive sul debito residuo.' },
+                { q: 'Posso pagare con addebito diretto SDD?', a: 'Sì, se hai attivato la domiciliazione bancaria almeno 30 giorni prima della scadenza sul sito AdeR.' },
+            ],
+            officialLinksV2: [
+                ol('aderRottamazioneQuaterSestaRata2026', 'Scadenze e tolleranza Rottamazione-quater', []),
+                ol('aderHome', 'Area riservata e recupero bollettini', []),
+            ],
+            sources: [
+                src('Rottamazione-quater — scadenze e tolleranza', 'Agenzia delle entrate-Riscossione', 'https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/definizione-agevolata-rottamazione-quater-scadenze/'),
             ],
         }),
     ],

@@ -3757,5 +3757,165 @@ export const LIFE_HACKS: LifeHack[] = [
         ],
         lastReviewedAt: "2026-10-26",
         badges: ["Risparmia tempo", "Evita errore"]
+    },
+    {
+        title: "Come versare o rateizzare il secondo acconto delle imposte entro il 30 novembre",
+        slug: "secondo-acconto-f24-imposte-dilazione",
+        category: "soldi",
+        target: ["cittadini", "lavoratori"],
+        difficulty: "media",
+        time: "15 minuti",
+        benefit: "Pianificare i versamenti di novembre ed evitare sanzioni del 30% per mancato o tardivo pagamento F24",
+        summary: "Istruzioni per calcolare il secondo acconto IRPEF, cedolare secca o imposta sostitutiva e fruire della rateizzazione per partite IVA sotto i 170.000€.",
+        whyUseful: "Il 30 novembre scade il secondo acconto d'imposta per la maggior parte dei contribuenti; per le partite IVA persone fisiche è possibile dilazionare in 5 rate mensili.",
+        steps: [
+            "Controlla il Modello 730/2026 o il Modello Redditi Persone Fisiche per individuare l'importo esatto del secondo o unico acconto dovuto.",
+            "Scegli tra metodo storico (percentuale standard su imposte anno precedente) o previsionale (se prevedi un reddito 2026 inferiore).",
+            "Se sei partita IVA persona fisica con ricavi 2025 fino a 170.000 euro, puoi optare per il versamento in 5 rate mensili di pari importo (da gennaio a maggio 2027).",
+            "Prepara il Modello F24 compilando la sezione Erario con i codici tributo corretti (es. 4034 per IRPEF, 1791 per forfettario, 1841 per cedolare secca, anno di riferimento 2026).",
+            "Invia l'F24 telematico tramite i servizi online dell'Agenzia delle Entrate (F24 Web) o l'home banking del tuo istituto bancario entro il 30 novembre 2026.",
+            "Conserva la quietanza telematica rilasciata dal sistema bancario o da Entratel/Fisconline come prova liberatoria del pagamento."
+        ],
+        whatYouNeed: ["Copia dichiarazione redditi 2026", "Credenziali SPID, CIE o home banking", "Coordinate IBAN per addebito F24"],
+        officialLinks: ["adeSecondoAcconto2026", "adeF24Versamenti"],
+        commonErrors: [
+            "Usare il modello cartaceo in banca se sei titolare di partita IVA (per i professionisti è obbligatorio l'F24 telematico)",
+            "Sottostimare il reddito con il metodo previsionale (scattano sanzioni per acconto insufficiente)"
+        ],
+        limitations: [
+            "La rateizzazione in 5 rate è riservata alle persone fisiche esercenti attività d'impresa o professione con compensi fino a 170.000 euro"
+        ],
+        sources: [
+            {
+                title: "Agenzia delle Entrate — Scadenza e rateizzazione secondo acconto imposte sui redditi",
+                organization: "Agenzia delle Entrate",
+                url: "https://www.agenziaentrate.gov.it/portale/schede/pagamenti/imposte-sui-redditi-secondo-acconto",
+                type: "official",
+                usedFor: "Scadenze e codici tributo F24",
+                lastCheckedAt: "2026-11-08"
+            }
+        ],
+        lastReviewedAt: "2026-11-08",
+        badges: ["Soldi", "Evita errore", "Lavoro"]
+    },
+    {
+        title: "Come pagare la rata della Rottamazione-quater e recuperare i bollettini smarriti",
+        slug: "rottamazione-quater-recupero-bollettini-tolleranza",
+        category: "soldi",
+        target: ["cittadini", "lavoratori"],
+        difficulty: "facile",
+        time: "5 minuti",
+        benefit: "Mantenere i benefici dello sconto su sanzioni e interessi anche se hai perso la comunicazione o paghi nei 5 giorni di tolleranza",
+        summary: "Come scaricare i moduli PagoPA della rata di novembre e pagare in sicurezza senza perdere la definizione agevolata.",
+        whyUseful: "La sesta rata scade il 30 novembre ma è considerata tempestiva fino al 7 dicembre; non pagare comporta la decadenza insanabile.",
+        steps: [
+            "Accedi al portale agenziaentrateriscossione.gov.it con SPID o CIE nell'area riservata 'Cittadini'.",
+            "Entra nella sezione 'Definizione agevolata' e seleziona 'Visualizza piano di ammortamento'.",
+            "Scarica il modulo di pagamento PagoPA corrispondente alla sesta rata in scadenza a fine novembre.",
+            "Se non hai SPID, usa il servizio 'ContiTu' o compila il modulo web pubblico per ricevere i bollettini via email indicando il codice fiscale.",
+            "Effettua il pagamento tramite home banking (circuito CBILL/pagoPA), app bancaria, tabaccheria o sportello postale.",
+            "Verifica che il versamento sia contabilizzato entro il termine massimo di tolleranza (lunedì 7 dicembre 2026)."
+        ],
+        whatYouNeed: ["SPID o CIE per accesso rapido", "Codice fiscale", "Comunicazione delle somme dovute (o numero istanza)"],
+        officialLinks: ["aderRottamazioneQuaterSestaRata2026", "aderHome"],
+        commonErrors: [
+            "Pagare con bonifico ordinario generico anziché con il codice avviso PagoPA associato alla rata",
+            "Pagare oltre i 5 giorni di tolleranza: si decade irrevocabilmente e i pagamenti parziali vengono considerati come mero acconto sul debito totale"
+        ],
+        limitations: [
+            "La tolleranza di legge è perentoria e non prorogabile individualmente dall'ufficio"
+        ],
+        sources: [
+            {
+                title: "Agenzia delle Entrate-Riscossione — Definizione agevolata: scadenze e tolleranza",
+                organization: "Agenzia delle Entrate-Riscossione",
+                url: "https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/definizione-agevolata-rottamazione-quater-scadenze/",
+                type: "official",
+                usedFor: "Regole tolleranza e canali di versamento",
+                lastCheckedAt: "2026-11-08"
+            }
+        ],
+        lastReviewedAt: "2026-11-08",
+        badges: ["Soldi", "Risparmia tempo", "Evita errore"]
+    },
+    {
+        title: "Come riconoscere i finti SMS di pacchi bloccati o mancata consegna durante il Black Friday",
+        slug: "difesa-smishing-pacchi-falsi-corrieri",
+        category: "sicurezza",
+        target: ["cittadini", "lavoratori"],
+        difficulty: "facile",
+        time: "3 minuti",
+        benefit: "Eviti il furto delle credenziali della carta di credito per addebiti ricorrenti mascherati da spese doganali",
+        summary: "Protocollo di verifica per gli SMS che simulano Poste Italiane, GLS o DHL chiedendo pochi centesimi per sbloccare una spedizione.",
+        whyUseful: "In vista del Black Friday si moltiplicano gli attacchi di smishing che imitano le notifiche dei corrieri per rubare numeri di carta di credito.",
+        steps: [
+            "Non cliccare mai sul link presente in SMS che affermano che 'il tuo pacco è trattenuto per indirizzo incompleto' o 'oneri doganali di 1,99€'.",
+            "Verifica se hai effettivamente ordinato qualcosa e controlla lo stato della spedizione esclusivamente all'interno dell'app del venditore (es. Amazon, eBay).",
+            "Se attendi una consegna, cerca il codice di tracciamento nella mail originale di conferma spedizione e incollalo manualmente sul sito ufficiale del corriere.",
+            "Nota i segnali di allarme: mittenti con prefissi esteri, link abbreviati strani (es. bit.ly, tinyurl o domini che finiscono in .top, .xyz, .cc).",
+            "I corrieri autentici non chiedono mai di sbloccare pacchi tramite carte di credito su pagine web non collegate al tracking ufficiale.",
+            "Blocca il numero del mittente e inoltra la segnalazione alla Polizia Postale tramite commissariatodips.it."
+        ],
+        whatYouNeed: ["Numero di tracking autentico", "App ufficiale del negozio o corriere"],
+        officialLinks: ["poliziaPostaleTruffeNovembre2026", "commissariatoPs", "certAgidHome"],
+        commonErrors: [
+            "Inserire il codice CVV/CVC della carta pensando si tratti solo di confermare l'indirizzo",
+            "Rispondere al messaggio SMS chiedendo spiegazioni (conferma che il numero è attivo)"
+        ],
+        limitations: [
+            "I truffatori possono camuffare il nome del mittente per farlo apparire nello stesso thread degli SMS autentici (SMS spoofing)"
+        ],
+        sources: [
+            {
+                title: "Polizia Postale — Allarme campagne phishing e smishing pacchi",
+                organization: "Polizia Postale",
+                url: "https://www.commissariatodips.it/notizie/articolo/allerta-falsi-rimborsi-agenzia-entrate-e-truffe-pacchi-novembre/index.html",
+                type: "official",
+                usedFor: "Tecniche di frode e contromisure",
+                lastCheckedAt: "2026-11-08"
+            }
+        ],
+        lastReviewedAt: "2026-11-08",
+        badges: ["Sicurezza", "Evita errore", "Urgente"]
+    },
+    {
+        title: "Accensione riscaldamento Zona D: orari, temperatura corretta e manutenzione caldaia",
+        slug: "riscaldamento-zona-d-orari-termostato",
+        category: "casa",
+        target: ["cittadini", "famiglie"],
+        difficulty: "facile",
+        time: "5 minuti",
+        benefit: "Riscaldare la casa a norma di legge risparmiando fino al 15% sui consumi in bolletta ed evitando multe comunali",
+        summary: "Regole operative per la Zona D (dall'8 novembre al 7 aprile per max 11 ore al giorno) e verifica del bollino verde.",
+        whyUseful: "Dall'8 novembre si accendono i termosifoni a Roma, Firenze, Napoli e in tutta la Zona D; rispettare le regole evita sanzioni e sprechi.",
+        steps: [
+            "Imposta il cronotermostato per non superare il limite massimo di 11 ore giornaliere complessive (consigliate: 3 ore la mattina e 8 ore nel tardo pomeriggio/sera).",
+            "Regola la temperatura a 19°C per la zona giorno e 18°C per le camere da letto; ogni grado in più aumenta la bolletta del gas del 7-8%.",
+            "Verifica la pressione dell'impianto sul manometro della caldaia: il valore ottimale a freddo deve essere compreso tra 1,2 e 1,5 bar.",
+            "Sfoga l'aria dai termosifoni aprendo la valvolina finché non fuoriesce solo acqua continua, per garantire un riscaldamento uniforme.",
+            "Controlla che le valvole termostatiche siano sbloccate e impostate tra il livello 2 e 3 nelle stanze poco frequentate.",
+            "Accertati di aver effettuato la manutenzione annuale della caldaia e la prova fumi biennale con rilascio del bollino verde/blu da parte del tecnico abilitato."
+        ],
+        whatYouNeed: ["Manometro caldaia", "Chiavetta di sfiato termosifoni", "Libretto di climatizzazione d'impianto"],
+        officialLinks: ["maseRiscaldamentoZonaD2026", "eneaEfficienzaEnergetica"],
+        commonErrors: [
+            "Tenere il riscaldamento acceso a 22-23°C (è vietato dalla legge e comporta aria eccessivamente secca e consumi esorbitanti)",
+            "Coprire i termosifoni con copricaloriferi pesanti o tende che ostacolano la circolazione naturale dell'aria calda"
+        ],
+        limitations: [
+            "I singoli sindaci possono emettere ordinanze di deroga per posticipare l'accensione o ridurre gli orari in caso di temperature autunnali insolitamente miti"
+        ],
+        sources: [
+            {
+                title: "ENEA — Guida all'uso efficiente del riscaldamento invernale",
+                organization: "ENEA",
+                url: "https://www.efficienzaenergetica.enea.it/per-i-cittadini/guida-riscaldamento-invernale.html",
+                type: "official",
+                usedFor: "Regole termostato ed efficienza energetica",
+                lastCheckedAt: "2026-11-08"
+            }
+        ],
+        lastReviewedAt: "2026-11-08",
+        badges: ["Casa", "Risparmia tempo", "Evita errore"]
     }
 ];

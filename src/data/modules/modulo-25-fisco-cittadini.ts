@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_25_fisco_cittadini: Module = {
     id: 'modulo-25-fisco-cittadini',
-    lastUpdated: '2026-08-27',
+    lastUpdated: '2026-11-08',
     title: 'Fisco e Cittadini',
     description: 'Guida ai servizi dell\'Agenzia delle Entrate, dichiarazione dei redditi e gestione delle scadenze fiscali.',
     category: 'soldi',
@@ -384,6 +384,79 @@ export const modulo_25_fisco_cittadini: Module = {
                     lastCheckedAt: '2026-08-14',
                 },
             ],
+        },
+        {
+            id: 'secondo-acconto-imposte-f24',
+            slug: 'secondo-acconto-imposte-f24-novembre',
+            title: 'Secondo acconto imposte: scadenza 30 novembre e rate F24',
+            category: 'soldi',
+            audience: ['cittadini', 'lavoratori'],
+            level: 'base',
+            estimatedMinutes: 15,
+            mainEntity: 'Agenzia delle Entrate',
+            summary: 'Regole e modalità di versamento per il secondo acconto IRPEF, cedolare secca e imposta sostitutiva. Condizioni di rateizzazione per partite IVA sotto i 170.000€.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-11-08',
+            synthesis: 'Il 30 novembre è la scadenza per il secondo o unico acconto delle imposte sui redditi e della cedolare secca. Per le partite IVA persone fisiche con ricavi sotto i 170.000€ è possibile dilazionare in 5 rate mensili da gennaio a maggio.',
+            whenToDo: 'Nel mese di novembre di ogni anno, prima del termine ordinario del 30 novembre.',
+            scenario: 'Devi saldare il secondo acconto d’imposta risultante dalla dichiarazione dei redditi 2026 e vuoi capire se puoi dilazionare il pagamento.',
+            steps: [
+                'Verifica l’importo del secondo acconto sul Modello 730 o Modello Redditi 2026',
+                'Scegli tra metodo storico (importo pieno da dichiarazione) o previsionale (se prevedi un calo di reddito nel 2026)',
+                'Se hai partita IVA e ricavi fino a 170.000€, decidi se pagare al 30 novembre oppure dilazionare in 5 rate da gennaio a maggio 2027',
+                'Compila il Modello F24 con i codici tributo corretti e anno di riferimento 2026',
+                'Invia l’F24 in modalità telematica dall’area riservata dell’Agenzia delle Entrate o tramite home banking'
+            ],
+            doNow: [
+                'Controlla il prospetto delle imposte dovute calcolato dal commercialista o dal software dichiarativo',
+                'Verifica la disponibilità di fondi sul conto corrente bancario per l’addebito F24'
+            ],
+            dontDo: [
+                'Non utilizzare bollettini o siti di terze parti: usa solo i canali ufficiali dell’Agenzia delle Entrate o la tua banca',
+                'Non dimenticare che il mancato versamento comporta una sanzione ordinaria del 30%'
+            ],
+            whatToPrepare: [
+                'Modello F24 compilato',
+                'Credenziali SPID o CIE',
+                'Codice IBAN del conto corrente'
+            ],
+            commonErrors: [
+                'Sbagliare il codice tributo (es. confondere acconto con saldo)',
+                'Tentare di pagare con modello cartaceo se si è titolari di partita IVA'
+            ],
+            askHelpWhen: [
+                'Se prevedi un forte calo di fatturato e vuoi applicare il metodo previsionale senza rischiare sanzioni',
+                'Se hai crediti d’imposta da compensare nel modello F24'
+            ],
+            whoCanHelp: [
+                'Agenzia delle Entrate (assistenza telematica o su appuntamento)',
+                'Commercialista o intermediario abilitato',
+                'CAF di riferimento per i lavoratori dipendenti'
+            ],
+            officialLinks: [
+                'https://www.agenziaentrate.gov.it/portale/schede/pagamenti/imposte-sui-redditi-secondo-acconto'
+            ],
+            officialLinksV2: [
+                { sourceId: 'adeSecondoAcconto2026', useWhen: 'Per consultare le regole sul secondo acconto', beforeOpening: [] },
+                { sourceId: 'adeF24Versamenti', useWhen: 'Per le istruzioni di versamento F24', beforeOpening: [] }
+            ],
+            checklist: [
+                'Ho verificato l’importo del secondo acconto',
+                'Ho controllato se ho diritto alla rateizzazione in 5 rate',
+                'Ho inviato il modello F24 telematico entro il 30 novembre',
+                'Ho salvato la quietanza telematica'
+            ],
+            sources: [
+                {
+                    title: 'Agenzia delle Entrate — Scadenza e rateizzazione secondo acconto imposte sui redditi',
+                    organization: 'Agenzia delle Entrate',
+                    url: 'https://www.agenziaentrate.gov.it/portale/schede/pagamenti/imposte-sui-redditi-secondo-acconto',
+                    type: 'official',
+                    usedFor: 'Regole acconto, scadenze e canali F24',
+                    lastCheckedAt: '2026-11-08'
+                }
+            ]
         }
     ]
 };

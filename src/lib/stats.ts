@@ -4,7 +4,7 @@ import { LEARNING_PATHS } from '@/data/paths'
 import { CIVIC_TEMPLATES } from '@/data/templates'
 import { CIVIC_NEWS } from '@/data/news'
 
-export const EDITORIAL_DATE = '2026-10-26'
+export const EDITORIAL_DATE = '2026-11-08'
 
 export type SiteStats = {
   totalModules: number
