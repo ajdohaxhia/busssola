@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_06b_stalking_doxxing: Module = {
     id: 'modulo-06b-stalking-doxxing',
-    lastUpdated: '2024-05-13',
+    lastUpdated: '2026-11-08',
     title: 'Modulo 6b: Cyberstalking (Tutele legali e Spyware)',
     description: 'Procedure per fermare lo stalking tramite l\'ammonimento del Questore e come rilevare software spia sul telefono.',
     category: 'privacy',
@@ -75,7 +75,7 @@ export const modulo_06b_stalking_doxxing: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-11-08',
             qualityGatePassed: true
         },
         {
@@ -148,7 +148,7 @@ export const modulo_06b_stalking_doxxing: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-11-08',
             qualityGatePassed: true
         },
         {
@@ -213,7 +213,7 @@ export const modulo_06b_stalking_doxxing: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-11-08',
             qualityGatePassed: true
         }
     ]

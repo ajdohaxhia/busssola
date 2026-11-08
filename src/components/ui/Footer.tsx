@@ -33,6 +33,11 @@ export function Footer() {
                         <h4 className="text-xs font-semibold uppercase tracking-widest text-accent-light">Strumenti</h4>
                         <nav className="grid gap-2 text-sm text-white/70">
                             <Link href="/moduli">Catalogo Guide</Link>
+                            <Link href="/scadenze">Scadenzario 2026–2027</Link>
+                            <Link href="/confronti">Tabelle di Confronto</Link>
+                            <Link href="/bonus-2027">Guida Bonus 2027</Link>
+                            <Link href="/isee-2027">Guida ISEE 2027</Link>
+                            <Link href="/pensioni-2027">Guida Pensioni 2027</Link>
                             <Link href="/modelli">Kit e Modelli</Link>
                             <Link href="/novita">Novità e Scadenze</Link>
                             <Link href="/percorsi">Percorsi Guidati</Link>

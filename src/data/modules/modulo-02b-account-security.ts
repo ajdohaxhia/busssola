@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_02b_account_security: Module = {
     id: 'modulo-02b-account-security',
-    lastUpdated: '2024-05-13',
+    lastUpdated: '2026-11-08',
     title: 'Modulo 2b: Checkup Privacy & Sicurezza',
     description: 'Procedure guidate per controllare cosa sanno di te Google, Facebook e Instagram, e come blindare i tuoi dati.',
     category: 'sicurezza',
@@ -83,7 +83,7 @@ export const modulo_02b_account_security: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2024-05-13',
+            lastReviewedAt: '2026-11-08',
             qualityGatePassed: true
         },
         {
@@ -163,7 +163,7 @@ export const modulo_02b_account_security: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2024-05-13',
+            lastReviewedAt: '2026-11-08',
             qualityGatePassed: true
         },
         {
@@ -232,7 +232,7 @@ export const modulo_02b_account_security: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2024-05-13',
+            lastReviewedAt: '2026-11-08',
             qualityGatePassed: true
         }
     ]

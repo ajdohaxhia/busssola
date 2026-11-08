@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_01b_primo_soccorso: Module = {
     id: 'modulo-01b-primo-soccorso',
-    lastUpdated: '2024-05-13',
+    lastUpdated: '2026-11-08',
     title: 'Modulo 1b: Primo Soccorso (Casi Specifici)',
     description: 'Procedure per emergenze meno comuni ma gravissime: doxxing, sim-swapping e truffe bancarie mirate.',
     category: 'emergenze',
@@ -85,7 +85,7 @@ export const modulo_01b_primo_soccorso: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2024-05-13',
+            lastReviewedAt: '2026-11-08',
             qualityGatePassed: true
         },
         {
@@ -154,7 +154,7 @@ export const modulo_01b_primo_soccorso: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2024-05-13',
+            lastReviewedAt: '2026-11-08',
             qualityGatePassed: true
         },
         {
@@ -225,7 +225,7 @@ export const modulo_01b_primo_soccorso: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2024-05-13',
+            lastReviewedAt: '2026-11-08',
             qualityGatePassed: true
         }
     ]

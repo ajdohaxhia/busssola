@@ -752,6 +752,18 @@ export function HUB_METADATA_BUILDER(key: string): SeoMetadataOptions {
             path: '/scuole/',
             keywords: ['materiali didattici educazione civica', 'lezione cyberbullismo', 'kit docenti sicurezza digitale'],
         },
+        scadenze: {
+            title: 'Scadenze Civiche e Fiscali 2026–2027: Calendario Ufficiale',
+            description: 'Tutte le scadenze obbligatorie verificate per cittadini e contribuenti: secondo acconto imposte, rottamazione-quater, saldo IMU, rinnovo ISEE 2027, iscrizioni scolastiche e bonus.',
+            path: '/scadenze/',
+            keywords: ['scadenze fiscali 2026', 'scadenze 2027', 'calendario fiscale adempimenti', 'secondo acconto imposte', 'scadenza saldo IMU', 'rinnovo ISEE 2027', 'rottamazione quater rate', 'scadenze INPS'],
+        },
+        confronti: {
+            title: 'Confronti e Guide Decisionali: SPID vs CIE, Truffe e Strumenti a Confronto',
+            description: 'Tabelle comparative e matrici pratiche per scegliere senza dubbi: SPID vs CIE vs IT-Wallet, canali di truffa a confronto, 730 vs Modello Redditi.',
+            path: '/confronti/',
+            keywords: ['confronti burocrazia', 'spid vs cie differenze', 'it-wallet o spid', 'riconoscere phishing o smishing', 'confronto opzioni civiche'],
+        },
     }
     return map[key] || { title: SITE_NAME }
 }

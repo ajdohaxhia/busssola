@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_05b_grooming_minori: Module = {
     id: 'modulo-05b-grooming-minori',
-    lastUpdated: '2024-05-13',
+    lastUpdated: '2026-11-08',
     title: 'Modulo 5b: Grooming (Educazione e Gaming)',
     description: 'Come spiegare l\'adescamento ai bambini e come proteggerli durante le sessioni di gioco online.',
     category: 'famiglia',
@@ -76,7 +76,7 @@ export const modulo_05b_grooming_minori: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2024-05-13',
+            lastReviewedAt: '2026-11-08',
             qualityGatePassed: true
         },
         {
@@ -143,7 +143,7 @@ export const modulo_05b_grooming_minori: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2024-05-13',
+            lastReviewedAt: '2026-11-08',
             qualityGatePassed: true
         }
     ]

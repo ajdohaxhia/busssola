@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_03b_truffe_phishing: Module = {
     id: 'modulo-03b-truffe-phishing',
-    lastUpdated: '2024-05-13',
+    lastUpdated: '2026-11-08',
     title: 'Modulo 3b: Casi Specifici di Truffa',
     description: 'Analisi profonda delle truffe più recenti su Vinted, Marketplace e piattaforme di annunci.',
     category: 'truffe',
@@ -77,7 +77,7 @@ export const modulo_03b_truffe_phishing: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2024-05-13',
+            lastReviewedAt: '2026-11-08',
             qualityGatePassed: true
         },
         {
@@ -145,7 +145,7 @@ export const modulo_03b_truffe_phishing: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2024-05-13',
+            lastReviewedAt: '2026-11-08',
             qualityGatePassed: true
         },
         {
@@ -214,7 +214,7 @@ export const modulo_03b_truffe_phishing: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2024-05-13',
+            lastReviewedAt: '2026-11-08',
             qualityGatePassed: true
         }
     ]

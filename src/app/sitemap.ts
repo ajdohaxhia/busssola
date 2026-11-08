@@ -23,6 +23,8 @@ const KEY_HUBS = new Set([
     '/modelli/',
     '/novita/',
     '/faq/',
+    '/scadenze/',
+    '/confronti/',
 ])
 
 const staticRoutes = [
@@ -39,6 +41,15 @@ const staticRoutes = [
     '/modelli/',
     '/novita/',
     '/faq/',
+    '/scadenze/',
+    '/scadenze/2027/',
+    '/confronti/',
+    '/confronti/spid-cie-it-wallet/',
+    '/confronti/truffe-come-riconoscerle/',
+    '/bonus-2027/',
+    '/isee-2027/',
+    '/pensioni-2027/',
+    '/guide/f24-acconti/',
     '/contact/',
     '/privacy/',
     '/termini/',

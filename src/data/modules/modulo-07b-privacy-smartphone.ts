@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_07b_privacy_smartphone: Module = {
     id: 'modulo-07b-privacy-smartphone',
-    lastUpdated: '2024-05-13',
+    lastUpdated: '2026-11-08',
     title: 'Modulo 7b: Privacy Smartphone (Avanzata)',
     description: 'Tecniche di difesa avanzate: audit dei permessi sensibili e gestione della biometria.',
     category: 'privacy',
@@ -72,7 +72,7 @@ export const modulo_07b_privacy_smartphone: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-11-08',
             qualityGatePassed: true
         },
         {
@@ -135,7 +135,7 @@ export const modulo_07b_privacy_smartphone: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-11-08',
             qualityGatePassed: true
         },
         {
@@ -198,7 +198,7 @@ export const modulo_07b_privacy_smartphone: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-11-08',
             qualityGatePassed: true
         }
     ]

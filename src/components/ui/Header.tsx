@@ -8,6 +8,8 @@ import { cn } from '@/lib/utils';
 
 const navItems = [
     { href: '/moduli', label: 'Guide' },
+    { href: '/scadenze', label: 'Scadenze' },
+    { href: '/confronti', label: 'Confronti' },
     { href: '/modelli', label: 'Modelli' },
     { href: '/novita', label: 'Novità' },
     { href: '/percorsi', label: 'Percorsi' },

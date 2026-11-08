@@ -26,7 +26,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "intermedia",
     "icon": "ShieldAlert",
     "category": "emergenze",
-    "lastUpdated": "2024-05-13",
+    "lastUpdated": "2026-11-08",
     "featuredType": "none"
   },
   {
@@ -50,7 +50,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "intermedia",
     "icon": "Key",
     "category": "sicurezza",
-    "lastUpdated": "2024-05-13",
+    "lastUpdated": "2026-11-08",
     "featuredType": "none"
   },
   {
@@ -74,7 +74,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "intermedia",
     "icon": "Target",
     "category": "truffe",
-    "lastUpdated": "2024-05-13",
+    "lastUpdated": "2026-11-08",
     "featuredType": "none"
   },
   {
@@ -98,7 +98,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "intermedia",
     "icon": "AlertCircle",
     "category": "emergenze",
-    "lastUpdated": "2024-05-13",
+    "lastUpdated": "2026-11-08",
     "featuredType": "none"
   },
   {
@@ -122,7 +122,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "intermedia",
     "icon": "UserCheck",
     "category": "famiglia",
-    "lastUpdated": "2024-05-13",
+    "lastUpdated": "2026-11-08",
     "featuredType": "none"
   },
   {
@@ -146,7 +146,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "intermedia",
     "icon": "Eye",
     "category": "privacy",
-    "lastUpdated": "2024-05-13",
+    "lastUpdated": "2026-11-08",
     "featuredType": "none"
   },
   {
@@ -170,7 +170,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "avanzata",
     "icon": "Smartphone",
     "category": "privacy",
-    "lastUpdated": "2024-05-13",
+    "lastUpdated": "2026-11-08",
     "featuredType": "none"
   },
   {
@@ -194,7 +194,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "intermedia",
     "icon": "GraduationCap",
     "category": "famiglia",
-    "lastUpdated": "2024-05-13",
+    "lastUpdated": "2026-11-08",
     "featuredType": "none"
   },
   {

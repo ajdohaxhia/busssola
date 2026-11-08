@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import {
-    ArrowRight, Banknote, Briefcase, FileText, GraduationCap, Heart,
-    Home as HomeIcon, Newspaper, Stethoscope, Users,
+    ArrowRight, Banknote, Briefcase, Calendar, FileText, GraduationCap, Heart,
+    Home as HomeIcon, Newspaper, Scale, Stethoscope, Users,
 } from 'lucide-react'
 import { GuideSearch } from '@/components/ui/GuideSearch'
 import { Card } from '@/components/ui/Card'
@@ -27,6 +27,8 @@ function hrefIfTemplate(slugs: string[], fallback: string) {
 }
 
 const STARTERS = [
+    { label: 'Scadenze', href: '/scadenze', blurb: 'Calendario tasse, F24, IMU e scadenze 2026-2027.', entity: 'Fisco / INPS' },
+    { label: 'Confronti', href: '/confronti', blurb: 'SPID vs CIE, truffe a confronto e tabelle decisionali.', entity: 'Busssola' },
     { label: 'IT-Wallet', href: '/modelli/it-wallet', blurb: 'Patente e tessera sanitaria su App IO con valore legale.', entity: 'Dipartimento Trasformazione Digitale' },
     { label: 'SPID', href: '/modelli/spid', blurb: 'Identità digitale per INPS, Ade e Comune.', entity: 'AgID' },
     { label: 'CIE', href: '/moduli/cie-richiesta', blurb: 'Richiesta, rinnovo e uso della carta elettronica.', entity: 'Comune' },
@@ -100,6 +102,8 @@ const AUDIENCES = [
 ]
 
 const AREAS = [
+    { title: 'Scadenze', icon: Calendar, href: '/scadenze' },
+    { title: 'Confronti', icon: Scale, href: '/confronti' },
     { title: 'Documenti', icon: FileText, href: '/moduli/categoria/documenti' },
     { title: 'Fisco e 730', icon: Banknote, href: '/modelli/730-precompilato' },
     { title: 'Lavoro', icon: Briefcase, href: '/moduli/categoria/lavoro' },
@@ -107,8 +111,6 @@ const AREAS = [
     { title: 'Sanità', icon: Stethoscope, href: '/moduli/categoria/sanita' },
     { title: 'Scuola', icon: GraduationCap, href: '/moduli/categoria/scuola' },
     { title: 'Caregiver', icon: Users, href: '/moduli/categoria/anziani' },
-    { title: 'Giustizia', icon: FileText, href: '/moduli/categoria/giustizia' },
-    { title: 'Disabilità', icon: Users, href: '/moduli/categoria/disabilita' },
     { title: 'Modelli', icon: FileText, href: '/modelli' },
 ]
 

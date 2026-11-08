@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_04b_sextortion_ricatti: Module = {
     id: 'modulo-04b-sextortion-ricatti',
-    lastUpdated: '2024-05-13',
+    lastUpdated: '2026-11-08',
     title: 'Modulo 4b: Sextortion (Protocolli Avanzati)',
     description: 'Analisi dei profili Catfish e realtà statistica sulla diffusione dei contenuti: dati per mantenere la calma.',
     category: 'emergenze',
@@ -75,7 +75,7 @@ export const modulo_04b_sextortion_ricatti: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2024-05-13',
+            lastReviewedAt: '2026-11-08',
             qualityGatePassed: true
         },
         {
@@ -141,7 +141,7 @@ export const modulo_04b_sextortion_ricatti: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2024-05-13',
+            lastReviewedAt: '2026-11-08',
             qualityGatePassed: true
         }
     ]

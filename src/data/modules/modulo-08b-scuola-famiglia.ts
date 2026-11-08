@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_08b_scuola_famiglia: Module = {
     id: 'modulo-08b-scuola-famiglia',
-    lastUpdated: '2024-05-13',
+    lastUpdated: '2026-11-08',
     title: 'Modulo 8b: Scuola e Famiglia (Approfondimento)',
     description: 'Approfondimento sui rischi dello Sharenting e sulle conseguenze legali del sexting tra minori.',
     category: 'famiglia',
@@ -75,7 +75,7 @@ export const modulo_08b_scuola_famiglia: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2024-05-13',
+            lastReviewedAt: '2026-11-08',
             qualityGatePassed: true
         },
         {
@@ -143,7 +143,7 @@ export const modulo_08b_scuola_famiglia: Module = {
                     lastCheckedAt: '2026-05-14'
                 }
             ],
-            lastReviewedAt: '2024-05-13',
+            lastReviewedAt: '2026-11-08',
             qualityGatePassed: true
         }
     ]
