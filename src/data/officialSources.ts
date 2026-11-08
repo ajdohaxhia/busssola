@@ -1632,5 +1632,69 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     url: "https://www.commissariatodips.it/notizie/articolo/allerta-falsi-rimborsi-agenzia-entrate-e-truffe-pacchi-novembre/index.html",
     category: "sicurezza",
     type: "ente istituzionale"
+  },
+  mefBonusNatale2026: {
+    id: 'mefBonusNatale2026',
+    name: "Ministero dell'Economia e delle Finanze — D.L. 167/2024 e disposizioni indennità una tantum (Bonus Natale)",
+    ente: "MEF",
+    url: "https://www.mef.gov.it/focus/Bonus-Natale-lavoratori-dipendenti/",
+    category: "soldi",
+    type: "ente istituzionale"
+  },
+  adeBonusNataleCirc19: {
+    id: 'adeBonusNataleCirc19',
+    name: "Agenzia delle Entrate — Circolare e istruzioni applicative per il Bonus Natale 100 euro",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/circolari-e-risoluzioni-bonus-natale-lavoratori",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  noipaBonusNatale2026: {
+    id: 'noipaBonusNatale2026',
+    name: "NoiPA — Autocertificazione e richiesta telematica Bonus Natale per il personale dipendente pubblico",
+    ente: "NoiPA / MEF",
+    url: "https://noipa.mef.gov.it/cl/servizi/indennita-bonus-natale",
+    category: "lavoro",
+    type: "servizio ufficiale"
+  },
+  adeCanoneRaiNonDetenzione: {
+    id: 'adeCanoneRaiNonDetenzione',
+    name: "Agenzia delle Entrate — Dichiarazione sostitutiva canone TV: Quadro A (non detenzione apparecchi)",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/schede/agevolazioni/canone-tv/dichiarazione-sostitutiva-canone-tv",
+    category: "casa",
+    type: "servizio ufficiale"
+  },
+  raiCanoneUfficiale: {
+    id: 'raiCanoneUfficiale',
+    name: "RAI — Abbonamenti TV: modulistica ufficiale, esoneri e recapiti PEC e casella postale",
+    ente: "RAI Radiotelevisione Italiana",
+    url: "https://www.canone.rai.it/Ordinari/Esonero.aspx",
+    category: "casa",
+    type: "servizio ufficiale"
+  },
+  mefFederalismoFiscaleImu2026: {
+    id: 'mefFederalismoFiscaleImu2026',
+    name: "Ministero dell'Economia e delle Finanze — Portale del Federalismo Fiscale: delibere e aliquote IMU comunali",
+    ente: "Dipartimento delle Finanze / MEF",
+    url: "https://www.finanze.gov.it/it/Fiscalita-locale/Portale-del-Federalismo-Fiscale/aliquote-imu-comunali/",
+    category: "casa",
+    type: "servizio ufficiale"
+  },
+  inpsIseePrecompilato2027: {
+    id: 'inpsIseePrecompilato2027',
+    name: "INPS — Sistema ISEE Precompilato e acquisizione DSU per il nuovo anno",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/dettaglio-scheda.schede-servizio-strumento.schede-servizi.50088.isee-precompilato.html",
+    category: "bonus",
+    type: "servizio ufficiale"
+  },
+  masafScadenzaCartaDedicata2026: {
+    id: 'masafScadenzaCartaDedicata2026',
+    name: "MASAF — Termine primo acquisto e scadenze utilizzo Carta Dedicata a Te",
+    ente: "MASAF",
+    url: "https://www.masaf.gov.it/focus-carta-dedicata-a-te-scadenze-utilizzo",
+    category: "bonus",
+    type: "ente istituzionale"
   }
 };

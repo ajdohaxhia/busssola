@@ -118,24 +118,29 @@ export const CIVIC_TEMPLATES: CivicTemplate[] = [
         title: 'Kit Carta Dedicata a Te 2026',
         shortTitle: 'Dedicata a Te',
         category: 'bonus',
-        summary: 'Requisiti (ISEE fino a 15.000 euro), assegnazione automatica e ritiro della carta da 500 euro per la spesa alimentare.',
+        summary: 'Requisiti (ISEE fino a 15.000 euro), assegnazione automatica, ritiro della carta da 500 euro e termine perentorio del primo acquisto a metà dicembre.',
         whenToUse: 'Il tuo nucleo ha un ISEE entro 15.000 euro e non percepisce altri sussidi (ADI, NASpI, CIG).',
         estimatedMinutes: 10,
         officialEntity: 'MASAF / INPS / Comuni',
-        documents: ['Attestazione ISEE 2026 ordinaria valida', 'Documento d’identità e codice fiscale del beneficiario', 'Lettera/comunicazione del Comune con codice carta'],
+        documents: ['Attestazione ISEE 2026 ordinaria valida', 'Documento d’identità e codice fiscale del beneficiario', 'Lettera/comunicazione del Comune con codice identificativo carta'],
         steps: [
             'Verifica di avere una DSU 2026 valida con ISEE sotto i 15.000 euro.',
-            'Non inviare alcuna domanda: l’INPS stila le graduatorie e le invia ai Comuni.',
-            'Attendi la lettera o la notifica ufficiale del tuo Comune di residenza.',
-            'Recati presso qualsiasi ufficio postale con documento, codice fiscale e lettera del Comune per ritirare la Postepay precaricata con 500 euro.',
-            'Utilizza la carta per acquistare beni alimentari di prima necessità nei negozi convenzionati.',
+            'Non inviare alcuna domanda: l’INPS stila le graduatorie e le invia ai Comuni di residenza.',
+            'Verifica se sei presente nella graduatoria pubblicata sul sito del tuo Comune (con numero di protocollo DSU) e attendi la lettera comunale.',
+            'Recati presso qualsiasi ufficio postale con documento, codice fiscale e lettera del Comune per ritirare la Postepay precaricata con 500 euro (o farla ricaricare se già posseduta dallo scorso anno).',
+            'Scadenza fondamentale: effettua il primo pagamento entro la scadenza perentoria di metà dicembre, altrimenti la carta viene disattivata e il contributo revocato.',
+            'Utilizza la carta per acquistare beni alimentari di prima necessità, carburanti o abbonamenti al trasporto pubblico nei negozi convenzionati.'
         ],
-        dontForget: ['Non cliccare link SMS che chiedono dati bancari per sbloccare la carta: è phishing'],
-        officialLinks: ['masafDedicataATe', 'inpsIsee'],
+        dontForget: [
+            'Il mancato primo acquisto entro la scadenza di dicembre comporta la decadenza irreversibile dal beneficio di 500 euro',
+            'Non cliccare su SMS o link che chiedono dati bancari o pagamenti per sbloccare la carta: è phishing'
+        ],
+        officialLinks: ['masafDedicataATe', 'masafScadenzaCartaDedicata2026', 'inpsIsee'],
         relatedGuide: '/moduli/modulo-23-bonus-isee',
-        relatedNews: ['carta-dedicata-a-te-2026'],
+        relatedNews: ['carta-dedicata-a-te-scadenza-primo-acquisto-dicembre-2026', 'carta-dedicata-a-te-2026'],
         sources: [
             src('Focus Carta Dedicata a Te', 'MASAF', 'https://www.masaf.gov.it/focus-carta-dedicata-a-te'),
+            src('Scadenze utilizzo carta', 'MASAF', 'https://www.masaf.gov.it/focus-carta-dedicata-a-te-scadenze-utilizzo'),
             src('Scheda ISEE', 'INPS', 'https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.come-compilare-dsu-e-richiedere-isee-50125.come-compilare-la-dsu-e-richiedere-l-isee.html'),
         ],
     }),
@@ -983,6 +988,115 @@ export const CIVIC_TEMPLATES: CivicTemplate[] = [
         sources: [
             src('Modulistica e servizi online', 'Garante Privacy', 'https://www.garanteprivacy.it/home/modulistica-e-servizi-online'),
             src('Provvedimenti su Deepfake e IA', 'Garante Privacy', 'https://www.gpdp.it/garante/doc.jsp?ID=10306949'),
+        ],
+    }),
+    pack({
+        slug: 'bonus-natale-100-euro',
+        title: 'Kit Richiesta Bonus Natale 100€ e Indennità Tredicesima',
+        shortTitle: 'Bonus Natale 100€',
+        category: 'soldi',
+        summary: 'Requisiti aggiornati (D.L. 167/2024: reddito fino a 28.000€ e almeno un figlio a carico, anche per conviventi e genitori soli), fac-simile di richiesta per il datore privato e procedura telematica NoiPA per dipendenti pubblici.',
+        whenToUse: 'Sei lavoratore dipendente (tempo indeterminato o determinato) con reddito complessivo fino a 28.000 euro, capienza fiscale e almeno un figlio a carico e vuoi ricevere fino a 100 euro netti con la tredicesima.',
+        estimatedMinutes: 15,
+        officialEntity: 'Ministero dell\'Economia e delle Finanze / Agenzia delle Entrate / NoiPA',
+        documents: [
+            'Codice fiscale del lavoratore richiedente',
+            'Codice fiscale di almeno un figlio fiscalmente a carico (anche adottivo, affidato o nato fuori dal matrimonio)',
+            'Codice fiscale del coniuge o del convivente/altro genitore (per attestare di non fruire entrambi dell\'indennità)',
+            'Autocertificazione scritta al datore di lavoro con dichiarazione di reddito presunto non superiore a 28.000 euro'
+        ],
+        steps: [
+            'Verifica il possesso congiunto dei requisiti: reddito complessivo annuo non superiore a 28.000 euro (esclusa abitazione principale), capienza IRPEF lorda sui redditi di lavoro dipendente e almeno un figlio fiscalmente a carico.',
+            'Nota bene: a seguito del D.L. 167/2024 non è più richiesto avere il coniuge a carico; la misura spetta anche a genitori single, separati, divorziati o conviventi.',
+            'Per dipendenti del settore privato: compila l\'autocertificazione scritta indirizzata al tuo datore di lavoro (sostituto d\'imposta) indicando i dati anagrafici e i codici fiscali di figli e convivente prima dell\'elaborazione del cedolino di dicembre.',
+            'Per dipendenti pubblici (NoiPA): accedi con SPID o CIE su noipa.mef.gov.it, entra nella sezione Servizi -> Stipendiali -> Richiesta indennità D.L. 113/2024 e inoltra la richiesta online.',
+            'Se cambi datore di lavoro nel corso dell\'anno o hai più contratti part-time: presenta la richiesta all\'ultimo datore allegando le Certificazioni Uniche (CU) precedenti per il corretto conteggio dei giorni lavorati.',
+            'Se non riesci a presentare la richiesta in tempo al datore di lavoro: non perdi l\'importo; potrai recuperarlo direttamente a credito nel Modello 730/2027 o Redditi PF.'
+        ],
+        dontForget: [
+            'Il bonus spetta a un solo componente del nucleo familiare: se entrambi i genitori lavorano, uno solo può fare richiesta',
+            'L\'importo massimo di 100 euro netti è riparametrato in base ai giorni di lavoro dipendente effettuati nell\'anno',
+            'Se a consuntivo il reddito supera i 28.000 euro o manca la capienza, il bonus dovrà essere restituito in sede di conguaglio o 730'
+        ],
+        officialLinks: ['mefBonusNatale2026', 'adeBonusNataleCirc19', 'noipaBonusNatale2026'],
+        relatedGuide: '/moduli/modulo-25-fisco-cittadini',
+        relatedNews: ['bonus-natale-100-euro-guida-modulo-noipa-2026'],
+        sources: [
+            src('D.L. 167/2024 e disposizioni Bonus Natale', 'MEF', 'https://www.mef.gov.it/focus/Bonus-Natale-lavoratori-dipendenti/'),
+            src('Circolare applicativa Bonus Natale', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/circolari-e-risoluzioni-bonus-natale-lavoratori'),
+            src('Procedura richiesta indennità', 'NoiPA', 'https://noipa.mef.gov.it/cl/servizi/indennita-bonus-natale'),
+        ],
+    }),
+    pack({
+        slug: 'esenzione-canone-rai-non-detenzione',
+        title: 'Kit Dichiarazione Esenzione Canone RAI per Non Detenzione TV (Quadro A)',
+        shortTitle: 'Esenzione Canone RAI',
+        category: 'casa',
+        summary: 'Dichiarazione sostitutiva di atto notorio (Quadro A) dell\'Agenzia delle Entrate per evitare l\'addebito in bolletta elettrica se nessun componente della famiglia anagrafica possiede un televisore.',
+        whenToUse: 'Sei intestatario di un\'utenza elettrica residenziale e in nessuna delle tue abitazioni (principale o secondaria) è presente un apparecchio atto o adattabile alla ricezione delle trasmissioni televisive.',
+        estimatedMinutes: 15,
+        officialEntity: 'Agenzia delle Entrate / RAI',
+        documents: [
+            'Codice fiscale e dati anagrafici dell\'intestatario della fornitura elettrica residenziale',
+            'Numero identificativo dell\'utenza elettrica o codice POD (reperibile sulla prima pagina della bolletta luce)',
+            'Credenziali SPID, CIE o CNS per l\'accesso telematico al portale Agenzia delle Entrate',
+            'Se invio per PEC o posta: copia fronte-retro di un documento d\'identità in corso di validità'
+        ],
+        steps: [
+            'Verifica il requisito essenziale: nessun componente della tua famiglia anagrafica deve detenere televisori o schermi con sintonizzatore TV in alcuna abitazione. Computer, tablet e smartphone senza sintonizzatore dgtv non pagano il canone.',
+            'Attenzione alla scadenza: per l\'esenzione totale dell\'intero anno, la dichiarazione va presentata entro il 31 gennaio. Se presentata tra il 1° febbraio e il 30 giugno, l\'esenzione vale solo per il secondo semestre (luglio-dicembre).',
+            'Canale telematico diretto (consigliato e immediato): accedi all\'area riservata di agenziaentrate.gov.it con SPID o CIE, cerca il servizio «Dichiarazione sostitutiva canone TV» e compila il Quadro A spuntando la casella di non detenzione.',
+            'Canale PEC (gratuito): compila il modello PDF ufficiale dell\'Agenzia delle Entrate, firmalo digitalmente con firma elettronica qualificata e invialo da una casella PEC a cp22.canonetv@postacertificata.rai.it allegando la scansione del documento.',
+            'Canale raccomandata postale: spedisci il modello cartaceo firmato insieme alla copia del documento d\'identità in plico raccomandato senza busta all\'indirizzo: Agenzia delle Entrate – Ufficio Torino 1 S.A.T. – Sportello abbonamenti TV – Casella Postale 22 – 10121 Torino.',
+            'Scarica e conserva la ricevuta telematica con il protocollo dell\'Agenzia delle Entrate per contestare eventuali addebiti anomali al fornitore elettrico.'
+        ],
+        dontForget: [
+            'La dichiarazione di non detenzione ha validità strettamente annuale: per non pagare il canone va rinnovata ogni anno entro il 31 gennaio',
+            'Attenzione alle truffe: non pagare servizi intermediari online privati a pagamento; l\'invio tramite l\'Agenzia delle Entrate o PEC è completamente gratuito',
+            'Le false dichiarazioni sono punite ai sensi degli articoli 75 e 76 del D.P.R. 445/2000 con conseguenze penali'
+        ],
+        officialLinks: ['adeCanoneRaiNonDetenzione', 'raiCanoneUfficiale'],
+        relatedGuide: '/moduli/modulo-24-casa-digitale',
+        relatedNews: ['canone-rai-2027-esenzione-non-detenzione-scadenza-31-gennaio'],
+        sources: [
+            src('Dichiarazione sostitutiva canone TV', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/schede/agevolazioni/canone-tv/dichiarazione-sostitutiva-canone-tv'),
+            src('Modalità di esonero abbonamento TV', 'RAI', 'https://www.canone.rai.it/Ordinari/Esonero.aspx'),
+        ],
+    }),
+    pack({
+        slug: 'saldo-imu-calcolo-f24',
+        title: 'Kit Calcolo Saldo IMU e Versamento Modello F24 (Scadenza 16 Dicembre)',
+        shortTitle: 'Saldo IMU & F24',
+        category: 'casa',
+        summary: 'Formula di calcolo del conguaglio annuale, verifica delle delibere comunali sul Portale del Federalismo Fiscale, codici tributo F24 ed esenzioni prima casa.',
+        whenToUse: 'Possiedi seconde case, fabbricati locati o sfitti, aree edificabili o un\'abitazione principale di lusso (A/1, A/8, A/9) e devi versare il saldo di dicembre.',
+        estimatedMinutes: 20,
+        officialEntity: 'Ministero dell\'Economia e delle Finanze / Comuni italiani',
+        documents: [
+            'Visura catastale aggiornata con rendita catastale e categoria di tutti gli immobili posseduti',
+            'Percentuale di possesso (es. 50% se comproprietà tra coniugi o eredi) e mesi di possesso nell\'anno',
+            'Ricevuta del modello F24 dell\'acconto versato a giugno per scomputare la prima rata',
+            'Delibera aliquote pubblicata dal tuo Comune sul Portale del Federalismo Fiscale entro il 28 ottobre'
+        ],
+        steps: [
+            'Verifica l\'esenzione: l\'abitazione principale (dove risiedi anagraficamente e dimori abitualmente) e fino a 3 pertinenze (massimo una per categoria C/2, C/6 e C/7) sono completamente esenti da IMU, salvo siano accatastate come immobili di lusso A/1, A/8 o A/9.',
+            'Calcola la base imponibile: prendi la rendita catastale non rivalutata, rivalutala del 5% (moltiplica per 1,05) e moltiplica il risultato per il coefficiente catastale della categoria (160 per abitazioni del gruppo A esclusa A/10, 140 per B e C/3-C/4-C/5, 80 per A/10 e D/5, 65 per D esclusa D/5, 55 per C/1).',
+            'Calcola l\'imposta lorda totale annua: applica alla base imponibile l\'aliquota deliberata dal Comune (es. 10,6 per mille = moltiplica per 0,0106) e rapportala alla tua percentuale di possesso e ai mesi di possesso nell\'anno (si conta come mese intero il periodo di possesso pari ad almeno 15 giorni).',
+            'Determina il saldo: sottrai dall\'imposta totale annua calcolata quanto hai già pagato con l\'acconto di giugno. La differenza è l\'importo netto da versare entro il 16 dicembre.',
+            'Compila il Modello F24 Sezione IMU e altri tributi locali (EL): inserisci il Codice Ente/Catastale del Comune (es. H501 per Roma, F205 per Milano), barra la casella "Saldo" (o "Sal"), indica il numero di immobili, il codice tributo (3918 per altri fabbricati, 3912 per prima casa lusso, 3916 per aree edificabili), l\'anno di riferimento e l\'importo a debito.',
+            'Paga tramite home banking con addebito F24, presso Poste, tabaccherie abilitate o sportelli bancari entro e non oltre il 16 dicembre.'
+        ],
+        dontForget: [
+            'Se il Comune ha aumentato l\'aliquota con delibera valida entro il 28 ottobre, il saldo assorbe il conguaglio anche per il primo semestre',
+            'In caso di ritardo o dimenticanza, non attendere l\'avviso di accertamento con sanzione piena: usa subito il ravvedimento operoso sprint (0,1% al giorno di sanzione nei primi 14 giorni) + interessi legali'
+        ],
+        officialLinks: ['mefImu', 'mefFederalismoFiscaleImu2026', 'adeF24Versamenti'],
+        relatedGuide: '/moduli/modulo-30-catasto-imu-successioni',
+        relatedNews: ['saldo-imu-16-dicembre-2026-calcolo-aliquote-f24-esenzioni'],
+        sources: [
+            src('Guida e normativa IMU', 'MEF', 'https://www.finanze.gov.it/it/Fiscalita-locale/IMU/'),
+            src('Delibere e aliquote IMU dei Comuni', 'Dipartimento delle Finanze', 'https://www.finanze.gov.it/it/Fiscalita-locale/Portale-del-Federalismo-Fiscale/aliquote-imu-comunali/'),
+            src('Modalità di versamento con F24', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/schede/pagamenti/f24/cosa-f24'),
         ],
     }),
 ]

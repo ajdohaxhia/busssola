@@ -2,6 +2,214 @@ import { LifeHack } from '@/types';
 
 export const LIFE_HACKS: LifeHack[] = [
     {
+        title: "Bonus Natale 100€: come richiedere l'indennità al datore prima di dicembre",
+        slug: "richiesta-bonus-natale-autocertificazione",
+        category: "soldi",
+        target: ["lavoratori", "famiglie", "cittadini"],
+        difficulty: "facile",
+        time: "10 minuti",
+        benefit: "Ricevere fino a 100€ netti aggiuntivi con la tredicesima mensilità senza attendere il 730 dell'anno prossimo",
+        summary: "Guida rapida per dipendenti privati e pubblici: requisiti D.L. 167/2024 (aperto a conviventi e genitori soli), fac-simile autocertificazione e invio su NoiPA.",
+        whyUseful: "Il datore di lavoro non può erogare il bonus in automatico: senza la tua richiesta scritta firmata con i codici fiscali dei figli, l'indennità non viene caricata nel cedolino di dicembre.",
+        steps: [
+            "Verifica di avere reddito annuo stimato entro i 28.000€, almeno un figlio a carico e capienza IRPEF lorda.",
+            "Recupera il codice fiscale del figlio (o figli) fiscalmente a carico e del coniuge o convivente.",
+            "Se lavori nel privato: compila la dichiarazione scritta indicando di aver diritto all'indennità e consegnala al datore prima della chiusura buste paga di dicembre.",
+            "Se sei dipendente pubblico: accedi all'area riservata NoiPA > Servizi Stipendiali > Richiesta indennità D.L. 113/2024 e conferma i dati.",
+            "Se non fai in tempo prima di dicembre, conserva i documenti: potrai richiedere i 100 euro nel Modello 730 a credito d'imposta."
+        ],
+        whatYouNeed: ["Codice fiscale tuo e dei figli a carico", "Codice fiscale del coniuge/convivente", "Stima del reddito complessivo annuo"],
+        officialLinks: ["mefBonusNatale2026", "adeBonusNataleCirc19", "noipaBonusNatale2026"],
+        commonErrors: [
+            "Richiedere il bonus due volte se entrambi i genitori lavorano (spetta a un solo genitore per nucleo)",
+            "Dimenticare di presentare la domanda scritta prima dell'elaborazione della tredicesima",
+            "Richiederlo se l'imposta lorda è azzerata dalle detrazioni (mancanza di capienza fiscale)"
+        ],
+        limitations: [
+            "Non spetta ai titolari di partita IVA o ai pensionati (riservato al lavoro dipendente)",
+            "L'importo di 100€ è riparametrato sui giorni di detrazione da lavoro prestati nell'anno"
+        ],
+        relatedGuides: ["/moduli/modulo-25-fisco-cittadini"],
+        relatedChecklists: ["Bonus fiscali e detrazioni"],
+        sources: [
+            {
+                title: "MEF — Disposizioni Bonus Natale e D.L. 167/2024",
+                organization: "MEF",
+                url: "https://www.mef.gov.it/focus/Bonus-Natale-lavoratori-dipendenti/",
+                type: "official",
+                usedFor: "Requisiti e normativa",
+                lastCheckedAt: "2026-11-08"
+            }
+        ],
+        lastReviewedAt: "2026-11-08",
+        badges: ["Soldi", "Lavoro", "Risparmia tempo"]
+    },
+    {
+        title: "Esenzione Canone RAI: invia il Quadro A gratis via PEC o area riservata",
+        slug: "disdetta-canone-rai-senza-tv",
+        category: "casa",
+        target: ["cittadini", "famiglie", "studenti"],
+        difficulty: "facile",
+        time: "15 minuti",
+        benefit: "Risparmiare 70€ all'anno in bolletta luce evitando addebiti non dovuti e intermediari privati a pagamento",
+        summary: "Come presentare la dichiarazione sostitutiva di non detenzione TV all'Agenzia delle Entrate entro il 31 gennaio tramite SPID/CIE o PEC.",
+        whyUseful: "Se non hai la TV, lo Stato presume comunque che tu la possieda addebitando il canone sulla bolletta della luce. Solo la dichiarazione annuale blocca le rate.",
+        steps: [
+            "Assicurati che in nessuna casa della famiglia anagrafica vi siano apparecchi con ricevitore TV (schermi senza tuner, PC e smartphone non pagano).",
+            "Accedi all'area riservata del portale agenziaentrate.gov.it con SPID o CIE.",
+            "Cerca il servizio 'Dichiarazione sostitutiva canone TV' e compila il Quadro A spuntando la casella di non detenzione.",
+            "In alternativa via PEC: scarica il modulo dal sito Ade, firmalo digitalmente e invialo con documento a cp22.canonetv@postacertificata.rai.it.",
+            "Invia entro il 31 gennaio per l'esonero totale dell'anno in corso; conserva la ricevuta telematica protocollata."
+        ],
+        whatYouNeed: ["SPID o CIE dell'intestatario bolletta luce", "Codice fiscale", "Bolletta elettrica con codice POD/cliente"],
+        officialLinks: ["adeCanoneRaiNonDetenzione", "raiCanoneUfficiale"],
+        commonErrors: [
+            "Pensare che la dichiarazione valga per sempre: ha validità annuale e va ripresentata ogni anno entro il 31 gennaio",
+            "Pagare servizi online privati che chiedono commissioni per un servizio pubblico gratuito dell'Agenzia delle Entrate"
+        ],
+        limitations: [
+            "Se la dichiarazione arriva tra il 1° febbraio e il 30 giugno, l'esonero vale solo per il secondo semestre",
+            "La falsa dichiarazione comporta sanzioni penali ai sensi del D.P.R. 445/2000"
+        ],
+        relatedGuides: ["/moduli/modulo-24-casa-digitale"],
+        sources: [
+            {
+                title: "Agenzia delle Entrate — Dichiarazione sostitutiva canone TV",
+                organization: "Agenzia delle Entrate",
+                url: "https://www.agenziaentrate.gov.it/portale/schede/agevolazioni/canone-tv/dichiarazione-sostitutiva-canone-tv",
+                type: "official",
+                usedFor: "Istruzioni esonero",
+                lastCheckedAt: "2026-11-08"
+            }
+        ],
+        lastReviewedAt: "2026-11-08",
+        badges: ["Casa", "Soldi", "Evita errore"]
+    },
+    {
+        title: "Saldo IMU 16 dicembre: verifica l'aliquota comunale sul sito MEF prima di pagare",
+        slug: "calcolo-f24-saldo-imu-senza-errori",
+        category: "casa",
+        target: ["cittadini", "famiglie", "adults"],
+        difficulty: "media",
+        time: "20 minuti",
+        benefit: "Calcolare l'esatto conguaglio F24 evitando avvisi di accertamento comunali con sanzioni del 30%",
+        summary: "Guida rapida per calcolare il saldo IMU: verifica delle nuove delibere comunali sul Portale del Federalismo Fiscale, formula matematica e codici F24 3918 e 3912.",
+        whyUseful: "Il saldo di dicembre non è una fotocopia dell'acconto di giugno: include il conguaglio se il Comune ha modificato le aliquote per l'anno in corso.",
+        steps: [
+            "Collegati al Portale del Federalismo Fiscale del MEF e cerca la delibera aliquote del tuo Comune per l'anno in corso.",
+            "Prendi la rendita catastale dell'immobile, aumentala del 5% (x 1,05) e moltiplica per il coefficiente 160 (per le abitazioni).",
+            "Moltiplica la base imponibile per l'aliquota comunale e per i mesi di possesso, rapportandola alla tua percentuale di proprietà.",
+            "Sottrai dall'imposta annuale totale quanto hai già pagato a giugno: la cifra restante è il saldo netto da versare.",
+            "Compila il Modello F24 nella sezione EL indicando il codice catastale del Comune, barra la casella Saldo e inserisci il codice tributo (es. 3918 per seconde case).",
+            "Esegui il pagamento online dal tuo home banking entro mercoledì 16 dicembre."
+        ],
+        whatYouNeed: ["Visura catastale con rendita e categoria", "Ricevuta F24 dell'acconto di giugno", "Delibera aliquote del Comune"],
+        officialLinks: ["mefImu", "mefFederalismoFiscaleImu2026", "adeF24Versamenti"],
+        commonErrors: [
+            "Pagare per intero la prima casa: l'abitazione principale non di lusso (da A/2 ad A/7) con residenza e dimora è completamente esente",
+            "Dimenticare di sottrarre l'acconto versato a giugno pagando due volte l'imposta"
+        ],
+        limitations: [
+            "Le pertinenze prima casa esenti sono al massimo 3, una sola per ciascuna categoria C/2, C/6 e C/7",
+            "In caso di ritardo oltre il 16 dicembre si applica il ravvedimento operoso"
+        ],
+        relatedGuides: ["/moduli/modulo-30-catasto-imu-successioni"],
+        sources: [
+            {
+                title: "MEF — Fiscalità locale e delibere IMU",
+                organization: "MEF",
+                url: "https://www.finanze.gov.it/it/Fiscalita-locale/IMU/",
+                type: "official",
+                usedFor: "Regole di calcolo e aliquote",
+                lastCheckedAt: "2026-11-08"
+            }
+        ],
+        lastReviewedAt: "2026-11-08",
+        badges: ["Casa", "Soldi", "Evita errore"]
+    },
+    {
+        title: "ISEE 2027: scarica saldi e giacenze medie bancarie prima del 31 dicembre",
+        slug: "preparare-documenti-isee-2027-anticipo",
+        category: "bonus",
+        target: ["famiglie", "cittadini", "studenti"],
+        difficulty: "facile",
+        time: "15 minuti",
+        benefit: "Avere la DSU pronta a inizio gennaio senza rischiare la decurtazione dell'Assegno Unico al minimo o il blocco ADI",
+        summary: "Checklist dei documenti finanziari al 31/12/2025 da scaricare da home banking e poste prima di Natale per velocizzare l'ISEE Precompilato INPS.",
+        whyUseful: "A gennaio i CAF sono intasati e le banche impiegano giorni a rilasciare le giacenze medie. Prepararle in anticipo ti permette di inviare la DSU online in autonomia in 15 minuti.",
+        steps: [
+            "Tutti gli ISEE scadono il 31 dicembre: per l'ISEE 2027 servono saldi e giacenze medie riferiti al 31 dicembre 2025.",
+            "Accedi agli home banking di tutti i componenti della famiglia e scarica il documento fiscale 'Riepilogo ISEE' o 'Saldi e giacenze medie al 31/12/2025'.",
+            "Includi carte prepagate con IBAN (es. Postepay Evolution, Revolut), libretti postali, conti deposito e buoni fruttiferi.",
+            "Recupera le targhe di tutte le automobili e moto di cilindrata dai 500cc in su intestate al nucleo.",
+            "A inizio gennaio accedi su inps.it con SPID o CIE al servizio 'ISEE Precompilato', conferma i dati patrimoniali e acquisisci l'attestazione in poche ore."
+        ],
+        whatYouNeed: ["Accesso home banking e Poste Italiane", "Targhe veicoli del nucleo", "SPID o CIE dei maggiorenni del nucleo"],
+        officialLinks: ["inpsIseePrecompilato2027", "inpsAuuScheda"],
+        commonErrors: [
+            "Attendere marzo per fare il nuovo ISEE: da marzo l'Assegno Unico scende a 57€ a figlio e per recuperare gli arretrati serve fare la DSU entro giugno",
+            "Dimenticare le carte prepagate dei figli minorenni o i conti cointestati"
+        ],
+        limitations: [
+            "L'ISEE ordinario fa sempre riferimento a redditi e patrimoni di due anni prima (anno N-2)",
+            "In caso di perdita del lavoro o calo del reddito oltre il 25% si potrà richiedere successivamente l'ISEE corrente"
+        ],
+        relatedGuides: ["/moduli/modulo-23-bonus-isee"],
+        sources: [
+            {
+                title: "INPS — ISEE Precompilato",
+                organization: "INPS",
+                url: "https://www.inps.it/it/it/dettaglio-scheda.schede-servizio-strumento.schede-servizi.50088.isee-precompilato.html",
+                type: "official",
+                usedFor: "Istruzioni DSU e scadenze",
+                lastCheckedAt: "2026-11-08"
+            }
+        ],
+        lastReviewedAt: "2026-11-08",
+        badges: ["Soldi", "Risparmia tempo", "Evita errore"]
+    },
+    {
+        title: "IT-Wallet: come caricare Patente e Tessera Sanitaria sull'App IO con valore legale",
+        slug: "attivazione-documenti-it-wallet-app-io",
+        category: "documenti",
+        target: ["cittadini", "adults", "lavoratori"],
+        difficulty: "facile",
+        time: "5 minuti",
+        benefit: "Avere patente e codice fiscale ufficiali sempre sullo smartphone con valore legale per posti di blocco e sanità",
+        summary: "Istruzioni per abilitare la sezione Portafoglio di App IO con SPID o CIE e generare i codici QR protetti per controlli delle forze dell'ordine e farmacie.",
+        whyUseful: "I documenti digitali caricati su IT-Wallet hanno pieno valore legale in Italia e sostituiscono la tessera plastificata durante i controlli su strada.",
+        steps: [
+            "Aggiorna l'App IO all'ultima versione disponibile da Google Play Store o Apple App Store.",
+            "Accedi all'app autenticandoti con credenziali SPID di livello 2 o Carta d'Identità Elettronica (CIE).",
+            "Nella barra di navigazione inferiore tocca la voce 'Portafoglio' e seleziona 'Documenti su IO'.",
+            "Tocca il pulsante '+' e seleziona 'Patente di guida' o 'Tessera Sanitaria': l'app dialogherà automaticamente con il Ministero dei Trasporti e con il MEF.",
+            "In caso di posto di blocco o visita medica, apri l'app e tocca il documento per mostrare il QR code dinamico antifalsificazione."
+        ],
+        whatYouNeed: ["Smartphone con iOS o Android aggiornato", "Credenziali SPID o CIE con PIN", "App IO aggiornata"],
+        officialLinks: ["governoItWalletSecondoScaglione2026", "appIoDocumenti"],
+        commonErrors: [
+            "Credere che uno screenshot della patente sia valido: le forze dell'ordine richiedono l'esibizione dall'app con QR code dinamico verificabile",
+            "Usare la patente digitale per l'espatrio all'estero: la patente su IT-Wallet ha attualmente valore legale solo sul territorio italiano"
+        ],
+        limitations: [
+            "Richiede che lo smartphone sia sbloccabile con PIN, impronta o riconoscimento facciale",
+            "Per l'utilizzo all'estero o per noleggi auto internazionali resta obbligatorio il documento plastificato fisico"
+        ],
+        relatedGuides: ["/moduli/modulo-09-documenti-identita"],
+        sources: [
+            {
+                title: "Dipartimento per la trasformazione digitale — IT-Wallet",
+                organization: "Presidenza del Consiglio dei Ministri",
+                url: "https://innovazione.gov.it/notizie/articoli/it-wallet-seconda-fase-pilota-un-milione-italiani-novembre-2026/",
+                type: "official",
+                usedFor: "Istruzioni abilitazione documenti",
+                lastCheckedAt: "2026-11-08"
+            }
+        ],
+        lastReviewedAt: "2026-11-08",
+        badges: ["Documenti", "Risparmia tempo", "Sicurezza"]
+    },
+    {
         title: "Richiedere la patente a crediti per la sicurezza nei cantieri (INL)",
         slug: "richiesta-patente-crediti-cantieri-inl",
         category: "lavoro",
