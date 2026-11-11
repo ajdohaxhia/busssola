@@ -24,6 +24,16 @@ const TOOLS = [
         href: '/tool/calcolo-stipendio-netto',
     },
     {
+        id: 'calcolo-tredicesima',
+        title: 'Calcolo Tredicesima Netta e Gratifica Natalizia',
+        category: 'Lavoro e Fisco',
+        badge: 'Nuovo · Scadenze Dicembre',
+        icon: Calculator,
+        time: '1 minuto',
+        summary: 'Calcola la tredicesima netta effettiva in arrivo a dicembre partendo dalla retribuzione mensile lorda o dalla RAL. Include calcolo dei ratei maturati (mesi lavorati su 12), contributi IVS, aliquota IRPEF senza detrazioni e verifica Bonus Natale fino a 100€.',
+        href: '/tool/calcolo-tredicesima',
+    },
+    {
         id: 'trova-bonus',
         title: 'Trova le tue Agevolazioni e Bonus',
         category: 'Famiglia e Sostegni',

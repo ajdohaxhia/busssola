@@ -57,6 +57,16 @@ const TOOLS: SearchItem[] = [
         keywords: 'stipendio netto ral lordo netto busta paga irpef contributi mensilità',
     },
     {
+        title: 'Calcolo tredicesima netta e gratifica natalizia',
+        summary:
+            'Calcola la tredicesima netta in busta paga da retribuzione lorda o RAL. Calcolo ratei mesi lavorati, contributi IVS, IRPEF senza detrazioni e Bonus Natale.',
+        url: '/tool/calcolo-tredicesima/',
+        type: 'strumento',
+        category: 'Lavoro',
+        meta: 'Calcolatore',
+        keywords: 'tredicesima netta calcolo tredicesima gratifica natalizia busta paga dicembre ratei mesi bonus natale',
+    },
+    {
         title: 'Trova la procedura ufficiale',
         summary:
             'Motore di ricerca per intenti: descrivi il problema e ottieni la procedura corrispondente, i documenti, il primo passo e i link ufficiali.',

@@ -46,6 +46,11 @@ const sortedNews = [...CIVIC_NEWS].sort((a, b) => b.date.localeCompare(a.date))
 const HUBS = [
     { href: '/moduli/', label: 'Catalogo delle guide' },
     { href: '/tool/', label: 'Strumenti e calcolatori' },
+    { href: '/tool/calcolo-tredicesima/', label: 'Calcolo tredicesima netta' },
+    { href: '/tool/calcolo-stipendio-netto/', label: 'Calcolo stipendio netto da RAL' },
+    { href: '/tool/trova-bonus/', label: 'Trova agevolazioni e bonus' },
+    { href: '/tool/trova-procedura/', label: 'Trova procedura ufficiale' },
+    { href: '/tool/calcolo-consumo-elettrico/', label: 'Calcolo consumo elettrico' },
     { href: '/scadenze/', label: 'Scadenzario civico e fiscale' },
     { href: '/scadenze/2027/', label: 'Scadenze 2027' },
     { href: '/novita/', label: 'Novità verificate' },

@@ -2,6 +2,7 @@ import type { NewsItem, Source } from '@/types'
 
 const D = '2026-10-16'
 const CHECKED = '2026-11-08'
+const TODAY = '2026-11-11'
 
 const src = (title: string, organization: string, url: string, usedFor = 'Allerta e sicurezza 2026', checkedAt = D): Source => ({
     title,
@@ -13,6 +14,103 @@ const src = (title: string, organization: string, url: string, usedFor = 'Allert
 })
 
 export const CIVIC_NEWS: NewsItem[] = [
+    {
+        slug: 'falsi-allarmi-bomba-scuole-11-novembre-2026-polizia-postale-mim',
+        title: 'Migliaia di falsi allarmi bomba via email nelle scuole (11 novembre 2026): chiarimenti MIM, bonifiche e protocollo civico',
+        date: '2026-11-11',
+        summary: 'Nella mattinata dell’11 novembre 2026 una vasta ondata di email minatorie anonime ha interessato migliaia di istituti scolastici italiani, facendo scattare evacuazioni a scopo precauzionale. Le verifiche di Polizia, Carabinieri e Artificieri hanno dato esito negativo in tutti i plessi: nessun ordigno trovato. Il chiarimento del Ministro Valditara sul pericolo inesistente, le indagini della Polizia Postale per procurato allarme e la guida per famiglie e docenti.',
+        body: [
+            'Nella notte e nelle prime ore della mattinata di mercoledì 11 novembre 2026, una massiccia ondata di messaggi di posta elettronica ordinaria e PEC contenenti minacce di attentati dinamitardi è stata recapitata a migliaia di istituti scolastici di ogni ordine e grado su tutto il territorio nazionale (dalle grandi città metropolitane ai comuni minori, per una stima complessiva di circa seimila plessi coinvolti). I messaggi, caratterizzati da contenuti farneticanti e intimidatori, risultavano firmati con lo pseudonimo «Mikhail Andropov» e facevano riferimento a un sedicente «Vilajat del Misoginistan», sigla già utilizzata nei giorni precedenti per analoghi falsi allarmi rivolti a voli aerei di linea e infrastrutture civili.',
+            'In applicazione dei piani di emergenza interni e con l’obiettivo prioritario di tutelare l’incolumità di alunni e personale, molti dirigenti scolastici hanno disposto l’evacuazione temporanea degli edifici verso i punti di raccolta esterni. L’intervento immediato delle Forze dell’Ordine, coordinate dalle Prefetture territoriali con il supporto dei nuclei artificieri e cinofili, ha consentito di effettuare bonifiche accurate e verifiche sistematiche in centinaia di scuole. Tutte le ispezioni hanno dato esito rigorosamente negativo: non è stato riscontrato alcun ordigno né alcuna traccia di materiale esplosivo o pericoloso.',
+            'Il Ministro dell’Istruzione e del Merito, Giuseppe Valditara, e fonti governative hanno chiarito tempestivamente che il rischio concreto per gli studenti e la comunità scolastica è risultato «pressoché inesistente», inquadrando l’accaduto in una precisa matrice di disturbo cibernetico e guerra ibrida finalizzata a destabilizzare i servizi pubblici, congestionare i numeri di emergenza e creare allarme sociale generalizzato. A Palazzo Chigi è stato convocato un tavolo di coordinamento istituzionale per seguire l’evoluzione e armonizzare le risposte operative.',
+            'Sul versante investigativo, la Polizia Postale e i Centri Operativi per la Sicurezza Cibernetica (COSC), in coordinamento con la Procura della Repubblica, hanno avviato indagini tecniche specialistiche per risalire alla provenienza dei flussi telematici, analizzando gli header dei messaggi e i relay internazionali (molti dei quali compromessi tramite tecniche di spoofing e server universitari esteri). I reati ipotizzati includono il procurato allarme presso l’Autorità (art. 658 c.p.) e l’interruzione di pubblico servizio (art. 340 c.p.).',
+            'Per famiglie, studenti e docenti, la regola fondamentale di fronte a episodi di questo tipo è non cedere al panico, evitare la condivisione virale di audio o screenshot non verificati su gruppi WhatsApp di classe e attenersi unicamente alle circolari ufficiali pubblicate sul registro elettronico della scuola. Non occorre contattare il 112 per chiedere chiarimenti generici se il plesso ha già attivato le procedure con le Forze dell’Ordine già presenti sul posto.',
+        ],
+        whatChanged: [
+            'Conferma ufficiale del Ministero dell’Istruzione e dell’Interno: nessun ordigno trovato, pericolo concreto inesistente',
+            'Bonifiche concluse con esito negativo in tutti i plessi segnalati e progressiva ripresa della normale attività didattica',
+            'Apertura indagini da parte della Polizia Postale per i reati di procurato allarme (art. 658 c.p.) e interruzione di pubblico servizio',
+            'Attivazione filtri antispam e rafforzamento dei controlli sui nodi di posta elettronica del comparto scolastico',
+        ],
+        whoIsAffected: 'Studenti, genitori, personale docente e dirigenti scolastici delle scuole dell’infanzia, primarie e secondarie in tutta Italia.',
+        whatToDo: [
+            'Fai affidamento esclusivo sulle comunicazioni ufficiali della scuola inviate tramite registro elettronico o bacheca istituzionale',
+            'Non diffondere messaggi allarmistici, note vocali o catene anonime nelle chat di classe o sui social network',
+            'In caso di evacuazione ordinata dal dirigente scolastico, segui ordinatamente i docenti verso i punti di raccolta designati',
+            'Se il personale scolastico riscontra messaggi minatori nella posta in arrivo, inoltra immediatamente la segnalazione alla Polizia Postale (commissariatodips.it) senza cancellare gli allegati originali',
+        ],
+        sourceIds: ['mimAllarmeScuole2026', 'poliziaPostaleAllarmeScuole2026', 'internoSicurezzaScuole2026'],
+        sources: [
+            src('Linee guida e comunicazioni istituzionali sulla sicurezza scolastica', 'MIM', 'https://www.miur.gov.it/web/guest/-/sicurezza-scuole-comunicazioni-istituzionali', 'Comunicazione ufficiale esito controlli e gestione allarmi', TODAY),
+            src('Segnalazioni, contrasto al cyber-crime e procurato allarme', 'Polizia Postale', 'https://www.commissariatodips.it/notizie/articolo/indagini-su-email-minatorie-nelle-scuole-e-procurato-allarme/index.html', 'Aggiornamento indagini informatiche e reati contestati', TODAY),
+            src('Coordinamento Prefetture e operatività Forze dell’Ordine', 'Ministero dell’Interno', 'https://www.interno.gov.it/it/stampa-e-comunicazione/comunicati-stampa/sicurezza-negli-istituti-scolastici-e-coordinamento-prefetture', 'Disposizioni di sicurezza e bonifica plessi', TODAY),
+        ],
+        relatedGuides: ['/moduli/modulo-08-scuola-famiglia', '/sos'],
+        relatedTemplates: [],
+        lastReviewedAt: TODAY,
+    },
+    {
+        slug: 'inps-perequazione-pensioni-conferma-gennaio-2027',
+        title: 'Rivalutazione pensioni all’inflazione: chiarimento ufficiale INPS, aumenti confermati dal 1° gennaio 2027',
+        date: '2026-11-11',
+        summary: 'L’INPS ha chiarito ufficialmente l’11 novembre 2026 che la rivalutazione all’inflazione (perequazione automatica) per tutti i trattamenti pensionistici scatterà regolarmente con il cedolino di gennaio 2027, smentendo le ipotesi di congelamento o slittamento a marzo per gli importi superiori a quattro volte il minimo. Le fasce di rivalutazione e cosa aspettarsi nel cedolino di inizio anno.',
+        body: [
+            'Con una nota di chiarimento diffusa l’11 novembre 2026, l’INPS ha fatto definitiva chiarezza sui tempi di applicazione dell’adeguamento al costo della vita (perequazione automatica) per le pensioni in pagamento nel 2027. Nei giorni precedenti, a seguito delle audizioni parlamentari sulla Manovra di Bilancio, si era diffusa l’ipotesi di uno slittamento dell’adeguamento alla mensilità di marzo 2027 per i trattamenti superiori a quattro volte il trattamento minimo INPS (pari a circa 2.447 euro lordi mensili).',
+            'L’Istituto Nazionale della Previdenza Sociale ha smentito tale ritardo, confermando che l’applicazione degli incrementi percentuali legati all’inflazione certificata da ISTAT decorrerà regolarmente fin dal primo giorno dell’anno, ovvero con la mensilità di pagamento di gennaio 2027 per l’intera platea dei pensionati, senza interruzioni né congelamenti selettivi.',
+            'La perequazione automatica tutela il potere d’acquisto degli assegni pensionistici contro l’aumento del carovita. L’adeguamento viene calcolato a scaglioni progressivi: rivalutazione piena al 100% dell’indice ISTAT per i trattamenti fino a quattro volte il minimo; percentuali modulate e decrescenti per le fasce di reddito pensionistico superiori, secondo i parametri stabiliti dalla legge.',
+            'I pensionati potranno consultare l’importo aggiornato e il dettaglio delle singole voci (imposta IRPEF, addizionali regionali/comunali a saldo e conguaglio perequativo) accedendo al servizio online «Cedolino della pensione» sul portale inps.it mediante credenziali SPID, CIE o Carta Nazionale dei Servizi (CNS) a partire dagli ultimi giorni di dicembre 2026.',
+        ],
+        whatChanged: [
+            'Chiarimento INPS: smentito lo slittamento a marzo 2027 per le pensioni medie e medio-alte',
+            'Decorrenza perequazione confermata al 1° gennaio 2027 per tutte le fasce di pensionati',
+            'Adeguamento automatico erogato direttamente nel primo cedolino dell’anno senza necessità di domanda',
+            'Consultabilità del dettaglio contabile sul fascicolo previdenziale del cittadino a fine dicembre',
+        ],
+        whoIsAffected: 'Tutti i titolari di trattamenti pensionistici diretti e indiretti erogati dall’INPS (gestione privata, pubblica e spettacolo).',
+        whatToDo: [
+            'Non è necessario presentare alcuna domanda: la rivalutazione all’inflazione viene calcolata ed erogata d’ufficio dall’INPS',
+            'Accedi all’area riservata inps.it a fine dicembre 2026 con SPID o CIE per visionare in anteprima il cedolino di gennaio 2027',
+            'Verifica che le addizionali comunali e regionali applicate corrispondano alla tua residenza anagrafica',
+        ],
+        sourceIds: ['inpsPerequazionePensioniGennaio2027'],
+        sources: [
+            src('Chiarimenti ufficiali sulla decorrenza della rivalutazione pensionistica 2027', 'INPS', 'https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2026.11.perequazione-pensioni-decorrenza-gennaio-2027.html', 'Calendario rivalutazione assegni e smentita rinvio', TODAY),
+        ],
+        relatedGuides: ['/moduli/modulo-27-pensioni-previdenza', '/pensioni-2027'],
+        relatedTemplates: [],
+        lastReviewedAt: TODAY,
+    },
+    {
+        slug: 'inps-messaggio-3649-arretrati-naspi-cassa-integrazione-novembre-2026',
+        title: 'INPS Messaggio n. 3649: al via conguagli e arretrati per NASpI, Cassa Integrazione e disoccupazione agricola',
+        date: '2026-11-10',
+        summary: 'Con il messaggio n. 3649 del 10 novembre 2026, l’INPS ha sbloccato la liquidazione degli arretrati e dei conguagli fiscali e previdenziali di fine anno per i percettori di ammortizzatori sociali con redditi fino a 20.000 euro. Chi riceve l’accredito automatico sul conto corrente e come verificare lo stato del pagamento nel fascicolo previdenziale.',
+        body: [
+            'L’INPS ha emanato il messaggio n. 3649 del 10 novembre 2026, con cui autorizza le procedure automatizzate per la liquidazione straordinaria di conguagli e somme arretrate a favore dei lavoratori percettori di prestazioni a sostegno del reddito erogate nel corso del 2026.',
+            'La disposizione interessa principalmente i beneficiari di indennità di disoccupazione NASpI e DIS-COLL, lavoratori in Cassa Integrazione Guadagni (CIG ordinaria e straordinaria a pagamento diretto) e operai agricoli a tempo determinato con indennità di disoccupazione agricola, aventi un reddito complessivo annuo non superiore a 20.000 euro.',
+            'I conguagli riguardano il ricalcolo degli scaglioni di imposta IRPEF e delle detrazioni per lavoro e carichi di famiglia maturati dall’inizio dell’anno, nonché eventuali integrazioni economiche rimaste in sospeso durante l’elaborazione ordinaria delle mensilità. Gli importi vengono accreditati direttamente con lo stesso metodo di pagamento già censito presso l’Istituto (bonifico su conto corrente bancario o postale, libretto postale o carta prepagata con IBAN).',
+            'I beneficiari possono monitorare lo stato di lavorazione del conguaglio e la data esatta di valuta dell’accredito accedendo all’area riservata del portale istituzionale inps.it, all’interno del servizio «Fascicolo Previdenziale del Cittadino», sezione «Prestazioni e Pagamenti».',
+        ],
+        whatChanged: [
+            'Emanazione del Messaggio INPS n. 3649 del 10 novembre 2026 per la liquidazione anticipata dei conguagli di fine anno',
+            'Accredito d’ufficio degli arretrati spettanti per NASpI, CIG e disoccupazione agricola',
+            'Platea target concentrata sui percettori con reddito complessivo non superiore a 20.000 euro',
+            'Ricalcolo a credito delle detrazioni spettanti e delle ritenute operate nei mesi precedenti',
+        ],
+        whoIsAffected: 'Lavoratori disoccupati o sospesi dal lavoro che percepiscono NASpI, DIS-COLL o Cassa Integrazione a pagamento diretto INPS.',
+        whatToDo: [
+            'Verifica la presenza di nuove disposizioni di pagamento nel «Fascicolo Previdenziale del Cittadino» su inps.it',
+            'Controlla che l’IBAN registrato presso l’INPS sia attivo e intestato (o cointestato) al richiedente',
+            'Conserva il riepilogo contabile del conguaglio per la Certificazione Unica (CU) che verrà rilasciata a marzo 2027',
+        ],
+        sourceIds: ['inpsMessaggio3649Arretrati2026'],
+        sources: [
+            src('Messaggio n. 3649 del 10 novembre 2026: conguagli prestazioni a sostegno del reddito', 'INPS', 'https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.messaggi.2026.11.messaggio-numero-3649-del-10-11-2026.html', 'Istruzioni operative liquidazione arretrati', TODAY),
+        ],
+        relatedGuides: ['/moduli/modulo-10-lavoro-disoccupazione'],
+        relatedTemplates: [],
+        lastReviewedAt: TODAY,
+    },
     {
         slug: 'bonus-natale-100-euro-guida-modulo-noipa-2026',
         title: 'Bonus Natale fino a 100 euro: quadro normativo, requisiti D.L. 113 e 167/2024 e recupero nel 730',

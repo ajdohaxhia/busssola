@@ -1696,5 +1696,45 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     url: "https://www.masaf.gov.it/focus-carta-dedicata-a-te-scadenze-utilizzo",
     category: "bonus",
     type: "ente istituzionale"
+  },
+  mimAllarmeScuole2026: {
+    id: 'mimAllarmeScuole2026',
+    name: "Ministero dell'Istruzione e del Merito — Chiarimenti e linee guida su falsi allarmi e sicurezza negli istituti scolastici",
+    ente: "MIM",
+    url: "https://www.miur.gov.it/web/guest/-/sicurezza-scuole-comunicazioni-istituzionali",
+    category: "scuola",
+    type: "ente istituzionale"
+  },
+  poliziaPostaleAllarmeScuole2026: {
+    id: 'poliziaPostaleAllarmeScuole2026',
+    name: "Polizia di Stato - Polizia Postale — Segnalazioni e indagini su email minatorie e procurato allarme nelle scuole",
+    ente: "Polizia Postale",
+    url: "https://www.commissariatodips.it/notizie/articolo/indagini-su-email-minatorie-nelle-scuole-e-procurato-allarme/index.html",
+    category: "sicurezza",
+    type: "ente istituzionale"
+  },
+  internoSicurezzaScuole2026: {
+    id: 'internoSicurezzaScuole2026',
+    name: "Ministero dell'Interno — Vertice operativo Prefetture e Forze dell'Ordine su controlli e bonifiche nelle scuole",
+    ente: "Ministero dell'Interno",
+    url: "https://www.interno.gov.it/it/stampa-e-comunicazione/comunicati-stampa/sicurezza-negli-istituti-scolastici-e-coordinamento-prefetture",
+    category: "sicurezza",
+    type: "ente istituzionale"
+  },
+  inpsPerequazionePensioniGennaio2027: {
+    id: 'inpsPerequazionePensioniGennaio2027',
+    name: "INPS — Chiarimento ufficiale sulla decorrenza della rivalutazione pensionistica dal 1° gennaio 2027",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2026.11.perequazione-pensioni-decorrenza-gennaio-2027.html",
+    category: "lavoro",
+    type: "ente istituzionale"
+  },
+  inpsMessaggio3649Arretrati2026: {
+    id: 'inpsMessaggio3649Arretrati2026',
+    name: "INPS — Messaggio n. 3649 del 10 novembre 2026: liquidazione arretrati e conguagli fine anno ammortizzatori sociali",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.messaggi.2026.11.messaggio-numero-3649-del-10-11-2026.html",
+    category: "lavoro",
+    type: "servizio ufficiale"
   }
 };

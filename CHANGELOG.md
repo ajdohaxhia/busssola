@@ -1,5 +1,19 @@
 # Changelog
 
+## [Novità 11 novembre e Calcolatore Tredicesima] - 2026-11-11
+### Added
+- **Calcolatore Tredicesima Netta e Gratifica Natalizia `/tool/calcolo-tredicesima/`**: simulatore trasparente con calcolo ratei mensili maturati, contributi IVS 9,19%, ritenute IRPEF con aliquota marginale (spiegando perché sulla tredicesima non si applicano le detrazioni per lavoro dipendente), integrazione con il Bonus Natale fino a 100€ (D.L. 113 e 167/2024), scadenze per settore e FAQ Schema.org.
+- **Novità verificate 11 novembre 2026**:
+  - *Allarme bomba scuole 11 novembre 2026*: chiarimenti ufficiali del Ministro dell'Istruzione Giuseppe Valditara, bonifiche con esito negativo delle Forze dell'Ordine, indagini della Polizia Postale per procurato allarme e protocollo di sicurezza per famiglie e istituti.
+  - *Perequazione pensioni dal 1° gennaio 2027*: nota di chiarimento dell'INPS che smentisce lo slittamento a marzo 2027 per i trattamenti sopra 4 volte il minimo e conferma la decorrenza degli aumenti fin dal primo cedolino dell'anno.
+  - *INPS Messaggio n. 3649/2026*: avvio della liquidazione di conguagli ed arretrati di fine anno per percettori di NASpI, Cassa Integrazione e disoccupazione agricola entro 20.000€ di reddito.
+- **Fonti ufficiali aggiunte**: inseriti in `OFFICIAL_SOURCES` e nell'albo editoriale di verità i riferimenti di MIM, Polizia Postale, Ministero dell'Interno e INPS.
+
+### Changed
+- **Directory strumenti `/tool/`**: aggiunto il nuovo strumento dedicato al calcolo della tredicesima netta con badge "Nuovo · Scadenze Dicembre".
+- **Mappa del sito e indice di ricerca**: integrato il nuovo strumento in `search-index.json`, nella mappa del sito `/mappa-del-sito/` e nel feed RSS `/feed.xml`.
+- **Data di revisione generale**: aggiornata all'11 novembre 2026 in tutte le sezioni e statistiche del sito.
+
 ## [Ricerca full-site, mappa e feed] - 2026-11-08
 ### Added
 - **Ricerca full-site `/cerca/`**: indice statico di 629 elementi generato a build time (`scripts/build-site-artifacts.ts`), filtri per tipo di contenuto, navigazione da tastiera e conteggio accessibile dei risultati. La pagina è `noindex, follow` e non invia query a server.

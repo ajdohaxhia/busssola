@@ -93,11 +93,16 @@ Regola: ogni intervento va pubblicato solo con fonti primarie verificabili e con
 
 ## 5. Integrazione già realizzata in questo ciclo
 
-- **Ricerca full-site** `/cerca/` con indice statico di 629 elementi (`public/search-index.json`), generato a build time. La pagina è `noindex, follow`.
-- **Mappa del sito** `/mappa-del-sito/`: indice completo di guide, procedure, trucchi, modelli, novità, percorsi e sezioni.
+- **Calcolatore Tredicesima Netta e Gratifica Natalizia** `/tool/calcolo-tredicesima/` (completato P1): calcolo da stipendio mensile o RAL, ratei maturati (mesi su 12), contributi IVS, IRPEF a scaglioni marginali senza detrazioni per lavoro dipendente, integrazione Bonus Natale fino a 100€ (D.L. 113 e 167/2024), scadenze CCNL e FAQ Schema.org.
+- **Novità verificate 11 novembre 2026**:
+  - Allarme bomba via email nelle scuole e bonifiche Forze dell'Ordine / chiarimenti MIM (`/novita/falsi-allarmi-bomba-scuole-11-novembre-2026-polizia-postale-mim/`).
+  - Chiarimento ufficiale INPS perequazione pensioni da gennaio 2027 (`/novita/inps-perequazione-pensioni-conferma-gennaio-2027/`).
+  - INPS Messaggio n. 3649/2026 conguagli e arretrati fine anno NASpI/CIG (`/novita/inps-messaggio-3649-arretrati-naspi-cassa-integrazione-novembre-2026/`).
+- **Ricerca full-site** `/cerca/` con indice statico di 633 elementi (`public/search-index.json`), generato a build time. La pagina è `noindex, follow`.
+- **Mappa del sito** `/mappa-del-sito/`: indice completo di guide, procedure, trucchi, modelli, novità, percorsi, strumenti interattivi e sezioni.
 - **Feed RSS** `/feed.xml` con le 50 novità più recenti, collegato in `<head>` e nella pagina `/novita/`.
 - **SearchAction** Schema.org aggiornata a `/cerca/?q={search_term_string}` (prima puntava a una pagina senza ricerca).
-- **Link interni** aggiunti in header, footer, homepage e hub novità.
+- **Link interni** aggiunti in header, footer, homepage, catalogo tool e hub novità.
 
 ---
 
