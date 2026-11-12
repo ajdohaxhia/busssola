@@ -6,6 +6,7 @@ import { Toaster } from 'sonner'
 import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
 import { SOSButton } from '@/components/ui/SOSButton'
+import { QuickExitButton } from '@/components/sos/QuickExitButton'
 import { cn } from '@/lib/utils'
 
 function isLessonPath(pathname: string | null) {
@@ -36,6 +37,7 @@ export function AppShell({ children }: { children: ReactNode }) {
             </main>
             {!lessonMode && <Footer />}
             {!lessonMode && <SOSButton />}
+            {(lessonMode || pathname?.startsWith('/sos')) && <QuickExitButton />}
         </div>
     )
 }

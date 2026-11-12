@@ -63,6 +63,8 @@ export default function SOSPage() {
 
             <SecurityAlertBanner variant="sos" />
 
+            <p className="text-sm text-secondary print:hidden">Il pulsante “Uscita rapida” cambia pagina. Non cancella la cronologia del browser, la cache o le tracce di rete.</p>
+
             <Link href="/sos/percorso/" className="block rounded-2xl border-2 border-sos p-5 font-semibold hover:bg-sos-bg print:hidden">Non sai da dove iniziare? Apri il percorso guidato: rispondi a poche domande.</Link>
 
             {!selected ? (
