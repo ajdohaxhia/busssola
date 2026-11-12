@@ -18,7 +18,8 @@
     "typecheck": "tsc --noEmit",
     "fetch-news": "tsx scripts/fetch-news.ts",
     "fetch-news:write": "tsx scripts/fetch-news.ts --write",
-    "fetch-news:push": "tsx scripts/fetch-news.ts --write --commit"
+    "fetch-news:push": "tsx scripts/fetch-news.ts --write --commit",
+    "validate:school": "tsx scripts/validate-school.ts"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",
