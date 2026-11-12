@@ -388,16 +388,16 @@ export const modulo_15_sicurezza_avanzata: Module = {
             synthesis: 'Individuazione di app nascoste che monitorano GPS, microfono e messaggi senza consenso.',
             whenToDo: 'Se la batteria scende troppo in fretta, il telefono è sempre caldo, o se qualcuno sa cose che hai scritto solo in chat private.',
             steps: [
+                'Attenzione: se c\'è una persona che può controllare il telefono, chiedi prima aiuto al 1522 o a un centro antiviolenza: rimuovere lo spyware può allertarla.',
                 'Controlla l\'elenco completo delle app (anche quelle di sistema) nelle impostazioni',
                 'Verifica l\'uso dei dati e della batteria: app sospette che consumano molto in background',
                 'Controlla le "App di amministrazione del dispositivo"',
-                'Usa un antivirus affidabile o, in casi gravi, esegui un ripristino di fabbrica completo',
-                'Attenzione: se sei vittima di violenza domestica, chiedi aiuto prima di rimuovere lo spyware per sicurezza'
+                'Usa un antivirus affidabile; il ripristino di fabbrica è l\'ultima opzione, da valutare dopo consulenza'
             ],
             doNow: [
                 'Controlla i consumi della batteria per app',
                 'Verifica i permessi di geolocalizzazione',
-                'Fai un backup solo dei file (non delle impostazioni) e resetta il telefono'
+                'Prima di resettare, parla con il 1522 o un centro antiviolenza se c\'è una relazione con chi può controllarti: il reset è l\'ultima opzione'
             ],
             askHelpWhen: [
                 'Se temi per la tua incolumità fisica, contatta il 1522 prima di agire sul telefono'

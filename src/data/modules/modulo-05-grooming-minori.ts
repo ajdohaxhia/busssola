@@ -33,14 +33,14 @@ export const modulo_05_grooming_minori: Module = {
             ],
             doNow: [
                 'Se sospetti un adescamento, non affrontare l\'adescatore: potrebbe sparire e cancellare le prove.',
-                'Inizia a monitorare (senza allarmare il minore) le chat e i profili coinvolti.',
-                'Prendi il controllo dei dispositivi e fai screenshot di tutte le conversazioni.',
+                'Fai screenshot delle conversazioni già visibili, senza entrare negli account del minore né leggerne messaggi nascosti.',
+                'Non sequestrare il telefono: parlane con il minore con calma e chiedi alla Polizia Postale come conservare le prove.',
                 'Contatta immediatamente la Polizia Postale per una consulenza.'
             ],
             steps: [
                 'Se sospetti un adescamento, non affrontare l\'adescatore: potrebbe sparire e cancellare le prove.',
-                'Inizia a monitorare (senza allarmare il minore) le chat e i profili coinvolti.',
-                'Prendi il controllo dei dispositivi e fai screenshot di tutte le conversazioni.',
+                'Fai screenshot delle conversazioni già visibili, senza entrare negli account del minore né leggerne messaggi nascosti.',
+                'Non sequestrare il telefono: parlane con il minore con calma e chiedi alla Polizia Postale come conservare le prove.',
                 'Contatta immediatamente la Polizia Postale per una consulenza.'
             ],
             dontDo: [
