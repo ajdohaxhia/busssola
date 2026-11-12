@@ -169,14 +169,12 @@ export const modulo_06_stalking_doxxing: Module = {
                 'Trovi foto o contatti nuovi nel tuo cloud che non hai aggiunto tu.'
             ],
             steps: [
-                'Se la rottura è legata a violenza o controllo, contatta il 1522 PRIMA di cambiare password.',
                 'Esci dai gruppi "In famiglia" (Apple/Google).',
-                'Cambia le password di tutti gli account condivisi, dopo aver valutato i rischi.'
+                'Cambia le password di tutti gli account condivisi.'
             ],
             doNow: [
-                'Se la rottura è legata a violenza o controllo, contatta il 1522 prima di cambiare qualsiasi password.',
                 'Esci dai gruppi "In famiglia" (Apple/Google) se non sei tu l\'organizzatore.',
-                'Dopo aver valutato i rischi, cambia le password degli account che avevate in comune, specialmente Amazon, Netflix e siti di utility.',
+                'Cambia le password di tutti gli account che avevate in comune, specialmente Amazon, Netflix e siti di utility.',
                 'Controlla se il tuo indirizzo di casa è ancora salvato come "Casa" sul navigatore dell\'ex o viceversa.',
                 'Revoca l\'accesso alle "App di terze parti" che potrebbero essere collegate ai suoi account.'
             ],

@@ -174,14 +174,13 @@ export const modulo_06b_stalking_doxxing: Module = {
             ],
             steps: [
                 'Verifica app con privilegi amministratore.',
-                'Il ripristino di fabbrica è l\'ultima opzione: valutalo solo dopo consulenza (vedi avvertenze).'
+                'Ripristina ai dati di fabbrica se necessario.'
             ],
             doNow: [
-                'Se c\'è una persona che può controllare il tuo telefono, parla prima con il 1522 o un centro antiviolenza: rimuovere lo spyware può allertarla.',
                 'Controlla la lista delle app con "Accesso speciale / Amministratori del dispositivo" nelle impostazioni.',
                 'Verifica se sul telefono è presente un profilo MDM (Mobile Device Management) non aziendale.',
                 'Attiva il "Safe Mode" (Modalità provvisoria) per vedere se i comportamenti strani cessano.',
-                'Se il rischio è alto, il ripristino di fabbrica va valutato con un centro antiviolenza prima di farlo, e dopo aver salvato le prove.'
+                'Se il rischio è alto, esegui un ripristino totale ai dati di fabbrica (Factory Reset) dopo aver salvato solo le foto e i contatti (non i backup delle app).'
             ],
             dontDo: [
                 'Non cambiare le password principali dallo stesso telefono se sospetti ci sia un virus spia: l\'hacker vedrebbe le nuove password mentre le digiti.',
@@ -201,7 +200,7 @@ export const modulo_06b_stalking_doxxing: Module = {
             checklist: [
                 'Check Admin Apps',
                 'Monitora batteria/dati',
-                'Reset fabbrica solo dopo consulenza',
+                'Reset fabbrica (se sicuro)',
                 'Cambia pass da altro PC'
             ],
             sources: [

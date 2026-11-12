@@ -147,34 +147,6 @@ export default function Home() {
 
     return (
         <div className="space-y-20 pb-24 pt-8">
-            <section className="space-y-8" aria-labelledby="home-azioni">
-                <h2 id="home-azioni" className="sr-only">Da dove iniziare</h2>
-                <div className="grid gap-4 md:grid-cols-3">
-                    <Link href="/moduli/" className="block rounded-3xl border-2 border-primary bg-surface p-8 space-y-2 hover:bg-surface-hover">
-                        <p className="text-2xl font-display font-semibold text-foreground">Voglio imparare</p>
-                        <p className="text-secondary">Lezioni brevi con esempi concreti, per ogni età.</p>
-                    </Link>
-                    <Link href="/percorsi/proteggi-account" className="block rounded-3xl border-2 border-primary bg-surface p-8 space-y-2 hover:bg-surface-hover">
-                        <p className="text-2xl font-display font-semibold text-foreground">Voglio proteggermi</p>
-                        <p className="text-secondary">Account, dispositivi e privacy, passo per passo.</p>
-                    </Link>
-                    <Link href="/sos/" className="block rounded-3xl border-2 border-sos bg-sos-bg p-8 space-y-2 hover:bg-sos/10">
-                        <p className="text-2xl font-display font-semibold text-foreground">Ho bisogno di aiuto</p>
-                        <p className="text-secondary">Scegli la situazione: ti indichiamo a chi rivolgerti.</p>
-                    </Link>
-                </div>
-
-                <div className="space-y-3">
-                    <p className="text-sm font-semibold uppercase tracking-widest text-muted">Situazioni concrete</p>
-                    <div className="flex flex-wrap gap-2">
-                        <Link href="/sos/percorso/" className="px-4 py-2 rounded-full border border-border bg-surface text-sm hover:border-primary">Qualcuno mi ricatta</Link>
-                        <Link href="/sos/percorso/" className="px-4 py-2 rounded-full border border-border bg-surface text-sm hover:border-primary">Mi controllano il telefono</Link>
-                        <Link href="/sos/#grooming-minori" className="px-4 py-2 rounded-full border border-border bg-surface text-sm hover:border-primary">Mio figlio viene preso di mira</Link>
-                        <Link href="/scuole/" className="px-4 py-2 rounded-full border border-border bg-surface text-sm hover:border-primary">Scuole e LIM</Link>
-                    </div>
-                </div>
-            </section>
-
             <section className="max-w-3xl mx-auto text-center space-y-6 px-2">
                 <p className="text-sm font-medium text-primary">Guida civica · Italia 2026</p>
                 <h1 className="text-5xl md:text-7xl font-display font-semibold tracking-tight leading-[1.05]">

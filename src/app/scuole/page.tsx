@@ -7,7 +7,6 @@ import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import { PageHeader } from '@/components/ui/PageHeader'
-import { DisplayModeToggle } from '@/components/layout/DisplayModeToggle'
 
 const LESSON_PLANS = [
     {
@@ -129,7 +128,6 @@ export default function ScuolePage() {
                 title="Porta la consapevolezza in classe, subito."
                 description="Busssola fornisce materiali didattici gratuiti, aperti e pronti all'uso. Ottimizzati per docenti, studenti e famiglie per l'educazione civica digitale."
             />
-            <div className="flex justify-center print:hidden"><DisplayModeToggle /></div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-y border-border py-12">
                 <div className="text-center space-y-2">

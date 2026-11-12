@@ -6,8 +6,6 @@ import { Toaster } from 'sonner'
 import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
 import { SOSButton } from '@/components/ui/SOSButton'
-import { QuickExitButton } from '@/components/sos/QuickExitButton'
-import { DisplayManager } from '@/components/layout/DisplayManager'
 import { cn } from '@/lib/utils'
 
 function isLessonPath(pathname: string | null) {
@@ -17,17 +15,13 @@ export function AppShell({ children }: { children: ReactNode }) {
     const pathname = usePathname()
     const lessonMode = isLessonPath(pathname)
 
-    const quickExitVisible = lessonMode || Boolean(pathname?.startsWith('/sos'))
-
     return (
         <div className="flex flex-col min-h-screen">
-            <DisplayManager />
             {!lessonMode && <Header />}
             <Toaster position="top-center" richColors />
             <main className={cn(
                 "flex-1 relative flex flex-col",
-                !lessonMode && "pt-20",
-                quickExitVisible && "pb-24 md:pb-0"
+                !lessonMode && "pt-20"
             )}>
                 <div
                     className={cn(
@@ -42,7 +36,6 @@ export function AppShell({ children }: { children: ReactNode }) {
             </main>
             {!lessonMode && <Footer />}
             {!lessonMode && <SOSButton />}
-            {(lessonMode || pathname?.startsWith('/sos')) && <QuickExitButton />}
         </div>
     )
 }

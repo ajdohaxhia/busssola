@@ -81,18 +81,18 @@ export const modulo_04b_sextortion_ricatti: Module = {
         {
             id: 'preserving-digital-evidence',
             slug: 'come-salvare-prove-digitali-valore-legale',
-            title: 'Come conservare prove digitali utili',
+            title: 'Come salvare prove con valore legale',
             mainEntity: 'AgID',
             category: 'emergenze',
             audience: ['victims', 'adults'],
             level: 'medio',
             estimatedMinutes: 8,
-            summary: 'Gli screenshot a volte non bastano. Impara a conservare chat e file in modo integro, da consegnare a chi valuta la denuncia.',
+            summary: 'Gli screenshot a volte non bastano. Impara le tecniche corrette per conservare chat e file affinché siano validi in tribunale.',
             status: 'published',
             emergencyLevel: 'medium',
             scenario: 'Sei vittima di stalking o ricatto. Vuoi denunciare, ma hai paura che il colpevole cancelli i messaggi (come con la funzione "Elimina per tutti" di WhatsApp) o che gli screenshot vengano contestati perché "facili da falsificare".',
             question: 'Cosa serve alla Polizia oltre ai semplici screenshot?',
-            whatIsHappening: 'In un processo, la controparte può sostenere che uno screenshot sia stato manipolato con Photoshop. Conservare i dati in modo integro (copia forense o esportazione) rende la prova più solida, ma non garantisce che sia ammessa: la valutazione spetta a chi indaga o al giudice.',
+            whatIsHappening: 'In un processo, la controparte può sostenere che uno screenshot sia stato manipolato con Photoshop. Per avere prove "forti", occorre conservare i dati in modo da garantirne l\'integrità (copia forense o esportazione certificata).',
             warningSigns: [
                 'L\'interlocutore inizia a cancellare messaggi dopo averti minacciato.',
                 'Usi app che prevedono messaggi a scomparsa (Snapchat, segrete di Telegram).'
@@ -101,13 +101,13 @@ export const modulo_04b_sextortion_ricatti: Module = {
                 'Usa la funzione "Esporta Chat" di WhatsApp (senza allegati o con allegati a seconda della dimensione) e inviatela via mail.',
                 'Non cancellare mai la conversazione originale dal telefono: il dispositivo stesso è la prova principale.',
                 'Fai video-registrazioni dello schermo mentre scorri la chat, mostrando chiaramente il numero di telefono del mittente e le date.',
-                'Se il contenuto è su una pagina web, salva la pagina completa (file .html) e annota l\'URL; se puoi, chiedi a un consulente tecnico di farlo.'
+                'Se il contenuto è su una pagina web, usa servizi di "Web Snapshot" certificati o salva la pagina completa (file .html) sul PC.'
             ],
             steps: [
                 'Usa la funzione "Esporta Chat" di WhatsApp (senza allegati o con allegati a seconda della dimensione) e inviatela via mail.',
                 'Non cancellare mai la conversazione originale dal telefono: il dispositivo stesso è la prova principale.',
                 'Fai video-registrazioni dello schermo mentre scorri la chat, mostrando chiaramente il numero di telefono del mittente e le date.',
-                'Se il contenuto è su una pagina web, salva la pagina completa (file .html) e annota l\'URL; se puoi, chiedi a un consulente tecnico di farlo.'
+                'Se il contenuto è su una pagina web, usa servizi di "Web Snapshot" certificati o salva la pagina completa (file .html) sul PC.'
             ],
             dontDo: [
                 'Non modificare i file salvati (non rinominarli, non cambiare le date).',
@@ -118,8 +118,7 @@ export const modulo_04b_sextortion_ricatti: Module = {
                 'ID univoci dei profili social (non solo il nome visualizzato, che può cambiare).'
             ],
             askHelpWhen: [
-                'Se il reato è molto grave (abusi, grandi truffe finanziarie) e serve una perizia informatica forense professionale.',
-                'Se c\'è una relazione con controllo o violenza, parla prima con il 1522 o un centro antiviolenza: conservare materiale su un dispositivo condiviso può essere rischioso.'
+                'Se il reato è molto grave (abusi, grandi truffe finanziarie) e serve una perizia informatica forense professionale.'
             ],
             whoCanHelp: [
                 'Consulenti Tecnici di Parte (CTP) informatici',

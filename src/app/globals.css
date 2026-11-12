@@ -124,35 +124,3 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   .print\\:hidden { display: none !important; }
   body { background: white; }
 }
-
-/* Vista LIM (masterplan §9): testo più grande, aree di tocco ampie, focus evidente. */
-html[data-display="lim"] {
-  font-size: 125%;
-}
-html[data-display="lim"] body {
-  line-height: 1.6;
-}
-html[data-display="lim"] button,
-html[data-display="lim"] a {
-  min-height: 48px;
-  min-width: 48px;
-}
-html[data-display="lim"] :focus-visible {
-  outline: 3px solid currentColor;
-  outline-offset: 3px;
-}
-
-/* Uscita rapida: solo su telefono, mai in vista LIM (la classe md:hidden la nasconde già da 768px). */
-html[data-display="lim"] .quick-exit {
-  display: none !important;
-}
-
-/* Rispetto di prefers-reduced-motion (masterplan §9.2). */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-    scroll-behavior: auto !important;
-  }
-}
