@@ -15,7 +15,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "fetch-news": "tsx scripts/fetch-news.ts",
+    "fetch-news:write": "tsx scripts/fetch-news.ts --write",
+    "fetch-news:push": "tsx scripts/fetch-news.ts --write --commit"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",

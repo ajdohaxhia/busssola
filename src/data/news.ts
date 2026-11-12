@@ -14,6 +14,55 @@ const src = (title: string, organization: string, url: string, usedFor = 'Allert
 })
 
 export const CIVIC_NEWS: NewsItem[] = [
+    // ── Auto-imported 2026-11-12 ──────────────────────────
+    {
+        slug: 'ravvedimento-per-aderenti-cpb-2026-2027-i-codici-tributo-fisco-e-tasse-20261111',
+        title: 'Ravvedimento per aderenti CPB 2026-2027: i codici tributo',
+        date: '2026-11-11',
+        summary: 'Ravvedimento per aderenti CPB 2026-2027: i codici tributo. Fonte: Fisco e Tasse.',
+        body: [
+            'Ravvedimento per aderenti CPB 2026-2027: i codici tributo.',
+        ],
+        whatChanged: [
+            'Ravvedimento per aderenti CPB 2026-2027: i codici tributo',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Ravvedimento per aderenti CPB 2026-2027: i codici tributo - Fisco e Tasse', 'Fisco e Tasse', 'https://news.google.com/rss/articles/CBMitAFBVV95cUxQckFONjRCY3dGT0lhM0JKUDdQUC1VU3JOMU44QTQ1TmduUzRhd0wwTnhBX3FaNG9LTHFQLWdJVmxOMVRRTWZIbjZoZDdqaVFVbURPei1ja0FGdkxMX3hHZVBYZzJjR1F3aWRtTGtwNnJzMGJGVnpKbXNrNHMxcHNaNC1WQlE3QnVMbmdLYmJ4MnFiSFd5SlMtUko4bVJXT1lPMElhUnVGejJscjQ2VTIxVW84V0c?oc=5', 'Ravvedimento per aderenti CPB 2026-2027: i codici tributo - Fisco e Tasse', '2026-11-11'),
+        ],
+        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-11',
+    },
+    {
+        slug: 'card-anziani-rebus-sulluso-dei-300-euro-ma-intanto-il-ministero-della-salute-res',
+        title: 'Card anziani, rebus sull\'uso dei 300 euro ma intanto il ministero della Salute resta fuori',
+        date: '2026-11-09',
+        summary: 'Card anziani, rebus sull\'uso dei 300 euro ma intanto il ministero della Salute resta fuori. Fonte: Il Sole 24 ORE.',
+        body: [
+            'Card anziani, rebus sull\'uso dei 300 euro ma intanto il ministero della Salute resta fuori.',
+        ],
+        whatChanged: [
+            'Card anziani, rebus sull\'uso dei 300 euro ma intanto il ministero della Salute resta fuori',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Card anziani, rebus sull\'uso dei 300 euro ma intanto il ministero della Salute resta fuori - Il Sole 24 ORE', 'Il Sole 24 ORE', 'https://news.google.com/rss/articles/CBMiuAFBVV95cUxNN0h4VmFjc1FBM3JoY3VQbTBGZGRIekxDbDFoS3VFbVRPV0gtLVh4a3RHNmpVWXhqRGkyZDlRajJJaDZXd0hPenFlNU4yZnhVNE12YmVnR0M3ZXZpcFQ0ZXZEQWFxbnBWZzZTRGVqd0dtcmhMeF9nSXJZWHhQMV9TMy1zSWZQTlBZR1Ixb0VoLUphUWNiT2ltSEs5dFRLNTBLS1hBeEhJZEltVl9jTTlNeXAyT1VRWHRW?oc=5', 'Card anziani, rebus sull\'uso dei 300 euro ma intanto il ministero della Salute resta fuori - Il Sole 24 ORE', '2026-11-09'),
+        ],
+        relatedGuides: ['/moduli/modulo-09-sanita-salute'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-09',
+    },
+    // ── End auto-import ──────────────────────────────────────────────
+
     {
         slug: 'falsi-allarmi-bomba-scuole-11-novembre-2026-polizia-postale-mim',
         title: 'Migliaia di falsi allarmi bomba via email nelle scuole (11 novembre 2026): chiarimenti MIM, bonifiche e protocollo civico',
