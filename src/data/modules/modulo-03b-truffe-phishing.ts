@@ -69,12 +69,12 @@ export const modulo_03b_truffe_phishing: Module = {
             ],
             sources: [
                 {
-                    title: 'Sicurezza su Vinted: Evitare le truffe',
+                    title: 'Come evitare e segnalare i messaggi di phishing e le truffe',
                     organization: 'Vinted Help Center',
-                    url: 'https://www.vinted.it/help/615',
+                    url: 'https://www.vinted.it/help/628',
                     type: 'platform',
-                    usedFor: 'Procedure ufficiali di vendita e avvisi sul phishing.',
-                    lastCheckedAt: '2026-05-14'
+                    usedFor: 'Avvisi ufficiali sul phishing e sulle truffe.',
+                    lastCheckedAt: '2026-11-12'
                 }
             ],
             lastReviewedAt: '2026-11-08',
