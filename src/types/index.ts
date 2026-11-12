@@ -4,7 +4,11 @@ export interface Source {
   title: string;
   organization: string;
   url: string;
-  type: 'official' | 'institutional' | 'platform' | 'nonprofit' | 'expert';
+  // Nuovi tipi (masterplan §11): norma, ente_pubblico, documentazione_prodotto,
+  // organizzazione_specializzata. I tipi precedenti restano validi finché non migrati.
+  type:
+    | 'official' | 'institutional' | 'platform' | 'nonprofit' | 'expert'
+    | 'norma' | 'ente_pubblico' | 'documentazione_prodotto' | 'organizzazione_specializzata';
   usedFor: string;
   lastCheckedAt: string; // YYYY-MM-DD
 }

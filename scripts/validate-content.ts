@@ -79,6 +79,13 @@ function validateLesson(lesson: any, moduleId: string) {
         }
         
         if (!lesson.lastReviewedAt) logError(`${context} Published but missing lastReviewedAt`);
+
+        // D4 (masterplan §11): le lezioni sensibili devono avere revisori nominati.
+        // Avviso per ora; diventerà errore quando i revisori saranno indicati.
+        const isSensitive = lesson.emergencyLevel === 'high' || lesson.emergencyLevel === 'sos' || lesson.category === 'emergenze';
+        if (isSensitive && !(Array.isArray(lesson.reviewers) && lesson.reviewers.length > 0)) {
+            console.warn(`  ⚠️ ${context} Sensitive lesson without named reviewers (required before publication)`);
+        }
     }
 }
 
