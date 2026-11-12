@@ -52,3 +52,40 @@ Il masterplan (§11) accetta la documentazione ufficiale dei prodotti (Apple, Go
 2. Per le norme, usare la versione vigente su Normattiva e annotare la data di controllo.
 3. Per le lezioni senza candidato (mensa, rinuncia studi), cercare il sito del Comune o dell'ateneo di riferimento, oppure ridurre le affermazioni.
 4. Aggiornare `sources` solo dopo le verifiche, con `lastCheckedAt` alla data reale.
+
+## Esito della verifica (12 novembre 2026)
+
+Ogni URL è stato aperto con un agente di lettura web. Il controllo riguarda l'esistenza della pagina e la presenza dell'argomento. Non è stata verificata la corrispondenza tra ogni singola affermazione della lezione e la pagina. Il testo riportato è quello letto dall'agente, non la versione completa del sito.
+
+| URL | Esito | Nota |
+|---|---|---|
+| commissariatodips.it/approfondimenti/pedofilia-online/consigli | Esiste, 200 | Contiene consigli sull'incontro di persona; non è una pagina sull'adescamento in sé |
+| commissariatodips.it/consigli/per-i-genitori/uso-sicuro-del-telefonino-di-tuo-figlio | Esiste, 200 | Argomento confermato (dispositivi dei figli) |
+| commissariatodips.it/approfondimenti/pedofilia-online/domande-e-risposte | Esiste, 200 | Q&A sull'adescamento confermate |
+| famiglia.governo.it, pagina 114 | Esiste, 200 | Numero 114 confermato |
+| pariopportunita.gov.it, pagina 1522 | Esiste, 200 | Numero 1522 confermato |
+| istruzione.it/dg_studente/dsa.shtml | Esiste, 200 | Pagina datata (riferimenti del 2014-2015): va cercata una versione aggiornata |
+| Gazzetta Ufficiale, art. 1123 c.c. | Esiste, 200 | È il testo **originario** del 1942 (codice redazionale 042U0262). Per la versione vigente usare Normattiva |
+| arbitrobancariofinanziario.it, presentare ricorso | Esiste, 200 | Argomento confermato |
+| normattiva, d.lgs. 30/2026 | Esiste, ma non è il Codice del consumo | È un decreto che modifica il Codice del consumo. Non usare come fonte della garanzia legale |
+| vinted.it/help/615 | **Non idoneo** | È una pagina di contatto, non la guida alla truffa. Il link alla lezione va sostituito |
+| vinted.it/help/464 | Non verificato | Il testo letto non contiene la guida all'acquisto |
+| support.apple.com/it-it/102431 | **Non idoneo** | Pagina sull'accesso all'Apple Account di un familiare deceduto, non sulla Modalità Smarrito |
+| support.google.com/android/answer/6160491 | Esiste, in inglese | Argomento confermato; serve la versione italiana o la dichiarazione della lingua |
+| fidoalliance.org/passkeys | Esiste, in inglese | Argomento confermato; FIDO non è un ente pubblico |
+| paypal.com/it/.../buyer-protection | Non verificato: risposta 403 | Riprovare da un browser |
+| help.instagram.com/116024195217477 | Non verificato | La pagina restituita non contiene il testo |
+
+## Errori già presenti nei dati delle lezioni
+
+Due fonti già inserite nelle lezioni puntano a pagine non pertinenti. Vanno corrette prima di qualsiasi altra modifica:
+
+- `modulo-07b-privacy-smartphone` / `iphone-lost-protocol`: il link `support.apple.com/it-it/102431` non porta alla Modalità Smarrito.
+- `modulo-03b-truffe-phishing` / `vinted-wallet-scam`: il link `vinted.it/help/615` è una pagina di contatto.
+
+## Prossimi passi aggiornati
+
+1. Trovare il giusto URL Apple per la Modalità Smarrito e il giusto URL Vinted per la guida alle truffe, aprirli e poi sostituirli.
+2. Per le lezioni con fonte "non verificato" (PayPal, Instagram, Vinted 464), riprovare da un browser o trovare un'alternativa.
+3. Per la garanzia legale, citare la versione vigente di Normattiva del Codice del consumo, non il decreto che lo modifica.
+4. Sostituire la pagina DSA del MIM con una versione aggiornata.
