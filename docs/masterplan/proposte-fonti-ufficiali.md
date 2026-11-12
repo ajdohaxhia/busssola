@@ -76,12 +76,12 @@ Ogni URL è stato aperto con un agente di lettura web. Il controllo riguarda l'e
 | paypal.com/it/.../buyer-protection | Non verificato: risposta 403 | Riprovare da un browser |
 | help.instagram.com/116024195217477 | Non verificato | La pagina restituita non contiene il testo |
 
-## Errori già presenti nei dati delle lezioni
+## Errori già presenti nei dati delle lezioni (corretti il 12 novembre 2026)
 
 Due fonti già inserite nelle lezioni puntano a pagine non pertinenti. Vanno corrette prima di qualsiasi altra modifica:
 
-- `modulo-07b-privacy-smartphone` / `iphone-lost-protocol`: il link `support.apple.com/it-it/102431` non porta alla Modalità Smarrito.
-- `modulo-03b-truffe-phishing` / `vinted-wallet-scam`: il link `vinted.it/help/615` è una pagina di contatto.
+- `modulo-07b-privacy-smartphone` / `iphone-lost-protocol`: sostituito con `support.apple.com/en-us/120837` (pagina Apple in inglese, "iPhone o iPad rubato", che descrive la Modalità Smarrito). Nessuna pagina italiana equivalente è stata trovata.
+- `modulo-03b-truffe-phishing` / `vinted-wallet-scam`: sostituito con `vinted.it/help/628` ("Come evitare e segnalare i messaggi di phishing e le truffe", in italiano).
 
 ## Prossimi passi aggiornati
 

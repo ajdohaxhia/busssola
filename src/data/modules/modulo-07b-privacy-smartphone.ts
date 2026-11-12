@@ -127,12 +127,12 @@ export const modulo_07b_privacy_smartphone: Module = {
             ],
             sources: [
                 {
-                    title: 'Usare la Modalità smarrito in Dov\'è',
+                    title: 'Se il tuo iPhone o iPad è stato rubato',
                     organization: 'Apple Support',
-                    url: 'https://support.apple.com/it-it/102431',
+                    url: 'https://support.apple.com/en-us/120837',
                     type: 'platform',
-                    usedFor: 'Istruzioni ufficiali per il blocco remoto del dispositivo.',
-                    lastCheckedAt: '2026-05-14'
+                    usedFor: 'Modalità Smarrito per iPhone rubato (pagina in inglese).',
+                    lastCheckedAt: '2026-11-12'
                 }
             ],
             lastReviewedAt: '2026-11-08',
