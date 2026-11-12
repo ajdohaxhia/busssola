@@ -1,6 +1,8 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
+import { useState } from 'react'
+import { LimPresenter } from '@/components/lessons/LimPresenter'
 import Link from 'next/link'
 import { motion, useScroll, useSpring } from 'framer-motion'
 import { triggerConfetti } from '@/lib/confetti'
@@ -32,6 +34,7 @@ interface LessonReaderClientProps {
 export default function LessonReaderClient({ currentModule, lessonIndex }: LessonReaderClientProps) {
     const router = useRouter()
     const { completeLesson, completeModule } = useGameStore()
+    const [inClass, setInClass] = useState(false)
 
     const { scrollYProgress } = useScroll()
     const scaleX = useSpring(scrollYProgress, {
@@ -95,6 +98,14 @@ export default function LessonReaderClient({ currentModule, lessonIndex }: Lesso
 
     return (
         <div className="min-h-screen pb-24 bg-background selection:bg-primary/10 print:pb-0 print:bg-white text-left">
+            {inClass && (
+                <LimPresenter
+                    lesson={currentModule.lessons[lessonIndex] as Lesson}
+                    moduleTitle={currentModule.title}
+                    onExit={() => setInClass(false)}
+                />
+            )}
+
             {/* Sticky Progress Bar */}
             <motion.div
                 className="fixed top-0 left-0 right-0 h-1.5 bg-primary origin-left z-50 shadow-[0_0_10px_rgba(var(--primary),0.5)] print:hidden"
@@ -133,6 +144,14 @@ export default function LessonReaderClient({ currentModule, lessonIndex }: Lesso
                             Guida {publishedIndex} di {totalPublished}
                         </Badge>
                     </div>
+
+                    {(currentLesson.emergencyLevel !== 'high' && currentLesson.emergencyLevel !== 'sos' && currentLesson.category !== 'emergenze') && (
+                        <div className="print:hidden">
+                            <button type="button" onClick={() => setInClass(true)} className="min-h-14 rounded-xl border-2 border-foreground px-6 py-3 text-base font-semibold hover:bg-surface-hover">
+                                Avvia in classe
+                            </button>
+                        </div>
+                    )}
 
                     <h1 className="text-4xl md:text-7xl font-display font-black leading-[1.1] text-foreground tracking-tight text-balance print:text-3xl text-center">
                         {currentLesson.title}
