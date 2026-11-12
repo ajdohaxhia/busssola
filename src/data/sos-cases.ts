@@ -33,7 +33,7 @@ const NUE = src('Numero Unico Emergenza 112', 'Stato Italiano', 'tel:112', 'Chia
 const PS = src('Commissariato di PS online', 'Polizia di Stato', 'https://www.commissariatodips.it/', 'Segnalazione reati online')
 const G1522 = src('Antiviolenza e stalking 1522', 'Dipartimento per le Pari Opportunità', 'tel:1522', 'Supporto violenza di genere e stalking')
 const N114 = src('Emergenza infanzia 114', 'Ministero per la famiglia', 'tel:114', 'Emergenza che coinvolge un minore')
-const GARANTE_RP = src('Revenge porn — Garante Privacy', 'Garante per la protezione dei dati personali', 'https://www.garanteprivacy.it/temi/internet-e-nuove-tecnologie/revenge-porn', 'Rimozione immagini intime non consensuali')
+const GARANTE_RP = src('Revenge porn — Garante Privacy', 'Garante per la protezione dei dati personali', 'https://www.garanteprivacy.it/temi/revengeporn', 'Rimozione immagini intime non consensuali')
 
 export const SOS_CASES: SosCase[] = [
     {
@@ -213,7 +213,7 @@ export const SOS_CASES: SosCase[] = [
         whenToCall112: 'Se i dati vengono usati per raggiungerti, minacciarti o presentarsi di persona.',
         primaryAction: { label: 'Chiama 112 se ti stanno cercando', href: 'tel:112' },
         moduleLink: '/moduli/modulo-06b-stalking-doxxing',
-        sources: [NUE, PS, src('Modulistica Garante', 'Garante Privacy', 'https://www.garanteprivacy.it/home/modulistica', 'Reclamo o segnalazione')],
+        sources: [NUE, PS, src('Modulistica Garante', 'Garante Privacy', 'https://www.garanteprivacy.it/home/modulistica-e-servizi-online', 'Reclamo o segnalazione')],
     },
     {
         id: 'sextortion-adulti',
@@ -379,7 +379,7 @@ export const SOS_CASES: SosCase[] = [
         sources: [
             NUE,
             PS,
-            src('Consigli CERTFin / sicurezza pagamenti', 'CERTFin / Banca d’Italia', 'https://www.certfin.it/cittadini/', 'Sicurezza pagamenti'),
+            src('Consigli CERTFin / sicurezza pagamenti', 'CERTFin / Banca d’Italia', 'https://www.certfin.it/educational/consigli-utili/', 'Sicurezza pagamenti'),
         ],
     },
     {
@@ -425,7 +425,7 @@ export const SOS_CASES: SosCase[] = [
         sources: [
             NUE,
             PS,
-            src('Truffe CONSOB', 'CONSOB', 'https://www.consob.it/web/area-pubblica/truffe', 'Truffe finanziarie'),
+            src('Truffe CONSOB', 'CONSOB', 'https://www.consob.it/web/area-pubblica/occhio-alle-truffe', 'Truffe finanziarie'),
         ],
     },
     {
@@ -452,7 +452,7 @@ export const SOS_CASES: SosCase[] = [
         sources: [
             NUE,
             G1522,
-            src('Richiesta intervento ispettivo', 'Ispettorato Nazionale del Lavoro', 'https://www.ispettorato.gov.it/it-it/strumenti-e-servizi/Pagine/Richiesta-di-intervento-ispettivo.aspx', 'Tutele sul lavoro'),
+            src('Richiesta intervento ispettivo', 'Ispettorato Nazionale del Lavoro', 'https://www.ispettorato.gov.it/servizi-e-modulistica/scopri-i-servizi-e-la-modulistica/', 'Tutele sul lavoro'),
         ],
     },
 ]
