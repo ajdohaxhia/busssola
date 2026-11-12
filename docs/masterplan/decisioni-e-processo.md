@@ -7,7 +7,7 @@ Data: 12 novembre 2026. Stato: **decisioni prese con le raccomandazioni del docu
 | # | Tema | Decisione | Stato |
 |---|---|---|---|
 | D1 | Hosting | **Cloudflare Workers** con asset statici da `out/`. | Da configurare, vedi sotto |
-| D2 | Uscita rapida | Pagina neutra e configurabile in un'unica costante. Testo accanto al pulsante con i limiti. Destinazione predefinita da scegliere (proposta: `https://www.google.com/`). | Da confermare la destinazione |
+| D2 | Uscita rapida | Pagina neutra e configurabile in un'unica costante. Testo accanto al pulsante con i limiti. Destinazione: `https://www.google.com/`, confermata il 12 novembre 2026. | Confermata, implementata in `src/lib/quick-exit.ts` |
 | D3 | Pubblico | I sette percorsi del masterplan (§3) sono la segmentazione visibile. L'età è un'indicazione editoriale, mai un dato raccolto. | Applicata |
 | D4 | Revisione | Tre ruoli: responsabile editoriale, revisore tutela minori, revisore violenza di genere e controllo domestico. Nessuna scheda sensibile può andare in `published` senza revisore nominato. | Nomi da fornire |
 | D5 | Tipi di fonte | Aggiungere `norma`, `ente_pubblico`, `documentazione_prodotto`, `organizzazione_specializzata`. Le organizzazioni non sono fonti per affermazioni giuridiche. | Da implementare |
