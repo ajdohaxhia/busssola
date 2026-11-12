@@ -63,6 +63,8 @@ export default function SOSPage() {
 
             <SecurityAlertBanner variant="sos" />
 
+            <Link href="/sos/percorso/" className="block rounded-2xl border-2 border-sos p-5 font-semibold hover:bg-sos-bg print:hidden">Non sai da dove iniziare? Apri il percorso guidato: rispondi a poche domande.</Link>
+
             {!selected ? (
                 <div className="space-y-12 print:hidden">
                     <section className="space-y-4">
