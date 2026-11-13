@@ -14,6 +14,32 @@ const src = (title: string, organization: string, url: string, usedFor = 'Allert
 })
 
 export const CIVIC_NEWS: NewsItem[] = [
+    // ── Auto-imported 2026-11-13 ──────────────────────────
+    {
+        slug: 'partita-iva-dei-professionisti-per-aprirla-arriva-il-servizio-online-dellagenzia',
+        title: 'Partita IVA dei professionisti, per aprirla arriva il servizio online dell\'Agenzia delle Entrate: come funziona',
+        date: '2026-11-09',
+        summary: 'Partita IVA dei professionisti, per aprirla arriva il servizio online dell\'Agenzia delle Entrate: come funziona. Fonte: Partitaiva.it.',
+        body: [
+            'Partita IVA dei professionisti, per aprirla arriva il servizio online dell\'Agenzia delle Entrate: come funziona.',
+        ],
+        whatChanged: [
+            'Partita IVA dei professionisti, per aprirla arriva il servizio online dell\'Agenzia delle Entrate: come funziona',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Partita IVA dei professionisti, per aprirla arriva il servizio online dell\'Agenzia delle Entrate: come funziona - Partitaiva.it', 'Partitaiva.it', 'https://news.google.com/rss/articles/CBMiekFVX3lxTE9ha1J1REpNbXFpdU9uaEFjVkpUR0I3eHh3dnVmdHJkeWQ3MzliYVhzdHctbmV6enFNdktRUFVFYUxUdDBvYVVqZ3VyUXRsZjlZbHBqMDNRQlVDQ1BCc0JhYXlIM1ZONTJzNW1ZNEp5aGU1cmhnWjM1QUJR?oc=5', 'Partita IVA dei professionisti, per aprirla arriva il servizio online dell\'Agenzia delle Entrate: come funziona - Partitaiva.it', '2026-11-09'),
+        ],
+        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-09',
+    },
+    // ── End auto-import ──────────────────────────────────────────────
+
     // ── Auto-imported 2026-11-12 ──────────────────────────
     {
         slug: 'ravvedimento-per-aderenti-cpb-2026-2027-i-codici-tributo-fisco-e-tasse-20261111',
