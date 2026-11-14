@@ -14,6 +14,32 @@ const src = (title: string, organization: string, url: string, usedFor = 'Allert
 })
 
 export const CIVIC_NEWS: NewsItem[] = [
+    // ── Auto-imported 2026-11-14 ──────────────────────────
+    {
+        slug: 'pensioni-ape-sociale-esclusi-i-contributivi-puri-chi-sono-e-perche-inps-respinge',
+        title: 'Pensioni, Ape Sociale: esclusi i contributivi puri. Chi sono e perché Inps respingerà le domande',
+        date: '2026-11-13',
+        summary: 'Pensioni, Ape Sociale: esclusi i contributivi puri. Chi sono e perché Inps respingerà le domande. Fonte: Corriere Adriatico.',
+        body: [
+            'Pensioni, Ape Sociale: esclusi i contributivi puri. Chi sono e perché Inps respingerà le domande.',
+        ],
+        whatChanged: [
+            'Pensioni, Ape Sociale: esclusi i contributivi puri. Chi sono e perché Inps respingerà le domande',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Pensioni, Ape Sociale: esclusi i contributivi puri. Chi sono e perché Inps respingerà le domande - Corriere Adriatico', 'Corriere Adriatico', 'https://news.google.com/rss/articles/CBMixwFBVV95cUxOXzYwWEQtWmo1bVZzS2JiRUNRMlFDM21feWVLVXB3clFrV3V3eWhveE5ialBuMUIzQWt5R2JhNkhPM3dUMVJtUFVScWtqNENZdlR4cHY2c2pSOW1xSUxSWXVCWHRaVy1VRU9jNmlUS3lhMV9yUlV3NmN5Y0ZRMjN4bllBSDZhSHMyMDBVeXpBR2tPRWFPb3FxYi1JZEd0RTl1aDY5TTRSS3dHb3BPNnItTFJ3U2lVUko0M1dRa3V4NkpNTVBXX2ln0gHGAUFVX3lxTFBUYUtGN0hWZFNQM1hSRXRBTlFObXQxUndpWktjRVRHN2xobFN2YUcwd3QzV0pOME1oZHVHeng5eEdXN2l0ZHl2OUhEQnVDU0NBS3Ywa3c5bXBJNm1QUlVSb1BLdV9GaC1sTHE5bV8yVHVkUGtvc2Fja01BNEdycFNNYUhnNEVtMzBVSDM3dzRmRlEtRTFJTmRmUk03VWpuMlVaUXphdDRlRTI3bGMyT01xcnBqMUNKdGQwZWZuZldGb0poa0xIUQ?oc=5', 'Pensioni, Ape Sociale: esclusi i contributivi puri. Chi sono e perché Inps respingerà le domande - Corriere Adriatico', '2026-11-13'),
+        ],
+        relatedGuides: ['/moduli/modulo-27-pensioni-previdenza'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-13',
+    },
+    // ── End auto-import ──────────────────────────────────────────────
+
     // ── Auto-imported 2026-11-13 ──────────────────────────
     {
         slug: 'partita-iva-dei-professionisti-per-aprirla-arriva-il-servizio-online-dellagenzia',
