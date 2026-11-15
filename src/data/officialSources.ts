@@ -1736,5 +1736,37 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     url: "https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.messaggi.2026.11.messaggio-numero-3649-del-10-11-2026.html",
     category: "lavoro",
     type: "servizio ufficiale"
+  },
+  inpsMessaggio3697Red2026: {
+    id: 'inpsMessaggio3697Red2026',
+    name: "INPS — Messaggio n. 3697 del 12 novembre 2026: Avvio Campagna RED Ordinaria 2026 e dichiarazioni di responsabilità",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.messaggi.2026.11.messaggio-numero-3697-del-12-11-2026.html",
+    category: "lavoro",
+    type: "servizio ufficiale"
+  },
+  adeServizioWebAA912: {
+    id: 'adeServizioWebAA912',
+    name: "Agenzia delle Entrate — Servizio web per la dichiarazione di inizio attività delle persone fisiche (Modello AA9/12)",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/schede/dichiarazioni/dichiarazione-inizio-variazione-cessazione-aa9_12",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  adeRisoluzione50ECpb: {
+    id: 'adeRisoluzione50ECpb',
+    name: "Agenzia delle Entrate — Risoluzione n. 50/E: Istituzione codici tributo per il ravvedimento speciale Concordato Preventivo Biennale",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/documentazione/provvedimenti-circolari-e-risoluzioni/risoluzioni/risoluzioni-2026/novembre-2026",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  mefManovra2027Ddl: {
+    id: 'mefManovra2027Ddl',
+    name: "Ministero dell'Economia e delle Finanze — Disegno di Legge di Bilancio 2027: misure per famiglie, lavoro e imprese",
+    ente: "MEF",
+    url: "https://www.mef.gov.it/focus/Disegno-di-Legge-di-Bilancio-2027/",
+    category: "soldi",
+    type: "ente istituzionale"
   }
 };

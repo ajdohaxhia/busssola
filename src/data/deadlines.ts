@@ -169,6 +169,23 @@ export const CIVIC_DEADLINES: CivicDeadline[] = [
         lastReviewedAt: D,
     },
     {
+        id: 'campagna-red-inps-2026',
+        date: '2027-03-01',
+        title: 'Campagna RED Ordinaria 2026 (redditi 2025): dichiarazione reddituale obbligatoria pensionati',
+        category: 'inps',
+        entity: 'INPS',
+        summary: 'Termine ultimo per la trasmissione della dichiarazione RED e dichiarazioni di responsabilità (redditi 2025) per i pensionati con prestazioni collegate al reddito (integrazione al minimo, maggiorazioni sociali, assegno sociale). Messaggio INPS n. 3697/2026.',
+        whoIsAffected: 'Pensionati titolari di prestazioni integrative o assistenziali legate al reddito che hanno redditi non rilevati dal Fisco o non presentano il 730.',
+        whatToDo: 'Accedi al servizio RED Precompilato su inps.it con CIE o SPID, oppure rivolgiti gratuitamente a un CAF o patronato convenzionato.',
+        whatHappensIfNot: 'Sospensione dell’erogazione della prestazione previdenziale o assistenziale per 60 giorni e successiva revoca definitiva con recupero dell’indebito.',
+        guideLink: '/moduli/modulo-27-pensioni-previdenza',
+        newsLink: '/novita/inps-campagna-red-ordinaria-2026-messaggio-3697-scadenza-marzo-2027',
+        sources: [
+            src('Messaggio INPS n. 3697 del 12/11/2026 — Campagna RED 2026', 'INPS', 'https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.messaggi.2026.11.messaggio-numero-3697-del-12-11-2026.html'),
+        ],
+        lastReviewedAt: '2026-11-15',
+    },
+    {
         id: 'certificazione-unica-2027',
         date: '2027-03-16',
         title: 'Certificazione Unica (CU 2027): rilascio da datori di lavoro e INPS',

@@ -319,6 +319,9 @@ async function main() {
         // Skip very short/garbage titles
         if (item.title.length < 15) continue
 
+        // Skip local-only city news (AGENTS.md: divieto di doorway e notizie per singola città)
+        if (/Today$/i.test(rss.source) || /\b(a milano|a roma|a napoli|a torino|a novara|a bologna|a firenze|a palermo|a bari)\b/i.test(item.title)) continue
+
         seenSlugs.add(item.slug)
         newItems.push(item)
 
