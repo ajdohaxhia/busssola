@@ -14,6 +14,78 @@ const src = (title: string, organization: string, url: string, usedFor = 'Allert
 })
 
 export const CIVIC_NEWS: NewsItem[] = [
+    // ── Auto-imported 2026-11-15 ──────────────────────────
+    {
+        slug: 'bollo-auto-imu-e-multe-arretrate-come-funziona-lo-sconto-sulle-cartelle-fino-al-',
+        title: 'Bollo auto, Imu e multe arretrate: come funziona lo sconto sulle cartelle fino al 2023',
+        date: '2026-11-12',
+        summary: 'Bollo auto, Imu e multe arretrate: come funziona lo sconto sulle cartelle fino al 2023. Fonte: RomaToday.',
+        body: [
+            'Bollo auto, Imu e multe arretrate: come funziona lo sconto sulle cartelle fino al 2023.',
+        ],
+        whatChanged: [
+            'Bollo auto, Imu e multe arretrate: come funziona lo sconto sulle cartelle fino al 2023',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Bollo auto, Imu e multe arretrate: come funziona lo sconto sulle cartelle fino al 2023 - RomaToday', 'RomaToday', 'https://news.google.com/rss/articles/CBMiggFBVV95cUxONzVKTkhsN25XbHM1UkNRd3Jxb2VWNFU3YXNFUng1TExKTEJCSkptRWZ4cldEZlliTkxPNzZSY0ZCSndXcllkNllfM183Qm1mT21pcXRlUHMzQVZCRlE0NVN2U0xncUM5VFlfcWFtNTNpdHdzbWNRTlVCQ0FkMEZ3SVFB?oc=5', 'Bollo auto, Imu e multe arretrate: come funziona lo sconto sulle cartelle fino al 2023 - RomaToday', '2026-11-12'),
+        ],
+        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-12',
+    },
+    {
+        slug: 'rottamazione-quinquies-e-non-solo-in-arrivo-un-mix-di-scadenze-per-la-pace-fisca',
+        title: 'Rottamazione quinquies e non solo: in arrivo un mix di scadenze per la pace fiscale',
+        date: '2026-11-14',
+        summary: 'Rottamazione quinquies e non solo: in arrivo un mix di scadenze per la pace fiscale. Fonte: informazionefiscale.it.',
+        body: [
+            'Rottamazione quinquies e non solo: in arrivo un mix di scadenze per la pace fiscale.',
+        ],
+        whatChanged: [
+            'Rottamazione quinquies e non solo: in arrivo un mix di scadenze per la pace fiscale',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Rottamazione quinquies e non solo: in arrivo un mix di scadenze per la pace fiscale - informazionefiscale.it', 'informazionefiscale.it', 'https://news.google.com/rss/articles/CBMirgFBVV95cUxPb1FhVFR0c0ptMEZMRmZXOGoyZlZ5WUo0WjAxMWFqcnFXSGFGZHdKbXZDNDVpY2cwcENTdWYxVHlCTVNOZEwzNmVQWm1HdzdWMmZuQkFoM253QUdER1lmMkRISkRCenhENzRDX05qbEZ3RE94UEdJS3hmNnp0aklDa1hDQk11VFVGV3ZhOVBnaDc2eHNUYmhXQmprV1JFOXFIODZndXJKbUdTWXJRa0E?oc=5', 'Rottamazione quinquies e non solo: in arrivo un mix di scadenze per la pace fiscale - informazionefiscale.it', '2026-11-14'),
+        ],
+        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-14',
+    },
+    {
+        slug: 'quanto-costa-davvero-laffitto-a-novara-la-mappa-quartiere-per-quartiere-novarato',
+        title: 'Quanto costa davvero l\'affitto a Novara: la mappa quartiere per quartiere',
+        date: '2026-11-14',
+        summary: 'Quanto costa davvero l\'affitto a Novara: la mappa quartiere per quartiere. Fonte: NovaraToday.',
+        body: [
+            'Quanto costa davvero l\'affitto a Novara: la mappa quartiere per quartiere.',
+        ],
+        whatChanged: [
+            'Quanto costa davvero l\'affitto a Novara: la mappa quartiere per quartiere',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Quanto costa davvero l\'affitto a Novara: la mappa quartiere per quartiere - NovaraToday', 'NovaraToday', 'https://news.google.com/rss/articles/CBMinAFBVV95cUxNNDREb05rTXRqMUQ5T25SUzZlVUl1dU1CcEEtUHdxMnZQVDkzX05ZNVhveEpvVkhZQjgxblVGOWlMeE1DLUM5UmxRUEVIXzNjOVVpUHVsdWZkemF1WmNKVy0yZXN5WjdIUktBelpYeGdEZmloN0xSZUFOUVRRODJfZ2pXX2FvZllTa0JUV0Q5TlJtaVFUMXNxZWRQZTU?oc=5', 'Quanto costa davvero l\'affitto a Novara: la mappa quartiere per quartiere - NovaraToday', '2026-11-14'),
+        ],
+        relatedGuides: ['/moduli/modulo-04-casa-affitto'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-14',
+    },
+    // ── End auto-import ──────────────────────────────────────────────
+
     // ── Auto-imported 2026-11-14 ──────────────────────────
     {
         slug: 'pensioni-ape-sociale-esclusi-i-contributivi-puri-chi-sono-e-perche-inps-respinge',
