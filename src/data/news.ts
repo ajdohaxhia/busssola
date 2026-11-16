@@ -14,6 +14,101 @@ const src = (title: string, organization: string, url: string, usedFor = 'Allert
 })
 
 export const CIVIC_NEWS: NewsItem[] = [
+    // ── Auto-imported 2026-11-16 ──────────────────────────
+    {
+        slug: 'pensioni-ape-sociale-esclusi-i-contributivi-puri-chi-sono-e-perche-inps-respinge',
+        title: 'Pensioni, Ape Sociale: esclusi i contributivi puri. Chi sono e perché Inps respingerà le domande',
+        date: '2026-11-13',
+        summary: 'Pensioni, Ape Sociale: esclusi i contributivi puri. Chi sono e perché Inps respingerà le domande. Fonte: Corriere Adriatico.',
+        body: [
+            'Pensioni, Ape Sociale: esclusi i contributivi puri. Chi sono e perché Inps respingerà le domande.',
+        ],
+        whatChanged: [
+            'Pensioni, Ape Sociale: esclusi i contributivi puri. Chi sono e perché Inps respingerà le domande',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Pensioni, Ape Sociale: esclusi i contributivi puri. Chi sono e perché Inps respingerà le domande - Corriere Adriatico', 'Corriere Adriatico', 'https://news.google.com/rss/articles/CBMixwFBVV95cUxOXzYwWEQtWmo1bVZzS2JiRUNRMlFDM21feWVLVXB3clFrV3V3eWhveE5ialBuMUIzQWt5R2JhNkhPM3dUMVJtUFVScWtqNENZdlR4cHY2c2pSOW1xSUxSWXVCWHRaVy1VRU9jNmlUS3lhMV9yUlV3NmN5Y0ZRMjN4bllBSDZhSHMyMDBVeXpBR2tPRWFPb3FxYi1JZEd0RTl1aDY5TTRSS3dHb3BPNnItTFJ3U2lVUko0M1dRa3V4NkpNTVBXX2ln0gHGAUFVX3lxTFBUYUtGN0hWZFNQM1hSRXRBTlFObXQxUndpWktjRVRHN2xobFN2YUcwd3QzV0pOME1oZHVHeng5eEdXN2l0ZHl2OUhEQnVDU0NBS3Ywa3c5bXBJNm1QUlVSb1BLdV9GaC1sTHE5bV8yVHVkUGtvc2Fja01BNEdycFNNYUhnNEVtMzBVSDM3dzRmRlEtRTFJTmRmUk03VWpuMlVaUXphdDRlRTI3bGMyT01xcnBqMUNKdGQwZWZuZldGb0poa0xIUQ?oc=5', 'Pensioni, Ape Sociale: esclusi i contributivi puri. Chi sono e perché Inps respingerà le domande - Corriere Adriatico', '2026-11-13'),
+        ],
+        relatedGuides: ['/moduli/modulo-27-pensioni-previdenza'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-13',
+    },
+    {
+        slug: 'rimborso-irpef-con-il-modello-redditi-2026-tempi-di-accredito-e-controlli-dellag',
+        title: 'Rimborso Irpef con il modello Redditi 2026, tempi di accredito e controlli dell\'Agenzia delle Entrate',
+        date: '2026-11-16',
+        summary: 'Rimborso Irpef con il modello Redditi 2026, tempi di accredito e controlli dell\'Agenzia delle Entrate. Fonte: QuiFinanza.',
+        body: [
+            'Rimborso Irpef con il modello Redditi 2026, tempi di accredito e controlli dell\'Agenzia delle Entrate.',
+        ],
+        whatChanged: [
+            'Rimborso Irpef con il modello Redditi 2026, tempi di accredito e controlli dell\'Agenzia delle Entrate',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Rimborso Irpef con il modello Redditi 2026, tempi di accredito e controlli dell\'Agenzia delle Entrate - QuiFinanza', 'QuiFinanza', 'https://news.google.com/rss/articles/CBMihAFBVV95cUxPX1poRWFsbWs4MUdnblFIUng0RU85eVozd2ktNTB6OFhZWXB4RF9DM1ROdW9TZ0RHREJETkNKYmQzOUtER2gtaGhTVHM4b0phS0pfTjFNV3NJblpMbzF4eE5GYzdtLWxOcmR5aGVWYTJQU3N5WEFRbWxoN2RXcERucjViZEvSAYoBQVVfeXFMTmkxRzd0UExGNzNiZjB5dk15MVJkVzFmTGhHR2pfZWk4Q0thR2puaFRxblB0TTFxRE1TQmZaSFFDeTMzYnZ1NE91TlZNZGVKS0xSaldRUUpNTHhPYndUaXIxUFY0LU0xWVE0cGttU0E3ejZDVW00ZFlfaEtrRUFwNHI3WUlSUFc3aGpB?oc=5', 'Rimborso Irpef con il modello Redditi 2026, tempi di accredito e controlli dell\'Agenzia delle Entrate - QuiFinanza', '2026-11-16'),
+        ],
+        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-16',
+    },
+    {
+        slug: 'ravvedimento-per-aderenti-cpb-2026-2027-i-codici-tributo-fisco-e-tasse-20261111',
+        title: 'Ravvedimento per aderenti CPB 2026-2027: i codici tributo',
+        date: '2026-11-11',
+        summary: 'Ravvedimento per aderenti CPB 2026-2027: i codici tributo. Fonte: Fisco e Tasse.',
+        body: [
+            'Ravvedimento per aderenti CPB 2026-2027: i codici tributo.',
+        ],
+        whatChanged: [
+            'Ravvedimento per aderenti CPB 2026-2027: i codici tributo',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Ravvedimento per aderenti CPB 2026-2027: i codici tributo - Fisco e Tasse', 'Fisco e Tasse', 'https://news.google.com/rss/articles/CBMitAFBVV95cUxQckFONjRCY3dGT0lhM0JKUDdQUC1VU3JOMU44QTQ1TmduUzRhd0wwTnhBX3FaNG9LTHFQLWdJVmxOMVRRTWZIbjZoZDdqaVFVbURPei1ja0FGdkxMX3hHZVBYZzJjR1F3aWRtTGtwNnJzMGJGVnpKbXNrNHMxcHNaNC1WQlE3QnVMbmdLYmJ4MnFiSFd5SlMtUko4bVJXT1lPMElhUnVGejJscjQ2VTIxVW84V0c?oc=5', 'Ravvedimento per aderenti CPB 2026-2027: i codici tributo - Fisco e Tasse', '2026-11-11'),
+        ],
+        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-11',
+    },
+    {
+        slug: 'card-anziani-rebus-sulluso-dei-300-euro-ma-intanto-il-ministero-della-salute-res',
+        title: 'Card anziani, rebus sull\'uso dei 300 euro ma intanto il ministero della Salute resta fuori',
+        date: '2026-11-09',
+        summary: 'Card anziani, rebus sull\'uso dei 300 euro ma intanto il ministero della Salute resta fuori. Fonte: Il Sole 24 ORE.',
+        body: [
+            'Card anziani, rebus sull\'uso dei 300 euro ma intanto il ministero della Salute resta fuori.',
+        ],
+        whatChanged: [
+            'Card anziani, rebus sull\'uso dei 300 euro ma intanto il ministero della Salute resta fuori',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Card anziani, rebus sull\'uso dei 300 euro ma intanto il ministero della Salute resta fuori - Il Sole 24 ORE', 'Il Sole 24 ORE', 'https://news.google.com/rss/articles/CBMiuAFBVV95cUxNN0h4VmFjc1FBM3JoY3VQbTBGZGRIekxDbDFoS3VFbVRPV0gtLVh4a3RHNmpVWXhqRGkyZDlRajJJaDZXd0hPenFlNU4yZnhVNE12YmVnR0M3ZXZpcFQ0ZXZEQWFxbnBWZzZTRGVqd0dtcmhMeF9nSXJZWHhQMV9TMy1zSWZQTlBZR1Ixb0VoLUphUWNiT2ltSEs5dFRLNTBLS1hBeEhJZEltVl9jTTlNeXAyT1VRWHRW?oc=5', 'Card anziani, rebus sull\'uso dei 300 euro ma intanto il ministero della Salute resta fuori - Il Sole 24 ORE', '2026-11-09'),
+        ],
+        relatedGuides: ['/moduli/modulo-09-sanita-salute'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-09',
+    },
+    // ── End auto-import ──────────────────────────────────────────────
+
     {
         slug: 'inps-campagna-red-ordinaria-2026-messaggio-3697-scadenza-marzo-2027',
         title: 'Campagna RED Ordinaria 2026 INPS: via alle dichiarazioni reddituali per pensionati, scadenza 1° marzo 2027',
