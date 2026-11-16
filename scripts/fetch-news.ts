@@ -154,15 +154,20 @@ function toISODate(pubDate: string): string {
 
 const NEWS_FILE = resolve(import.meta.dirname ?? __dirname, '../src/data/news.ts')
 
-function getExistingSlugs(): Set<string> {
+function getExistingSlugsAndTitles(): { slugs: Set<string>; titleRoots: string[] } {
     const content = readFileSync(NEWS_FILE, 'utf-8')
     const slugs = new Set<string>()
-    const regex = /slug:\s*['"`]([^'"`]+)['"`]/g
+    const titleRoots: string[] = []
+    const slugRegex = /slug:\s*['"`]([^'"`]+)['"`]/g
     let m: RegExpExecArray | null
-    while ((m = regex.exec(content)) !== null) {
+    while ((m = slugRegex.exec(content)) !== null) {
         slugs.add(m[1])
     }
-    return slugs
+    const titleRegex = /title:\s*['"`]([^'"`]+)['"`]/g
+    while ((m = titleRegex.exec(content)) !== null) {
+        titleRoots.push(slugify(m[1]).slice(0, 35))
+    }
+    return { slugs, titleRoots }
 }
 
 interface NewNewsItem {
@@ -295,8 +300,8 @@ async function main() {
 
     console.log(`📡 Fetched ${results.length} raw items from Google News RSS`)
 
-    // 2. Deduplicate against existing slugs
-    const existingSlugs = getExistingSlugs()
+    // 2. Deduplicate against existing slugs and title roots
+    const { slugs: existingSlugs, titleRoots } = getExistingSlugsAndTitles()
     console.log(`📄 Existing news items: ${existingSlugs.size}`)
 
     // Only import news from the last 7 days
@@ -315,6 +320,10 @@ async function main() {
 
         // Skip if slug already exists or already queued
         if (existingSlugs.has(item.slug) || seenSlugs.has(item.slug)) continue
+
+        // Skip if title root matches an existing story
+        const itemRoot = slugify(item.title).slice(0, 35)
+        if (titleRoots.some(r => r.length > 15 && (itemRoot.includes(r) || r.includes(itemRoot)))) continue
 
         // Skip very short/garbage titles
         if (item.title.length < 15) continue

@@ -1768,5 +1768,53 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     url: "https://www.mef.gov.it/focus/Disegno-di-Legge-di-Bilancio-2027/",
     category: "soldi",
     type: "ente istituzionale"
+  },
+  mimOrganiciScuola2026: {
+    id: 'mimOrganiciScuola2026',
+    name: "Ministero dell'Istruzione e del Merito — Salvaguardia e contingente organici docenti e personale ATA",
+    ente: "MIM",
+    url: "https://www.miur.gov.it/web/guest/-/organici-scuola-comunicazioni-istituzionali",
+    category: "scuola",
+    type: "ente istituzionale"
+  },
+  adeRimborsiModelloRedditi2026: {
+    id: 'adeRimborsiModelloRedditi2026',
+    name: "Agenzia delle Entrate — Istruzioni e verifiche per l'erogazione dei rimborsi fiscali Modello Redditi",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/schede/rimborsi",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  mitCodiceDellaStrada2026: {
+    id: 'mitCodiceDellaStrada2026',
+    name: "Ministero delle Infrastrutture e dei Trasporti — Disciplina Codice della Strada, patenti e sicurezza stradale",
+    ente: "MIT",
+    url: "https://www.mit.gov.it/temi/mobilita-e-sicurezza-stradale",
+    category: "mobilita",
+    type: "ente istituzionale"
+  },
+  areraDecretoBollette2026: {
+    id: 'areraDecretoBollette2026',
+    name: "ARERA — Aggiornamento tariffe di tutela della vulnerabilità e verifiche sul mercato libero dell'energia",
+    ente: "ARERA",
+    url: "https://www.arera.it/consumatori",
+    category: "consumatori",
+    type: "ente istituzionale"
+  },
+  agenasPnlaListeAttesa2026: {
+    id: 'agenasPnlaListeAttesa2026',
+    name: "Agenas — Monitoraggio Piattaforma Nazionale Liste di Attesa (PNLA) e Fascicolo Sanitario Elettronico",
+    ente: "Agenas",
+    url: "https://www.agenas.gov.it/",
+    category: "sanita",
+    type: "ente istituzionale"
+  },
+  poliziaPostaleSmishingNovembre2026: {
+    id: 'poliziaPostaleSmishingNovembre2026',
+    name: "Polizia Postale — Allerta smishing e furto credenziali tramite falsi SMS INPS e Agenzia delle Entrate",
+    ente: "Polizia Postale",
+    url: "https://www.commissariatodips.it/notizie/articolo/allerta-smishing-falsi-sms-inps-e-fisco/index.html",
+    category: "sicurezza",
+    type: "ente istituzionale"
   }
 };
