@@ -14,6 +14,124 @@ const src = (title: string, organization: string, url: string, usedFor = 'Allert
 })
 
 export const CIVIC_NEWS: NewsItem[] = [
+    // ── Auto-imported 2026-11-17 ──────────────────────────
+    {
+        slug: 'pensioni-ape-sociale-esclusi-i-contributivi-puri-chi-sono-e-perche-inps-respinge',
+        title: 'Pensioni, Ape Sociale: esclusi i contributivi puri. Chi sono e perché Inps respingerà le domande',
+        date: '2026-11-13',
+        summary: 'Pensioni, Ape Sociale: esclusi i contributivi puri. Chi sono e perché Inps respingerà le domande. Fonte: Corriere Adriatico.',
+        body: [
+            'Pensioni, Ape Sociale: esclusi i contributivi puri. Chi sono e perché Inps respingerà le domande.',
+        ],
+        whatChanged: [
+            'Pensioni, Ape Sociale: esclusi i contributivi puri. Chi sono e perché Inps respingerà le domande',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Pensioni, Ape Sociale: esclusi i contributivi puri. Chi sono e perché Inps respingerà le domande - Corriere Adriatico', 'Corriere Adriatico', 'https://news.google.com/rss/articles/CBMixwFBVV95cUxOXzYwWEQtWmo1bVZzS2JiRUNRMlFDM21feWVLVXB3clFrV3V3eWhveE5ialBuMUIzQWt5R2JhNkhPM3dUMVJtUFVScWtqNENZdlR4cHY2c2pSOW1xSUxSWXVCWHRaVy1VRU9jNmlUS3lhMV9yUlV3NmN5Y0ZRMjN4bllBSDZhSHMyMDBVeXpBR2tPRWFPb3FxYi1JZEd0RTl1aDY5TTRSS3dHb3BPNnItTFJ3U2lVUko0M1dRa3V4NkpNTVBXX2ln0gHGAUFVX3lxTFBUYUtGN0hWZFNQM1hSRXRBTlFObXQxUndpWktjRVRHN2xobFN2YUcwd3QzV0pOME1oZHVHeng5eEdXN2l0ZHl2OUhEQnVDU0NBS3Ywa3c5bXBJNm1QUlVSb1BLdV9GaC1sTHE5bV8yVHVkUGtvc2Fja01BNEdycFNNYUhnNEVtMzBVSDM3dzRmRlEtRTFJTmRmUk03VWpuMlVaUXphdDRlRTI3bGMyT01xcnBqMUNKdGQwZWZuZldGb0poa0xIUQ?oc=5', 'Pensioni, Ape Sociale: esclusi i contributivi puri. Chi sono e perché Inps respingerà le domande - Corriere Adriatico', '2026-11-13'),
+        ],
+        relatedGuides: ['/moduli/modulo-27-pensioni-previdenza'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-13',
+    },
+    {
+        slug: 'ravvedimento-per-aderenti-cpb-2026-2027-i-codici-tributo-fisco-e-tasse-20261111',
+        title: 'Ravvedimento per aderenti CPB 2026-2027: i codici tributo',
+        date: '2026-11-11',
+        summary: 'Ravvedimento per aderenti CPB 2026-2027: i codici tributo. Fonte: Fisco e Tasse.',
+        body: [
+            'Ravvedimento per aderenti CPB 2026-2027: i codici tributo.',
+        ],
+        whatChanged: [
+            'Ravvedimento per aderenti CPB 2026-2027: i codici tributo',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Ravvedimento per aderenti CPB 2026-2027: i codici tributo - Fisco e Tasse', 'Fisco e Tasse', 'https://news.google.com/rss/articles/CBMitAFBVV95cUxQckFONjRCY3dGT0lhM0JKUDdQUC1VU3JOMU44QTQ1TmduUzRhd0wwTnhBX3FaNG9LTHFQLWdJVmxOMVRRTWZIbjZoZDdqaVFVbURPei1ja0FGdkxMX3hHZVBYZzJjR1F3aWRtTGtwNnJzMGJGVnpKbXNrNHMxcHNaNC1WQlE3QnVMbmdLYmJ4MnFiSFd5SlMtUko4bVJXT1lPMElhUnVGejJscjQ2VTIxVW84V0c?oc=5', 'Ravvedimento per aderenti CPB 2026-2027: i codici tributo - Fisco e Tasse', '2026-11-11'),
+        ],
+        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-11',
+    },
+    {
+        slug: 'rimborso-irpef-con-il-modello-redditi-2026-tempi-di-accredito-e-controlli-dellag',
+        title: 'Rimborso Irpef con il modello Redditi 2026, tempi di accredito e controlli dell\'Agenzia delle Entrate',
+        date: '2026-11-16',
+        summary: 'Rimborso Irpef con il modello Redditi 2026, tempi di accredito e controlli dell\'Agenzia delle Entrate. Fonte: QuiFinanza.',
+        body: [
+            'Rimborso Irpef con il modello Redditi 2026, tempi di accredito e controlli dell\'Agenzia delle Entrate.',
+        ],
+        whatChanged: [
+            'Rimborso Irpef con il modello Redditi 2026, tempi di accredito e controlli dell\'Agenzia delle Entrate',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Rimborso Irpef con il modello Redditi 2026, tempi di accredito e controlli dell\'Agenzia delle Entrate - QuiFinanza', 'QuiFinanza', 'https://news.google.com/rss/articles/CBMihAFBVV95cUxPX1poRWFsbWs4MUdnblFIUng0RU85eVozd2ktNTB6OFhZWXB4RF9DM1ROdW9TZ0RHREJETkNKYmQzOUtER2gtaGhTVHM4b0phS0pfTjFNV3NJblpMbzF4eE5GYzdtLWxOcmR5aGVWYTJQU3N5WEFRbWxoN2RXcERucjViZEvSAYoBQVVfeXFMTmkxRzd0UExGNzNiZjB5dk15MVJkVzFmTGhHR2pfZWk4Q0thR2puaFRxblB0TTFxRE1TQmZaSFFDeTMzYnZ1NE91TlZNZGVKS0xSaldRUUpNTHhPYndUaXIxUFY0LU0xWVE0cGttU0E3ejZDVW00ZFlfaEtrRUFwNHI3WUlSUFc3aGpB?oc=5', 'Rimborso Irpef con il modello Redditi 2026, tempi di accredito e controlli dell\'Agenzia delle Entrate - QuiFinanza', '2026-11-16'),
+        ],
+        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-16',
+    },
+    {
+        slug: 'manovra-medici-contro-card-anziani-il-5-dicembre-saremo-in-piazza-sky-tg24-20261',
+        title: 'Manovra, medici contro card anziani: \"Il 5 dicembre saremo in piazza\"',
+        date: '2026-11-16',
+        summary: 'Manovra, medici contro card anziani: \"Il 5 dicembre saremo in piazza\". Fonte: Sky TG24.',
+        body: [
+            'Manovra, medici contro card anziani: \"Il 5 dicembre saremo in piazza\".',
+        ],
+        whatChanged: [
+            'Manovra, medici contro card anziani: \"Il 5 dicembre saremo in piazza\"',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Manovra, medici contro card anziani: \"Il 5 dicembre saremo in piazza\" - Sky TG24', 'Sky TG24', 'https://news.google.com/rss/articles/CBMiggFBVV95cUxQeDh4YnQwcmxBXzRvU1J2UmJ1NmkycmxhSVhsUk9TNHRvR1hPZmxRa3pGLVp4S3ZhbzBNR0Q2NHl0eDUyVzZuZ094RmVCT3cweXoweE5xYmZZSkcwVmlpNlN5aFI0NzhJNElZVzBWZ0xtcWxjN05LVXFMN2Jkb2I4M3dB?oc=5', 'Manovra, medici contro card anziani: \"Il 5 dicembre saremo in piazza\" - Sky TG24', '2026-11-16'),
+        ],
+        relatedGuides: ['/moduli/modulo-09-sanita-salute'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-16',
+    },
+    {
+        slug: 'sanita-21esimo-forum-risk-management-di-arezzo-lssn-dopo-il-pnrr-corriere-livorn',
+        title: 'Sanità, 21esimo Forum Risk Management di Arezzo, \'l\'Ssn dopo il Pnrr\'',
+        date: '2026-11-17',
+        summary: 'Sanità, 21esimo Forum Risk Management di Arezzo, \'l\'Ssn dopo il Pnrr\'. Fonte: Corriere Livornese.',
+        body: [
+            'Sanità, 21esimo Forum Risk Management di Arezzo, \'l\'Ssn dopo il Pnrr\'.',
+        ],
+        whatChanged: [
+            'Sanità, 21esimo Forum Risk Management di Arezzo, \'l\'Ssn dopo il Pnrr\'',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Sanità, 21esimo Forum Risk Management di Arezzo, \'l\'Ssn dopo il Pnrr\' - Corriere Livornese', 'Corriere Livornese', 'https://news.google.com/rss/articles/CBMiwgFBVV95cUxORnpfdTM3cDJSTjJqR3FjUWJnTGgtMEwycDVHUWc2THZZMy1XcDhVZnRBRzV1NXotN3czSGZOMTA5eGZVWS1UTUhCc3FkQ0FsZU5EUHVMRkx3cEdfV2xlN3FJUHNrSnc3YkNLMTI2M0ItMVd6UEhVZG1pakVyUnJ4d0ZHOGktMFgtUndoQ2NJY2hwekNocXZQMkhXWGI0RV9wOHBSZUZuMDlma1A0OUhyNFlJMnpqVFFmcmphcVpGbEVUdw?oc=5', 'Sanità, 21esimo Forum Risk Management di Arezzo, \'l\'Ssn dopo il Pnrr\' - Corriere Livornese', '2026-11-17'),
+        ],
+        relatedGuides: ['/moduli/modulo-09-sanita-salute'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-17',
+    },
+    // ── End auto-import ──────────────────────────────────────────────
+
     {
         slug: 'scuola-governo-ritira-tagli-organico-docenti-ata-manovra-2027',
         title: 'Scuola, dietrofront del Governo sui tagli agli organici: salvaguardati quasi 7.000 posti tra docenti e personale ATA',
