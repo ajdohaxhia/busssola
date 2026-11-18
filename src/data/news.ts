@@ -14,6 +14,32 @@ const src = (title: string, organization: string, url: string, usedFor = 'Allert
 })
 
 export const CIVIC_NEWS: NewsItem[] = [
+    // ── Auto-imported 2026-11-18 ──────────────────────────
+    {
+        slug: 'cartelle-esattoriali-dal-2027-cambiano-le-regole-per-le-rate-sky-tg24-20261117',
+        title: 'Cartelle esattoriali, dal 2027 cambiano le regole per le rate',
+        date: '2026-11-17',
+        summary: 'Cartelle esattoriali, dal 2027 cambiano le regole per le rate. Fonte: Sky TG24.',
+        body: [
+            'Cartelle esattoriali, dal 2027 cambiano le regole per le rate.',
+        ],
+        whatChanged: [
+            'Cartelle esattoriali, dal 2027 cambiano le regole per le rate',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Cartelle esattoriali, dal 2027 cambiano le regole per le rate - Sky TG24', 'Sky TG24', 'https://news.google.com/rss/articles/CBMif0FVX3lxTE1WZ3NqazZMRDRTc2xDNTVxeUJ1MEI0Z25ZekY4SnZTQTZlcGxEYmpRZTRTZTFkalNhVXU2SW4zd0lOUkFMS0hhd1pYRVlCNlJDQmNValJJX1h1SHhyaFJ3Z1lsNEpLZGhfaVVDRzlMQnhBaVk2MUl0dUdjeUVmcDA?oc=5', 'Cartelle esattoriali, dal 2027 cambiano le regole per le rate - Sky TG24', '2026-11-17'),
+        ],
+        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-17',
+    },
+    // ── End auto-import ──────────────────────────────────────────────
+
     // ── Auto-imported 2026-11-17 ──────────────────────────
     {
         slug: 'pensioni-ape-sociale-esclusi-i-contributivi-puri-chi-sono-e-perche-inps-respinge',
