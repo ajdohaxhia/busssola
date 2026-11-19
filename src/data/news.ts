@@ -14,6 +14,32 @@ const src = (title: string, organization: string, url: string, usedFor = 'Allert
 })
 
 export const CIVIC_NEWS: NewsItem[] = [
+    // ── Auto-imported 2026-11-19 ──────────────────────────
+    {
+        slug: 'riscossione-debiti-dal-2027-rate-fino-a-8-anni-senza-documenti-quando-conviene-f',
+        title: 'Riscossione debiti, dal 2027 rate fino a 8 anni senza documenti: quando conviene fare domanda',
+        date: '2026-11-17',
+        summary: 'Riscossione debiti, dal 2027 rate fino a 8 anni senza documenti: quando conviene fare domanda. Fonte: QuiFinanza.',
+        body: [
+            'Riscossione debiti, dal 2027 rate fino a 8 anni senza documenti: quando conviene fare domanda.',
+        ],
+        whatChanged: [
+            'Riscossione debiti, dal 2027 rate fino a 8 anni senza documenti: quando conviene fare domanda',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Riscossione debiti, dal 2027 rate fino a 8 anni senza documenti: quando conviene fare domanda - QuiFinanza', 'QuiFinanza', 'https://news.google.com/rss/articles/CBMilwFBVV95cUxPZnpDcm9oTVI1Wk9RMDhoZFIyeG9mYXdLZ2V3TFRNaWV5T1k5X2pkd056NFBxUHNDNVRxbkxVMEgxUHJuTGg0MEVPZWhQRVhXOU11LXhXMkxxb1h1UjcySkpTd0NTLUJ0ZnRRcTlqc2cydUotTTIwd2FqRkY3SDA3XzViemtHUHB2aXhFZXZ2WTNweVVLUVlv0gGcAUFVX3lxTFA3N1ZxdlBkODBubE1BZTYtdXZhTldCNllaY0FOSjJBdzRNaUNtWG9Cd1FJTWdpSlExWU45YWUyM2ZodTByVUhsZjVZLUtiX1Q3Tzk2aUVoUzBQZEUzN3BfZ2trRDlLcFRCTlJjSTVoWGpuUnI4TWxtcWdKZmR5TEFudGhrdjhPQmhJWWRxenM4ci16Uld6d0NXS0ZDbQ?oc=5', 'Riscossione debiti, dal 2027 rate fino a 8 anni senza documenti: quando conviene fare domanda - QuiFinanza', '2026-11-17'),
+        ],
+        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-17',
+    },
+    // ── End auto-import ──────────────────────────────────────────────
+
     // ── Auto-imported 2026-11-18 ──────────────────────────
     {
         slug: 'cartelle-esattoriali-dal-2027-cambiano-le-regole-per-le-rate-sky-tg24-20261117',
