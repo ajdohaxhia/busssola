@@ -14,6 +14,55 @@ const src = (title: string, organization: string, url: string, usedFor = 'Allert
 })
 
 export const CIVIC_NEWS: NewsItem[] = [
+    // ── Auto-imported 2026-11-21 ──────────────────────────
+    {
+        slug: 'ernesto-maria-ruffini-piu-uno-no-alla-patrimoniale-non-ha-senso-mettere-altre-im',
+        title: 'Ernesto Maria Ruffini (Più Uno): "No alla patrimoniale, non ha senso mettere altre imposte"',
+        date: '2026-11-21',
+        summary: 'Ernesto Maria Ruffini (Più Uno): "No alla patrimoniale, non ha senso mettere altre imposte". Fonte: HuffPost Italia.',
+        body: [
+            'Ernesto Maria Ruffini (Più Uno): "No alla patrimoniale, non ha senso mettere altre imposte".',
+        ],
+        whatChanged: [
+            'Ernesto Maria Ruffini (Più Uno): "No alla patrimoniale, non ha senso mettere altre imposte"',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Ernesto Maria Ruffini (Più Uno): "No alla patrimoniale, non ha senso mettere altre imposte" - HuffPost Italia', 'HuffPost Italia', 'https://news.google.com/rss/articles/CBMi5AFBVV95cUxPSXRORkVjYVY4akJkQ0M4SDc1UlYxbjFlYV95LVJYRk1xM09uX0xOWlBVbjByOThZWU5qR0VXUVFJMXBnaHhYc3BQa3JaeEo4THM5NlVXb1FaN0ljclFGWVRpU0RJOFhvS2YzSE9sd0h3VFgyUUs2ZmEyRml4SmN1TVEtT2dqSkdBd3laeF9ueF9iMmNYZFdiSFkxSVlBRUc3eWV4aWhMaUFxTFE1ODNONTBhdUpYRkRieHdLUXMtWC0yMVdkMS11VWNvWVh2U0dJSUpGaV92N3hndloyc3Z3Uzk1MkY?oc=5', 'Ernesto Maria Ruffini (Più Uno): "No alla patrimoniale, non ha senso mettere altre imposte" - HuffPost Italia', '2026-11-21'),
+        ],
+        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-21',
+    },
+    {
+        slug: 'rottamazione-quinquies-e-non-solo-in-arrivo-un-mix-di-scadenze-per-la-pace-fisca',
+        title: 'Rottamazione quinquies e non solo: in arrivo un mix di scadenze per la pace fiscale',
+        date: '2026-11-14',
+        summary: 'Rottamazione quinquies e non solo: in arrivo un mix di scadenze per la pace fiscale. Fonte: informazionefiscale.it.',
+        body: [
+            'Rottamazione quinquies e non solo: in arrivo un mix di scadenze per la pace fiscale.',
+        ],
+        whatChanged: [
+            'Rottamazione quinquies e non solo: in arrivo un mix di scadenze per la pace fiscale',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Rottamazione quinquies e non solo: in arrivo un mix di scadenze per la pace fiscale - informazionefiscale.it', 'informazionefiscale.it', 'https://news.google.com/rss/articles/CBMirgFBVV95cUxPb1FhVFR0c0ptMEZMRmZXOGoyZlZ5WUo0WjAxMWFqcnFXSGFGZHdKbXZDNDVpY2cwcENTdWYxVHlCTVNOZEwzNmVQWm1HdzdWMmZuQkFoM253QUdER1lmMkRISkRCenhENzRDX05qbEZ3RE94UEdJS3hmNnp0aklDa1hDQk11VFVGV3ZhOVBnaDc2eHNUYmhXQmprV1JFOXFIODZndXJKbUdTWXJRa0E?oc=5', 'Rottamazione quinquies e non solo: in arrivo un mix di scadenze per la pace fiscale - informazionefiscale.it', '2026-11-14'),
+        ],
+        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-14',
+    },
+    // ── End auto-import ──────────────────────────────────────────────
+
     // ── Auto-imported 2026-11-19 ──────────────────────────
     {
         slug: 'riscossione-debiti-dal-2027-rate-fino-a-8-anni-senza-documenti-quando-conviene-f',
