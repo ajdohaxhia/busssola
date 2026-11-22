@@ -14,6 +14,55 @@ const src = (title: string, organization: string, url: string, usedFor = 'Allert
 })
 
 export const CIVIC_NEWS: NewsItem[] = [
+    // ── Auto-imported 2026-11-22 ──────────────────────────
+    {
+        slug: 'cartelle-esattoriali-a-rate-per-8-anni-senza-presentare-documenti-cosa-cambia-da',
+        title: 'Cartelle esattoriali a rate per 8 anni senza presentare documenti: cosa cambia dal 2027',
+        date: '2026-11-17',
+        summary: 'Cartelle esattoriali a rate per 8 anni senza presentare documenti: cosa cambia dal 2027. Fonte: QuiFinanza.',
+        body: [
+            'Cartelle esattoriali a rate per 8 anni senza presentare documenti: cosa cambia dal 2027.',
+        ],
+        whatChanged: [
+            'Cartelle esattoriali a rate per 8 anni senza presentare documenti: cosa cambia dal 2027',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Cartelle esattoriali a rate per 8 anni senza presentare documenti: cosa cambia dal 2027 - QuiFinanza', 'QuiFinanza', 'https://news.google.com/rss/articles/CBMilwFBVV95cUxPZnpDcm9oTVI1Wk9RMDhoZFIyeG9mYXdLZ2V3TFRNaWV5T1k5X2pkd056NFBxUHNDNVRxbkxVMEgxUHJuTGg0MEVPZWhQRVhXOU11LXhXMkxxb1h1UjcySkpTd0NTLUJ0ZnRRcTlqc2cydUotTTIwd2FqRkY3SDA3XzViemtHUHB2aXhFZXZ2WTNweVVLUVlv?oc=5', 'Cartelle esattoriali a rate per 8 anni senza presentare documenti: cosa cambia dal 2027 - QuiFinanza', '2026-11-17'),
+        ],
+        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-17',
+    },
+    {
+        slug: 'manovra-medici-contro-voucher-anziani-bene-aperture-schillaci-ma-5-dicembre-in-p',
+        title: 'Manovra, medici contro voucher anziani: \"Bene aperture Schillaci ma 5 dicembre in piazza\"',
+        date: '2026-11-16',
+        summary: 'Manovra, medici contro voucher anziani: \"Bene aperture Schillaci ma 5 dicembre in piazza\". Fonte: Sky.',
+        body: [
+            'Manovra, medici contro voucher anziani: \"Bene aperture Schillaci ma 5 dicembre in piazza\".',
+        ],
+        whatChanged: [
+            'Manovra, medici contro voucher anziani: \"Bene aperture Schillaci ma 5 dicembre in piazza\"',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Manovra, medici contro voucher anziani: \"Bene aperture Schillaci ma 5 dicembre in piazza\" - Sky', 'Sky', 'https://news.google.com/rss/articles/CBMiggFBVV95cUxQeDh4YnQwcmxBXzRvU1J2UmJ1NmkycmxhSVhsUk9TNHRvR1hPZmxRa3pGLVp4S3ZhbzBNR0Q2NHl0eDUyVzZuZ094RmVCT3cweXoweE5xYmZZSkcwVmlpNlN5aFI0NzhJNElZVzBWZ0xtcWxjN05LVXFMN2Jkb2I4M3dB?oc=5', 'Manovra, medici contro voucher anziani: \"Bene aperture Schillaci ma 5 dicembre in piazza\" - Sky', '2026-11-16'),
+        ],
+        relatedGuides: ['/moduli/modulo-09-sanita-salute'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-16',
+    },
+    // ── End auto-import ──────────────────────────────────────────────
+
     // ── Auto-imported 2026-11-21 ──────────────────────────
     {
         slug: 'ernesto-maria-ruffini-piu-uno-no-alla-patrimoniale-non-ha-senso-mettere-altre-im',
