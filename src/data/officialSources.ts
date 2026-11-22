@@ -1816,5 +1816,45 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     url: "https://www.commissariatodips.it/notizie/articolo/allerta-smishing-falsi-sms-inps-e-fisco/index.html",
     category: "sicurezza",
     type: "ente istituzionale"
+  },
+  aderRiformaRiscossione2026: {
+    id: 'aderRiformaRiscossione2026',
+    name: "Agenzia delle Entrate-Riscossione — Riforma del sistema di riscossione e dilazione dei pagamenti (D.Lgs. 110/2024)",
+    ente: "Agenzia delle Entrate-Riscossione",
+    url: "https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/rateizzazione/",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  adeIstruzioniSecondoAcconto2026: {
+    id: 'adeIstruzioniSecondoAcconto2026',
+    name: "Agenzia delle Entrate — Chiarimenti sul secondo acconto imposte, metodo storico/previsionale e CPB",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/schede/pagamenti/imposte-sui-redditi-secondo-acconto",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  inpsPrestazioneUniversaleAnziani2026: {
+    id: 'inpsPrestazioneUniversaleAnziani2026',
+    name: "INPS — Prestazione Universale per la non autosufficienza gravissima (D.Lgs. 29/2024)",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/dettaglio-scheda.schede-servizio-strumento.schede-servizi.prestazione-universale-anziani.html",
+    category: "famiglia",
+    type: "servizio ufficiale"
+  },
+  mimIscrizioniScuolaOnline2026: {
+    id: 'mimIscrizioniScuolaOnline2026',
+    name: "Ministero dell'Istruzione e del Merito — Piattaforma Unica e Circolare iscrizioni scolastiche",
+    ente: "MIM",
+    url: "https://unica.istruzione.gov.it/it/orientamento/iscrizioni",
+    category: "scuola",
+    type: "servizio ufficiale"
+  },
+  poliziaPostaleSmishingSpid2026: {
+    id: 'poliziaPostaleSmishingSpid2026',
+    name: "Polizia Postale — Allerta nazionale su smishing e finti allarmi blocco SPID e bonifici",
+    ente: "Polizia Postale",
+    url: "https://www.commissariatodips.it/notizie/articolo/allerta-smishing-falso-blocco-spid-e-conti-bancari/index.html",
+    category: "sicurezza",
+    type: "ente istituzionale"
   }
 };

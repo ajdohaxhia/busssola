@@ -1,6 +1,25 @@
 # Changelog
 
-## [Novità 11 novembre e Calcolatore Tredicesima] - 2026-11-11
+## [Routine Update - Notizie Civiche, Nuove Guide e Moduli] - 2026-11-22
+### Added
+- **Nuova Guida Operativa `/guide/rateizzazione-cartelle/`**: Guida completa alla rateizzazione delle cartelle Agenzia delle Entrate-Riscossione (AdER) secondo il D.Lgs. 110/2024. Tabella comparativa dei piani (ordinario 84/96 rate senza ISEE fino a 120.000€ vs straordinario 120 rate), 4 passi operativi online, sezione "Cosa succede se...", schema `HowTo` e `FAQPage` Schema.org.
+- **Nuovo Hub Guide Civiche `/guide/`**: Directory centralizzata per le guide operative passo-passo di Busssola con schema `CollectionPage`.
+- **5 Notizie Civiche Istituzionali Verificate (20-22 novembre 2026)**:
+  - *Riforma della Riscossione AdER*: dilazione cartelle fino a 84 e 96 rate senza documenti, decadenza all'ottava rata e discarico quinquennale.
+  - *Secondo acconto imposte al 30 novembre 2026*: istruzioni Agenzia delle Entrate, metodo storico vs previsionale, rateizzazione in 5 rate e Concordato Preventivo Biennale (CPB).
+  - *Prestazione Universale Anziani e Sanità*: al via la sperimentazione INPS (fino a 1.380€/mese) per over 80 non autosufficienti gravissimi con ISEE <= 6.000€ e confronto sulle risorse SSN.
+  - *Iscrizioni scolastiche online su Piattaforma Unica*: circolare MIM con istruzioni per le classi prime e criteri deliberati dai Consigli d'Istituto.
+  - *Allerta Sicurezza Polizia Postale*: nuova ondata di smishing e vishing con finti SMS di disattivazione SPID e blocco bonifici.
+- **Fonti Primarie Aggiunte**: registrati in `OFFICIAL_SOURCES` i riferimenti di AdER (Riforma D.Lgs. 110/2024), Agenzia delle Entrate (Acconti e CPB), INPS (Prestazione Universale), MIM (Piattaforma Unica) e Polizia Postale (Smishing SPID).
+
+### Changed
+- **Moduli Didattici Aggiornati**:
+  - *Modulo 28 (Cartelle e riscossione)*: aggiornata la lezione sulla rateizzazione con le nuove soglie di legge (84 rate ordinarie, 96 dal 2027, decadenza dopo 8 rate).
+  - *Modulo 25 (Fisco e cittadini)*: aggiornata la lezione sul secondo acconto al 30 novembre con indicazioni su rateizzazione e CPB.
+  - *Modulo 08 (Scuola e famiglia)*: aggiornate le istruzioni sulle iscrizioni scolastiche tramite Piattaforma Unica.
+  - *Modulo 21 (Anziani e caregiver)*: integrata la lezione sull'accompagnamento con la nuova Prestazione Universale sperimentale.
+- **Statistiche e Manutenzione Sito**: aggiornato `siteStats.ts`, `modules-meta.ts`, search index e feed RSS con data di revisione al 22 novembre 2026.
+
 ### Added
 - **Calcolatore Tredicesima Netta e Gratifica Natalizia `/tool/calcolo-tredicesima/`**: simulatore trasparente con calcolo ratei mensili maturati, contributi IVS 9,19%, ritenute IRPEF con aliquota marginale (spiegando perché sulla tredicesima non si applicano le detrazioni per lavoro dipendente), integrazione con il Bonus Natale fino a 100€ (D.L. 113 e 167/2024), scadenze per settore e FAQ Schema.org.
 - **Novità verificate 11 novembre 2026**:

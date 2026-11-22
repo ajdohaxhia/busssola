@@ -2,7 +2,7 @@ import type { NewsItem, Source } from '@/types'
 
 const D = '2026-10-16'
 const CHECKED = '2026-11-08'
-const TODAY = '2026-11-16'
+const TODAY = '2026-11-22'
 
 const src = (title: string, organization: string, url: string, usedFor = 'Allerta e sicurezza 2026', checkedAt = D): Source => ({
     title,
@@ -233,6 +233,171 @@ export const CIVIC_NEWS: NewsItem[] = [
     },
     // ── End auto-import ──────────────────────────────────────────────
 
+    {
+        slug: 'riforma-riscossione-rate-cartelle-esattoriali-ader-novita-2026-2027',
+        title: 'Riforma della Riscossione: dilazione delle cartelle fino a 84 e 96 rate senza documenti e nuovo discarico automatico',
+        date: '2026-11-21',
+        summary: 'L’Agenzia delle Entrate-Riscossione (AdER) e il MEF riepilogano le modalità attuative del D.Lgs. 110/2024: per i debiti fino a 120.000 euro la rateizzazione ordinaria su semplice richiesta sale a 84 rate mensili (7 anni), estendibile progressivamente a 96 rate per le domande 2027 e fino a 120 rate in caso di difficoltà documentata. Chiarite le condizioni sulla decadenza (dopo 8 rate insolute) e sull’avvio del discarico quinquennale dei ruoli non riscossi.',
+        body: [
+            'In attuazione del Decreto Legislativo 29 luglio 2024 n. 110 (decreto attuativo della delega fiscale per il riordino del sistema nazionale della riscossione), l’Agenzia delle Entrate-Riscossione ha chiarito il calendario operativo e i criteri di concessione della dilazione ordinaria «su semplice richiesta» tramite il servizio online «Rateizza adesso» disponibile nell’area riservata del portale con credenziali SPID, CIE o CNS.',
+            'Per le istanze di rateizzazione presentate a decorrere dagli anni 2025 e 2026, il piano massimo concedibile senza necessità di allegare alcuna certificazione economica (né ISEE per le persone fisiche, né indici di liquidità Alfa per le imprese) è fissato a 84 rate mensili (pari a 7 anni). Per le istanze presentate nel biennio 2027-2028 il limite ordinario salirà a 96 rate mensili (8 anni), per poi raggiungere a regime le 108 rate e fino a 120 rate (10 anni) nel 2029-2030 o in presenza di comprovata e documentata situazione di difficoltà economico-finanziaria.',
+            'La soglia di debito entro la quale è sufficiente la semplice domanda telematica senza allegati resta confermata a 120.000 euro, calcolata cumulativamente per tutte le cartelle e gli avvisi inclusi nella richiesta sommando anche eventuali rateizzazioni pregresse in essere. Oltre i 120.000 euro, il contribuente deve sempre presentare apposita istanza documentata allegando l’attestazione ISEE in corso di validità (per persone fisiche) o i documenti contabili attestanti l’indice di liquidità (per persone giuridiche).',
+            'Sul piano della decadenza dal piano, la riforma consolida una salvaguardia fondamentale: a differenza della rottamazione-quater (in cui il mancato pagamento anche di una sola rata oltre i 5 giorni di tolleranza comporta la revoca automatica dei benefici), nei piani ordinari la decadenza si perfeziona esclusivamente in caso di mancato pagamento di 8 rate, anche non consecutive. Tuttavia, una volta decaduti, l’intero debito residuo diventa immediatamente esigibile e non è più possibile accedere a nuove rateizzazioni per le medesime somme, salvo il versamento integrale delle rate scadute.',
+            'Entra infine a regime il meccanismo del discarico automatico quinquennale dei ruoli non riscossi: i carichi affidati all’AdER che decorsi cinque anni non sono stati riscossi vengono automaticamente restituiti all’ente impositore creditore (Stato, Comuni, INPS), ponendo fine alla proliferazione di carichi inesigibili nel magazzino fiscale.',
+        ],
+        whatChanged: [
+            'Estensione della dilazione ordinaria su semplice richiesta fino a 84 rate mensili (7 anni) e 96 rate dal 2027',
+            'Nessun obbligo di presentare ISEE o attestazioni economico-finanziarie per debiti complessivi fino a 120.000 euro',
+            'Confermata la soglia di decadenza al mancato pagamento di 8 rate, anche non consecutive',
+            'Avvio del discarico automatico dopo 5 anni per i ruoli non riscossi restituiti agli enti impositori',
+        ],
+        whoIsAffected: 'Cittadini, lavoratori dipendenti, autonomi e imprese con cartelle di pagamento e avvisi notificati dall’Agenzia delle Entrate-Riscossione.',
+        whatToDo: [
+            'Accedi all’area riservata di agenziaentrateriscossione.gov.it con SPID o CIE e consulta la tua situazione debitoria complessiva',
+            'Utilizza la funzionalità telematica «Rateizza adesso» per selezionare le cartelle e simulare il piano fino a 84 rate con rata costante o crescente',
+            'Se il debito supera i 120.000 euro o desideri il piano straordinario a 120 rate, richiedi per tempo l’attestazione ISEE al CAF o tramite INPS',
+            'Paga puntualmente le rate con bollettino pagoPA tramite home banking, app o tabaccheria abilitata per evitare la decadenza all’ottava rata insoluta',
+        ],
+        sourceIds: ['aderRiformaRiscossione2026'],
+        sources: [
+            src('Agenzia delle Entrate-Riscossione — Guida alle novità sulla rateizzazione D.Lgs. 110/2024', 'Agenzia delle Entrate-Riscossione', 'https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/rateizzazione/', 'Nuove durate rateizzazioni e soglie di accesso', TODAY),
+            src('Dipartimento delle Finanze — Riordino del sistema nazionale della riscossione', 'MEF', 'https://www.finanze.gov.it/it/Fiscalita-nazionale/', 'Testo normativo D.Lgs. 110/2024 e discarico quinquennale', TODAY),
+        ],
+        relatedGuides: ['/moduli/modulo-28-cartelle-riscossione', '/modelli/rateizzazione-ader', '/guide/rateizzazione-cartelle'],
+        relatedTemplates: ['rateizzazione-ader', 'cartelle-ader'],
+        lastReviewedAt: TODAY,
+    },
+    {
+        slug: 'secondo-acconto-imposte-novembre-2026-istruzioni-ravvedimento-cpb-agenzia-entrate',
+        title: 'Secondo acconto imposte al 30 novembre 2026: istruzioni F24, differimento festivo e ravvedimento per il Concordato Biennale',
+        date: '2026-11-21',
+        summary: 'L’Agenzia delle Entrate pubblica i chiarimenti per il versamento del secondo o unico acconto per IRPEF, IRES, forfettari e cedolare secca. Poiché il 30 novembre cade di lunedì, il termine resta perentorio. Istruzioni dettagliate sul calcolo con metodo storico vs previsionale, sulla facoltà di rateizzazione in 5 rate (gennaio-maggio) per le partite IVA fino a 170.000 euro e sulle maggiorazioni collegate al Concordato Preventivo Biennale.',
+        body: [
+            'Con l’avvicinarsi della scadenza del 30 novembre 2026, l’Agenzia delle Entrate ha diffuso una circolare di riepilogo con le istruzioni operative per il versamento del secondo acconto delle imposte sui redditi, dell’imposta sostitutiva per i forfettari e della cedolare secca sulle locazioni immobiliari. Trattandosi di un giorno feriale (lunedì), il termine non subisce alcun differimento automatico.',
+            'I contribuenti persone fisiche e le imprese possono scegliere tra il metodo storico (100% dell’imposta netta dovuta per l’anno precedente al rigo Differenza) e il metodo previsionale. L’Agenzia richiama espressamente l’attenzione sui profili di responsabilità legati al metodo previsionale: se a consuntivo l’acconto versato dovesse risultare inferiore all’imposta effettivamente dovuta in dichiarazione 2027, scatterà la sanzione tributaria per insufficiente versamento (30%), sanabile solo con ravvedimento operoso spontaneo.',
+            'Viene confermata per i soggetti persone fisiche titolari di partita IVA (che abbiano registrato nel periodo d’imposta precedente ricavi o compensi non superiori a 170.000 euro) la facoltà di rateizzare il secondo acconto in cinque rate mensili di pari importo, scadenti il giorno 16 di ciascun mese da gennaio a maggio 2027. Sulle rate successive alla prima si applica l’interesse forfettario del 4% annuo, senza applicazione di sanzioni e senza necessità di comunicazioni preventive all’Agenzia.',
+            'Per i contribuenti che hanno aderito alla proposta di Concordato Preventivo Biennale (CPB), l’Amministrazione ha confermato le modalità di determinazione della maggiorazione di acconto e le modalità per l’eventuale adesione al ravvedimento speciale collegato per sanare con imposta sostitutiva ridotta i periodi d’imposta 2018-2022.',
+        ],
+        whatChanged: [
+            'Conferma perentoria della scadenza del 30 novembre 2026 per il Modello F24 del secondo acconto',
+            'Istruzioni di sicurezza sul calcolo con metodo storico vs previsionale per prevenire sanzioni del 30%',
+            'Facoltà di dilazione in 5 rate mensili (gennaio-maggio 2027) per persone fisiche P.IVA sotto i 170.000€',
+            'Coordinate operative per il versamento della maggiorazione di acconto per gli aderenti al Concordato Biennale',
+        ],
+        whoIsAffected: 'Lavoratori autonomi, ditte individuali, professionisti con partita IVA forfettaria o ordinaria e proprietari di immobili concessi in locazione con cedolare secca.',
+        whatToDo: [
+            'Verifica l’importo del secondo acconto sul prospetto rilasciato dal commercialista o sulla dichiarazione dei redditi trasmessa',
+            'Predisponi il Modello F24 telematico utilizzando i codici tributo corretti (4034 per IRPEF, 1791 per forfettari, 1841 per cedolare secca)',
+            'Invia il pagamento tramite F24 Web/Online di Agenzia delle Entrate o tramite l’home banking entro lunedì 30 novembre',
+            'Se hai ricavi fino a 170.000 euro e desideri rateizzare in 5 rate, predisponi il primo versamento per il 16 gennaio 2027',
+        ],
+        sourceIds: ['adeIstruzioniSecondoAcconto2026'],
+        sources: [
+            src('Agenzia delle Entrate — Guida e calendario dei pagamenti: secondo acconto imposte', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/schede/pagamenti/imposte-sui-redditi-secondo-acconto', 'Calendario ufficiale e istruzioni F24', TODAY),
+            src('MEF Dipartimento delle Finanze — Disciplina acconti d’imposta e chiarimenti CPB', 'MEF', 'https://www.finanze.gov.it/it/Fiscalita-nazionale/', 'Normativa acconti e aliquote sostitutive', TODAY),
+        ],
+        relatedGuides: ['/guide/f24-acconti', '/moduli/modulo-25-fisco-cittadini', '/moduli/modulo-29-partita-iva-forfettario'],
+        relatedTemplates: [],
+        lastReviewedAt: TODAY,
+    },
+    {
+        slug: 'prestazione-universale-anziani-non-autosufficienti-fondo-sanitario-2026-2027',
+        title: 'Sanità e assistenza: al via la sperimentazione della Prestazione Universale per anziani non autosufficienti e risorse SSN',
+        date: '2026-11-20',
+        summary: 'Il Ministero del Lavoro, della Salute e l’INPS pubblicano i decreti operativi per la nuova «Prestazione Universale» (fino a 1.380 euro mensili comprensivi di indennità di accompagnamento e quota integrativa) a favore degli anziani ultraottantenni gravissimi non autosufficienti con ISEE sociosanitario fino a 6.000 euro. Parallelamente, il Ministero della Salute apre al potenziamento delle risorse per il personale ospedaliero e dei medici di pronto soccorso.',
+        body: [
+            'In attuazione del Decreto Legislativo 15 marzo 2024 n. 29 (Decreto Anziani), il Ministero del Lavoro e delle Politiche Sociali di concerto con il Ministero della Salute e l’INPS ha reso note le modalità attuative della nuova «Prestazione Universale» per il sostegno alla non autosufficienza gravissima, istituita in via sperimentale per il biennio 2025-2026/2027.',
+            'La prestazione è destinata a cittadini con almeno 80 anni di età, già titolari dell’indennità di accompagnamento (o con i requisiti per ottenerla), che presentino un livello di bisogno assistenziale gravissimo (accertato tramite le commissioni mediche integrate INPS con scale di valutazione multidimensionale unificate) e un indicatore ISEE per prestazioni agevolate di natura sociosanitaria non superiore a 6.000 euro annui.',
+            'L’assegno complessivo raggiunge 1.380 euro al mese: include la quota base dell’indennità di accompagnamento (circa 531 euro mensili, erogata monetariamente) e una quota integrativa specifica (assegno di cura fino a 850 euro mensili). Tale quota integrativa è vincolata e subordinata all’acquisto di servizi di assistenza domiciliare erogati da imprese o cooperative accreditate, oppure alla remunerazione di assistenti familiari (badanti) regolarmente assunti con contratto conforme al CCNL del lavoro domestico.',
+            'L’INPS ha specificato che la quota integrativa non potrà essere incassata liberamente o convertita in risparmio: saranno eseguiti controlli periodici di congruità sui contratti di lavoro domestico registrati e sulle fatture dei servizi assistenziali. Sul versante ospedaliero, il Ministero della Salute ha aperto il tavolo negoziale per incrementare l’indennità di pronto soccorso per medici e infermieri del SSN.',
+        ],
+        whatChanged: [
+            'Avvio della sperimentazione INPS della Prestazione Universale per anziani non autosufficienti fino a 1.380€ mensili',
+            'Requisiti di accesso: 80 anni di età compiuti, indennità di accompagnamento e ISEE sociosanitario non superiore a 6.000€',
+            'Quota integrativa di 850€/mese interamente vincolata a badanti con contratto CCNL o servizi domiciliari accreditati',
+            'Tavolo di confronto al Ministero della Salute su assunzioni e valorizzazione economica del personale SSN',
+        ],
+        whoIsAffected: 'Anziani non autosufficienti con oltre 80 anni, caregiver familiari, assistenti familiari regolarmente assunti (badanti) e operatori del settore sociosanitario.',
+        whatToDo: [
+            'Richiedi al CAF o compila online su inps.it la Dichiarazione Sostitutiva Unica per ottenere l’attestazione ISEE sociosanitario (soglia max 6.000€)',
+            'Verifica che il contratto di lavoro della badante sia regolarmente denunciato all’INPS secondo le tabelle retributive del CCNL lavoro domestico',
+            'Presenta la domanda per la Prestazione Universale tramite il portale telematico INPS con SPID o CIE oppure rivolgiti a un Patronato',
+            'Conserva con cura tutti i bollettini contributivi MAV/pagoPA INPS e le buste paga firmate per i controlli di tracciabilità dell’assegno',
+        ],
+        sourceIds: ['inpsPrestazioneUniversaleAnziani2026'],
+        sources: [
+            src('INPS — Prestazione Universale per la non autosufficienza gravissima (D.Lgs. 29/2024)', 'INPS', 'https://www.inps.it/it/it/dettaglio-scheda.schede-servizio-strumento.schede-servizi.prestazione-universale-anziani.html', 'Requisiti sanitari ed economici e quota integrativa', TODAY),
+            src('Ministero del Lavoro e delle Politiche Sociali — Decreto Anziani e politiche per la non autosufficienza', 'MLPS', 'https://www.lavoro.gov.it/temi-e-priorita/politiche-sociali-e-terzo-settore/focus-on/non-autosufficienza', 'Quadro normativo e decreti interministeriali', TODAY),
+        ],
+        relatedGuides: ['/moduli/modulo-21-anziani-caregiver', '/moduli/modulo-31-disabilita-legge-104', '/isee-2027'],
+        relatedTemplates: ['invalidita-caregiver', 'isee-dsu-mini'],
+        lastReviewedAt: TODAY,
+    },
+    {
+        slug: 'iscrizioni-scuola-anno-scolastico-piattaforma-unica-mim-guida-2026-2027',
+        title: 'Iscrizioni scolastiche per l’anno scolastico: circolare MIM e guida alla domanda online su Piattaforma Unica',
+        date: '2026-11-20',
+        summary: 'Il Ministero dell’Istruzione e del Merito (MIM) pubblica la circolare quadro per le iscrizioni alle prime classi della scuola primaria, secondaria di primo e secondo grado e per i corsi di istruzione e formazione professionale (IeFP). Tutte le domande si inoltrano online sulla Piattaforma Unica (unica.istruzione.gov.it) tramite SPID, CIE o eIDAS. Dettagli sul calendario, sui criteri di precedenza delle scuole e sulla scelta dell’insegnamento della religione cattolica.',
+        body: [
+            'Il Ministero dell’Istruzione e del Merito ha trasmesso agli uffici scolastici regionali e a tutti gli istituti comprensivi e d’istruzione superiore la circolare annuale con le istruzioni e il calendario operativo per le iscrizioni scolastiche. La procedura online è obbligatoria per le classi prime di scuola primaria (elementari), scuola secondaria di primo grado (medie) e scuola secondaria di secondo grado (licei, istituti tecnici e professionali statali), oltre che per i percorsi IeFP dei centri di formazione accreditati.',
+            'Tutte le iscrizioni si svolgono all’interno della Piattaforma «Unica» (unica.istruzione.gov.it), la piattaforma digitale unificata istituita dal Ministero che raggruppa gli strumenti di orientamento, il curriculum dello studente e la gestione dei procedimenti amministrativi scolastici. I genitori o i tutori legali accedono alla sezione «Iscrizioni» utilizzando credenziali SPID (Sistema Pubblico di Identità Digitale), Carta d’Identità Elettronica (CIE) oppure credenziali europee eIDAS.',
+            'Il Ministero ha ribadito una regola fondamentale a tutela dell’equità: l’ordine cronologico di invio della domanda non conferisce alcun titolo di priorità o preferenza nell’accoglimento dell’istanza. Le domande inviate il primo giorno e quelle inoltrate l’ultimo giorno della finestra utile vengono valutate con parità di punteggio sulla base esclusiva dei criteri di precedenza stabiliti e deliberati autonomamente dal Consiglio di Istituto di ciascuna scuola (es. fratelli già frequentanti, residenza nel bacino di utenza, impegni lavorativi dei genitori).',
+            'I criteri devono essere pubblicati con debito anticipo sul portale della scuola e su Scuola in Chiaro. I genitori possono indicare nella domanda una prima scuola di preferenza e fino a due scuole secondarie alternative nel caso in cui la scuola scelta registri un numero di domande superiore alla capienza dei plessi. Per la scuola dell’infanzia (materna) la procedura resta cartacea direttamente presso la segreteria dell’istituto.',
+        ],
+        whatChanged: [
+            'Pubblicazione della circolare MIM con il calendario unificato per le iscrizioni scolastiche online',
+            'Accesso centralizzato tramite Piattaforma Unica (unica.istruzione.gov.it) con SPID, CIE o eIDAS',
+            'Parità di trattamento cronologico: nessuna precedenza per chi inoltra la domanda nelle prime ore di apertura',
+            'Obbligo di trasparenza preventiva per le scuole sui criteri di ammissione deliberati dal Consiglio d’Istituto',
+        ],
+        whoIsAffected: 'Genitori e tutori di alunni in età di iscrizione alla prima elementare, prima media e prima superiore; istituti scolastici statali e paritari.',
+        whatToDo: [
+            'Cerca il codice meccanografico delle scuole prescelte (fino a 3 preferenze) sul portale Scuola in Chiaro',
+            'Verifica che le credenziali SPID o CIE di almeno un genitore siano attive e funzionanti',
+            'Accedi a unica.istruzione.gov.it, seleziona la sezione «Iscrizioni» e compila il modulo anagrafico e le opzioni (tempo scuola, religione)',
+            'Invia la domanda telematica entro il termine ministeriale e scarica la ricevuta con il codice identificativo della domanda',
+        ],
+        sourceIds: ['mimIscrizioniScuolaOnline2026'],
+        sources: [
+            src('Ministero dell’Istruzione e del Merito — Piattaforma Unica: portale orientamento e iscrizioni', 'MIM', 'https://unica.istruzione.gov.it/it/orientamento/iscrizioni', 'Circolare ufficiale e guida alla compilazione telematica', TODAY),
+            src('MIM — Scuola in Chiaro: codici meccanografici e criteri delle scuole', 'MIM', 'https://cercalatuascuola.istruzione.it/', 'Ricerca istituti e delibere dei Consigli di Istituto', TODAY),
+        ],
+        relatedGuides: ['/moduli/modulo-08-scuola-famiglia', '/scuole'],
+        relatedTemplates: [],
+        lastReviewedAt: TODAY,
+    },
+    {
+        slug: 'polizia-postale-allerta-smishing-falso-blocco-spid-conto-bancario-novembre-2026',
+        title: 'Sicurezza digitale, allerta Polizia Postale: finti SMS di disattivazione SPID e blocco bonifici per rubare credenziali',
+        date: '2026-11-19',
+        summary: 'La Polizia Postale e il CERT-AgID segnalano un’intensa ondata di smishing e vishing che sfrutta pretesti di sicurezza e scadenze di fine anno. Messaggi ingannevoli con mittenti apparentemente istituzionali o bancari avvisano di una presunta «sospensione del profilo SPID» o di un «bonifico bloccato per motivi di sicurezza», invitando a cliccare su portali civetta per carpire credenziali di accesso bancarie e codici OTP monouso.',
+        body: [
+            'Il Centro Nazionale Anticrimine Informatico per la Protezione delle Infrastrutture Critiche (CNAIPIC) della Polizia Postale e il Computer Emergency Response Team dell’Agenzia per l’Italia Digitale (CERT-AgID) hanno diramato un avviso urgente di sicurezza informatica su una campagna di attacchi combinati tramite SMS (smishing) e telefonate ingannevoli (vishing) in rapida diffusione su scala nazionale.',
+            'I criminali informatici utilizzano tecniche di spoofing del mittente per far apparire i messaggi all’interno dello stesso thread SMS utilizzato legittimamente da banche (come PostePay, Intesa Sanpaolo, UniCredit, BNL) o da enti pubblici governativi. Il testo del messaggio informa la vittima che «il profilo SPID è in fase di disattivazione immediata», che «è stato rilevato un accesso sospetto da nuovo dispositivo» oppure che «un bonifico di importo rilevante è stato bloccato per controlli antifrode», sollecitando a cliccare su un link per confermare la propria utenza.',
+            'Il link reindirizza a un sito clone che riproduce fedelmente l’interfaccia grafica dell’ente o dell’istituto bancario. Una volta inserite le credenziali (username, password e numero di telefono), in molti casi la vittima viene contattata telefonicamente pochi istanti dopo da un falso operatore dell’ufficio antifrode, che parlando con tono perentorio e rassicurante invita a comunicare il codice OTP ricevuto via SMS o ad autorizzare la notifica push ricevuta sull’app, sostenendo che tale operazione serva per «annullare la transazione illecita» o «mettere al sicuro i fondi».',
+            'La Polizia Postale ribadisce con forza che nessun Identity Provider SPID, né l’AgID, né alcun istituto di credito o forza dell’ordine contatta mai i cittadini chiedendo di cliccare su link per inserire credenziali, né chiede mai di comunicare codici OTP o di disporre bonifici verso «conti protetti». Chiunque riceva tali comunicazioni non deve cliccare su alcun link e deve segnalare l’accaduto tramite il portale commissariatodips.it.',
+        ],
+        whatChanged: [
+            'Diffusione di campagne di smishing con spoofing del mittente nei thread SMS ufficiali di banche e SPID',
+            'Utilizzo combinato di SMS allarmanti e telefonate di falsi operatori antifrode (vishing) per estorcere codici OTP',
+            'Creazione di portali civetta ad alta somiglianza grafica per sottrarre credenziali bancarie e di identità digitale',
+        ],
+        whoIsAffected: 'Cittadini possessori di smartphone, correntisti bancari e postali e utilizzatori di identità digitale SPID o CIE.',
+        whatToDo: [
+            'Non cliccare mai sui link contenuti in messaggi SMS o chat, anche se compaiono all’interno della cronologia autentica della tua banca',
+            'Ricorda che nessun operatore bancario o di polizia ti chiederà mai telefonicamente di comunicare password, codici OTP o di autorizzare pagamenti',
+            'Se sospetti accessi anomali, apri autonomamente l’applicazione ufficiale della banca o digita l’indirizzo web manualmente nel browser',
+            'Se hai inserito dati o comunicato codici, contatta all’istante il numero di emergenza blocco della tua banca e sporgi denuncia alla Polizia Postale',
+        ],
+        sourceIds: ['poliziaPostaleSmishingSpid2026'],
+        sources: [
+            src('Polizia Postale — Allerte e comunicati su smishing e finti allarmi bancari', 'Polizia Postale', 'https://www.commissariatodips.it/notizie/articolo/allerta-smishing-falso-blocco-spid-e-conti-bancari/index.html', 'Modalità della truffa e canali di denuncia online', TODAY),
+            src('CERT-AgID — Bollettini di sicurezza e campagne di phishing sul territorio nazionale', 'CERT-AgID', 'https://cert-agid.gov.it/', 'Indicatori di compromissione e raccomandazioni di protezione', TODAY),
+        ],
+        relatedGuides: ['/moduli/modulo-03-truffe-phishing', '/confronti/truffe-come-riconoscerle', '/sos'],
+        relatedTemplates: ['disconoscimento-operazioni-bancarie-frode', 'segnalazione-truffa-polizia-postale'],
+        lastReviewedAt: TODAY,
+    },
     {
         slug: 'scuola-governo-ritira-tagli-organico-docenti-ata-manovra-2027',
         title: 'Scuola, dietrofront del Governo sui tagli agli organici: salvaguardati quasi 7.000 posti tra docenti e personale ATA',

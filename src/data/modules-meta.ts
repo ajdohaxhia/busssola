@@ -182,7 +182,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "base",
     "icon": "GraduationCap",
     "category": "famiglia",
-    "lastUpdated": "2026-05-14",
+    "lastUpdated": "2026-11-22",
     "featuredType": "none"
   },
   {
@@ -361,7 +361,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "base",
     "icon": "HeartHandshake",
     "category": "anziani",
-    "lastUpdated": "2026-08-27",
+    "lastUpdated": "2026-11-22",
     "featuredType": "none"
   },
   {
@@ -408,7 +408,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "base",
     "icon": "Receipt",
     "category": "soldi",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-22",
     "featuredType": "none"
   },
   {
@@ -445,7 +445,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "intermedia",
     "icon": "FileWarning",
     "category": "soldi",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-22",
     "featuredType": "none",
     "mainEntity": "Agenzia delle entrate-Riscossione"
   },

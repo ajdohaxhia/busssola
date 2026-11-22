@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_08_scuola_famiglia: Module = {
     id: 'modulo-08-scuola-famiglia',
-    lastUpdated: '2026-05-14',
+    lastUpdated: '2026-11-22',
     title: 'Scuola e Famiglia Digitale',
     description: 'Strumenti per genitori ed educatori per gestire la vita digitale dei minori in modo consapevole e sicuro.',
     category: 'famiglia',
@@ -143,8 +143,8 @@ export const modulo_08_scuola_famiglia: Module = {
             summary: 'Come iscrivere i figli alla prima classe di elementari, medie e superiori tramite il portale Unica.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-16',
-            synthesis: 'Le iscrizioni alle classi prime si effettuano esclusivamente online (solitamente a gennaio). Si accede tramite il portale "Unica" con SPID o CIE. È possibile indicare fino a tre scuole in ordine di preferenza.',
+            lastReviewedAt: '2026-11-22',
+            synthesis: 'Le iscrizioni alle classi prime si effettuano esclusivamente online. Si accede tramite il portale «Unica» (unica.istruzione.gov.it) con SPID, CIE o eIDAS. È possibile indicare fino a tre scuole in ordine di preferenza.',
             prerequisites: ['SPID o CIE del genitore', 'Codice fiscale del figlio', 'Codice meccanografico della scuola scelta'],
             whenToDo: 'Durante la finestra temporale ministeriale (solitamente tra gennaio e febbraio).',
             doNow: [

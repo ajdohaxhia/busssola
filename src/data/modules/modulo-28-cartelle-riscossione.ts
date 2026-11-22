@@ -3,7 +3,7 @@ import { published, src, ol } from './civicPublished';
 
 export const modulo_28_cartelle_riscossione: Module = {
     id: 'modulo-28-cartelle-riscossione',
-    lastUpdated: '2026-11-08',
+    lastUpdated: '2026-11-22',
     title: 'Cartelle e riscossione',
     description: 'Come consultare cartelle e avvisi, pagare, rateizzare e chiedere sgravio o autotutela sul sito di Agenzia delle entrate-Riscossione.',
     category: 'soldi',
@@ -89,19 +89,20 @@ export const modulo_28_cartelle_riscossione: Module = {
             level: 'intermedia',
             estimatedMinutes: 14,
             mainEntity: 'Agenzia delle entrate-Riscossione',
-            summary: 'Per debiti fino a 120 mila euro puoi chiedere fino a 84 rate con «Rateizza adesso» in area riservata, anche da persona di fiducia delegata. Oltre quella soglia la richiesta è documentata.',
+            summary: 'Per debiti fino a 120 mila euro puoi chiedere fino a 84 rate (estese a 96 dal 2027) con «Rateizza adesso» in area riservata senza ISEE o documenti. La decadenza scatta all’8ª rata non pagata.',
             steps: [
                 'Consulta la pagina Ade «Come chiedere la rateizzazione» e i servizi AdeR «Rateizza il debito».',
-                'Per importi fino a 120 mila euro (limite comprensivo di rateizzazioni in corso, secondo AdeR) usa «Rateizza adesso» con SPID/CIE/CNS, anche via app Equiclick.',
-                'Seleziona i documenti rateizzabili, verifica il piano e paga la prima rata se il servizio lo richiede per attivarlo.',
-                'In alternativa: modello RS via PEC della provincia di emissione, oppure sportello AdeR.',
-                'Per importi superiori, o per proroga, Ade indica modelli e canali documentati: non inventare il numero di rate, usa i modelli sul sito.',
+                'Per importi fino a 120 mila euro (limite comprensivo di rateizzazioni in corso) usa «Rateizza adesso» con SPID/CIE/CNS, anche via app Equiclick.',
+                'Seleziona i documenti rateizzabili, verifica la simulazione del piano (fino a 84 rate ordinarie, 96 dal 2027) e attiva il piano.',
+                'In alternativa per importi oltre 120.000€: modello RS via PEC della provincia di emissione con ISEE o indici di liquidità (fino a 120 rate straordinarie).',
+                'Paga le rate con bollettino pagoPA: la decadenza si verifica solo al mancato pagamento di 8 rate, anche non consecutive.',
             ],
-            commonErrors: ['Rateizzare un debito che non riconosci senza aver chiesto prima sgravio/sospensione', 'Saltare rate: rischi la decadenza del piano (verifica le regole sul sito AdeR)'],
+            commonErrors: ['Rateizzare un debito che non riconosci senza aver chiesto prima sgravio/sospensione', 'Raggiungere 8 rate insolute: comporta la decadenza definitiva dal beneficio del termine'],
             dontDo: ['Non usare intermediari non delegati che chiedono anticipi in contanti per «sistemare» la cartella'],
-            checklist: ['Importo complessivo verificato', 'Piano scaricato', 'Prima rata (se prevista) pagata'],
+            checklist: ['Importo complessivo verificato entro 120.000€', 'Piano simulato e scaricato', 'Bollettini pagoPA salvati'],
             faqs: [
-                { q: 'Serve l’ISEE?', a: 'Per la rateizzazione «su semplice richiesta» fino a 120 mila euro e fino a 84 rate, Ade descrive la procedura online senza documentazione economica. Per le richieste documentate i modelli e gli allegati sono sul sito: verifica lì.' },
+                { q: 'Serve l’ISEE?', a: 'Per la rateizzazione «su semplice richiesta» fino a 120 mila euro (D.Lgs. 110/2024), AdeR concede fino a 84 rate senza documentazione economica. L’ISEE serve solo per debiti oltre 120.000€ o per il piano straordinario a 120 rate.' },
+                { q: 'Cosa succede se salto una rata?', a: 'Nei piani ordinari AdER non si decade per una singola rata: la decadenza scatta con l’8ª rata non pagata. Tuttavia sulle rate pagate in ritardo maturano interessi di mora.' },
                 { q: 'Posso delegare il commercialista?', a: 'Sì: Ade precisa che una persona di fiducia o un intermediario fiscale delegato può usare «Rateizza adesso» per tuo conto.' },
             ],
             officialLinksV2: [
@@ -111,6 +112,7 @@ export const modulo_28_cartelle_riscossione: Module = {
             sources: [
                 src('Come chiedere la rateizzazione', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/come-chiedere-la-rateizzazione'),
                 src('Servizi AdeR — rateizza il debito', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/il-sito-www-agenziaentrate-riscossione-gov-it'),
+                src('Riforma rateizzazione D.Lgs. 110/2024', 'Agenzia delle Entrate-Riscossione', 'https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/rateizzazione/'),
             ],
         }),
         published({

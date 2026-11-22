@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_21_anziani_caregiver: Module = {
     id: 'modulo-21-anziani-caregiver',
-    lastUpdated: '2026-08-27',
+    lastUpdated: '2026-11-22',
     title: 'Modulo 21: Anziani e Caregiver',
     description: 'Strumenti e tutele per assistere i propri cari anziani: supporto digitale, deleghe e protezione dalle truffe.',
     category: 'anziani',
@@ -243,8 +243,8 @@ export const modulo_21_anziani_caregiver: Module = {
             summary: 'Cos\'è l\'indennità di accompagnamento e come richiederla per chi non è autosufficiente.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-16',
-            synthesis: 'L\'indennità di accompagnamento è un sostegno economico erogato dall\'INPS a chi è impossibilitato a deambulare senza l\'aiuto di un accompagnatore o non è in grado di compiere gli atti quotidiani della vita. Non dipende dal reddito.',
+            lastReviewedAt: '2026-11-22',
+            synthesis: 'L\'indennità di accompagnamento è un sostegno economico erogato dall\'INPS (circa 531€/mese) a chi è impossibilitato a deambulare senza l\'aiuto di un accompagnatore o non è in grado di compiere gli atti quotidiani. Non dipende dal reddito. Con la nuova «Prestazione Universale» (D.Lgs. 29/2024), per gli over 80 non autosufficienti gravissimi con ISEE sociosanitario fino a 6.000€ si aggiunge un assegno integrativo fino a 850€/mese per remunerare badanti o servizi domiciliari.',
             prerequisites: ['Certificato medico telematico con richiesta di accompagnamento'],
             whenToDo: 'Quando la persona anziana perde l\'autonomia fisica o cognitiva di base.',
             doNow: [

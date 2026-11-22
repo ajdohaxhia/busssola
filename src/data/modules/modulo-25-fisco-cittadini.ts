@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_25_fisco_cittadini: Module = {
     id: 'modulo-25-fisco-cittadini',
-    lastUpdated: '2026-11-08',
+    lastUpdated: '2026-11-22',
     title: 'Fisco e Cittadini',
     description: 'Guida ai servizi dell\'Agenzia delle Entrate, dichiarazione dei redditi e gestione delle scadenze fiscali.',
     category: 'soldi',
@@ -397,10 +397,10 @@ export const modulo_25_fisco_cittadini: Module = {
             summary: 'Regole e modalità di versamento per il secondo acconto IRPEF, cedolare secca e imposta sostitutiva. Condizioni di rateizzazione per partite IVA sotto i 170.000€.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-11-08',
-            synthesis: 'Il 30 novembre è la scadenza per il secondo o unico acconto delle imposte sui redditi e della cedolare secca. Per le partite IVA persone fisiche con ricavi sotto i 170.000€ è possibile dilazionare in 5 rate mensili da gennaio a maggio.',
-            whenToDo: 'Nel mese di novembre di ogni anno, prima del termine ordinario del 30 novembre.',
-            scenario: 'Devi saldare il secondo acconto d’imposta risultante dalla dichiarazione dei redditi 2026 e vuoi capire se puoi dilazionare il pagamento.',
+            lastReviewedAt: '2026-11-22',
+            synthesis: 'Il 30 novembre è la scadenza ordinaria per il secondo o unico acconto delle imposte sui redditi e della cedolare secca. Per le partite IVA persone fisiche con ricavi sotto i 170.000€ è possibile dilazionare in 5 rate mensili da gennaio a maggio 2027.',
+            whenToDo: 'Nel mese di novembre, prima del termine perentorio del 30 novembre.',
+            scenario: 'Devi saldare il secondo acconto d’imposta risultante dalla dichiarazione dei redditi 2026 e vuoi capire se puoi dilazionare il pagamento o come applicare il metodo storico o previsionale.',
             steps: [
                 'Verifica l’importo del secondo acconto sul Modello 730 o Modello Redditi 2026',
                 'Scegli tra metodo storico (importo pieno da dichiarazione) o previsionale (se prevedi un calo di reddito nel 2026)',
