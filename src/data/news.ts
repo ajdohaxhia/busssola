@@ -14,6 +14,55 @@ const src = (title: string, organization: string, url: string, usedFor = 'Allert
 })
 
 export const CIVIC_NEWS: NewsItem[] = [
+    // ── Auto-imported 2026-11-23 ──────────────────────────
+    {
+        slug: 'protezione-civile-torino-rinnova-la-sala-unita-di-crisi-nove-schermi-e-nuove-rad',
+        title: 'Protezione Civile, Torino rinnova la Sala Unità di Crisi: nove schermi e nuove radio',
+        date: '2026-11-23',
+        summary: 'Protezione Civile, Torino rinnova la Sala Unità di Crisi: nove schermi e nuove radio. Fonte: Il Torinese.',
+        body: [
+            'Protezione Civile, Torino rinnova la Sala Unità di Crisi: nove schermi e nuove radio.',
+        ],
+        whatChanged: [
+            'Protezione Civile, Torino rinnova la Sala Unità di Crisi: nove schermi e nuove radio',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Protezione Civile, Torino rinnova la Sala Unità di Crisi: nove schermi e nuove radio - Il Torinese', 'Il Torinese', 'https://news.google.com/rss/articles/CBMitwFBVV95cUxNenR2QlhObFEzLVA0LXVfTG1xbElWTURLX0JiZXBKZFdESFlQWmFCajRWcWNhMVdpZXNCRkNYdE9rOEZkMG1NSXJCd2U5Y0prUjVrRTlIYmpHdGVUNGhRRlMwVmo5a1JYRlY3NEh4dTh4M0gxb3FPd3RWT3JYUHl6NjV6WC1TN1M0aUVSWmZ0bXU2Z3NIZmNaZV9GOHRWYWxtNXVMU0RUZVhPd1RhOEhNZHB3N01jSHM?oc=5', 'Protezione Civile, Torino rinnova la Sala Unità di Crisi: nove schermi e nuove radio - Il Torinese', '2026-11-23'),
+        ],
+        relatedGuides: ['/sos'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-23',
+    },
+    {
+        slug: 'alluvioni-e-blackout-torino-investe-200mila-euro-per-la-nuova-sala-della-protezi',
+        title: 'Alluvioni e blackout, Torino investe 200mila euro per la nuova sala della Protezione civile',
+        date: '2026-11-23',
+        summary: 'Alluvioni e blackout, Torino investe 200mila euro per la nuova sala della Protezione civile. Fonte: Torino Cronaca.',
+        body: [
+            'Alluvioni e blackout, Torino investe 200mila euro per la nuova sala della Protezione civile.',
+        ],
+        whatChanged: [
+            'Alluvioni e blackout, Torino investe 200mila euro per la nuova sala della Protezione civile',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Alluvioni e blackout, Torino investe 200mila euro per la nuova sala della Protezione civile - Torino Cronaca', 'Torino Cronaca', 'https://news.google.com/rss/articles/CBMi2wFBVV95cUxPZ1NfVTJwaGNuMDhhZDJVWVRpMTdEZkRZR2xQZ1VsZkFGZDZobURUVG9ucnNFcWd6R3UyZ2tuWk43Ym9kMzYxdFRQdUROVF9VQ3pJZXh6dnVMTjYyRTdOU29fQ01jMlV0MzgyM0tVQlhxbTNybUE0U1ZZWGJ2UzBuMDRkX3QyWUh3Z3o0YXdubzUyVEJCQlNJWTBBeVJEOXlSTjBTYXVSX3liU3FETDAzVzhCb05taHlERnBUSWt1ZkE1b3ZoQjFWQ0JidkRtLUJ4SE5uTmVYZjlLc1U?oc=5', 'Alluvioni e blackout, Torino investe 200mila euro per la nuova sala della Protezione civile - Torino Cronaca', '2026-11-23'),
+        ],
+        relatedGuides: ['/sos'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-23',
+    },
+    // ── End auto-import ──────────────────────────────────────────────
+
     // ── Auto-imported 2026-11-22 ──────────────────────────
     {
         slug: 'cartelle-esattoriali-a-rate-per-8-anni-senza-presentare-documenti-cosa-cambia-da',
