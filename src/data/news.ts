@@ -14,6 +14,55 @@ const src = (title: string, organization: string, url: string, usedFor = 'Allert
 })
 
 export const CIVIC_NEWS: NewsItem[] = [
+    // ── Auto-imported 2026-11-24 ──────────────────────────
+    {
+        slug: 'fattura-elettronica-2027-nuove-specifiche-tecniche-110-fisco-e-tasse-20261121',
+        title: 'Fattura elettronica 2027: nuove specifiche tecniche 1.10',
+        date: '2026-11-21',
+        summary: 'Fattura elettronica 2027: nuove specifiche tecniche 1.10. Fonte: Fisco e Tasse.',
+        body: [
+            'Fattura elettronica 2027: nuove specifiche tecniche 1.10.',
+        ],
+        whatChanged: [
+            'Fattura elettronica 2027: nuove specifiche tecniche 1.10',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Fattura elettronica 2027: nuove specifiche tecniche 1.10 - Fisco e Tasse', 'Fisco e Tasse', 'https://news.google.com/rss/articles/CBMisgFBVV95cUxQd0owQjNhWmREVUdlUWttODBEZzZDYzdNWjI4V3pJemxfRHRTQWVVVlN3LUhwa1poXzNWTnc1OHlPQzNGM0J3bDJTNHRLVmctT1FKUS1zWGFDXzVnVW1yRWFBMjRDQlJMQkJ5ZE41WTBadlJwMTNZYWxySDJPN09CWWx1ajRzbzd5VklMT0g3S2x1d0lzSDN3M3VqRmlYd0V2U05YeHltVFZ6UzMxcFNQOXZB?oc=5', 'Fattura elettronica 2027: nuove specifiche tecniche 1.10 - Fisco e Tasse', '2026-11-21'),
+        ],
+        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-21',
+    },
+    {
+        slug: 'controlli-del-fisco-sul-conto-corrente-la-cassazione-senza-autorizzazione-i-dati',
+        title: 'Controlli del Fisco sul conto corrente, la Cassazione: senza autorizzazione i dati sono inutilizzabili',
+        date: '2026-11-22',
+        summary: 'Controlli del Fisco sul conto corrente, la Cassazione: senza autorizzazione i dati sono inutilizzabili. Fonte: QuiFinanza.',
+        body: [
+            'Controlli del Fisco sul conto corrente, la Cassazione: senza autorizzazione i dati sono inutilizzabili.',
+        ],
+        whatChanged: [
+            'Controlli del Fisco sul conto corrente, la Cassazione: senza autorizzazione i dati sono inutilizzabili',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Controlli del Fisco sul conto corrente, la Cassazione: senza autorizzazione i dati sono inutilizzabili - QuiFinanza', 'QuiFinanza', 'https://news.google.com/rss/articles/CBMikwFBVV95cUxPdjczZXBWLW03SVFMQWktTWd3Qnp6ZnBQaFIxbFRwWHV1b2l5djFhUVd5VTlMbkV6OHg5LXFDVU5BSUt6R3J3VTk3T0d4SlFqeXNrREFaMWIwdGo3bTJ3ZkRIODk4bjVEM0V2b1lENDFtbmJ1emd2UFFfbFBrT2NESXNvb3Y0NTNYSzlnc0dHb1NxNUHSAZgBQVVfeXFMT0MxT1ZFQjNQTUxld1RfMkdlaUFJTEMwWjFFcm9lREFvN1ZHdkR3eE5ZNW5pMlg5M3ZEdVhpWTJQVjBLY3NseDlwdlhVUkFKYkxPb01XRktVWVZmTUNyVGZqQUplY2FGWmRKUjF3YXRUNXhrb04tREtRb3Y3SFpxVmM1M1U2blcxNzgxaWFrV05vaHN0VXo4akU?oc=5', 'Controlli del Fisco sul conto corrente, la Cassazione: senza autorizzazione i dati sono inutilizzabili - QuiFinanza', '2026-11-22'),
+        ],
+        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-22',
+    },
+    // ── End auto-import ──────────────────────────────────────────────
+
     // ── Auto-imported 2026-11-23 ──────────────────────────
     {
         slug: 'protezione-civile-torino-rinnova-la-sala-unita-di-crisi-nove-schermi-e-nuove-rad',
