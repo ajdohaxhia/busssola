@@ -1,5 +1,27 @@
 # Changelog
 
+## [Routine Update - Notizie Civiche, Moduli, Scadenze e Verifica Fonti] - 2026-11-25
+### Added
+- **6 Notizie Civiche Verificate (20-25 novembre 2026)**:
+  - *Fatturazione elettronica 2027*: specifiche tecniche v. 1.10 utilizzabili dall'11 gennaio 2027, adeguamento XML/XSD al Testo Unico IVA (D.Lgs. 10/2026) e nuovo codice regime fiscale `RF21` per ODV e APS del Terzo Settore.
+  - *Pensioni dicembre 2026*: pagamento dal 1° dicembre con tredicesima, stop alle trattenute per addizionali regionali e comunali IRPEF, seconda tranche quattordicesima e importo aggiuntivo di 154,94 euro (art. 70 L. 388/2000).
+  - *Allerta Black Friday e false PEC fiscali*: 3 regole anti-truffa della Polizia Postale (23 novembre 2026), avviso Agenzia delle Entrate sulle false PEC di rimborso IRAP e promemoria AdER sul solo dominio PEC ufficiale `@pec.agenziariscossione.gov.it`.
+  - *Campagna vaccinazione antinfluenzale 2026-2027*: iniziativa del Ministero della Salute «Il vaccino, la risposta che ti protegge» con riepilogo delle categorie gratuite (over 60, bambini 6 mesi-6 anni, gravidanza, fragili e sanitari).
+  - *Controlli fiscali sui conti correnti*: pronunce della Corte di Cassazione (ordinanze nn. 19956 e 19960/2026) sull'inutilizzabilità dei movimenti bancari acquisiti senza autorizzazione preventiva motivata, con eccezione da sollevare nel ricorso di primo grado.
+  - *Allerta CERT-AgID e Agenzia delle Entrate*: trojan bancario Android «Mirax» diffuso via portale clone AdE e finto aggiornamento App IO in formato `.apk`.
+- **Nuove lezioni nei moduli didattici**:
+  - *Modulo 29 (Partita IVA e forfettario)*: nuova scheda sulle specifiche tecniche v. 1.10 della fatturazione elettronica e codice `RF21`.
+  - *Modulo 27 (Pensioni e previdenza)*: nuova scheda dedicata al cedolino di dicembre (tredicesima, stop addizionali IRPEF, quattordicesima e bonus 154,94€).
+  - *Modulo 25 (Fisco e cittadini)*: nuova scheda sui diritti del contribuente e sull'autorizzazione preventiva nei controlli bancari.
+  - *Modulo 03 (Truffe e Phishing)*: nuova scheda per difendersi da finti aggiornamenti App IO in formato `.apk` (Mirax) e false PEC fiscali.
+- **Scadenzario civico `deadlines.ts`**: aggiunte la finestra finale APE Sociale 2026 (30 novembre 2026), l'entrata in uso delle specifiche FE v. 1.10 (11 gennaio 2027), la scadenza rinnovo ISEE per l'Assegno Unico e la settima rata Rottamazione-quater (28 febbraio 2027).
+
+### Changed
+- **Pulizia bozze auto-importate**: rimosse 9 bozze grezze auto-importate da RSS in `src/data/news.ts` (17-21 novembre 2026), sostituite da schede complete con fonti primarie istituzionali `.gov.it`.
+- **Verifica e ripristino fonti ufficiali**: sostituiti URL non più raggiungibili (404) con pagine ufficiali verificate HTTP 200 in `officialSources.ts`, `sourceOfTruth.ts`, `deadlines.ts`, `news.ts`, `templates.ts`, `life-hacks.ts` e nei moduli interessati; aggiornato anche `Modulo 20 (Sanità territoriale)` con la campagna vaccinale 2026-2027.
+- **Scoperta e indicizzazione**: corretti i mapping dei moduli in `scripts/fetch-news.ts` (`TOPICS`), aggiunte le rotte `/guide/`, `/guide/rateizzazione-cartelle/` e `/tool/calcolo-tredicesima/` a `sitemap.ts`, `mappa-del-sito`, `build-site-artifacts.ts` (`search-index.json`), `Footer.tsx` e `validate-seo.ts`.
+- **Statistiche e date editoriali**: aggiornate `EDITORIAL_DATE`, `siteStats.ts`, `modules-meta.ts`, `feed.xml` e `search-index.json` al 25 novembre 2026.
+
 ## [Routine Update - Notizie Civiche, Nuove Guide e Moduli] - 2026-11-22
 ### Added
 - **Nuova Guida Operativa `/guide/rateizzazione-cartelle/`**: Guida completa alla rateizzazione delle cartelle Agenzia delle Entrate-Riscossione (AdER) secondo il D.Lgs. 110/2024. Tabella comparativa dei piani (ordinario 84/96 rate senza ISEE fino a 120.000€ vs straordinario 120 rate), 4 passi operativi online, sezione "Cosa succede se...", schema `HowTo` e `FAQPage` Schema.org.

@@ -3,7 +3,7 @@ import { published, src, ol } from './civicPublished';
 
 export const modulo_28_cartelle_riscossione: Module = {
     id: 'modulo-28-cartelle-riscossione',
-    lastUpdated: '2026-11-22',
+    lastUpdated: '2026-11-25',
     title: 'Cartelle e riscossione',
     description: 'Come consultare cartelle e avvisi, pagare, rateizzare e chiedere sgravio o autotutela sul sito di Agenzia delle entrate-Riscossione.',
     category: 'soldi',
@@ -112,7 +112,7 @@ export const modulo_28_cartelle_riscossione: Module = {
             sources: [
                 src('Come chiedere la rateizzazione', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/come-chiedere-la-rateizzazione'),
                 src('Servizi AdeR — rateizza il debito', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/il-sito-www-agenziaentrate-riscossione-gov-it'),
-                src('Riforma rateizzazione D.Lgs. 110/2024', 'Agenzia delle Entrate-Riscossione', 'https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/rateizzazione/'),
+                src('Riforma rateizzazione D.Lgs. 110/2024', 'Agenzia delle Entrate-Riscossione', 'https://www.agenziaentrateriscossione.gov.it/it/cittadini/Rateizzazione/la-rateizzazione/'),
             ],
         }),
         published({
@@ -282,7 +282,7 @@ export const modulo_28_cartelle_riscossione: Module = {
                 ol('aderHome', 'Area riservata e recupero bollettini', []),
             ],
             sources: [
-                src('Rottamazione-quater — scadenze e tolleranza', 'Agenzia delle entrate-Riscossione', 'https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/definizione-agevolata-rottamazione-quater-scadenze/'),
+                src('Rottamazione-quater — scadenze e tolleranza', 'Agenzia delle entrate-Riscossione', 'https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/definizione-agevolata/'),
             ],
         }),
     ],

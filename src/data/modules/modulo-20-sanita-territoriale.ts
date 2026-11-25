@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_20_sanita_territoriale: Module = {
     id: 'modulo-20-sanita-territoriale',
-    lastUpdated: '2026-10-26',
+    lastUpdated: '2026-11-25',
     title: 'Modulo 20: Sanità Territoriale',
     description: 'Guida ai servizi sanitari di base e specialistici vicini a te: dal medico di famiglia ai centri di salute mentale.',
     category: 'sanita',
@@ -637,9 +637,9 @@ export const modulo_20_sanita_territoriale: Module = {
             summary: 'Come prenotare la vaccinazione congiunta antinfluenzale e richiamo Covid tramite Fascicolo Sanitario Elettronico FSE 2.0, farmacie di comunità e medici di medicina generale.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-10-26',
+            lastReviewedAt: '2026-11-25',
             mainEntity: 'Ministero della Salute',
-            synthesis: 'La campagna vaccinale autunno 2026 offre gratuitamente la somministrazione congiunta di antinfluenzale e vaccino aggiornato Covid a over 60, fragili, donne incinte e caregiver. Si prenota su FSE 2.0 regionale, Cup o farmacie.',
+            synthesis: 'La campagna vaccinale 2026-2027 («Il vaccino, la risposta che ti protegge») offre gratuitamente antinfluenzale e richiamo Covid a over 60, bambini da 6 mesi a 6 anni, donne in gravidanza, fragili e caregiver tramite MMG, pediatri, FSE e farmacie.',
             whenToDo: 'Tra ottobre e dicembre per garantire la massima copertura immunitaria nella stagione invernale.',
             scenario: 'Vuoi vaccinarti contro l\'influenza stagionale e ricevere il richiamo Covid gratuito per proteggere te o familiari vulnerabili.',
             steps: [
@@ -704,7 +704,15 @@ export const modulo_20_sanita_territoriale: Module = {
                     url: 'https://www.salute.gov.it/portale/influenza/dettaglioContenutiInfluenza.jsp?lingua=italiano&id=686',
                     type: 'official',
                     usedFor: 'Requisiti, co-somministrazione e canali di accesso',
-                    lastCheckedAt: '2026-10-26'
+                    lastCheckedAt: '2026-11-25'
+                },
+                {
+                    title: 'Ministero della Salute — Campagna di comunicazione 2026-2027 per la vaccinazione contro l’influenza',
+                    organization: 'Ministero della Salute',
+                    url: 'https://www.salute.gov.it/new/it/campagna-di-comunicazione/campagna-di-comunicazione-2026-2027-la-vaccinazione-contro-linfluenza/',
+                    type: 'official',
+                    usedFor: 'Informazioni ufficiali e fasce prioritarie',
+                    lastCheckedAt: '2026-11-25'
                 }
             ]
         }

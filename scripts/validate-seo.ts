@@ -51,6 +51,11 @@ function main() {
         './out/scuole/index.html',
         './out/checklist/index.html',
         './out/glossario/index.html',
+        './out/guide/index.html',
+        './out/guide/rateizzazione-cartelle/index.html',
+        './out/scadenze/index.html',
+        './out/tool/index.html',
+        './out/tool/calcolo-tredicesima/index.html',
     ]
 
     let failed = false

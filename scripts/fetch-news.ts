@@ -21,11 +21,11 @@ import { resolve } from 'node:path'
 const TOPICS: { query: string; relatedGuides: string[] }[] = [
     {
         query: 'INPS bonus pensioni ammortizzatori sociali',
-        relatedGuides: ['/moduli/modulo-27-pensioni-previdenza'],
+        relatedGuides: ['/moduli/modulo-27-pensioni-previdenza', '/moduli/modulo-23-bonus-isee'],
     },
     {
         query: 'Agenzia Entrate scadenze fiscali tasse',
-        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
+        relatedGuides: ['/moduli/modulo-25-fisco-cittadini', '/moduli/modulo-29-partita-iva-forfettario'],
     },
     {
         query: 'scuola istruzione MIM ministero',
@@ -33,23 +33,23 @@ const TOPICS: { query: string; relatedGuides: string[] }[] = [
     },
     {
         query: 'sanità SSN salute ministero',
-        relatedGuides: ['/moduli/modulo-09-sanita-salute'],
+        relatedGuides: ['/moduli/modulo-20-sanita-territoriale'],
     },
     {
         query: 'sicurezza polizia emergenze protezione civile',
-        relatedGuides: ['/sos'],
+        relatedGuides: ['/sos', '/moduli/modulo-03-truffe-phishing'],
     },
     {
         query: 'lavoro contratti dimissioni INAIL',
-        relatedGuides: ['/moduli/modulo-02-contratto-lavoro'],
+        relatedGuides: ['/moduli/modulo-10-lavoro-disoccupazione', '/moduli/modulo-12-lavoro-diritti'],
     },
     {
         query: 'casa affitto mutuo condominio',
-        relatedGuides: ['/moduli/modulo-04-casa-affitto'],
+        relatedGuides: ['/moduli/modulo-13-casa-residenza'],
     },
     {
         query: 'immigrazione permesso soggiorno cittadinanza',
-        relatedGuides: ['/moduli/modulo-06-immigrazione'],
+        relatedGuides: ['/moduli/modulo-17-immigrazione'],
     },
 ]
 

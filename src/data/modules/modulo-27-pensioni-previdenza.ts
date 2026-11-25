@@ -3,7 +3,7 @@ import { published, src, ol } from './civicPublished';
 
 export const modulo_27_pensioni_previdenza: Module = {
     id: 'modulo-27-pensioni-previdenza',
-    lastUpdated: '2026-08-27',
+    lastUpdated: '2026-11-25',
     title: 'Pensioni e previdenza',
     description: 'Domanda di pensione INPS, vecchiaia e anticipata, APE sociale, estratto contributivo, ricostituzione e riscatto laurea: orientamento sulle schede ufficiali.',
     category: 'lavoro',
@@ -265,7 +265,7 @@ export const modulo_27_pensioni_previdenza: Module = {
             ],
             sources: [
                 src('Fascicolo previdenziale del cittadino', 'INPS', 'https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.fascicolo-previdenziale-del-cittadino-50865.fascicolo-previdenziale-del-cittadino.html'),
-                src('Cassetto fiscale', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/web/guest/area-riservata/cassetto-fiscale'),
+                src('Cassetto fiscale', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/servizi/servizitrasversali/altri/cassetto-fiscale'),
                 src('Calendario precompilata 2026', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/info-assistenza-e-calendario2'),
             ],
         }),
@@ -297,6 +297,47 @@ export const modulo_27_pensioni_previdenza: Module = {
                 ol('delegaInps', 'Delega se un caregiver deve operare', []),
             ],
             sources: [
+                src('Fascicolo previdenziale del cittadino', 'INPS', 'https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.fascicolo-previdenziale-del-cittadino-50865.fascicolo-previdenziale-del-cittadino.html'),
+            ],
+        }),
+        published({
+            id: 'cedolino-pensione-tredicesima-dicembre',
+            slug: 'cedolino-pensione-dicembre-tredicesima-bonus-154',
+            title: 'Cedolino di dicembre: tredicesima, quattordicesima e bonus 154,94€',
+            category: 'lavoro',
+            audience: ['anziani', 'cittadini'],
+            level: 'base',
+            estimatedMinutes: 10,
+            mainEntity: 'INPS',
+            summary: 'Nel cedolino di dicembre confluiscono la tredicesima mensilità, la sospensione delle addizionali IRPEF, l’eventuale seconda tranche di quattordicesima e l’importo aggiuntivo di 154,94 euro.',
+            steps: [
+                'Accedi al sito inps.it con SPID, CIE o CNS e apri il servizio «Cedolino della pensione» nel Fascicolo previdenziale.',
+                'Verifica la data di pagamento (dal 1° giorno bancabile del mese per accrediti su conto; a scaglioni per cognome in contanti alle Poste).',
+                'Controlla la presenza della tredicesima mensilità (proporzionata ai mesi di pensione maturati nell’anno) e lo stop alle trattenute per addizionali regionali e comunali IRPEF.',
+                'Se hai compiuto 64 anni nel secondo semestre o sei nuovo pensionato nell’anno entro i limiti di reddito, verifica l’accredito automatico della quattordicesima.',
+                'Se percepisci una pensione previdenziale entro i limiti minimi annui (7.954,05€ pieno; 8.108,99€ ridotto) e di reddito IRPEF (11.931,08€ personale; 23.862,15€ coniugale nel 2026), controlla l’importo aggiuntivo di 154,94€: se manca, puoi chiedere la ricostituzione online.',
+            ],
+            commonErrors: [
+                'Aspettarsi l’importo aggiuntivo di 154,94€ su prestazioni assistenziali (assegno sociale, invalidità civile, APE sociale)',
+                'Dimenticare che a gennaio riprendono le trattenute mensili per addizionali regionali e comunali IRPEF',
+            ],
+            dontDo: [
+                'Non aprire link ricevuti via SMS che promettono «ricalcoli» o «bonus» sul cedolino della pensione',
+            ],
+            checklist: [
+                'Cedolino di dicembre scaricato da inps.it',
+                'Voci tredicesima ed eventuali bonus verificate',
+            ],
+            faqs: [
+                { q: 'Devo fare domanda per avere i 154,94 euro o la quattordicesima?', a: 'No, l’INPS li accredita d’ufficio se risultano rispettati i limiti pensionistici e reddituali. Solo se l’importo spettante non è stato riconosciuto per dati reddituali mancanti puoi presentare domanda di ricostituzione della pensione.' },
+                { q: 'Perché a dicembre il netto è più alto anche escludendo la tredicesima?', a: 'Perché il recupero a rate delle addizionali regionali e comunali IRPEF termina con la rata di novembre e non viene trattenuto sul cedolino di dicembre.' },
+            ],
+            officialLinksV2: [
+                ol('inpsCedolinoPensioneProcedura', 'Consultazione online del cedolino mensile', []),
+                ol('inpsFascicoloPrevidenziale', 'Verifica pagamenti e domanda di ricostituzione', []),
+            ],
+            sources: [
+                src('Procedura Cedolino della pensione', 'INPS', 'https://www.inps.it/it/it/inps-comunica/diritti-e-obblighi-in-materia-di-sicurezza-sociale-nell-unione-e/procedure/procedura-cedolino-della-pensione.html'),
                 src('Fascicolo previdenziale del cittadino', 'INPS', 'https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.fascicolo-previdenziale-del-cittadino-50865.fascicolo-previdenziale-del-cittadino.html'),
             ],
         }),

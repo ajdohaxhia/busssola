@@ -814,10 +814,10 @@ export const modulo_13_casa_residenza: Module = {
                 {
                     title: 'IMU — fiscalità locale',
                     organization: 'Ministero dell’Economia e delle Finanze',
-                    url: 'https://www.finanze.gov.it/it/Fiscalita-locale/IMU/',
+                    url: 'https://www.finanze.gov.it/it/fiscalita/fiscalita-regionale-e-locale/Imposta-municipale-propria-IMU/',
                     type: 'official',
                     usedFor: 'Quadro IMU',
-                    lastCheckedAt: '2026-08-14',
+                    lastCheckedAt: '2026-11-25',
                 },
             ],
         },

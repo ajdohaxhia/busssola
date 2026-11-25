@@ -279,7 +279,7 @@ export const CIVIC_TEMPLATES: CivicTemplate[] = [
         dontForget: ['Confronta con il 730 precompilato'],
         officialLinks: ['adeCassettoFiscale'],
         relatedGuide: '/moduli/modulo-25-fisco-cittadini',
-        sources: [src('Cassetto fiscale', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/web/guest/area-riservata/cassetto-fiscale')],
+        sources: [src('Cassetto fiscale', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/servizi/servizitrasversali/altri/cassetto-fiscale')],
     }),
     pack({
         slug: 'isee-dsu-mini',
@@ -1022,8 +1022,8 @@ export const CIVIC_TEMPLATES: CivicTemplate[] = [
         relatedGuide: '/moduli/modulo-25-fisco-cittadini',
         relatedNews: ['bonus-natale-100-euro-guida-modulo-noipa-2026'],
         sources: [
-            src('D.L. 167/2024 e disposizioni Bonus Natale', 'MEF', 'https://www.mef.gov.it/focus/Bonus-Natale-lavoratori-dipendenti/'),
-            src('Circolare applicativa Bonus Natale', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/circolari-e-risoluzioni-bonus-natale-lavoratori'),
+            src('D.L. 167/2024 e disposizioni Bonus Natale', 'MEF', 'https://noipa.mef.gov.it/cl/bonus-natale'),
+            src('Circolari applicative n. 19/E e 22/E Bonus Natale', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/-/bonus-natale-2024-con-piu-beneficiari-in-una-circolare-i-chiarimenti-sulle-nuove-regole'),
             src('Procedura richiesta indennità', 'NoiPA', 'https://noipa.mef.gov.it/cl/servizi/indennita-bonus-natale'),
         ],
     }),
@@ -1094,8 +1094,8 @@ export const CIVIC_TEMPLATES: CivicTemplate[] = [
         relatedGuide: '/moduli/modulo-30-catasto-imu-successioni',
         relatedNews: ['saldo-imu-16-dicembre-2026-calcolo-aliquote-f24-esenzioni'],
         sources: [
-            src('Guida e normativa IMU', 'MEF', 'https://www.finanze.gov.it/it/Fiscalita-locale/IMU/'),
-            src('Delibere e aliquote IMU dei Comuni', 'Dipartimento delle Finanze', 'https://www.finanze.gov.it/it/Fiscalita-locale/Portale-del-Federalismo-Fiscale/aliquote-imu-comunali/'),
+            src('Guida e normativa IMU', 'MEF', 'https://www.finanze.gov.it/it/fiscalita/fiscalita-regionale-e-locale/Imposta-municipale-propria-IMU/'),
+            src('Delibere e aliquote IMU dei Comuni', 'Dipartimento delle Finanze', 'https://www.finanze.gov.it/it/fiscalita/fiscalita-regionale-e-locale/Imposta-municipale-propria-IMU/Regolamenti-e-aliquote-ricerca/'),
             src('Modalità di versamento con F24', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/schede/pagamenti/f24/cosa-f24'),
         ],
     }),

@@ -45,6 +45,9 @@ const sortedNews = [...CIVIC_NEWS].sort((a, b) => b.date.localeCompare(a.date))
 
 const HUBS = [
     { href: '/moduli/', label: 'Catalogo delle guide' },
+    { href: '/guide/', label: 'Guide operative passo-passo' },
+    { href: '/guide/rateizzazione-cartelle/', label: 'Rateizzazione cartelle esattoriali' },
+    { href: '/guide/f24-acconti/', label: 'Modello F24 e acconti imposte' },
     { href: '/tool/', label: 'Strumenti e calcolatori' },
     { href: '/tool/calcolo-tredicesima/', label: 'Calcolo tredicesima netta' },
     { href: '/tool/calcolo-stipendio-netto/', label: 'Calcolo stipendio netto da RAL' },
@@ -53,6 +56,9 @@ const HUBS = [
     { href: '/tool/calcolo-consumo-elettrico/', label: 'Calcolo consumo elettrico' },
     { href: '/scadenze/', label: 'Scadenzario civico e fiscale' },
     { href: '/scadenze/2027/', label: 'Scadenze 2027' },
+    { href: '/bonus-2027/', label: 'Guida ai Bonus 2027' },
+    { href: '/isee-2027/', label: 'ISEE 2027 e rinnovo DSU' },
+    { href: '/pensioni-2027/', label: 'Guida Pensioni 2027' },
     { href: '/novita/', label: 'Novità verificate' },
     { href: '/confronti/', label: 'Confronti e guide decisionali' },
     { href: '/modelli/', label: 'Modelli e kit documentali' },

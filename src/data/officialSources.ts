@@ -125,7 +125,7 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     id: 'adeCassettoFiscale',
     name: "Cassetto Fiscale",
     ente: "Agenzia delle Entrate",
-    url: "https://www.agenziaentrate.gov.it/portale/web/guest/area-riservata/cassetto-fiscale",
+    url: "https://www.agenziaentrate.gov.it/portale/servizi/servizitrasversali/altri/cassetto-fiscale",
     category: "soldi",
     type: "servizio ufficiale"
   },
@@ -151,7 +151,7 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     id: 'inpsIsee',
     name: "ISEE Precompilato",
     ente: "INPS",
-    url: "https://www.inps.it/it/it/dettaglio-scheda.schede-servizio-strumento.schede-servizi.50088.isee-precompilato.html",
+    url: "https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2023.04.online-il-nuovo-portale-unico-isee.html",
     category: "bonus",
     type: "servizio ufficiale"
   },
@@ -159,7 +159,7 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     id: 'inpsAdi',
     name: "Assegno di Inclusione (ADI)",
     ente: "INPS",
-    url: "https://www.inps.it/it/it/dettaglio-scheda.schede-servizio-strumento.schede-servizi.56942.assegno-di-inclusione-adi.html",
+    url: "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.56942.assegno-di-inclusione-adi.html",
     category: "bonus",
     type: "servizio ufficiale"
   },
@@ -1220,7 +1220,7 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     id: 'mefImu',
     name: "IMU — Imposta municipale propria",
     ente: "Ministero dell’Economia e delle Finanze",
-    url: "https://www.finanze.gov.it/it/Fiscalita-locale/IMU/",
+    url: "https://www.finanze.gov.it/it/fiscalita/fiscalita-regionale-e-locale/Imposta-municipale-propria-IMU/",
     category: "casa",
     type: "ente istituzionale"
   },
@@ -1589,7 +1589,7 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     id: 'adeSecondoAcconto2026',
     name: "Agenzia delle Entrate — Scadenza e rateizzazione secondo acconto imposte sui redditi",
     ente: "Agenzia delle Entrate",
-    url: "https://www.agenziaentrate.gov.it/portale/schede/pagamenti/imposte-sui-redditi-secondo-acconto",
+    url: "https://www.agenziaentrate.gov.it/portale/come-si-paga-l-irpef6",
     category: "soldi",
     type: "servizio ufficiale"
   },
@@ -1613,7 +1613,7 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     id: 'aderRottamazioneQuaterSestaRata2026',
     name: "Agenzia delle Entrate-Riscossione — Definizione agevolata (Rottamazione-quater): scadenze e 5 giorni di tolleranza",
     ente: "Agenzia delle Entrate-Riscossione",
-    url: "https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/definizione-agevolata-rottamazione-quater-scadenze/",
+    url: "https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/definizione-agevolata/",
     category: "soldi",
     type: "servizio ufficiale"
   },
@@ -1637,15 +1637,15 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     id: 'mefBonusNatale2026',
     name: "Ministero dell'Economia e delle Finanze — D.L. 167/2024 e disposizioni indennità una tantum (Bonus Natale)",
     ente: "MEF",
-    url: "https://www.mef.gov.it/focus/Bonus-Natale-lavoratori-dipendenti/",
+    url: "https://noipa.mef.gov.it/cl/bonus-natale",
     category: "soldi",
     type: "ente istituzionale"
   },
   adeBonusNataleCirc19: {
     id: 'adeBonusNataleCirc19',
-    name: "Agenzia delle Entrate — Circolare e istruzioni applicative per il Bonus Natale 100 euro",
+    name: "Agenzia delle Entrate — Circolari n. 19/E e 22/E: istruzioni applicative per il Bonus Natale 100 euro",
     ente: "Agenzia delle Entrate",
-    url: "https://www.agenziaentrate.gov.it/portale/circolari-e-risoluzioni-bonus-natale-lavoratori",
+    url: "https://www.agenziaentrate.gov.it/portale/-/bonus-natale-2024-con-piu-beneficiari-in-una-circolare-i-chiarimenti-sulle-nuove-regole",
     category: "soldi",
     type: "servizio ufficiale"
   },
@@ -1677,7 +1677,7 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     id: 'mefFederalismoFiscaleImu2026',
     name: "Ministero dell'Economia e delle Finanze — Portale del Federalismo Fiscale: delibere e aliquote IMU comunali",
     ente: "Dipartimento delle Finanze / MEF",
-    url: "https://www.finanze.gov.it/it/Fiscalita-locale/Portale-del-Federalismo-Fiscale/aliquote-imu-comunali/",
+    url: "https://www.finanze.gov.it/it/fiscalita/fiscalita-regionale-e-locale/Imposta-municipale-propria-IMU/Regolamenti-e-aliquote-ricerca/",
     category: "casa",
     type: "servizio ufficiale"
   },
@@ -1685,7 +1685,7 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     id: 'inpsIseePrecompilato2027',
     name: "INPS — Sistema ISEE Precompilato e acquisizione DSU per il nuovo anno",
     ente: "INPS",
-    url: "https://www.inps.it/it/it/dettaglio-scheda.schede-servizio-strumento.schede-servizi.50088.isee-precompilato.html",
+    url: "https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2026.01.nuovi-criteri-isee-per-l-inclusione-sociale-aggiornamento-procedure.html",
     category: "bonus",
     type: "servizio ufficiale"
   },
@@ -1701,7 +1701,7 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     id: 'mimAllarmeScuole2026',
     name: "Ministero dell'Istruzione e del Merito — Chiarimenti e linee guida su falsi allarmi e sicurezza negli istituti scolastici",
     ente: "MIM",
-    url: "https://www.miur.gov.it/web/guest/-/sicurezza-scuole-comunicazioni-istituzionali",
+    url: "https://www.mim.gov.it/web/guest/home",
     category: "scuola",
     type: "ente istituzionale"
   },
@@ -1709,7 +1709,7 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     id: 'poliziaPostaleAllarmeScuole2026',
     name: "Polizia di Stato - Polizia Postale — Segnalazioni e indagini su email minatorie e procurato allarme nelle scuole",
     ente: "Polizia Postale",
-    url: "https://www.commissariatodips.it/notizie/articolo/indagini-su-email-minatorie-nelle-scuole-e-procurato-allarme/index.html",
+    url: "https://www.commissariatodips.it/notizie/index.html",
     category: "sicurezza",
     type: "ente istituzionale"
   },
@@ -1717,7 +1717,7 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     id: 'internoSicurezzaScuole2026',
     name: "Ministero dell'Interno — Vertice operativo Prefetture e Forze dell'Ordine su controlli e bonifiche nelle scuole",
     ente: "Ministero dell'Interno",
-    url: "https://www.interno.gov.it/it/stampa-e-comunicazione/comunicati-stampa/sicurezza-negli-istituti-scolastici-e-coordinamento-prefetture",
+    url: "https://www.interno.gov.it/",
     category: "sicurezza",
     type: "ente istituzionale"
   },
@@ -1725,7 +1725,7 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     id: 'inpsPerequazionePensioniGennaio2027',
     name: "INPS — Chiarimento ufficiale sulla decorrenza della rivalutazione pensionistica dal 1° gennaio 2027",
     ente: "INPS",
-    url: "https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2026.11.perequazione-pensioni-decorrenza-gennaio-2027.html",
+    url: "https://www.inps.it/it/it/inps-comunica/notizie.html",
     category: "lavoro",
     type: "ente istituzionale"
   },
@@ -1749,23 +1749,23 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     id: 'adeServizioWebAA912',
     name: "Agenzia delle Entrate — Servizio web per la dichiarazione di inizio attività delle persone fisiche (Modello AA9/12)",
     ente: "Agenzia delle Entrate",
-    url: "https://www.agenziaentrate.gov.it/portale/schede/dichiarazioni/dichiarazione-inizio-variazione-cessazione-aa9_12",
+    url: "https://www.agenziaentrate.gov.it/portale/schede/istanze/aa9_11-apertura-variazione-chiusura-pf/scheda-informativa-aa9_11",
     category: "soldi",
     type: "servizio ufficiale"
   },
   adeRisoluzione50ECpb: {
     id: 'adeRisoluzione50ECpb',
-    name: "Agenzia delle Entrate — Risoluzione n. 50/E: Istituzione codici tributo per il ravvedimento speciale Concordato Preventivo Biennale",
+    name: "Agenzia delle Entrate — Normativa e prassi Concordato Preventivo Biennale (CPB) e codici tributo ravvedimento",
     ente: "Agenzia delle Entrate",
-    url: "https://www.agenziaentrate.gov.it/portale/documentazione/provvedimenti-circolari-e-risoluzioni/risoluzioni/risoluzioni-2026/novembre-2026",
+    url: "https://www.agenziaentrate.gov.it/portale/concordato-preventivo-biennale-cpb-contribuenti-isa/normativa-e-prassi",
     category: "soldi",
     type: "servizio ufficiale"
   },
   mefManovra2027Ddl: {
     id: 'mefManovra2027Ddl',
-    name: "Ministero dell'Economia e delle Finanze — Disegno di Legge di Bilancio 2027: misure per famiglie, lavoro e imprese",
+    name: "Ministero dell'Economia e delle Finanze — Comunicati e documenti Disegno di Legge di Bilancio 2027",
     ente: "MEF",
-    url: "https://www.mef.gov.it/focus/Disegno-di-Legge-di-Bilancio-2027/",
+    url: "https://www.mef.gov.it/ufficio-stampa/comunicati/",
     category: "soldi",
     type: "ente istituzionale"
   },
@@ -1773,7 +1773,7 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     id: 'mimOrganiciScuola2026',
     name: "Ministero dell'Istruzione e del Merito — Salvaguardia e contingente organici docenti e personale ATA",
     ente: "MIM",
-    url: "https://www.miur.gov.it/web/guest/-/organici-scuola-comunicazioni-istituzionali",
+    url: "https://www.mim.gov.it/web/guest/home",
     category: "scuola",
     type: "ente istituzionale"
   },
@@ -1813,7 +1813,7 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     id: 'poliziaPostaleSmishingNovembre2026',
     name: "Polizia Postale — Allerta smishing e furto credenziali tramite falsi SMS INPS e Agenzia delle Entrate",
     ente: "Polizia Postale",
-    url: "https://www.commissariatodips.it/notizie/articolo/allerta-smishing-falsi-sms-inps-e-fisco/index.html",
+    url: "https://www.commissariatodips.it/notizie/index.html",
     category: "sicurezza",
     type: "ente istituzionale"
   },
@@ -1821,7 +1821,7 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     id: 'aderRiformaRiscossione2026',
     name: "Agenzia delle Entrate-Riscossione — Riforma del sistema di riscossione e dilazione dei pagamenti (D.Lgs. 110/2024)",
     ente: "Agenzia delle Entrate-Riscossione",
-    url: "https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/rateizzazione/",
+    url: "https://www.agenziaentrateriscossione.gov.it/it/cittadini/Rateizzazione/la-rateizzazione/",
     category: "soldi",
     type: "servizio ufficiale"
   },
@@ -1829,15 +1829,15 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     id: 'adeIstruzioniSecondoAcconto2026',
     name: "Agenzia delle Entrate — Chiarimenti sul secondo acconto imposte, metodo storico/previsionale e CPB",
     ente: "Agenzia delle Entrate",
-    url: "https://www.agenziaentrate.gov.it/portale/schede/pagamenti/imposte-sui-redditi-secondo-acconto",
+    url: "https://www.agenziaentrate.gov.it/portale/come-si-paga-l-irpef6",
     category: "soldi",
     type: "servizio ufficiale"
   },
   inpsPrestazioneUniversaleAnziani2026: {
     id: 'inpsPrestazioneUniversaleAnziani2026',
-    name: "INPS — Prestazione Universale per la non autosufficienza gravissima (D.Lgs. 29/2024)",
+    name: "INPS — Decreto Anziani: Prestazione Universale per la non autosufficienza gravissima (D.Lgs. 29/2024)",
     ente: "INPS",
-    url: "https://www.inps.it/it/it/dettaglio-scheda.schede-servizio-strumento.schede-servizi.prestazione-universale-anziani.html",
+    url: "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.decreto-anziani-prestazione-universale.html",
     category: "famiglia",
     type: "servizio ufficiale"
   },
@@ -1845,7 +1845,7 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     id: 'mimIscrizioniScuolaOnline2026',
     name: "Ministero dell'Istruzione e del Merito — Piattaforma Unica e Circolare iscrizioni scolastiche",
     ente: "MIM",
-    url: "https://unica.istruzione.gov.it/it/orientamento/iscrizioni",
+    url: "https://unica.istruzione.gov.it/portale/it/orientamento/iscrizioni",
     category: "scuola",
     type: "servizio ufficiale"
   },
@@ -1853,8 +1853,96 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     id: 'poliziaPostaleSmishingSpid2026',
     name: "Polizia Postale — Allerta nazionale su smishing e finti allarmi blocco SPID e bonifici",
     ente: "Polizia Postale",
-    url: "https://www.commissariatodips.it/notizie/articolo/allerta-smishing-falso-blocco-spid-e-conti-bancari/index.html",
+    url: "https://www.commissariatodips.it/notizie/index.html",
     category: "sicurezza",
+    type: "ente istituzionale"
+  },
+  adeFatturaElettronica1102026: {
+    id: 'adeFatturaElettronica1102026',
+    name: "Agenzia delle Entrate — Specifiche tecniche fatturazione elettronica v. 1.10 (utilizzabili dall'11 gennaio 2027)",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/specifiche-tecniche-versione-1.10-utilizzabili-dall-11-gennaio-2027",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  adeFatturaElettronicaArea: {
+    id: 'adeFatturaElettronicaArea',
+    name: "Agenzia delle Entrate — Area tematica Fatturazione elettronica e Sistema di Interscambio (SdI)",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/aree-tematiche/fatturazione-elettronica",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  certAgidMalwareMirax2026: {
+    id: 'certAgidMalwareMirax2026',
+    name: "CERT-AgID — Malware Android Mirax veicolato tramite falso dominio Agenzia delle Entrate e finto aggiornamento App IO",
+    ente: "CERT-AgID",
+    url: "https://cert-agid.gov.it/news/malware-mirax-veicolato-in-italia-tramite-falso-domini-di-agenzia-delle-entrate-e-finto-aggiornamento-app-io/",
+    category: "sicurezza",
+    type: "ente istituzionale"
+  },
+  adeAvvisoPhishingMirax2026: {
+    id: 'adeAvvisoPhishingMirax2026',
+    name: "Agenzia delle Entrate — Avviso del 19 novembre 2026: campagna di phishing con falso sito dell'Agenzia e APK Mirax",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/avviso-del-19-novembre-2026-nuova-campagna-di-phishing-tramite-falso-sito-dell-agenzia",
+    category: "sicurezza",
+    type: "ente istituzionale"
+  },
+  adeAvvisoFalsaPecIrap2026: {
+    id: 'adeAvvisoFalsaPecIrap2026',
+    name: "Agenzia delle Entrate — Avviso del 23 novembre 2026: falsa campagna di comunicazioni PEC per rimborsi IRAP",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/avviso-del-23-novembre-2026-nuova-campagna-di-false-comunicazioni-di-rimborso",
+    category: "sicurezza",
+    type: "ente istituzionale"
+  },
+  aderAvvisoFalsePec2026: {
+    id: 'aderAvvisoFalsePec2026',
+    name: "Agenzia delle Entrate-Riscossione — Avviso del 10 novembre 2026: attenzione alle false PEC e dominio ufficiale @pec.agenziariscossione.gov.it",
+    ente: "Agenzia delle Entrate-Riscossione",
+    url: "https://www.agenziaentrateriscossione.gov.it/it/il-gruppo/lagenzia-comunica/phishing/segnalazioni-e-approfondimenti/avviso-del-10-novembre-2026-rilevata-campagna-di-spear-phishing/",
+    category: "sicurezza",
+    type: "ente istituzionale"
+  },
+  poliziaPostaleBlackFriday2026: {
+    id: 'poliziaPostaleBlackFriday2026',
+    name: "Polizia Postale — Black Friday e acquisti online sicuri: 3 regole anti-truffa",
+    ente: "Polizia Postale",
+    url: "https://www.commissariatodips.it/notizie/articolo/black-friday-attenti-alle-truffe-1/index.html",
+    category: "sicurezza",
+    type: "ente istituzionale"
+  },
+  inpsCedolinoPensioneProcedura: {
+    id: 'inpsCedolinoPensioneProcedura',
+    name: "INPS — Servizio online Cedolino della pensione e verifica ratei mensili",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/inps-comunica/diritti-e-obblighi-in-materia-di-sicurezza-sociale-nell-unione-e/procedure/procedura-cedolino-della-pensione.html",
+    category: "lavoro",
+    type: "servizio ufficiale"
+  },
+  corteCassazioneHome: {
+    id: 'corteCassazioneHome',
+    name: "Corte Suprema di Cassazione — Portale istituzionale della giurisprudenza di legittimità",
+    ente: "Corte Suprema di Cassazione",
+    url: "https://www.cortedicassazione.it/",
+    category: "giustizia",
+    type: "ente istituzionale"
+  },
+  giustiziaTributariaPortale: {
+    id: 'giustiziaTributariaPortale',
+    name: "Portale della Giustizia Tributaria — Corti di Giustizia Tributaria e contenzioso fiscale",
+    ente: "MEF — Giustizia Tributaria",
+    url: "https://www.giustiziatributaria.gov.it/",
+    category: "giustizia",
+    type: "ente istituzionale"
+  },
+  saluteCampagnaInfluenza20262027: {
+    id: 'saluteCampagnaInfluenza20262027',
+    name: "Ministero della Salute — Campagna di comunicazione 2026-2027 per la vaccinazione contro l'influenza",
+    ente: "Ministero della Salute",
+    url: "https://www.salute.gov.it/new/it/campagna-di-comunicazione/campagna-di-comunicazione-2026-2027-la-vaccinazione-contro-linfluenza/",
+    category: "sanita",
     type: "ente istituzionale"
   }
 };

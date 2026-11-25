@@ -17,7 +17,7 @@ export interface CivicDeadline {
     lastReviewedAt: string
 }
 
-const D = '2026-11-08'
+const D = '2026-11-25'
 
 const src = (title: string, organization: string, url: string): Source => ({
     title,
@@ -42,7 +42,7 @@ export const CIVIC_DEADLINES: CivicDeadline[] = [
         guideLink: '/moduli/modulo-25-fisco-cittadini',
         newsLink: '/novita/secondo-acconto-imposte-novembre-2026',
         sources: [
-            src('Scadenza secondo acconto', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/schede/pagamenti/imposte-sui-redditi-secondo-acconto'),
+            src('Scadenza secondo acconto e versamenti IRPEF', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/come-si-paga-l-irpef6'),
         ],
         lastReviewedAt: D,
     },
@@ -52,14 +52,31 @@ export const CIVIC_DEADLINES: CivicDeadline[] = [
         title: 'Rottamazione-quater: sesta rata definizione agevolata cartelle esattoriali',
         category: 'fisco',
         entity: 'Agenzia delle Entrate-Riscossione',
-        summary: 'Scadenza della sesta rata della rottamazione-quater per i contribuenti ammessi ai piani di dilazione. Si applicano i consueti 5 giorni di tolleranza di legge (pagamento valido fino al 9 dicembre 2026).',
+        summary: 'Scadenza della sesta rata della rottamazione-quater per i contribuenti ammessi ai piani di dilazione. Si applicano i consueti 5 giorni di tolleranza di legge (pagamento valido fino al 7 dicembre 2026).',
         whoIsAffected: 'Contribuenti che hanno aderito alla definizione agevolata delle cartelle esattoriali.',
         whatToDo: 'Paga con il bollettino allegato alla comunicazione delle somme dovute via home banking, tabaccaio o sportello.',
         whatHappensIfNot: 'Decadenza automatica e irreversibile dai benefici della rottamazione con ripristino di sanzioni e interessi.',
         modelLink: '/modelli/cartelle-ader',
         newsLink: '/novita/rottamazione-quater-scadenza-sesta-rata-novembre-2026',
         sources: [
-            src('Definizione agevolata scadenze', 'Agenzia delle Entrate-Riscossione', 'https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/definizione-agevolata-rottamazione-quater-scadenze/'),
+            src('Definizione agevolata scadenze', 'Agenzia delle Entrate-Riscossione', 'https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/definizione-agevolata/'),
+        ],
+        lastReviewedAt: D,
+    },
+    {
+        id: 'ape-sociale-verifica-2026',
+        date: '2026-11-30',
+        title: 'APE Sociale 2026: ultima finestra per la domanda di verifica dei requisiti',
+        category: 'inps',
+        entity: 'INPS',
+        summary: 'Termine ultimo per l’invio tardivo della domanda di riconoscimento delle condizioni di accesso all’APE Sociale 2026 (Messaggio INPS n. 128/2026), accolta compatibilmente con le risorse residue disponibili.',
+        whoIsAffected: 'Lavoratori con almeno 63 anni e 5 mesi di età in stato di disoccupazione, caregiver, invalidi civili >= 74% o addetti a mansioni gravose.',
+        whatToDo: 'Accedi al servizio INPS con SPID o CIE (oppure rivolgiti a un patronato) e presenta la domanda di verifica condizioni insieme alla domanda di prestazione se hai già i requisiti.',
+        whatHappensIfNot: 'Impossibilità di accedere alla finestra 2026 e rinvio all’eventuale proroga della misura nel 2027.',
+        guideLink: '/moduli/modulo-27-pensioni-previdenza',
+        newsLink: '/novita/pensioni-ape-sociale-esclusione-contributivi-puri-chiarimento-inps',
+        sources: [
+            src('Messaggio INPS n. 128 del 14 gennaio 2026 — Proroga APE Sociale', 'INPS', 'https://www.inps.it/content/dam/inps-site/it/scorporati/circolari-e-messaggi/2026/01/Circolare_15135/Allegati/16522_Messaggio-numero-128-del-14-01-2026.pdf'),
         ],
         lastReviewedAt: D,
     },
@@ -77,7 +94,7 @@ export const CIVIC_DEADLINES: CivicDeadline[] = [
         guideLink: '/moduli/modulo-25-fisco-cittadini',
         newsLink: '/novita/bonus-natale-100-euro-guida-modulo-noipa-2026',
         sources: [
-            src('Disposizioni Bonus Natale', 'MEF', 'https://www.mef.gov.it/focus/Bonus-Natale-lavoratori-dipendenti/'),
+            src('Disposizioni Bonus Natale e portale NoiPA', 'MEF', 'https://noipa.mef.gov.it/cl/bonus-natale'),
         ],
         lastReviewedAt: D,
     },
@@ -112,7 +129,7 @@ export const CIVIC_DEADLINES: CivicDeadline[] = [
         guideLink: '/moduli/modulo-30-catasto-imu-successioni',
         newsLink: '/novita/saldo-imu-16-dicembre-2026-calcolo-aliquote-f24-esenzioni',
         sources: [
-            src('Delibere IMU comunali', 'Dipartimento delle Finanze', 'https://www.finanze.gov.it/it/Fiscalita-locale/Portale-del-Federalismo-Fiscale/aliquote-imu-comunali/'),
+            src('Delibere IMU comunali', 'Dipartimento delle Finanze', 'https://www.finanze.gov.it/it/fiscalita/fiscalita-regionale-e-locale/Imposta-municipale-propria-IMU/Regolamenti-e-aliquote-ricerca/'),
         ],
         lastReviewedAt: D,
     },
@@ -130,7 +147,24 @@ export const CIVIC_DEADLINES: CivicDeadline[] = [
         guideLink: '/moduli/modulo-23-bonus-isee',
         newsLink: '/novita/rinnovo-isee-2027-dsu-precompilata-documenti-giacenze-medie',
         sources: [
-            src('ISEE Precompilato', 'INPS', 'https://www.inps.it/it/it/dettaglio-scheda.schede-servizio-strumento.schede-servizi.50088.isee-precompilato.html'),
+            src('Portale unico ISEE Precompilato', 'INPS', 'https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2023.04.online-il-nuovo-portale-unico-isee.html'),
+        ],
+        lastReviewedAt: D,
+    },
+    {
+        id: 'fattura-elettronica-specifiche-1-10',
+        date: '2027-01-11',
+        title: 'Fatturazione elettronica: utilizzabili le specifiche tecniche v. 1.10 (Testo Unico IVA e codice RF21)',
+        category: 'fisco',
+        entity: 'Agenzia delle Entrate',
+        summary: 'Entrano in uso i nuovi tracciati XML e schemi XSD (1.2.4 e 1.0.3) adeguati al Testo Unico IVA (D.Lgs. 10/2026) con il nuovo codice regime fiscale RF21 per ODV e APS del Terzo Settore. Confermata la retrocompatibilità sul Sistema di Interscambio (SdI).',
+        whoIsAffected: 'Titolari di partita IVA, imprese, professionisti, ODV/APS in regime forfetario e software house.',
+        whatToDo: 'Aggiorna il software gestionale di fatturazione e verifica l’adozione del codice RF21 se rappresenti una ODV o APS ex art. 86 D.Lgs. 117/2017.',
+        whatHappensIfNot: 'Il Sistema di Interscambio mantiene la retrocompatibilità in transizione, ma i vecchi riferimenti normativi risultano superati.',
+        guideLink: '/moduli/modulo-29-partita-iva-forfettario',
+        newsLink: '/novita/fatturazione-elettronica-2027-specifiche-tecniche-1-10-codice-rf21',
+        sources: [
+            src('Specifiche tecniche fatturazione elettronica v. 1.10', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/specifiche-tecniche-versione-1.10-utilizzabili-dall-11-gennaio-2027'),
         ],
         lastReviewedAt: D,
     },
@@ -163,8 +197,44 @@ export const CIVIC_DEADLINES: CivicDeadline[] = [
         whatToDo: 'Accedi con SPID o CIE su unica.istruzione.gov.it, compila il modulo e inoltra la domanda.',
         whatHappensIfNot: 'Assegnazione d’ufficio in base alla disponibilità residua dei posti negli istituti scolastici.',
         guideLink: '/moduli/modulo-08-scuola-famiglia',
+        newsLink: '/novita/iscrizioni-scuola-anno-scolastico-piattaforma-unica-mim-guida-2026-2027',
         sources: [
-            src('Iscrizioni online', 'MIM', 'https://unica.istruzione.gov.it/it/orientamento/iscrizioni'),
+            src('Iscrizioni online', 'MIM', 'https://unica.istruzione.gov.it/portale/it/orientamento/iscrizioni'),
+        ],
+        lastReviewedAt: D,
+    },
+    {
+        id: 'rinnovo-isee-2027-assegno-unico',
+        date: '2027-02-28',
+        title: 'Rinnovo ISEE 2027 entro febbraio per evitare il minimo sull’Assegno Unico da marzo',
+        category: 'famiglia',
+        entity: 'INPS',
+        summary: 'Termine ordinario per presentare la DSU 2027 (redditi e patrimoni 2025) prima dell’elaborazione della mensilità di marzo dell’Assegno Unico e Universale. Chi la trasmette entro il 30 giugno 2027 recupera gli arretrati.',
+        whoIsAffected: 'Tutte le famiglie con figli beneficiarie dell’Assegno Unico e Universale.',
+        whatToDo: 'Compila la DSU precompilata sul Portale unico ISEE di INPS o presso un CAF autorizzato con saldi e giacenze 2025.',
+        whatHappensIfNot: 'Da marzo 2027 l’INPS corrisponde l’importo minimo base (~58€ a figlio) fino alla presentazione della DSU (conguaglio garantito solo entro il 30 giugno 2027).',
+        modelLink: '/modelli/isee-dsu-mini',
+        guideLink: '/isee-2027',
+        newsLink: '/novita/rinnovo-isee-2027-dsu-precompilata-documenti-giacenze-medie',
+        sources: [
+            src('Assegno Unico e Universale INPS', 'INPS', 'https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.assegno-unico-e-universale-per-i-figli-a-carico-55984.assegno-unico-e-universale-per-i-figli-a-carico.html'),
+        ],
+        lastReviewedAt: D,
+    },
+    {
+        id: 'rottamazione-quater-settima-rata-2027',
+        date: '2027-02-28',
+        title: 'Rottamazione-quater: settima rata definizione agevolata cartelle esattoriali',
+        category: 'fisco',
+        entity: 'Agenzia delle Entrate-Riscossione',
+        summary: 'Scadenza della settima rata del piano di definizione agevolata delle cartelle esattoriali (con i consueti 5 giorni di tolleranza di legge e slittamento festivo).',
+        whoIsAffected: 'Contribuenti con piano di Rottamazione-quater attivo.',
+        whatToDo: 'Effettua il pagamento tramite modulo PagoPA scaricabile dall’area riservata AdER o dal servizio online.',
+        whatHappensIfNot: 'Decadenza automatica dal piano agevolato con ripristino integrale di sanzioni, interessi e aggio.',
+        modelLink: '/modelli/cartelle-ader',
+        guideLink: '/moduli/modulo-28-cartelle-riscossione',
+        sources: [
+            src('Definizione agevolata AdER', 'Agenzia delle Entrate-Riscossione', 'https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/definizione-agevolata/'),
         ],
         lastReviewedAt: D,
     },
@@ -183,7 +253,7 @@ export const CIVIC_DEADLINES: CivicDeadline[] = [
         sources: [
             src('Messaggio INPS n. 3697 del 12/11/2026 — Campagna RED 2026', 'INPS', 'https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.messaggi.2026.11.messaggio-numero-3697-del-12-11-2026.html'),
         ],
-        lastReviewedAt: '2026-11-15',
+        lastReviewedAt: D,
     },
     {
         id: 'certificazione-unica-2027',
@@ -198,7 +268,7 @@ export const CIVIC_DEADLINES: CivicDeadline[] = [
         modelLink: '/modelli/certificazione-unica',
         guideLink: '/moduli/modulo-25-fisco-cittadini',
         sources: [
-            src('Certificazione Unica', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/schede/dichiarazioni/certificazione-unica/cosa-cu'),
+            src('Certificazione Unica modello e istruzioni', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/certificazione-unica-2026/modello-e-istruzioni'),
         ],
         lastReviewedAt: D,
     },
@@ -215,7 +285,7 @@ export const CIVIC_DEADLINES: CivicDeadline[] = [
         modelLink: '/modelli/saldo-imu-calcolo-f24',
         guideLink: '/moduli/modulo-30-catasto-imu-successioni',
         sources: [
-            src('IMU normativa', 'Dipartimento delle Finanze', 'https://www.finanze.gov.it/it/Fiscalita-locale/IMU/'),
+            src('IMU normativa', 'Dipartimento delle Finanze', 'https://www.finanze.gov.it/it/fiscalita/fiscalita-regionale-e-locale/Imposta-municipale-propria-IMU/'),
         ],
         lastReviewedAt: D,
     },

@@ -3,7 +3,7 @@ import { published, src, ol } from './civicPublished';
 
 export const modulo_29_partita_iva_forfettario: Module = {
     id: 'modulo-29-partita-iva-forfettario',
-    lastUpdated: '2026-10-21',
+    lastUpdated: '2026-11-25',
     title: 'Partita IVA e forfettario',
     description: 'Apertura, variazione e chiusura della partita IVA, orientamento al regime forfetario, F24 telematico e iscrizione alla Gestione separata INPS. Procedure da completare sui siti Ade e INPS.',
     category: 'soldi',
@@ -247,6 +247,47 @@ export const modulo_29_partita_iva_forfettario: Module = {
             ],
             sources: [
                 src('Concordato Preventivo Biennale — Circolare n. 8/E', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/concordato-preventivo-biennale', 'Istruzioni operative e regole premiali'),
+            ],
+        }),
+        published({
+            id: 'fatturazione-elettronica-specifiche-1-10',
+            slug: 'fatturazione-elettronica-2027-specifiche-1-10-codice-rf21',
+            title: 'Fatturazione elettronica 2027: specifiche v. 1.10 e codice RF21',
+            category: 'soldi',
+            audience: ['lavoratori'],
+            level: 'intermedia',
+            estimatedMinutes: 12,
+            mainEntity: 'Agenzia delle Entrate',
+            summary: 'Dall’11 gennaio 2027 entrano in uso le specifiche tecniche v. 1.10 con adeguamento al Testo Unico IVA (D.Lgs. 10/2026) e il nuovo codice regime RF21 per ODV e APS del Terzo Settore.',
+            steps: [
+                'Verifica con la tua software house che l’aggiornamento agli schemi XSD 1.2.4 (fattura ordinaria) e 1.0.3 (semplificata) sia pronto entro l’11 gennaio 2027.',
+                'Se utilizzi il portale gratuito «Fatture e Corrispettivi» o l’app FatturAE dell’Agenzia delle Entrate, gli aggiornamenti dei tracciati sono applicati automaticamente.',
+                'Per Organizzazioni di Volontariato (ODV) e Associazioni di Promozione Sociale (APS) in regime forfetario ex art. 86 D.Lgs. 117/2017, adotta il nuovo codice regime fiscale RF21.',
+                'Se operi in regime forfetario ordinario (RF19) o vendite a domicilio (RF13), verifica i nuovi richiami al Testo Unico IVA nei modelli preimpostati.',
+                'Ricorda che il Sistema di Interscambio (SdI) garantisce la retrocompatibilità in fase di avvio per evitare scarti immediati.',
+            ],
+            commonErrors: [
+                'Ignorare gli aggiornamenti del software gestionale in prossimità di gennaio 2027',
+                'Usare codici regime obsoleti per enti del Terzo Settore ODV/APS quando il nuovo tracciato è attivo',
+            ],
+            dontDo: [
+                'Non modificare manualmente i file XML o gli schemi XSD senza validazione sul portale «Fatture e Corrispettivi»',
+            ],
+            checklist: [
+                'Aggiornamento gestionale verificato entro l’11 gennaio 2027',
+                'Codice regime fiscale controllato (RF19 o RF21 per ODV/APS)',
+            ],
+            faqs: [
+                { q: 'I vecchi tracciati verranno scartati dall’11 gennaio 2027?', a: 'L’Agenzia delle Entrate ha previsto la retrocompatibilità sul Sistema di Interscambio (SdI) per accompagnare il passaggio al Testo Unico IVA (D.Lgs. 10/2026).' },
+                { q: 'Chi deve usare il nuovo codice RF21?', a: 'Le Organizzazioni di Volontariato (ODV) e le Associazioni di Promozione Sociale (APS) che applicano il regime forfetario previsto dall’art. 86 del Codice del Terzo Settore (D.Lgs. 117/2017).' },
+            ],
+            officialLinksV2: [
+                ol('adeFatturaElettronica1102026', 'Allegato A e schemi XSD versione 1.10', []),
+                ol('adeFatturaElettronicaArea', 'Portale e servizi gratuiti Fatturazione elettronica', []),
+            ],
+            sources: [
+                src('Specifiche tecniche v. 1.10 (dall’11 gennaio 2027)', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/specifiche-tecniche-versione-1.10-utilizzabili-dall-11-gennaio-2027'),
+                src('Area tematica Fatturazione elettronica', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/aree-tematiche/fatturazione-elettronica'),
             ],
         }),
     ],

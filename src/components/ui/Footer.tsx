@@ -33,10 +33,12 @@ export function Footer() {
                         <h4 className="text-xs font-semibold uppercase tracking-widest text-accent-light">Strumenti e Calcolatori</h4>
                         <nav className="grid gap-2 text-sm text-white/70">
                             <Link href="/tool">Tutti i Simulatori</Link>
+                            <Link href="/tool/calcolo-tredicesima">Calcolo Tredicesima Netta</Link>
                             <Link href="/tool/calcolo-stipendio-netto">Calcolo Stipendio Netto</Link>
                             <Link href="/tool/trova-bonus">Trova le tue Agevolazioni</Link>
                             <Link href="/tool/trova-procedura">Trova la Procedura</Link>
                             <Link href="/tool/calcolo-consumo-elettrico">Calcolo Consumo Elettrico</Link>
+                            <Link href="/guide">Guide Operative</Link>
                             <Link href="/scadenze">Scadenzario 2026–2027</Link>
                             <Link href="/confronti">Tabelle di Confronto</Link>
                             <Link href="/ai">Bussola AI & Privacy</Link>

@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_03_truffe_phishing: Module = {
     id: 'modulo-03-truffe-phishing',
-    lastUpdated: '2026-10-26',
+    lastUpdated: '2026-11-25',
     title: 'Truffe e Phishing',
     description: 'Come riconoscere i tentativi di truffa online, proteggere i propri dati e reagire in caso di errore.',
     category: 'truffe',
@@ -59,12 +59,12 @@ export const modulo_03_truffe_phishing: Module = {
             ],
             sources: [
                 {
-                    title: 'Cos\'è il phishing',
+                    title: 'Polizia Postale — Allerte e notizie sulle truffe online',
                     organization: 'Polizia Postale',
-                    url: 'https://www.commissariatodips.it/consigli/per-i-cittadini/il-phishing/index.html',
+                    url: 'https://www.commissariatodips.it/notizie/index.html',
                     type: 'official',
                     usedFor: 'Definizione e consigli',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-11-25'
                 }
             ]
         },
@@ -181,10 +181,10 @@ export const modulo_03_truffe_phishing: Module = {
                 {
                     title: 'Come difendersi dal phishing e dalle truffe online',
                     organization: 'Polizia Postale — Commissariato di P.S. Online',
-                    url: 'https://www.commissariatodips.it/consigli/per-i-cittadini/il-phishing/index.html',
+                    url: 'https://www.commissariatodips.it/notizie/index.html',
                     type: 'official',
                     usedFor: 'Linee guida ufficiali di verifica',
-                    lastCheckedAt: '2026-10-21'
+                    lastCheckedAt: '2026-11-25'
                 }
             ]
         },
@@ -266,6 +266,77 @@ export const modulo_03_truffe_phishing: Module = {
                     type: 'official',
                     usedFor: 'Dinamica della frode e linee guida di tutela',
                     lastCheckedAt: '2026-10-26'
+                }
+            ]
+        },
+        {
+            id: 'malware-apk-falso-app-io-pec-truffa',
+            slug: 'difendersi-da-file-apk-falsa-app-io-e-false-pec-fiscali',
+            title: 'Falsa App IO (.apk) e false PEC fiscali: come proteggersi',
+            category: 'truffe',
+            audience: ['cittadini', 'lavoratori'],
+            level: 'base',
+            estimatedMinutes: 8,
+            summary: 'Come riconoscere i falsi aggiornamenti di App IO che installano trojan bancari Android (Mirax) e le false PEC di rimborso IRAP o riscossione segnalate da CERT-AgID, Agenzia delle Entrate e AdER.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-11-25',
+            mainEntity: 'CERT-AgID / Agenzia delle Entrate',
+            steps: [
+                'Non scaricare mai applicazioni o file `.apk` da siti web o link ricevuti via messaggio: App IO si installa e si aggiorna solo da Google Play Store o Apple App Store.',
+                'Controlla sempre la barra degli indirizzi: i portali dell’Agenzia delle Entrate e degli enti pubblici terminano in `.gov.it` o `.italia.it` (diffida di domini simili o falsi bollini Play Protect su pagine web).',
+                'Nelle comunicazioni PEC fiscali, verifica il dominio esatto del mittente: AdER utilizza esclusivamente `@pec.agenziariscossione.gov.it`, mentre indirizzi come `pec.dp2romarimborsiagenziaentrate.it` sono truffe.',
+                'Non compilare né inviare moduli con dati aziendali o personali in risposta a PEC che promettono «rimborsi IRAP a titolo di simulazione».',
+                'Se hai installato un `.apk` sconosciuto su Android, scollega subito il telefono dalla rete (modalità aereo), revoca i permessi di Accessibilità all’app sospetta e contatta la tua banca.',
+            ],
+            commonErrors: [
+                'Concedere i permessi di Accessibilità Android a un’app scaricata fuori dal Play Store',
+                'Rispondere a una PEC fraudolenta pensando che l’estensione «PEC» garantisca l’identità del mittente',
+            ],
+            dontDo: [
+                'Non disattivare i controlli di sicurezza di Android per installare pacchetti `.apk` provenienti da browser o chat',
+            ],
+            checklist: [
+                'App IO aggiornata solo tramite store ufficiale',
+                'Domini PEC controllati prima di aprire allegati',
+                'Nessun file .apk scaricato da siti esterni',
+            ],
+            faqs: [
+                { q: 'Una PEC può essere una truffa di phishing?', a: 'Sì: i truffatori registrano domini PEC con nomi somiglianti a quelli degli uffici pubblici. Occorre verificare il dominio ufficiale dell’ente (es. `@pec.agenziariscossione.gov.it` o consultare agenziaentrate.gov.it) prima di rispondere o inviare documenti.' },
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'certAgidMalwareMirax2026',
+                    useWhen: 'Per leggere l’analisi CERT-AgID sul malware Mirax e finto aggiornamento App IO',
+                    beforeOpening: []
+                },
+                {
+                    sourceId: 'adeAvvisoFalsaPecIrap2026',
+                    useWhen: 'Per consultare l’avviso AdE sulle false PEC di rimborso',
+                    beforeOpening: []
+                },
+                {
+                    sourceId: 'aderAvvisoFalsePec2026',
+                    useWhen: 'Per verificare il dominio PEC ufficiale di AdER',
+                    beforeOpening: []
+                }
+            ],
+            sources: [
+                {
+                    title: 'CERT-AgID — Malware Mirax via falso dominio AdE e finto aggiornamento App IO',
+                    organization: 'CERT-AgID',
+                    url: 'https://cert-agid.gov.it/news/malware-mirax-veicolato-in-italia-tramite-falso-domini-di-agenzia-delle-entrate-e-finto-aggiornamento-app-io/',
+                    type: 'official',
+                    usedFor: 'Indicatori tecnici di compromissione',
+                    lastCheckedAt: '2026-11-25'
+                },
+                {
+                    title: 'Agenzia delle Entrate — Avviso del 23 novembre 2026 su false PEC di rimborso',
+                    organization: 'Agenzia delle Entrate',
+                    url: 'https://www.agenziaentrate.gov.it/portale/avviso-del-23-novembre-2026-nuova-campagna-di-false-comunicazioni-di-rimborso',
+                    type: 'official',
+                    usedFor: 'Riconoscimento false PEC fiscali',
+                    lastCheckedAt: '2026-11-25'
                 }
             ]
         }

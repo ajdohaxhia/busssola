@@ -295,12 +295,12 @@ export const modulo_23_bonus_isee: Module = {
             ],
             sources: [
                 {
-                    title: 'ISEE Precompilato',
+                    title: 'INPS — Portale unico ISEE Precompilato',
                     organization: 'INPS',
-                    url: 'https://www.inps.it/it/it/dettaglio-scheda.schede-servizio-strumento.schede-servizi.50088.isee-precompilato.html',
+                    url: 'https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2023.04.online-il-nuovo-portale-unico-isee.html',
                     type: 'official',
                     usedFor: 'Procedura ufficiale',
-                    lastCheckedAt: '2026-05-16'
+                    lastCheckedAt: '2026-11-25'
                 }
             ]
         },
@@ -629,12 +629,12 @@ export const modulo_23_bonus_isee: Module = {
             ],
             sources: [
                 {
-                    title: 'ISEE precompilato',
+                    title: 'INPS — Portale unico ISEE Precompilato',
                     organization: 'INPS',
-                    url: 'https://www.inps.it/it/it/dettaglio-scheda.schede-servizio-strumento.schede-servizi.50088.isee-precompilato.html',
+                    url: 'https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2023.04.online-il-nuovo-portale-unico-isee.html',
                     type: 'official',
                     usedFor: 'Canale DSU e ISEE corrente',
-                    lastCheckedAt: '2026-08-14',
+                    lastCheckedAt: '2026-11-25',
                 },
                 {
                     title: 'ISEE — scheda istituzionale',

@@ -118,13 +118,13 @@ export const LIFE_HACKS: LifeHack[] = [
             {
                 title: "MEF — Fiscalità locale e delibere IMU",
                 organization: "MEF",
-                url: "https://www.finanze.gov.it/it/Fiscalita-locale/IMU/",
+                url: "https://www.finanze.gov.it/it/fiscalita/fiscalita-regionale-e-locale/Imposta-municipale-propria-IMU/",
                 type: "official",
                 usedFor: "Regole di calcolo e aliquote",
-                lastCheckedAt: "2026-11-08"
+                lastCheckedAt: "2026-11-25"
             }
         ],
-        lastReviewedAt: "2026-11-08",
+        lastReviewedAt: "2026-11-25",
         badges: ["Casa", "Soldi", "Evita errore"]
     },
     {
@@ -157,15 +157,15 @@ export const LIFE_HACKS: LifeHack[] = [
         relatedGuides: ["/moduli/modulo-23-bonus-isee"],
         sources: [
             {
-                title: "INPS — ISEE Precompilato",
+                title: "INPS — Portale unico ISEE Precompilato",
                 organization: "INPS",
-                url: "https://www.inps.it/it/it/dettaglio-scheda.schede-servizio-strumento.schede-servizi.50088.isee-precompilato.html",
+                url: "https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2023.04.online-il-nuovo-portale-unico-isee.html",
                 type: "official",
                 usedFor: "Istruzioni DSU e scadenze",
-                lastCheckedAt: "2026-11-08"
+                lastCheckedAt: "2026-11-25"
             }
         ],
-        lastReviewedAt: "2026-11-08",
+        lastReviewedAt: "2026-11-25",
         badges: ["Soldi", "Risparmia tempo", "Evita errore"]
     },
     {
@@ -3997,13 +3997,13 @@ export const LIFE_HACKS: LifeHack[] = [
             {
                 title: "Agenzia delle Entrate — Scadenza e rateizzazione secondo acconto imposte sui redditi",
                 organization: "Agenzia delle Entrate",
-                url: "https://www.agenziaentrate.gov.it/portale/schede/pagamenti/imposte-sui-redditi-secondo-acconto",
+                url: "https://www.agenziaentrate.gov.it/portale/come-si-paga-l-irpef6",
                 type: "official",
                 usedFor: "Scadenze e codici tributo F24",
-                lastCheckedAt: "2026-11-08"
+                lastCheckedAt: "2026-11-25"
             }
         ],
-        lastReviewedAt: "2026-11-08",
+        lastReviewedAt: "2026-11-25",
         badges: ["Soldi", "Evita errore", "Lavoro"]
     },
     {
@@ -4037,13 +4037,13 @@ export const LIFE_HACKS: LifeHack[] = [
             {
                 title: "Agenzia delle Entrate-Riscossione — Definizione agevolata: scadenze e tolleranza",
                 organization: "Agenzia delle Entrate-Riscossione",
-                url: "https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/definizione-agevolata-rottamazione-quater-scadenze/",
+                url: "https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/definizione-agevolata/",
                 type: "official",
                 usedFor: "Regole tolleranza e canali di versamento",
-                lastCheckedAt: "2026-11-08"
+                lastCheckedAt: "2026-11-25"
             }
         ],
-        lastReviewedAt: "2026-11-08",
+        lastReviewedAt: "2026-11-25",
         badges: ["Soldi", "Risparmia tempo", "Evita errore"]
     },
     {

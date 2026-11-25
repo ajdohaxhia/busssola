@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_25_fisco_cittadini: Module = {
     id: 'modulo-25-fisco-cittadini',
-    lastUpdated: '2026-11-22',
+    lastUpdated: '2026-11-25',
     title: 'Fisco e Cittadini',
     description: 'Guida ai servizi dell\'Agenzia delle Entrate, dichiarazione dei redditi e gestione delle scadenze fiscali.',
     category: 'soldi',
@@ -110,10 +110,10 @@ export const modulo_25_fisco_cittadini: Module = {
                 {
                     title: 'Cassetto Fiscale',
                     organization: 'Agenzia delle Entrate',
-                    url: 'https://www.agenziaentrate.gov.it/portale/web/guest/area-riservata/cassetto-fiscale',
+                    url: 'https://www.agenziaentrate.gov.it/portale/servizi/servizitrasversali/altri/cassetto-fiscale',
                     type: 'official',
                     usedFor: 'Recupero documenti',
-                    lastCheckedAt: '2026-05-16'
+                    lastCheckedAt: '2026-11-25'
                 }
             ]
         },
@@ -183,10 +183,10 @@ export const modulo_25_fisco_cittadini: Module = {
                 {
                     title: 'Rimborsi',
                     organization: 'Agenzia delle Entrate',
-                    url: 'https://www.agenziaentrate.gov.it/portale/web/guest/cittadini/rimborsi',
+                    url: 'https://www.agenziaentrate.gov.it/portale/schede/rimborsi',
                     type: 'official',
                     usedFor: 'Modalità di rimborso',
-                    lastCheckedAt: '2026-05-16'
+                    lastCheckedAt: '2026-11-25'
                 }
             ]
         },
@@ -435,7 +435,7 @@ export const modulo_25_fisco_cittadini: Module = {
                 'CAF di riferimento per i lavoratori dipendenti'
             ],
             officialLinks: [
-                'https://www.agenziaentrate.gov.it/portale/schede/pagamenti/imposte-sui-redditi-secondo-acconto'
+                'https://www.agenziaentrate.gov.it/portale/come-si-paga-l-irpef6'
             ],
             officialLinksV2: [
                 { sourceId: 'adeSecondoAcconto2026', useWhen: 'Per consultare le regole sul secondo acconto', beforeOpening: [] },
@@ -451,10 +451,68 @@ export const modulo_25_fisco_cittadini: Module = {
                 {
                     title: 'Agenzia delle Entrate — Scadenza e rateizzazione secondo acconto imposte sui redditi',
                     organization: 'Agenzia delle Entrate',
-                    url: 'https://www.agenziaentrate.gov.it/portale/schede/pagamenti/imposte-sui-redditi-secondo-acconto',
+                    url: 'https://www.agenziaentrate.gov.it/portale/come-si-paga-l-irpef6',
                     type: 'official',
                     usedFor: 'Regole acconto, scadenze e canali F24',
-                    lastCheckedAt: '2026-11-08'
+                    lastCheckedAt: '2026-11-25'
+                }
+            ]
+        },
+        {
+            id: 'controlli-bancari-fisco-diritti',
+            slug: 'controlli-fisco-conti-correnti-autorizzazione-diritti',
+            title: 'Controlli sui conti correnti: regole su autorizzazione e tutele',
+            category: 'soldi',
+            audience: ['cittadini', 'lavoratori'],
+            level: 'intermedia',
+            estimatedMinutes: 12,
+            mainEntity: 'Corte Suprema di Cassazione / Agenzia delle Entrate',
+            summary: 'Per la Cassazione (ord. nn. 19956 e 19960/2026) i movimenti bancari acquisiti dal Fisco senza autorizzazione preventiva motivata sono inutilizzabili se eccepiti nel ricorso di primo grado.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-11-25',
+            steps: [
+                'Se ricevi un avviso di accertamento o un questionario basato su movimentazioni bancarie (art. 32 D.P.R. 600/1973), verifica se è allegata o indicata l’autorizzazione del Direttore Regionale AdE o Comandante Regionale GdF.',
+                'Controlla data e motivazione: l’autorizzazione deve precedere la richiesta alla banca ed esplicitare i presupposti, i soggetti e i periodi d’imposta verificati.',
+                'In assenza di allegazione, presenta istanza formale di accesso agli atti all’ufficio accertatore prima della scadenza dei termini di impugnazione.',
+                'Prepara con il tuo difensore tributario la giustificazione documentale dei singoli versamenti/prelievi contestati.',
+                'Ricorda che l’eventuale assenza o carenza di autorizzazione non è rilevabile d’ufficio: va eccepita espressamente già nel ricorso di primo grado in Corte di Giustizia Tributaria.',
+            ],
+            commonErrors: [
+                'Omettere l’eccezione sull’autorizzazione nel ricorso introduttivo di primo grado sperando che il giudice la rilevi da solo',
+                'Confondere un invito a comparire o questionario con un avviso di accertamento già esecutivo',
+            ],
+            dontDo: [
+                'Non ignorare le richieste istruttorie dell’Agenzia delle Entrate lasciando decorrere i 60 giorni per il ricorso o l’adesione',
+            ],
+            checklist: [
+                'Data e motivazione dell’autorizzazione alle indagini bancarie verificate',
+                'Accesso agli atti richiesto se il documento manca',
+                'Termini di impugnazione in Corte di Giustizia Tributaria annotati',
+            ],
+            faqs: [
+                { q: 'I dati bancari raccolti senza autorizzazione vengono annullati automaticamente dal giudice?', a: 'No: secondo le ordinanze nn. 19956 e 19960/2026 della Corte di Cassazione, il vizio rende inutilizzabili i dati ma deve essere eccepito specificamente dal contribuente fin dal ricorso di primo grado.' },
+            ],
+            officialLinksV2: [
+                { sourceId: 'corteCassazioneHome', useWhen: 'Per consultare la giurisprudenza della Corte Suprema di Cassazione', beforeOpening: [] },
+                { sourceId: 'giustiziaTributariaPortale', useWhen: 'Per informazioni sul processo dinanzi alle Corti di Giustizia Tributaria', beforeOpening: [] },
+            ],
+            sources: [
+                {
+                    title: 'Corte Suprema di Cassazione — Portale della giurisprudenza',
+                    organization: 'Corte Suprema di Cassazione',
+                    url: 'https://www.cortedicassazione.it/',
+                    type: 'official',
+                    usedFor: 'Ordinanze nn. 19956 e 19960/2026 su indagini finanziarie',
+                    lastCheckedAt: '2026-11-25'
+                },
+                {
+                    title: 'Agenzia delle Entrate — Accertamenti e regolarizzazioni',
+                    organization: 'Agenzia delle Entrate',
+                    url: 'https://www.agenziaentrate.gov.it/portale/cittadini/accertamenti-e-regolarizzazioni',
+                    type: 'official',
+                    usedFor: 'Diritti del contribuente e istituti deflattivi',
+                    lastCheckedAt: '2026-11-25'
                 }
             ]
         }

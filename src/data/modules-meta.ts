@@ -58,11 +58,11 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "number": 0,
     "title": "Truffe e Phishing",
     "description": "Come riconoscere i tentativi di truffa online, proteggere i propri dati e reagire in caso di errore.",
-    "lessonCount": 4,
+    "lessonCount": 5,
     "difficulty": "base",
     "icon": "AlertTriangle",
     "category": "truffe",
-    "lastUpdated": "2026-10-26",
+    "lastUpdated": "2026-11-25",
     "featuredType": "none"
   },
   {
@@ -349,7 +349,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "base",
     "icon": "Stethoscope",
     "category": "sanita",
-    "lastUpdated": "2026-10-26",
+    "lastUpdated": "2026-11-25",
     "featuredType": "none"
   },
   {
@@ -404,11 +404,11 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "number": 0,
     "title": "Fisco e Cittadini",
     "description": "Guida ai servizi dell'Agenzia delle Entrate, dichiarazione dei redditi e gestione delle scadenze fiscali.",
-    "lessonCount": 10,
+    "lessonCount": 11,
     "difficulty": "base",
     "icon": "Receipt",
     "category": "soldi",
-    "lastUpdated": "2026-11-22",
+    "lastUpdated": "2026-11-25",
     "featuredType": "none"
   },
   {
@@ -428,11 +428,11 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "number": 0,
     "title": "Pensioni e previdenza",
     "description": "Domanda di pensione INPS, vecchiaia e anticipata, APE sociale, estratto contributivo, ricostituzione e riscatto laurea: orientamento sulle schede ufficiali.",
-    "lessonCount": 8,
+    "lessonCount": 9,
     "difficulty": "intermedia",
     "icon": "Landmark",
     "category": "lavoro",
-    "lastUpdated": "2026-08-27",
+    "lastUpdated": "2026-11-25",
     "featuredType": "none",
     "mainEntity": "INPS"
   },
@@ -445,7 +445,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "intermedia",
     "icon": "FileWarning",
     "category": "soldi",
-    "lastUpdated": "2026-11-22",
+    "lastUpdated": "2026-11-25",
     "featuredType": "none",
     "mainEntity": "Agenzia delle entrate-Riscossione"
   },
@@ -454,11 +454,11 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "number": 0,
     "title": "Partita IVA e forfettario",
     "description": "Apertura, variazione e chiusura della partita IVA, orientamento al regime forfetario, F24 telematico e iscrizione alla Gestione separata INPS. Procedure da completare sui siti Ade e INPS.",
-    "lessonCount": 7,
+    "lessonCount": 8,
     "difficulty": "intermedia",
     "icon": "Briefcase",
     "category": "soldi",
-    "lastUpdated": "2026-10-21",
+    "lastUpdated": "2026-11-25",
     "featuredType": "none",
     "mainEntity": "Agenzia delle Entrate"
   },

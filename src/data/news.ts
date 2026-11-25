@@ -2,7 +2,7 @@ import type { NewsItem, Source } from '@/types'
 
 const D = '2026-10-16'
 const CHECKED = '2026-11-08'
-const TODAY = '2026-11-22'
+const TODAY = '2026-11-25'
 
 const src = (title: string, organization: string, url: string, usedFor = 'Allerta e sicurezza 2026', checkedAt = D): Source => ({
     title,
@@ -14,371 +14,201 @@ const src = (title: string, organization: string, url: string, usedFor = 'Allert
 })
 
 export const CIVIC_NEWS: NewsItem[] = [
-    // ── Auto-imported 2026-11-24 ──────────────────────────
     {
-        slug: 'fattura-elettronica-2027-nuove-specifiche-tecniche-110-fisco-e-tasse-20261121',
-        title: 'Fattura elettronica 2027: nuove specifiche tecniche 1.10',
-        date: '2026-11-21',
-        summary: 'Fattura elettronica 2027: nuove specifiche tecniche 1.10. Fonte: Fisco e Tasse.',
+        slug: 'fatturazione-elettronica-2027-specifiche-tecniche-1-10-codice-rf21',
+        title: 'Fatturazione elettronica 2027: pubblicate le specifiche tecniche 1.10, adeguamento al Testo Unico IVA e nuovo codice RF21',
+        date: '2026-11-24',
+        summary: 'L’Agenzia delle Entrate pubblica l’aggiornamento alla versione 1.10 delle specifiche tecniche per la fatturazione elettronica (utilizzabili dall’11 gennaio 2027). I tracciati XML e gli schemi XSD recepiscono il nuovo Testo Unico IVA (D.Lgs. 10/2026) e introducono il codice regime RF21 per ODV e APS del Terzo Settore, garantendo la retrocompatibilità sul Sistema di Interscambio (SdI).',
         body: [
-            'Fattura elettronica 2027: nuove specifiche tecniche 1.10.',
+            'L’Agenzia delle Entrate ha pubblicato (con aggiornamenti del 24 novembre 2026 nella sezione dedicata alle specifiche tecniche di «Fatture e Corrispettivi») la versione 1.10 dell’Allegato A per la fatturazione elettronica verso privati e Pubblica Amministrazione, utilizzabile a partire da lunedì 11 gennaio 2027.',
+            'L’intervento tecnico nasce per allineare i tracciati XML e gli schemi di validazione XSD (versione 1.2.4 per la fattura ordinaria `Schema_VFPR12_v1.2.4.xsd` e versione 1.0.3 per la fattura semplificata `Schema_VFSM10_v1.0.3.xsd`) all’entrata in vigore del nuovo Testo Unico IVA (D.Lgs. n. 10/2026) dal 1° gennaio 2027, aggiornando i richiami normativi per i documenti di integrazione/autofattura e le causali dei regimi RF13 e RF19.',
+            'Tra le novità di maggior impatto operativo figura l’introduzione del nuovo codice di regime fiscale «RF21», utilizzabile sia nella fattura ordinaria sia in quella semplificata per identificare le Organizzazioni di Volontariato (ODV) e le Associazioni di Promozione Sociale (APS) che applicano il regime forfetario previsto dall’articolo 86 del Codice del Terzo Settore (D.Lgs. n. 117/2017).',
+            'L’Amministrazione Finanziaria conferma che il Sistema di Interscambio (SdI) continuerà a garantire la retrocompatibilità nella fase di transizione: i file generati secondo le precedenti specifiche non subiranno scarti immediati per il solo passaggio normativo, lasciando a imprese, professionisti e software house il tempo tecnico per aggiornare i gestionali prima dell’11 gennaio 2027.',
         ],
         whatChanged: [
-            'Fattura elettronica 2027: nuove specifiche tecniche 1.10',
+            'Pubblicazione delle specifiche tecniche v. 1.10 e nuovi schemi XSD (1.2.4 ordinaria, 1.0.3 semplificata) utilizzabili dall’11 gennaio 2027',
+            'Adeguamento dei riferimenti normativi nel tracciato XML al nuovo Testo Unico IVA (D.Lgs. n. 10/2026)',
+            'Introduzione del nuovo codice regime fiscale RF21 per ODV e APS del Terzo Settore (art. 86 D.Lgs. 117/2017)',
+            'Garanzia di retrocompatibilità sul Sistema di Interscambio (SdI) per evitare scarti bloccanti in avvio',
         ],
-        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whoIsAffected: 'Titolari di partita IVA (ordinari e forfettari), Organizzazioni di Volontariato (ODV), Associazioni di Promozione Sociale (APS), commercialisti e produttori di software gestionali.',
         whatToDo: [
-            'Consulta la fonte ufficiale per i dettagli completi',
+            'Verifica con il fornitore del tuo software di fatturazione elettronica che l’aggiornamento agli schemi v. 1.10 sia pianificato entro l’11 gennaio 2027',
+            'Se rappresenti una ODV o APS in regime forfetario ex art. 86 D.Lgs. 117/2017, imposta il nuovo codice regime RF21 a decorrere dall’entrata in uso del tracciato',
+            'Se utilizzi il portale gratuito «Fatture e Corrispettivi» o l’app FatturAE dell’Agenzia delle Entrate, l’aggiornamento dei codici avviene automaticamente lato sistema',
+            'Conserva sempre i riferimenti ufficiali su agenziaentrate.gov.it prima di modificare codifiche personalizzate nei tuoi modelli di fattura',
         ],
-        sourceIds: [],
+        sourceIds: ['adeFatturaElettronica1102026', 'adeFatturaElettronicaArea'],
         sources: [
-            src('Fattura elettronica 2027: nuove specifiche tecniche 1.10 - Fisco e Tasse', 'Fisco e Tasse', 'https://news.google.com/rss/articles/CBMisgFBVV95cUxQd0owQjNhWmREVUdlUWttODBEZzZDYzdNWjI4V3pJemxfRHRTQWVVVlN3LUhwa1poXzNWTnc1OHlPQzNGM0J3bDJTNHRLVmctT1FKUS1zWGFDXzVnVW1yRWFBMjRDQlJMQkJ5ZE41WTBadlJwMTNZYWxySDJPN09CWWx1ajRzbzd5VklMT0g3S2x1d0lzSDN3M3VqRmlYd0V2U05YeHltVFZ6UzMxcFNQOXZB?oc=5', 'Fattura elettronica 2027: nuove specifiche tecniche 1.10 - Fisco e Tasse', '2026-11-21'),
+            src('Agenzia delle Entrate — Specifiche tecniche versione 1.10 utilizzabili dall’11 gennaio 2027', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/specifiche-tecniche-versione-1.10-utilizzabili-dall-11-gennaio-2027', 'Allegato A, tabelle tracciato e nuovi schemi XSD', TODAY),
+            src('Agenzia delle Entrate — Area tematica Fatturazione elettronica', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/aree-tematiche/fatturazione-elettronica', 'Servizi gratuiti SdI e normativa', TODAY),
         ],
-        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
+        relatedGuides: ['/moduli/modulo-29-partita-iva-forfettario', '/moduli/modulo-25-fisco-cittadini'],
         relatedTemplates: [],
-        lastReviewedAt: '2026-11-21',
+        lastReviewedAt: TODAY,
     },
     {
-        slug: 'controlli-del-fisco-sul-conto-corrente-la-cassazione-senza-autorizzazione-i-dati',
-        title: 'Controlli del Fisco sul conto corrente, la Cassazione: senza autorizzazione i dati sono inutilizzabili',
+        slug: 'pensioni-dicembre-2026-tredicesima-stop-addizionali-quattordicesima-bonus-154',
+        title: 'Pensioni dicembre 2026: pagamento dal 1° dicembre con tredicesima, stop alle addizionali IRPEF, seconda tranche quattordicesima e bonus 154,94€',
+        date: '2026-11-24',
+        summary: 'Il pagamento delle pensioni di dicembre 2026 scatta martedì 1° dicembre (primo giorno bancabile). Nel cedolino confluiscono la tredicesima mensilità, la sospensione delle trattenute per addizionali regionali e comunali IRPEF, la seconda tranche della quattordicesima per chi ha maturato i requisiti nel secondo semestre e l’importo aggiuntivo di 154,94 euro per le pensioni previdenziali entro i limiti di legge.',
+        body: [
+            'L’accredito delle pensioni del mese di dicembre 2026 avverrà martedì 1° dicembre 2026, primo giorno bancabile del mese, per tutti i titolari che ricevono la prestazione su conto corrente bancario o postale, libretto di risparmio o carta prepagata con IBAN. Per il ritiro in contanti presso gli uffici di Poste Italiane si segue la consueta turnazione alfabetica per cognome distribuita nei primi giorni del mese.',
+            'Il cedolino di dicembre presenta un importo netto mediamente più elevato per effetto di due componenti strutturali: la corresponsione della tredicesima mensilità (calcolata in proporzione ai mesi di pensione percepiti nel 2026) e lo stop alle trattenute mensili delle addizionali regionali e comunali IRPEF, il cui piano di recupero a rate si esaurisce con la mensilità di novembre.',
+            'In aggiunta alla tredicesima, l’INPS accredita d’ufficio la seconda tranche della quattordicesima mensilità ai pensionati che hanno compiuto 64 anni nel secondo semestre 2026 (dal 1° luglio per le gestioni pubbliche e dal 1° agosto per il settore privato) o che sono divenuti titolari di pensione nel corso dell’anno nel rispetto dei limiti reddituali previsti.',
+            'Spetta infine in automatico l’«importo aggiuntivo» di 154,94 euro (art. 70 della Legge n. 388/2000) ai titolari di pensioni previdenziali (esclusi assegni sociali, invalidità civili e APE sociale) con trattamento annuo fino a 7.954,05 euro (o in misura ridotta fino a 8.108,99 euro) e reddito personale IRPEF entro 11.931,08 euro (23.862,15 euro coniugale). Chi possiede i requisiti ma non rileva il bonus nel cedolino online può presentare domanda di ricostituzione della pensione all’INPS o tramite patronato.',
+        ],
+        whatChanged: [
+            'Pagamento delle pensioni di dicembre 2026 fissato a martedì 1° dicembre 2026 su conti e libretti',
+            'Accredito della tredicesima mensilità e sospensione delle rate di addizionale regionale e comunale IRPEF',
+            'Erogazione automatica della seconda tranche di quattordicesima per nuovi aventi diritto del secondo semestre 2026',
+            'Accredito d’ufficio dell’importo aggiuntivo di 154,94 euro per pensioni previdenziali entro le soglie reddituali 2026',
+        ],
+        whoIsAffected: 'Pensionati di tutte le gestioni INPS (privati, ex INPDAP, autonomi), con particolare attenzione ai titolari di trattamenti minimi e a chi ha compiuto 64 anni nel secondo semestre 2026.',
+        whatToDo: [
+            'Accedi con SPID, CIE o CNS al servizio «Cedolino della pensione» nel Fascicolo previdenziale su inps.it per verificare tutte le voci lorde e nette',
+            'Controlla l’eventuale accredito della quattordicesima (se hai compiuto 64 anni nella seconda metà del 2026) o del bonus 154,94 euro',
+            'Se ritieni di avere diritto all’importo aggiuntivo ma non compare nel cedolino, presenta domanda di ricostituzione della pensione su inps.it o presso un patronato',
+            'Se ritiri in contanti presso Poste Italiane, verifica il calendario alfabetico affisso nella tua sede prima di recarti allo sportello',
+        ],
+        sourceIds: ['inpsCedolinoPensioneProcedura', 'inpsFascicoloPrevidenziale'],
+        sources: [
+            src('INPS — Procedura online Cedolino della pensione', 'INPS', 'https://www.inps.it/it/it/inps-comunica/diritti-e-obblighi-in-materia-di-sicurezza-sociale-nell-unione-e/procedure/procedura-cedolino-della-pensione.html', 'Consultazione cedolino mensile, tredicesima e trattenute', TODAY),
+            src('INPS — Fascicolo previdenziale del cittadino', 'INPS', 'https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.fascicolo-previdenziale-del-cittadino-50865.fascicolo-previdenziale-del-cittadino.html', 'Verifica pagamenti e domanda di ricostituzione', TODAY),
+        ],
+        relatedGuides: ['/moduli/modulo-27-pensioni-previdenza', '/tool/calcolo-tredicesima', '/pensioni-2027'],
+        relatedTemplates: ['delega-inps'],
+        lastReviewedAt: TODAY,
+    },
+    {
+        slug: 'allerta-black-friday-polizia-postale-false-pec-rimborsi-irap-agenzia-entrate',
+        title: 'Allerta sicurezza Black Friday e false PEC fiscali: le regole della Polizia Postale e gli avvisi di Agenzia Entrate e AdER',
+        date: '2026-11-23',
+        summary: 'In occasione della settimana del Black Friday e Cyber Monday, la Polizia Postale (23 novembre 2026) diffonde tre regole anti-truffa per evitare siti e-commerce clone e pagamenti non recuperabili. Nella stessa giornata l’Agenzia delle Entrate segnala una nuova ondata di false PEC per simulazioni di rimborso IRAP, mentre AdER ricorda che il solo dominio PEC ufficiale è @pec.agenziariscossione.gov.it.',
+        body: [
+            'Con l’avvio della settimana commerciale del Black Friday e del Cyber Monday, la Polizia Postale ha pubblicato il 23 novembre 2026 un nuovo vademecum operativo sul portale del Commissariato di P.S. Online per difendere i consumatori da siti di e-commerce contraffatti, annunci sponsorizzati fraudolenti sui social e false offerte lampo.',
+            'Le tre regole chiave indicate dalla Polizia Postale prevedono di: 1) non cliccare su link contenuti in email, SMS o inserzioni social per evitare siti clone costruiti ad arte; 2) evitare bonifici bancari istantanei o ricariche verso venditori sconosciuti, privilegiando carte prepagate o circuiti con tutela acquirenti; 3) diffidare di prezzi eccessivamente bassi, verificando sempre l’identità del venditore (P.IVA e recensioni indipendenti) prima di inserire dati di pagamento.',
+            'Parallelamente, sul versante dei servizi fiscali, l’Agenzia delle Entrate ha emesso il 23 novembre 2026 un avviso ufficiale su una campagna di phishing veicolata tramite Posta Elettronica Certificata (PEC) rivolta a imprese e professionisti. I messaggi provengono da domini ingannevoli (come `pec.dp2romarimborsiagenziaentrate.it`) e prospettano un ipotetico rimborso IRAP «a titolo di simulazione», allegando un modulo da compilare con dati fiscali dell’impresa e del legale rappresentante per poi rispedirlo ai truffatori.',
+            'Anche l’Agenzia delle entrate-Riscossione (AdER) richiama l’attenzione su analoghe campagne di spear-phishing via PEC: l’ente ricorda che l’unico dominio PEC ufficialmente utilizzato per le proprie comunicazioni istituzionali è `@pec.agenziariscossione.gov.it`. Qualsiasi messaggio PEC o email proveniente da domini differenti deve essere cestinato senza aprire allegati né rispondere.',
+        ],
+        whatChanged: [
+            'Avviso Polizia Postale 23 novembre 2026 sul Black Friday: siti clone, preferenza per carte prepagate e controllo delle offerte',
+            'Avviso Agenzia delle Entrate 23 novembre 2026 su false PEC di rimborso IRAP con modulo allegato per rubare dati aziendali',
+            'Avviso AdER su false PEC: confermato `@pec.agenziariscossione.gov.it` come unico dominio istituzionale',
+        ],
+        whoIsAffected: 'Consumatori che effettuano acquisti online, imprese, titolari di partita IVA, legali rappresentanti e professionisti titolari di casella PEC.',
+        whatToDo: [
+            'Negli acquisti del Black Friday digita manualmente l’indirizzo dello store e usa carte prepagate o ricaricabili con plafond limitato, evitando bonifici diretti a sconosciuti',
+            'Controlla sempre l’esatto dominio del mittente nelle PEC fiscali: diffida di domini simili come `rimborsiagenziaentrate.it` e verifica esclusivamente su agenziaentrate.gov.it o `@pec.agenziariscossione.gov.it`',
+            'Non compilare né inviare moduli allegati a PEC che promettono rimborsi IRAP o fiscali simulati',
+            'In caso di truffa subita o dati inviati, blocca subito gli strumenti di pagamento, segnala su commissariatodips.it e attiva la procedura di disconoscimento presso la tua banca',
+        ],
+        sourceIds: ['poliziaPostaleBlackFriday2026', 'adeAvvisoFalsaPecIrap2026', 'aderAvvisoFalsePec2026'],
+        sources: [
+            src('Polizia Postale — Black Friday: attenti alle truffe (23 novembre 2026)', 'Polizia Postale', 'https://www.commissariatodips.it/notizie/articolo/black-friday-attenti-alle-truffe-1/index.html', 'Regole di sicurezza per acquisti online', TODAY),
+            src('Agenzia delle Entrate — Avviso del 23 novembre 2026: false comunicazioni PEC di rimborso', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/avviso-del-23-novembre-2026-nuova-campagna-di-false-comunicazioni-di-rimborso', 'Segnalazione phishing PEC su falsi rimborsi IRAP', TODAY),
+            src('Agenzia delle Entrate-Riscossione — Avviso sulle false PEC e dominio ufficiale', 'Agenzia delle Entrate-Riscossione', 'https://www.agenziaentrateriscossione.gov.it/it/il-gruppo/lagenzia-comunica/phishing/segnalazioni-e-approfondimenti/avviso-del-10-novembre-2026-rilevata-campagna-di-spear-phishing/', 'Verifica dominio ufficiale @pec.agenziariscossione.gov.it', TODAY),
+        ],
+        relatedGuides: ['/moduli/modulo-03-truffe-phishing', '/moduli/modulo-14-soldi-banche-truffe', '/sos'],
+        relatedTemplates: ['disconoscimento-operazioni-bancarie-frode', 'segnalazione-truffa-polizia-postale'],
+        lastReviewedAt: TODAY,
+    },
+    {
+        slug: 'campagna-vaccinazione-influenza-2026-2027-ministero-salute-categorie-gratuite',
+        title: 'Influenza stagionale 2026-2027: campagna del Ministero della Salute «Il vaccino, la risposta che ti protegge» e fasce gratuite',
+        date: '2026-11-23',
+        summary: 'Prosegue la campagna istituzionale del Ministero della Salute per la vaccinazione contro l’influenza stagionale 2026-2027, rivolta a rispondere ai dubbi dei cittadini attraverso medici di famiglia e pediatri. Confermata l’offerta attiva e gratuita per over 60, bambini da 6 mesi a 6 anni, donne in gravidanza, malati cronici e operatori sanitari.',
+        body: [
+            'Con la campagna di comunicazione «Il vaccino, la risposta che ti protegge», il Ministero della Salute promuove la prevenzione contro l’influenza stagionale 2026-2027 prima del picco epidemico invernale, ponendo al centro il confronto diretto tra cittadini, Medici di Medicina Generale (MMG), Pediatri di Libera Scelta (PLS) e servizi vaccinali territoriali.',
+            'Le indicazioni ministeriali confermano la gratuità e l’offerta attiva del vaccino per le categorie maggiormente esposte al rischio di complicanze e ricoveri ospedalieri: tutte le persone di età pari o superiore a 60 anni (con formulazioni potenziate per le fasce anziane), i bambini tra i 6 mesi e i 6 anni (per i quali è disponibile anche la somministrazione tramite spray nasale pediatrico), le donne in gravidanza in qualsiasi trimestre e nel post-partum.',
+            'Rientrano inoltre nell’offerta gratuita i soggetti di qualunque età affetti da patologie croniche (cardiovascolari, respiratorie, metaboliche o oncologiche), gli operatori sanitari e sociosanitari e gli addetti a servizi pubblici essenziali.',
+            'I cittadini aventi diritto possono prenotare e ricevere la somministrazione gratuitamente rivolgendosi al proprio medico curante o pediatra, presso gli ambulatori vaccinali delle ASL territoriali oppure presso le farmacie aderenti alle convenzioni regionali, con registrazione digitale automatica sul Fascicolo Sanitario Elettronico (FSE).',
+        ],
+        whatChanged: [
+            'Diffusione della campagna informativa 2026-2027 «Il vaccino, la risposta che ti protegge» del Ministero della Salute',
+            'Conferma dell’offerta gratuita per over 60, bambini 6 mesi-6 anni, gravidanza, patologie croniche e sanitari',
+            'Accesso alla somministrazione tramite MMG, pediatri, centri ASL e farmacie convenzionate regionali',
+        ],
+        whoIsAffected: 'Over 60, famiglie con bambini tra 6 mesi e 6 anni, donne in gravidanza, persone con patologie croniche, caregiver e lavoratori di servizi pubblici essenziali.',
+        whatToDo: [
+            'Contatta il tuo Medico di Medicina Generale o il Pediatra di Libera Scelta per verificare la disponibilità delle dosi gratuite',
+            'In alternativa, consulta il portale sanitario della tua Regione o il Fascicolo Sanitario Elettronico (FSE) per prenotare presso centri vaccinali ASL o farmacie aderenti',
+            'Se assisti una persona anziana fragile non trasportabile, richiedi la vaccinazione domiciliare al medico curante o al distretto sanitario',
+        ],
+        sourceIds: ['saluteCampagnaInfluenza20262027', 'saluteVaccinazioneAutunno2026'],
+        sources: [
+            src('Ministero della Salute — Campagna di comunicazione 2026-2027 per la vaccinazione contro l’influenza', 'Ministero della Salute', 'https://www.salute.gov.it/new/it/campagna-di-comunicazione/campagna-di-comunicazione-2026-2027-la-vaccinazione-contro-linfluenza/', 'Obiettivi informativi e raccomandazioni ufficiali 2026-2027', TODAY),
+            src('Ministero della Salute — Prevenzione e controllo dell’influenza: fasce raccomandate', 'Ministero della Salute', 'https://www.salute.gov.it/portale/influenza/dettaglioContenutiInfluenza.jsp?lingua=italiano&id=686', 'Categorie prioritarie e indicazioni cliniche', TODAY),
+        ],
+        relatedGuides: ['/moduli/modulo-20-sanita-territoriale', '/moduli/modulo-21-anziani-caregiver'],
+        relatedTemplates: [],
+        lastReviewedAt: TODAY,
+    },
+    {
+        slug: 'cassazione-controlli-fisco-conto-corrente-autorizzazione-obbligatoria-2026',
+        title: 'Controlli del Fisco sul conto corrente: per la Cassazione i dati sono inutilizzabili senza autorizzazione preventiva motivata',
         date: '2026-11-22',
-        summary: 'Controlli del Fisco sul conto corrente, la Cassazione: senza autorizzazione i dati sono inutilizzabili. Fonte: QuiFinanza.',
+        summary: 'Richiamando le ordinanze gemelle nn. 19956 e 19960/2026 della Sezione Tributaria, la Corte di Cassazione conferma la svolta a tutela dei contribuenti sulle indagini finanziarie: l’autorizzazione ad accedere ai movimenti bancari deve preesistere alla richiesta alle banche ed essere motivata. In mancanza, gli estratti conto sono inutilizzabili, ma il vizio va eccepito dal contribuente già nel ricorso di primo grado.',
         body: [
-            'Controlli del Fisco sul conto corrente, la Cassazione: senza autorizzazione i dati sono inutilizzabili.',
+            'Un consolidato orientamento della Sezione Tributaria della Corte di Cassazione inaugurato nel 2026 (con le ordinanze gemelle nn. 19956 e 19960 del 15 giugno 2026 e successive pronunce conformi) rafforza in modo incisivo le garanzie procedurali dei contribuenti sottoposti ad accertamenti fiscali basati sui movimenti dei conti correnti bancari e postali.',
+            'Recependo la giurisprudenza della Corte Europea dei Diritti dell’Uomo (art. 8 CEDU sulla tutela della vita privata) e della Carta dei diritti fondamentali dell’UE, la Suprema Corte ha superato il precedente orientamento che qualificava l’autorizzazione alle indagini bancarie (art. 32 D.P.R. 600/1973 e art. 51 D.P.R. 633/1972) come mero atto organizzativo interno. L’autorizzazione rilasciata dal Direttore Regionale dell’Agenzia delle Entrate o dal Comandante Regionale della Guardia di Finanza costituisce invece il presupposto di legalità dell’ingerenza nei dati bancari.',
+            'Di conseguenza, il provvedimento autorizzativo deve: 1) preesistere alla richiesta trasmessa agli istituti di credito; 2) contenere una motivazione minima verificabile che delimiti soggetti, periodi d’imposta e ragioni dell’indagine; 3) essere conoscibile dal contribuente su richiesta o in allegato all’atto impositivo. Se l’autorizzazione manca, è tardiva oppure è meramente stereotipata, i dati bancari acquisiti diventano inutilizzabili e l’accertamento fondato su di essi viene annullato.',
+            'Sul piano processuale resta tuttavia una regola decisiva per i cittadini e i loro difensori: il giudice tributario non può rilevare questo vizio d’ufficio. L’inutilizzabilità dei dati bancari deve essere eccepita espressamente e in modo circostanziato dal contribuente fin dal ricorso introduttivo di primo grado davanti alla Corte di Giustizia Tributaria.',
         ],
         whatChanged: [
-            'Controlli del Fisco sul conto corrente, la Cassazione: senza autorizzazione i dati sono inutilizzabili',
+            'L’autorizzazione preventiva alle indagini bancarie (art. 32 D.P.R. 600/1973) diventa presupposto giuridico di legalità e non più mero atto interno',
+            'Obbligo di preesistenza, motivazione minima verificabile e conoscibilità per il contribuente',
+            'Sanzione di inutilizzabilità dei movimenti bancari acquisiti senza autorizzazione valida, con nullità derivata dell’accertamento',
+            'Onere processuale: il vizio va contestato specificamente nel ricorso di primo grado in Corte di Giustizia Tributaria',
         ],
-        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whoIsAffected: 'Contribuenti, titolari di partita IVA, professionisti, imprenditori e cittadini destinatari di avvisi di accertamento fiscale fondati su movimentazioni bancarie.',
         whatToDo: [
-            'Consulta la fonte ufficiale per i dettagli completi',
+            'Se ricevi un avviso di accertamento o un questionario basato su controlli bancari, verifica se è allegata o richiamata l’autorizzazione del Direttore/Comandante Regionale e controllane data e motivazione',
+            'In assenza di allegazione, esercita formalmente il diritto di accesso agli atti presso l’ufficio procedente prima che scadano i termini per il ricorso',
+            'Affidati a un difensore tributario abilitato affinché sollevi l’eccezione specifica di inutilizzabilità già nel ricorso di primo grado davanti alla Corte di Giustizia Tributaria',
         ],
-        sourceIds: [],
+        sourceIds: ['corteCassazioneHome', 'giustiziaTributariaPortale'],
         sources: [
-            src('Controlli del Fisco sul conto corrente, la Cassazione: senza autorizzazione i dati sono inutilizzabili - QuiFinanza', 'QuiFinanza', 'https://news.google.com/rss/articles/CBMikwFBVV95cUxPdjczZXBWLW03SVFMQWktTWd3Qnp6ZnBQaFIxbFRwWHV1b2l5djFhUVd5VTlMbkV6OHg5LXFDVU5BSUt6R3J3VTk3T0d4SlFqeXNrREFaMWIwdGo3bTJ3ZkRIODk4bjVEM0V2b1lENDFtbmJ1emd2UFFfbFBrT2NESXNvb3Y0NTNYSzlnc0dHb1NxNUHSAZgBQVVfeXFMT0MxT1ZFQjNQTUxld1RfMkdlaUFJTEMwWjFFcm9lREFvN1ZHdkR3eE5ZNW5pMlg5M3ZEdVhpWTJQVjBLY3NseDlwdlhVUkFKYkxPb01XRktVWVZmTUNyVGZqQUplY2FGWmRKUjF3YXRUNXhrb04tREtRb3Y3SFpxVmM1M1U2blcxNzgxaWFrV05vaHN0VXo4akU?oc=5', 'Controlli del Fisco sul conto corrente, la Cassazione: senza autorizzazione i dati sono inutilizzabili - QuiFinanza', '2026-11-22'),
+            src('Corte Suprema di Cassazione — Portale della giurisprudenza di legittimità', 'Corte Suprema di Cassazione', 'https://www.cortedicassazione.it/', 'Ordinanze nn. 19956 e 19960/2026 in materia tributaria', TODAY),
+            src('Portale della Giustizia Tributaria — Ricorsi e tutela del contribuente', 'MEF — Giustizia Tributaria', 'https://www.giustiziatributaria.gov.it/', 'Procedura dinanzi alle Corti di Giustizia Tributaria', TODAY),
+            src('Agenzia delle Entrate — Accertamenti e regolarizzazioni', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/cittadini/accertamenti-e-regolarizzazioni', 'Diritti del contribuente nelle verifiche fiscali', TODAY),
         ],
-        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
+        relatedGuides: ['/moduli/modulo-25-fisco-cittadini', '/moduli/modulo-29-partita-iva-forfettario', '/moduli/modulo-35-giustizia-cittadino'],
         relatedTemplates: [],
-        lastReviewedAt: '2026-11-22',
-    },
-    // ── End auto-import ──────────────────────────────────────────────
-
-    // ── Auto-imported 2026-11-23 ──────────────────────────
-    {
-        slug: 'protezione-civile-torino-rinnova-la-sala-unita-di-crisi-nove-schermi-e-nuove-rad',
-        title: 'Protezione Civile, Torino rinnova la Sala Unità di Crisi: nove schermi e nuove radio',
-        date: '2026-11-23',
-        summary: 'Protezione Civile, Torino rinnova la Sala Unità di Crisi: nove schermi e nuove radio. Fonte: Il Torinese.',
-        body: [
-            'Protezione Civile, Torino rinnova la Sala Unità di Crisi: nove schermi e nuove radio.',
-        ],
-        whatChanged: [
-            'Protezione Civile, Torino rinnova la Sala Unità di Crisi: nove schermi e nuove radio',
-        ],
-        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
-        whatToDo: [
-            'Consulta la fonte ufficiale per i dettagli completi',
-        ],
-        sourceIds: [],
-        sources: [
-            src('Protezione Civile, Torino rinnova la Sala Unità di Crisi: nove schermi e nuove radio - Il Torinese', 'Il Torinese', 'https://news.google.com/rss/articles/CBMitwFBVV95cUxNenR2QlhObFEzLVA0LXVfTG1xbElWTURLX0JiZXBKZFdESFlQWmFCajRWcWNhMVdpZXNCRkNYdE9rOEZkMG1NSXJCd2U5Y0prUjVrRTlIYmpHdGVUNGhRRlMwVmo5a1JYRlY3NEh4dTh4M0gxb3FPd3RWT3JYUHl6NjV6WC1TN1M0aUVSWmZ0bXU2Z3NIZmNaZV9GOHRWYWxtNXVMU0RUZVhPd1RhOEhNZHB3N01jSHM?oc=5', 'Protezione Civile, Torino rinnova la Sala Unità di Crisi: nove schermi e nuove radio - Il Torinese', '2026-11-23'),
-        ],
-        relatedGuides: ['/sos'],
-        relatedTemplates: [],
-        lastReviewedAt: '2026-11-23',
+        lastReviewedAt: TODAY,
     },
     {
-        slug: 'alluvioni-e-blackout-torino-investe-200mila-euro-per-la-nuova-sala-della-protezi',
-        title: 'Alluvioni e blackout, Torino investe 200mila euro per la nuova sala della Protezione civile',
-        date: '2026-11-23',
-        summary: 'Alluvioni e blackout, Torino investe 200mila euro per la nuova sala della Protezione civile. Fonte: Torino Cronaca.',
+        slug: 'allerta-cert-agid-agenzia-entrate-malware-mirax-finto-aggiornamento-app-io',
+        title: 'Allerta CERT-AgID e Agenzia delle Entrate: trojan bancario «Mirax» su Android tramite falso sito AdE e finto aggiornamento App IO',
+        date: '2026-11-20',
+        summary: 'Il CERT-AgID e l’Agenzia delle Entrate (avviso del 19 novembre 2026) segnalano una campagna malevola rivolta esclusivamente agli smartphone Android: un sito clone dell’Agenzia induce a scaricare un file .apk che simula un falso aggiornamento dell’App IO per installare il trojan bancario Mirax, capace di intercettare OTP, SMS e controllare il telefono tramite i servizi di Accessibilità.',
         body: [
-            'Alluvioni e blackout, Torino investe 200mila euro per la nuova sala della Protezione civile.',
+            'Il Computer Emergency Response Team dell’Agenzia per l’Italia Digitale (CERT-AgID) e l’Agenzia delle Entrate (con avviso ufficiale del 19 novembre 2026) hanno lanciato un’allerta di sicurezza su una sofisticata campagna di phishing e distribuzione di malware in corso contro gli utenti italiani.',
+            'Gli attaccanti utilizzano un sito civetta che riproduce fedelmente l’interfaccia del portale dell’Agenzia delle Entrate e analizza lo User-Agent del visitatore: la pagina fraudolenta propone il download di un’app in formato `.apk` solo a chi naviga da smartphone Android, apparendo invece innocua su altri dispositivi.',
+            'Una volta installato il primo pacchetto, l’app mostra una finta schermata di aggiornamento dell’App IO — accompagnata persino dalla falsa dicitura «Verified by Google Play Protect» — per convincere l’utente a installare il secondo file malevolo contenente il trojan bancario e Remote Access Trojan (RAT) noto come «Mirax».',
+            'Abusando delle funzioni native di Accessibilità di Android, Mirax riesce a sovrapporre schermate ingannevoli alle app legittime delle banche, intercettare SMS e codici di autenticazione OTP ed eseguire operazioni bancarie non autorizzate a distanza. Né l’Agenzia delle Entrate né PagoPA/App IO distribuiscono mai applicazioni tramite file `.apk` su siti web esterni agli store ufficiali.',
         ],
         whatChanged: [
-            'Alluvioni e blackout, Torino investe 200mila euro per la nuova sala della Protezione civile',
+            'Individuazione da parte del CERT-AgID del malware Android «Mirax» diffuso via portale clone dell’Agenzia delle Entrate',
+            'Utilizzo di finte schermate di aggiornamento dell’App IO con falso bollino «Verified by Google Play Protect»',
+            'Abuso dei servizi di Accessibilità di Android per intercettare OTP, credenziali bancarie e controllare il dispositivo da remoto',
         ],
-        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whoIsAffected: 'Utenti di smartphone Android, cittadini che usano l’App IO e correntisti bancari con home banking mobile.',
         whatToDo: [
-            'Consulta la fonte ufficiale per i dettagli completi',
+            'Non scaricare né installare mai file `.apk` da siti web, email o link ricevuti via SMS/WhatsApp: scarica e aggiorna App IO solo da Google Play Store o Apple App Store',
+            'Verifica sempre che nella barra degli indirizzi del browser il dominio istituzionale termini esattamente in `.gov.it` o `.italia.it`',
+            'Se hai scaricato o installato un `.apk` sospetto, attiva subito la modalità aereo, revoca i permessi di Accessibilità all’app sconosciuta, disinstallala (o esegui un ripristino di fabbrica) e cambia le password bancarie da un altro dispositivo pulito',
+            'Contatta subito il servizio antifrode della tua banca per bloccare carte e accessi e segnala l’episodio su commissariatodips.it o al CERT-AgID',
         ],
-        sourceIds: [],
+        sourceIds: ['certAgidMalwareMirax2026', 'adeAvvisoPhishingMirax2026'],
         sources: [
-            src('Alluvioni e blackout, Torino investe 200mila euro per la nuova sala della Protezione civile - Torino Cronaca', 'Torino Cronaca', 'https://news.google.com/rss/articles/CBMi2wFBVV95cUxPZ1NfVTJwaGNuMDhhZDJVWVRpMTdEZkRZR2xQZ1VsZkFGZDZobURUVG9ucnNFcWd6R3UyZ2tuWk43Ym9kMzYxdFRQdUROVF9VQ3pJZXh6dnVMTjYyRTdOU29fQ01jMlV0MzgyM0tVQlhxbTNybUE0U1ZZWGJ2UzBuMDRkX3QyWUh3Z3o0YXdubzUyVEJCQlNJWTBBeVJEOXlSTjBTYXVSX3liU3FETDAzVzhCb05taHlERnBUSWt1ZkE1b3ZoQjFWQ0JidkRtLUJ4SE5uTmVYZjlLc1U?oc=5', 'Alluvioni e blackout, Torino investe 200mila euro per la nuova sala della Protezione civile - Torino Cronaca', '2026-11-23'),
+            src('CERT-AgID — Malware Mirax via falso dominio Agenzia delle Entrate e finto aggiornamento App IO', 'CERT-AgID', 'https://cert-agid.gov.it/news/malware-mirax-veicolato-in-italia-tramite-falso-domini-di-agenzia-delle-entrate-e-finto-aggiornamento-app-io/', 'Analisi tecnica malware Mirax e indicatori di compromissione', TODAY),
+            src('Agenzia delle Entrate — Avviso del 19 novembre 2026: campagna phishing con falso sito dell’Agenzia', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/avviso-del-19-novembre-2026-nuova-campagna-di-phishing-tramite-falso-sito-dell-agenzia', 'Avviso ufficiale ai contribuenti e schermate civetta', TODAY),
         ],
-        relatedGuides: ['/sos'],
-        relatedTemplates: [],
-        lastReviewedAt: '2026-11-23',
+        relatedGuides: ['/moduli/modulo-03-truffe-phishing', '/moduli/modulo-07-privacy-smartphone', '/sos'],
+        relatedTemplates: ['disconoscimento-operazioni-bancarie-frode', 'segnalazione-truffa-polizia-postale'],
+        lastReviewedAt: TODAY,
     },
-    // ── End auto-import ──────────────────────────────────────────────
-
-    // ── Auto-imported 2026-11-22 ──────────────────────────
-    {
-        slug: 'cartelle-esattoriali-a-rate-per-8-anni-senza-presentare-documenti-cosa-cambia-da',
-        title: 'Cartelle esattoriali a rate per 8 anni senza presentare documenti: cosa cambia dal 2027',
-        date: '2026-11-17',
-        summary: 'Cartelle esattoriali a rate per 8 anni senza presentare documenti: cosa cambia dal 2027. Fonte: QuiFinanza.',
-        body: [
-            'Cartelle esattoriali a rate per 8 anni senza presentare documenti: cosa cambia dal 2027.',
-        ],
-        whatChanged: [
-            'Cartelle esattoriali a rate per 8 anni senza presentare documenti: cosa cambia dal 2027',
-        ],
-        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
-        whatToDo: [
-            'Consulta la fonte ufficiale per i dettagli completi',
-        ],
-        sourceIds: [],
-        sources: [
-            src('Cartelle esattoriali a rate per 8 anni senza presentare documenti: cosa cambia dal 2027 - QuiFinanza', 'QuiFinanza', 'https://news.google.com/rss/articles/CBMilwFBVV95cUxPZnpDcm9oTVI1Wk9RMDhoZFIyeG9mYXdLZ2V3TFRNaWV5T1k5X2pkd056NFBxUHNDNVRxbkxVMEgxUHJuTGg0MEVPZWhQRVhXOU11LXhXMkxxb1h1UjcySkpTd0NTLUJ0ZnRRcTlqc2cydUotTTIwd2FqRkY3SDA3XzViemtHUHB2aXhFZXZ2WTNweVVLUVlv?oc=5', 'Cartelle esattoriali a rate per 8 anni senza presentare documenti: cosa cambia dal 2027 - QuiFinanza', '2026-11-17'),
-        ],
-        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
-        relatedTemplates: [],
-        lastReviewedAt: '2026-11-17',
-    },
-    {
-        slug: 'manovra-medici-contro-voucher-anziani-bene-aperture-schillaci-ma-5-dicembre-in-p',
-        title: 'Manovra, medici contro voucher anziani: \"Bene aperture Schillaci ma 5 dicembre in piazza\"',
-        date: '2026-11-16',
-        summary: 'Manovra, medici contro voucher anziani: \"Bene aperture Schillaci ma 5 dicembre in piazza\". Fonte: Sky.',
-        body: [
-            'Manovra, medici contro voucher anziani: \"Bene aperture Schillaci ma 5 dicembre in piazza\".',
-        ],
-        whatChanged: [
-            'Manovra, medici contro voucher anziani: \"Bene aperture Schillaci ma 5 dicembre in piazza\"',
-        ],
-        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
-        whatToDo: [
-            'Consulta la fonte ufficiale per i dettagli completi',
-        ],
-        sourceIds: [],
-        sources: [
-            src('Manovra, medici contro voucher anziani: \"Bene aperture Schillaci ma 5 dicembre in piazza\" - Sky', 'Sky', 'https://news.google.com/rss/articles/CBMiggFBVV95cUxQeDh4YnQwcmxBXzRvU1J2UmJ1NmkycmxhSVhsUk9TNHRvR1hPZmxRa3pGLVp4S3ZhbzBNR0Q2NHl0eDUyVzZuZ094RmVCT3cweXoweE5xYmZZSkcwVmlpNlN5aFI0NzhJNElZVzBWZ0xtcWxjN05LVXFMN2Jkb2I4M3dB?oc=5', 'Manovra, medici contro voucher anziani: \"Bene aperture Schillaci ma 5 dicembre in piazza\" - Sky', '2026-11-16'),
-        ],
-        relatedGuides: ['/moduli/modulo-09-sanita-salute'],
-        relatedTemplates: [],
-        lastReviewedAt: '2026-11-16',
-    },
-    // ── End auto-import ──────────────────────────────────────────────
-
-    // ── Auto-imported 2026-11-21 ──────────────────────────
-    {
-        slug: 'ernesto-maria-ruffini-piu-uno-no-alla-patrimoniale-non-ha-senso-mettere-altre-im',
-        title: 'Ernesto Maria Ruffini (Più Uno): "No alla patrimoniale, non ha senso mettere altre imposte"',
-        date: '2026-11-21',
-        summary: 'Ernesto Maria Ruffini (Più Uno): "No alla patrimoniale, non ha senso mettere altre imposte". Fonte: HuffPost Italia.',
-        body: [
-            'Ernesto Maria Ruffini (Più Uno): "No alla patrimoniale, non ha senso mettere altre imposte".',
-        ],
-        whatChanged: [
-            'Ernesto Maria Ruffini (Più Uno): "No alla patrimoniale, non ha senso mettere altre imposte"',
-        ],
-        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
-        whatToDo: [
-            'Consulta la fonte ufficiale per i dettagli completi',
-        ],
-        sourceIds: [],
-        sources: [
-            src('Ernesto Maria Ruffini (Più Uno): "No alla patrimoniale, non ha senso mettere altre imposte" - HuffPost Italia', 'HuffPost Italia', 'https://news.google.com/rss/articles/CBMi5AFBVV95cUxPSXRORkVjYVY4akJkQ0M4SDc1UlYxbjFlYV95LVJYRk1xM09uX0xOWlBVbjByOThZWU5qR0VXUVFJMXBnaHhYc3BQa3JaeEo4THM5NlVXb1FaN0ljclFGWVRpU0RJOFhvS2YzSE9sd0h3VFgyUUs2ZmEyRml4SmN1TVEtT2dqSkdBd3laeF9ueF9iMmNYZFdiSFkxSVlBRUc3eWV4aWhMaUFxTFE1ODNONTBhdUpYRkRieHdLUXMtWC0yMVdkMS11VWNvWVh2U0dJSUpGaV92N3hndloyc3Z3Uzk1MkY?oc=5', 'Ernesto Maria Ruffini (Più Uno): "No alla patrimoniale, non ha senso mettere altre imposte" - HuffPost Italia', '2026-11-21'),
-        ],
-        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
-        relatedTemplates: [],
-        lastReviewedAt: '2026-11-21',
-    },
-    {
-        slug: 'rottamazione-quinquies-e-non-solo-in-arrivo-un-mix-di-scadenze-per-la-pace-fisca',
-        title: 'Rottamazione quinquies e non solo: in arrivo un mix di scadenze per la pace fiscale',
-        date: '2026-11-14',
-        summary: 'Rottamazione quinquies e non solo: in arrivo un mix di scadenze per la pace fiscale. Fonte: informazionefiscale.it.',
-        body: [
-            'Rottamazione quinquies e non solo: in arrivo un mix di scadenze per la pace fiscale.',
-        ],
-        whatChanged: [
-            'Rottamazione quinquies e non solo: in arrivo un mix di scadenze per la pace fiscale',
-        ],
-        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
-        whatToDo: [
-            'Consulta la fonte ufficiale per i dettagli completi',
-        ],
-        sourceIds: [],
-        sources: [
-            src('Rottamazione quinquies e non solo: in arrivo un mix di scadenze per la pace fiscale - informazionefiscale.it', 'informazionefiscale.it', 'https://news.google.com/rss/articles/CBMirgFBVV95cUxPb1FhVFR0c0ptMEZMRmZXOGoyZlZ5WUo0WjAxMWFqcnFXSGFGZHdKbXZDNDVpY2cwcENTdWYxVHlCTVNOZEwzNmVQWm1HdzdWMmZuQkFoM253QUdER1lmMkRISkRCenhENzRDX05qbEZ3RE94UEdJS3hmNnp0aklDa1hDQk11VFVGV3ZhOVBnaDc2eHNUYmhXQmprV1JFOXFIODZndXJKbUdTWXJRa0E?oc=5', 'Rottamazione quinquies e non solo: in arrivo un mix di scadenze per la pace fiscale - informazionefiscale.it', '2026-11-14'),
-        ],
-        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
-        relatedTemplates: [],
-        lastReviewedAt: '2026-11-14',
-    },
-    // ── End auto-import ──────────────────────────────────────────────
-
-    // ── Auto-imported 2026-11-19 ──────────────────────────
-    {
-        slug: 'riscossione-debiti-dal-2027-rate-fino-a-8-anni-senza-documenti-quando-conviene-f',
-        title: 'Riscossione debiti, dal 2027 rate fino a 8 anni senza documenti: quando conviene fare domanda',
-        date: '2026-11-17',
-        summary: 'Riscossione debiti, dal 2027 rate fino a 8 anni senza documenti: quando conviene fare domanda. Fonte: QuiFinanza.',
-        body: [
-            'Riscossione debiti, dal 2027 rate fino a 8 anni senza documenti: quando conviene fare domanda.',
-        ],
-        whatChanged: [
-            'Riscossione debiti, dal 2027 rate fino a 8 anni senza documenti: quando conviene fare domanda',
-        ],
-        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
-        whatToDo: [
-            'Consulta la fonte ufficiale per i dettagli completi',
-        ],
-        sourceIds: [],
-        sources: [
-            src('Riscossione debiti, dal 2027 rate fino a 8 anni senza documenti: quando conviene fare domanda - QuiFinanza', 'QuiFinanza', 'https://news.google.com/rss/articles/CBMilwFBVV95cUxPZnpDcm9oTVI1Wk9RMDhoZFIyeG9mYXdLZ2V3TFRNaWV5T1k5X2pkd056NFBxUHNDNVRxbkxVMEgxUHJuTGg0MEVPZWhQRVhXOU11LXhXMkxxb1h1UjcySkpTd0NTLUJ0ZnRRcTlqc2cydUotTTIwd2FqRkY3SDA3XzViemtHUHB2aXhFZXZ2WTNweVVLUVlv0gGcAUFVX3lxTFA3N1ZxdlBkODBubE1BZTYtdXZhTldCNllaY0FOSjJBdzRNaUNtWG9Cd1FJTWdpSlExWU45YWUyM2ZodTByVUhsZjVZLUtiX1Q3Tzk2aUVoUzBQZEUzN3BfZ2trRDlLcFRCTlJjSTVoWGpuUnI4TWxtcWdKZmR5TEFudGhrdjhPQmhJWWRxenM4ci16Uld6d0NXS0ZDbQ?oc=5', 'Riscossione debiti, dal 2027 rate fino a 8 anni senza documenti: quando conviene fare domanda - QuiFinanza', '2026-11-17'),
-        ],
-        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
-        relatedTemplates: [],
-        lastReviewedAt: '2026-11-17',
-    },
-    // ── End auto-import ──────────────────────────────────────────────
-
-    // ── Auto-imported 2026-11-18 ──────────────────────────
-    {
-        slug: 'cartelle-esattoriali-dal-2027-cambiano-le-regole-per-le-rate-sky-tg24-20261117',
-        title: 'Cartelle esattoriali, dal 2027 cambiano le regole per le rate',
-        date: '2026-11-17',
-        summary: 'Cartelle esattoriali, dal 2027 cambiano le regole per le rate. Fonte: Sky TG24.',
-        body: [
-            'Cartelle esattoriali, dal 2027 cambiano le regole per le rate.',
-        ],
-        whatChanged: [
-            'Cartelle esattoriali, dal 2027 cambiano le regole per le rate',
-        ],
-        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
-        whatToDo: [
-            'Consulta la fonte ufficiale per i dettagli completi',
-        ],
-        sourceIds: [],
-        sources: [
-            src('Cartelle esattoriali, dal 2027 cambiano le regole per le rate - Sky TG24', 'Sky TG24', 'https://news.google.com/rss/articles/CBMif0FVX3lxTE1WZ3NqazZMRDRTc2xDNTVxeUJ1MEI0Z25ZekY4SnZTQTZlcGxEYmpRZTRTZTFkalNhVXU2SW4zd0lOUkFMS0hhd1pYRVlCNlJDQmNValJJX1h1SHhyaFJ3Z1lsNEpLZGhfaVVDRzlMQnhBaVk2MUl0dUdjeUVmcDA?oc=5', 'Cartelle esattoriali, dal 2027 cambiano le regole per le rate - Sky TG24', '2026-11-17'),
-        ],
-        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
-        relatedTemplates: [],
-        lastReviewedAt: '2026-11-17',
-    },
-    // ── End auto-import ──────────────────────────────────────────────
-
-    // ── Auto-imported 2026-11-17 ──────────────────────────
-    {
-        slug: 'pensioni-ape-sociale-esclusi-i-contributivi-puri-chi-sono-e-perche-inps-respinge',
-        title: 'Pensioni, Ape Sociale: esclusi i contributivi puri. Chi sono e perché Inps respingerà le domande',
-        date: '2026-11-13',
-        summary: 'Pensioni, Ape Sociale: esclusi i contributivi puri. Chi sono e perché Inps respingerà le domande. Fonte: Corriere Adriatico.',
-        body: [
-            'Pensioni, Ape Sociale: esclusi i contributivi puri. Chi sono e perché Inps respingerà le domande.',
-        ],
-        whatChanged: [
-            'Pensioni, Ape Sociale: esclusi i contributivi puri. Chi sono e perché Inps respingerà le domande',
-        ],
-        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
-        whatToDo: [
-            'Consulta la fonte ufficiale per i dettagli completi',
-        ],
-        sourceIds: [],
-        sources: [
-            src('Pensioni, Ape Sociale: esclusi i contributivi puri. Chi sono e perché Inps respingerà le domande - Corriere Adriatico', 'Corriere Adriatico', 'https://news.google.com/rss/articles/CBMixwFBVV95cUxOXzYwWEQtWmo1bVZzS2JiRUNRMlFDM21feWVLVXB3clFrV3V3eWhveE5ialBuMUIzQWt5R2JhNkhPM3dUMVJtUFVScWtqNENZdlR4cHY2c2pSOW1xSUxSWXVCWHRaVy1VRU9jNmlUS3lhMV9yUlV3NmN5Y0ZRMjN4bllBSDZhSHMyMDBVeXpBR2tPRWFPb3FxYi1JZEd0RTl1aDY5TTRSS3dHb3BPNnItTFJ3U2lVUko0M1dRa3V4NkpNTVBXX2ln0gHGAUFVX3lxTFBUYUtGN0hWZFNQM1hSRXRBTlFObXQxUndpWktjRVRHN2xobFN2YUcwd3QzV0pOME1oZHVHeng5eEdXN2l0ZHl2OUhEQnVDU0NBS3Ywa3c5bXBJNm1QUlVSb1BLdV9GaC1sTHE5bV8yVHVkUGtvc2Fja01BNEdycFNNYUhnNEVtMzBVSDM3dzRmRlEtRTFJTmRmUk03VWpuMlVaUXphdDRlRTI3bGMyT01xcnBqMUNKdGQwZWZuZldGb0poa0xIUQ?oc=5', 'Pensioni, Ape Sociale: esclusi i contributivi puri. Chi sono e perché Inps respingerà le domande - Corriere Adriatico', '2026-11-13'),
-        ],
-        relatedGuides: ['/moduli/modulo-27-pensioni-previdenza'],
-        relatedTemplates: [],
-        lastReviewedAt: '2026-11-13',
-    },
-    {
-        slug: 'ravvedimento-per-aderenti-cpb-2026-2027-i-codici-tributo-fisco-e-tasse-20261111',
-        title: 'Ravvedimento per aderenti CPB 2026-2027: i codici tributo',
-        date: '2026-11-11',
-        summary: 'Ravvedimento per aderenti CPB 2026-2027: i codici tributo. Fonte: Fisco e Tasse.',
-        body: [
-            'Ravvedimento per aderenti CPB 2026-2027: i codici tributo.',
-        ],
-        whatChanged: [
-            'Ravvedimento per aderenti CPB 2026-2027: i codici tributo',
-        ],
-        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
-        whatToDo: [
-            'Consulta la fonte ufficiale per i dettagli completi',
-        ],
-        sourceIds: [],
-        sources: [
-            src('Ravvedimento per aderenti CPB 2026-2027: i codici tributo - Fisco e Tasse', 'Fisco e Tasse', 'https://news.google.com/rss/articles/CBMitAFBVV95cUxQckFONjRCY3dGT0lhM0JKUDdQUC1VU3JOMU44QTQ1TmduUzRhd0wwTnhBX3FaNG9LTHFQLWdJVmxOMVRRTWZIbjZoZDdqaVFVbURPei1ja0FGdkxMX3hHZVBYZzJjR1F3aWRtTGtwNnJzMGJGVnpKbXNrNHMxcHNaNC1WQlE3QnVMbmdLYmJ4MnFiSFd5SlMtUko4bVJXT1lPMElhUnVGejJscjQ2VTIxVW84V0c?oc=5', 'Ravvedimento per aderenti CPB 2026-2027: i codici tributo - Fisco e Tasse', '2026-11-11'),
-        ],
-        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
-        relatedTemplates: [],
-        lastReviewedAt: '2026-11-11',
-    },
-    {
-        slug: 'rimborso-irpef-con-il-modello-redditi-2026-tempi-di-accredito-e-controlli-dellag',
-        title: 'Rimborso Irpef con il modello Redditi 2026, tempi di accredito e controlli dell\'Agenzia delle Entrate',
-        date: '2026-11-16',
-        summary: 'Rimborso Irpef con il modello Redditi 2026, tempi di accredito e controlli dell\'Agenzia delle Entrate. Fonte: QuiFinanza.',
-        body: [
-            'Rimborso Irpef con il modello Redditi 2026, tempi di accredito e controlli dell\'Agenzia delle Entrate.',
-        ],
-        whatChanged: [
-            'Rimborso Irpef con il modello Redditi 2026, tempi di accredito e controlli dell\'Agenzia delle Entrate',
-        ],
-        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
-        whatToDo: [
-            'Consulta la fonte ufficiale per i dettagli completi',
-        ],
-        sourceIds: [],
-        sources: [
-            src('Rimborso Irpef con il modello Redditi 2026, tempi di accredito e controlli dell\'Agenzia delle Entrate - QuiFinanza', 'QuiFinanza', 'https://news.google.com/rss/articles/CBMihAFBVV95cUxPX1poRWFsbWs4MUdnblFIUng0RU85eVozd2ktNTB6OFhZWXB4RF9DM1ROdW9TZ0RHREJETkNKYmQzOUtER2gtaGhTVHM4b0phS0pfTjFNV3NJblpMbzF4eE5GYzdtLWxOcmR5aGVWYTJQU3N5WEFRbWxoN2RXcERucjViZEvSAYoBQVVfeXFMTmkxRzd0UExGNzNiZjB5dk15MVJkVzFmTGhHR2pfZWk4Q0thR2puaFRxblB0TTFxRE1TQmZaSFFDeTMzYnZ1NE91TlZNZGVKS0xSaldRUUpNTHhPYndUaXIxUFY0LU0xWVE0cGttU0E3ejZDVW00ZFlfaEtrRUFwNHI3WUlSUFc3aGpB?oc=5', 'Rimborso Irpef con il modello Redditi 2026, tempi di accredito e controlli dell\'Agenzia delle Entrate - QuiFinanza', '2026-11-16'),
-        ],
-        relatedGuides: ['/moduli/modulo-11-fisco-tasse'],
-        relatedTemplates: [],
-        lastReviewedAt: '2026-11-16',
-    },
-    {
-        slug: 'manovra-medici-contro-card-anziani-il-5-dicembre-saremo-in-piazza-sky-tg24-20261',
-        title: 'Manovra, medici contro card anziani: \"Il 5 dicembre saremo in piazza\"',
-        date: '2026-11-16',
-        summary: 'Manovra, medici contro card anziani: \"Il 5 dicembre saremo in piazza\". Fonte: Sky TG24.',
-        body: [
-            'Manovra, medici contro card anziani: \"Il 5 dicembre saremo in piazza\".',
-        ],
-        whatChanged: [
-            'Manovra, medici contro card anziani: \"Il 5 dicembre saremo in piazza\"',
-        ],
-        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
-        whatToDo: [
-            'Consulta la fonte ufficiale per i dettagli completi',
-        ],
-        sourceIds: [],
-        sources: [
-            src('Manovra, medici contro card anziani: \"Il 5 dicembre saremo in piazza\" - Sky TG24', 'Sky TG24', 'https://news.google.com/rss/articles/CBMiggFBVV95cUxQeDh4YnQwcmxBXzRvU1J2UmJ1NmkycmxhSVhsUk9TNHRvR1hPZmxRa3pGLVp4S3ZhbzBNR0Q2NHl0eDUyVzZuZ094RmVCT3cweXoweE5xYmZZSkcwVmlpNlN5aFI0NzhJNElZVzBWZ0xtcWxjN05LVXFMN2Jkb2I4M3dB?oc=5', 'Manovra, medici contro card anziani: \"Il 5 dicembre saremo in piazza\" - Sky TG24', '2026-11-16'),
-        ],
-        relatedGuides: ['/moduli/modulo-09-sanita-salute'],
-        relatedTemplates: [],
-        lastReviewedAt: '2026-11-16',
-    },
-    {
-        slug: 'sanita-21esimo-forum-risk-management-di-arezzo-lssn-dopo-il-pnrr-corriere-livorn',
-        title: 'Sanità, 21esimo Forum Risk Management di Arezzo, \'l\'Ssn dopo il Pnrr\'',
-        date: '2026-11-17',
-        summary: 'Sanità, 21esimo Forum Risk Management di Arezzo, \'l\'Ssn dopo il Pnrr\'. Fonte: Corriere Livornese.',
-        body: [
-            'Sanità, 21esimo Forum Risk Management di Arezzo, \'l\'Ssn dopo il Pnrr\'.',
-        ],
-        whatChanged: [
-            'Sanità, 21esimo Forum Risk Management di Arezzo, \'l\'Ssn dopo il Pnrr\'',
-        ],
-        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
-        whatToDo: [
-            'Consulta la fonte ufficiale per i dettagli completi',
-        ],
-        sourceIds: [],
-        sources: [
-            src('Sanità, 21esimo Forum Risk Management di Arezzo, \'l\'Ssn dopo il Pnrr\' - Corriere Livornese', 'Corriere Livornese', 'https://news.google.com/rss/articles/CBMiwgFBVV95cUxORnpfdTM3cDJSTjJqR3FjUWJnTGgtMEwycDVHUWc2THZZMy1XcDhVZnRBRzV1NXotN3czSGZOMTA5eGZVWS1UTUhCc3FkQ0FsZU5EUHVMRkx3cEdfV2xlN3FJUHNrSnc3YkNLMTI2M0ItMVd6UEhVZG1pakVyUnJ4d0ZHOGktMFgtUndoQ2NJY2hwekNocXZQMkhXWGI0RV9wOHBSZUZuMDlma1A0OUhyNFlJMnpqVFFmcmphcVpGbEVUdw?oc=5', 'Sanità, 21esimo Forum Risk Management di Arezzo, \'l\'Ssn dopo il Pnrr\' - Corriere Livornese', '2026-11-17'),
-        ],
-        relatedGuides: ['/moduli/modulo-09-sanita-salute'],
-        relatedTemplates: [],
-        lastReviewedAt: '2026-11-17',
-    },
-    // ── End auto-import ──────────────────────────────────────────────
 
     {
         slug: 'riforma-riscossione-rate-cartelle-esattoriali-ader-novita-2026-2027',
@@ -407,8 +237,8 @@ export const CIVIC_NEWS: NewsItem[] = [
         ],
         sourceIds: ['aderRiformaRiscossione2026'],
         sources: [
-            src('Agenzia delle Entrate-Riscossione — Guida alle novità sulla rateizzazione D.Lgs. 110/2024', 'Agenzia delle Entrate-Riscossione', 'https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/rateizzazione/', 'Nuove durate rateizzazioni e soglie di accesso', TODAY),
-            src('Dipartimento delle Finanze — Riordino del sistema nazionale della riscossione', 'MEF', 'https://www.finanze.gov.it/it/Fiscalita-nazionale/', 'Testo normativo D.Lgs. 110/2024 e discarico quinquennale', TODAY),
+            src('Agenzia delle Entrate-Riscossione — Guida alle novità sulla rateizzazione D.Lgs. 110/2024', 'Agenzia delle Entrate-Riscossione', 'https://www.agenziaentrateriscossione.gov.it/it/cittadini/Rateizzazione/la-rateizzazione/', 'Nuove durate rateizzazioni e soglie di accesso', TODAY),
+            src('Dipartimento delle Finanze — Riordino del sistema nazionale della riscossione', 'MEF', 'https://www.finanze.gov.it/it/', 'Testo normativo D.Lgs. 110/2024 e discarico quinquennale', TODAY),
         ],
         relatedGuides: ['/moduli/modulo-28-cartelle-riscossione', '/modelli/rateizzazione-ader', '/guide/rateizzazione-cartelle'],
         relatedTemplates: ['rateizzazione-ader', 'cartelle-ader'],
@@ -440,8 +270,8 @@ export const CIVIC_NEWS: NewsItem[] = [
         ],
         sourceIds: ['adeIstruzioniSecondoAcconto2026'],
         sources: [
-            src('Agenzia delle Entrate — Guida e calendario dei pagamenti: secondo acconto imposte', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/schede/pagamenti/imposte-sui-redditi-secondo-acconto', 'Calendario ufficiale e istruzioni F24', TODAY),
-            src('MEF Dipartimento delle Finanze — Disciplina acconti d’imposta e chiarimenti CPB', 'MEF', 'https://www.finanze.gov.it/it/Fiscalita-nazionale/', 'Normativa acconti e aliquote sostitutive', TODAY),
+            src('Agenzia delle Entrate — Guida e calendario dei pagamenti: secondo acconto imposte', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/come-si-paga-l-irpef6', 'Calendario ufficiale e istruzioni F24', TODAY),
+            src('Agenzia delle Entrate — Pagamenti e rimborsi cittadini', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/cittadini/pagamenti-e-rimborsi', 'Normativa acconti e aliquote sostitutive', TODAY),
         ],
         relatedGuides: ['/guide/f24-acconti', '/moduli/modulo-25-fisco-cittadini', '/moduli/modulo-29-partita-iva-forfettario'],
         relatedTemplates: [],
@@ -473,8 +303,8 @@ export const CIVIC_NEWS: NewsItem[] = [
         ],
         sourceIds: ['inpsPrestazioneUniversaleAnziani2026'],
         sources: [
-            src('INPS — Prestazione Universale per la non autosufficienza gravissima (D.Lgs. 29/2024)', 'INPS', 'https://www.inps.it/it/it/dettaglio-scheda.schede-servizio-strumento.schede-servizi.prestazione-universale-anziani.html', 'Requisiti sanitari ed economici e quota integrativa', TODAY),
-            src('Ministero del Lavoro e delle Politiche Sociali — Decreto Anziani e politiche per la non autosufficienza', 'MLPS', 'https://www.lavoro.gov.it/temi-e-priorita/politiche-sociali-e-terzo-settore/focus-on/non-autosufficienza', 'Quadro normativo e decreti interministeriali', TODAY),
+            src('INPS — Prestazione Universale per la non autosufficienza gravissima (D.Lgs. 29/2024)', 'INPS', 'https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.decreto-anziani-prestazione-universale.html', 'Requisiti sanitari ed economici e quota integrativa', TODAY),
+            src('Ministero del Lavoro e delle Politiche Sociali — Portale istituzionale', 'MLPS', 'https://www.lavoro.gov.it/', 'Quadro normativo e decreti interministeriali', TODAY),
         ],
         relatedGuides: ['/moduli/modulo-21-anziani-caregiver', '/moduli/modulo-31-disabilita-legge-104', '/isee-2027'],
         relatedTemplates: ['invalidita-caregiver', 'isee-dsu-mini'],
@@ -506,7 +336,7 @@ export const CIVIC_NEWS: NewsItem[] = [
         ],
         sourceIds: ['mimIscrizioniScuolaOnline2026'],
         sources: [
-            src('Ministero dell’Istruzione e del Merito — Piattaforma Unica: portale orientamento e iscrizioni', 'MIM', 'https://unica.istruzione.gov.it/it/orientamento/iscrizioni', 'Circolare ufficiale e guida alla compilazione telematica', TODAY),
+            src('Ministero dell’Istruzione e del Merito — Piattaforma Unica: portale orientamento e iscrizioni', 'MIM', 'https://unica.istruzione.gov.it/portale/it/orientamento/iscrizioni', 'Circolare ufficiale e guida alla compilazione telematica', TODAY),
             src('MIM — Scuola in Chiaro: codici meccanografici e criteri delle scuole', 'MIM', 'https://cercalatuascuola.istruzione.it/', 'Ricerca istituti e delibere dei Consigli di Istituto', TODAY),
         ],
         relatedGuides: ['/moduli/modulo-08-scuola-famiglia', '/scuole'],
@@ -538,7 +368,7 @@ export const CIVIC_NEWS: NewsItem[] = [
         ],
         sourceIds: ['poliziaPostaleSmishingSpid2026'],
         sources: [
-            src('Polizia Postale — Allerte e comunicati su smishing e finti allarmi bancari', 'Polizia Postale', 'https://www.commissariatodips.it/notizie/articolo/allerta-smishing-falso-blocco-spid-e-conti-bancari/index.html', 'Modalità della truffa e canali di denuncia online', TODAY),
+            src('Polizia Postale — Allerte e comunicati su smishing e finti allarmi bancari', 'Polizia Postale', 'https://www.commissariatodips.it/notizie/index.html', 'Modalità della truffa e canali di denuncia online', TODAY),
             src('CERT-AgID — Bollettini di sicurezza e campagne di phishing sul territorio nazionale', 'CERT-AgID', 'https://cert-agid.gov.it/', 'Indicatori di compromissione e raccomandazioni di protezione', TODAY),
         ],
         relatedGuides: ['/moduli/modulo-03-truffe-phishing', '/confronti/truffe-come-riconoscerle', '/sos'],
@@ -570,8 +400,8 @@ export const CIVIC_NEWS: NewsItem[] = [
         ],
         sourceIds: ['mimOrganiciScuola2026'],
         sources: [
-            src('Ministero dell’Istruzione e del Merito — Note e chiarimenti sugli organici del personale scolastico', 'MIM', 'https://www.miur.gov.it/web/guest/-/organici-scuola-comunicazioni-istituzionali', 'Salvaguardia organici docenti e ATA', TODAY),
-            src('Palazzo Chigi — Comunicato su vertice scuola e Manovra 2027', 'Governo Italiano', 'https://www.governo.it/it/stampa-e-comunicazione/comunicati-stampa', 'Accordo con parti sociali e coperture di bilancio', TODAY),
+            src('Ministero dell’Istruzione e del Merito — Portale istituzionale e comunicazioni', 'MIM', 'https://www.mim.gov.it/web/guest/home', 'Salvaguardia organici docenti e ATA', TODAY),
+            src('Governo Italiano — Portale istituzionale', 'Governo Italiano', 'https://www.governo.it/', 'Accordo con parti sociali e coperture di bilancio', TODAY),
         ],
         relatedGuides: ['/moduli/modulo-08-scuola-famiglia', '/scuole'],
         relatedTemplates: [],
@@ -604,7 +434,7 @@ export const CIVIC_NEWS: NewsItem[] = [
         sourceIds: ['adeRimborsiModelloRedditi2026'],
         sources: [
             src('Agenzia delle Entrate — Guida e istruzioni per i rimborsi delle imposte sui redditi', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/schede/rimborsi', 'Modalità di accredito e registrazione IBAN', TODAY),
-            src('Agenzia delle Entrate — Servizio Cassetto Fiscale per la consultazione rimborsi', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/cassetto-fiscale', 'Verifica stato lavorazione mandati di pagamento', TODAY),
+            src('Agenzia delle Entrate — Servizio Cassetto Fiscale per la consultazione rimborsi', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/servizi/servizitrasversali/altri/cassetto-fiscale', 'Verifica stato lavorazione mandati di pagamento', TODAY),
         ],
         relatedGuides: ['/moduli/modulo-25-fisco-cittadini', '/moduli/modulo-29-partita-iva-forfettario', '/modelli/730-precompilato'],
         relatedTemplates: [],
@@ -704,9 +534,9 @@ export const CIVIC_NEWS: NewsItem[] = [
         sourceIds: ['agenasPnlaListeAttesa2026'],
         sources: [
             src('Agenas — Piattaforma Nazionale di Monitoraggio Liste di Attesa PNLA', 'Agenas', 'https://www.agenas.gov.it/', 'Reportistica e indicatori di tempestività dei CUP regionali', TODAY),
-            src('Ministero della Salute — Linee guida sul rispetto dei tempi massimi di attesa e FSE 2.0', 'Ministero della Salute', 'https://www.salute.gov.it/portale/temi/p2_6.jsp?lingua=italiano&id=5164&area=qualita&menu=vuoto', 'Classi di priorità prescrittive e diritti dell’assistito', TODAY),
+            src('Ministero della Salute — Linee guida sul rispetto dei tempi massimi di attesa e FSE 2.0', 'Ministero della Salute', 'https://www.salute.gov.it/portale/fascicoloSanitarioElettronico/homeFascicoloSanitarioElettronico.jsp', 'Classi di priorità prescrittive e diritti dell’assistito', TODAY),
         ],
-        relatedGuides: ['/moduli/modulo-20-sanita-territoriale', '/moduli/modulo-09-sanita-salute', '/sos'],
+        relatedGuides: ['/moduli/modulo-20-sanita-territoriale', '/sos'],
         relatedTemplates: [],
         lastReviewedAt: TODAY,
     },
@@ -737,8 +567,8 @@ export const CIVIC_NEWS: NewsItem[] = [
         ],
         sourceIds: ['poliziaPostaleSmishingNovembre2026'],
         sources: [
-            src('Polizia Postale — Segnalazioni e allerta frodi informatiche smishing', 'Polizia Postale', 'https://www.commissariatodips.it/notizie/articolo/allerta-smishing-falsi-sms-inps-e-fisco/index.html', 'Modalità di frode e canali ufficiali di segnalazione', TODAY),
-            src('Agenzia delle Entrate — Avvisi e comunicati sui tentativi di phishing e falsi rimborsi', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/avvisi-falsi-messaggi', 'Raccomandazioni di sicurezza e riconoscibilità comunicazioni autentiche', TODAY),
+            src('Polizia Postale — Segnalazioni e allerta frodi informatiche smishing', 'Polizia Postale', 'https://www.commissariatodips.it/notizie/index.html', 'Modalità di frode e canali ufficiali di segnalazione', TODAY),
+            src('Agenzia delle Entrate — Portale cittadini e segnalazioni phishing', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/', 'Raccomandazioni di sicurezza e riconoscibilità comunicazioni autentiche', TODAY),
         ],
         relatedGuides: ['/moduli/modulo-03-truffe-phishing', '/moduli/modulo-14-soldi-banche-truffe', '/sos', '/percorsi/proteggi-account'],
         relatedTemplates: [],
@@ -773,7 +603,7 @@ export const CIVIC_NEWS: NewsItem[] = [
         sourceIds: ['inpsMessaggio3697Red2026'],
         sources: [
             src('INPS — Messaggio n. 3697 del 12 novembre 2026: Avvio Campagna RED Ordinaria 2026', 'INPS', 'https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.messaggi.2026.11.messaggio-numero-3697-del-12-11-2026.html', 'Istruzioni e calendario campagna reddituale', TODAY),
-            src('INPS — Servizio RED Precompilato online per i cittadini', 'INPS', 'https://www.inps.it/it/it/dettaglio-scheda.schede-servizio-strumento.schede-servizi.50088.isee-precompilato.html', 'Accesso servizio telematico e invio modelli di responsabilità', TODAY),
+            src('INPS — Servizio Fascicolo Previdenziale e servizi RED per i pensionati', 'INPS', 'https://www.inps.it/it/it/previdenza/per-pensionati.html', 'Accesso servizio telematico e invio modelli di responsabilità', TODAY),
         ],
         relatedGuides: ['/moduli/modulo-27-pensioni-previdenza', '/pensioni-2027'],
         relatedTemplates: ['delega-inps'],
@@ -806,8 +636,8 @@ export const CIVIC_NEWS: NewsItem[] = [
         ],
         sourceIds: [],
         sources: [
-            src('Agenzia delle Entrate — Istruzioni e calendario scadenze acconto imposte sui redditi', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/schede/pagamenti/imposte-sui-redditi-secondo-acconto', 'Calendario ufficiale e modalità di versamento F24', TODAY),
-            src('MEF Dipartimento delle Finanze — Guida alla fiscalità d’impresa e degli autonomi', 'MEF', 'https://www.finanze.gov.it/it/Fiscalita-nazionale/', 'Parametri normativi acconti e metodo storico/previsionale', TODAY),
+            src('Agenzia delle Entrate — Istruzioni e calendario scadenze acconto imposte sui redditi', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/come-si-paga-l-irpef6', 'Calendario ufficiale e modalità di versamento F24', TODAY),
+            src('Agenzia delle Entrate — F24: come effettuare i versamenti', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/schede/pagamenti/f24/come-effettuare-versamenti-f24-imprese', 'Parametri normativi acconti e metodo storico/previsionale', TODAY),
         ],
         relatedGuides: ['/moduli/modulo-25-fisco-cittadini', '/moduli/modulo-29-partita-iva-forfettario', '/guide/f24-acconti', '/scadenze'],
         relatedTemplates: [],
@@ -839,7 +669,7 @@ export const CIVIC_NEWS: NewsItem[] = [
         ],
         sourceIds: ['mefManovra2027Ddl'],
         sources: [
-            src('Ministero dell’Economia e delle Finanze — Disegno di Legge di Bilancio 2027', 'MEF', 'https://www.mef.gov.it/focus/Disegno-di-Legge-di-Bilancio-2027/', 'Testo ufficiale e schede informative sulle misure', TODAY),
+            src('Ministero dell’Economia e delle Finanze — Comunicati e documenti Manovra 2027', 'MEF', 'https://www.mef.gov.it/ufficio-stampa/comunicati/', 'Testo ufficiale e schede informative sulle misure', TODAY),
             src('Camera dei Deputati — Dossier parlamentare Manovra di Finanza Pubblica 2027', 'Camera dei Deputati', 'https://www.camera.it/leg19/126', 'Stato iter parlamentare ed emendamenti', TODAY),
         ],
         relatedGuides: ['/bonus-2027', '/moduli/modulo-23-bonus-isee', '/moduli/modulo-12-lavoro-diritti'],
@@ -874,8 +704,8 @@ export const CIVIC_NEWS: NewsItem[] = [
         ],
         sourceIds: ['adeServizioWebAA912'],
         sources: [
-            src('Agenzia delle Entrate — Servizio web per la dichiarazione di inizio attività Modello AA9/12', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/schede/dichiarazioni/dichiarazione-inizio-variazione-cessazione-aa9_12', 'Guida e accesso al servizio telematico di apertura partita IVA', TODAY),
-            src('Agenzia delle Entrate — Guida al regime forfettario per persone fisiche', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/regime-forfetario-le-regole-da-seguire', 'Requisiti di accesso e agevolazioni contributive', TODAY),
+            src('Agenzia delle Entrate — Dichiarazione di inizio attività Modello AA9/12', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/schede/istanze/aa9_11-apertura-variazione-chiusura-pf/scheda-informativa-aa9_11', 'Guida e accesso al servizio telematico di apertura partita IVA', TODAY),
+            src('Agenzia delle Entrate — Modello e istruzioni Partita IVA persone fisiche', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/schede/istanze/aa9_11-apertura-variazione-chiusura-pf/modello-e-istr-pi-pf', 'Requisiti di accesso e modulistica ufficiale', TODAY),
         ],
         relatedGuides: ['/moduli/modulo-29-partita-iva-forfettario', '/moduli/modulo-25-fisco-cittadini', '/modelli/spid'],
         relatedTemplates: [],
@@ -907,8 +737,8 @@ export const CIVIC_NEWS: NewsItem[] = [
         ],
         sourceIds: [],
         sources: [
-            src('INPS — Guida all’indennità di anticipo pensionistico APE Sociale', 'INPS', 'https://www.inps.it/it/it/dettaglio-scheda.schede-servizio-strumento.schede-servizi.50593.naspi-indennit-mensile-di-disoccupazione.html', 'Requisiti anagrafici e contributivi per categorie tutelate', TODAY),
-            src('Ministero del Lavoro — Disciplina e proroghe dell’anticipo pensionistico', 'Ministero del Lavoro', 'https://www.lavoro.gov.it/temi-e-priorita/previdenza', 'Quadro normativo e categorie professionali gravose ammesse', TODAY),
+            src('INPS — Messaggio n. 128/2026 e scheda APE Sociale', 'INPS', 'https://www.inps.it/content/dam/inps-site/it/scorporati/circolari-e-messaggi/2026/01/Circolare_15135/Allegati/16522_Messaggio-numero-128-del-14-01-2026.pdf', 'Requisiti anagrafici e contributivi per categorie tutelate', TODAY),
+            src('Ministero del Lavoro — Portale previdenza e lavoro', 'Ministero del Lavoro', 'https://www.lavoro.gov.it/', 'Quadro normativo e categorie professionali gravose ammesse', TODAY),
         ],
         relatedGuides: ['/moduli/modulo-27-pensioni-previdenza', '/pensioni-2027'],
         relatedTemplates: ['delega-inps'],
@@ -941,8 +771,8 @@ export const CIVIC_NEWS: NewsItem[] = [
         ],
         sourceIds: [],
         sources: [
-            src('Agenzia delle Entrate-Riscossione — Definizione agevolata e calendario rate Rottamazione-quater', 'Agenzia delle Entrate-Riscossione', 'https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/definizione-agevolata-rottamazione-quater-scadenze/', 'Modalità di versamento, bollettini e termini di tolleranza', TODAY),
-            src('Dipartimento delle Finanze MEF — Normativa e delibere comunali sui tributi locali', 'MEF', 'https://www.finanze.gov.it/it/Fiscalita-locale/', 'Stralcio sanzioni e regolamenti IMU-TARI', TODAY),
+            src('Agenzia delle Entrate-Riscossione — Definizione agevolata e calendario rate Rottamazione-quater', 'Agenzia delle Entrate-Riscossione', 'https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/definizione-agevolata/', 'Modalità di versamento, bollettini e termini di tolleranza', TODAY),
+            src('Dipartimento delle Finanze MEF — Portale della fiscalità regionale e locale', 'MEF', 'https://www.finanze.gov.it/it/fiscalita/fiscalita-regionale-e-locale/Imposta-municipale-propria-IMU/', 'Stralcio sanzioni e regolamenti IMU-TARI', TODAY),
         ],
         relatedGuides: ['/moduli/modulo-28-cartelle-riscossione', '/moduli/modulo-25-fisco-cittadini', '/scadenze'],
         relatedTemplates: ['cartelle-ader'],
@@ -975,7 +805,7 @@ export const CIVIC_NEWS: NewsItem[] = [
         ],
         sourceIds: ['adeRisoluzione50ECpb'],
         sources: [
-            src('Agenzia delle Entrate — Risoluzione n. 50/E: Istituzione codici tributo ravvedimento CPB', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/documentazione/provvedimenti-circolari-e-risoluzioni/risoluzioni/risoluzioni-2026/novembre-2026', 'Elenco codici F24 e modalità di compilazione', TODAY),
+            src('Agenzia delle Entrate — Normativa e prassi Concordato Preventivo Biennale (CPB)', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/concordato-preventivo-biennale-cpb-contribuenti-isa/normativa-e-prassi', 'Elenco risoluzioni, codici F24 e modalità di compilazione', TODAY),
             src('Agenzia delle Entrate — Guida e circolare esplicativa Concordato Preventivo Biennale', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/concordato-preventivo-biennale', 'Quadro normativo e benefici per contribuenti ISA', TODAY),
         ],
         relatedGuides: ['/moduli/modulo-29-partita-iva-forfettario', '/moduli/modulo-25-fisco-cittadini'],
@@ -1009,8 +839,8 @@ export const CIVIC_NEWS: NewsItem[] = [
         ],
         sourceIds: [],
         sources: [
-            src('Ministero del Lavoro e delle Politiche Sociali — Riforma per la non autosufficienza e anziani', 'Ministero del Lavoro', 'https://www.lavoro.gov.it/temi-e-priorita/disabilita-e-non-autosufficienza', 'Decreti attuativi e linee guida Prestazione Universale', TODAY),
-            src('INPS — Guida all’indennità di accompagnamento e tutele per l’invalidità', 'INPS', 'https://www.inps.it/it/it/dettaglio-scheda.schede-servizio-strumento.schede-servizi.50088.isee-precompilato.html', 'Requisiti sanitari e presentazione domanda telematica', TODAY),
+            src('Ministero del Lavoro e delle Politiche Sociali — Portale istituzionale', 'Ministero del Lavoro', 'https://www.lavoro.gov.it/', 'Decreti attuativi e linee guida Prestazione Universale', TODAY),
+            src('INPS — Decreto Anziani: Prestazione Universale', 'INPS', 'https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.decreto-anziani-prestazione-universale.html', 'Requisiti sanitari e presentazione domanda telematica', TODAY),
         ],
         relatedGuides: ['/moduli/modulo-21-anziani-caregiver', '/moduli/modulo-31-disabilita-legge-104'],
         relatedTemplates: ['delega-inps'],
@@ -1044,9 +874,9 @@ export const CIVIC_NEWS: NewsItem[] = [
         ],
         sourceIds: ['mimAllarmeScuole2026', 'poliziaPostaleAllarmeScuole2026', 'internoSicurezzaScuole2026'],
         sources: [
-            src('Linee guida e comunicazioni istituzionali sulla sicurezza scolastica', 'MIM', 'https://www.miur.gov.it/web/guest/-/sicurezza-scuole-comunicazioni-istituzionali', 'Comunicazione ufficiale esito controlli e gestione allarmi', TODAY),
-            src('Segnalazioni, contrasto al cyber-crime e procurato allarme', 'Polizia Postale', 'https://www.commissariatodips.it/notizie/articolo/indagini-su-email-minatorie-nelle-scuole-e-procurato-allarme/index.html', 'Aggiornamento indagini informatiche e reati contestati', TODAY),
-            src('Coordinamento Prefetture e operatività Forze dell’Ordine', 'Ministero dell’Interno', 'https://www.interno.gov.it/it/stampa-e-comunicazione/comunicati-stampa/sicurezza-negli-istituti-scolastici-e-coordinamento-prefetture', 'Disposizioni di sicurezza e bonifica plessi', TODAY),
+            src('Linee guida e comunicazioni istituzionali sulla sicurezza scolastica', 'MIM', 'https://www.mim.gov.it/web/guest/home', 'Comunicazione ufficiale esito controlli e gestione allarmi', TODAY),
+            src('Segnalazioni, contrasto al cyber-crime e procurato allarme', 'Polizia Postale', 'https://www.commissariatodips.it/notizie/index.html', 'Aggiornamento indagini informatiche e reati contestati', TODAY),
+            src('Coordinamento Prefetture e operatività Forze dell’Ordine', 'Ministero dell’Interno', 'https://www.interno.gov.it/', 'Disposizioni di sicurezza e bonifica plessi', TODAY),
         ],
         relatedGuides: ['/moduli/modulo-08-scuola-famiglia', '/sos'],
         relatedTemplates: [],
@@ -1077,7 +907,7 @@ export const CIVIC_NEWS: NewsItem[] = [
         ],
         sourceIds: ['inpsPerequazionePensioniGennaio2027'],
         sources: [
-            src('Chiarimenti ufficiali sulla decorrenza della rivalutazione pensionistica 2027', 'INPS', 'https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2026.11.perequazione-pensioni-decorrenza-gennaio-2027.html', 'Calendario rivalutazione assegni e smentita rinvio', TODAY),
+            src('Chiarimenti ufficiali sulla decorrenza della rivalutazione pensionistica 2027', 'INPS', 'https://www.inps.it/it/it/inps-comunica/notizie.html', 'Calendario rivalutazione assegni e smentita rinvio', TODAY),
         ],
         relatedGuides: ['/moduli/modulo-27-pensioni-previdenza', '/pensioni-2027'],
         relatedTemplates: [],
@@ -1140,8 +970,8 @@ export const CIVIC_NEWS: NewsItem[] = [
         ],
         sourceIds: ['mefBonusNatale2026', 'adeBonusNataleCirc19', 'noipaBonusNatale2026'],
         sources: [
-            src('D.L. 167/2024 e disposizioni indennità Bonus Natale', 'MEF', 'https://www.mef.gov.it/focus/Bonus-Natale-lavoratori-dipendenti/', 'Requisiti e platea beneficiari allargata', CHECKED),
-            src('Circolare e istruzioni applicative Bonus Natale 100 euro', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/circolari-e-risoluzioni-bonus-natale-lavoratori', 'Calcolo capienza fiscale e recupero 730', CHECKED),
+            src('D.L. 167/2024 e disposizioni indennità Bonus Natale', 'MEF', 'https://noipa.mef.gov.it/cl/bonus-natale', 'Requisiti e platea beneficiari allargata', CHECKED),
+            src('Circolari n. 19/E e 22/E: istruzioni applicative Bonus Natale 100 euro', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/-/bonus-natale-2024-con-piu-beneficiari-in-una-circolare-i-chiarimenti-sulle-nuove-regole', 'Calcolo capienza fiscale e recupero 730', CHECKED),
             src('Procedura telematica per il personale dipendente pubblico', 'NoiPA', 'https://noipa.mef.gov.it/cl/servizi/indennita-bonus-natale', 'Guida invio richiesta online', CHECKED),
         ],
         relatedGuides: ['/moduli/modulo-25-fisco-cittadini'],
@@ -1208,8 +1038,8 @@ export const CIVIC_NEWS: NewsItem[] = [
         ],
         sourceIds: ['mefImu', 'mefFederalismoFiscaleImu2026', 'adeF24Versamenti'],
         sources: [
-            src('IMU — Imposta municipale propria e normativa', 'MEF', 'https://www.finanze.gov.it/it/Fiscalita-locale/IMU/', 'Normativa quadro ed esenzioni prima casa', CHECKED),
-            src('Portale del Federalismo Fiscale — Delibere aliquote comunali', 'Dipartimento delle Finanze', 'https://www.finanze.gov.it/it/Fiscalita-locale/Portale-del-Federalismo-Fiscale/aliquote-imu-comunali/', 'Verifica aliquote deliberate per Comune', CHECKED),
+            src('IMU — Imposta municipale propria e normativa', 'MEF', 'https://www.finanze.gov.it/it/fiscalita/fiscalita-regionale-e-locale/Imposta-municipale-propria-IMU/', 'Normativa quadro ed esenzioni prima casa', CHECKED),
+            src('Portale del Federalismo Fiscale — Delibere aliquote comunali', 'Dipartimento delle Finanze', 'https://www.finanze.gov.it/it/fiscalita/fiscalita-regionale-e-locale/Imposta-municipale-propria-IMU/Regolamenti-e-aliquote-ricerca/', 'Verifica aliquote deliberate per Comune', CHECKED),
             src('Compilazione Modello F24 per tributi comunali', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/schede/pagamenti/f24/cosa-f24', 'Istruzioni codici tributo 3918 e 3912', CHECKED),
         ],
         relatedGuides: ['/moduli/modulo-30-catasto-imu-successioni'],
@@ -1275,7 +1105,7 @@ export const CIVIC_NEWS: NewsItem[] = [
         ],
         sourceIds: ['inpsIseePrecompilato2027', 'inpsAuuScheda'],
         sources: [
-            src('Sistema ISEE Precompilato e istruzioni DSU', 'INPS', 'https://www.inps.it/it/it/dettaglio-scheda.schede-servizio-strumento.schede-servizi.50088.isee-precompilato.html', 'Modalità di acquisizione telematica DSU', CHECKED),
+            src('Sistema ISEE Precompilato e istruzioni DSU', 'INPS', 'https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2023.04.online-il-nuovo-portale-unico-isee.html', 'Modalità di acquisizione telematica DSU', CHECKED),
             src('Scheda Assegno Unico e calendario rinnovi', 'INPS', 'https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.assegno-unico-e-universale-per-i-figli-a-carico-55984.assegno-unico-e-universale-per-i-figli-a-carico.html', 'Regole conguaglio minimo da marzo', CHECKED),
         ],
         relatedGuides: ['/moduli/modulo-23-bonus-isee'],
@@ -1308,7 +1138,7 @@ export const CIVIC_NEWS: NewsItem[] = [
         ],
         sourceIds: ['adeSecondoAcconto2026', 'adeF24Versamenti'],
         sources: [
-            src('Agenzia delle Entrate — Scadenza e rateizzazione secondo acconto imposte sui redditi', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/schede/pagamenti/imposte-sui-redditi-secondo-acconto', 'Modalità di calcolo e calendario versamenti F24', CHECKED),
+            src('Agenzia delle Entrate — Scadenza e rateizzazione secondo acconto imposte sui redditi', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/come-si-paga-l-irpef6', 'Modalità di calcolo e calendario versamenti F24', CHECKED),
             src('F24 — come effettuare i versamenti', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/schede/pagamenti/f24/come-effettuare-versamenti-f24-imprese', 'Istruzioni compilazione F24 telematico', CHECKED),
         ],
         relatedGuides: ['/moduli/modulo-25-fisco-cittadini', '/moduli/modulo-29-partita-iva-forfettario'],
@@ -1374,7 +1204,7 @@ export const CIVIC_NEWS: NewsItem[] = [
         ],
         sourceIds: ['aderRottamazioneQuaterSestaRata2026', 'aderHome'],
         sources: [
-            src('Agenzia delle Entrate-Riscossione — Definizione agevolata (Rottamazione-quater): scadenze e 5 giorni di tolleranza', 'Agenzia delle Entrate-Riscossione', 'https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/definizione-agevolata-rottamazione-quater-scadenze/', 'Calendario rate e regole di decadenza', CHECKED),
+            src('Agenzia delle Entrate-Riscossione — Definizione agevolata (Rottamazione-quater): scadenze e 5 giorni di tolleranza', 'Agenzia delle Entrate-Riscossione', 'https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/definizione-agevolata/', 'Calendario rate e regole di decadenza', CHECKED),
             src('Agenzia delle Entrate-Riscossione — home e area riservata', 'Agenzia delle Entrate-Riscossione', 'https://www.agenziaentrateriscossione.gov.it/', 'Servizio recupero bollettini e pagamento online', CHECKED),
         ],
         relatedGuides: ['/moduli/modulo-28-cartelle-riscossione', '/moduli/modulo-25-fisco-cittadini'],

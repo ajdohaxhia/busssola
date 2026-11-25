@@ -74,7 +74,7 @@ export const modulo_30_catasto_imu_successioni: Module = {
                 ol('adeVisuraCatastale', 'Dati catastali per il calcolo', []),
             ],
             sources: [
-                src('IMU — fiscalità locale', 'Ministero dell’Economia e delle Finanze', 'https://www.finanze.gov.it/it/Fiscalita-locale/IMU/'),
+                src('IMU — fiscalità locale', 'Ministero dell’Economia e delle Finanze', 'https://www.finanze.gov.it/it/fiscalita/fiscalita-regionale-e-locale/Imposta-municipale-propria-IMU/'),
                 src('Visura catastale online', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/schede/fabbricatiterreni/visura-catastale/visura-catastale-online'),
             ],
         }),
@@ -172,7 +172,7 @@ export const modulo_30_catasto_imu_successioni: Module = {
             ],
             sources: [
                 src('Consultazione personale immobili', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/schede/fabbricatiterreni/consultazione-personale/consultazione-personale-online'),
-                src('ISEE precompilato', 'INPS', 'https://www.inps.it/it/it/dettaglio-scheda.schede-servizio-strumento.schede-servizi.50088.isee-precompilato.html'),
+                src('INPS — Portale unico ISEE Precompilato', 'INPS', 'https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2023.04.online-il-nuovo-portale-unico-isee.html'),
             ],
         }),
     ],
