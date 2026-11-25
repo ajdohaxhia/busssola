@@ -14,6 +14,124 @@ const src = (title: string, organization: string, url: string, usedFor = 'Allert
 })
 
 export const CIVIC_NEWS: NewsItem[] = [
+    // ── Auto-imported 2026-11-25 ──────────────────────────
+    {
+        slug: 'fattura-elettronica-2027-nuove-specifiche-tecniche-110-fisco-e-tasse-20261121',
+        title: 'Fattura elettronica 2027: nuove specifiche tecniche 1.10',
+        date: '2026-11-21',
+        summary: 'Fattura elettronica 2027: nuove specifiche tecniche 1.10. Fonte: Fisco e Tasse.',
+        body: [
+            'Fattura elettronica 2027: nuove specifiche tecniche 1.10.',
+        ],
+        whatChanged: [
+            'Fattura elettronica 2027: nuove specifiche tecniche 1.10',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Fattura elettronica 2027: nuove specifiche tecniche 1.10 - Fisco e Tasse', 'Fisco e Tasse', 'https://news.google.com/rss/articles/CBMisgFBVV95cUxQd0owQjNhWmREVUdlUWttODBEZzZDYzdNWjI4V3pJemxfRHRTQWVVVlN3LUhwa1poXzNWTnc1OHlPQzNGM0J3bDJTNHRLVmctT1FKUS1zWGFDXzVnVW1yRWFBMjRDQlJMQkJ5ZE41WTBadlJwMTNZYWxySDJPN09CWWx1ajRzbzd5VklMT0g3S2x1d0lzSDN3M3VqRmlYd0V2U05YeHltVFZ6UzMxcFNQOXZB?oc=5', 'Fattura elettronica 2027: nuove specifiche tecniche 1.10 - Fisco e Tasse', '2026-11-21'),
+        ],
+        relatedGuides: ['/moduli/modulo-25-fisco-cittadini', '/moduli/modulo-29-partita-iva-forfettario'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-21',
+    },
+    {
+        slug: 'ernesto-maria-ruffini-piu-uno-no-alla-patrimoniale-non-ha-senso-mettere-altre-im',
+        title: 'Ernesto Maria Ruffini (Più Uno): "No alla patrimoniale, non ha senso mettere altre imposte"',
+        date: '2026-11-21',
+        summary: 'Ernesto Maria Ruffini (Più Uno): "No alla patrimoniale, non ha senso mettere altre imposte". Fonte: HuffPost Italia.',
+        body: [
+            'Ernesto Maria Ruffini (Più Uno): "No alla patrimoniale, non ha senso mettere altre imposte".',
+        ],
+        whatChanged: [
+            'Ernesto Maria Ruffini (Più Uno): "No alla patrimoniale, non ha senso mettere altre imposte"',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Ernesto Maria Ruffini (Più Uno): "No alla patrimoniale, non ha senso mettere altre imposte" - HuffPost Italia', 'HuffPost Italia', 'https://news.google.com/rss/articles/CBMi5AFBVV95cUxPSXRORkVjYVY4akJkQ0M4SDc1UlYxbjFlYV95LVJYRk1xM09uX0xOWlBVbjByOThZWU5qR0VXUVFJMXBnaHhYc3BQa3JaeEo4THM5NlVXb1FaN0ljclFGWVRpU0RJOFhvS2YzSE9sd0h3VFgyUUs2ZmEyRml4SmN1TVEtT2dqSkdBd3laeF9ueF9iMmNYZFdiSFkxSVlBRUc3eWV4aWhMaUFxTFE1ODNONTBhdUpYRkRieHdLUXMtWC0yMVdkMS11VWNvWVh2U0dJSUpGaV92N3hndloyc3Z3Uzk1MkY?oc=5', 'Ernesto Maria Ruffini (Più Uno): "No alla patrimoniale, non ha senso mettere altre imposte" - HuffPost Italia', '2026-11-21'),
+        ],
+        relatedGuides: ['/moduli/modulo-25-fisco-cittadini', '/moduli/modulo-29-partita-iva-forfettario'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-21',
+    },
+    {
+        slug: 'imu-calcolo-precompilato-dal-2027-per-il-pagamento-debutta-pagopa-informazionefi',
+        title: 'IMU, calcolo precompilato dal 2027. Per il pagamento debutta PagoPA',
+        date: '2026-11-21',
+        summary: 'IMU, calcolo precompilato dal 2027. Per il pagamento debutta PagoPA. Fonte: informazionefiscale.it.',
+        body: [
+            'IMU, calcolo precompilato dal 2027. Per il pagamento debutta PagoPA.',
+        ],
+        whatChanged: [
+            'IMU, calcolo precompilato dal 2027. Per il pagamento debutta PagoPA',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('IMU, calcolo precompilato dal 2027. Per il pagamento debutta PagoPA - informazionefiscale.it', 'informazionefiscale.it', 'https://news.google.com/rss/articles/CBMikgFBVV95cUxPcmZrbXFUMVQyUHpnY1cxTmJsMXJ0YTFyUUE4YXJ3U2ZxMFo4RzNkdk9fT1Z4Sjk0czg2eU1hQjVWNnRCSzBuWlJxd1g1anc2T1M3bm9EN2xxVXUzRkdJdmNjT2tabF85UC1vOGlTV19MWjkzNVJPVzlGa1RxMHBvQ1dKcEM2LWdSRVdWYmpRREJTQQ?oc=5', 'IMU, calcolo precompilato dal 2027. Per il pagamento debutta PagoPA - informazionefiscale.it', '2026-11-21'),
+        ],
+        relatedGuides: ['/moduli/modulo-25-fisco-cittadini', '/moduli/modulo-29-partita-iva-forfettario'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-21',
+    },
+    {
+        slug: 'controlli-fiscali-2027-2029-il-fisco-punta-su-criptovalute-partite-iva-e-superbo',
+        title: 'Controlli fiscali 2027-2029, il Fisco punta su criptovalute, partite Iva e Superbonus: chi rischia verifiche',
+        date: '2026-11-23',
+        summary: 'Controlli fiscali 2027-2029, il Fisco punta su criptovalute, partite Iva e Superbonus: chi rischia verifiche. Fonte: QuiFinanza.',
+        body: [
+            'Controlli fiscali 2027-2029, il Fisco punta su criptovalute, partite Iva e Superbonus: chi rischia verifiche.',
+        ],
+        whatChanged: [
+            'Controlli fiscali 2027-2029, il Fisco punta su criptovalute, partite Iva e Superbonus: chi rischia verifiche',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Controlli fiscali 2027-2029, il Fisco punta su criptovalute, partite Iva e Superbonus: chi rischia verifiche - QuiFinanza', 'QuiFinanza', 'https://news.google.com/rss/articles/CBMiigFBVV95cUxOYTl4RFplZXJUVHIxT05md1VSTWdkUWhwZng1VTh3NjJlS2xLQjZoRWlfYmZNTmdkNmNwQjl3WThkOS1ZY1NRRDNGODJlMGExV2RtWmtzSEtmTFF6RXJYVjRZOGQ3QzRxSXFYZC1tN0g5N2ZMY0dWM1lvOHZwWVZRZy1MaHJSVFZfS2fSAY8BQVVfeXFMTW43UGhSUVhXWllNbFpGWC1jUjZGdzRzaEVDSm15c1pVdGl1Q2xQbE5NN0JJZkdWWnpRVi1QTW5zMG1NNHJmN0ZyVGx0b05zRmdsR0VwOFRTTVFoZDFla0FkbVJtb196bUJfRXo4MFdkbWUzNFM1b0NDdDF5OThhYUZwVzdfd1dieExmYnJjVFk?oc=5', 'Controlli fiscali 2027-2029, il Fisco punta su criptovalute, partite Iva e Superbonus: chi rischia verifiche - QuiFinanza', '2026-11-23'),
+        ],
+        relatedGuides: ['/moduli/modulo-25-fisco-cittadini', '/moduli/modulo-29-partita-iva-forfettario'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-23',
+    },
+    {
+        slug: 'alluvioni-e-blackout-torino-investe-200mila-euro-per-la-nuova-sala-della-protezi',
+        title: 'Alluvioni e blackout, Torino investe 200mila euro per la nuova sala della Protezione civile',
+        date: '2026-11-23',
+        summary: 'Alluvioni e blackout, Torino investe 200mila euro per la nuova sala della Protezione civile. Fonte: Torino Cronaca.',
+        body: [
+            'Alluvioni e blackout, Torino investe 200mila euro per la nuova sala della Protezione civile.',
+        ],
+        whatChanged: [
+            'Alluvioni e blackout, Torino investe 200mila euro per la nuova sala della Protezione civile',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Alluvioni e blackout, Torino investe 200mila euro per la nuova sala della Protezione civile - Torino Cronaca', 'Torino Cronaca', 'https://news.google.com/rss/articles/CBMi2wFBVV95cUxPZ1NfVTJwaGNuMDhhZDJVWVRpMTdEZkRZR2xQZ1VsZkFGZDZobURUVG9ucnNFcWd6R3UyZ2tuWk43Ym9kMzYxdFRQdUROVF9VQ3pJZXh6dnVMTjYyRTdOU29fQ01jMlV0MzgyM0tVQlhxbTNybUE0U1ZZWGJ2UzBuMDRkX3QyWUh3Z3o0YXdubzUyVEJCQlNJWTBBeVJEOXlSTjBTYXVSX3liU3FETDAzVzhCb05taHlERnBUSWt1ZkE1b3ZoQjFWQ0JidkRtLUJ4SE5uTmVYZjlLc1U?oc=5', 'Alluvioni e blackout, Torino investe 200mila euro per la nuova sala della Protezione civile - Torino Cronaca', '2026-11-23'),
+        ],
+        relatedGuides: ['/sos', '/moduli/modulo-03-truffe-phishing'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-23',
+    },
+    // ── End auto-import ──────────────────────────────────────────────
+
     {
         slug: 'fatturazione-elettronica-2027-specifiche-tecniche-1-10-codice-rf21',
         title: 'Fatturazione elettronica 2027: pubblicate le specifiche tecniche 1.10, adeguamento al Testo Unico IVA e nuovo codice RF21',
