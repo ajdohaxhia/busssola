@@ -14,6 +14,55 @@ const src = (title: string, organization: string, url: string, usedFor = 'Allert
 })
 
 export const CIVIC_NEWS: NewsItem[] = [
+    // ── Auto-imported 2026-11-26 ──────────────────────────
+    {
+        slug: 'controlli-fiscali-a-32-anni-per-chi-non-ha-mai-dichiarato-redditi-la-proposta-al',
+        title: 'Controlli fiscali a 32 anni per chi non ha mai dichiarato redditi, la proposta all\'Agenzia delle Entrate',
+        date: '2026-11-26',
+        summary: 'Controlli fiscali a 32 anni per chi non ha mai dichiarato redditi, la proposta all\'Agenzia delle Entrate. Fonte: QuiFinanza.',
+        body: [
+            'Controlli fiscali a 32 anni per chi non ha mai dichiarato redditi, la proposta all\'Agenzia delle Entrate.',
+        ],
+        whatChanged: [
+            'Controlli fiscali a 32 anni per chi non ha mai dichiarato redditi, la proposta all\'Agenzia delle Entrate',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Controlli fiscali a 32 anni per chi non ha mai dichiarato redditi, la proposta all\'Agenzia delle Entrate - QuiFinanza', 'QuiFinanza', 'https://news.google.com/rss/articles/CBMilAFBVV95cUxNUlVjQ1hPSU9ONFlkR001S2J3ZFZhcVEydG5iUXB1LWFTdDJuN2hpNzNTTWYxeURxWlpkX3NqazhweDJoMmxOVGZOVTVfMGJrNDRnbk01eklHY0EycjBQNmxtNEttWEFlWlQxektkZm1KSThoYVBzZllJZ2pyRW1TY1gybGhRd3hlb1VJckNRNHdsN1hW0gGaAUFVX3lxTE5rSGgyaXdrYkhGTF9fZEZKeHkxb1V1aUxkaXZGY2F1cVpJdGU0aFNJd1ZjVklBY0F4RHYwamp3Y0FZLWtOdXZGU19Fc0FybUFnRURHLUNVSEgxMVdpUmJfRHhMSjlMQWRPRFNWY294V2UwNjVURkVadDV3UDg5T1l4eUtVenFLSHlXZUNXZV94Q2dtUUlrWGl4YWc?oc=5', 'Controlli fiscali a 32 anni per chi non ha mai dichiarato redditi, la proposta all\'Agenzia delle Entrate - QuiFinanza', '2026-11-26'),
+        ],
+        relatedGuides: ['/moduli/modulo-25-fisco-cittadini', '/moduli/modulo-29-partita-iva-forfettario'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-26',
+    },
+    {
+        slug: 'fattura-elettronica-2027-cosa-cambia-dall11-gennaio-e-per-chi-fisco-e-tasse-2026',
+        title: 'Fattura elettronica 2027: cosa cambia dall\'11 gennaio e per chi',
+        date: '2026-11-21',
+        summary: 'Fattura elettronica 2027: cosa cambia dall\'11 gennaio e per chi. Fonte: Fisco e Tasse.',
+        body: [
+            'Fattura elettronica 2027: cosa cambia dall\'11 gennaio e per chi.',
+        ],
+        whatChanged: [
+            'Fattura elettronica 2027: cosa cambia dall\'11 gennaio e per chi',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Fattura elettronica 2027: cosa cambia dall\'11 gennaio e per chi - Fisco e Tasse', 'Fisco e Tasse', 'https://news.google.com/rss/articles/CBMivAFBVV95cUxQLWZ2bWlmWC1BSkpEc29zRHRZV2F4bzBONjZ0V1VIUHBsQ0luY043MTd3TWRBS0Zkc0ZDbnlKekh5dEx1VHBvb0otaXg1dm1hWUVBbDZWWEE1Vk5FejBvSGNUMVFSc0hOUUlWcGFBdmhpXzRTR1pUdUJlVnYxSGZVbHA1ZE5SLUQ0RF9ndnZDWm01cUxhYjFlZm9kQVgtTE1BTjlEZHE4WmhUYXRFV19NNGJBWWFiNTBrYU9BYQ?oc=5', 'Fattura elettronica 2027: cosa cambia dall\'11 gennaio e per chi - Fisco e Tasse', '2026-11-21'),
+        ],
+        relatedGuides: ['/moduli/modulo-25-fisco-cittadini', '/moduli/modulo-29-partita-iva-forfettario'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-21',
+    },
+    // ── End auto-import ──────────────────────────────────────────────
+
     // ── Auto-imported 2026-11-25 ──────────────────────────
     {
         slug: 'fattura-elettronica-2027-nuove-specifiche-tecniche-110-fisco-e-tasse-20261121',
