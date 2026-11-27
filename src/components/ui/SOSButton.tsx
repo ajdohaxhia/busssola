@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { LifeBuoy, X, Phone, ExternalLink, AlertTriangle } from 'lucide-react'
+import { LifeBuoy, X, Phone, ExternalLink, AlertTriangle, MessageSquareHeart } from 'lucide-react'
 import Link from 'next/link'
 
 export function SOSButton() {
@@ -77,11 +77,33 @@ export function SOSButton() {
                                 <p className="text-xs font-semibold uppercase tracking-wide text-muted">Altri numeri, solo se non c&apos;è pericolo immediato</p>
                                 <a href="tel:1522" className="flex items-center justify-between p-4 border border-border rounded-lg hover:bg-surface-muted">
                                     <span>
-                                        <span className="block font-semibold text-foreground">1522</span>
-                                        <span className="text-sm text-muted">Antiviolenza e stalking</span>
+                                        <span className="block font-semibold text-foreground">1522 · Antiviolenza e stalking</span>
+                                        <span className="text-sm text-muted">Gratuito h24, anonimo, in più lingue</span>
                                     </span>
-                                    <Phone size={16} className="text-sos" />
+                                    <Phone size={16} className="text-sos shrink-0" />
                                 </a>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                    <a
+                                        href="https://www.1522.eu/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center justify-between px-3 py-2.5 text-xs font-medium border border-border rounded-lg hover:bg-surface-muted"
+                                    >
+                                        <span className="inline-flex items-center gap-1.5">
+                                            <MessageSquareHeart size={14} className="text-sos shrink-0" />
+                                            Chat anonima h24 (1522.eu)
+                                        </span>
+                                        <ExternalLink size={12} className="text-muted shrink-0" />
+                                    </a>
+                                    <Link
+                                        href="/modelli/tutela-violenza-1522-reddito-liberta"
+                                        onClick={() => setIsOpen(false)}
+                                        className="flex items-center justify-between px-3 py-2.5 text-xs font-medium border border-border rounded-lg hover:bg-surface-muted text-foreground"
+                                    >
+                                        <span>Centri Antiviolenza e tutele 1522</span>
+                                        <ExternalLink size={12} className="text-primary shrink-0" />
+                                    </Link>
+                                </div>
                                 <a href="tel:114" className="flex items-center justify-between p-4 border border-border rounded-lg hover:bg-surface-muted">
                                     <span>
                                         <span className="block font-semibold text-foreground">114</span>

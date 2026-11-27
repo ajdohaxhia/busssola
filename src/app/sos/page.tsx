@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import {
     ArrowRight, CheckCircle2, Clock, Copy, Database,
-    ExternalLink, Info, Phone, Printer, ShieldAlert, XCircle,
+    ExternalLink, Info, MapPin, MessageSquare, Phone, Printer, ShieldAlert, XCircle,
 } from 'lucide-react'
 import Link from 'next/link'
 import { toast } from 'sonner'
@@ -62,6 +62,84 @@ export default function SOSPage() {
             </header>
 
             <SecurityAlertBanner variant="sos" />
+
+            {!selected && (
+                <section
+                    aria-label="Rete nazionale 1522 e risorse antiviolenza"
+                    className="rounded-3xl border border-sos/30 bg-surface p-6 md:p-8 space-y-5 print:hidden"
+                >
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div className="space-y-1">
+                            <span className="text-[11px] font-bold uppercase tracking-widest text-sos">
+                                Rete Nazionale Antiviolenza e Stalking · 1522
+                            </span>
+                            <h2 className="text-2xl font-display font-semibold text-foreground">
+                                Supporto gratuito h24, chat anonima e tutele concrete
+                            </h2>
+                            <p className="text-sm text-secondary max-w-3xl leading-relaxed">
+                                Il 1522 del Dipartimento per le Pari Opportunità è gratuito, attivo 24 ore su 24 da telefono fisso o cellulare (italiano, inglese, francese, spagnolo, arabo, tedesco e altre lingue su appuntamento). Se non puoi parlare a voce, usa la chat anonima su 1522.eu.
+                            </p>
+                        </div>
+                        <a
+                            href="tel:1522"
+                            className="inline-flex items-center justify-center gap-2 rounded-xl bg-sos text-white font-semibold px-5 py-3 text-sm shrink-0 hover:bg-sos/90"
+                        >
+                            <Phone className="w-4 h-4" /> Chiama 1522
+                        </a>
+                    </div>
+
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                        <a
+                            href="https://www.1522.eu/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-4 rounded-2xl border border-border bg-surface-muted hover:border-sos/50 transition-all space-y-1.5"
+                        >
+                            <p className="font-semibold text-sm text-foreground inline-flex items-center gap-1.5">
+                                <MessageSquare className="w-4 h-4 text-sos" /> Chat anonima 1522.eu <ExternalLink className="w-3 h-3 text-muted" />
+                            </p>
+                            <p className="text-xs text-secondary leading-relaxed">
+                                Chat riservata h24 con operatrici specializzate e pulsante di uscita rapida dal sito.
+                            </p>
+                        </a>
+                        <a
+                            href="https://www.1522.eu/centri-antiviolenza/mappa.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-4 rounded-2xl border border-border bg-surface-muted hover:border-sos/50 transition-all space-y-1.5"
+                        >
+                            <p className="font-semibold text-sm text-foreground inline-flex items-center gap-1.5">
+                                <MapPin className="w-4 h-4 text-sos" /> Mappa Centri & Case Rifugio <ExternalLink className="w-3 h-3 text-muted" />
+                            </p>
+                            <p className="text-xs text-secondary leading-relaxed">
+                                Mappatura ufficiale dei Centri Antiviolenza accreditati, consultabile anche su direcontrolaviolenza.it.
+                            </p>
+                        </a>
+                        <Link
+                            href="/modelli/tutela-violenza-1522-reddito-liberta"
+                            className="p-4 rounded-2xl border border-border bg-surface-muted hover:border-primary/50 transition-all space-y-1.5"
+                        >
+                            <p className="font-semibold text-sm text-foreground inline-flex items-center gap-1.5">
+                                Reddito di Libertà & Congedo 90 gg <ArrowRight className="w-3.5 h-3.5 text-primary" />
+                            </p>
+                            <p className="text-xs text-secondary leading-relaxed">
+                                Contributi INPS, Microcredito di Libertà (DPO/ABI), ISEE escluso e congedo retribuito art. 24 D.Lgs. 80/2015.
+                            </p>
+                        </Link>
+                        <Link
+                            href="/modelli/patrocinio-a-spese-dello-stato"
+                            className="p-4 rounded-2xl border border-border bg-surface-muted hover:border-primary/50 transition-all space-y-1.5"
+                        >
+                            <p className="font-semibold text-sm text-foreground inline-flex items-center gap-1.5">
+                                Avvocato gratuito & Ammonimento <ArrowRight className="w-3.5 h-3.5 text-primary" />
+                            </p>
+                            <p className="text-xs text-secondary leading-relaxed">
+                                Patrocinio a spese dello Stato in deroga ai limiti di reddito (art. 76 co. 4-ter) e ammonimento del Questore / app YouPol.
+                            </p>
+                        </Link>
+                    </div>
+                </section>
+            )}
 
             {!selected ? (
                 <div className="space-y-12 print:hidden">

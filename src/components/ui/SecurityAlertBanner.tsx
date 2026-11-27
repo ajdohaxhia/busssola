@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { AlertTriangle, ArrowRight, ShieldCheck, Smartphone, QrCode, Package } from 'lucide-react'
+import { AlertTriangle, ArrowRight, KeyRound, QrCode, ShieldCheck, Terminal } from 'lucide-react'
 
 interface SecurityAlertBannerProps {
     variant?: 'home' | 'sos'
@@ -18,11 +18,11 @@ export function SecurityAlertBanner({ variant = 'home' }: SecurityAlertBannerPro
                         <AlertTriangle className="w-6 h-6 animate-pulse" aria-hidden />
                     </div>
                     <div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2 flex-wrap">
                             <span className="text-[10px] font-black uppercase tracking-widest px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-700 dark:text-amber-300">
-                                Allerta attiva · Novembre 2026
+                                Allerta attiva · 27 Novembre 2026
                             </span>
-                            <span className="text-xs text-muted">Fonti: Polizia Postale & CERT-AgID</span>
+                            <span className="text-xs text-muted">Fonti: CERT-AgID, Agenzia Entrate & Polizia Postale</span>
                         </div>
                         <h2 className="text-xl md:text-2xl font-display font-bold text-foreground tracking-tight mt-0.5">
                             Campagne di frode e sicurezza in corso in Italia
@@ -32,17 +32,17 @@ export function SecurityAlertBanner({ variant = 'home' }: SecurityAlertBannerPro
 
                 <div className="flex flex-wrap items-center gap-3 shrink-0">
                     <Link
-                        href="/moduli/modulo-03-truffe-phishing"
+                        href="/confronti/truffe-come-riconoscerle"
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-foreground text-background text-xs md:text-sm font-bold shadow hover:bg-foreground/90 transition-all"
                     >
                         <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                        Guida anti-truffa e phishing ↗
+                        Matrice truffe & phishing ↗
                     </Link>
                     <Link
-                        href="/novita"
+                        href="/moduli/modulo-03-truffe-phishing"
                         className="inline-flex items-center gap-1.5 text-xs md:text-sm font-semibold text-primary hover:underline"
                     >
-                        Tutti i bollettini 2026 <ArrowRight className="w-4 h-4" />
+                        Guida difesa <ArrowRight className="w-4 h-4" />
                     </Link>
                 </div>
             </div>
@@ -50,67 +50,67 @@ export function SecurityAlertBanner({ variant = 'home' }: SecurityAlertBannerPro
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {/* Alert 1 */}
                 <Link
-                    href="/novita/allerta-phishing-falso-fisco-pacchi-black-friday-novembre-2026"
+                    href="/novita/allerta-phishing-cie-rimborsi-irpef-agenzia-entrate-cert-agid-novembre-2026"
                     className="p-4 rounded-2xl border border-border/80 bg-surface/80 hover:border-amber-500/60 hover:shadow-md transition-all group flex flex-col justify-between space-y-3"
                 >
                     <div className="space-y-2">
                         <div className="flex items-center gap-2 text-xs font-semibold text-amber-600 dark:text-amber-400">
-                            <Package className="w-4 h-4" />
-                            <span>Smishing · Falso Fisco & Black Friday</span>
+                            <KeyRound className="w-4 h-4" />
+                            <span>Phishing CIE & Rimborsi IRPEF · 26-27 Nov</span>
                         </div>
                         <h3 className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors leading-snug">
-                            Finti SMS pacchi trattenuti e rimborsi fiscali
+                            Falsa schermata CIE livello 2 e finti rimborsi su carte
                         </h3>
                         <p className="text-xs text-secondary leading-relaxed line-clamp-3">
-                            Messaggi civetta su cartelle esattoriali e pacchi bloccati per rubare carte di credito e credenziali SPID. Non cliccare sui link.
+                            Avvisi Agenzia delle Entrate e CERT-AgID: siti clone rubano numero CIE e password con pannello live e chiedono CVV carta per falsi rimborsi IRPEF.
                         </p>
                     </div>
                     <span className="text-[11px] font-bold text-primary inline-flex items-center gap-1 pt-2 border-t border-border/40">
-                        Cosa fare e contromisure <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
+                        Cosa fare e verifica domini <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
                     </span>
                 </Link>
 
                 {/* Alert 2 */}
                 <Link
-                    href="/novita/allerta-quishing-qr-code-truffa-multe-parcometri-2026"
+                    href="/novita/allerta-cert-agid-clickfix-cloudflare-infocamere-campagne-novembre-2026"
                     className="p-4 rounded-2xl border border-border/80 bg-surface/80 hover:border-amber-500/60 hover:shadow-md transition-all group flex flex-col justify-between space-y-3"
                 >
                     <div className="space-y-2">
                         <div className="flex items-center gap-2 text-xs font-semibold text-amber-600 dark:text-amber-400">
-                            <QrCode className="w-4 h-4" />
-                            <span>Quishing · QR Code fraudolenti</span>
+                            <Terminal className="w-4 h-4" />
+                            <span>ClickFix, InfoCamere & APK · Bollettino CERT-AgID</span>
                         </div>
                         <h3 className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors leading-snug">
-                            Adesivi QR contraffatti su parcometri e multe
+                            Finti CAPTCHA Cloudflare, InfoCamere e finta App IO
                         </h3>
                         <p className="text-xs text-secondary leading-relaxed line-clamp-3">
-                            Adesivi sovrapposti su colonnine e preavvisi di sosta portano a falsi portali PagoPA. Controlla il dominio prima di pagare.
+                            129 campagne settimanali: popup “ClickFix” chiedono di incollare comandi PowerShell (RAT Olympic), falso portale InfoCamere e falsi .apk Android.
                         </p>
                     </div>
                     <span className="text-[11px] font-bold text-primary inline-flex items-center gap-1 pt-2 border-t border-border/40">
-                        Come verificare in sicurezza <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
+                        Leggi il bollettino e contromisure <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
                     </span>
                 </Link>
 
                 {/* Alert 3 */}
                 <Link
-                    href="/novita/whatsapp-furto-account-falsi-concorsi-2026"
+                    href="/novita/allerta-black-friday-polizia-postale-false-pec-rimborsi-irap-agenzia-entrate"
                     className="p-4 rounded-2xl border border-border/80 bg-surface/80 hover:border-amber-500/60 hover:shadow-md transition-all group flex flex-col justify-between space-y-3"
                 >
                     <div className="space-y-2">
                         <div className="flex items-center gap-2 text-xs font-semibold text-amber-600 dark:text-amber-400">
-                            <Smartphone className="w-4 h-4" />
-                            <span>WhatsApp · Furto Account</span>
+                            <QrCode className="w-4 h-4" />
+                            <span>False PEC IRAP, Black Friday & Quishing</span>
                         </div>
                         <h3 className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors leading-snug">
-                            Truffa dei falsi concorsi ("La ballerina")
+                            False PEC fiscali, store clone e adesivi QR truffa
                         </h3>
                         <p className="text-xs text-secondary leading-relaxed line-clamp-3">
-                            Messaggi da contatti rubati chiedono voti per un concorso. Mai cedere il codice a 6 cifre via SMS. Attiva subito la verifica a due fattori.
+                            Ondate di PEC con finti rimborsi IRAP, negozi clone di fine novembre e adesivi QR manomessi su parcometri e finte multe PagoPA o SEND.
                         </p>
                     </div>
                     <span className="text-[11px] font-bold text-primary inline-flex items-center gap-1 pt-2 border-t border-border/40">
-                        Protocollo di difesa <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
+                        Regole anti-frode <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
                     </span>
                 </Link>
             </div>
@@ -118,17 +118,22 @@ export function SecurityAlertBanner({ variant = 'home' }: SecurityAlertBannerPro
             <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-amber-500/20 text-xs text-secondary">
                 <div className="flex items-center gap-2">
                     <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                    <span>Tutti i contenuti sono verificati con riferimenti diretti ai bollettini delle autorità</span>
+                    <span>Tutti i contenuti sono verificati con riferimenti diretti ai bollettini ufficiali delle autorità</span>
                 </div>
-                {variant === 'home' ? (
-                    <Link href="/sos" className="font-semibold text-sos hover:underline inline-flex items-center gap-1">
-                        Sei già caduto in una truffa? Apri il Centro SOS →
+                <div className="flex flex-wrap items-center gap-4">
+                    <Link href="/modelli/segnalazione-truffa-polizia-postale" className="font-semibold text-primary hover:underline">
+                        Kit segnalazione truffa
                     </Link>
-                ) : (
-                    <Link href="/tips" className="font-semibold text-primary hover:underline inline-flex items-center gap-1">
-                        Consulta tutti i trucchi civici e le buone pratiche →
-                    </Link>
-                )}
+                    {variant === 'home' ? (
+                        <Link href="/sos" className="font-semibold text-sos hover:underline inline-flex items-center gap-1">
+                            Sei già caduto in una truffa? Apri il Centro SOS →
+                        </Link>
+                    ) : (
+                        <Link href="/novita" className="font-semibold text-primary hover:underline inline-flex items-center gap-1">
+                            Tutti i bollettini e avvisi 2026 →
+                        </Link>
+                    )}
+                </div>
             </div>
         </aside>
     )

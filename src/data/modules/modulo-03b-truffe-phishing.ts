@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_03b_truffe_phishing: Module = {
     id: 'modulo-03b-truffe-phishing',
-    lastUpdated: '2026-11-08',
+    lastUpdated: '2026-11-27',
     title: 'Modulo 3b: Casi Specifici di Truffa',
     description: 'Analisi profonda delle truffe più recenti su Vinted, Marketplace e piattaforme di annunci.',
     category: 'truffe',
@@ -137,12 +137,12 @@ export const modulo_03b_truffe_phishing: Module = {
             ],
             sources: [
                 {
-                    title: 'Smishing: Attenzione al finto SMS del corriere',
+                    title: 'Polizia Postale — Allerte smishing e finti SMS di consegna',
                     organization: 'Polizia di Stato',
-                    url: 'https://www.commissariatodips.it/notizie/articolo/smishing-attenzione-al-finto-sms-del-corriere/index.html',
+                    url: 'https://www.commissariatodips.it/notizie/index.html',
                     type: 'official',
                     usedFor: 'Riconoscimento delle campagne di smishing e prevenzione.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-11-27'
                 }
             ],
             lastReviewedAt: '2026-11-08',

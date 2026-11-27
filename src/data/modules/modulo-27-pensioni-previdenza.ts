@@ -3,7 +3,7 @@ import { published, src, ol } from './civicPublished';
 
 export const modulo_27_pensioni_previdenza: Module = {
     id: 'modulo-27-pensioni-previdenza',
-    lastUpdated: '2026-11-25',
+    lastUpdated: '2026-11-27',
     title: 'Pensioni e previdenza',
     description: 'Domanda di pensione INPS, vecchiaia e anticipata, APE sociale, estratto contributivo, ricostituzione e riscatto laurea: orientamento sulle schede ufficiali.',
     category: 'lavoro',
@@ -339,6 +339,47 @@ export const modulo_27_pensioni_previdenza: Module = {
             sources: [
                 src('Procedura Cedolino della pensione', 'INPS', 'https://www.inps.it/it/it/inps-comunica/diritti-e-obblighi-in-materia-di-sicurezza-sociale-nell-unione-e/procedure/procedura-cedolino-della-pensione.html'),
                 src('Fascicolo previdenziale del cittadino', 'INPS', 'https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.fascicolo-previdenziale-del-cittadino-50865.fascicolo-previdenziale-del-cittadino.html'),
+            ],
+        }),
+        published({
+            id: 'notifiche-send-indebiti-ricongiunzione',
+            slug: 'notifiche-inps-su-send-e-ricongiunzione-casse-private',
+            title: 'Notifiche INPS su SEND e ricongiunzioni con Casse private',
+            category: 'lavoro',
+            audience: ['anziani', 'lavoratori', 'cittadini'],
+            level: 'intermedia',
+            estimatedMinutes: 10,
+            mainEntity: 'INPS',
+            summary: 'L’INPS estende le notifiche digitali su SEND (Messaggio 3801/2026) agli indebiti di pensioni, Assegno Sociale e Invalidità, e aggiorna le ricongiunzioni con Casse private (Messaggio 3900/2026).',
+            steps: [
+                'Attiva l’App IO con SPID o CIE oppure monitora la tua PEC e il portale ufficiale `notifichedigitali.it` (SEND) per ricevere gli atti INPS a valore legale.',
+                'Se non hai recapiti digitali, conserva l’avviso cartaceo ricevuto per posta e ritira l’atto presso un Punto fisico RADD convenzionato.',
+                'Prima di versare somme per presunti indebiti su pensioni o invalidità, verifica il provvedimento nella sezione «Visualizzazione indebiti» dentro MyINPS.',
+                'Se hai contributi sia in Gestione Separata INPS sia in una Cassa professionale privata (ADEPP), valuta con Cassa o patronato i nuovi chiarimenti del Messaggio n. 3900/2026.',
+            ],
+            commonErrors: [
+                'Cliccare su link SMS che imitano notifiche SEND o recuperi INPS invece di aprire App IO / notifichedigitali.it',
+                'Scegliere una ricongiunzione onerosa senza confrontarla prima con cumulo gratuito o totalizzazione',
+            ],
+            dontDo: [
+                'Non pagare mai bollettini o IBAN ricevuti via email non verificata prima di controllare su MyINPS',
+            ],
+            checklist: [
+                'App IO / notifichedigitali.it controllati',
+                'Eventuale indebito verificato dentro MyINPS',
+            ],
+            faqs: [
+                { q: 'Le notifiche INPS su SEND hanno pieno valore legale?', a: 'Sì: SEND sostituisce o integra la raccomandata tradizionale ai sensi dell’art. 26 D.L. 76/2020. Le tempistiche di perfezionamento decorrono secondo le regole del domicilio digitale.' },
+            ],
+            officialLinksV2: [
+                ol('inpsMessaggio3801Send2026', 'Messaggio INPS n. 3801/2026 su notifiche SEND', []),
+                ol('inpsMessaggio3900Ricongiunzione2026', 'Messaggio INPS n. 3900/2026 su ricongiunzione Casse ADEPP', []),
+                ol('sendNotificheDigitali', 'Accesso al Servizio Notifiche Digitali (SEND)', []),
+            ],
+            sources: [
+                src('Messaggio INPS n. 3801 del 19/11/2026 — Estensione piattaforma SEND', 'INPS', 'https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.messaggi.2026.11.messaggio-numero-3801-del-19-11-2026.html'),
+                src('Messaggio INPS n. 3900 del 26/11/2026 — Ricongiunzione Gestione Separata e ADEPP', 'INPS', 'https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.messaggi.2026.11.messaggio-numero-3900-del-26-11-2026.html'),
+                src('Notifiche INPS sulla Piattaforma SEND e Punti RADD', 'INPS', 'https://www.inps.it/it/it/inps-comunica/inps--inclusione-e-innovazione/trasformazione-digitale-e-innovazione-tecnologica/notifiche-inps-sulla-piattaforma-send.html'),
             ],
         }),
     ],

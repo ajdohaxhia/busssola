@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_04_sextortion_ricatti: Module = {
     id: 'modulo-04-sextortion-ricatti',
-    lastUpdated: '2024-05-13',
+    lastUpdated: '2026-11-27',
     title: 'Modulo 4: Sextortion e Ricatti Sessuali',
     description: 'Protocolli rigorosi per gestire estorsioni basate su immagini intime, blocco tecnico della diffusione e tutele legali del Garante Privacy.',
     category: 'emergenze',
@@ -151,10 +151,10 @@ export const modulo_04_sextortion_ricatti: Module = {
                 {
                     title: 'Segnalazione per la diffusione illecita di immagini intime',
                     organization: 'Garante per la protezione dei dati personali',
-                    url: 'https://www.garanteprivacy.it/temi/revenge-porn',
+                    url: 'https://www.garanteprivacy.it/temi/revengeporn',
                     type: 'official',
                     usedFor: 'Procedura ufficiale di segnalazione e base legale dei diritti della vittima.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-11-27'
                 },
                 {
                     title: 'Articolo 612-ter Codice Penale',
@@ -234,10 +234,10 @@ export const modulo_04_sextortion_ricatti: Module = {
                 {
                     title: 'Guida all\'uso di StopNCII',
                     organization: 'Garante Privacy (Vademecum)',
-                    url: 'https://www.garanteprivacy.it/temi/revenge-porn',
+                    url: 'https://www.garanteprivacy.it/temi/revengeporn',
                     type: 'official',
                     usedFor: 'Raccomandazione istituzionale dello strumento come prevenzione tecnica.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-11-27'
                 }
             ],
             lastReviewedAt: '2024-05-13',

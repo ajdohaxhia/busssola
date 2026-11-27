@@ -2985,7 +2985,7 @@ export const LIFE_HACKS: LifeHack[] = [
             "Metti l'icona in prima pagina sul tuo smartphone"
         ],
         whatYouNeed: ["Smartphone"],
-        officialLinks: ["emergenza112", "antiviolenza1522"],
+        officialLinks: ["emergenza112", "antiviolenza1522", "antiviolenza1522Portale"],
         commonErrors: [
             "Pensare di ricordare i numeri a memoria (sotto stress si dimenticano)",
             "Non testare se i link 'chiama ora' funzionano"
@@ -3915,15 +3915,15 @@ export const LIFE_HACKS: LifeHack[] = [
         ],
         sources: [
             {
-                title: "Polizia Postale — Allarme Quishing e truffe tramite QR Code contraffatti",
+                title: "Polizia Postale — Allerte su Quishing e QR Code contraffatti",
                 organization: "Polizia Postale",
-                url: "https://www.commissariatodips.it/notizie/articolo/quishing-attenzione-ai-qr-code-contraffatti-su-parcometri-e-multe/index.html",
+                url: "https://www.commissariatodips.it/notizie/index.html",
                 type: "official",
                 usedFor: "Vettori di attacco e raccomandazioni di difesa",
-                lastCheckedAt: "2026-10-26"
+                lastCheckedAt: "2026-11-27"
             }
         ],
-        lastReviewedAt: "2026-10-26",
+        lastReviewedAt: "2026-11-27",
         badges: ["Sicurezza", "Evita errore", "Urgente"]
     },
     {
@@ -4125,5 +4125,98 @@ export const LIFE_HACKS: LifeHack[] = [
         ],
         lastReviewedAt: "2026-11-08",
         badges: ["Casa", "Risparmia tempo", "Evita errore"]
+    },
+    {
+        title: "Contattare il 1522 in silenzio via chat (1522.eu) e attivare le tutele",
+        slug: "contattare-1522-chat-anonima-centri-antiviolenza",
+        category: "emergenze",
+        target: ["victims", "cittadini", "lavoratori"],
+        difficulty: "facile",
+        time: "3 minuti",
+        benefit: "Ricevere aiuto gratuito h24 in totale anonimato senza dover telefonare ad alta voce e individuare subito il Centro Antiviolenza più vicino",
+        summary: "Come usare la chat anonima h24 del 1522 su 1522.eu, attivare il pulsante di uscita rapida, trovare un Centro Antiviolenza e richiedere Reddito di Libertà o congedo.",
+        whyUseful: "Chi convive con una persona controllante spesso non può telefonare. La chat su 1522.eu permette di dialogare con operatrici specializzate in più lingue in modo silenzioso e riservato.",
+        steps: [
+            "Se c'è pericolo fisico immediato chiama il 112 o invia una segnalazione rapida tramite l'app YouPol della Polizia di Stato.",
+            "Apri il browser in modalità anonima/privata e vai su 1522.eu (in alto è presente il pulsante rapido «ESCI DAL SITO»).",
+            "Avvia la chat gratuita 24/7 con le operatrici del 1522 (oppure chiama il numero 1522 da telefono fisso o mobile in pieno anonimato).",
+            "Cerca il Centro Antiviolenza (CAV) accreditato più vicino su 1522.eu/centri-antiviolenza/mappa.html o sulla rete D.i.Re.",
+            "Chiedi al CAV l'attivazione di Reddito di Libertà (INPS/Comune), Microcredito di Libertà, congedo retribuito fino a 90 giorni (art. 24 D.Lgs. 80/2015) e patrocinio legale gratuito senza limiti di reddito."
+        ],
+        whatYouNeed: ["Smartphone o PC (preferibilmente in finestra anonima)", "Nessun documento richiesto per il primo ascolto 1522"],
+        officialLinks: ["antiviolenza1522Portale", "antiviolenza1522Mappa", "dpoSostegnoEconomicoViolenza", "giustiziaPatrocinioPenale"],
+        commonErrors: [
+            "Pensare che serva una denuncia già depositata per chiamare il 1522 o rivolgersi a un Centro Antiviolenza",
+            "Lasciare la cronologia aperta su un dispositivo condiviso anziché usare la navigazione privata"
+        ],
+        limitations: [
+            "Il 1522 orienta e attiva i servizi territoriali, ma in caso di aggressione o emergenza fisica immediata occorre chiamare sempre il 112."
+        ],
+        sources: [
+            {
+                title: "1522 — Portale ufficiale e chat anonima h24",
+                organization: "Dipartimento per le Pari Opportunità",
+                url: "https://www.1522.eu/",
+                type: "official",
+                usedFor: "Chat h24 e mappa Centri Antiviolenza",
+                lastCheckedAt: "2026-11-27"
+            },
+            {
+                title: "DPO — Sostegno economico vittime di violenza",
+                organization: "Presidenza del Consiglio dei Ministri — DPO",
+                url: "https://www.pariopportunita.gov.it/it/politiche-e-attivita/violenza-di-genere/il-sostegno-economico-alle-vittime-della-violenza-di-genere/",
+                type: "official",
+                usedFor: "Reddito di Libertà e Microcredito di Libertà",
+                lastCheckedAt: "2026-11-27"
+            }
+        ],
+        lastReviewedAt: "2026-11-27",
+        badges: ["Urgente", "Sicurezza"]
+    },
+    {
+        title: "Difendersi da finto login CIE livello 2 e finti CAPTCHA ClickFix",
+        slug: "difesa-phishing-cie-e-clickfix-cloudflare",
+        category: "sicurezza",
+        target: ["cittadini", "lavoratori", "studenti"],
+        difficulty: "facile",
+        time: "2 minuti",
+        benefit: "Bloccare i due vettori di attacco più attivi di fine 2026 contro identità digitale CIE, carte di pagamento e PC Windows",
+        summary: "Come riconoscere all'istante le pagine false CIE a nome Agenzia Entrate (Avviso 27 novembre 2026) e gli attacchi ClickFix su falsi CAPTCHA Cloudflare.",
+        whyUseful: "I nuovi kit phishing gestiscono il furto credenziali CIE dal vivo via Telegram, mentre i popup ClickFix spingono gli utenti a infettare da soli il proprio PC con PowerShell.",
+        steps: [
+            "Quando accedi con CIE livello 2 controlla la barra indirizzi: deve essere esattamente `entrata.cie.interno.gov.it` e la notifica deve arrivare nella tua app CieID.",
+            "Per i rimborsi IRPEF accedi sempre manualmente su agenziaentrate.gov.it: l'Agenzia non chiede mai numero di carta, scadenza o CVV.",
+            "Se un popup “verifica Cloudflare / Non sono un robot” ti dice di premere Windows+X, aprire PowerShell e incollare un comando (`CTRL+V`), chiudi subito la pagina.",
+            "Non scaricare né installare mai pacchetti Android `.apk` proposti da siti web come aggiornamenti di App IO (trojan Mirax): aggiorna solo su Play Store o App Store."
+        ],
+        whatYouNeed: ["Browser aggiornato", "App CieID e App IO installate esclusivamente dagli store ufficiali"],
+        officialLinks: ["adeAvvisoPhishingCie2026", "certAgidClickFixOlympic2026", "certAgidMalwareMirax2026"],
+        commonErrors: [
+            "Fidarsi di loghi del Ministero dell'Interno o di Agenzia Entrate mostrati su un dominio web estraneo a `.gov.it`",
+            "Eseguire nel terminale di Windows comandi copiati automaticamente dal browser"
+        ],
+        limitations: [
+            "Se hai già inserito numero CIE e password su un sito sospetto, cambia immediatamente la password CIE dal portale ufficiale CieID e avvisa la Polizia Postale."
+        ],
+        sources: [
+            {
+                title: "Agenzia delle Entrate — Avviso del 27 novembre 2026 su falso accesso CIE",
+                organization: "Agenzia delle Entrate",
+                url: "https://www.agenziaentrate.gov.it/portale/avviso-del-27-novembre",
+                type: "official",
+                usedFor: "Prevenzione phishing identità digitale CIE",
+                lastCheckedAt: "2026-11-27"
+            },
+            {
+                title: "CERT-AgID — Tecnica ClickFix e trojan RAT Olympic",
+                organization: "CERT-AgID",
+                url: "https://cert-agid.gov.it/news/clickfix-falsa-verifica-cloudflare-su-un-portale-scolastico-diffonde-nuovo-rat-olympic-0-1-0/",
+                type: "official",
+                usedFor: "Riconoscimento finti CAPTCHA PowerShell",
+                lastCheckedAt: "2026-11-27"
+            }
+        ],
+        lastReviewedAt: "2026-11-27",
+        badges: ["Sicurezza", "Evita errore", "Urgente"]
     }
 ];

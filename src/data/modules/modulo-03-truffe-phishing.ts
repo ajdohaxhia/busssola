@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_03_truffe_phishing: Module = {
     id: 'modulo-03-truffe-phishing',
-    lastUpdated: '2026-11-25',
+    lastUpdated: '2026-11-27',
     title: 'Truffe e Phishing',
     description: 'Come riconoscere i tentativi di truffa online, proteggere i propri dati e reagire in caso di errore.',
     category: 'truffe',
@@ -238,7 +238,7 @@ export const modulo_03_truffe_phishing: Module = {
                 'Servizio antifrode della tua banca (per blocco preventivo della carta)'
             ],
             officialLinks: [
-                'https://www.commissariatodips.it/notizie/articolo/quishing-attenzione-ai-qr-code-contraffatti-su-parcometri-e-multe/index.html'
+                'https://www.commissariatodips.it/notizie/index.html'
             ],
             officialLinksV2: [
                 {
@@ -260,12 +260,12 @@ export const modulo_03_truffe_phishing: Module = {
             ],
             sources: [
                 {
-                    title: 'Polizia Postale — Allarme Quishing e truffe tramite QR Code contraffatti',
+                    title: 'Polizia Postale — Allerte su Quishing e QR Code contraffatti',
                     organization: 'Polizia Postale',
-                    url: 'https://www.commissariatodips.it/notizie/articolo/quishing-attenzione-ai-qr-code-contraffatti-su-parcometri-e-multe/index.html',
+                    url: 'https://www.commissariatodips.it/notizie/index.html',
                     type: 'official',
                     usedFor: 'Dinamica della frode e linee guida di tutela',
-                    lastCheckedAt: '2026-10-26'
+                    lastCheckedAt: '2026-11-27'
                 }
             ]
         },
@@ -337,6 +337,78 @@ export const modulo_03_truffe_phishing: Module = {
                     type: 'official',
                     usedFor: 'Riconoscimento false PEC fiscali',
                     lastCheckedAt: '2026-11-25'
+                }
+            ]
+        },
+        {
+            id: 'phishing-cie-clickfix-infocamere',
+            slug: 'difendersi-da-finto-login-cie-clickfix-cloudflare-e-phishing-infocamere',
+            title: 'Phishing CIE, falsi CAPTCHA ClickFix e portali InfoCamere',
+            category: 'truffe',
+            audience: ['cittadini', 'lavoratori'],
+            level: 'base',
+            estimatedMinutes: 8,
+            summary: 'Come difendersi da finti login CIE livello 2 a nome Agenzia Entrate, falsi CAPTCHA Cloudflare (ClickFix) con comandi PowerShell e portali clone InfoCamere.',
+            status: 'published',
+            qualityGatePassed: true,
+            lastReviewedAt: '2026-11-27',
+            mainEntity: 'CERT-AgID / Agenzia delle Entrate',
+            steps: [
+                'Verifica sempre l’indirizzo prima di inserire le credenziali CIE: il login CIE livello 2 avviene solo su `entrata.cie.interno.gov.it`, mai su pagine raggiunte da link SMS o email fiscali.',
+                'Se un portale promete un rimborso IRPEF e chiede numero di carta di pagamento, scadenza e codice CVV, chiudi subito la pagina: i rimborsi fiscali arrivano solo su IBAN indicato in area riservata o 730.',
+                'Non eseguire mai comandi suggeriti da presunti popup CAPTCHA Cloudflare (“ClickFix”: premi Windows+X, apri PowerShell, premi CTRL+V): nessuna verifica anti-bot usa il terminale di sistema.',
+                'Sui portali camerali (InfoCamere / Registro Imprese) diffida delle pagine dove i bottoni SPID, CIE o CNS non funzionano costringendoti a inserire utente e password.',
+                'Controlla le eventuali notifiche di multe PagoPA o atti INPS/SEND esclusivamente accedendo manualmente dall’app IO o su `notifichedigitali.it`.',
+            ],
+            commonErrors: [
+                'Incollare un comando dalla clipboard in PowerShell credendo sia una verifica Cloudflare legittima',
+                'Inserire numero CIE e password su domini compromessi che imitano il Ministero dell’Interno e l’Agenzia delle Entrate',
+            ],
+            dontDo: [
+                'Non comunicare codici carta o CVV per ricevere presunti accrediti fiscali',
+                'Non incollare mai istruzioni prese da siti web dentro PowerShell, CMD o Terminale',
+            ],
+            checklist: [
+                'Dominio entrata.cie.interno.gov.it verificato prima del login CIE',
+                'Nessun comando copiato dal browser eseguito nel terminale',
+                'Nessun dato carta/CVV inserito per falsi rimborsi IRPEF',
+            ],
+            faqs: [
+                { q: 'Ho inserito numero CIE e password su una pagina falsa: cosa devo fare?', a: 'Accedi subito al portale/app ufficiale CieID per cambiare la password e revocare eventuali sessioni attive, poi controlla Cassetto Fiscale, MyINPS e App IO per verificare accessi o pratiche non autorizzate e segnala alla Polizia Postale.' },
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'adeAvvisoPhishingCie2026',
+                    useWhen: 'Per leggere l’avviso ufficiale Agenzia delle Entrate sul falso accesso CIE',
+                    beforeOpening: []
+                },
+                {
+                    sourceId: 'certAgidClickFixOlympic2026',
+                    useWhen: 'Per conoscere lo schema ClickFix su finti CAPTCHA segnalato dal CERT-AgID',
+                    beforeOpening: []
+                },
+                {
+                    sourceId: 'certAgidSintesiNov2127',
+                    useWhen: 'Per consultare il riepilogo settimanale delle 129 campagne attive in Italia',
+                    beforeOpening: []
+                }
+            ],
+            sources: [
+                {
+                    title: 'Agenzia delle Entrate — Avviso del 27 novembre 2026: campagna phishing falso accesso CIE',
+                    organization: 'Agenzia delle Entrate',
+                    url: 'https://www.agenziaentrate.gov.it/portale/avviso-del-27-novembre',
+                    type: 'official',
+                    usedFor: 'Riconoscimento finto login CIE livello 2',
+                    lastCheckedAt: '2026-11-27'
+                },
+                {
+                    title: 'CERT-AgID — ClickFix: falsa verifica Cloudflare diffonde RAT Olympic 0.1.0',
+                    organization: 'CERT-AgID',
+                    url: 'https://cert-agid.gov.it/news/clickfix-falsa-verifica-cloudflare-su-un-portale-scolastico-diffonde-nuovo-rat-olympic-0-1-0/',
+                    type: 'official',
+                    usedFor: 'Difesa da attacchi ClickFix via PowerShell',
+                    lastCheckedAt: '2026-11-27'
                 }
             ]
         }

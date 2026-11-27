@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_16_famiglia_minori: Module = {
     id: 'modulo-16-famiglia-minori',
-    lastUpdated: '2026-05-14',
+    lastUpdated: '2026-11-27',
     title: 'Famiglia e Minori',
     description: 'Tutela dei minori online, gestione dei rischi digitali in famiglia e strumenti di supporto psicologico e legale.',
     category: 'famiglia',
@@ -384,14 +384,14 @@ export const modulo_16_famiglia_minori: Module = {
             summary: 'I numeri di emergenza e i portali per segnalare violenza, pedopornografia o cyberbullismo.',
             status: 'published',
             qualityGatePassed: true,
-            lastReviewedAt: '2026-05-14',
+            lastReviewedAt: '2026-11-27',
             mainEntity: 'Polizia Postale',
             synthesis: 'Conoscenza degli strumenti istituzionali per la rimozione di contenuti illegali o pericolosi.',
             whenToDo: 'Immediatamente quando ti imbatti in contenuti illegali, violenti o che ritraggono minori in situazioni di pericolo.',
             scenario: 'Stai navigando e trovi un sito che mostra violenza estrema, oppure ricevi un video illegale su un gruppo WhatsApp.',
             steps: [
                 'Chiama il 114 (Emergenza Infanzia) per casi urgenti sui minori',
-                'Chiama il 1522 in caso di violenza di genere o stalking',
+                'Chiama il 1522 o usa la chat anonima h24 su 1522.eu in caso di violenza di genere o stalking (trovi la mappa Centri Antiviolenza su 1522.eu/centri-antiviolenza/mappa.html)',
                 'Segnala il sito/contenuto sul portale della Polizia Postale',
                 'Usa le funzioni di report interne alle piattaforme (es. YouTube "Segnala")'
             ],
@@ -417,8 +417,8 @@ export const modulo_16_famiglia_minori: Module = {
             askHelpWhen: [
                 'Sempre in caso di illegalità evidente'
             ],
-            whoCanHelp: ['Polizia Postale', 'Telefono Azzurro', '114 Emergenza Infanzia', '1522 Numero Anti Violenza e Stalking'],
-            officialLinks: ['https://www.commissariatodips.it/segnalazioni/index.html', 'https://www.1522.eu/', 'https://114.it/'],
+            whoCanHelp: ['Polizia Postale', 'Telefono Azzurro', '114 Emergenza Infanzia', '1522 Numero Anti Violenza e Stalking (voce e chat 1522.eu)'],
+            officialLinks: ['https://www.commissariatodips.it/segnalazioni/index.html', 'https://www.1522.eu/', 'https://www.1522.eu/centri-antiviolenza/mappa.html', 'https://114.it/'],
             checklist: [
                 'Numero utile identificato (114, 1522, 112)',
                 'URL o link salvato',
@@ -433,15 +433,23 @@ export const modulo_16_famiglia_minori: Module = {
                     url: 'https://www.commissariatodips.it/',
                     type: 'official',
                     usedFor: 'Canale ufficiale segnalazione',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-11-27'
                 },
                 {
-                    title: 'Numero Anti Violenza e Stalking',
+                    title: 'Numero Anti Violenza e Stalking 1522 — Chat e Mappa Centri',
                     organization: 'Dipartimento Pari Opportunità',
                     url: 'https://www.1522.eu/',
                     type: 'official',
-                    usedFor: 'Supporto vittime violenza',
-                    lastCheckedAt: '2026-05-14'
+                    usedFor: 'Supporto vittime violenza, chat anonima h24 e orientamento Centri Antiviolenza',
+                    lastCheckedAt: '2026-11-27'
+                },
+                {
+                    title: 'DPO — Scheda istituzionale 1522',
+                    organization: 'Dipartimento per le Pari Opportunità',
+                    url: 'https://www.pariopportunita.gov.it/it/numeri-utili/1522-numero-antiviolenza-e-antistalking/',
+                    type: 'official',
+                    usedFor: 'Servizio multilingua e cartelli informativi',
+                    lastCheckedAt: '2026-11-27'
                 }
             ]
         }

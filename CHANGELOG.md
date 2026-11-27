@@ -1,5 +1,22 @@
 # Changelog
 
+## [Routine Update - Aggiornamento 27 Novembre 2026, Sicurezza CIE/ClickFix & Risorse 1522] - 2026-11-27
+### Added
+- **5 Notizie Civiche Verificate (25-27 novembre 2026)**:
+  - *Allerta phishing CIE e falsi rimborsi IRPEF*: doppi avvisi dell'Agenzia delle Entrate (26 e 27 novembre 2026) e analisi CERT-AgID su pagine clone per il login CIE di livello 2 gestite via Telegram e sms/email con furto dati carta e CVV.
+  - *Bollettino CERT-AgID 21-27 novembre 2026*: 129 campagne malevole analizzate, attacchi con tecnica «ClickFix» su falsi CAPTCHA Cloudflare (trojan RAT Olympic 0.1.0) e phishing contro portali InfoCamere.
+  - *Rottamazioni al 30 novembre 2026*: riepilogo FiscoOggi/AdER per 3ª rata Rottamazione-quinquies, 14ª rata Rottamazione-quater e 6ª rata riammessi (L. 15/2025), con distinzione sui 5 giorni di tolleranza (fino al 7 dicembre per Quater/riammessi).
+  - *Messaggi INPS di fine novembre*: Messaggio n. 3801/2026 (estensione delle notifiche digitali SEND agli indebiti pensionistici, Assegno Sociale e Invalidità Civile) e Messaggio n. 3900/2026 (ricongiunzione Gestione Separata e Casse ADEPP).
+  - *Rete 1522 e sostegno antiviolenza*: guida completa a telefono e chat anonima h24 (`1522.eu`), mappatura Centri Antiviolenza e Case Rifugio, opuscolo Polizia di Stato 2026 «...questo NON è AMORE», app YouPol, Protocollo DPO-ABI contro la violenza economica, Reddito e Microcredito di Libertà, congedo retribuito 90 giorni e gratuito patrocinio senza limiti di reddito.
+- **Nuove risorse dedicate a 1522 e tutela vittime**:
+  - Nuovo *Kit operativo* `/modelli/tutela-violenza-1522-reddito-liberta` (`templates.ts`), nuova scheda didattica nel *Modulo 6 (Cyberstalking e doxxing)*, nuovo trucco civico sulla chat anonima h24 `1522.eu`, e blocco dedicato *Rete Nazionale 1522* in `/sos` e nel modale rapido `SOSButton`.
+- **Nuova lezione e guida su phishing CIE & ClickFix**: aggiunta nel *Modulo 3 (Truffe e phishing)* e nei trucchi civici `life-hacks.ts`.
+
+### Changed
+- **Aggiornamento «Allerta truffe» (`SecurityAlertBanner` e Matrice `/confronti/truffe-come-riconoscerle/`)**: aggiornato il banner di sicurezza su Home e Centro SOS alle campagne del 27 novembre 2026 (CIE livello 2, ClickFix/Olympic RAT, InfoCamere, falsi rimborsi IRPEF e false PEC IRAP) e aggiunti i due nuovi canali alla matrice anti-frode con relative FAQ.
+- **Pulizia bozze auto-importate e verifica URL**: rimossi i 9 stub RSS grezzi del 25-27 novembre in `src/data/news.ts` e sostituiti diversi link ufficiali 404 con URL HTTP 200 verificati in `officialSources.ts`, `sos-cases.ts`, `news.ts`, `life-hacks.ts` e nei moduli di sicurezza e tutele (`modulo-03`, `modulo-03b`, `modulo-04`, `modulo-06`, `modulo-06b`, `modulo-14`, `modulo-15`, `modulo-16`).
+- **Aggiornamento scadenze, moduli e metadati editoriali**: allineati `deadlines.ts`, `modulo-27-pensioni-previdenza.ts`, `modulo-28-cartelle-riscossione.ts`, `EDITORIAL_DATE`, `siteStats.ts`, `modules-meta.ts`, `search-index.json` e `feed.xml` al 27 novembre 2026.
+
 ## [Routine Update - Notizie Civiche, Moduli, Scadenze e Verifica Fonti] - 2026-11-25
 ### Added
 - **6 Notizie Civiche Verificate (20-25 novembre 2026)**:

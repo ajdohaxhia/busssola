@@ -58,11 +58,11 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "number": 0,
     "title": "Truffe e Phishing",
     "description": "Come riconoscere i tentativi di truffa online, proteggere i propri dati e reagire in caso di errore.",
-    "lessonCount": 5,
+    "lessonCount": 6,
     "difficulty": "base",
     "icon": "AlertTriangle",
     "category": "truffe",
-    "lastUpdated": "2026-11-25",
+    "lastUpdated": "2026-11-27",
     "featuredType": "none"
   },
   {
@@ -74,7 +74,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "intermedia",
     "icon": "Target",
     "category": "truffe",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-27",
     "featuredType": "none"
   },
   {
@@ -86,7 +86,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "intermedia",
     "icon": "AlertCircle",
     "category": "emergenze",
-    "lastUpdated": "2024-05-13",
+    "lastUpdated": "2026-11-27",
     "featuredType": "none"
   },
   {
@@ -130,11 +130,11 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "number": 0,
     "title": "Cyberstalking e Doxxing",
     "description": "Difenditi dalle persecuzioni online e dalla diffusione illecita dei tuoi dati personali con le procedure legali di ammonimento e reclamo al Garante.",
-    "lessonCount": 3,
+    "lessonCount": 4,
     "difficulty": "intermedia",
     "icon": "Eye",
     "category": "privacy",
-    "lastUpdated": "2024-05-13",
+    "lastUpdated": "2026-11-27",
     "featuredType": "none"
   },
   {
@@ -146,7 +146,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "intermedia",
     "icon": "Eye",
     "category": "privacy",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-27",
     "featuredType": "none"
   },
   {
@@ -277,7 +277,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "intermedia",
     "icon": "ShieldAlert",
     "category": "soldi",
-    "lastUpdated": "2026-05-14",
+    "lastUpdated": "2026-11-27",
     "featuredType": "none"
   },
   {
@@ -289,7 +289,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "avanzata",
     "icon": "ShieldCheck",
     "category": "sicurezza",
-    "lastUpdated": "2026-05-16",
+    "lastUpdated": "2026-11-27",
     "featuredType": "none"
   },
   {
@@ -301,7 +301,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "base",
     "icon": "Users",
     "category": "famiglia",
-    "lastUpdated": "2026-05-14",
+    "lastUpdated": "2026-11-27",
     "featuredType": "none"
   },
   {
@@ -428,11 +428,11 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "number": 0,
     "title": "Pensioni e previdenza",
     "description": "Domanda di pensione INPS, vecchiaia e anticipata, APE sociale, estratto contributivo, ricostituzione e riscatto laurea: orientamento sulle schede ufficiali.",
-    "lessonCount": 9,
+    "lessonCount": 10,
     "difficulty": "intermedia",
     "icon": "Landmark",
     "category": "lavoro",
-    "lastUpdated": "2026-11-25",
+    "lastUpdated": "2026-11-27",
     "featuredType": "none",
     "mainEntity": "INPS"
   },
@@ -445,7 +445,7 @@ export const MODULES_MAP: ModuleMetadata[] = [
     "difficulty": "intermedia",
     "icon": "FileWarning",
     "category": "soldi",
-    "lastUpdated": "2026-11-25",
+    "lastUpdated": "2026-11-27",
     "featuredType": "none",
     "mainEntity": "Agenzia delle entrate-Riscossione"
   },

@@ -11,6 +11,8 @@ import {
     QrCode,
     HelpCircle,
     Lock,
+    KeyRound,
+    Terminal,
 } from 'lucide-react'
 import { PageHeader } from '@/components/ui/PageHeader'
 import { JsonLd } from '@/components/seo/JsonLd'
@@ -93,6 +95,30 @@ const FRAUD_CHANNELS = [
         ],
         whatNeverToDo: 'Non inserire dati di pagamento se il link non è quello istituzionale del fornitore.',
     },
+    {
+        name: 'Phishing interattivo CIE / SPID, InfoCamere e False PEC Fiscali',
+        icon: KeyRound,
+        color: 'text-orange-500',
+        howItWorks: 'Siti su domini compromessi replicano l’accesso CIE di livello 2 con loghi del Ministero dell’Interno e Agenzia Entrate chiedendo numero CIE, codice fiscale e password (gestiti dal vivo via Telegram), oppure falsi portali InfoCamere con SPID/CIE disattivati e PEC truffa su finti rimborsi IRAP.',
+        redFlags: [
+            'L’URL nella barra indirizzi per il login CIE non è `entrata.cie.interno.gov.it` o il dominio camerale autentico',
+            'I pulsanti SPID, CIE e CNS su un portale risultano bloccati/decorativi lasciando attivo solo il login con utente e password',
+            'Messaggi PEC fiscali provenienti da domini somiglianti anziché da `@pec.agenziariscossione.gov.it` o dagli indirizzi su agenziaentrate.gov.it',
+        ],
+        whatNeverToDo: 'Non inserire numero CIE, password o dati aziendali raggiungendo la pagina da un link o da una PEC inattesa.',
+    },
+    {
+        name: 'Tecnica «ClickFix» (Finti CAPTCHA) e Falsi APK App IO (Mirax)',
+        icon: Terminal,
+        color: 'text-rose-500',
+        howItWorks: 'Su siti compromessi (anche portali scolastici) appare un falso popup di verifica Cloudflare (“To better prove you are not a robot”) che chiede di premere Windows+X, aprire PowerShell e incollare un comando (`CTRL+V`), oppure un falso portale propone un file Android `.apk` spacciato per aggiornamento di App IO.',
+        redFlags: [
+            'Un controllo “Non sono un robot” / CAPTCHA ti chiede di aprire PowerShell, Terminale o Esegui (Win+R) e incollare comandi',
+            'Un sito web propone di scaricare direttamente un pacchetto `.apk` per aggiornare App IO, banche o Poste fuori dagli store ufficiali',
+            'Richiesta successiva di concedere i permessi di “Accessibilità” su Android a un’app appena installata da browser',
+        ],
+        whatNeverToDo: 'Un CAPTCHA autentico non chiede mai comandi da terminale; App IO e le app bancarie si aggiornano solo su Play Store e App Store.',
+    },
 ]
 
 const FAQS = [
@@ -107,6 +133,14 @@ const FAQS = [
     {
         question: 'Se ho autorizzato un bonifico su indicazione di un finto operatore, la banca è tenuta a rimborsarmi?',
         answer: 'La giurisprudenza dell’Arbitro Bancario Finanziario (ABF) e dei tribunali riconosce la responsabilità dell’intermediario bancario qualora non abbia adottato sistemi di sicurezza avanzati per prevenire lo spoofing telefonico e transazioni anomale. Se la banca non dimostra la colpa grave dell’utente, quest’ultimo ha diritto al rimborso totale o parziale delle somme sottratte.',
+    },
+    {
+        question: 'Ho visto una verifica Cloudflare che chiede di aprire PowerShell (ClickFix) o un aggiornamento App IO in .apk: cosa sono?',
+        answer: 'Sono tecniche segnalate dal CERT-AgID e dall’Agenzia delle Entrate nel novembre 2026: "ClickFix" sfrutta un falso CAPTCHA per farti eseguire sul PC comandi malevoli che installano trojan (come Olympic RAT), mentre i finti portali fiscali offrono pacchetti Android .apk infetti (come Mirax) spacciati per aggiornamenti di App IO. Chiudi subito la pagina e non eseguire né installare nulla.',
+    },
+    {
+        question: 'Come capisco se una schermata di accesso CIE o una PEC fiscale dell’Agenzia è autentica?',
+        answer: 'L’autenticazione CIE livello 2 avviene esclusivamente sul dominio `entrata.cie.interno.gov.it` (con app CieID ufficiale), mentre l’Agenzia delle Entrate usa `agenziaentrate.gov.it` e non chiede mai numeri di carta o CVV per erogare rimborsi. Per le PEC dell’Agente della riscossione l’unico dominio ufficiale è `@pec.agenziariscossione.gov.it`.',
     },
 ]
 
@@ -126,7 +160,7 @@ export default function TruffeRiconoscerlePage() {
             name: 'Busssola',
         },
         datePublished: '2026-10-18',
-        dateModified: '2026-11-08',
+        dateModified: '2026-11-27',
     }
 
     const faqSchema = {
@@ -315,7 +349,7 @@ export default function TruffeRiconoscerlePage() {
                     <ShieldAlert className="w-4 h-4 text-primary" />
                     <span>Per segnalazioni e denunce: Commissariato di P.S. Online (Polizia Postale) e CERT-AgID.</span>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center flex-wrap gap-3">
                     <a
                         href="https://www.commissariatodips.it"
                         target="_blank"
@@ -323,6 +357,22 @@ export default function TruffeRiconoscerlePage() {
                         className="inline-flex items-center gap-1 font-semibold text-primary hover:underline"
                     >
                         Polizia Postale Online ↗
+                    </a>
+                    <a
+                        href="https://cert-agid.gov.it/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 font-semibold text-primary hover:underline"
+                    >
+                        CERT-AgID ↗
+                    </a>
+                    <a
+                        href="https://www.agenziaentrate.gov.it/portale/focus-sul-phishing/segnalazioni-e-approfondimenti"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 font-semibold text-primary hover:underline"
+                    >
+                        Focus Phishing AdE ↗
                     </a>
                     <Link href="/moduli/modulo-03-truffe-phishing" className="text-muted hover:text-foreground">
                         Guida completa al modulo truffe ↗

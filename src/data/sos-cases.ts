@@ -18,7 +18,7 @@ export type SosCase = {
     sources: Source[]
 }
 
-const CHECKED = '2026-08-14'
+const CHECKED = '2026-11-27'
 
 const src = (title: string, organization: string, url: string, usedFor: string): Source => ({
     title,
@@ -32,8 +32,13 @@ const src = (title: string, organization: string, url: string, usedFor: string):
 const NUE = src('Numero Unico Emergenza 112', 'Stato Italiano', 'tel:112', 'Chiamata di emergenza')
 const PS = src('Commissariato di PS online', 'Polizia di Stato', 'https://www.commissariatodips.it/', 'Segnalazione reati online')
 const G1522 = src('Antiviolenza e stalking 1522', 'Dipartimento per le Pari Opportunità', 'tel:1522', 'Supporto violenza di genere e stalking')
+const G1522_WEB = src('1522 — Portale ufficiale, chat anonima h24 e mappa Centri Antiviolenza', 'Dipartimento per le Pari Opportunità', 'https://www.1522.eu/', 'Chat h24 e mappa Centri Antiviolenza')
+const G1522_MAP = src('1522 — Mappa Centri Antiviolenza e Case Rifugio', 'Dipartimento per le Pari Opportunità', 'https://www.1522.eu/centri-antiviolenza/mappa.html', 'Orientamento ai centri accreditati sul territorio')
+const DPO_ECON = src('Sostegno economico vittime di violenza (Reddito e Microcredito di Libertà)', 'Dipartimento per le Pari Opportunità', 'https://www.pariopportunita.gov.it/it/politiche-e-attivita/violenza-di-genere/il-sostegno-economico-alle-vittime-della-violenza-di-genere/', 'Autonomia economica e lavorativa')
+const GIUSTIZIA_PEN = src('Patrocinio a spese dello Stato (deroga limiti per vittime di violenza)', 'Ministero della Giustizia', 'https://www.giustizia.it/giustizia/page/it/patrocinio_a_spese_dello_stato_nei_giudizi_penali', 'Assistenza legale gratuita ex art. 76 co. 4-ter DPR 115/2002')
+const CERT_AGID = src('CERT-AgID — Bollettini settimanali sicurezza Italia', 'CERT-AgID', 'https://cert-agid.gov.it/', 'Monitoraggio campagne phishing e malware')
 const N114 = src('Emergenza infanzia 114', 'Ministero per la famiglia', 'tel:114', 'Emergenza che coinvolge un minore')
-const GARANTE_RP = src('Revenge porn — Garante Privacy', 'Garante per la protezione dei dati personali', 'https://www.garanteprivacy.it/temi/internet-e-nuove-tecnologie/revenge-porn', 'Rimozione immagini intime non consensuali')
+const GARANTE_RP = src('Revenge porn — Garante Privacy', 'Garante per la protezione dei dati personali', 'https://www.garanteprivacy.it/temi/revengeporn', 'Rimozione immagini intime non consensuali')
 
 export const SOS_CASES: SosCase[] = [
     {
@@ -77,7 +82,7 @@ export const SOS_CASES: SosCase[] = [
         ],
         doNow: [
             'Dopo la messa in sicurezza, conserva messaggi, foto di lesioni e verbali.',
-            'Chiedi al 1522 orientamento su centri antiviolenza.',
+            'Chiedi al 1522 (voce o chat su 1522.eu) orientamento verso Centri Antiviolenza, Case Rifugio, Reddito di Libertà e patrocinio gratuito anche senza limiti di reddito.',
         ],
         doNot: [
             'Non aspettare che “passi”.',
@@ -85,11 +90,11 @@ export const SOS_CASES: SosCase[] = [
             'Non usare questa pagina al posto del 112 se sei in pericolo adesso.',
         ],
         saveEvidence: ['Messaggi e chiamate', 'Foto di lesioni (data visibile)', 'Testimoni e verbali'],
-        whoToContact: ['112', '1522 antiviolenza e stalking'],
+        whoToContact: ['112', '1522 antiviolenza e stalking (telefono e chat 1522.eu)', 'Centri Antiviolenza / Case Rifugio', 'App YouPol (Polizia di Stato)'],
         whenToCall112: 'Sempre in caso di violenza in corso, minaccia fisica o paura immediata per te o per i figli.',
         primaryAction: { label: 'Chiama 112', href: 'tel:112' },
         moduleLink: '/moduli/modulo-06-stalking-doxxing',
-        sources: [NUE, G1522],
+        sources: [NUE, G1522, G1522_WEB, G1522_MAP, DPO_ECON, GIUSTIZIA_PEN],
     },
     {
         id: 'minore-scomparso',
@@ -154,20 +159,20 @@ export const SOS_CASES: SosCase[] = [
             'Attiva blocchi su telefono, social e email.',
         ],
         doNow: [
-            'Per violenza di genere e stalking: 1522.',
-            'Per stalking digitale: segnala alla Polizia Postale.',
-            'Valuta con le forze dell’ordine ammonimento del Questore e denuncia.',
+            'Per violenza di genere e stalking: chiama il 1522 o apri la chat anonima su 1522.eu per trovare un Centro Antiviolenza.',
+            'Per stalking digitale: segnala alla Polizia Postale (anche tramite app YouPol).',
+            'Valuta con Questura o Carabinieri l’ammonimento del Questore (senza necessità di avvocato) e il patrocinio a spese dello Stato in deroga ai limiti di reddito.',
         ],
         doNot: [
             'Non incontrare chi ti perseguita per “chiarire”.',
             'Non cancellare i messaggi prima di copiarli.',
         ],
         saveEvidence: ['Screenshot datati', 'Registro chiamate', 'Testimoni di appostamenti', 'Regali o lettere'],
-        whoToContact: ['112 se pericolo', '1522', 'Polizia / Carabinieri', 'Polizia Postale'],
+        whoToContact: ['112 se pericolo', '1522 (voce e chat 1522.eu)', 'Polizia / Carabinieri (ammonimento)', 'Polizia Postale'],
         whenToCall112: 'Appostamenti, minacce, violenza, o se temi di essere raggiunto adesso.',
         primaryAction: { label: 'Chiama 112 se sei in pericolo', href: 'tel:112' },
         moduleLink: '/moduli/modulo-06-stalking-doxxing',
-        sources: [NUE, G1522, PS],
+        sources: [NUE, G1522, G1522_WEB, G1522_MAP, PS, GIUSTIZIA_PEN],
     },
     {
         id: 'cyberstalking',
@@ -186,11 +191,11 @@ export const SOS_CASES: SosCase[] = [
         ],
         doNot: ['Non minacciare a tua volta', 'Non pagare per “farla finita”'],
         saveEvidence: ['Thread completi', 'Username e URL', 'IP o header email se disponibili'],
-        whoToContact: ['112 se minaccia fisica', 'Polizia Postale', '1522 se contesto di violenza di genere'],
+        whoToContact: ['112 se minaccia fisica', 'Polizia Postale', '1522 (voce o chat 1522.eu) se violenza di genere'],
         whenToCall112: 'Quando le minacce riguardano violenza, domicilio, scuola, lavoro o familiari.',
         primaryAction: { label: 'Chiama 112 se c’è minaccia fisica', href: 'tel:112' },
         moduleLink: '/moduli/modulo-06b-stalking-doxxing',
-        sources: [NUE, PS, G1522],
+        sources: [NUE, PS, G1522, G1522_WEB],
     },
     {
         id: 'doxxing',
@@ -213,7 +218,7 @@ export const SOS_CASES: SosCase[] = [
         whenToCall112: 'Se i dati vengono usati per raggiungerti, minacciarti o presentarsi di persona.',
         primaryAction: { label: 'Chiama 112 se ti stanno cercando', href: 'tel:112' },
         moduleLink: '/moduli/modulo-06b-stalking-doxxing',
-        sources: [NUE, PS, src('Modulistica Garante', 'Garante Privacy', 'https://www.garanteprivacy.it/home/modulistica', 'Reclamo o segnalazione')],
+        sources: [NUE, PS, src('Modulistica Garante Privacy', 'Garante Privacy', 'https://www.garanteprivacy.it/home/modulistica-e-servizi-online', 'Reclamo o segnalazione')],
     },
     {
         id: 'sextortion-adulti',
@@ -307,28 +312,30 @@ export const SOS_CASES: SosCase[] = [
     },
     {
         id: 'identita-digitale',
-        title: 'Furto d’identità / abuso SPID o CIE',
+        title: 'Furto d’identità / abuso SPID o CIE (e falso login)',
         kind: 'digital',
-        summary: 'Qualcuno ha usato le tue credenziali per accedere a servizi pubblici o aprire pratiche.',
+        summary: 'Qualcuno ha usato le tue credenziali SPID o CIE (es. su falso portale fiscale livello 2) per accedere a servizi pubblici o aprire pratiche.',
         first10Min: [
             'Se ti hanno truffato di persona o ti minacciano: 112.',
-            'Cambia password SPID dal provider. Revoca sessioni.',
-            'Contatta il provider SPID / supporto CIE.',
+            'Cambia subito password SPID dal provider o password CIE nell’app/portale CieID ufficiale. Revoca le sessioni attive.',
+            'Contatta il provider SPID / supporto CIE e controlla le segnalazioni su agenziaentrate.gov.it e cert-agid.gov.it.',
         ],
         doNow: [
-            'Controlla cassetto fiscale, INPS e app IO per pratiche non tue.',
-            'Denuncia alla Polizia Postale.',
-            'Avvisa la banca se c’è rischio di pagamenti.',
+            'Controlla Cassetto Fiscale, MyINPS, portale InfoCamere e App IO per deleghe, IBAN o pratiche non tue.',
+            'Se hai eseguito un comando dal browser (tecnica ClickFix) o installato un file .apk esterno (es. finta App IO Mirax), metti offline il dispositivo e fai una bonifica.',
+            'Denuncia alla Polizia Postale e avvisa la banca se hai inserito carte o IBAN.',
         ],
-        doNot: ['Non condividere PIN/PUK CIE', 'Non ripetere l’OTP al telefono'],
-        saveEvidence: ['Email di accesso', 'Pratiche sospette', 'Orari di login'],
-        whoToContact: ['112 se truffa di persona', 'Provider SPID', 'Polizia Postale', 'AgID helpdesk'],
+        doNot: ['Non condividere PIN/PUK CIE', 'Non ripetere l’OTP al telefono', 'Non autenticarti CIE fuori da entrata.cie.interno.gov.it'],
+        saveEvidence: ['Email/SMS di accesso', 'URL della finta schermata CIE', 'Pratiche sospette e orari di login'],
+        whoToContact: ['112 se truffa di persona', 'Provider SPID / Supporto CIE', 'Polizia Postale', 'CERT-AgID / AgID helpdesk'],
         whenToCall112: 'Truffa di persona, minacce, o danni in corso che richiedono intervento immediato.',
         primaryAction: { label: 'Chiama 112 se c’è un reato in corso di persona', href: 'tel:112' },
         moduleLink: '/moduli/modulo-09-documenti-identita',
         sources: [
             NUE,
             PS,
+            CERT_AGID,
+            src('Agenzia delle Entrate — Avviso phishing falso accesso CIE (27 nov 2026)', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/avviso-del-27-novembre', 'Verifica frode login CIE livello 2'),
             src('SPID HelpDesk', 'AgID', 'https://helpdesk.spid.gov.it/', 'Assistenza identità digitale'),
         ],
     },
@@ -379,7 +386,7 @@ export const SOS_CASES: SosCase[] = [
         sources: [
             NUE,
             PS,
-            src('Consigli CERTFin / sicurezza pagamenti', 'CERTFin / Banca d’Italia', 'https://www.certfin.it/cittadini/', 'Sicurezza pagamenti'),
+            src('CERTFin — Sicurezza pagamenti e prevenzione frodi', 'CERTFin / Banca d’Italia', 'https://www.certfin.it/', 'Sicurezza pagamenti'),
         ],
     },
     {
@@ -425,7 +432,7 @@ export const SOS_CASES: SosCase[] = [
         sources: [
             NUE,
             PS,
-            src('Truffe CONSOB', 'CONSOB', 'https://www.consob.it/web/area-pubblica/truffe', 'Truffe finanziarie'),
+            src('Occhio alle truffe CONSOB', 'CONSOB', 'https://www.consob.it/web/area-pubblica/occhio-alle-truffe', 'Truffe finanziarie'),
         ],
     },
     {
@@ -452,7 +459,8 @@ export const SOS_CASES: SosCase[] = [
         sources: [
             NUE,
             G1522,
-            src('Richiesta intervento ispettivo', 'Ispettorato Nazionale del Lavoro', 'https://www.ispettorato.gov.it/it-it/strumenti-e-servizi/Pagine/Richiesta-di-intervento-ispettivo.aspx', 'Tutele sul lavoro'),
+            G1522_WEB,
+            src('Richiesta intervento ispettivo', 'Ispettorato Nazionale del Lavoro', 'https://www.ispettorato.gov.it/servizio/richiesta-di-intervento-ispettivo/', 'Tutele sul lavoro'),
         ],
     },
 ]

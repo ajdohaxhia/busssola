@@ -101,7 +101,7 @@ export default function Pensioni2027Page() {
             name: 'Busssola',
         },
         datePublished: '2026-11-03',
-        dateModified: '2026-11-25',
+        dateModified: '2026-11-27',
     }
 
     const faqSchema = {

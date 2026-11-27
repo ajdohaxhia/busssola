@@ -239,7 +239,7 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     id: 'inlRichiestaIntervento',
     name: "Ispettorato Nazionale del Lavoro - Richiesta intervento",
     ente: "Ispettorato Nazionale del Lavoro",
-    url: "https://www.ispettorato.gov.it/it-it/strumenti-e-servizi/Pagine/Richiesta-di-intervento-ispettivo.aspx",
+    url: "https://www.ispettorato.gov.it/servizio/richiesta-di-intervento-ispettivo/",
     category: "lavoro",
     type: "servizio ufficiale"
   },
@@ -637,9 +637,9 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
   },
   certfinHome: {
     id: 'certfinHome',
-    name: "CERTFin - Per i cittadini",
+    name: "CERTFin - Sicurezza finanziaria e prevenzione frodi",
     ente: "ABI / Banca d'Italia",
-    url: "https://www.certfin.it/cittadini/",
+    url: "https://www.certfin.it/",
     category: "sicurezza",
     type: "supporto tecnico"
   },
@@ -1555,9 +1555,9 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
   },
   poliziaPostaleQuishing2026: {
     id: 'poliziaPostaleQuishing2026',
-    name: "Polizia di Stato - Polizia Postale — Allarme Quishing e truffe tramite QR Code contraffatti",
+    name: "Polizia di Stato - Polizia Postale — Allerte su Quishing e QR Code contraffatti",
     ente: "Polizia Postale",
-    url: "https://www.commissariatodips.it/notizie/articolo/quishing-attenzione-ai-qr-code-contraffatti-su-parcometri-e-multe/index.html",
+    url: "https://www.commissariatodips.it/notizie/index.html",
     category: "sicurezza",
     type: "ente istituzionale"
   },
@@ -1944,5 +1944,189 @@ export const OFFICIAL_SOURCES: Record<string, OfficialSource> = {
     url: "https://www.salute.gov.it/new/it/campagna-di-comunicazione/campagna-di-comunicazione-2026-2027-la-vaccinazione-contro-linfluenza/",
     category: "sanita",
     type: "ente istituzionale"
+  },
+  antiviolenza1522Portale: {
+    id: 'antiviolenza1522Portale',
+    name: "1522 — Portale ufficiale e chat anonima h24 antiviolenza e stalking",
+    ente: "Dipartimento per le Pari Opportunità",
+    url: "https://www.1522.eu/",
+    category: "emergenze",
+    type: "assistenza ufficiale"
+  },
+  antiviolenza1522Servizio: {
+    id: 'antiviolenza1522Servizio',
+    name: "1522 — Il servizio gratuito multilingua, chat e orientamento socio-sanitario",
+    ente: "Dipartimento per le Pari Opportunità",
+    url: "https://www.1522.eu/1522/il-servizio.html",
+    category: "emergenze",
+    type: "assistenza ufficiale"
+  },
+  antiviolenza1522Mappa: {
+    id: 'antiviolenza1522Mappa',
+    name: "1522 — Mappatura ufficiale dei Centri Antiviolenza e delle Case Rifugio",
+    ente: "Dipartimento per le Pari Opportunità",
+    url: "https://www.1522.eu/centri-antiviolenza/mappa.html",
+    category: "emergenze",
+    type: "servizio ufficiale"
+  },
+  dpoAntiviolenza1522: {
+    id: 'dpoAntiviolenza1522',
+    name: "Dipartimento per le Pari Opportunità — Scheda istituzionale 1522, cartelli multilingua e relazioni",
+    ente: "Presidenza del Consiglio dei Ministri — DPO",
+    url: "https://www.pariopportunita.gov.it/it/numeri-utili/1522-numero-antiviolenza-e-antistalking/",
+    category: "emergenze",
+    type: "ente istituzionale"
+  },
+  dpoSostegnoEconomicoViolenza: {
+    id: 'dpoSostegnoEconomicoViolenza',
+    name: "DPO — Il sostegno economico alle vittime di violenza: Reddito di Libertà e Microcredito di Libertà",
+    ente: "Presidenza del Consiglio dei Ministri — DPO",
+    url: "https://www.pariopportunita.gov.it/it/politiche-e-attivita/violenza-di-genere/il-sostegno-economico-alle-vittime-della-violenza-di-genere/",
+    category: "bonus",
+    type: "ente istituzionale"
+  },
+  dpoProtocolloAbiViolenzaEconomica: {
+    id: 'dpoProtocolloAbiViolenzaEconomica',
+    name: "DPO e ABI — Protocollo d'intesa per il contrasto alla violenza economica e autonomia finanziaria",
+    ente: "Dipartimento per le Pari Opportunità / ABI",
+    url: "https://www.pariopportunita.gov.it/it/news-e-media/news/2026/protocollo-d-intesa-tra-il-dipartimento-per-le-pari-opportunita-della-presidenza-del-consiglio-dei-ministri-e-l-associazione-bancaria-italiana-per-la-prevenzione-e-il-contrasto-alla-violenza-nei-confronti-delle-donne-anche-economica/",
+    category: "soldi",
+    type: "ente istituzionale"
+  },
+  microcreditoDiLiberta: {
+    id: 'microcreditoDiLiberta',
+    name: "Microcredito di Libertà — Fondo nazionale per autonomia lavorativa e sociale delle donne",
+    ente: "Ente Nazionale per il Microcredito / DPO",
+    url: "https://microcredito.gov.it/mdl/",
+    category: "bonus",
+    type: "servizio ufficiale"
+  },
+  direCentriAntiviolenza: {
+    id: 'direCentriAntiviolenza',
+    name: "D.i.Re — Donne in Rete Contro la Violenza: elenco Centri Antiviolenza",
+    ente: "Associazione D.i.Re",
+    url: "https://www.direcontrolaviolenza.it/i-centri-antiviolenza/",
+    category: "emergenze",
+    type: "assistenza ufficiale"
+  },
+  internoQuestoNonEAmore2026: {
+    id: 'internoQuestoNonEAmore2026',
+    name: "Polizia di Stato / Ministero dell'Interno — Campagna «...questo NON è AMORE», opuscolo 2026, ammonimento e YouPol",
+    ente: "Ministero dell'Interno / Polizia di Stato",
+    url: "https://www.interno.gov.it/it/notizie/violenza-contro-donne-limpegno-polizia-stato-campagna-questo-non-e-amore",
+    category: "emergenze",
+    type: "ente istituzionale"
+  },
+  giustiziaPatrocinioPenale: {
+    id: 'giustiziaPatrocinioPenale',
+    name: "Ministero della Giustizia — Patrocinio a spese dello Stato nei giudizi penali (deroga limiti per vittime)",
+    ente: "Ministero della Giustizia",
+    url: "https://www.giustizia.it/giustizia/page/it/patrocinio_a_spese_dello_stato_nei_giudizi_penali",
+    category: "giustizia",
+    type: "servizio ufficiale"
+  },
+  adeAvvisoPhishingCie2026: {
+    id: 'adeAvvisoPhishingCie2026',
+    name: "Agenzia delle Entrate — Avviso del 27 novembre 2026: phishing tramite falso accesso CIE livello 2",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/avviso-del-27-novembre",
+    category: "sicurezza",
+    type: "ente istituzionale"
+  },
+  adeAvvisoPhishingIrpef2026: {
+    id: 'adeAvvisoPhishingIrpef2026',
+    name: "Agenzia delle Entrate — Avviso del 26 novembre 2026: false richieste di rimborso IRPEF e furto carte",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/avviso-del-26-novembre-2026",
+    category: "sicurezza",
+    type: "ente istituzionale"
+  },
+  adeFocusPhishingElenco: {
+    id: 'adeFocusPhishingElenco',
+    name: "Agenzia delle Entrate — Focus sul phishing: elenco completo segnalazioni e approfondimenti",
+    ente: "Agenzia delle Entrate",
+    url: "https://www.agenziaentrate.gov.it/portale/focus-sul-phishing/segnalazioni-e-approfondimenti",
+    category: "sicurezza",
+    type: "ente istituzionale"
+  },
+  certAgidPhishingCie2026: {
+    id: 'certAgidPhishingCie2026',
+    name: "CERT-AgID — L'identità digitale CIE nel mirino con phishing interattivo e pannello Telegram",
+    ente: "CERT-AgID",
+    url: "https://cert-agid.gov.it/news/lidentita-digitale-cie-nel-mirino-dei-criminali-con-phishing-interattivo/",
+    category: "sicurezza",
+    type: "ente istituzionale"
+  },
+  certAgidClickFixOlympic2026: {
+    id: 'certAgidClickFixOlympic2026',
+    name: "CERT-AgID — Tecnica ClickFix su falsa verifica Cloudflare e nuovo RAT Olympic 0.1.0",
+    ente: "CERT-AgID",
+    url: "https://cert-agid.gov.it/news/clickfix-falsa-verifica-cloudflare-su-un-portale-scolastico-diffonde-nuovo-rat-olympic-0-1-0/",
+    category: "sicurezza",
+    type: "ente istituzionale"
+  },
+  certAgidPhishingInfoCamere2026: {
+    id: 'certAgidPhishingInfoCamere2026',
+    name: "CERT-AgID — Campagna di phishing InfoCamere volta al furto di credenziali camerali",
+    ente: "CERT-AgID",
+    url: "https://cert-agid.gov.it/news/phishing-infocamere-volto-al-furto-di-credenziali/",
+    category: "sicurezza",
+    type: "ente istituzionale"
+  },
+  certAgidSintesiNov2127: {
+    id: 'certAgidSintesiNov2127',
+    name: "CERT-AgID — Sintesi riepilogativa campagne malevole 21-27 novembre 2026 (129 campagne)",
+    ente: "CERT-AgID",
+    url: "https://cert-agid.gov.it/news/sintesi-riepilogativa-delle-campagne-malevole-nella-settimana-del-21-27-novembre/",
+    category: "sicurezza",
+    type: "ente istituzionale"
+  },
+  fiscoOggiRottamazioni30Nov2026: {
+    id: 'fiscoOggiRottamazioni30Nov2026',
+    name: "FiscoOggi / AdE — Rottamazioni: scadenza 30 novembre 2026 per quinquies, quater e riammessi",
+    ente: "Agenzia delle Entrate — FiscoOggi",
+    url: "https://www.fiscooggi.it/portale/-/rottamazioni-scadenza-al-30-novembre-per-quinquies-quater-e-riammessi",
+    category: "soldi",
+    type: "ente istituzionale"
+  },
+  aderProssimeScadenze2026: {
+    id: 'aderProssimeScadenze2026',
+    name: "Agenzia delle Entrate-Riscossione — Prossime scadenze definizione agevolata 2026",
+    ente: "Agenzia delle Entrate-Riscossione",
+    url: "https://www.agenziaentrateriscossione.gov.it/it/prossime-scadenze/#y=2026",
+    category: "soldi",
+    type: "servizio ufficiale"
+  },
+  inpsMessaggio3900Ricongiunzione2026: {
+    id: 'inpsMessaggio3900Ricongiunzione2026',
+    name: "INPS — Messaggio n. 3900 del 26 novembre 2026: ricongiunzione Gestione Separata e Casse private",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.messaggi.2026.11.messaggio-numero-3900-del-26-11-2026.html",
+    category: "lavoro",
+    type: "servizio ufficiale"
+  },
+  inpsMessaggio3801Send2026: {
+    id: 'inpsMessaggio3801Send2026',
+    name: "INPS — Messaggio n. 3801 del 19 novembre 2026: estensione notifiche digitali SEND agli indebiti",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.messaggi.2026.11.messaggio-numero-3801-del-19-11-2026.html",
+    category: "lavoro",
+    type: "servizio ufficiale"
+  },
+  inpsPiattaformaSend: {
+    id: 'inpsPiattaformaSend',
+    name: "INPS — Notifiche INPS sulla Piattaforma SEND e punti fisici RADD",
+    ente: "INPS",
+    url: "https://www.inps.it/it/it/inps-comunica/inps--inclusione-e-innovazione/trasformazione-digitale-e-innovazione-tecnologica/notifiche-inps-sulla-piattaforma-send.html",
+    category: "lavoro",
+    type: "servizio ufficiale"
+  },
+  sendNotificheDigitali: {
+    id: 'sendNotificheDigitali',
+    name: "SEND — Servizio Notifiche Digitali della Pubblica Amministrazione",
+    ente: "PagoPA S.p.A. / Dipartimento Trasformazione Digitale",
+    url: "https://notifichedigitali.it/",
+    category: "identita-digitale",
+    type: "servizio ufficiale"
   }
 };

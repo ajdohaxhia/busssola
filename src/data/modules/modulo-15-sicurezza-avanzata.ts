@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_15_sicurezza_avanzata: Module = {
     id: 'modulo-15-sicurezza-avanzata',
-    lastUpdated: '2026-05-16',
+    lastUpdated: '2026-11-27',
     title: 'Sicurezza Digitale Avanzata',
     description: 'Tecniche e strumenti avanzati per la protezione dei dati personali, della privacy online e dell\'identità digitale.',
     category: 'sicurezza',
@@ -409,7 +409,7 @@ export const modulo_15_sicurezza_avanzata: Module = {
                 'Reset effettuato (se necessario)',
                 'Password account principali cambiate'
             ],
-            officialLinks: ['https://stopstalkerware.org/it/'],
+            officialLinks: ['https://stopstalkerware.org/', 'https://www.1522.eu/'],
             sources: [
                 {
                     title: 'Guida contro lo Stalkerware',

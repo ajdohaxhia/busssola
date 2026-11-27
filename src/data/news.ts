@@ -2,7 +2,7 @@ import type { NewsItem, Source } from '@/types'
 
 const D = '2026-10-16'
 const CHECKED = '2026-11-08'
-const TODAY = '2026-11-25'
+const TODAY = '2026-11-27'
 
 const src = (title: string, organization: string, url: string, usedFor = 'Allerta e sicurezza 2026', checkedAt = D): Source => ({
     title,
@@ -14,221 +14,181 @@ const src = (title: string, organization: string, url: string, usedFor = 'Allert
 })
 
 export const CIVIC_NEWS: NewsItem[] = [
-    // ── Auto-imported 2026-11-27 ──────────────────────────
     {
-        slug: 'agenzia-delle-entrate-riapre-la-rottamazione-delle-cartelle-anche-se-sei-stato-e',
-        title: 'Agenzia delle Entrate, riapre la rottamazione delle cartelle anche se sei stato escluso per rate saltate: nuova proposta',
+        slug: 'allerta-phishing-cie-rimborsi-irpef-agenzia-entrate-cert-agid-novembre-2026',
+        title: 'Allerta sicurezza CIE e finti rimborsi IRPEF: doppio avviso di Agenzia delle Entrate e CERT-AgID sul phishing interattivo',
         date: '2026-11-27',
-        summary: 'Agenzia delle Entrate, riapre la rottamazione delle cartelle anche se sei stato escluso per rate saltate: nuova proposta. Fonte: Brocardi.it.',
+        summary: 'Avvisi urgenti del 26 e 27 novembre 2026: individuato un falso portale di autenticazione CIE livello 2 a nome dell’Agenzia delle Entrate dotato di pannello di controllo in tempo reale su Telegram per rubare numero carta e password, affiancato da SMS ed email su falsi rimborsi IRPEF mirati a sottrarre carte di pagamento e CVV.',
         body: [
-            'Agenzia delle Entrate, riapre la rottamazione delle cartelle anche se sei stato escluso per rate saltate: nuova proposta.',
+            'Tra il 26 e il 27 novembre 2026, l’Agenzia delle Entrate e il CERT-AgID hanno diffuso due allarmi ravvicinati su campagne di phishing ad alto rischio che sfruttano l’identità visiva dell’Amministrazione Finanziaria, del Ministero dell’Interno e della Carta d’Identità Elettronica (CIE).',
+            'Nel caso segnalato con l’Avviso del 27 novembre 2026 (approfondito dal bollettino tecnico CERT-AgID del 26 novembre), i criminali ospitano su domini compromessi una pagina che riproduce fedelmente il login CIE di livello 2. La vittima viene indotta a inserire numero di documento CIE, codice fiscale o email e password. Secondo l’analisi CERT-AgID, gli attaccanti dispongono di un pannello interattivo collegato a Telegram per gestire la sessione dal vivo, simulare errori e chiedere ulteriori verifiche via SMS, email o app.',
+            'Parallelamente, con l’Avviso del 26 novembre 2026, l’Agenzia segnala una campagna parallela veicolata via email, SMS e messaggistica che promette falsi rimborsi IRPEF «in attesa di accredito» con numeri di protocollo inventati: dopo l’inserimento del codice fiscale, la pagina fraudolenta chiede i dati completi della carta di pagamento incluso il codice di sicurezza CVV.',
+            'L’Agenzia delle Entrate ribadisce che i rimborsi fiscali vengono accreditati esclusivamente sull’IBAN comunicato tramite l’area riservata o il Modello 730/Redditi, senza mai richiedere numeri di carta o CVV, e ricorda che gli accessi ai servizi istituzionali avvengono soltanto verificando il dominio ufficiale agenziaentrate.gov.it e il flusso autentico dell’app CieID.',
         ],
         whatChanged: [
-            'Agenzia delle Entrate, riapre la rottamazione delle cartelle anche se sei stato escluso per rate saltate: nuova proposta',
+            'Avviso Agenzia delle Entrate 27 novembre 2026 e analisi CERT-AgID su phishing interattivo CIE livello 2 con pannello Telegram',
+            'Avviso Agenzia delle Entrate 26 novembre 2026 su email/SMS per falsi rimborsi IRPEF con furto numero carta e CVV',
+            'Abuso combinato dei loghi Agenzia delle Entrate, Ministero dell’Interno e Carta d’Identità Elettronica su domini compromessi',
         ],
-        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whoIsAffected: 'Tutti i cittadini dotati di Carta d’Identità Elettronica (CIE), contribuenti in attesa di rimborsi fiscali e titolari di carte di pagamento.',
         whatToDo: [
-            'Consulta la fonte ufficiale per i dettagli completi',
+            'Accedi ai portali fiscali solo digitando manualmente agenziaentrate.gov.it nel browser: non inserire credenziali CIE o codice fiscale partendo da link in email o SMS',
+            'Durante il login CIE livello 2 verifica sempre il dominio ufficiale entrata.cie.interno.gov.it e controlla le notifiche push dentro l’app CieID ufficiale',
+            'Diffida di qualsiasi schermata che chieda numero di carta, data di scadenza o CVV per ricevere un rimborso IRPEF',
+            'Se hai inserito le credenziali CIE o i dati della carta, cambia subito la password della tua identità digitale CIE, blocca la carta con la tua banca e segnala l’episodio su commissariatodips.it',
         ],
-        sourceIds: [],
+        sourceIds: ['adeAvvisoPhishingCie2026', 'certAgidPhishingCie2026', 'adeAvvisoPhishingIrpef2026', 'adeFocusPhishingElenco'],
         sources: [
-            src('Agenzia delle Entrate, riapre la rottamazione delle cartelle anche se sei stato escluso per rate saltate: nuova proposta - Brocardi.it', 'Brocardi.it', 'https://news.google.com/rss/articles/CBMivgFBVV95cUxQYTJuSjdhY2VBY0pueFRXWFNwaF8ybnB2ME1xT2RkOFFqY2xCVXFSX0Z4MGdjOHhFOFBhQXFVcFBVcWQ4ZDZSVDhDS3lXd3NORHRGdUNVTkZ6UHRIQnVDb0FwYWhKN25yZ1VXWXdBQ1pzaXVFazhHSnJLOWZ2QTdVelBCTVl5bk50bmQ0RzVZc1hRY0wxSHVraTVzZFUtRkIzUDd4MEM3Sy1QR2paRm84bldmcExRcmRRbXR2c2p3?oc=5', 'Agenzia delle Entrate, riapre la rottamazione delle cartelle anche se sei stato escluso per rate saltate: nuova proposta - Brocardi.it', '2026-11-27'),
+            src('Agenzia delle Entrate — Avviso del 27 novembre 2026: campagna di phishing tramite falso accesso CIE', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/avviso-del-27-novembre', 'Dettaglio frode login CIE e misure di tutela', TODAY),
+            src('CERT-AgID — L’identità digitale CIE nel mirino con phishing interattivo', 'CERT-AgID', 'https://cert-agid.gov.it/news/lidentita-digitale-cie-nel-mirino-dei-criminali-con-phishing-interattivo/', 'Analisi tecnica pannello phishing CIE', TODAY),
+            src('Agenzia delle Entrate — Avviso del 26 novembre 2026: false richieste di rimborso IRPEF', 'Agenzia delle Entrate', 'https://www.agenziaentrate.gov.it/portale/avviso-del-26-novembre-2026', 'Schema truffa rimborsi e furto carte/CVV', TODAY),
         ],
-        relatedGuides: ['/moduli/modulo-25-fisco-cittadini', '/moduli/modulo-29-partita-iva-forfettario'],
-        relatedTemplates: [],
-        lastReviewedAt: '2026-11-27',
+        relatedGuides: ['/confronti/truffe-come-riconoscerle', '/moduli/modulo-03-truffe-phishing', '/sos'],
+        relatedTemplates: ['segnalazione-truffa-polizia-postale', 'disconoscimento-operazioni-bancarie-frode'],
+        lastReviewedAt: TODAY,
     },
     {
-        slug: 'ministero-istruzione-e-merito-buono-scuola-nazionale-cdo-opere-educative-foe-202',
-        title: 'MINISTERO ISTRUZIONE E MERITO: Buono Scuola nazionale',
+        slug: 'allerta-cert-agid-clickfix-cloudflare-infocamere-campagne-novembre-2026',
+        title: 'Bollettino CERT-AgID 21-27 novembre: 129 campagne in Italia, attacchi «ClickFix» con falsi CAPTCHA su siti scolastici e phishing InfoCamere',
+        date: '2026-11-27',
+        summary: 'Il riepilogo settimanale CERT-AgID del 27 novembre 2026 segnala 129 campagne malevole analizzate (101 mirate all’Italia), guidate da falsi rinnovi, banche, multe PagoPA/SEND e nuove minacce come la tecnica «ClickFix» su falsi CAPTCHA Cloudflare (trojan RAT Olympic) e il phishing InfoCamere.',
+        body: [
+            'Nel bollettino riepilogativo della settimana 21–27 novembre 2026, il CERT-AgID ha censito 129 campagne malevole (101 specificamente costruite contro utenti e servizi italiani), distribuendo agli enti accreditati 884 indicatori di compromissione (IoC). Tra i temi più sfruttati emergono falsi rinnovi di domini/servizi (17 campagne), istituti bancari (16), pagamenti/Tessera Sanitaria (13), documenti (13), false vincite/premi (12) e finte multe PagoPA o notifiche SEND (11).',
+            'Una specifica allerta pubblicata il 27 novembre 2026 mette in guardia dalla tecnica di ingegneria sociale «ClickFix», individuata anche su un sottodominio riconducibile a un istituto scolastico italiano: la pagina imita un controllo di verifica Cloudflare (“To better prove you are not a robot”) e invita l’utente a premere Windows+X, aprire PowerShell e incollare un comando dalla clipboard (`CTRL+V`). L’esecuzione avvia il download del nuovo trojan ad accesso remoto Windows denominato «Olympic 0.1.0».',
+            'Parallelamente, dal 24 novembre il CERT-AgID contrasta una campagna di phishing contro imprese, professionisti e PA che replica la pagina di autenticazione di InfoCamere (Camere di Commercio): i pulsanti SPID, CIE e CNS risultano puramente decorativi per costringere l’utente a inserire codice utente e password aziendali.',
+            'Le autorità raccomandano di non eseguire mai comandi copiati dal browser nel terminale o in PowerShell per superare presunte verifiche CAPTCHA, e di controllare sempre il dominio autentico dei portali camerali prima di autenticarsi.',
+        ],
+        whatChanged: [
+            'Bollettino CERT-AgID 21–27 novembre 2026: 129 campagne malevole rilevate (temi Rinnovo, Banking, PagoPA, SEND)',
+            'Allerta ClickFix 27 novembre 2026: finti CAPTCHA Cloudflare su portale scolastico per far incollare comandi PowerShell (RAT Olympic)',
+            'Allerta phishing InfoCamere: falsa maschera con bottoni SPID/CIE disabilitati per carpire username e password camerali',
+        ],
+        whoIsAffected: 'Utenti Windows (anche studenti, famiglie e personale scolastico), imprese, professionisti, commercialisti e utenti dei portali delle Camere di Commercio.',
+        whatToDo: [
+            'Se un popup CAPTCHA o “verifica Cloudflare” ti chiede di premere `Windows+X`, aprire PowerShell/Terminale e incollare un comando con `CTRL+V`, chiudi subito la scheda: nessuna verifica legittima richiede l’uso del terminale',
+            'Per accedere ai servizi delle Camere di Commercio (InfoCamere / Registro Imprese) digita direttamente gli indirizzi ufficiali e utilizza preferibilmente CIE o SPID',
+            'Controlla le notifiche di multe o atti pubblici esclusivamente dentro l’app IO o su `notifichedigitali.it` (SEND), mai da link SMS o email',
+            'Consulta la Matrice Truffe su Busssola e i bollettini su cert-agid.gov.it per riconoscere gli schemi più diffusi',
+        ],
+        sourceIds: ['certAgidSintesiNov2127', 'certAgidClickFixOlympic2026', 'certAgidPhishingInfoCamere2026', 'sendNotificheDigitali'],
+        sources: [
+            src('CERT-AgID — Sintesi campagne malevole settimana 21-27 novembre 2026', 'CERT-AgID', 'https://cert-agid.gov.it/news/sintesi-riepilogativa-delle-campagne-malevole-nella-settimana-del-21-27-novembre/', 'Statistiche settimanali e temi più usati', TODAY),
+            src('CERT-AgID — ClickFix su portale scolastico diffonde RAT Olympic 0.1.0', 'CERT-AgID', 'https://cert-agid.gov.it/news/clickfix-falsa-verifica-cloudflare-su-un-portale-scolastico-diffonde-nuovo-rat-olympic-0-1-0/', 'Dinamica finti CAPTCHA PowerShell', TODAY),
+            src('CERT-AgID — Phishing InfoCamere per furto credenziali', 'CERT-AgID', 'https://cert-agid.gov.it/news/phishing-infocamere-volto-al-furto-di-credenziali/', 'Difesa credenziali camerali', TODAY),
+        ],
+        relatedGuides: ['/confronti/truffe-come-riconoscerle', '/moduli/modulo-03-truffe-phishing', '/moduli/modulo-37-impresa-camerale', '/sos'],
+        relatedTemplates: ['segnalazione-truffa-polizia-postale'],
+        lastReviewedAt: TODAY,
+    },
+    {
+        slug: 'scadenza-30-novembre-2026-rottamazione-quinquies-quater-riammessi-ader',
+        title: 'Cartelle al 30 novembre 2026: scadono le rate di Rottamazione-quinquies (3ª), Quater (14ª) e riammessi (6ª), ecco le regole di tolleranza',
         date: '2026-11-26',
-        summary: 'MINISTERO ISTRUZIONE E MERITO: Buono Scuola nazionale. Fonte: CdO Opere Educative – FOE.',
+        summary: 'L’Agenzia delle Entrate (FiscoOggi, 26 novembre 2026) riepiloga le tre scadenze del 30 novembre sulle definizioni agevolate AdER: 3ª rata della Rottamazione-quinquies, 14ª rata della Rottamazione-quater e 6ª rata dei piani riammessi (L. 15/2025). Attenzione alle diverse regole di tolleranza e decadenza.',
         body: [
-            'MINISTERO ISTRUZIONE E MERITO: Buono Scuola nazionale.',
+            'Lunedì 30 novembre 2026 concentra in un’unica giornata i pagamenti di tre distinti piani di definizione agevolata gestiti dall’Agenzia delle entrate-Riscossione (AdER): la 3ª rata della Rottamazione-quinquies (introdotta dalla Legge di Bilancio 2026), la 14ª rata della Rottamazione-quater (Legge n. 197/2022) e la 6ª rata per i contribuenti riammessi alla Quater ai sensi della Legge n. 15/2025.',
+            'I moduli PagoPA possono essere recuperati istantaneamente nell’area riservata del sito `agenziaentrateriscossione.gov.it` (accesso con SPID, CIE o CNS) oppure richiesti via email dall’area pubblica allegando un documento d’identità senza necessità di credenziali. Il versamento può avvenire online sul sito AdER, tramite App Equiclick, home banking, Poste, banche, ATM abilitati, tabaccherie o sportelli AdER previo appuntamento.',
+            'Occorre però prestare la massima attenzione alle differenze normative sulla decadenza richiamate dall’Amministrazione Finanziaria: per la Rottamazione-quater e per i piani di riammissione restano applicabili i 5 giorni di tolleranza di legge (considerando tempestivo il pagamento fino al termine prorogato di lunedì 7 dicembre 2026, stante la coincidenza del 5 dicembre con il sabato).',
+            'Per la Rottamazione-quinquies, invece, la normativa di riferimento prevede regole di decadenza più stringenti sulle rate intermedie (senza il meccanismo automatico dei 5 giorni ordinari su ciascuna rata, salvo quanto previsto per specifici casi e sull’ultima rata). È quindi consigliabile completare i versamenti entro e non oltre lunedì 30 novembre 2026 senza fare affidamento su eventuali emendamenti parlamentari ancora in discussione.',
         ],
         whatChanged: [
-            'MINISTERO ISTRUZIONE E MERITO: Buono Scuola nazionale',
+            'Scadenza 30 novembre 2026 confermata per 3ª rata Rottamazione-quinquies, 14ª rata Rottamazione-quater e 6ª rata riammessi L. 15/2025',
+            'I 5 giorni di tolleranza (pagamento valido entro lunedì 7 dicembre 2026) coprono Quater e piani di riammissione',
+            'Attivi tutti i canali di recupero moduli online (anche dall’area pubblica senza SPID) e pagamento tramite PagoPA / App Equiclick',
         ],
-        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whoIsAffected: 'Tutti i contribuenti con un piano attivo di Rottamazione-quater, riammissione Quater (L. 15/2025) o Rottamazione-quinquies.',
         whatToDo: [
-            'Consulta la fonte ufficiale per i dettagli completi',
+            'Controlla il tuo piano nell’area riservata AdER e scarica subito il modulo PagoPA corretto per la rata del 30 novembre 2026',
+            'Se appartieni alla Rottamazione-quinquies effettua il pagamento tassativamente entro il 30 novembre 2026; per Quater e riammessi il termine di tolleranza cade al 7 dicembre 2026',
+            'In caso di smarrimento dei bollettini e assenza di SPID/CIE, richiedi la copia via email tramite l’area pubblica di agenziaentrateriscossione.gov.it allegando il documento d’identità',
+            'Non sospendere alcun pagamento in attesa di eventuali proposte di riapertura o modifiche normative ancora non convertite in legge',
         ],
-        sourceIds: [],
+        sourceIds: ['fiscoOggiRottamazioni30Nov2026', 'aderProssimeScadenze2026', 'aderRottamazioneQuaterSestaRata2026'],
         sources: [
-            src('MINISTERO ISTRUZIONE E MERITO: Buono Scuola nazionale - CdO Opere Educative – FOE', 'CdO Opere Educative – FOE', 'https://news.google.com/rss/articles/CBMijwFBVV95cUxPb1l5YUg3dVA2WmtHNWpxSTQ5YTc1enNTYy1qZDN4ak1WQnpHMGFRQTNMODJXRmljaXBvWnVXNlp2TVJxcy1oT2FJTWpKaHYycXJoa21GdFNNVGF5eXlMOGh1WmV2YTIwYUpYM1lsTjROTVRMN0E0VDBEVmUxMDZJS2Npd0djd1h6cFZtOS1aaw?oc=5', 'MINISTERO ISTRUZIONE E MERITO: Buono Scuola nazionale - CdO Opere Educative – FOE', '2026-11-26'),
+            src('Agenzia delle Entrate — FiscoOggi: Rottamazioni, scadenza al 30 novembre per quinquies, quater e riammessi', 'Agenzia delle Entrate', 'https://www.fiscooggi.it/portale/-/rottamazioni-scadenza-al-30-novembre-per-quinquies-quater-e-riammessi', 'Istruzioni su rate, bollettini e tolleranza', TODAY),
+            src('Agenzia delle Entrate-Riscossione — Scadenze definizione agevolata 2026', 'Agenzia delle Entrate-Riscossione', 'https://www.agenziaentrateriscossione.gov.it/it/prossime-scadenze/#y=2026', 'Calendario ufficiale AdER', TODAY),
         ],
-        relatedGuides: ['/moduli/modulo-08-scuola-famiglia'],
-        relatedTemplates: [],
-        lastReviewedAt: '2026-11-26',
+        relatedGuides: ['/moduli/modulo-28-cartelle-riscossione', '/scadenze', '/guide/rateizzazione-cartelle'],
+        relatedTemplates: ['cartelle-ader', 'rateizzazione-ader'],
+        lastReviewedAt: TODAY,
     },
-    // ── End auto-import ──────────────────────────────────────────────
-
-    // ── Auto-imported 2026-11-26 ──────────────────────────
     {
-        slug: 'controlli-fiscali-a-32-anni-per-chi-non-ha-mai-dichiarato-redditi-la-proposta-al',
-        title: 'Controlli fiscali a 32 anni per chi non ha mai dichiarato redditi, la proposta all\'Agenzia delle Entrate',
+        slug: 'inps-notifiche-digitali-send-indebiti-e-ricongiunzione-casse-private-2026',
+        title: 'INPS, messaggi operativi di fine novembre: notifiche digitali via piattaforma SEND per indebiti (Messaggio 3801) e ricongiunzioni con Casse private (Messaggio 3900)',
         date: '2026-11-26',
-        summary: 'Controlli fiscali a 32 anni per chi non ha mai dichiarato redditi, la proposta all\'Agenzia delle Entrate. Fonte: QuiFinanza.',
+        summary: 'L’INPS aggiorna le procedure con due messaggi recenti: con il Messaggio n. 3801 (19 novembre 2026) estende le notifiche a valore legale su piattaforma SEND agli indebiti previdenziali, Assegno Sociale e Invalidità Civile; con il Messaggio n. 3900 (26 novembre 2026) uniforma la ricongiunzione tra Gestione Separata e Casse professionali ADEPP.',
         body: [
-            'Controlli fiscali a 32 anni per chi non ha mai dichiarato redditi, la proposta all\'Agenzia delle Entrate.',
+            'L’INPS prosegue il percorso di digitalizzazione delle notifiche a valore legale tramite il Servizio Notifiche Digitali (SEND — `notifichedigitali.it`). Con il Messaggio n. 3801 del 19 novembre 2026, l’Istituto dispone l’estensione dell’invio digitale via piattaforma SEND anche agli avvisi e alle note di debito/indebito derivanti da prestazioni previdenziali, Assegno Sociale e prestazioni di Invalidità Civile.',
+            'Per i cittadini dotati di domicilio digitale (PEC) o dell’app IO con notifiche attive, l’atto ufficiale arriva direttamente in digitale riducendo costi di notifica postale e tempi di consegna; chi non dispone di recapiti digitali riceve l’avviso di avvenuta ricezione cartaceo e può comunque ritirare l’atto in formato analogico presso i Punti di Ritiro RADD abilitati.',
+            'Sul fronte previdenziale dei lavoratori autonomi e professionisti, l’INPS ha inoltre pubblicato il Messaggio n. 3900 del 26 novembre 2026, recependo le intese operative con gli enti privati di previdenza obbligatoria aderenti ad ADEPP (seguito alla Circolare n. 15/2026): il messaggio chiarisce le modalità uniformi di lavorazione per le domande di ricongiunzione contributiva tra Gestione Separata INPS e Casse professionali private, sia per le istanze pendenti sia per le domande integrative.',
+            'Busssola ricorda una regola fondamentale di sicurezza: se ricevi un avviso su presunte notifiche SEND o recuperi INPS, non cliccare mai sui link contenuti in SMS o email inattese, ma accedi sempre direttamente da `notifichedigitali.it`, dall’app IO o dal Fascicolo Previdenziale su `inps.it`.',
         ],
         whatChanged: [
-            'Controlli fiscali a 32 anni per chi non ha mai dichiarato redditi, la proposta all\'Agenzia delle Entrate',
+            'Messaggio INPS n. 3801 del 19 novembre 2026: estensione delle notifiche su piattaforma SEND agli indebiti di pensioni, Assegno Sociale e Invalidità Civile',
+            'Possibilità di consultazione su notifichedigitali.it / App IO o ritiro fisico presso i Punti RADD',
+            'Messaggio INPS n. 3900 del 26 novembre 2026: istruzioni uniformi per la ricongiunzione tra Gestione Separata INPS e Casse private ADEPP',
         ],
-        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whoIsAffected: 'Titolari di prestazioni previdenziali e assistenziali INPS (inclusi assegni sociali e invalidità civile) e professionisti/iscritti con contributi sia in Gestione Separata sia in Casse private.',
         whatToDo: [
-            'Consulta la fonte ufficiale per i dettagli completi',
+            'Attiva l’App IO (con SPID o CIE) e verifica periodicamente la sezione SEND su `notifichedigitali.it` o la tua PEC per non perdere atti con valore legale',
+            'In caso di comunicazione su indebiti INPS, controlla il dettaglio ufficiale nella sezione «Visualizzazione indebiti» dentro MyINPS prima di pagare qualsiasi importo',
+            'Se hai contributi misti tra Gestione Separata INPS e Cassa professionale privata, verifica con la tua Cassa o un patronato se la ricongiunzione ex Messaggio 3900/2026 è più vantaggiosa del cumulo gratuito',
         ],
-        sourceIds: [],
+        sourceIds: ['inpsMessaggio3801Send2026', 'inpsMessaggio3900Ricongiunzione2026', 'inpsPiattaformaSend', 'sendNotificheDigitali'],
         sources: [
-            src('Controlli fiscali a 32 anni per chi non ha mai dichiarato redditi, la proposta all\'Agenzia delle Entrate - QuiFinanza', 'QuiFinanza', 'https://news.google.com/rss/articles/CBMilAFBVV95cUxNUlVjQ1hPSU9ONFlkR001S2J3ZFZhcVEydG5iUXB1LWFTdDJuN2hpNzNTTWYxeURxWlpkX3NqazhweDJoMmxOVGZOVTVfMGJrNDRnbk01eklHY0EycjBQNmxtNEttWEFlWlQxektkZm1KSThoYVBzZllJZ2pyRW1TY1gybGhRd3hlb1VJckNRNHdsN1hW0gGaAUFVX3lxTE5rSGgyaXdrYkhGTF9fZEZKeHkxb1V1aUxkaXZGY2F1cVpJdGU0aFNJd1ZjVklBY0F4RHYwamp3Y0FZLWtOdXZGU19Fc0FybUFnRURHLUNVSEgxMVdpUmJfRHhMSjlMQWRPRFNWY294V2UwNjVURkVadDV3UDg5T1l4eUtVenFLSHlXZUNXZV94Q2dtUUlrWGl4YWc?oc=5', 'Controlli fiscali a 32 anni per chi non ha mai dichiarato redditi, la proposta all\'Agenzia delle Entrate - QuiFinanza', '2026-11-26'),
+            src('INPS — Messaggio n. 3801 del 19 novembre 2026: estensione piattaforma SEND agli indebiti', 'INPS', 'https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.messaggi.2026.11.messaggio-numero-3801-del-19-11-2026.html', 'Notifiche digitali indebiti su SEND', TODAY),
+            src('INPS — Messaggio n. 3900 del 26 novembre 2026: ricongiunzione Gestione Separata e ADEPP', 'INPS', 'https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.messaggi.2026.11.messaggio-numero-3900-del-26-11-2026.html', 'Ricongiunzioni previdenziali Casse private', TODAY),
+            src('INPS — Notifiche INPS sulla Piattaforma SEND e punti RADD', 'INPS', 'https://www.inps.it/it/it/inps-comunica/inps--inclusione-e-innovazione/trasformazione-digitale-e-innovazione-tecnologica/notifiche-inps-sulla-piattaforma-send.html', 'Funzionamento notifiche e punti ritiro RADD', TODAY),
         ],
-        relatedGuides: ['/moduli/modulo-25-fisco-cittadini', '/moduli/modulo-29-partita-iva-forfettario'],
-        relatedTemplates: [],
-        lastReviewedAt: '2026-11-26',
+        relatedGuides: ['/moduli/modulo-27-pensioni-previdenza', '/moduli/modulo-24-casa-digitale', '/pensioni-2027'],
+        relatedTemplates: ['delega-inps', 'estratto-contributivo'],
+        lastReviewedAt: TODAY,
     },
     {
-        slug: 'fattura-elettronica-2027-cosa-cambia-dall11-gennaio-e-per-chi-fisco-e-tasse-2026',
-        title: 'Fattura elettronica 2027: cosa cambia dall\'11 gennaio e per chi',
-        date: '2026-11-21',
-        summary: 'Fattura elettronica 2027: cosa cambia dall\'11 gennaio e per chi. Fonte: Fisco e Tasse.',
+        slug: 'rete-antiviolenza-1522-tutela-economica-sportelli-rosa-protocollo-abi-2026',
+        title: '1522 e rete antiviolenza: guida completa a chat h24, Centri Antiviolenza, Reddito e Microcredito di Libertà, Protocollo DPO-ABI e tutele legali',
+        date: '2026-11-25',
+        summary: 'In occasione del 25 novembre 2026, Dipartimento per le Pari Opportunità, Polizia di Stato e INPS rafforzano gli strumenti contro violenza fisica, psicologica ed economica: numero gratuito e chat anonima 1522 (1522.eu), mappa Centri Antiviolenza, opuscolo «...questo NON è AMORE», Protocollo DPO-ABI per l’inclusione bancaria, Reddito di Libertà, congedo 90 giorni e gratuito patrocinio senza limiti di reddito.',
         body: [
-            'Fattura elettronica 2027: cosa cambia dall\'11 gennaio e per chi.',
+            'La rete istituzionale di protezione contro la violenza di genere, domestica e lo stalking integra l’intervento d’emergenza (112) con un sistema articolato di orientamento, accoglienza, autonomia economica e tutela legale. Il punto di ingresso pubblico nazionale è il **1522** del Dipartimento per le Pari Opportunità (Presidenza del Consiglio dei Ministri), attivo **24 ore su 24 tutti i giorni**, gratuito da rete fissa e mobile e garantito in pieno anonimato.',
+            'Chi non può parlare a voce in sicurezza può accedere direttamente alla **chat anonima in tempo reale sul portale ufficiale `1522.eu`** (dotato anche del pulsante di uscita rapida) e consultare la **mappatura ufficiale dei Centri Antiviolenza (CAV) e delle Case Rifugio** sul territorio. L’accoglienza diretta è disponibile in italiano, inglese, francese, spagnolo, arabo e tedesco, oltre ad altre lingue su appuntamento.',
+            'Sul fronte della **violenza economica**, il Dipartimento per le Pari Opportunità e l’Associazione Bancaria Italiana (ABI) hanno rinnovato il Protocollo d’intesa nazionale per favorire l’inclusione finanziaria e l’autonomia nella gestione di conti e risparmi. Ad esso si affiancano il **Reddito di Libertà** (contributo economico gestito da INPS tramite i Comuni per l’autonomia abitativa e personale delle donne seguite dai CAV, compatibile con ADI e NASpI) e il **Microcredito di Libertà** (finanziamenti garantiti a tasso agevolato tramite Ente Nazionale per il Microcredito — `microcredito.gov.it/mdl/` — per lavoro e imprenditorialità o bisogni sociali urgenti).',
+            'Sul piano lavorativo e giudiziario vigono tutele specifiche: le lavoratrici inserite in percorsi di protezione certificati hanno diritto al **congedo retribuito fino a 90 giorni lavorativi** in tre anni (art. 24 D.Lgs. 80/2015); la Polizia di Stato promuove l’**ammonimento del Questore** (richiedibile anche senza querela) e le segnalazioni tramite app **YouPol**; infine, ai sensi dell’art. 76 comma 4-ter del D.P.R. 115/2002, le persone offese da maltrattamenti, stalking o violenza sessuale accedono al **patrocinio a spese dello Stato in deroga ai limiti di reddito** ordinari.',
         ],
         whatChanged: [
-            'Fattura elettronica 2027: cosa cambia dall\'11 gennaio e per chi',
+            'Rinnovato il Protocollo d’intesa DPO–ABI contro la violenza economica e per l’inclusione finanziaria autonoma',
+            'Pubblicato l’opuscolo 2026 della campagna Polizia di Stato «...questo NON è AMORE» su ammonimento del Questore, numeri utili e app YouPol',
+            'Piena operatività della rete 1522 (voce e chat anonima 24/7 su 1522.eu) e della mappatura nazionale Centri Antiviolenza / Case Rifugio',
+            'Promozione territoriale INPS (Sportelli Rosa) su Reddito di Libertà, congedo indennizzato art. 24 D.Lgs. 80/2015 e accesso al patrocinio gratuito senza limiti di reddito',
         ],
-        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whoIsAffected: 'Donne vittime di violenza fisica, psicologica, economica o stalking, familiari, amici, testimoni e operatori che vogliono orientarle in sicurezza.',
         whatToDo: [
-            'Consulta la fonte ufficiale per i dettagli completi',
+            'Se c’è pericolo immediato, aggressione o minaccia fisica in corso chiama subito il 112 (oppure segnala rapidamente tramite app YouPol)',
+            'Se non sei in pericolo immediato o non puoi parlare ad alta voce, chiama il 1522 o apri la chat anonima h24 su 1522.eu (usa il pulsante di uscita rapida o la navigazione privata se condividi il dispositivo)',
+            'Cerca il Centro Antiviolenza più vicino tramite la Mappatura ufficiale su 1522.eu o la rete D.i.Re per accedere a supporto psicologico, legale gratuito e Case Rifugio',
+            'Chiedi al Centro Antiviolenza e ai servizi sociali comunali di attivare il Reddito di Libertà, il Microcredito di Libertà, l’ammonimento del Questore o la certificazione per il congedo lavorativo retribuito di 90 giorni',
         ],
-        sourceIds: [],
+        sourceIds: [
+            'dpoAntiviolenza1522',
+            'antiviolenza1522Portale',
+            'antiviolenza1522Mappa',
+            'dpoSostegnoEconomicoViolenza',
+            'dpoProtocolloAbiViolenzaEconomica',
+            'microcreditoDiLiberta',
+            'internoQuestoNonEAmore2026',
+            'giustiziaPatrocinioPenale',
+        ],
         sources: [
-            src('Fattura elettronica 2027: cosa cambia dall\'11 gennaio e per chi - Fisco e Tasse', 'Fisco e Tasse', 'https://news.google.com/rss/articles/CBMivAFBVV95cUxQLWZ2bWlmWC1BSkpEc29zRHRZV2F4bzBONjZ0V1VIUHBsQ0luY043MTd3TWRBS0Zkc0ZDbnlKekh5dEx1VHBvb0otaXg1dm1hWUVBbDZWWEE1Vk5FejBvSGNUMVFSc0hOUUlWcGFBdmhpXzRTR1pUdUJlVnYxSGZVbHA1ZE5SLUQ0RF9ndnZDWm01cUxhYjFlZm9kQVgtTE1BTjlEZHE4WmhUYXRFV19NNGJBWWFiNTBrYU9BYQ?oc=5', 'Fattura elettronica 2027: cosa cambia dall\'11 gennaio e per chi - Fisco e Tasse', '2026-11-21'),
+            src('1522 — Portale ufficiale e chat anonima h24', 'Dipartimento per le Pari Opportunità', 'https://www.1522.eu/', 'Accesso telefono, chat e servizi antiviolenza', TODAY),
+            src('1522 — Mappa ufficiale Centri Antiviolenza e Case Rifugio', 'Dipartimento per le Pari Opportunità', 'https://www.1522.eu/centri-antiviolenza/mappa.html', 'Ricerca centri territoriali accreditati', TODAY),
+            src('DPO — Sostegno economico alle vittime di violenza (Reddito e Microcredito di Libertà)', 'Presidenza del Consiglio — DPO', 'https://www.pariopportunita.gov.it/it/politiche-e-attivita/violenza-di-genere/il-sostegno-economico-alle-vittime-della-violenza-di-genere/', 'Misure economiche e fondo microcredito', TODAY),
+            src('Polizia di Stato / Ministero Interno — Campagna «...questo NON è AMORE» 2026', 'Ministero dell’Interno / Polizia di Stato', 'https://www.interno.gov.it/it/notizie/violenza-contro-donne-limpegno-polizia-stato-campagna-questo-non-e-amore', 'Ammonimento del Questore, opuscolo 2026 e app YouPol', TODAY),
+            src('Ministero della Giustizia — Patrocinio a spese dello Stato nei giudizi penali', 'Ministero della Giustizia', 'https://www.giustizia.it/giustizia/page/it/patrocinio_a_spese_dello_stato_nei_giudizi_penali', 'Accesso gratuito anche in deroga al reddito per vittime di violenza', TODAY),
         ],
-        relatedGuides: ['/moduli/modulo-25-fisco-cittadini', '/moduli/modulo-29-partita-iva-forfettario'],
-        relatedTemplates: [],
-        lastReviewedAt: '2026-11-21',
+        relatedGuides: ['/sos', '/moduli/modulo-06-stalking-doxxing', '/moduli/modulo-06b-stalking-doxxing', '/moduli/modulo-35-giustizia-cittadino'],
+        relatedTemplates: ['tutela-violenza-1522-reddito-liberta', 'patrocinio-a-spese-dello-stato'],
+        lastReviewedAt: TODAY,
     },
-    // ── End auto-import ──────────────────────────────────────────────
-
-    // ── Auto-imported 2026-11-25 ──────────────────────────
-    {
-        slug: 'fattura-elettronica-2027-nuove-specifiche-tecniche-110-fisco-e-tasse-20261121',
-        title: 'Fattura elettronica 2027: nuove specifiche tecniche 1.10',
-        date: '2026-11-21',
-        summary: 'Fattura elettronica 2027: nuove specifiche tecniche 1.10. Fonte: Fisco e Tasse.',
-        body: [
-            'Fattura elettronica 2027: nuove specifiche tecniche 1.10.',
-        ],
-        whatChanged: [
-            'Fattura elettronica 2027: nuove specifiche tecniche 1.10',
-        ],
-        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
-        whatToDo: [
-            'Consulta la fonte ufficiale per i dettagli completi',
-        ],
-        sourceIds: [],
-        sources: [
-            src('Fattura elettronica 2027: nuove specifiche tecniche 1.10 - Fisco e Tasse', 'Fisco e Tasse', 'https://news.google.com/rss/articles/CBMisgFBVV95cUxQd0owQjNhWmREVUdlUWttODBEZzZDYzdNWjI4V3pJemxfRHRTQWVVVlN3LUhwa1poXzNWTnc1OHlPQzNGM0J3bDJTNHRLVmctT1FKUS1zWGFDXzVnVW1yRWFBMjRDQlJMQkJ5ZE41WTBadlJwMTNZYWxySDJPN09CWWx1ajRzbzd5VklMT0g3S2x1d0lzSDN3M3VqRmlYd0V2U05YeHltVFZ6UzMxcFNQOXZB?oc=5', 'Fattura elettronica 2027: nuove specifiche tecniche 1.10 - Fisco e Tasse', '2026-11-21'),
-        ],
-        relatedGuides: ['/moduli/modulo-25-fisco-cittadini', '/moduli/modulo-29-partita-iva-forfettario'],
-        relatedTemplates: [],
-        lastReviewedAt: '2026-11-21',
-    },
-    {
-        slug: 'ernesto-maria-ruffini-piu-uno-no-alla-patrimoniale-non-ha-senso-mettere-altre-im',
-        title: 'Ernesto Maria Ruffini (Più Uno): "No alla patrimoniale, non ha senso mettere altre imposte"',
-        date: '2026-11-21',
-        summary: 'Ernesto Maria Ruffini (Più Uno): "No alla patrimoniale, non ha senso mettere altre imposte". Fonte: HuffPost Italia.',
-        body: [
-            'Ernesto Maria Ruffini (Più Uno): "No alla patrimoniale, non ha senso mettere altre imposte".',
-        ],
-        whatChanged: [
-            'Ernesto Maria Ruffini (Più Uno): "No alla patrimoniale, non ha senso mettere altre imposte"',
-        ],
-        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
-        whatToDo: [
-            'Consulta la fonte ufficiale per i dettagli completi',
-        ],
-        sourceIds: [],
-        sources: [
-            src('Ernesto Maria Ruffini (Più Uno): "No alla patrimoniale, non ha senso mettere altre imposte" - HuffPost Italia', 'HuffPost Italia', 'https://news.google.com/rss/articles/CBMi5AFBVV95cUxPSXRORkVjYVY4akJkQ0M4SDc1UlYxbjFlYV95LVJYRk1xM09uX0xOWlBVbjByOThZWU5qR0VXUVFJMXBnaHhYc3BQa3JaeEo4THM5NlVXb1FaN0ljclFGWVRpU0RJOFhvS2YzSE9sd0h3VFgyUUs2ZmEyRml4SmN1TVEtT2dqSkdBd3laeF9ueF9iMmNYZFdiSFkxSVlBRUc3eWV4aWhMaUFxTFE1ODNONTBhdUpYRkRieHdLUXMtWC0yMVdkMS11VWNvWVh2U0dJSUpGaV92N3hndloyc3Z3Uzk1MkY?oc=5', 'Ernesto Maria Ruffini (Più Uno): "No alla patrimoniale, non ha senso mettere altre imposte" - HuffPost Italia', '2026-11-21'),
-        ],
-        relatedGuides: ['/moduli/modulo-25-fisco-cittadini', '/moduli/modulo-29-partita-iva-forfettario'],
-        relatedTemplates: [],
-        lastReviewedAt: '2026-11-21',
-    },
-    {
-        slug: 'imu-calcolo-precompilato-dal-2027-per-il-pagamento-debutta-pagopa-informazionefi',
-        title: 'IMU, calcolo precompilato dal 2027. Per il pagamento debutta PagoPA',
-        date: '2026-11-21',
-        summary: 'IMU, calcolo precompilato dal 2027. Per il pagamento debutta PagoPA. Fonte: informazionefiscale.it.',
-        body: [
-            'IMU, calcolo precompilato dal 2027. Per il pagamento debutta PagoPA.',
-        ],
-        whatChanged: [
-            'IMU, calcolo precompilato dal 2027. Per il pagamento debutta PagoPA',
-        ],
-        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
-        whatToDo: [
-            'Consulta la fonte ufficiale per i dettagli completi',
-        ],
-        sourceIds: [],
-        sources: [
-            src('IMU, calcolo precompilato dal 2027. Per il pagamento debutta PagoPA - informazionefiscale.it', 'informazionefiscale.it', 'https://news.google.com/rss/articles/CBMikgFBVV95cUxPcmZrbXFUMVQyUHpnY1cxTmJsMXJ0YTFyUUE4YXJ3U2ZxMFo4RzNkdk9fT1Z4Sjk0czg2eU1hQjVWNnRCSzBuWlJxd1g1anc2T1M3bm9EN2xxVXUzRkdJdmNjT2tabF85UC1vOGlTV19MWjkzNVJPVzlGa1RxMHBvQ1dKcEM2LWdSRVdWYmpRREJTQQ?oc=5', 'IMU, calcolo precompilato dal 2027. Per il pagamento debutta PagoPA - informazionefiscale.it', '2026-11-21'),
-        ],
-        relatedGuides: ['/moduli/modulo-25-fisco-cittadini', '/moduli/modulo-29-partita-iva-forfettario'],
-        relatedTemplates: [],
-        lastReviewedAt: '2026-11-21',
-    },
-    {
-        slug: 'controlli-fiscali-2027-2029-il-fisco-punta-su-criptovalute-partite-iva-e-superbo',
-        title: 'Controlli fiscali 2027-2029, il Fisco punta su criptovalute, partite Iva e Superbonus: chi rischia verifiche',
-        date: '2026-11-23',
-        summary: 'Controlli fiscali 2027-2029, il Fisco punta su criptovalute, partite Iva e Superbonus: chi rischia verifiche. Fonte: QuiFinanza.',
-        body: [
-            'Controlli fiscali 2027-2029, il Fisco punta su criptovalute, partite Iva e Superbonus: chi rischia verifiche.',
-        ],
-        whatChanged: [
-            'Controlli fiscali 2027-2029, il Fisco punta su criptovalute, partite Iva e Superbonus: chi rischia verifiche',
-        ],
-        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
-        whatToDo: [
-            'Consulta la fonte ufficiale per i dettagli completi',
-        ],
-        sourceIds: [],
-        sources: [
-            src('Controlli fiscali 2027-2029, il Fisco punta su criptovalute, partite Iva e Superbonus: chi rischia verifiche - QuiFinanza', 'QuiFinanza', 'https://news.google.com/rss/articles/CBMiigFBVV95cUxOYTl4RFplZXJUVHIxT05md1VSTWdkUWhwZng1VTh3NjJlS2xLQjZoRWlfYmZNTmdkNmNwQjl3WThkOS1ZY1NRRDNGODJlMGExV2RtWmtzSEtmTFF6RXJYVjRZOGQ3QzRxSXFYZC1tN0g5N2ZMY0dWM1lvOHZwWVZRZy1MaHJSVFZfS2fSAY8BQVVfeXFMTW43UGhSUVhXWllNbFpGWC1jUjZGdzRzaEVDSm15c1pVdGl1Q2xQbE5NN0JJZkdWWnpRVi1QTW5zMG1NNHJmN0ZyVGx0b05zRmdsR0VwOFRTTVFoZDFla0FkbVJtb196bUJfRXo4MFdkbWUzNFM1b0NDdDF5OThhYUZwVzdfd1dieExmYnJjVFk?oc=5', 'Controlli fiscali 2027-2029, il Fisco punta su criptovalute, partite Iva e Superbonus: chi rischia verifiche - QuiFinanza', '2026-11-23'),
-        ],
-        relatedGuides: ['/moduli/modulo-25-fisco-cittadini', '/moduli/modulo-29-partita-iva-forfettario'],
-        relatedTemplates: [],
-        lastReviewedAt: '2026-11-23',
-    },
-    {
-        slug: 'alluvioni-e-blackout-torino-investe-200mila-euro-per-la-nuova-sala-della-protezi',
-        title: 'Alluvioni e blackout, Torino investe 200mila euro per la nuova sala della Protezione civile',
-        date: '2026-11-23',
-        summary: 'Alluvioni e blackout, Torino investe 200mila euro per la nuova sala della Protezione civile. Fonte: Torino Cronaca.',
-        body: [
-            'Alluvioni e blackout, Torino investe 200mila euro per la nuova sala della Protezione civile.',
-        ],
-        whatChanged: [
-            'Alluvioni e blackout, Torino investe 200mila euro per la nuova sala della Protezione civile',
-        ],
-        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
-        whatToDo: [
-            'Consulta la fonte ufficiale per i dettagli completi',
-        ],
-        sourceIds: [],
-        sources: [
-            src('Alluvioni e blackout, Torino investe 200mila euro per la nuova sala della Protezione civile - Torino Cronaca', 'Torino Cronaca', 'https://news.google.com/rss/articles/CBMi2wFBVV95cUxPZ1NfVTJwaGNuMDhhZDJVWVRpMTdEZkRZR2xQZ1VsZkFGZDZobURUVG9ucnNFcWd6R3UyZ2tuWk43Ym9kMzYxdFRQdUROVF9VQ3pJZXh6dnVMTjYyRTdOU29fQ01jMlV0MzgyM0tVQlhxbTNybUE0U1ZZWGJ2UzBuMDRkX3QyWUh3Z3o0YXdubzUyVEJCQlNJWTBBeVJEOXlSTjBTYXVSX3liU3FETDAzVzhCb05taHlERnBUSWt1ZkE1b3ZoQjFWQ0JidkRtLUJ4SE5uTmVYZjlLc1U?oc=5', 'Alluvioni e blackout, Torino investe 200mila euro per la nuova sala della Protezione civile - Torino Cronaca', '2026-11-23'),
-        ],
-        relatedGuides: ['/sos', '/moduli/modulo-03-truffe-phishing'],
-        relatedTemplates: [],
-        lastReviewedAt: '2026-11-23',
-    },
-    // ── End auto-import ──────────────────────────────────────────────
 
     {
         slug: 'fatturazione-elettronica-2027-specifiche-tecniche-1-10-codice-rf21',
@@ -1584,7 +1544,8 @@ export const CIVIC_NEWS: NewsItem[] = [
         ],
         sourceIds: ['poliziaPostaleQuishing2026', 'certAgidHome', 'commissariatoPs'],
         sources: [
-            src('Polizia Postale — Allarme Quishing e truffe tramite QR Code contraffatti', 'Polizia Postale', 'https://www.commissariatodips.it/notizie/articolo/quishing-attenzione-ai-qr-code-contraffatti-su-parcometri-e-multe/index.html', 'Modalità di frode e contromisure', CHECKED),
+            src('Polizia Postale — Allerte su Quishing e truffe tramite QR Code contraffatti', 'Polizia Postale', 'https://www.commissariatodips.it/notizie/index.html', 'Modalità di frode e contromisure', TODAY),
+            src('CERT-AgID — Bollettini settimanali sulle campagne di phishing e quishing', 'CERT-AgID', 'https://cert-agid.gov.it/', 'Monitoraggio campagne malevole in Italia', TODAY),
         ],
         relatedGuides: ['/moduli/modulo-03-truffe-phishing', '/moduli/modulo-14-soldi-banche-truffe'],
         relatedTemplates: [],

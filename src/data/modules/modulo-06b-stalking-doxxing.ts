@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_06b_stalking_doxxing: Module = {
     id: 'modulo-06b-stalking-doxxing',
-    lastUpdated: '2026-11-08',
+    lastUpdated: '2026-11-27',
     title: 'Modulo 6b: Cyberstalking (Tutele legali e Spyware)',
     description: 'Procedure per fermare lo stalking tramite l\'ammonimento del Questore e come rilevare software spia sul telefono.',
     category: 'privacy',
@@ -55,27 +55,27 @@ export const modulo_06b_stalking_doxxing: Module = {
                 'Se lo stalker dimostra di conoscere la tua posizione geografica in tempo reale.'
             ],
             whoCanHelp: [
-                'Questore (Polizia di Stato)',
-                'Centri Antiviolenza (Numero 1522)',
-                'Forze dell\'ordine (Carabinieri)'
+                'Questore (Polizia di Stato) — anche tramite app YouPol o opuscolo «...questo NON è AMORE»',
+                '1522 e Centri Antiviolenza (telefono o chat 1522.eu)',
+                'Forze dell\'ordine (112 / Carabinieri)'
             ],
             checklist: [
                 'Raccogli prove',
                 'Vai in Questura',
                 'Istanza ammonimento',
-                'Contatta 1522'
+                'Contatta 1522 / 1522.eu'
             ],
             sources: [
                 {
-                    title: 'Ammonimento del Questore per Stalking',
-                    organization: 'Polizia di Stato',
-                    url: 'https://www.poliziadistato.it/articolo/3358356828v1',
+                    title: 'Polizia di Stato / Ministero dell\'Interno — Campagna «...questo NON è AMORE» e ammonimento del Questore',
+                    organization: 'Ministero dell\'Interno / Polizia di Stato',
+                    url: 'https://www.interno.gov.it/it/notizie/violenza-contro-donne-limpegno-polizia-stato-campagna-questo-non-e-amore',
                     type: 'official',
-                    usedFor: 'Descrizione della procedura e base normativa.',
-                    lastCheckedAt: '2026-05-14'
+                    usedFor: 'Misure di prevenzione del Questore, app YouPol e numeri di aiuto.',
+                    lastCheckedAt: '2026-11-27'
                 }
             ],
-            lastReviewedAt: '2026-11-08',
+            lastReviewedAt: '2026-11-27',
             qualityGatePassed: true
         },
         {
@@ -205,15 +205,15 @@ export const modulo_06b_stalking_doxxing: Module = {
             ],
             sources: [
                 {
-                    title: 'Cos\'è lo stalkerware e come proteggersi',
+                    title: 'Coalition Against Stalkerware — Guidance for Victims',
                     organization: 'Coalition Against Stalkerware',
-                    url: 'https://stopstalkerware.org/it/',
+                    url: 'https://stopstalkerware.org/',
                     type: 'official',
                     usedFor: 'Indicatori di compromissione e gestione della sicurezza personale.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-11-27'
                 }
             ],
-            lastReviewedAt: '2026-11-08',
+            lastReviewedAt: '2026-11-27',
             qualityGatePassed: true
         }
     ]

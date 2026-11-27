@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_14_soldi_banche_truffe: Module = {
     id: 'modulo-14-soldi-banche-truffe',
-    lastUpdated: '2026-05-14',
+    lastUpdated: '2026-11-27',
     title: 'Soldi, Banche e Truffe',
     description: 'Protezione dei risparmi, gestione delle frodi bancarie e tutela negli acquisti online.',
     category: 'soldi',
@@ -264,12 +264,12 @@ export const modulo_14_soldi_banche_truffe: Module = {
             ],
             sources: [
                 {
-                    title: 'Attenzione al Vishing',
+                    title: 'CERTFin — Sicurezza pagamenti e prevenzione vishing',
                     organization: 'CERTFin',
-                    url: 'https://www.certfin.it/cittadini/',
+                    url: 'https://www.certfin.it/',
                     type: 'official',
                     usedFor: 'Tecniche di difesa',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-11-27'
                 }
             ]
         },

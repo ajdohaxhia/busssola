@@ -17,7 +17,7 @@ export interface CivicDeadline {
     lastReviewedAt: string
 }
 
-const D = '2026-11-25'
+const D = '2026-11-27'
 
 const src = (title: string, organization: string, url: string): Source => ({
     title,
@@ -49,17 +49,19 @@ export const CIVIC_DEADLINES: CivicDeadline[] = [
     {
         id: 'rottamazione-quater-sesta-rata',
         date: '2026-11-30',
-        title: 'Rottamazione-quater: sesta rata definizione agevolata cartelle esattoriali',
+        title: 'Rottamazione-quater (14ª rata / 6ª riammessi) e Rottamazione-quinquies (3ª rata)',
         category: 'fisco',
         entity: 'Agenzia delle Entrate-Riscossione',
-        summary: 'Scadenza della sesta rata della rottamazione-quater per i contribuenti ammessi ai piani di dilazione. Si applicano i consueti 5 giorni di tolleranza di legge (pagamento valido fino al 7 dicembre 2026).',
-        whoIsAffected: 'Contribuenti che hanno aderito alla definizione agevolata delle cartelle esattoriali.',
-        whatToDo: 'Paga con il bollettino allegato alla comunicazione delle somme dovute via home banking, tabaccaio o sportello.',
-        whatHappensIfNot: 'Decadenza automatica e irreversibile dai benefici della rottamazione con ripristino di sanzioni e interessi.',
+        summary: 'Scadenza del 30 novembre 2026 per la 14ª rata della Rottamazione-quater, la 6ª rata dei piani riammessi (L. 15/2025) e la 3ª rata della Rottamazione-quinquies (Bilancio 2026). I 5 giorni di tolleranza (pagamento valido entro il 7 dicembre 2026) operano per Quater e riammessi; verifica le regole di decadenza della Quinquies.',
+        whoIsAffected: 'Contribuenti aderenti ai piani attivi di definizione agevolata delle cartelle esattoriali (Quater, riammessi e Quinquies).',
+        whatToDo: 'Scarica il modulo di pagamento nell’area riservata o pubblica su agenziaentrateriscossione.gov.it e paga via PagoPA, App Equiclick, banca o Poste.',
+        whatHappensIfNot: 'Decadenza dai benefici della definizione agevolata con ripristino integrale di sanzioni, interessi e aggio sulle somme residue.',
         modelLink: '/modelli/cartelle-ader',
-        newsLink: '/novita/rottamazione-quater-scadenza-sesta-rata-novembre-2026',
+        guideLink: '/moduli/modulo-28-cartelle-riscossione',
+        newsLink: '/novita/scadenza-30-novembre-2026-rottamazione-quinquies-quater-riammessi-ader',
         sources: [
-            src('Definizione agevolata scadenze', 'Agenzia delle Entrate-Riscossione', 'https://www.agenziaentrateriscossione.gov.it/it/Per-saperne-di-piu/definizione-agevolata/'),
+            src('Prossime scadenze definizione agevolata 2026', 'Agenzia delle Entrate-Riscossione', 'https://www.agenziaentrateriscossione.gov.it/it/prossime-scadenze/#y=2026'),
+            src('Rottamazioni: scadenza al 30 novembre per quinquies, quater e riammessi', 'Agenzia delle Entrate — FiscoOggi', 'https://www.fiscooggi.it/portale/-/rottamazioni-scadenza-al-30-novembre-per-quinquies-quater-e-riammessi'),
         ],
         lastReviewedAt: D,
     },

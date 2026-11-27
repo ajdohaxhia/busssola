@@ -2,7 +2,7 @@ import { Module } from '@/types';
 
 export const modulo_06_stalking_doxxing: Module = {
     id: 'modulo-06-stalking-doxxing',
-    lastUpdated: '2024-05-13',
+    lastUpdated: '2026-11-27',
     title: 'Modulo 6: Cyberstalking e Doxxing',
     description: 'Difenditi dalle persecuzioni online e dalla diffusione illecita dei tuoi dati personali con le procedure legali di ammonimento e reclamo al Garante.',
     category: 'privacy',
@@ -72,10 +72,10 @@ export const modulo_06_stalking_doxxing: Module = {
                 {
                     title: 'Cyberstalking e Atti Persecutori',
                     organization: 'Polizia di Stato',
-                    url: 'https://www.commissariatodips.it/approfondimenti/cyberstalking/index.html',
+                    url: 'https://www.commissariatodips.it/approfondimenti/cyberstalking/cyber-stalking/index.html',
                     type: 'official',
                     usedFor: 'Definizione del reato e consigli pratici di autodifesa.',
-                    lastCheckedAt: '2026-05-14'
+                    lastCheckedAt: '2026-11-27'
                 }
             ],
             lastReviewedAt: '2026-05-14',
@@ -210,6 +210,116 @@ export const modulo_06_stalking_doxxing: Module = {
                 }
             ],
             lastReviewedAt: '2026-05-14',
+            qualityGatePassed: true
+        },
+        {
+            id: 'risorse-1522-rete-antiviolenza-sostegni',
+            slug: '1522-centri-antiviolenza-reddito-liberta-tutele',
+            title: '1522, Centri Antiviolenza, Reddito di Libertà e tutele lavoro',
+            mainEntity: 'Dipartimento per le Pari Opportunità / INPS',
+            category: 'privacy',
+            audience: ['adults', 'victims', 'cittadini'],
+            level: 'base',
+            estimatedMinutes: 10,
+            summary: 'Come contattare il 1522 via telefono o chat anonima su 1522.eu, trovare un Centro Antiviolenza e attivare Reddito di Libertà, Microcredito, congedo 90 giorni e gratuito patrocinio.',
+            status: 'published',
+            emergencyLevel: 'high',
+            scenario: 'Subisci violenza fisica, psicologica, economica o atti persecutori (o vuoi aiutare una persona vicina) e hai bisogno di sapere come chiedere aiuto in sicurezza e quali sostegni pratici spettano.',
+            question: 'Cosa offre concretamente il 1522 oltre al numero di emergenza telefonico?',
+            whatIsHappening: 'Il 1522 del Dipartimento per le Pari Opportunità è il punto d’accesso pubblico gratuito h24 alla rete territoriale dei Centri Antiviolenza (CAV) e Case Rifugio, collegato alle misure di autonomia economica INPS/Comuni (Reddito di Libertà e Microcredito di Libertà), tutele lavorative e difesa legale gratuita.',
+            warningSigns: [
+                'Controllo sistematico del telefono, degli spostamenti o accesso impedito al conto bancario e al denaro (violenza economica)',
+                'Minacce, pedinamenti, ricatti o isolamento da familiari e colleghe di lavoro',
+                'Paura di perdere casa, stipendio o tutela dei figli se ti allontani da una situazione violenta',
+            ],
+            steps: [
+                'Se c’è pericolo immediato o violenza in corso, chiama prima il 112 (o segnala tramite app YouPol della Polizia di Stato).',
+                'Chiama il 1522 gratuitamente da fisso o cellulare (attivo 24/7 in italiano, inglese, francese, spagnolo, arabo, tedesco e altre lingue su appuntamento) oppure usa la chat anonima su 1522.eu.',
+                'Consulta la mappatura ufficiale dei Centri Antiviolenza su 1522.eu/centri-antiviolenza/mappa.html o sulla rete D.i.Re per colloquio riservato, supporto psicologico e eventuale ospitalità in Casa Rifugio.',
+                'Chiedi al Centro Antiviolenza e ai servizi sociali comunali l’attivazione del Reddito di Libertà INPS e del Microcredito di Libertà (microcredito.gov.it/mdl/) oltre ai percorsi di inclusione bancaria previsti dal Protocollo DPO-ABI.',
+                'Se lavori, richiedi la certificazione del percorso di protezione per fruire fino a 90 giorni lavorativi retribuiti di congedo in 3 anni (art. 24 D.Lgs. 80/2015) e sappi che per i reati di violenza di genere e stalking spetta il patrocinio a spese dello Stato in deroga ai limiti di reddito (art. 76 co. 4-ter D.P.R. 115/2002).',
+            ],
+            doNow: [
+                'Usa la navigazione privata o il pulsante di uscita rapida su 1522.eu se il dispositivo è condiviso o controllato',
+                'Salva il contatto di un Centro Antiviolenza o del 1522 sotto un nome neutro se temi controlli sul telefono',
+                'Verifica le condizioni per ISEE escluso dal nucleo violento e gli Sportelli Rosa presso INPS e Comune tramite CAV',
+            ],
+            dontDo: [
+                'Non rinunciare a chiedere aiuto pensando di non poter sostenere spese legali o abitative: il supporto 1522/CAV e il patrocinio per vittime di violenza sono gratuiti',
+                'Non cancellare messaggi di minaccia, referti o movimenti bancari prima di averli messi al sicuro tramite CAV o forze dell’ordine',
+            ],
+            preserveEvidence: [
+                'Referti di pronto soccorso, verbali delle forze dell’ordine e attestazioni di presa in carico del Centro Antiviolenza',
+                'Screenshot datati di messaggi, mail o controlli bancari non consensuali conservati su account sicuro',
+            ],
+            askHelpWhen: [
+                'Subito, anche solo per un primo consiglio anonimo su 1522.eu senza obbligo di denuncia immediata',
+            ],
+            whoCanHelp: [
+                '1522 — Numero verde e chat anonima h24 (Dipartimento Pari Opportunità)',
+                'Centri Antiviolenza territoriali (Mappa 1522 / Rete D.i.Re)',
+                'Forze dell’Ordine 112 e app YouPol (anche per ammonimento del Questore)',
+                'Servizi Sociali comunali e Sportelli INPS (Reddito di Libertà e congedo 90 giorni)',
+            ],
+            officialLinksV2: [
+                {
+                    sourceId: 'antiviolenza1522Portale',
+                    useWhen: 'Per accedere alla chat anonima h24 e alle informazioni 1522',
+                    beforeOpening: ['Se temi controlli sul dispositivo, apri in finestra anonima']
+                },
+                {
+                    sourceId: 'antiviolenza1522Mappa',
+                    useWhen: 'Per individuare il Centro Antiviolenza accreditato più vicino',
+                    beforeOpening: []
+                },
+                {
+                    sourceId: 'dpoSostegnoEconomicoViolenza',
+                    useWhen: 'Per verificare Reddito di Libertà, Microcredito di Libertà e autonomia finanziaria',
+                    beforeOpening: []
+                },
+                {
+                    sourceId: 'giustiziaPatrocinioPenale',
+                    useWhen: 'Per consultare le regole di accesso gratuito all’avvocato senza limiti di reddito',
+                    beforeOpening: []
+                }
+            ],
+            checklist: [
+                'Numero 1522 / chat 1522.eu salvati in sicurezza',
+                'Centro Antiviolenza locale individuato sulla mappa ufficiale',
+                'Valutati Reddito di Libertà, Microcredito e congedo art. 24 D.Lgs. 80/2015',
+                'Verificato accesso gratuito a patrocinio legale e ammonimento Questore',
+            ],
+            faqs: [
+                { q: 'Devo aver già sporto denuncia per chiamare il 1522 o andare in un Centro Antiviolenza?', a: 'No. Il contatto con il 1522 e con i Centri Antiviolenza è gratuito, riservato e non comporta alcun obbligo di denuncia: serve prima di tutto a proteggerti e informarti.' },
+                { q: 'Chi subisce stalking o violenza può avere l’avvocato gratis anche se supera i limiti di reddito ISEE?', a: 'Sì: nei procedimenti penali per maltrattamenti, atti persecutori (stalking), violenza sessuale e reati correlati, l’art. 76 comma 4-ter del D.P.R. 115/2002 consente l’ammissione al patrocinio a spese dello Stato alla persona offesa anche in deroga ai limiti di reddito.' },
+            ],
+            sources: [
+                {
+                    title: '1522 — Il servizio gratuito h24 multilingua e chat',
+                    organization: 'Dipartimento per le Pari Opportunità',
+                    url: 'https://www.1522.eu/1522/il-servizio.html',
+                    type: 'official',
+                    usedFor: 'Modalità di accesso voce, chat e lingue disponibili',
+                    lastCheckedAt: '2026-11-27'
+                },
+                {
+                    title: 'DPO — Il sostegno economico alle vittime della violenza di genere',
+                    organization: 'Presidenza del Consiglio dei Ministri — DPO',
+                    url: 'https://www.pariopportunita.gov.it/it/politiche-e-attivita/violenza-di-genere/il-sostegno-economico-alle-vittime-della-violenza-di-genere/',
+                    type: 'official',
+                    usedFor: 'Reddito di Libertà e Microcredito di Libertà',
+                    lastCheckedAt: '2026-11-27'
+                },
+                {
+                    title: 'Ministero della Giustizia — Patrocinio a spese dello Stato nei giudizi penali',
+                    organization: 'Ministero della Giustizia',
+                    url: 'https://www.giustizia.it/giustizia/page/it/patrocinio_a_spese_dello_stato_nei_giudizi_penali',
+                    type: 'official',
+                    usedFor: 'Deroga limiti di reddito ex art. 76 co. 4-ter D.P.R. 115/2002',
+                    lastCheckedAt: '2026-11-27'
+                }
+            ],
+            lastReviewedAt: '2026-11-27',
             qualityGatePassed: true
         }
     ]

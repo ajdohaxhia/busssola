@@ -120,7 +120,7 @@ export default function Bonus2027Page() {
             name: 'Busssola',
         },
         datePublished: '2026-11-01',
-        dateModified: '2026-11-25',
+        dateModified: '2026-11-27',
     }
 
     const faqSchema = {
