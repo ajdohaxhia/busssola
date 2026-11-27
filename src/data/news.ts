@@ -14,6 +14,55 @@ const src = (title: string, organization: string, url: string, usedFor = 'Allert
 })
 
 export const CIVIC_NEWS: NewsItem[] = [
+    // ── Auto-imported 2026-11-27 ──────────────────────────
+    {
+        slug: 'agenzia-delle-entrate-riapre-la-rottamazione-delle-cartelle-anche-se-sei-stato-e',
+        title: 'Agenzia delle Entrate, riapre la rottamazione delle cartelle anche se sei stato escluso per rate saltate: nuova proposta',
+        date: '2026-11-27',
+        summary: 'Agenzia delle Entrate, riapre la rottamazione delle cartelle anche se sei stato escluso per rate saltate: nuova proposta. Fonte: Brocardi.it.',
+        body: [
+            'Agenzia delle Entrate, riapre la rottamazione delle cartelle anche se sei stato escluso per rate saltate: nuova proposta.',
+        ],
+        whatChanged: [
+            'Agenzia delle Entrate, riapre la rottamazione delle cartelle anche se sei stato escluso per rate saltate: nuova proposta',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('Agenzia delle Entrate, riapre la rottamazione delle cartelle anche se sei stato escluso per rate saltate: nuova proposta - Brocardi.it', 'Brocardi.it', 'https://news.google.com/rss/articles/CBMivgFBVV95cUxQYTJuSjdhY2VBY0pueFRXWFNwaF8ybnB2ME1xT2RkOFFqY2xCVXFSX0Z4MGdjOHhFOFBhQXFVcFBVcWQ4ZDZSVDhDS3lXd3NORHRGdUNVTkZ6UHRIQnVDb0FwYWhKN25yZ1VXWXdBQ1pzaXVFazhHSnJLOWZ2QTdVelBCTVl5bk50bmQ0RzVZc1hRY0wxSHVraTVzZFUtRkIzUDd4MEM3Sy1QR2paRm84bldmcExRcmRRbXR2c2p3?oc=5', 'Agenzia delle Entrate, riapre la rottamazione delle cartelle anche se sei stato escluso per rate saltate: nuova proposta - Brocardi.it', '2026-11-27'),
+        ],
+        relatedGuides: ['/moduli/modulo-25-fisco-cittadini', '/moduli/modulo-29-partita-iva-forfettario'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-27',
+    },
+    {
+        slug: 'ministero-istruzione-e-merito-buono-scuola-nazionale-cdo-opere-educative-foe-202',
+        title: 'MINISTERO ISTRUZIONE E MERITO: Buono Scuola nazionale',
+        date: '2026-11-26',
+        summary: 'MINISTERO ISTRUZIONE E MERITO: Buono Scuola nazionale. Fonte: CdO Opere Educative – FOE.',
+        body: [
+            'MINISTERO ISTRUZIONE E MERITO: Buono Scuola nazionale.',
+        ],
+        whatChanged: [
+            'MINISTERO ISTRUZIONE E MERITO: Buono Scuola nazionale',
+        ],
+        whoIsAffected: 'Cittadini italiani interessati dalla novità.',
+        whatToDo: [
+            'Consulta la fonte ufficiale per i dettagli completi',
+        ],
+        sourceIds: [],
+        sources: [
+            src('MINISTERO ISTRUZIONE E MERITO: Buono Scuola nazionale - CdO Opere Educative – FOE', 'CdO Opere Educative – FOE', 'https://news.google.com/rss/articles/CBMijwFBVV95cUxPb1l5YUg3dVA2WmtHNWpxSTQ5YTc1enNTYy1qZDN4ak1WQnpHMGFRQTNMODJXRmljaXBvWnVXNlp2TVJxcy1oT2FJTWpKaHYycXJoa21GdFNNVGF5eXlMOGh1WmV2YTIwYUpYM1lsTjROTVRMN0E0VDBEVmUxMDZJS2Npd0djd1h6cFZtOS1aaw?oc=5', 'MINISTERO ISTRUZIONE E MERITO: Buono Scuola nazionale - CdO Opere Educative – FOE', '2026-11-26'),
+        ],
+        relatedGuides: ['/moduli/modulo-08-scuola-famiglia'],
+        relatedTemplates: [],
+        lastReviewedAt: '2026-11-26',
+    },
+    // ── End auto-import ──────────────────────────────────────────────
+
     // ── Auto-imported 2026-11-26 ──────────────────────────
     {
         slug: 'controlli-fiscali-a-32-anni-per-chi-non-ha-mai-dichiarato-redditi-la-proposta-al',
